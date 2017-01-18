@@ -29,7 +29,7 @@ The easiest way to include [Essentials](https://jacobxperez.github.io/essentials
 
 ### Custom build
 
-[Essentials](https://jacobxperez.github.io/essentials/) is build on [LESS](http://lesscss.org/) which extends the capabilities of CSS. Use file style.less for compiling all necessary modules for your documents. For adjusting the settings of fonts, colors, padding and more use file var.less.
+[Essentials](https://jacobxperez.github.io/essentials/) is build on [LESS](http://lesscss.org/) which extends the capabilities of CSS. Use file style.less for compiling all necessary modules for your website. For adjusting the settings of fonts, colors, padding and more use file var.less.
 
 * css/style.less (for compiling all LESS modules)
 * css/less/var.less (for changing the settings of fonts, colors, paddings and more)

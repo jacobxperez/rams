@@ -1,0 +1,29 @@
+// Code
+// ----------------------------------------------------------------------------/
+code,
+kbd,
+pre,
+samp {
+	font-family: @code-font-family;
+}
+
+code {
+	line-height: 1;
+	background-color: @code-background;
+	color: @code-color;
+}
+
+pre {
+	.margin-bottom(@base-leading, @unit: rem);
+	.padding();
+	white-space: pre-line;
+	word-wrap: break-word;
+	overflow: auto;
+	background-color: @code-background;
+	color: @code-color;
+	
+	code {
+		background-color: inherit;
+		color: inherit;
+	}
+}

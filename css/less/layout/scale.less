@@ -1,0 +1,16 @@
+// Scale Height
+// ----------------------------------------------------------------------------/
+@media screen and (min-height: @scale-min-width) {
+	html {
+		.font-size(@base-font-size, @scale-viewport-size, vh);
+	}
+}
+
+
+// Scale Width
+// ----------------------------------------------------------------------------/
+@media screen and (min-width: @scale-min-width) {
+	html {
+		.font-size(@base-font-size, @scale-viewport-size, vw);
+	}
+}

@@ -1,0 +1,106 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: @headings-font-family;
+	font-weight: @headings-font-weight;
+	text-rendering: optimizelegibility;
+}
+
+h1 {
+	.margin-bottom(@h1-leading, @unit: rem);
+	.font-size(@h1-font-size);
+}
+
+h2{
+	.margin-bottom(@h2-leading, @unit: rem);
+	.font-size(@h2-font-size);
+}
+
+h3 {
+	.margin-bottom(@h3-leading, @unit: rem);
+	.font-size(@h3-font-size);
+}
+
+h4 {
+	.margin-bottom(@h4-leading, @unit: rem);
+	.font-size(@h4-font-size);
+}
+
+h5 {
+	.margin-bottom(@h5-leading, @unit: rem);
+	.font-size(@h5-font-size);
+}
+
+h6 {
+	.margin-bottom(@h6-leading, @unit: rem);
+	.font-size(@h6-font-size);
+}
+
+p {
+	.margin-bottom(@base-leading, @unit: rem);
+}
+
+b,
+strong {
+	font-weight: 700;
+}
+
+a {
+	text-decoration: @link-decoration;
+	background-color: transparent;
+	color: @link-color;
+	cursor: pointer;
+	
+	&:hover {
+		text-decoration: @link-decoration-hover;
+	}
+	
+	&:focus {
+		outline: thin dotted;
+		outline-offset: -2px;
+	}
+	
+	&:hover,
+	&:active {
+		outline: 0;
+	}
+}
+
+dfn {
+	font-style: italic;
+}
+
+abbr[title],
+dfn[title] {
+	text-decoration: underline;
+	text-decoration: underline dotted;
+	cursor: help;
+}
+
+mark {
+	background-color: @mark-background;
+	color: @mark-color;
+}
+
+sub,
+sup,
+small {
+	.font-size(@small-font-size);
+}
+
+sub,
+sup {
+	position: relative;
+	line-height: 0;
+}
+
+sup {
+	top: -.5em;
+}
+
+sub {
+	bottom: -.25em;
+}

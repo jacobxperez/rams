@@ -1,0 +1,122 @@
+// Reset
+// ----------------------------------------------------------------------------/
+* {
+	.box-sizing;
+	margin: 0;
+	padding: 0;
+	border: 0 none;
+	font-size: inherit;
+	font-family: inherit;
+	line-height: inherit;
+	color: inherit;
+	vertical-align: baseline;
+	outline: 0;
+}
+
+html {
+	.font-size(@base: @root-font-size);
+}
+
+body {
+	font-family: @base-font-family;
+	font-weight: 400;
+	color: @base-font-color;
+	.line-height(@base-line-height);
+	background-color: @base-background;
+	overflow: auto;
+}
+
+html,
+body {
+	height: 100%;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section {
+	display: block;
+}
+
+audio,
+canvas,
+progress,
+video {
+	display: inline-block;
+}
+
+summary {
+	display: list-item;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+	vertical-align: middle;
+}
+
+audio:not([controls]),
+template,
+[hidden] {
+	display: none;
+	height: 0;
+}
+
+svg:not(:root) {
+	overflow: hidden;
+}
+
+embed,
+img,
+object {
+	max-width: 100%;
+}
+
+img {
+	height: auto;
+}
+
+figure {
+	.margin();
+}
+
+dd,
+ol,
+ul {
+	.margin-bottom(@base-leading, @unit: rem);
+	.padding-left(@indent);
+	list-style-position: outside;
+}
+
+ol ol,
+ol ul,
+ul ol,
+ul ul {
+	margin-bottom: 0;
+}
+
+nav ol,
+nav ul {
+	padding-left: 0;
+	list-style-type: none;
+}
+
+hr {
+	.box-sizing(content-box);
+	display: block;
+	height: 1px;
+	.margin-bottom(@base-leading, @unit: rem);
+	.border-top(@hr-border-width, @hr-border-style, @hr-border-color);
+}
+
+.selection();

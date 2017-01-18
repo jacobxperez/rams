@@ -1,0 +1,66 @@
+// Forms
+// ----------------------------------------------------------------------------/
+select,
+textarea,
+input[type=date],
+input[type=datetime],
+input[type=datetime-local],
+input[type=email],
+input[type=month],
+input[type=number],
+input[type=password],
+input[type=search],
+input[type=tel],
+input[type=text],
+input[type=time],
+input[type=url],
+input[type=week] {
+	display: block;
+	.margin-bottom(@base-leading, @unit: rem);
+	.padding(@form-padding-y, @form-padding-x, @unit: rem);
+	.border(@form-border-width, solid, @form-border-color);
+	width: 100%;
+	line-height: @base-line-height;
+	color: #808080;
+	box-shadow: none;
+	.transition;
+}
+
+textarea {
+	.min-height(100px);
+	width: 100%;
+	overflow: auto;
+	resize: vertical;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+	border-color: @form-border-color-focus;
+	color: @base-font-color;
+	box-shadow: none;
+}
+
+button,
+select {
+	overflow: visible;
+	text-transform: none;
+}
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	-webkit-appearance: button;
+	cursor: pointer;
+}
+
+button[disabled],
+html input[disabled] {
+	cursor: default;
+}
+
+:not([type=submit]):invalid {
+	border-color: #f22;
+	box-shadow: none;
+}

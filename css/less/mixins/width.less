@@ -1,0 +1,37 @@
+// Widths
+// -----------------------------------------------------------------------------
+.width(@width: 0, @base: @base-font-size, @unit: em) {
+	& when (@unit = em), (@unit = rem) {
+		@a: unit((@width / @base), @unit);
+		width: @a;
+	}
+	
+	& when (@unit = %) {
+		@a: percentage(@width / @base);
+		width: @a;
+	}
+}
+
+.max-width(@width: 0, @base: @base-font-size, @unit: em) {
+	& when (@unit = em), (@unit = rem) {
+		@a: unit((@width / @base), @unit);
+		max-width: @a;
+	}
+	
+	& when (@unit = %) {
+		@a: percentage(@width / @base);
+		max-width: @a;
+	}
+}
+
+.min-width(@width: 0, @base: @base-font-size, @unit: em) {
+	& when (@unit = em), (@unit = rem) {
+		@a: unit((@width / @base), @unit);
+		min-width: @a;
+	}
+	
+	& when (@unit = %) {
+		@a: percentage(@width / @base);
+		min-width: @a;
+	}
+}

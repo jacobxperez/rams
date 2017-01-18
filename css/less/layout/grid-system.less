@@ -1,0 +1,61 @@
+// Grid System
+// ----------------------------------------------------------------------------/
+.row {
+	.margin-left(-@grid-gutters, @unit: rem);
+	.margin-right(-@grid-gutters, @unit: rem);
+}
+
+.columns {
+	position: relative;
+	float: left;
+	width: 100%;
+	min-height: 1px;
+	.padding-left(@grid-gutters, @unit: rem);
+	.padding-right(@grid-gutters, @unit: rem);
+}
+
+.grid(@grid-grid-columns, @grid-prefix);
+
+.grid-child(@grid-grid-columns, @grid-prefix);
+
+
+// Display Grid
+// ----------------------------------------------------------------------------/
+.display {
+	margin: 0;
+	
+	.columns {
+		.margin-bottom(@base-leading, @unit: rem);
+		.padding-bottom(@base-padding-y);
+		.padding-top(@base-padding-y);
+		.border-right(1px, @color: #fff);
+		background-color: #333;
+		color: #fff;
+		text-align: center;
+		.box-shadow(0 0 0 1px #333 inset;);
+		.transition;
+		
+		&:hover {
+			background-color: @base-background;
+			color: #333;
+		}
+	}
+}
+
+
+// small screens
+// ----------------------------------------------------------------------------/
+@media screen and (max-width: @small-max-width) {
+	.container > .row > .columns > .row > .columns {
+		width: 100%;
+	}
+}
+
+
+// medium screens
+// ----------------------------------------------------------------------------/
+@media screen and (max-width: @medium-max-width) {
+	.container > .row > .columns {
+		width: 100%;
+	}
+}

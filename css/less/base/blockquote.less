@@ -1,0 +1,18 @@
+// Blockquote
+// ----------------------------------------------------------------------------/
+blockquote {
+	.margin-bottom(@blockquote-leading, @unit: rem);
+	.font-size(@blockquote-font-size);
+	font-family: @blockquote-font-family;
+	font-style: @blockquote-font-style;
+	
+	small:before {
+		content: "— ";
+	}
+	
+	small {
+		display: inline-block;
+		width: 100%;
+		.font-size(@small-font-size, @blockquote-font-size);
+	}
+}

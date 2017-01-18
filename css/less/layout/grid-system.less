@@ -1,6 +1,8 @@
 // Grid System
 // ----------------------------------------------------------------------------/
-.row {
+.large-grid,
+.medium-grid,
+.small-grid {
 	.margin-left(-@grid-gutters, @unit: rem);
 	.margin-right(-@grid-gutters, @unit: rem);
 }
@@ -46,7 +48,7 @@
 // small screens
 // ----------------------------------------------------------------------------/
 @media screen and (max-width: @small-max-width) {
-	.container > .row > .columns > .row > .columns {
+	.medium-grid > .columns {
 		width: 100%;
 	}
 }
@@ -55,7 +57,7 @@
 // medium screens
 // ----------------------------------------------------------------------------/
 @media screen and (max-width: @medium-max-width) {
-	.container > .row > .columns {
+	.large-grid > .columns {
 		width: 100%;
 	}
 }

@@ -4,8 +4,19 @@
 	.min-width(@container-min-width);
 	.max-width(@container-max-width);
 	margin: 0 auto;
-	.padding-top(20px);
-	.padding-bottom(40px);
 	.padding-left(@container-gutters);
 	.padding-right(@container-gutters);
+}
+
+body > .container:first-child {
+	.padding-top(20px);
+}
+
+body > .container:last-child {
+	.padding-bottom(40px);
+}
+
+body > .container:only-child {
+	.padding-top(20px);
+	.padding-bottom(40px);
 }

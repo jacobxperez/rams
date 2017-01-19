@@ -790,32 +790,6 @@ html input[disabled] {
 	width: 100%;
 }
 
-.display {
-	margin: 0;
-}
-
-.display .columns {
-	margin-bottom: 1.5rem;
-	padding-bottom: 0.5em;
-	padding-top: 0.5em;
-	border-right: 0.0625em solid #ffffff;
-	background-color: #333;
-	color: #fff;
-	text-align: center;
-	-webkit-box-shadow: 0 0 0 1px #333333 inset;
-	-moz-box-shadow: 0 0 0 1px #333333 inset;
-	box-shadow: 0 0 0 1px #333333 inset;
-	-webkit-transition: all 0.3s ease 0s;
-	-moz-transition: all 0.3s ease 0s;
-	-o-transition: all 0.3s ease 0s;
-	transition: all 0.3s ease 0s;
-}
-
-.display .columns:hover {
-	background-color: #ffffff;
-	color: #333;
-}
-
 @media screen and (max-width: 567px) {
 	.medium-grid > .columns {
 		width: 100%;

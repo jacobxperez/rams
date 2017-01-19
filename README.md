@@ -1,6 +1,6 @@
 # [Essentials](https://jacobxperez.github.io/essentials/)
 
-The Essentials is a Base CSS stylesheet that includes only the essentials for starting a websitee.
+Base CSS stylesheet that includes only the essentials for starting a website.
 
 ## Project Status
 

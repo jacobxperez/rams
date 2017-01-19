@@ -802,6 +802,19 @@ html input[disabled] {
 	}
 }
 
+.indent {
+	padding-left: 2em;
+}
+
+.text-indent {
+	text-indent: 2em;
+}
+
+.text-outdent {
+	text-indent: -2em;
+	padding-left: 2em;
+}
+
 .align-left {
 	text-align: left;
 }

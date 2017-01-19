@@ -1,5 +1,18 @@
 // Formatting
 // ----------------------------------------------------------------------------/
+.indent {
+	.padding-left(@indent);
+}
+
+.text-indent {
+	.text-indent();
+}
+
+.text-outdent {
+	.text-indent(-@indent);
+	.padding-left(@indent);
+}
+
 .align-left {
 	text-align: left;
 }

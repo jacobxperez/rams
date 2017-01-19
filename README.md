@@ -1,6 +1,6 @@
 # [Essentials](https://jacobxperez.github.io/essentials/)
 
-Essentials is a CSS reset that formats basic HTML elements into beautiful responsive websites.
+The Essentials is a Base CSS stylesheet that includes only the essentials for starting a websitee.
 
 ## Project Status
 
@@ -23,21 +23,21 @@ Start by **[downloading](https://github.com/jacobxperez/essentials/archive/maste
 
 ### Default Build
 
-The easiest way to include [Essentials](https://jacobxperez.github.io/essentials/) into your projects is to copy the pre-compiled CSS file into your project file structure, and then refer to it in HTML.
+The easiest way to include the [Essentials](https://jacobxperez.github.io/essentials/) into your projects is by copying the pre-compiled CSS file into your project, and then link to it in HTML.
 
 * css/style.css
 
 ### Custom build
 
-[Essentials](https://jacobxperez.github.io/essentials/) is build on [LESS](http://lesscss.org/) which extends the capabilities of CSS. Use file style.less for compiling all necessary modules for your website. For adjusting the settings of fonts, colors, padding and more use file var.less.
+The [Essentials](https://jacobxperez.github.io/essentials/) is build on [LESS](http://lesscss.org/) which extends the capabilities of CSS. Use style.less for compiling all necessary modules for your website. To adjusting the settings of fonts, colors, padding and more use settings.less.
 
 * css/style.less (for compiling all LESS modules)
-* css/less/var.less (for changing the settings of fonts, colors, paddings and more)
+* css/less/settings.less (for changing the settings)
 
 ## Features
 
 * Build on [LESS](http://lesscss.org/) with variables and mixins.
-* Beautiful styles for basic HTML elements.
+* Beautiful styles for base HTML elements.
 * Elements are rendered in proportion to the size of the screen.
 
 ## Contributing

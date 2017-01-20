@@ -16,8 +16,8 @@ code {
 pre {
 	.margin-bottom(@base-leading, @unit: rem);
 	.padding();
-	white-space: pre-line;
-	word-wrap: break-word;
+	white-space: @pre-white-space;
+	word-wrap: @pre-word-wrap;
 	overflow: auto;
 	background-color: @code-background;
 	color: @code-color;

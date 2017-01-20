@@ -127,13 +127,13 @@ hr {
 }
 
 ::-moz-selection {
-	background-color: #c0efb0;
+	background-color: #c9deff;
 	color: #000000;
 	text-shadow: none;
 }
 
 ::selection {
-	background-color: #c0efb0;
+	background-color: #c9deff;
 	color: #000000;
 	text-shadow: none;
 }
@@ -261,7 +261,7 @@ code {
 pre {
 	margin-bottom: 1.5rem;
 	padding: 0.5em 0.875em 0.5em 0.875em;
-	white-space: pre-line;
+	white-space: pre-wrap;
 	word-wrap: break-word;
 	overflow: auto;
 	background-color: #e6e6e6;

@@ -262,7 +262,6 @@ pre {
 	margin-bottom: 1.5rem;
 	padding: 0.5em 0.875em 0.5em 0.875em;
 	white-space: pre;
-	word-wrap: break-word;
 	overflow: auto;
 	background-color: #e6e6e6;
 	color: #555555;

@@ -1,0 +1,27 @@
+// Button
+// ----------------------------------------------------------------------------/
+.button {
+	position: relative;
+	display: inline-block;
+	.padding();
+	.border(1px, solid, @buton-border-color);
+	background-color: @buton-background;
+	color: @buton-color;
+	text-align: center;
+	vertical-align: middle;
+	cursor: pointer;
+	.border-radius();
+	
+	&:hover,
+	&:focus,
+	&:active,
+	&.active {
+		.background-color(@buton-background, @switch: dark);
+		text-decoration: none;
+	}
+	
+	&:active,
+	&.active {
+		.box-shadow(0 0 0.2em rgba(0, 0, 0, 0.3) inset;);
+	}
+}

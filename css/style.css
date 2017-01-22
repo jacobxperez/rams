@@ -372,6 +372,36 @@ html input[disabled] {
 	box-shadow: none;
 }
 
+.button {
+	position: relative;
+	display: inline-block;
+	padding: 0.5em 0.875em 0.5em 0.875em;
+	border: 0.0625em solid rgba(0, 0, 0, 0.3);
+	background-color: #eeeeee;
+	color: #333333;
+	text-align: center;
+	vertical-align: middle;
+	cursor: pointer;
+	-webkit-border-radius: 0.25em 0.25em 0.25em 0.25em;
+	-moz-border-radius: 0.25em 0.25em 0.25em 0.25em;
+	border-radius: 0.25em 0.25em 0.25em 0.25em;
+}
+
+.button:hover,
+.button:focus,
+.button:active,
+.button.active {
+	background-color: #dddddd;
+	text-decoration: none;
+}
+
+.button:active,
+.button.active {
+	-webkit-box-shadow: 0 0 0.2em rgba(0, 0, 0, 0.3) inset;
+	-moz-box-shadow: 0 0 0.2em rgba(0, 0, 0, 0.3) inset;
+	box-shadow: 0 0 0.2em rgba(0, 0, 0, 0.3) inset;
+}
+
 @media screen and (min-height: 112.5em) {
 	html {
 		font-size: 0.88888889vh;

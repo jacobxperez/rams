@@ -215,8 +215,8 @@ dfn {
 
 abbr[title],
 dfn[title] {
-	text-decoration: underline;
-	text-decoration: underline dotted;
+	border-bottom: 0.0625em dotted #333333;
+	text-decoration: none;
 	cursor: help;
 }
 

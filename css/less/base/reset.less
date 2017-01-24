@@ -93,8 +93,13 @@ figure {
 dd,
 ol,
 ul {
-	.margin-bottom(@base-leading, @unit: rem);
 	.padding-left(@indent);
+}
+
+dl,
+ol,
+ul {
+	.margin-bottom(@base-leading, @unit: rem);
 	list-style-position: outside;
 }
 

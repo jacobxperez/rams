@@ -98,8 +98,13 @@ figure {
 dd,
 ol,
 ul {
-	margin-bottom: 1.5rem;
 	padding-left: 2em;
+}
+
+dl,
+ol,
+ul {
+	margin-bottom: 1.5rem;
 	list-style-position: outside;
 }
 

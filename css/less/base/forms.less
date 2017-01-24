@@ -16,7 +16,6 @@ input[type=time],
 input[type=url],
 input[type=week] {
 	display: block;
-	.margin-bottom(@base-leading, @unit: rem);
 	.padding(@form-padding-y, @form-padding-x, @unit: rem);
 	.border(@form-border-width, solid, @form-border-color);
 	width: 100%;
@@ -26,19 +25,30 @@ input[type=week] {
 	.transition;
 }
 
-textarea {
-	.min-height(100px);
-	width: 100%;
-	overflow: auto;
-	resize: vertical;
-}
-
-input:focus,
 select:focus,
-textarea:focus {
+textarea:focus,
+input[type=date]:focus,
+input[type=datetime]:focus,
+input[type=datetime-local]:focus,
+input[type=email]:focus,
+input[type=month]:focus,
+input[type=number]:focus,
+input[type=password]:focus,
+input[type=search]:focus,
+input[type=tel]:focus,
+input[type=text]:focus,
+input[type=time]:focus,
+input[type=url]:focus,
+input[type=week]:focus {
 	border-color: @form-border-color-focus;
 	color: @base-font-color;
 	box-shadow: none;
+}
+
+textarea {
+	.min-height(100px);
+	overflow: auto;
+	resize: vertical;
 }
 
 button,

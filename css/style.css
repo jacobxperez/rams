@@ -320,9 +320,8 @@ input[type=time],
 input[type=url],
 input[type=week] {
 	display: block;
-	margin-bottom: 1.5rem;
 	padding: 0.5rem 0.875rem 0.5rem 0.875rem;
-	border: 0.0625em solid #cccccc;
+	border: 0.0625em solid rgba(0, 0, 0, 0.3);
 	width: 100%;
 	line-height: 24px;
 	color: #808080;
@@ -333,19 +332,30 @@ input[type=week] {
 	transition: all 0.3s ease 0s;
 }
 
-textarea {
-	min-height: 6.25em;
-	width: 100%;
-	overflow: auto;
-	resize: vertical;
-}
-
-input:focus,
 select:focus,
-textarea:focus {
+textarea:focus,
+input[type=date]:focus,
+input[type=datetime]:focus,
+input[type=datetime-local]:focus,
+input[type=email]:focus,
+input[type=month]:focus,
+input[type=number]:focus,
+input[type=password]:focus,
+input[type=search]:focus,
+input[type=tel]:focus,
+input[type=text]:focus,
+input[type=time]:focus,
+input[type=url]:focus,
+input[type=week]:focus {
 	border-color: #0066ff;
 	color: #333333;
 	box-shadow: none;
+}
+
+textarea {
+	min-height: 6.25em;
+	overflow: auto;
+	resize: vertical;
 }
 
 button,

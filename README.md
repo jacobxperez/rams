@@ -25,7 +25,7 @@ Start by **[downloading](https://github.com/jacobxperez/essentials/archive/maste
 
 ### Default Build
 
-The easiest way to include the [Essentials](https://jacobxperez.github.io/essentials/) into your projects is by copying the pre-compiled CSS file into your project, and then link to it in HTML.
+The easiest way to include the [Essentials](https://jacobxperez.github.io/essentials/) into your projects is by copying the pre-compiled CSS file into your project folder, and then link to it in HTML.
 
 * css/style.css
 

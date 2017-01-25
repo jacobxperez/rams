@@ -15,7 +15,7 @@
 // borders
 @base-border-width: 1px;
 @base-border-style: solid;
-@base-border-color: #ccc;
+@base-border-color: rgba(0, 0, 0, 0.3);
 @base-border-radius: 4px;
 
 // indentation
@@ -152,7 +152,7 @@
 @form-padding-y: @base-padding-y;
 @form-padding-x: @base-padding-x;
 
-@form-border-color: rgba(0, 0, 0, 0.3);
+@form-border-color: @base-border-color;
 @form-border-color-focus: @link-color;
 @form-border-width: 1px;
 
@@ -162,7 +162,7 @@
 @buton-padding-y: @base-padding-y;
 @buton-padding-x: @base-padding-x;
 
-@buton-border-color: rgba(0, 0, 0, 0.3);
+@buton-border-color: @base-border-color;
 @buton-background: #eee;
 @buton-color: @base-font-color;
 
@@ -191,17 +191,17 @@
 // ----------------------------------------------------------------------------/
 
 // small screen
-@small-max-width: 567px;
+@small-max-width: 640px;
 @mq-small-screen-max-width: unit((@small-max-width / @root-font-size), em);
 
 // medium screen
-@medium-min-width: 568px;
-@medium-max-width: 799px;
+@medium-min-width: 641px;
+@medium-max-width: 899px;
 @mq-medium-min-width: unit((@medium-min-width / @root-font-size), em);
 @mq-medium-max-width: unit((@medium-max-width / @root-font-size), em);
 
 // large screen
-@large-min-width: 800px;
+@large-min-width: 900px;
 @mq-large-min-width: unit((@large-min-width / @root-font-size), em);
 
 

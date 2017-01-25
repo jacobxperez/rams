@@ -128,7 +128,7 @@ hr {
 	display: block;
 	height: 1px;
 	margin-bottom: 1.5rem;
-	border-top: 0.125em solid #cccccc;
+	border-top: 0.125em solid rgba(0, 0, 0, 0.3);
 }
 
 ::-moz-selection {
@@ -835,13 +835,13 @@ body > .container:only-child {
 	width: 100%;
 }
 
-@media screen and (max-width: 567px) {
+@media screen and (max-width: 640px) {
 	.medium-grid > .columns {
 		width: 100%;
 	}
 }
 
-@media screen and (max-width: 799px) {
+@media screen and (max-width: 899px) {
 	.large-grid > .columns {
 		width: 100%;
 	}

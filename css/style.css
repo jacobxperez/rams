@@ -267,9 +267,9 @@ pre {
 	margin-bottom: 1.5rem;
 	padding: 0.5em 0.875em 0.5em 0.875em;
 	white-space: pre;
-	overflow: auto;
 	background-color: #e6e6e6;
 	color: #555555;
+	overflow: auto;
 }
 
 pre code {
@@ -289,7 +289,7 @@ blockquote small:before {
 }
 
 blockquote small {
-	display: inline-block;
+	display: block;
 	width: 100%;
 	font-size: 58.33333333%;
 }
@@ -380,7 +380,6 @@ html input[disabled] {
 }
 
 .button {
-	position: relative;
 	display: inline-block;
 	padding: 0.5em 0.875em 0.5em 0.875em;
 	border: 0.0625em solid rgba(0, 0, 0, 0.3);
@@ -469,7 +468,6 @@ body > .container:only-child {
 }
 
 .columns {
-	position: relative;
 	float: left;
 	width: 100%;
 	min-height: 1px;
@@ -858,8 +856,8 @@ body > .container:only-child {
 }
 
 .text-outdent {
-	text-indent: -2em;
 	padding-left: 2em;
+	text-indent: -2em;
 }
 
 .align-left {

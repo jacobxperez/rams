@@ -132,13 +132,13 @@ hr {
 }
 
 ::-moz-selection {
-	background-color: #c9deff;
+	background-color: #c2daff;
 	color: #000000;
 	text-shadow: none;
 }
 
 ::selection {
-	background-color: #c9deff;
+	background-color: #c2daff;
 	color: #000000;
 	text-shadow: none;
 }
@@ -395,14 +395,12 @@ html input[disabled] {
 
 .button:hover,
 .button:focus,
-.button:active,
-.button.active {
+.button:active {
 	background-color: #dddddd;
 	text-decoration: none;
 }
 
-.button:active,
-.button.active {
+.button:active {
 	-webkit-box-shadow: 0 0 0.2em rgba(0, 0, 0, 0.3) inset;
 	-moz-box-shadow: 0 0 0.2em rgba(0, 0, 0, 0.3) inset;
 	box-shadow: 0 0 0.2em rgba(0, 0, 0, 0.3) inset;

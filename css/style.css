@@ -330,11 +330,8 @@ input[type=week] {
 	width: 100%;
 	line-height: 24px;
 	color: #808080;
+	border-radius: 0;
 	box-shadow: none;
-	-webkit-transition: all 0.3s ease 0s;
-	-moz-transition: all 0.3s ease 0s;
-	-o-transition: all 0.3s ease 0s;
-	transition: all 0.3s ease 0s;
 }
 
 select:focus,

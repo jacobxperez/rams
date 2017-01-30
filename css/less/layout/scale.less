@@ -1,16 +1,16 @@
 // Scale by Height
 // ----------------------------------------------------------------------------/
-@media screen and (min-height: @scale-min-width) {
+@media screen and (min-height: @breakpoint-scale) {
 	html {
-		.font-size(@base-font-size, @scale-viewport-size, vh);
+		.font-size(@base-font-size, @scale-size, vh);
 	}
 }
 
 
 // Scale by Width
 // ----------------------------------------------------------------------------/
-@media screen and (min-width: @scale-min-width) {
+@media screen and (min-width: @breakpoint-scale) {
 	html {
-		.font-size(@base-font-size, @scale-viewport-size, vw);
+		.font-size(@base-font-size, @scale-size, vw);
 	}
 }

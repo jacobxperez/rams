@@ -830,13 +830,13 @@ body > .container:only-child {
 	width: 100%;
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 40em) {
 	.medium-grid > .columns {
 		width: 100%;
 	}
 }
 
-@media screen and (max-width: 899px) {
+@media screen and (max-width: 56.1875em) {
 	.large-grid > .columns {
 		width: 100%;
 	}

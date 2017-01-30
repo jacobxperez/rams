@@ -192,20 +192,20 @@
 
 // small screen
 @small-max-width: 640px;
-@mq-small-screen-max-width: unit((@small-max-width / @root-font-size), em);
+@breakpoint-small-max: unit((@small-max-width / @root-font-size), em);
 
 // medium screen
 @medium-min-width: 641px;
 @medium-max-width: 899px;
-@mq-medium-min-width: unit((@medium-min-width / @root-font-size), em);
-@mq-medium-max-width: unit((@medium-max-width / @root-font-size), em);
+@breakpoint-medium-min: unit((@medium-min-width / @root-font-size), em);
+@breakpoint-medium-max: unit((@medium-max-width / @root-font-size), em);
 
 // large screen
 @large-min-width: 900px;
-@mq-large-min-width: unit((@large-min-width / @root-font-size), em);
+@breakpoint-large-min: unit((@large-min-width / @root-font-size), em);
 
 
 // Scale Breakpoint
 // ----------------------------------------------------------------------------/
-@scale-viewport-size: 1800px;
-@scale-min-width: unit((@scale-viewport-size / @root-font-size), em);
+@scale-size: 1800px;
+@breakpoint-scale: unit((@scale-size / @root-font-size), em);

@@ -21,7 +21,7 @@ Start by **[downloading](https://github.com/jacobxperez/essentials/archive/maste
 
 	git clone https://github.com/jacobxperez/essentials.git
 
-*Keep in mind that this project is under active development and no stable version has been release yet.*
+*Keep in mind that this project is under active development and no stable version has been release.*
 
 ### Default Build
 

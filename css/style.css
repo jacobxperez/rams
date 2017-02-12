@@ -1267,4 +1267,7 @@ body > .container:only-child {
 	.columns {
 		width: 100%;
 	}
+	.hide-print {
+		display: none;
+	}
 }

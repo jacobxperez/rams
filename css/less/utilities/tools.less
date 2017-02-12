@@ -1,0 +1,40 @@
+// Tools
+// ----------------------------------------------------------------------------/
+.show-print {
+	display: none;
+}
+
+
+// Small Screen
+// ----------------------------------------------------------------------------/
+@media screen and (max-width: @breakpoint-small-max) {
+	.hide-@{small-prefix},
+	.show-@{medium-prefix},
+	.show-@{large-prefix} {
+		display: none;
+	}
+}
+
+
+// Medium Screen
+// ----------------------------------------------------------------------------/
+@media screen and (min-width: @breakpoint-medium-min) and (max-width: @breakpoint-medium-max) {
+	.hide-@{medium-prefix}-up,
+	.hide-@{medium-prefix},
+	.show-@{small-prefix},
+	.show-@{large-prefix} {
+		display: none;
+	}
+}
+
+
+// Large Screen
+// ----------------------------------------------------------------------------/
+@media screen and (min-width: @breakpoint-large-min) {
+	.hide-@{medium-prefix}-up,
+	.hide-@{large-prefix},
+	.show-@{small-prefix},
+	.show-@{medium-prefix} {
+		display: none;
+	}
+}

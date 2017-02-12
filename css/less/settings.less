@@ -182,26 +182,36 @@
 
 // Grid System
 // ----------------------------------------------------------------------------/
-@grid-prefix: span;
-@grid-grid-columns: 12;
 @grid-gutters: 10px;
+
+// small grid
+@small-prefix: small;
+@small-grid-columns: 8;
+
+// medium grid
+@medium-prefix: medium;
+@medium-grid-columns: 12;
+
+// large grid
+@large-prefix: large;
+@large-grid-columns: 12;
 
 
 // Breakpoints
 // ----------------------------------------------------------------------------/
 
 // small screen
-@small-max-width: 640px;
+@small-max-width: 767px;
 @breakpoint-small-max: unit((@small-max-width / @root-font-size), em);
 
 // medium screen
-@medium-min-width: 641px;
-@medium-max-width: 899px;
+@medium-min-width: 768px;
+@medium-max-width: 979px;
 @breakpoint-medium-min: unit((@medium-min-width / @root-font-size), em);
 @breakpoint-medium-max: unit((@medium-max-width / @root-font-size), em);
 
 // large screen
-@large-min-width: 900px;
+@large-min-width: 980px;
 @breakpoint-large-min: unit((@large-min-width / @root-font-size), em);
 
 

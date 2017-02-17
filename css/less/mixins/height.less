@@ -10,6 +10,11 @@
 		@a: percentage(@height / @base);
 		height: @a;
 	}
+	
+	& when (@unit = vw), (@unit = vh) {
+		@a: unit(((@height / @base) * 100), @unit);
+		height: @a;
+	}
 }
 
 .max-height(@height: 0, @base: @base-font-size, @unit: em) {
@@ -22,6 +27,11 @@
 		@a: percentage(@height / @base);
 		max-height: @a;
 	}
+	
+	& when (@unit = vw), (@unit = vh) {
+		@a: unit(((@height / @base) * 100), @unit);
+		max-height: @a;
+	}
 }
 
 .min-height(@height: 0, @base: @base-font-size, @unit: em) {
@@ -32,6 +42,11 @@
 	
 	& when (@unit = %) {
 		@a: percentage(@height / @base);
+		min-height: @a;
+	}
+	
+	& when (@unit = vw), (@unit = vh) {
+		@a: unit(((@height / @base) * 100), @unit);
 		min-height: @a;
 	}
 }

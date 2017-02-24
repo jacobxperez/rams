@@ -329,8 +329,9 @@ input[type=week] {
 	border: 0.0625em solid rgba(0, 0, 0, 0.3);
 	width: 100%;
 	line-height: 24px;
-	color: #808080;
-	border-radius: 0;
+	-webkit-border-radius: 0.25em 0.25em 0.25em 0.25em;
+	-moz-border-radius: 0.25em 0.25em 0.25em 0.25em;
+	border-radius: 0.25em 0.25em 0.25em 0.25em;
 	box-shadow: none;
 }
 

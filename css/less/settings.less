@@ -184,6 +184,10 @@
 // ----------------------------------------------------------------------------/
 @grid-gutters: 10px;
 
+// xsmall grid
+@xsmall-prefix: xsmall;
+@xsmall-grid-columns: 4;
+
 // small grid
 @small-prefix: small;
 @small-grid-columns: 8;
@@ -200,12 +204,18 @@
 // Breakpoints
 // ----------------------------------------------------------------------------/
 
+// xsmall screen
+@xsmall-max-width: 567px;
+@breakpoint-xsmall-max: unit((@xsmall-max-width / @root-font-size), em);
+
 // small screen
-@small-max-width: 767px;
+@small-min-width: 568px;
+@small-max-width: 799px;
+@breakpoint-small-min: unit((@small-min-width / @root-font-size), em);
 @breakpoint-small-max: unit((@small-max-width / @root-font-size), em);
 
 // medium screen
-@medium-min-width: 768px;
+@medium-min-width: 800px;
 @medium-max-width: 979px;
 @breakpoint-medium-min: unit((@medium-min-width / @root-font-size), em);
 @breakpoint-medium-max: unit((@medium-max-width / @root-font-size), em);

@@ -639,7 +639,7 @@ body > .container:only-child {
 	width: 100%;
 }
 
-@media screen and (min-width: 48em) {
+@media screen and (min-width: 50em) {
 	.medium-1 {
 		width: 8.33333333%;
 	}
@@ -1219,7 +1219,7 @@ body > .container:only-child {
 	display: none;
 }
 
-@media screen and (max-width: 47.9375em) {
+@media screen and (max-width: 49.9375em) {
 	.hide-small,
 	.show-medium,
 	.show-large {
@@ -1227,7 +1227,7 @@ body > .container:only-child {
 	}
 }
 
-@media screen and (min-width: 48em) and (max-width: 61.1875em) {
+@media screen and (min-width: 50em) and (max-width: 61.1875em) {
 	.hide-medium-up,
 	.hide-medium,
 	.show-small,

@@ -4,17 +4,17 @@
 ------------------------------------------------------------------------------*/
 
 * {
-	font-family: inherit;
-	font-size: inherit;
-	line-height: inherit;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
-	vertical-align: baseline;
-	color: inherit;
 	border: 0 none;
+	font-size: inherit;
+	font-family: inherit;
+	line-height: inherit;
+	color: inherit;
+	vertical-align: baseline;
 	outline: 0;
 }
 
@@ -23,16 +23,16 @@ html {
 }
 
 body {
-	font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, 'Nimbus Sans L', 'Liberation Sans', Arial, FreeSans, sans-serif;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, "Nimbus Sans L", "Liberation Sans", Arial, FreeSans, sans-serif;
 	font-weight: 400;
-	line-height: 1.5;
-	overflow: auto;
 	color: #333;
+	line-height: 1.5;
 	background-color: #fff;
+	overflow: auto;
 }
 
-html,
-body {
+body,
+html {
 	height: 100%;
 }
 
@@ -70,9 +70,9 @@ video {
 	vertical-align: middle;
 }
 
+[hidden],
 audio:not([controls]),
-template,
-[hidden] {
+template {
 	display: none;
 	height: 0;
 }
@@ -92,7 +92,7 @@ img {
 }
 
 figure {
-	margin: 1.25em 1.25em 1.25em 1.25em;
+	margin: 1.25em;
 }
 
 dd,
@@ -122,24 +122,24 @@ nav ul {
 }
 
 hr {
-	display: block;
 	-webkit-box-sizing: content-box;
 	-moz-box-sizing: content-box;
 	box-sizing: content-box;
+	display: block;
 	height: 1px;
 	margin-bottom: 1.5rem;
-	border-top: .125em solid rgba(0, 0, 0, .3);
+	border-top: .125em solid rgba(0, 0, 0, 0.3);
 }
 
 ::-moz-selection {
-	color: #000;
 	background-color: #c2daff;
+	color: #000;
 	text-shadow: none;
 }
 
 ::selection {
-	color: #000;
 	background-color: #c2daff;
+	color: #000;
 	text-shadow: none;
 }
 
@@ -155,33 +155,33 @@ h6 {
 }
 
 h1 {
-	font-size: 250%;
 	margin-bottom: 1.5rem;
+	font-size: 250%;
 }
 
 h2 {
-	font-size: 200%;
 	margin-bottom: 1.5rem;
+	font-size: 200%;
 }
 
 h3 {
-	font-size: 150%;
 	margin-bottom: 1.5rem;
+	font-size: 150%;
 }
 
 h4 {
-	font-size: 125%;
 	margin-bottom: 1.5rem;
+	font-size: 125%;
 }
 
 h5 {
-	font-size: 112.5%;
 	margin-bottom: 1.5rem;
+	font-size: 112.5%;
 }
 
 h6 {
-	font-size: 100%;
 	margin-bottom: 1.5rem;
+	font-size: 100%;
 }
 
 p {
@@ -194,10 +194,10 @@ strong {
 }
 
 a {
-	cursor: pointer;
 	text-decoration: none;
-	color: #06f;
 	background-color: transparent;
+	color: #06f;
+	cursor: pointer;
 }
 
 a:hover {
@@ -209,8 +209,8 @@ a:focus {
 	outline-offset: -2px;
 }
 
-a:hover,
-a:active {
+a:active,
+a:hover {
 	outline: 0;
 }
 
@@ -220,100 +220,98 @@ dfn {
 
 abbr[title],
 dfn[title] {
-	cursor: help;
-	text-decoration: none;
 	border-bottom: .0625em dotted #333;
+	text-decoration: none;
+	cursor: help;
 }
 
 mark {
+	background-color: #ffff00;
 	color: #000;
-	background-color: #ff0;
 }
 
+small,
 sub,
-sup,
-small {
+sup {
 	font-size: 87.5%;
 }
 
 sub,
 sup {
-	line-height: 0;
 	position: relative;
+	line-height: 0;
 }
 
 sup {
-	top: -.5em;
+	top: -0.5em;
 }
 
 sub {
-	bottom: -.25em;
+	bottom: -0.25em;
 }
 
 code,
 kbd,
 pre,
 samp {
-	font-family: 'Lucida Console', Consolas, 'Andale Mono WT', 'Andale Mono', 'Bitstream Vera Sans Mono', 'DejaVu Sans Mono', 'Liberation Mono', monospace;
+	font-family: "Lucida Console", Consolas, "Andale Mono WT", "Andale Mono", "Bitstream Vera Sans Mono", "DejaVu Sans Mono", "Liberation Mono", monospace;
 }
 
 code {
 	line-height: 1;
-	color: #555;
 	background-color: #e6e6e6;
+	color: #555;
 }
 
 pre {
-	overflow: auto;
 	margin-bottom: 1.5rem;
-	padding: .5em .875em .5em .875em;
+	padding: .5em .875em;
 	white-space: pre;
-	color: #555;
 	background-color: #e6e6e6;
+	color: #555;
+	overflow: auto;
 }
 
 pre code {
-	color: inherit;
 	background-color: inherit;
+	color: inherit;
 }
 
 blockquote {
-	font-family: Cambria, 'Hoefler Text', Utopia, 'Liberation Serif', 'Nimbus Roman No9 L Regular', Times, 'Times New Roman', serif;
-	font-size: 150%;
-	font-style: italic;
 	margin-bottom: 1.5rem;
+	font-size: 150%;
+	font-family: Cambria, "Hoefler Text", Utopia, "Liberation Serif", "Nimbus Roman No9 L Regular", Times, "Times New Roman", serif;
+	font-style: italic;
 }
 
 blockquote small:before {
-	content: '— ';
+	content: "— ";
 }
 
 blockquote small {
-	font-size: 58.33333333%;
 	display: block;
 	width: 100%;
+	font-size: 58.33333333%;
 }
 
 table {
 	display: table;
 	width: 100%;
 	margin-bottom: 1.5rem;
-	border-spacing: 0;
 	border-collapse: collapse;
+	border-spacing: 0;
 }
 
-th,
-td {
+td,
+th {
 	display: table-cell;
-	padding: .5em .875em .5em .875em;
+	padding: .5em .875em;
 	text-align: left;
 }
 
-select,
-textarea,
 input[type=date],
-input[type=datetime],
 input[type=datetime-local],
+input[type=datetime],
 input[type=email],
 input[type=month],
 input[type=number],
@@ -323,23 +321,23 @@ input[type=tel],
 input[type=text],
 input[type=time],
 input[type=url],
-input[type=week] {
-	line-height: 24px;
+input[type=week],
+select,
+textarea {
 	display: block;
+	padding: .5rem .875rem;
+	border: .0625em solid rgba(0, 0, 0, 0.3);
 	width: 100%;
-	padding: .5rem .875rem .5rem .875rem;
-	border: .0625em solid rgba(0, 0, 0, .3);
+	line-height: 24px;
 	-webkit-border-radius: .25em .25em .25em .25em;
 	-moz-border-radius: .25em .25em .25em .25em;
 	border-radius: .25em .25em .25em .25em;
 	box-shadow: none;
 }
 
-select:focus,
-textarea:focus,
 input[type=date]:focus,
-input[type=datetime]:focus,
 input[type=datetime-local]:focus,
+input[type=datetime]:focus,
 input[type=email]:focus,
 input[type=month]:focus,
 input[type=number]:focus,
@@ -349,15 +347,17 @@ input[type=tel]:focus,
 input[type=text]:focus,
 input[type=time]:focus,
 input[type=url]:focus,
-input[type=week]:focus {
-	color: #333;
+input[type=week]:focus,
+select:focus,
+textarea:focus {
 	border-color: #06f;
+	color: #333;
 	box-shadow: none;
 }
 
 textarea {
-	overflow: auto;
 	min-height: 6.25em;
+	overflow: auto;
 	resize: vertical;
 }
 
@@ -379,29 +379,29 @@ html input[disabled] {
 
 .button {
 	display: inline-block;
-	padding: .5em .875em .5em .875em;
-	cursor: pointer;
+	padding: .5em .875em;
+	border: .0625em solid rgba(0, 0, 0, 0.3);
+	background-color: #eee;
+	color: #333;
 	text-align: center;
 	vertical-align: middle;
-	color: #333;
-	border: .0625em solid rgba(0, 0, 0, .3);
+	cursor: pointer;
 	-webkit-border-radius: .25em .25em .25em .25em;
 	-moz-border-radius: .25em .25em .25em .25em;
 	border-radius: .25em .25em .25em .25em;
-	background-color: #eee;
 }
 
-.button:hover,
+.button:active,
 .button:focus,
-.button:active {
+.button:hover {
+	background-color: #dddddd;
 	text-decoration: none;
-	background-color: #ddd;
 }
 
 .button:active {
-	-webkit-box-shadow: 0 0 .2em rgba(0, 0, 0, .3) inset;
-	-moz-box-shadow: 0 0 .2em rgba(0, 0, 0, .3) inset;
-	box-shadow: 0 0 .2em rgba(0, 0, 0, .3) inset;
+	-webkit-box-shadow: 0 0 .2em rgba(0, 0, 0, 0.3) inset;
+	-moz-box-shadow: 0 0 .2em rgba(0, 0, 0, 0.3) inset;
+	box-shadow: 0 0 .2em rgba(0, 0, 0, 0.3) inset;
 }
 
 @media screen and (min-height: 112.5em) {
@@ -416,12 +416,12 @@ html input[disabled] {
 	}
 }
 
-.container:before,
-.row:before,
 .container:after,
-.row:after {
+.container:before,
+.row:after,
+.row:before {
+	content: " ";
 	display: table;
-	content: ' ';
 }
 
 .container:after,
@@ -433,8 +433,8 @@ html input[disabled] {
 	min-width: 20em;
 	max-width: 61.25em;
 	margin: 0 auto;
-	padding-right: 1.25em;
 	padding-left: 1.25em;
+	padding-right: 1.25em;
 }
 
 body > .container:first-child {
@@ -451,16 +451,16 @@ body > .container:only-child {
 }
 
 .row {
-	margin-right: -.625rem;
-	margin-left: -.625rem;
+	margin-left: -0.625rem;
+	margin-right: -0.625rem;
 }
 
 .columns {
 	float: left;
 	width: 100%;
 	min-height: 1px;
-	padding-right: .625rem;
 	padding-left: .625rem;
+	padding-right: .625rem;
 }
 
 .small-1 {
@@ -1399,26 +1399,26 @@ body > .container:only-child {
 
 @media screen and (max-width: 49.9375em) {
 	.hide-small,
-    .show-medium,
-    .show-large {
+	.show-large,
+	.show-medium {
 		display: none;
 	}
 }
 
 @media screen and (min-width: 50em) and (max-width: 61.1875em) {
+	.hide-medium,
 	.hide-medium-up,
-    .hide-medium,
-    .show-small,
-    .show-large {
+	.show-large,
+	.show-small {
 		display: none;
 	}
 }
 
 @media screen and (min-width: 61.25em) {
+	.hide-large,
 	.hide-medium-up,
-    .hide-large,
-    .show-small,
-    .show-medium {
+	.show-medium,
+	.show-small {
 		display: none;
 	}
 }
@@ -1429,12 +1429,12 @@ body > .container:only-child {
 	}
 
 	body {
-		color: black;
 		background: white;
+		color: black;
 	}
 
-	html,
-    body {
+	body,
+	html {
 		height: auto;
 	}
 

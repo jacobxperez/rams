@@ -1,5 +1,6 @@
 // Reset
 // ----------------------------------------------------------------------------/
+
 * {
 	.box-sizing;
 	margin: 0;
@@ -26,8 +27,8 @@ body {
 	overflow: auto;
 }
 
-html,
-body {
+body,
+html {
 	height: 100%;
 }
 
@@ -65,9 +66,9 @@ video {
 	vertical-align: middle;
 }
 
+[hidden],
 audio:not([controls]),
-template,
-[hidden] {
+template {
 	display: none;
 	height: 0;
 }
@@ -123,5 +124,4 @@ hr {
 	.margin-bottom(@base-leading, @unit: rem);
 	.border-top(@hr-border-width, @hr-border-style, @hr-border-color);
 }
-
 .selection();

@@ -1,5 +1,6 @@
 // Button
 // ----------------------------------------------------------------------------/
+
 .button {
 	display: inline-block;
 	.padding(@buton-padding-y, @buton-padding-x);
@@ -10,14 +11,14 @@
 	vertical-align: middle;
 	cursor: pointer;
 	.border-radius();
-	
-	&:hover,
+
+	&:active,
 	&:focus,
-	&:active {
+	&:hover {
 		.background-color(@buton-background, @switch: dark);
 		text-decoration: none;
 	}
-	
+
 	&:active {
 		.box-shadow(0 0 0.2em rgba(0, 0, 0, 0.3) inset;);
 	}

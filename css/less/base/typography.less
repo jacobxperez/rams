@@ -1,3 +1,6 @@
+// Typography
+// ----------------------------------------------------------------------------/
+
 h1,
 h2,
 h3,
@@ -14,7 +17,7 @@ h1 {
 	.font-size(@h1-font-size);
 }
 
-h2{
+h2 {
 	.margin-bottom(@h2-leading, @unit: rem);
 	.font-size(@h2-font-size);
 }
@@ -53,18 +56,18 @@ a {
 	background-color: transparent;
 	color: @link-color;
 	cursor: pointer;
-	
+
 	&:hover {
 		text-decoration: @link-decoration-hover;
 	}
-	
+
 	&:focus {
 		outline: thin dotted;
 		outline-offset: -2px;
 	}
-	
-	&:hover,
-	&:active {
+
+	&:active,
+	&:hover {
 		outline: 0;
 	}
 }
@@ -85,9 +88,9 @@ mark {
 	color: @mark-color;
 }
 
+small,
 sub,
-sup,
-small {
+sup {
 	.font-size(@small-font-size);
 }
 

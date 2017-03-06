@@ -403,13 +403,11 @@ html input[disabled] {
 	-moz-box-shadow: 0 0 .2em rgba(0, 0, 0, 0.3) inset;
 	box-shadow: 0 0 .2em rgba(0, 0, 0, 0.3) inset;
 }
-
 @media screen and (min-height: 112.5em) {
 	html {
 		font-size: .88888889vh;
 	}
 }
-
 @media screen and (min-width: 112.5em) {
 	html {
 		font-size: .88888889vw;
@@ -638,7 +636,6 @@ body > .container:only-child {
 .small-1 .small-1 {
 	width: 100%;
 }
-
 @media screen and (min-width: 50em) {
 	.medium-1 {
 		width: 8.33333333%;
@@ -1000,7 +997,6 @@ body > .container:only-child {
 		width: 100%;
 	}
 }
-
 @media screen and (min-width: 61.25em) {
 	.large-1 {
 		width: 8.33333333%;
@@ -1396,7 +1392,6 @@ body > .container:only-child {
 .show-print {
 	display: none;
 }
-
 @media screen and (max-width: 49.9375em) {
 	.hide-small,
 	.show-large,
@@ -1404,7 +1399,6 @@ body > .container:only-child {
 		display: none;
 	}
 }
-
 @media screen and (min-width: 50em) and (max-width: 61.1875em) {
 	.hide-medium,
 	.hide-medium-up,
@@ -1413,7 +1407,6 @@ body > .container:only-child {
 		display: none;
 	}
 }
-
 @media screen and (min-width: 61.25em) {
 	.hide-large,
 	.hide-medium-up,
@@ -1422,7 +1415,6 @@ body > .container:only-child {
 		display: none;
 	}
 }
-
 @media print {
 	html {
 		font-size: 100%;

@@ -100,7 +100,7 @@ ul {
 dl,
 ol,
 ul {
-	.margin-bottom(@base-leading, @unit: rem);
+	.margin-bottom(@base-leading; @unit: rem);
 	list-style-position: outside;
 }
 
@@ -121,7 +121,7 @@ hr {
 	.box-sizing(content-box);
 	display: block;
 	height: 1px;
-	.margin-bottom(@base-leading, @unit: rem);
-	.border-top(@hr-border-width, @hr-border-style, @hr-border-color);
+	.margin-bottom(@base-leading; @unit: rem);
+	.border-top(@hr-border-width; @hr-border-style; @hr-border-color);
 }
 .selection();

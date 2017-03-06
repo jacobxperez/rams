@@ -3,8 +3,8 @@
 
 .button {
 	display: inline-block;
-	.padding(@buton-padding-y, @buton-padding-x);
-	.border(1px, solid, @buton-border-color);
+	.padding(@buton-padding-y; @buton-padding-x);
+	.border(1px; solid; @buton-border-color);
 	background-color: @buton-background;
 	color: @buton-color;
 	text-align: center;
@@ -15,7 +15,7 @@
 	&:active,
 	&:focus,
 	&:hover {
-		.background-color(@buton-background, @switch: dark);
+		.background-color(@buton-background; @switch: dark);
 		text-decoration: none;
 	}
 

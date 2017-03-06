@@ -1,39 +1,37 @@
 // Grid System
 // ----------------------------------------------------------------------------/
+
 .row {
-	.margin-left(-@grid-gutters, @unit: rem);
-	.margin-right(-@grid-gutters, @unit: rem);
+	.margin-left(-@grid-gutters; @unit: rem);
+	.margin-right(-@grid-gutters; @unit: rem);
 }
 
 .columns {
 	float: left;
 	width: 100%;
 	min-height: 1px;
-	.padding-left(@grid-gutters, @unit: rem);
-	.padding-right(@grid-gutters, @unit: rem);
+	.padding-left(@grid-gutters; @unit: rem);
+	.padding-right(@grid-gutters; @unit: rem);
 }
-
 
 // Small Grid
 // ----------------------------------------------------------------------------/
-.grid(@small-grid-columns, @small-prefix);
 
-.grid-child(@small-grid-columns, @small-prefix);
-
+.grid(@small-grid-columns; @small-prefix);
+.grid-child(@small-grid-columns; @small-prefix);
 
 // Medium Grid
 // ----------------------------------------------------------------------------/
-@media screen and (min-width: @breakpoint-medium-min) {
-	.grid(@medium-grid-columns, @medium-prefix);
-	
-	.grid-child(@medium-grid-columns, @medium-prefix);
-}
 
+@media screen and (min-width: @breakpoint-medium-min) {
+	.grid(@medium-grid-columns; @medium-prefix);
+	.grid-child(@medium-grid-columns; @medium-prefix);
+}
 
 // Large Grid
 // ----------------------------------------------------------------------------/
+
 @media screen and (min-width: @breakpoint-large-min) {
-	.grid(@large-grid-columns, @large-prefix);
-	
-	.grid-child(@large-grid-columns, @large-prefix);
+	.grid(@large-grid-columns; @large-prefix);
+	.grid-child(@large-grid-columns; @large-prefix);
 }

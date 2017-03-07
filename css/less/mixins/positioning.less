@@ -5,17 +5,17 @@
 		@a: percentage(@position / @base);
 		top: @a;
 	}
-	
+
 	& when (@unit = vw), (@unit = vh) {
 		@a: unit(((@position / @base) * 100), @unit);
 		top: @a;
 	}
-	
+
 	& when (@unit = em), (@unit = rem) {
 		@a: unit((@position / @base), @unit);
 		top: @a;
 	}
-	
+
 	& when (@unit = none) {
 		@a: unit((@position / @base));
 		top: @a;
@@ -27,17 +27,17 @@
 		@a: percentage(@position / @base);
 		bottom: @a;
 	}
-	
+
 	& when (@unit = vw), (@unit = vh) {
 		@a: unit(((@position / @base) * 100), @unit);
 		bottom: @a;
 	}
-	
+
 	& when (@unit = em), (@unit = rem) {
 		@a: unit((@position / @base), @unit);
 		bottom: @a;
 	}
-	
+
 	& when (@unit = none) {
 		@a: unit((@position / @base));
 		bottom: @a;
@@ -49,17 +49,17 @@
 		@a: percentage(@position / @base);
 		left: @a;
 	}
-	
+
 	& when (@unit = vw), (@unit = vh) {
 		@a: unit(((@position / @base) * 100), @unit);
 		left: @a;
 	}
-	
+
 	& when (@unit = em), (@unit = rem) {
 		@a: unit((@position / @base), @unit);
 		left: @a;
 	}
-	
+
 	& when (@unit = none) {
 		@a: unit((@position / @base));
 		left: @a;
@@ -71,17 +71,17 @@
 		@a: percentage(@position / @base);
 		right: @a;
 	}
-	
+
 	& when (@unit = vw), (@unit = vh) {
 		@a: unit(((@position / @base) * 100), @unit);
 		right: @a;
 	}
-	
+
 	& when (@unit = em), (@unit = rem) {
 		@a: unit((@position / @base), @unit);
-		left: @a;
+		right: @a;
 	}
-	
+
 	& when (@unit = none) {
 		@a: unit((@position / @base));
 		right: @a;

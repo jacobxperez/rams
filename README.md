@@ -54,7 +54,7 @@ Please ask first before embarking on any significant pull request (e.g. implemen
 
 ## LICENSE
 
-Copyright (C) 2017 [Jacob Perez](https://github.com/jacobxperez) and licensed under the [GNU General Public License v3](https://www.gnu.org/licenses/gpl-3.0.html)
+Copyright (C) 2018 [Jacob Perez](https://github.com/jacobxperez) and licensed under the [GNU General Public License v3](https://www.gnu.org/licenses/gpl-3.0.html)
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by

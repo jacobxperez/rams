@@ -79,28 +79,34 @@
 @headings-font-weight: 700;
 
 // heading 1
-@h1-font-size: 40px;
+@h1-font-size: 47px;
 @h1-leading: @base-leading;
+@h1-line-height: 48px;
 
 // heading 2
-@h2-font-size: 32px;
+@h2-font-size: 33px;
 @h2-leading: @base-leading;
+@h2-line-height: 36px;
 
 // heading 3
-@h3-font-size: 24px;
+@h3-font-size: 23px;
 @h3-leading: @base-leading;
+@h3-line-height: 36px;
 
 // heading 4
-@h4-font-size: 20px;
+@h4-font-size: 16px;
 @h4-leading: @base-leading;
+@h4-line-height: @base-line-height;
 
 // heading 5
-@h5-font-size: 18px;
+@h5-font-size: 16px;
 @h5-leading: @base-leading;
+@h5-line-height: @base-line-height;
 
 // heading 6
 @h6-font-size: 16px;
 @h6-leading: @base-leading;
+@h6-line-height: @base-line-height;
 
 
 // Elements
@@ -175,26 +181,28 @@
 
 // Container
 // ----------------------------------------------------------------------------/
+@container-padding-top: 40px;
+@container-padding-bottom: @container-padding-top * 2;
+
 @container-gutters: 20px;
 @container-min-width: (280px + (@container-gutters * 2));
-@container-max-width: (940px + (@container-gutters * 2));
+@container-small-width: (640px + (@container-gutters * 2));
+@container-medium-width: (800px + (@container-gutters * 2));
+@container-large-width: (940px + (@container-gutters * 2));
+
 
 
 // Grid System
 // ----------------------------------------------------------------------------/
 @grid-gutters: 10px;
 
-// xsmall grid
-@xsmall-prefix: xsmall;
-@xsmall-grid-columns: 4;
-
 // small grid
 @small-prefix: small;
-@small-grid-columns: 8;
+@small-grid-columns: 4;
 
 // medium grid
 @medium-prefix: medium;
-@medium-grid-columns: 12;
+@medium-grid-columns: 8;
 
 // large grid
 @large-prefix: large;
@@ -204,18 +212,12 @@
 // Breakpoints
 // ----------------------------------------------------------------------------/
 
-// xsmall screen
-@xsmall-max-width: 567px;
-@breakpoint-xsmall-max: unit((@xsmall-max-width / @root-font-size), em);
-
 // small screen
-@small-min-width: 568px;
-@small-max-width: 799px;
-@breakpoint-small-min: unit((@small-min-width / @root-font-size), em);
+@small-max-width: 767px;
 @breakpoint-small-max: unit((@small-max-width / @root-font-size), em);
 
 // medium screen
-@medium-min-width: 800px;
+@medium-min-width: 768px;
 @medium-max-width: 979px;
 @breakpoint-medium-min: unit((@medium-min-width / @root-font-size), em);
 @breakpoint-medium-max: unit((@medium-max-width / @root-font-size), em);
@@ -227,5 +229,5 @@
 
 // Scale Breakpoint
 // ----------------------------------------------------------------------------/
-@scale-min-width: 1800px;
+@scale-min-width: 1600px;
 @breakpoint-scale-min: unit((@scale-min-width / @root-font-size), em);

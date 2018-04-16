@@ -17,8 +17,10 @@
 // Small Grid
 // ----------------------------------------------------------------------------/
 
-.grid(@small-grid-columns; @small-prefix);
-.grid-child(@small-grid-columns; @small-prefix);
+@media screen and (max-width: @breakpoint-small-max) {
+	.grid(@small-grid-columns; @small-prefix);
+	.grid-child(@small-grid-columns; @small-prefix);
+}
 
 // Medium Grid
 // ----------------------------------------------------------------------------/

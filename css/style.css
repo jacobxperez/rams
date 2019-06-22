@@ -23,7 +23,7 @@ html {
 }
 
 body {
-	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, "Nimbus Sans L", "Liberation Sans", Arial, FreeSans, sans-serif;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-weight: 400;
 	color: #333;
 	line-height: 1.5;
@@ -260,7 +260,7 @@ code,
 kbd,
 pre,
 samp {
-	font-family: "Lucida Console", Consolas, "Andale Mono WT", "Andale Mono", "Bitstream Vera Sans Mono", "DejaVu Sans Mono", "Liberation Mono", monospace;
+	font-family: "Lucida Console", "Lucida Sans Typewriter", Monaco, "Bitstream Vera Sans Mono", monospace;
 }
 
 code {
@@ -286,7 +286,7 @@ pre code {
 blockquote {
 	margin-bottom: 1.5rem;
 	font-size: 143.75%;
-	font-family: Cambria, "Hoefler Text", Utopia, "Liberation Serif", "Nimbus Roman No9 L Regular", Times, "Times New Roman", serif;
+	font-family: Cambria, "Hoefler Text", Utopia, Times, "Times New Roman", serif;
 	font-style: italic;
 }
 

@@ -1091,19 +1091,19 @@ body > .container:only-child {
 	text-indent: -2em;
 }
 
-.align-left {
+.text-left {
 	text-align: left;
 }
 
-.align-right {
+.text-right {
 	text-align: right;
 }
 
-.align-center {
+.text-center {
 	text-align: center;
 }
 
-.align-justify {
+.text-justify {
 	text-align: justify;
 	hyphens: auto;
 }

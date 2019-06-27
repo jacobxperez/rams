@@ -43,7 +43,6 @@ The [Essentials](https://jacobxperez.github.io/essentials/) is build on [LESS](h
 * Minimal design with no decorative styles
 * Fluid and responsive grid system
 * No more pixel units everything is set on relative sizing units
-* Elements are rendered at size independent regardless of the size of the screen
 * Build on LESS with mixin library
 
 ## Contributing
@@ -74,7 +73,8 @@ Leo Babauta demonstrates in he's book The Power of Less how to streamline your l
 2. Eliminate the rest
 
 > Perfection is achieved, not when there is nothing more to add, but when there is nothing left to take away.
-> Antoine de Saint-Exupery
+>
+> - Antoine de Saint-Exupery
 
 ## Design Influence
 

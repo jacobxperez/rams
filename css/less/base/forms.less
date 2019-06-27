@@ -51,19 +51,7 @@ textarea {
 	resize: vertical;
 }
 
-input[type=button],
-button,
-select {
-	overflow: visible;
-	text-transform: none;
-}
-
-button[disabled],
-html input[disabled] {
-	cursor: default;
-}
-
 :not([type=submit]):invalid {
-	border-color: #f22;
+	.border-color(#f22);
 	box-shadow: none;
 }

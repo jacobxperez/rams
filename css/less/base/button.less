@@ -1,8 +1,9 @@
 // Button
 // ----------------------------------------------------------------------------/
 
-input[type=button],
-.button {
+.button,
+button,
+input[type=button] {
 	display: inline-block;
 	.padding(@buton-padding-y; @buton-padding-x);
 	.border(1px; solid; @buton-border-color);
@@ -23,4 +24,16 @@ input[type=button],
 	&:active {
 		.box-shadow(0 0 0.2em rgba(0, 0, 0, 0.3) inset;);
 	}
+}
+
+button,
+input[type=button],
+select {
+	overflow: visible;
+	text-transform: none;
+}
+
+button[disabled],
+html input[disabled] {
+	cursor: default;
 }

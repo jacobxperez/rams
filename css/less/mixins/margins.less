@@ -1,14 +1,16 @@
 // Margins
 // -----------------------------------------------------------------------------
+
 .margin(@top: @base-margin-y, @right: @base-margin-x, @bottom: @top, @left: @right, @base: @base-font-size, @unit: em) {
-	& when (@unit = em), (@unit = rem) {
+	& when (@unit = em),
+	(@unit = rem) {
 		@a: unit((@top / @base), @unit);
 		@b: unit((@right / @base), @unit);
 		@c: unit((@bottom / @base), @unit);
 		@d: unit((@left / @base), @unit);
 		margin: @a @b @c @d;
 	}
-	
+
 	& when (@unit = %) {
 		@a: percentage(@top / @base);
 		@b: percentage(@right / @base);
@@ -19,11 +21,12 @@
 }
 
 .margin-top(@top: @base-margin-y, @base: @base-font-size, @unit: em) {
-	& when (@unit = em), (@unit = rem) {
+	& when (@unit = em),
+	(@unit = rem) {
 		@a: unit((@top / @base), @unit);
 		margin-top: @a;
 	}
-	
+
 	& when (@unit = %) {
 		@a: percentage(@top / @base);
 		margin-top: @a;
@@ -31,11 +34,12 @@
 }
 
 .margin-right(@right: @base-margin-x, @base: @base-font-size, @unit: em) {
-	& when (@unit = em), (@unit = rem) {
+	& when (@unit = em),
+	(@unit = rem) {
 		@a: unit((@right / @base), @unit);
 		margin-right: @a;
 	}
-	
+
 	& when (@unit = %) {
 		@a: percentage(@right / @base);
 		margin-right: @a;
@@ -43,11 +47,12 @@
 }
 
 .margin-bottom(@bottom: @base-margin-y, @base: @base-font-size, @unit: em) {
-	& when (@unit = em), (@unit = rem) {
+	& when (@unit = em),
+	(@unit = rem) {
 		@a: unit((@bottom / @base), @unit);
 		margin-bottom: @a;
 	}
-	
+
 	& when (@unit = %) {
 		@a: percentage(@bottom / @base);
 		margin-bottom: @a;
@@ -55,11 +60,12 @@
 }
 
 .margin-left(@left: @base-margin-x, @base: @base-font-size, @unit: em) {
-	& when (@unit = em), (@unit = rem) {
+	& when (@unit = em),
+	(@unit = rem) {
 		@a: unit((@left / @base), @unit);
 		margin-left: @a;
 	}
-	
+
 	& when (@unit = %) {
 		@a: percentage(@left / @base);
 		margin-left: @a;

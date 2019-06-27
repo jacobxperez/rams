@@ -1,17 +1,20 @@
 // Positioning
 // -----------------------------------------------------------------------------
+
 .top(@position: 1px, @base: @base-font-size, @unit: em) {
 	& when (@unit = %) {
 		@a: percentage(@position / @base);
 		top: @a;
 	}
 
-	& when (@unit = vw), (@unit = vh) {
+	& when (@unit = vw),
+	(@unit = vh) {
 		@a: unit(((@position / @base) * 100), @unit);
 		top: @a;
 	}
 
-	& when (@unit = em), (@unit = rem) {
+	& when (@unit = em),
+	(@unit = rem) {
 		@a: unit((@position / @base), @unit);
 		top: @a;
 	}
@@ -28,12 +31,14 @@
 		bottom: @a;
 	}
 
-	& when (@unit = vw), (@unit = vh) {
+	& when (@unit = vw),
+	(@unit = vh) {
 		@a: unit(((@position / @base) * 100), @unit);
 		bottom: @a;
 	}
 
-	& when (@unit = em), (@unit = rem) {
+	& when (@unit = em),
+	(@unit = rem) {
 		@a: unit((@position / @base), @unit);
 		bottom: @a;
 	}
@@ -50,12 +55,14 @@
 		left: @a;
 	}
 
-	& when (@unit = vw), (@unit = vh) {
+	& when (@unit = vw),
+	(@unit = vh) {
 		@a: unit(((@position / @base) * 100), @unit);
 		left: @a;
 	}
 
-	& when (@unit = em), (@unit = rem) {
+	& when (@unit = em),
+	(@unit = rem) {
 		@a: unit((@position / @base), @unit);
 		left: @a;
 	}
@@ -72,12 +79,14 @@
 		right: @a;
 	}
 
-	& when (@unit = vw), (@unit = vh) {
+	& when (@unit = vw),
+	(@unit = vh) {
 		@a: unit(((@position / @base) * 100), @unit);
 		right: @a;
 	}
 
-	& when (@unit = em), (@unit = rem) {
+	& when (@unit = em),
+	(@unit = rem) {
 		@a: unit((@position / @base), @unit);
 		right: @a;
 	}

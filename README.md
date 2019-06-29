@@ -38,9 +38,9 @@ The [Essentials](https://jacobxperez.github.io/essentials/) is build on [LESS](h
 
 ### Features
 
-* Minimal design with no decorative styles
 * Fluid and responsive grid system
-* No more pixel units everything is set to relative units
+* Minimal design with no decorative styles
+* No more pixels everything is set to relative units
 * Build on LESS with mixin library
 
 ## Contributing

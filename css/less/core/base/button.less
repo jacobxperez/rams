@@ -5,10 +5,10 @@
 button,
 input[type=button] {
 	display: inline-block;
-	.padding(@buton-padding-y; @buton-padding-x);
-	.border(1px; solid; @buton-border-color);
-	background-color: @buton-background;
-	color: @buton-color;
+	.padding(@button-padding-y; @button-padding-x);
+	.border(@button-border-width; solid; @button-border-color);
+	background-color: @button-background;
+	color: @button-color;
 	text-align: center;
 	vertical-align: middle;
 	cursor: pointer;
@@ -17,7 +17,7 @@ input[type=button] {
 	&:active,
 	&:focus,
 	&:hover {
-		.background-color(@buton-background; @switch: dark);
+		.background-color(@button-background; @switch: dark);
 		text-decoration: none;
 	}
 

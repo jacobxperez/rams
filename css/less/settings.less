@@ -1,8 +1,11 @@
-//Global Styles
+// Global Styles
 // ----------------------------------------------------------------------------/
 
-// background color
+// colors
+@base-color: #333;
 @base-background: #fff;
+@primary: #06f;
+@secondary: #804480;
 
 // margins
 @base-margin-y: 20px;
@@ -19,13 +22,7 @@
 @base-border-radius: 4px;
 
 
-// Colors
-// ----------------------------------------------------------------------------/
-@primary: #06f;
-@secondary: #804480;
-
-
-// Font Stacks
+// Typography
 // ----------------------------------------------------------------------------/
 
 // sans-serif
@@ -36,10 +33,6 @@
 
 // mono
 @font-mono: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", "Nimbus Mono L", "Liberation Mono", FreeMono, monospace;
-
-
-// Typography
-// ----------------------------------------------------------------------------/
 
 // font size
 @root-font-size: 16px;
@@ -55,7 +48,7 @@
 @base-leading: @base-line-height;
 
 // font color
-@base-font-color: #333;
+@base-font-color: @base-color;
 
 // link
 @link-color: @primary;
@@ -155,7 +148,7 @@
 
 @form-border-color: @base-border-color;
 @form-border-color-focus: @link-color;
-@form-border-width: 1px;
+@form-border-width: @base-border-width;
 
 
 // Button

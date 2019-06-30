@@ -27,14 +27,20 @@ Start by **[downloading](https://github.com/jacobxperez/essentials/archive/maste
 
 The easiest way to include the [Essentials](https://jacobxperez.github.io/essentials/) into your projects is by copying the pre-compiled CSS file into your project folder, and then link to it in HTML.
 
-* css/style.css
+* [css/style.css](https://github.com/jacobxperez/essentials/blob/master/css/style.css)
 
-### Custom build
+### Custom Build
 
-The [Essentials](https://jacobxperez.github.io/essentials/) is build on [LESS](http://lesscss.org/) which extends the capabilities of CSS. Use **style.less** for compiling all necessary modules for your website and **settings.less** for adjusting the values of fonts, colors, padding and more.
+[Essentials](https://jacobxperez.github.io/essentials/) is build on [LESS](http://lesscss.org/) which extends the capabilities of CSS. Use [style.less](https://github.com/jacobxperez/essentials/blob/master/css/style.less) for compiling all necessary modules for your website and [settings.less](https://github.com/jacobxperez/essentials/blob/master/css/less/settings.less) for adjusting the values of fonts, colors, padding and more.
 
-* css/style.less (for compiling all LESS modules)
-* css/less/settings.less (for changing the settings)
+* [css/style.less](https://github.com/jacobxperez/essentials/blob/master/css/style.less) (for compiling all LESS modules)
+* [css/less/settings.less](https://github.com/jacobxperez/essentials/blob/master/css/less/settings.less) (for changing the settings)
+
+We recommend to add all your custom modules under folder [custom](https://github.com/jacobxperez/essentials/tree/master/css/less/custom) then link to them on file [style.less](https://github.com/jacobxperez/essentials/blob/master/css/style.less) for compiling.
+
+* [css/less/custom](https://github.com/jacobxperez/essentials/tree/master/css/less/custom)
+	* [modules](https://github.com/jacobxperez/essentials/tree/master/css/less/custom/modules) (add custom modules here)
+	* [navigation](https://github.com/jacobxperez/essentials/tree/master/css/less/custom/navigation) (add custom navigation here)
 
 ### Features
 
@@ -47,15 +53,15 @@ The [Essentials](https://jacobxperez.github.io/essentials/) is build on [LESS](h
 
 Help us make the [Essentials](https://jacobxperez.github.io/essentials/) better for everyone, any contribution will be considered. Use the [issue tracker](https://github.com/jacobxperez/essentials/issues) for bug reports, features requests and submitting pull requests. Please read our Design Principles to better understand the nature and the direction of the project.
 
-### Bug reports
+### Bug Reports
 
 Please try to be as detailed as possible in your report. What is your environment? What steps will reproduce the issue? What browser(s) and OS experience the problem? What would you expect to be the outcome? All these details will help us fix any potential bugs.
 
-### Feature requests
+### Feature Requests
 
 Before opening a feature request, please take a moment to find out whether your idea fits with the scope and aims of the project. It's up to you to make a strong case to convince the project's developers of the merits of this feature. Please provide as much detail and context as possible.
 
-### Pull requests
+### Pull Requests
 
 Please ask first before embarking on any significant pull request (e.g. implementing features, re-factoring code, porting to a different language), otherwise you risk spending a lot of time working on something that the project's developers might not want to merge into the project. When contributing code to this project always ask yourself these questions.
 

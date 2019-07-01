@@ -7,7 +7,7 @@ Base CSS that includes only the essential.
 * [Project Status](#project-status)
 * [Getting Started](#getting-started)
 * [Contributing](#contributing)
-* [Design Principles](design-principles)
+* [Design Principles](#design-principles)
 * [LICENSE](#license)
 
 ## Project Status

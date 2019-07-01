@@ -38,12 +38,12 @@ The easiest way to include the [Essentials](https://jacobxperez.github.io/essent
 All the main modules that builds [style.css](https://github.com/jacobxperez/essentials/blob/master/css/style.css) can be found under folder [core](https://github.com/jacobxperez/essentials/tree/master/css/less/core).
 
 * [css/less/core](https://github.com/jacobxperez/essentials/tree/master/css/less/core)
-	* [base](https://github.com/jacobxperez/essentials/tree/master/css/less/core/base)
-	* [layout](https://github.com/jacobxperez/essentials/tree/master/css/less/core/layout)
-	* [utilities](https://github.com/jacobxperez/essentials/tree/master/css/less/core/utilities)
-	* [mixins](https://github.com/jacobxperez/essentials/tree/master/css/less/core/mixins)
+	* [base](https://github.com/jacobxperez/essentials/tree/master/css/less/core/base) (css reset)
+	* [layout](https://github.com/jacobxperez/essentials/tree/master/css/less/core/layout) (grid system)
+	* [utilities](https://github.com/jacobxperez/essentials/tree/master/css/less/core/utilities) (alignment and other tools)
+	* [mixins](https://github.com/jacobxperez/essentials/tree/master/css/less/core/mixins) (LESS mixins)
 
-We recommend to leave all main [core](https://github.com/jacobxperez/essentials/tree/master/css/less/core) modules untouched unless you have to, and to instead add all custom code on top of it under folder [custom](https://github.com/jacobxperez/essentials/tree/master/css/less/custom) then link to them on file [style.less](https://github.com/jacobxperez/essentials/blob/master/css/style.less) for compiling.
+We recommend to leave all main [core](https://github.com/jacobxperez/essentials/tree/master/css/less/core) modules untouched unless you have to, and instead add all custom code on top of it under folder [custom](https://github.com/jacobxperez/essentials/tree/master/css/less/custom) then link to them on file [style.less](https://github.com/jacobxperez/essentials/blob/master/css/style.less) for compiling.
 
 * [css/less/custom](https://github.com/jacobxperez/essentials/tree/master/css/less/custom)
 	* [modules](https://github.com/jacobxperez/essentials/tree/master/css/less/custom/modules) (add custom modules here)

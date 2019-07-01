@@ -8,7 +8,6 @@ Base CSS that includes only the essential.
 * [Getting Started](#getting-started)
 * [Contributing](#contributing)
 * [Design Principles](design-principles)
-* [Design Influence](design-influence)
 * [LICENSE](#license)
 
 ## Project Status
@@ -36,11 +35,17 @@ The easiest way to include the [Essentials](https://jacobxperez.github.io/essent
 * [css/style.less](https://github.com/jacobxperez/essentials/blob/master/css/style.less) (for compiling all LESS modules)
 * [css/less/settings.less](https://github.com/jacobxperez/essentials/blob/master/css/less/settings.less) (for changing the settings)
 
+All the main modules that builds [style.css](https://github.com/jacobxperez/essentials/blob/master/css/style.css) can be found under folder [core](https://github.com/jacobxperez/essentials/tree/master/css/less/core).
+
+* [css/less/core](https://github.com/jacobxperez/essentials/tree/master/css/less/core)
+
 We recommend to add all your custom modules under folder [custom](https://github.com/jacobxperez/essentials/tree/master/css/less/custom) then link to them on file [style.less](https://github.com/jacobxperez/essentials/blob/master/css/style.less) for compiling.
 
 * [css/less/custom](https://github.com/jacobxperez/essentials/tree/master/css/less/custom)
 	* [modules](https://github.com/jacobxperez/essentials/tree/master/css/less/custom/modules) (add custom modules here)
 	* [navigation](https://github.com/jacobxperez/essentials/tree/master/css/less/custom/navigation) (add custom navigation here)
+
+*By default Essentials has no predefine navigation, use your own custom code.*
 
 ### Features
 
@@ -51,7 +56,7 @@ We recommend to add all your custom modules under folder [custom](https://github
 
 ## Contributing
 
-Help us make the [Essentials](https://jacobxperez.github.io/essentials/) better for everyone, any contribution will be considered. Use the [issue tracker](https://github.com/jacobxperez/essentials/issues) for bug reports, features requests and submitting pull requests. Please read our Design Principles to better understand the nature and the direction of the project.
+Help us make the [Essentials](https://jacobxperez.github.io/essentials/) better for everyone, any contribution will be considered. Use the [issue tracker](https://github.com/jacobxperez/essentials/issues) for bug reports, features requests and submitting pull requests. Please read our [Design Principles](design-principles) to better understand the nature and the direction of the project.
 
 ### Bug Reports
 
@@ -78,100 +83,11 @@ Leo Babauta demonstrates in he's book The Power of Less how to streamline your l
 
 > Perfection is achieved, not when there is nothing more to add, but when there is nothing left to take away.
 >
-> - Antoine de Saint-Exupery
-
-## Design Influence
-
-### The Bauhaus
-
-The Bauhaus was a school whose approach to design and the combination of fine arts
-and crafts proved to be a major influence on the development of graphic design as
-well as much of 20th century modern art. Founded in 1919 by Walter Gropius in
-Weimarm Germany, the school favored simplified forms, rationality, functionality
-and the idea of mass production could live in harmony with the artistic spirit
-of individuality.
-
-### International Typographic Style
-
-The International Typographic Style, also known as the Swiss Style, is a graphic
-design style developed in Switzerland in the 1950s that emphasizes cleanliness,
-readability and objectivity. Hallmarks of the style are asymmetric layouts, use
-of a grid, sans-serif typefaces and flush left, ragged right text. The style has
-a preference for photography. Many of the early International Typographic Style
-works featured typography as a primary design element and it is for this that
-the style is named.
-
-### The New Typography
-
-In the 1920s and 1930s, the so-called New Typography movement brought graphics and
-information design to the forefront of the artistic avant-garde in Central Europe.
-Rejecting traditional arrangement of type in symmetrical columns, modernist designers
-organized the printed page or poster as a blank field in which blocks of type and
-illustration (frequently photomontage) could be arranged in harmonious, strikingly
-asymmetrical compositions.
-
-### De Stijl
-
-De Stijl Dutch for "The Style", also known as neoplasticism, was a Dutch artistic
-movement founded in 1917. Proponents of De Stijl advocated pure abstraction and
-universality by a reduction to the essentials of form and colour; they simplified
-visual compositions to the vertical and horizontal directions, and used only primary
-colors along with black and white.
-
-### Ludwig Mies van der Rohe
-
-Regarded as one of the most important figures in the history of architecture, Ludwig
-Mies van der Rohe’s "**less is more**" approach to design was the gold standard for many
-generations of modern architecture.
-
-### Josef Müller-Brockmann
-
-Josef Müller-Brockmann was a Swiss graphic designer and teacher. He studied
-architecture, design and history of art at both the University and Kunstgewerbeschule
-in Zurich. He is recognised for his simple designs and his clean use of typography,
-notably Akzidenz-Grotesk, shapes and colours which inspires many graphic designers
-in the 21st century.
-
-### Emil Ruder
-
-Ruder published a basic grammar of typography titled "**Emil Ruder: Typography**". The book
-helped spread and propagate the **Swiss Style**, and became a basic text for graphic design
-and typography programs in Europe and North America.
-
-### Kenya Hara
-
-Kenya Hara is a prominent graphic designer in Japan. He is currently the art director of
-MUJI, a professor at Musashino Art University, and also the representative director of
-the Nippon Design Center (NDC) Inc. He is interested in designing circumstances or
-conditions rather than things. He traveled the world widely in an attempt to investigate
-the meaning of **design**.
-
-### Dieter Rams
-
-As head of design at Braun, the German consumer electronics manufacturer, Dieter Rams emerged
-as one of the most influential industrial designers of the late 20th century by defining an
-elegant, legible, yet rigorous visual language for its products.
-
-#### Ten Principles of Good Design
-
-Rams introduced the idea of sustainable development and of obsolescence being a crime in
-design in the 1970s. He asked himself the question: is my design **good design**? The answer
-formed is now the celebrated *ten principles of good design*.
-
-1. Is innovative
-2. Makes a product useful
-3. Is aesthetic
-4. Makes a product understandable
-5. Is unobtrusive
-6. Is honest
-7. Is long lasting
-8. Is thorough down to the last detail
-9. Is environmentally friendly
-10. Is as little design as possible
+> Antoine de Saint-Exupery
 
 ## LICENSE
 
-Copyright (C) 2019 [Jacob Perez](https://github.com/jacobxperez) and licensed under the [GNU General Public License v3](https://jacobxperez.github.io/stationery/LICENSE)
+Copyright (C) 2019 [Jacob Perez](https://github.com/jacobxperez) and licensed under the [GNU General Public License v3](https://jacobxperez.github.io/structure/LICENSE)
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by

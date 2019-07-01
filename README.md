@@ -38,8 +38,12 @@ The easiest way to include the [Essentials](https://jacobxperez.github.io/essent
 All the main modules that builds [style.css](https://github.com/jacobxperez/essentials/blob/master/css/style.css) can be found under folder [core](https://github.com/jacobxperez/essentials/tree/master/css/less/core).
 
 * [css/less/core](https://github.com/jacobxperez/essentials/tree/master/css/less/core)
+	* [base](https://github.com/jacobxperez/essentials/tree/master/css/less/core/base)
+	* [layout](https://github.com/jacobxperez/essentials/tree/master/css/less/core/layout)
+	* [utilities](https://github.com/jacobxperez/essentials/tree/master/css/less/core/utilities)
+	* [mixins](https://github.com/jacobxperez/essentials/tree/master/css/less/core/mixins)
 
-We recommend to add all your custom modules under folder [custom](https://github.com/jacobxperez/essentials/tree/master/css/less/custom) then link to them on file [style.less](https://github.com/jacobxperez/essentials/blob/master/css/style.less) for compiling.
+We recommend to leave all main [core](https://github.com/jacobxperez/essentials/tree/master/css/less/core) modules untouched unless you have to, and to instead add all custom code on top of it under folder [custom](https://github.com/jacobxperez/essentials/tree/master/css/less/custom) then link to them on file [style.less](https://github.com/jacobxperez/essentials/blob/master/css/style.less) for compiling.
 
 * [css/less/custom](https://github.com/jacobxperez/essentials/tree/master/css/less/custom)
 	* [modules](https://github.com/jacobxperez/essentials/tree/master/css/less/custom/modules) (add custom modules here)
@@ -87,7 +91,7 @@ Leo Babauta demonstrates in he's book The Power of Less how to streamline your l
 
 ## LICENSE
 
-Copyright (C) 2019 [Jacob Perez](https://github.com/jacobxperez) and licensed under the [GNU General Public License v3](https://jacobxperez.github.io/structure/LICENSE)
+Copyright (C) 2019 [Jacob Perez](https://github.com/jacobxperez) and licensed under the [GNU General Public License v3](https://jacobxperez.github.io/essentials/LICENSE)
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by

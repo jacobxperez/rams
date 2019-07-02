@@ -38,7 +38,7 @@ The easiest way to include the [Essentials](https://jacobxperez.github.io/essent
 All the main modules that builds [style.css](https://github.com/jacobxperez/essentials/blob/master/css/style.css) can be found under folder [core](https://github.com/jacobxperez/essentials/tree/master/css/less/core).
 
 * [css/less/core](https://github.com/jacobxperez/essentials/tree/master/css/less/core)
-	* [base](https://github.com/jacobxperez/essentials/tree/master/css/less/core/base) (css reset)
+	* [reset](https://github.com/jacobxperez/essentials/tree/master/css/less/core/reset) (css reset)
 	* [layout](https://github.com/jacobxperez/essentials/tree/master/css/less/core/layout) (grid system)
 	* [utilities](https://github.com/jacobxperez/essentials/tree/master/css/less/core/utilities) (alignment and other tools)
 	* [mixins](https://github.com/jacobxperez/essentials/tree/master/css/less/core/mixins) (LESS mixins)
@@ -91,7 +91,7 @@ Leo Babauta demonstrates in he's book The Power of Less how to streamline your l
 
 ## LICENSE
 
-Copyright (C) 2019 [Jacob Perez](https://github.com/jacobxperez) and licensed under the [GNU General Public License v3](https://jacobxperez.github.io/essentials/LICENSE)
+Copyright (C) 2019 [Jacob Perez](https://github.com/jacobxperez) and licensed under the [GNU General Public License v3](https://www.gnu.org/licenses/gpl-3.0.html)
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by

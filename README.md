@@ -45,9 +45,9 @@ All the main modules that builds [style.css](https://github.com/jacobxperez/esse
 
 We recommend to leave all [core](https://github.com/jacobxperez/essentials/tree/master/css/less/core) modules untouched unless you have to, and instead add all custom code on top of it under folder [styles](https://github.com/jacobxperez/essentials/tree/master/css/less/styles) then link to them on file [style.less](https://github.com/jacobxperez/essentials/blob/master/css/style.less) for compiling.
 
-* [css/less/custom](https://github.com/jacobxperez/essentials/tree/master/css/less/custom)
-	* [modules](https://github.com/jacobxperez/essentials/tree/master/css/less/custom/modules) (add custom modules here)
-	* [navigation](https://github.com/jacobxperez/essentials/tree/master/css/less/custom/navigation) (add custom navigation here)
+* [css/less/styles](https://github.com/jacobxperez/essentials/tree/master/css/less/styles)
+	* [modules](https://github.com/jacobxperez/essentials/tree/master/css/less/styles/modules) (add custom modules here)
+	* [navigation](https://github.com/jacobxperez/essentials/tree/master/css/less/styles/navigation) (add custom navigation here)
 
 *By default Essentials has no predefine navigation, use your own custom code.*
 

@@ -1,7 +1,7 @@
 // Grid System
 // ----------------------------------------------------------------------------/
 
-.row {
+.@{grid-wrapper-class} {
 	.margin-left(-@grid-gutters; @unit: rem);
 	.margin-right(-@grid-gutters; @unit: rem);
 }
@@ -18,22 +18,22 @@
 // ----------------------------------------------------------------------------/
 
 @media screen and (max-width: @breakpoint-small-max) {
-	.grid(@small-grid-columns; @small-prefix);
-	.grid-child(@small-grid-columns; @small-prefix);
+	.grid(@small-columns; @small-prefix);
+	.grid-child(@small-columns; @small-prefix);
 }
 
 // Medium Grid
 // ----------------------------------------------------------------------------/
 
 @media screen and (min-width: @breakpoint-medium-min) {
-	.grid(@medium-grid-columns; @medium-prefix);
-	.grid-child(@medium-grid-columns; @medium-prefix);
+	.grid(@medium-columns; @medium-prefix);
+	.grid-child(@medium-columns; @medium-prefix);
 }
 
 // Large Grid
 // ----------------------------------------------------------------------------/
 
 @media screen and (min-width: @breakpoint-large-min) {
-	.grid(@large-grid-columns; @large-prefix);
-	.grid-child(@large-grid-columns; @large-prefix);
+	.grid(@large-columns; @large-prefix);
+	.grid-child(@large-columns; @large-prefix);
 }

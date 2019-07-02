@@ -43,7 +43,7 @@ All the main modules that builds [style.css](https://github.com/jacobxperez/esse
 	* [utilities](https://github.com/jacobxperez/essentials/tree/master/css/less/core/utilities) (alignment and other tools)
 	* [mixins](https://github.com/jacobxperez/essentials/tree/master/css/less/core/mixins) (LESS mixins)
 
-We recommend to leave all [core](https://github.com/jacobxperez/essentials/tree/master/css/less/core) modules untouched unless you have to, and instead add all custom code on top of it under folder [custom](https://github.com/jacobxperez/essentials/tree/master/css/less/custom) then link to them on file [style.less](https://github.com/jacobxperez/essentials/blob/master/css/style.less) for compiling.
+We recommend to leave all [core](https://github.com/jacobxperez/essentials/tree/master/css/less/core) modules untouched unless you have to, and instead add all custom code on top of it under folder [styles](https://github.com/jacobxperez/essentials/tree/master/css/less/styles) then link to them on file [style.less](https://github.com/jacobxperez/essentials/blob/master/css/style.less) for compiling.
 
 * [css/less/custom](https://github.com/jacobxperez/essentials/tree/master/css/less/custom)
 	* [modules](https://github.com/jacobxperez/essentials/tree/master/css/less/custom/modules) (add custom modules here)

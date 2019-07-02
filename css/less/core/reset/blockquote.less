@@ -1,11 +1,21 @@
 // Blockquote
 // ----------------------------------------------------------------------------/
 
+blockquote, q {
+	quotes:none;
+}
+
 blockquote {
 	.margin-bottom(@blockquote-leading; @unit: rem);
 	.font-size(@blockquote-font-size);
 	font-family: @blockquote-font-family;
 	font-style: @blockquote-font-style;
+
+	&:before,
+	&:after {
+		content:'';
+		content:none;
+	}
 
 	small:before {
 		content: "— ";

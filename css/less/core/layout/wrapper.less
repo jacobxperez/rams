@@ -1,0 +1,43 @@
+// Page Wrapper
+// ----------------------------------------------------------------------------/
+
+.@{wrapper-class} {
+	.min-width(@wrapper-min-width);
+	.max-width(@wrapper-max-width);
+	margin: 0 auto;
+	.padding-left(@wrapper-padding);
+	.padding-right(@wrapper-padding);
+}
+
+body > .@{wrapper-class}:first-child {
+	.padding-top(@wrapper-padding-top);
+}
+
+body > .@{wrapper-class}:last-child {
+	.padding-bottom(@wrapper-padding-bottom);
+}
+
+body > .@{wrapper-class}:only-child {
+	.padding-top(@wrapper-padding-top);
+	.padding-bottom(@wrapper-padding-bottom);
+}
+
+
+// Medium Wrapper
+// ----------------------------------------------------------------------------/
+
+@media screen and (max-width: @breakpoint-medium-max) {
+	.@{wrapper-class} {
+		.max-width(@wrapper-medium-width);
+	}
+}
+
+
+// Small Wrapper
+// ----------------------------------------------------------------------------/
+
+@media screen and (max-width: @breakpoint-small-max) {
+	.@{wrapper-class} {
+		.max-width(@wrapper-small-width);
+	}
+}

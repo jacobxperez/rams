@@ -283,11 +283,22 @@ pre code {
 	color: inherit;
 }
 
+blockquote,
+q {
+	quotes: none;
+}
+
 blockquote {
 	margin-bottom: 1.5rem;
 	font-size: 143.75%;
 	font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, "Nimbus Roman No9 L", "Liberation Serif", FreeSerif, serif;
 	font-style: italic;
+}
+
+blockquote:after,
+blockquote:before {
+	content: '';
+	content: none;
 }
 
 blockquote small:before {
@@ -457,12 +468,12 @@ body > .container:first-child {
 }
 
 body > .container:last-child {
-	padding-bottom: 5em;
+	padding-bottom: 3.75em;
 }
 
 body > .container:only-child {
 	padding-top: 2.5em;
-	padding-bottom: 5em;
+	padding-bottom: 3.75em;
 }
 @media screen and (max-width: 61.1875em) {
 	.container {

@@ -13,28 +13,28 @@
 
 <body>
 	<header class="container">
-		<h1 id="Essentials"><a href="https://github.com/jacobxperez/essentials">Essentials</a></h1>
+		<h1 id="Essentials"><a href="https://jacobxperez.github.io/essentials/">Essentials</a></h1>
 
 		<nav class="row">
-			<div class="medium-4 large-3 columns">
+			<div class="large-3 medium-4 columns">
 				<p>
 					<strong>Getting Started</strong>
 					<br> <small>Get started with Essentials</small>
 				</p>
 			</div>
-			<div class="medium-4 large-3 columns">
+			<div class="large-3 medium-4 columns">
 				<p>
 					<a href="https://jacobxperez.github.io/essentials/elements/">Elements</a>
 					<br> <small>A visual guide to all elements</small>
 				</p>
 			</div>
-			<div class="medium-4 large-3 columns">
+			<div class="large-3 medium-4 columns">
 				<p>
 					<a href="https://jacobxperez.github.io/essentials/layout/">Layout</a>
 					<br> <small>Responsive Grid System</small>
 				</p>
 			</div>
-			<div class="medium-4 large-3 columns">
+			<div class="large-3 medium-4 columns">
 				<p>
 					<a href="https://github.com/jacobxperez/essentials/archive/master.zip">Try It Out!</a>
 					<br> <small>Start using the Essentials</small>
@@ -54,9 +54,6 @@
 
 				<ul>
 					<li>
-						<a href="#getting-started">Getting Started</a>
-					</li>
-					<li>
 						<a href="#default-build">Default Build</a>
 					</li>
 					<li>
@@ -69,73 +66,120 @@
 			</nav>
 
 			<article class="large-9 medium-6 columns">
-				<h1 id="getting-started">Getting Started</h1>
+				<h2 id="getting-started">Getting Started</h2>
 
-				<p>Start by <a href="https://github.com/jacobxperez/essentials/archive/master.zip"><strong>downloading</strong></a> the <a href="https://github.com/jacobxperez/essentials">github</a> repository or by cloning the project: </p>
+				<p>Start by <strong><a href="https://github.com/jacobxperez/essentials/archive/master.zip">downloading</a></strong> the <a href="https://github.com/jacobxperez/essentials">repository</a> or by cloning the project:</p>
 
-				<pre>git clone https://github.com/jacobxperez/essentials.git
-</pre>
+				<pre><code>git clone https://github.com/jacobxperez/essentials.git
+</code></pre>
 
 				<p><em>Keep in mind that this project is under active development and no stable version has been release.</em></p>
 
-				<section>
-					<h2 id="default-build">Default Build</h2>
+				<h4 id="default-build">Default Build</h4>
 
-					<p>The easiest way to include the <a href="https://github.com/jacobxperez/essentials">Essentials</a> into your projects is by copying the pre-compiled CSS file into your project folder, and then link to it in HTML. </p>
+				<p>The easiest way to include the <a href="https://jacobxperez.github.io/essentials/">Essentials</a> into your projects is by copying the pre-compiled CSS file into your project folder, and then link to it in HTML.</p>
 
-					<ul>
-						<li>css/style.css</li>
-					</ul>
-				</section>
+				<ul>
+					<li><a href="https://github.com/jacobxperez/essentials/blob/master/css/style.css">css/style.css</a></li>
+				</ul>
 
-				<section>
-					<h2 id="custom-build">Custom Build</h2>
+				<h4 id="custom-build">Custom Build</h4>
 
-					<p>The <a href="https://github.com/jacobxperez/essentials">Essentials</a> is build on <a href="http://lesscss.org/">LESS</a> which extends the capabilities of CSS. Use <strong>style.less</strong> for compiling all necessary
-						modules for your website
-						and <strong>settings.less</strong> for adjusting the values of fonts, colors, padding and more.</p>
+				<p><a href="https://jacobxperez.github.io/essentials/">Essentials</a> is build on <a href="http://lesscss.org/">LESS</a> which extends the capabilities of CSS. Use <a
+						href="https://github.com/jacobxperez/essentials/blob/master/css/style.less">style.less</a> for compiling all necessary modules for your website and <a
+						href="https://github.com/jacobxperez/essentials/blob/master/css/less/settings.less">settings.less</a> for adjusting the values of fonts, colors, padding and more.</p>
 
-					<ul>
-						<li>css/style.less (for compiling all LESS modules)</li>
-						<li>css/less/settings.less (for changing the settings)</li>
-					</ul>
-				</section>
+				<ul>
+					<li><a href="https://github.com/jacobxperez/essentials/blob/master/css/style.less">css/style.less</a> (for compiling all LESS modules)</li>
+					<li><a href="https://github.com/jacobxperez/essentials/blob/master/css/less/settings.less">css/less/settings.less</a> (for changing the settings)</li>
+				</ul>
 
-				<section>
-					<h2 id="contributing">Contributing</h2>
+				<p>All the main modules that builds <a href="https://github.com/jacobxperez/essentials/blob/master/css/style.css">style.css</a> can be found under folder <a
+						href="https://github.com/jacobxperez/essentials/tree/master/css/less/core">core</a>.</p>
 
-					<p>Help us make the <a href="https://github.com/jacobxperez/essentials">Essentials</a> better for everyone, any contribution will be considered. Use the <a href="https://github.com/jacobxperez/essentials/issues">issue tracker</a>
-						for bug reports, features
-						requests and submitting pull requests.</p>
+				<ul>
+					<li><a href="https://github.com/jacobxperez/essentials/tree/master/css/less/core">css/less/core</a>
+						<ul>
+							<li><a href="https://github.com/jacobxperez/essentials/tree/master/css/less/core/reset">reset</a> (css reset)</li>
+							<li><a href="https://github.com/jacobxperez/essentials/tree/master/css/less/core/layout">layout</a> (grid system)</li>
+							<li><a href="https://github.com/jacobxperez/essentials/tree/master/css/less/core/utilities">utilities</a> (alignment and other tools)</li>
+							<li><a href="https://github.com/jacobxperez/essentials/tree/master/css/less/core/mixins">mixins</a> (LESS mixins)</li>
+						</ul>
+					</li>
+				</ul>
 
-					<h3>Bug reports</h3>
+				<p>We recommend to leave all <a href="https://github.com/jacobxperez/essentials/tree/master/css/less/core">core</a> modules untouched unless you have to, and instead add all custom code on top of it under folder <a
+						href="https://github.com/jacobxperez/essentials/tree/master/css/less/styles">styles</a> then link to them on file <a href="https://github.com/jacobxperez/essentials/blob/master/css/style.less">style.less</a> for compiling.</p>
 
-					<p>Please try to be as detailed as possible in your report. What is your environment? What steps will reproduce the issue? What browser(s) and OS experience the problem? What would you expect to be the outcome? All these details
-						will help us fix any
-						potential bugs.</p>
+				<ul>
+					<li><a href="https://github.com/jacobxperez/essentials/tree/master/css/less/styles">css/less/styles</a>
+						<ul>
+							<li><a href="https://github.com/jacobxperez/essentials/tree/master/css/less/styles/modules">modules</a> (add custom modules here)</li>
+							<li><a href="https://github.com/jacobxperez/essentials/tree/master/css/less/styles/navigation">navigation</a> (add custom navigation here)</li>
+						</ul>
+					</li>
+				</ul>
 
-					<h3>Feature requests</h3>
+				<p><em>By default Essentials has no predefine navigation, use your own custom code.</em></p>
 
-					<p>Before opening a feature request, please take a moment to find out whether your idea fits with the scope and aims of the project. It's up to you to make a strong case to convince the project's developers of the merits of this
-						feature. Please provide
-						as much detail and context as possible.</p>
+				<h4 id="features">Features</h4>
 
-					<h3>Pull requests</h3>
+				<ul>
+					<li>Fluid and responsive grid system</li>
+					<li>Minimal design with no decorative styles</li>
+					<li>No more pixels everything is set to relative units</li>
+					<li>Build on LESS with mixin library</li>
+				</ul>
 
-					<p>Please ask first before embarking on any significant pull request (e.g. implementing features, re-factoring code, porting to a different language), otherwise you risk spending a lot of time working on something that the
-						project's developers might
-						not want to merge into the project.</p>
-				</section>
+				<h3 id="contributing">Contributing</h3>
+
+				<p>Help us make the <a href="https://jacobxperez.github.io/essentials/">Essentials</a> better for everyone, any contribution will be considered. Use the <a href="https://github.com/jacobxperez/essentials/issues">issue
+						tracker</a> for bug reports, features requests and submitting pull requests. Please read our <a href="#design-principles">Design Principles</a> to better understand the nature and the direction of the project.</p>
+
+				<h4 id="bug-reports">Bug Reports></h4>
+
+				<p>Please try to be as detailed as possible in your report. What is your environment? What steps will reproduce the issue? What browser(s) and OS experience the problem? What would you expect to be the outcome? All these details will
+					help us fix any potential bugs.</p>
+
+				<h4 id="feature-requests">Feature Requests</h4>
+
+				<p>Before opening a feature request, please take a moment to find out whether your idea fits with the scope and aims of the project. It's up to you to make a strong case to convince the project's developers of the merits of this
+					feature. Please provide as much detail and context as possible.</p>
+
+				<h4 id="pull-requests">Pull Requests</h4>
+
+				<p>Please ask first before embarking on any significant pull request (e.g. implementing features, re-factoring code, porting to a different language), otherwise you risk spending a lot of time working on something that the project's
+					developers might not want to merge into the project. When contributing code to this project always ask yourself these questions.</p>
+
+				<ul>
+					<li>Is it essential?</li>
+					<li>Will it add value?</li>
+					<li>Is this change necessary?</li>
+				</ul>
+
+				<h3 id="design-principles">Design Principles</h3>
+
+				<p>Leo Babauta demonstrates in he's book The Power of Less how to streamline your life by identifying the essential and eliminating the unnecessary. By focusing on the essential and allowing everything else to drop away you will
+					become less stressed and more productive.</p>
+
+				<ol>
+					<li>Identify the essential</li>
+					<li>Eliminate the rest</li>
+				</ol>
+
+				<blockquote>
+					<p>Perfection is achieved, not when there is nothing more to add, but when there is nothing left to take away. <small>Antoine de Saint-Exupery</small></p>
+				</blockquote>
+
+				<footer>
+					<hr>
+
+					<p><small>&copy; 2019 <a href="https://github.com/jacobxperez/essentials">Essentials</a> by <a href="https://github.com/jacobxperez" rel="author">Jacob Perez</a> and licensed under the <a
+								href="https://www.gnu.org/licenses/gpl-3.0.html" rel="license">GPLv3</a>.</small></p>
+				</footer>
 			</article>
 		</div>
 	</main>
-
-	<footer class="container">
-		<hr>
-
-		<p><small>&copy; 2019 <a href="https://github.com/jacobxperez/essentials">Essentials</a> by <a href="https://github.com/jacobxperez" rel="author">Jacob Perez</a> and licensed under the <a
-					href="https://www.gnu.org/licenses/gpl-3.0.html" rel="license">GPLv3</a>.</small></p>
-	</footer>
 </body>
 
 </html>

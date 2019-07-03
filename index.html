@@ -53,29 +53,47 @@
 				</p>
 
 				<ul>
-					<li>
-						<a href="#default-build">Default Build</a>
+					<li><a href="#getting-started">Getting Started</a>
+						<ul>
+							<li><a href="#default-build">Default Build</a></li>
+							<li><a href="#custom-build">Custom Build</a></li>
+							<li><a href="#features">Features</a></li>
+						</ul>
 					</li>
-					<li>
-						<a href="#custom-build">Custom Build</a>
+					<li><a href="#contributing">Contributing</a>
+						<ul>
+							<li><a href="#bug-reports">Bug Reports</a></li>
+							<li><a href="#feature-requests">Feature Requests</a></li>
+							<li><a href="#pull-requests">Pull Requests</a></li>
+						</ul>
 					</li>
-					<li>
-						<a href="#contributing">Contributing</a>
-					</li>
+					<li><a href="#design-principles">Design Principles</a></li>
+					<li><a href="#license">LICENSE</a></li>
 				</ul>
 			</nav>
 
 			<article class="large-9 medium-6 columns">
+				<h2 id="about">About</h2>
+
+				<p>Essentials is a CSS reset framework build on <a href="http://lesscss.org/">LESS</a> which allows you to build websites with your own components without getting on your way. for more details on building your own components check out
+					<a href="#custom-build">custom build</a>. The main focus of this project is as follows:</p>
+
+				<ul>
+					<li>CSS Reset</li>
+					<li>Layout</li>
+					<li>Typography</li>
+				</ul>
+
 				<h2 id="getting-started">Getting Started</h2>
 
 				<p>Start by <strong><a href="https://github.com/jacobxperez/essentials/archive/master.zip">downloading</a></strong> the <a href="https://github.com/jacobxperez/essentials">repository</a> or by cloning the project:</p>
 
-				<pre><code>git clone https://github.com/jacobxperez/essentials.git
-</code></pre>
+				<pre
+					class="editor-colors lang-"><div class="line"><span class="syntax--text syntax--plain syntax--null-grammar"><span>git&nbsp;clone&nbsp;</span><span class="syntax--markup syntax--underline syntax--link syntax--https syntax--hyperlink"><span>https://github.com/jacobxperez/essentials.git</span></span></span></div></pre>
 
 				<p><em>Keep in mind that this project is under active development and no stable version has been release.</em></p>
 
-				<h4 id="default-build">Default Build</h4>
+				<h3 id="default-build">Default Build</h3>
 
 				<p>The easiest way to include the <a href="https://jacobxperez.github.io/essentials/">Essentials</a> into your projects is by copying the pre-compiled CSS file into your project folder, and then link to it in HTML.</p>
 
@@ -83,7 +101,7 @@
 					<li><a href="https://github.com/jacobxperez/essentials/blob/master/css/style.css">css/style.css</a></li>
 				</ul>
 
-				<h4 id="custom-build">Custom Build</h4>
+				<h3 id="custom-build">Custom Build</h3>
 
 				<p><a href="https://jacobxperez.github.io/essentials/">Essentials</a> is build on <a href="http://lesscss.org/">LESS</a> which extends the capabilities of CSS. Use <a
 						href="https://github.com/jacobxperez/essentials/blob/master/css/style.less">style.less</a> for compiling all necessary modules for your website and <a
@@ -108,8 +126,9 @@
 					</li>
 				</ul>
 
-				<p>We recommend to leave all <a href="https://github.com/jacobxperez/essentials/tree/master/css/less/core">core</a> modules untouched unless you have to, and instead add all custom code on top of it under folder <a
-						href="https://github.com/jacobxperez/essentials/tree/master/css/less/styles">styles</a> then link to them on file <a href="https://github.com/jacobxperez/essentials/blob/master/css/style.less">style.less</a> for compiling.</p>
+				<p>To ensure future compatibility we recommend to leave all <a href="https://github.com/jacobxperez/essentials/tree/master/css/less/core">core</a> modules untouched unless you have to, and instead add all custom code on top of it
+					under folder <a href="https://github.com/jacobxperez/essentials/tree/master/css/less/styles">styles</a> then link to them on file <a href="https://github.com/jacobxperez/essentials/blob/master/css/style.less">style.less</a> for
+					compiling.</p>
 
 				<ul>
 					<li><a href="https://github.com/jacobxperez/essentials/tree/master/css/less/styles">css/less/styles</a>
@@ -122,7 +141,7 @@
 
 				<p><em>By default Essentials has no predefine navigation, use your own custom code.</em></p>
 
-				<h4 id="features">Features</h4>
+				<h3 id="features">Features</h3>
 
 				<ul>
 					<li>Fluid and responsive grid system</li>
@@ -131,22 +150,20 @@
 					<li>Build on LESS with mixin library</li>
 				</ul>
 
-				<h3 id="contributing">Contributing</h3>
+				<h2 id="contributing">Contributing</h2>
 
-				<p>Help us make the <a href="https://jacobxperez.github.io/essentials/">Essentials</a> better for everyone, any contribution will be considered. Use the <a href="https://github.com/jacobxperez/essentials/issues">issue
-						tracker</a> for bug reports, features requests and submitting pull requests. Please read our <a href="#design-principles">Design Principles</a> to better understand the nature and the direction of the project.</p>
-
-				<h4 id="bug-reports">Bug Reports></h4>
+				<p>Help us make the <a href="https://jacobxperez.github.io/essentials/">Essentials</a> better for everyone, any contribution will be considered. Use the <a href="https://github.com/jacobxperez/essentials/issues">issue tracker</a> for
+					bug reports, features requests and submitting pull requests. Please read our <a href="#design-principles">Design Principles</a> to better understand the nature and the direction of the project.</p>
+				<h3 id="bug-reports">Bug Reports</h3>
 
 				<p>Please try to be as detailed as possible in your report. What is your environment? What steps will reproduce the issue? What browser(s) and OS experience the problem? What would you expect to be the outcome? All these details will
 					help us fix any potential bugs.</p>
-
-				<h4 id="feature-requests">Feature Requests</h4>
+				<h3 id="feature-requests">Feature Requests</h3>
 
 				<p>Before opening a feature request, please take a moment to find out whether your idea fits with the scope and aims of the project. It's up to you to make a strong case to convince the project's developers of the merits of this
 					feature. Please provide as much detail and context as possible.</p>
 
-				<h4 id="pull-requests">Pull Requests</h4>
+				<h3 id="pull-requests">Pull Requests</h3>
 
 				<p>Please ask first before embarking on any significant pull request (e.g. implementing features, re-factoring code, porting to a different language), otherwise you risk spending a lot of time working on something that the project's
 					developers might not want to merge into the project. When contributing code to this project always ask yourself these questions.</p>
@@ -157,7 +174,7 @@
 					<li>Is this change necessary?</li>
 				</ul>
 
-				<h3 id="design-principles">Design Principles</h3>
+				<h2 id="design-principles">Design Principles</h2>
 
 				<p>Leo Babauta demonstrates in he's book The Power of Less how to streamline your life by identifying the essential and eliminating the unnecessary. By focusing on the essential and allowing everything else to drop away you will
 					become less stressed and more productive.</p>
@@ -170,6 +187,18 @@
 				<blockquote>
 					<p>Perfection is achieved, not when there is nothing more to add, but when there is nothing left to take away. <small>Antoine de Saint-Exupery</small></p>
 				</blockquote>
+
+				<h2 id="license">LICENSE</h2>
+
+				<p>Copyright (C) 2019 <a href="https://github.com/jacobxperez">Jacob Perez</a> and licensed under the <a href="https://www.gnu.org/licenses/gpl-3.0.html">GNU General Public License v3</a></p>
+
+				<p>This program is free software: you can redistribute it and/or modify
+					it under the terms of the GNU General Public License as published by
+					the Free Software Foundation, either version 3 of the License, or
+					any later version. This program is distributed in the hope that it will be useful,
+					but WITHOUT ANY WARRANTY; without even the implied warranty of
+					MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+					<a href="https://www.gnu.org/licenses/gpl-3.0.html">GNU General Public License v3</a> for more details.</p>
 			</article>
 		</div>
 	</main>
@@ -177,8 +206,8 @@
 	<footer class="container">
 		<hr>
 
-		<p><small>&copy; 2019 <a href="https://github.com/jacobxperez/essentials">Essentials</a> by <a href="https://github.com/jacobxperez" rel="author">Jacob Perez</a> and licensed under the <a
-					href="https://www.gnu.org/licenses/gpl-3.0.html" rel="license">GPLv3</a>.</small></p>
+		<p><small>&copy; 2019 <a href="https://github.com/jacobxperez/essentials">Essentials</a> by <a href="https://github.com/jacobxperez" rel="author">Jacob Perez</a> and licensed under the <a href="https://www.gnu.org/licenses/gpl-3.0.html"
+					rel="license">GPLv3</a>.</small></p>
 	</footer>
 </body>
 

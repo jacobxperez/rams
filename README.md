@@ -4,13 +4,28 @@ Base CSS reset for layout and typography
 
 ## Table of Contents
 
-* [Project Status](#project-status)
+* [About](#about)
+	* [Project Status](#project-status)
 * [Getting Started](#getting-started)
+	* [Default Build](#default-build)
+	* [Custom Build](#custom-build)
+	* [Features](#features)
 * [Contributing](#contributing)
+	* [Bug Reports](#bug-reports)
+	* [Feature Requests](#feature-requests)
+	* [Pull Requests](#pull-requests)
 * [Design Principles](#design-principles)
 * [LICENSE](#license)
 
-## Project Status
+## About
+
+Essentials is a CSS reset framework build on [LESS](http://lesscss.org/) which allows you to build websites with your own components without getting on your way. for more details on building your own components check out [custom build](#custom-build). The main focus of this project is as follows:
+
+* CSS Reset
+* Layout
+* Typography
+
+### Project Status
 
 Project under active development. No stable version has been release.
 
@@ -43,7 +58,7 @@ All the main modules that builds [style.css](https://github.com/jacobxperez/esse
 	* [utilities](https://github.com/jacobxperez/essentials/tree/master/css/less/core/utilities) (alignment and other tools)
 	* [mixins](https://github.com/jacobxperez/essentials/tree/master/css/less/core/mixins) (LESS mixins)
 
-We recommend to leave all [core](https://github.com/jacobxperez/essentials/tree/master/css/less/core) modules untouched unless you have to, and instead add all custom code on top of it under folder [styles](https://github.com/jacobxperez/essentials/tree/master/css/less/styles) then link to them on file [style.less](https://github.com/jacobxperez/essentials/blob/master/css/style.less) for compiling.
+To ensure future compatibility we recommend to leave all [core](https://github.com/jacobxperez/essentials/tree/master/css/less/core) modules untouched unless you have to, and instead add all custom code on top of it under folder [styles](https://github.com/jacobxperez/essentials/tree/master/css/less/styles) then link to them on file [style.less](https://github.com/jacobxperez/essentials/blob/master/css/style.less) for compiling.
 
 * [css/less/styles](https://github.com/jacobxperez/essentials/tree/master/css/less/styles)
 	* [modules](https://github.com/jacobxperez/essentials/tree/master/css/less/styles/modules) (add custom modules here)

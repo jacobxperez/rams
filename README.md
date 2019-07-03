@@ -1,6 +1,6 @@
 # [Essentials](https://jacobxperez.github.io/essentials/)
 
-Base CSS that includes only the essential.
+Base CSS reset for layout and typography
 
 ## Table of Contents
 

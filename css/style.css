@@ -412,14 +412,6 @@ input[type=button]:hover {
 	text-decoration: none;
 }
 
-.button:active,
-button:active,
-input[type=button]:active {
-	-webkit-box-shadow: 0 0 .2em rgba(0, 0, 0, 0.3) inset;
-	-moz-box-shadow: 0 0 .2em rgba(0, 0, 0, 0.3) inset;
-	box-shadow: 0 0 .2em rgba(0, 0, 0, 0.3) inset;
-}
-
 button,
 input[type=button],
 select {

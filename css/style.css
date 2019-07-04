@@ -1143,6 +1143,11 @@ body > .container:only-child {
 	}
 }
 @media print {
+	body,
+	html {
+		height: auto;
+	}
+
 	html {
 		font-size: 100%;
 	}
@@ -1150,11 +1155,6 @@ body > .container:only-child {
 	body {
 		background: white;
 		color: black;
-	}
-
-	body,
-	html {
-		height: auto;
 	}
 
 	nav {

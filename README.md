@@ -19,11 +19,7 @@ Base CSS reset for layout and typography
 
 ## About
 
-Essentials is a CSS reset framework build on [LESS](http://lesscss.org/) which allows you to build websites with your own components without getting on your way. for more details on building your own components check out [custom build](#custom-build). The main focus of this project is as follows:
-
-* CSS Reset
-* Layout
-* Typography
+Essentials is a CSS reset framework build on [LESS](http://lesscss.org/) which allows you to build websites with your own components without getting on your way. for more details on building your own components check out [custom build](#custom-build).
 
 ### Project Status
 

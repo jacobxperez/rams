@@ -2,8 +2,8 @@
 // ----------------------------------------------------------------------------/
 
 .@{wrapper-class} {
-	.min-width(@wrapper-min-width);
-	.max-width(@wrapper-max-width);
+	.min-width(@wrapper-small-min-width);
+	.max-width(@wrapper-large-max-width);
 	margin: 0 auto;
 	.padding-left(@wrapper-padding);
 	.padding-right(@wrapper-padding);
@@ -28,7 +28,7 @@ body > .@{wrapper-class}:only-child {
 
 @media screen and (max-width: @breakpoint-medium-max) {
 	.@{wrapper-class} {
-		.max-width(@wrapper-medium-width);
+		.max-width(@wrapper-medium-max-width);
 	}
 }
 
@@ -38,6 +38,6 @@ body > .@{wrapper-class}:only-child {
 
 @media screen and (max-width: @breakpoint-small-max) {
 	.@{wrapper-class} {
-		.max-width(@wrapper-small-width);
+		.max-width(@wrapper-small-max-width);
 	}
 }

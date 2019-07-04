@@ -14,6 +14,11 @@
 	outline: 0;
 }
 
+html,
+body {
+	height: 100%;
+}
+
 html {
 	.font-size(@base: @root-font-size);
 }
@@ -25,11 +30,6 @@ body {
 	.line-height(@base-line-height);
 	background-color: @base-background;
 	overflow: auto;
-}
-
-body,
-html {
-	height: 100%;
 }
 
 article,

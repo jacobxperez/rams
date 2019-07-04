@@ -176,11 +176,16 @@
 @wrapper-padding-top: @wrapper-padding * 2;
 @wrapper-padding-bottom: @wrapper-padding * 3;
 
-@wrapper-min-width: (280px + (@wrapper-padding * 2));
-@wrapper-small-width: (640px + (@wrapper-padding * 2));
-@wrapper-medium-width: (800px + (@wrapper-padding * 2));
-@wrapper-max-width: (940px + (@wrapper-padding * 2));
+// small wrapper widths
+@wrapper-small-min-width: (280px + (@wrapper-padding * 2));
+@wrapper-small-max-width: (640px + (@wrapper-padding * 2));
 
+// medium wrapper widths
+@wrapper-medium-min-width: (@wrapper-small-max-width + 1);
+@wrapper-medium-max-width: (800px + (@wrapper-padding * 2));
+
+// large wrapper widths
+@wrapper-large-max-width: (940px + (@wrapper-padding * 2));
 
 
 // Grid System
@@ -203,21 +208,18 @@
 
 
 // Breakpoints
+// Notice it's using wrapper widths to calculate breakpoints
 // ----------------------------------------------------------------------------/
 
 // small screen
-@small-max-width: 767px;
-@breakpoint-small-max: unit((@small-max-width / @root-font-size), em);
+@breakpoint-small-max: unit((@wrapper-small-max-width / @root-font-size), em);
 
 // medium screen
-@medium-min-width: 768px;
-@medium-max-width: 979px;
-@breakpoint-medium-min: unit((@medium-min-width / @root-font-size), em);
-@breakpoint-medium-max: unit((@medium-max-width / @root-font-size), em);
+@breakpoint-medium-min: unit((@wrapper-medium-min-width / @root-font-size), em);
+@breakpoint-medium-max: unit(((@wrapper-large-max-width - 1) / @root-font-size), em);
 
 // large screen
-@large-min-width: 980px;
-@breakpoint-large-min: unit((@large-min-width / @root-font-size), em);
+@breakpoint-large-min: unit((@wrapper-large-max-width / @root-font-size), em);
 
 
 // Scale Breakpoint

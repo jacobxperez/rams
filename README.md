@@ -39,28 +39,27 @@ Start by **[downloading](https://github.com/jacobxperez/essentials/archive/maste
 
 ### Default Build
 
-The easiest way to include the [Essentials](https://jacobxperez.github.io/essentials/) into your projects is by copying the pre-compiled CSS file into your project folder, and then link to it in HTML.
+The easiest way to include [Essentials](https://jacobxperez.github.io/essentials/) in your projects is by copying the pre-compiled CSS file into your project folder, and then link to it in HTML.
 
-* [css/style.css](https://github.com/jacobxperez/essentials/blob/master/css/style.css)
+* [/css/style.css](https://github.com/jacobxperez/essentials/blob/master/css/style.css)
 
 ### Custom Build
 
 [Essentials](https://jacobxperez.github.io/essentials/) is build on [LESS](http://lesscss.org/) which extends the capabilities of CSS. Use [style.less](https://github.com/jacobxperez/essentials/blob/master/css/style.less) for compiling all necessary modules for your website and [settings.less](https://github.com/jacobxperez/essentials/blob/master/css/less/settings.less) for adjusting the values of fonts, colors, padding and more.
 
-* [css/style.less](https://github.com/jacobxperez/essentials/blob/master/css/style.less) (for compiling all LESS modules)
-* [css/less/settings.less](https://github.com/jacobxperez/essentials/blob/master/css/less/settings.less) (for changing the settings)
+* [/css/style.less](https://github.com/jacobxperez/essentials/blob/master/css/style.less) (for compiling all LESS modules)
+* [/css/less/settings.less](https://github.com/jacobxperez/essentials/blob/master/css/less/settings.less) (for changing the settings)
 
 All the main modules that builds [style.css](https://github.com/jacobxperez/essentials/blob/master/css/style.css) can be found under folder [core](https://github.com/jacobxperez/essentials/tree/master/css/less/core).
 
-* [css/less/core](https://github.com/jacobxperez/essentials/tree/master/css/less/core)
+* [/css/less/core](https://github.com/jacobxperez/essentials/tree/master/css/less/core)
 	* [reset](https://github.com/jacobxperez/essentials/tree/master/css/less/core/reset) (css reset)
 	* [layout](https://github.com/jacobxperez/essentials/tree/master/css/less/core/layout) (grid system)
-	* [utilities](https://github.com/jacobxperez/essentials/tree/master/css/less/core/utilities) (alignment and other tools)
 	* [mixins](https://github.com/jacobxperez/essentials/tree/master/css/less/core/mixins) (LESS mixins)
 
 To ensure future compatibility we recommend to leave all [core](https://github.com/jacobxperez/essentials/tree/master/css/less/core) modules untouched unless you have to, and instead add all custom code on top of it under folder [styles](https://github.com/jacobxperez/essentials/tree/master/css/less/styles) then link to them on file [style.less](https://github.com/jacobxperez/essentials/blob/master/css/style.less) for compiling.
 
-* [css/less/styles](https://github.com/jacobxperez/essentials/tree/master/css/less/styles)
+* [/css/less/styles](https://github.com/jacobxperez/essentials/tree/master/css/less/styles)
 	* [modules](https://github.com/jacobxperez/essentials/tree/master/css/less/styles/modules) (add custom modules here)
 	* [navigation](https://github.com/jacobxperez/essentials/tree/master/css/less/styles/navigation) (add custom navigation here)
 

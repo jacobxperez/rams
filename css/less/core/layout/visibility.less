@@ -1,12 +1,15 @@
-// Tools
+// Visibility
 // ----------------------------------------------------------------------------/
+
 .show-print {
 	display: none;
 }
 
 
 // Small Screen
+// hide content on small screens
 // ----------------------------------------------------------------------------/
+
 @media screen and (max-width: @breakpoint-small-max) {
 	.hide-@{small-prefix},
 	.show-@{medium-prefix},
@@ -17,7 +20,9 @@
 
 
 // Medium Screen
+// hide content on medium screens
 // ----------------------------------------------------------------------------/
+
 @media screen and (min-width: @breakpoint-medium-min) and (max-width: @breakpoint-medium-max) {
 	.hide-@{medium-prefix}-up,
 	.hide-@{medium-prefix},
@@ -29,7 +34,9 @@
 
 
 // Large Screen
+// hide content on large screens
 // ----------------------------------------------------------------------------/
+
 @media screen and (min-width: @breakpoint-large-min) {
 	.hide-@{medium-prefix}-up,
 	.hide-@{large-prefix},

@@ -8,8 +8,8 @@
 		border: @a @style @color;
 	}
 
-	& when (@width = 0) {
-		// If the width is set to 0 it will not output any styles
+	& when (iskeyword(@width)) {
+		// If the width is set to none it will not output any styles
 	}
 }
 
@@ -20,8 +20,8 @@
 		border-top: @a @style @color;
 	}
 
-	& when (@width = 0) {
-		// If the width is set to 0 it will not output any styles
+	& when (@width = none) {
+		// If the width is set to none it will not output any styles
 	}
 }
 
@@ -32,8 +32,8 @@
 		border-right: @a @style @color;
 	}
 
-	& when (@width = 0) {
-		// If the width is set to 0 it will not output any styles
+	& when (@width = none) {
+		// If the width is set to none it will not output any styles
 	}
 }
 
@@ -44,8 +44,8 @@
 		border-bottom: @a @style @color;
 	}
 
-	& when (@width = 0) {
-		// If the width is set to 0 it will not output any styles
+	& when (@width = none) {
+		// If the width is set to none it will not output any styles
 	}
 }
 
@@ -56,8 +56,8 @@
 		border-left: @a @style @color;
 	}
 
-	& when (@width = 0) {
-		// If the width is set to 0 it will not output any styles
+	& when (@width = none) {
+		// If the width is set to none it will not output any styles
 	}
 }
 

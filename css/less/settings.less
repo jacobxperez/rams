@@ -17,6 +17,7 @@
 @base-padding-x: 14px;
 
 // borders
+// if the value for border-width is set to none it will not output a border property
 @base-border-width: 1px;
 @base-border-style: solid;
 @base-border-color: rgba(0, 0, 0, 0.3);
@@ -139,13 +140,14 @@
 
 
 // Forms
+
 // ----------------------------------------------------------------------------/
 @form-padding-y: @base-padding-y;
 @form-padding-x: @base-padding-x;
 
+@form-border-width: @base-border-width;
 @form-border-color: @base-border-color;
 @form-border-color-focus: @link-color;
-@form-border-width: @base-border-width;
 
 
 // Button

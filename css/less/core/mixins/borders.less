@@ -3,7 +3,7 @@
 
 .border(@width: @base-border-width, @style: @base-border-style, @color: @base-border-color, @base: @base-font-size, @unit: em) {
 
-	& when (ispixel(@width)) {
+	& when (isnumber(@width)) {
 		@a: unit((@width / @base), @unit);
 		border: @a @style @color;
 	}
@@ -15,7 +15,7 @@
 
 .border-top(@width: @base-border-width, @style: @base-border-style, @color: @base-border-color, @base: @base-font-size, @unit: em) {
 
-	& when (ispixel(@width)) {
+	& when (isnumber(@width)) {
 		@a: unit((@width / @base), @unit);
 		border-top: @a @style @color;
 	}
@@ -27,7 +27,7 @@
 
 .border-right(@width: @base-border-width, @style: @base-border-style, @color: @base-border-color, @base: @base-font-size, @unit: em) {
 
-	& when (ispixel(@width)) {
+	& when (isnumber(@width)) {
 		@a: unit((@width / @base), @unit);
 		border-right: @a @style @color;
 	}
@@ -39,7 +39,7 @@
 
 .border-bottom(@width: @base-border-width, @style: @base-border-style, @color: @base-border-color, @base: @base-font-size, @unit: em) {
 
-	& when (ispixel(@width)) {
+	& when (isnumber(@width)) {
 		@a: unit((@width / @base), @unit);
 		border-bottom: @a @style @color;
 	}
@@ -51,7 +51,7 @@
 
 .border-left(@width: @base-border-width, @style: @base-border-style, @color: @base-border-color, @base: @base-font-size, @unit: em) {
 
-	& when (ispixel(@width)) {
+	& when (isnumber(@width)) {
 		@a: unit((@width / @base), @unit);
 		border-left: @a @style @color;
 	}

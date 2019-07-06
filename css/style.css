@@ -121,6 +121,14 @@ nav ul {
 	list-style-type: none;
 }
 
+nav a {
+	display: block;
+}
+
+nav a:hover {
+	text-decoration: none;
+}
+
 hr {
 	-webkit-box-sizing: content-box;
 	-moz-box-sizing: content-box;

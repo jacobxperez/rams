@@ -405,6 +405,7 @@ input[type=button] {
 	-webkit-border-radius: .25em .25em .25em .25em;
 	-moz-border-radius: .25em .25em .25em .25em;
 	border-radius: .25em .25em .25em .25em;
+	z-index: 1;
 }
 
 .button:active,

@@ -9,7 +9,7 @@
 	}
 
 	& when (iskeyword(@width)) {
-		// If the width is set to none it will not output any styles
+		// If the width is set to none it will not output a border property
 	}
 }
 
@@ -20,8 +20,8 @@
 		border-top: @a @style @color;
 	}
 
-	& when (@width = none) {
-		// If the width is set to none it will not output any styles
+	& when (iskeyword(@width)) {
+		// If the width is set to none it will not output a border property
 	}
 }
 
@@ -32,8 +32,8 @@
 		border-right: @a @style @color;
 	}
 
-	& when (@width = none) {
-		// If the width is set to none it will not output any styles
+	& when (iskeyword(@width)) {
+		// If the width is set to none it will not output a border property
 	}
 }
 
@@ -44,8 +44,8 @@
 		border-bottom: @a @style @color;
 	}
 
-	& when (@width = none) {
-		// If the width is set to none it will not output any styles
+	& when (iskeyword(@width)) {
+		// If the width is set to none it will not output a border property
 	}
 }
 
@@ -56,8 +56,8 @@
 		border-left: @a @style @color;
 	}
 
-	& when (@width = none) {
-		// If the width is set to none it will not output any styles
+	& when (iskeyword(@width)) {
+		// If the width is set to none it will not output a border property
 	}
 }
 

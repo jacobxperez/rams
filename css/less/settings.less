@@ -1,6 +1,7 @@
 // Global Styles
 // common shared styles among selectors
 // always work on px and the mixins will output in relative units
+// variables with comment "can be set to off" will not output a style property
 // ----------------------------------------------------------------------------/
 
 // colors
@@ -18,8 +19,7 @@
 @base-padding-x: 14px;
 
 // borders
-// if the value for border-width is set to off it will not output a border property
-@base-border-width: 1px;
+@base-border-width: 1px; // can be set to off
 @base-border-style: solid;
 @base-border-color: rgba(0, 0, 0, 0.3);
 @base-border-radius: 4px;
@@ -75,7 +75,6 @@
 
 
 // Headings
-// when font family is set to off it will not output style property
 // ----------------------------------------------------------------------------/
 @headings-font-family: off;
 @headings-font-weight: 700;
@@ -111,6 +110,15 @@
 @h6-line-height: @base-line-height;
 
 
+// Iconography
+// ----------------------------------------------------------------------------/
+@icon-font-path: "../fonts/icons/";
+@icon-font-name: "icons";
+
+@icon-font-size: 15px;
+@icon-line-height: 10px;
+
+
 // Code
 // ----------------------------------------------------------------------------/
 @code-font-family: @font-mono; // can be set to off
@@ -144,9 +152,10 @@
 @form-padding-y: @base-padding-y;
 @form-padding-x: @base-padding-x;
 
-@form-border-width: @base-border-width;
+@form-border-width: @base-border-width; // can be set to off
 @form-border-color: @base-border-color;
 @form-border-color-focus: @link-color;
+@form-border-radius: @base-border-radius;
 
 
 // Button
@@ -155,10 +164,11 @@
 @button-padding-y: @base-padding-y;
 @button-padding-x: @base-padding-x;
 
-@button-border-width: @base-border-width;
-@button-border-color: @base-border-color;
 @button-background: #fff;
 @button-color: @base-font-color;
+@button-border-width: @base-border-width; // can be set to off
+@button-border-color: @base-border-color;
+@button-border-radius: @base-border-radius;
 
 
 // Selection

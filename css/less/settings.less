@@ -1,6 +1,7 @@
 // Global Styles
 // common shared styles among selectors
 // always work on px and the mixins will output in relative units
+// variables with comment "can be set to off" will not output a style property
 // ----------------------------------------------------------------------------/
 
 // colors
@@ -18,8 +19,7 @@
 @base-padding-x: 14px;
 
 // borders
-// if the value for border-width is set to off it will not output a border property
-@base-border-width: 1px;
+@base-border-width: 1px; // can be set to off
 @base-border-style: solid;
 @base-border-color: rgba(0, 0, 0, 0.3);
 @base-border-radius: 4px;
@@ -75,7 +75,6 @@
 
 
 // Headings
-// when font family is set to off it will not output style property
 // ----------------------------------------------------------------------------/
 @headings-font-family: off;
 @headings-font-weight: 700;
@@ -158,7 +157,7 @@
 
 @button-background: #fff;
 @button-color: @base-font-color;
-@button-border-width: @base-border-width;
+@button-border-width: @base-border-width; // can be set to off
 @button-border-color: @base-border-color;
 @button-border-radius: @base-border-radius;
 

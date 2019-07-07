@@ -18,7 +18,7 @@
 @base-padding-x: 14px;
 
 // borders
-// if the value for border-width is set to none it will not output a border property
+// if the value for border-width is set to off it will not output a border property
 @base-border-width: 1px;
 @base-border-style: solid;
 @base-border-color: rgba(0, 0, 0, 0.3);
@@ -37,12 +37,12 @@
 // mono
 @font-mono: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", "Nimbus Mono L", "Liberation Mono", FreeMono, monospace;
 
+// font family
+@base-font-family: @font-sans;
+
 // font size
 @root-font-size: 16px;
 @base-font-size: 16px;
-
-// font family
-@base-font-family: @font-sans;
 
 // line height
 @base-line-height: 24px;
@@ -66,7 +66,7 @@
 @mark-color: #000;
 
 // hr
-@hr-border-width: 2px;
+@hr-border-width: 2px; // can be set to off
 @hr-border-style: @base-border-style;
 @hr-border-color: @base-border-color;
 
@@ -75,10 +75,9 @@
 
 
 // Headings
+// when font family is set to off it will not output style property
 // ----------------------------------------------------------------------------/
-
-// headings
-@headings-font-family: inherit;
+@headings-font-family: off;
 @headings-font-weight: 700;
 
 // heading 1
@@ -114,7 +113,7 @@
 
 // Code
 // ----------------------------------------------------------------------------/
-@code-font-family: @font-mono;
+@code-font-family: @font-mono; // can be set to off
 @code-background: #e6e6e6;
 @code-color: #555;
 
@@ -128,7 +127,7 @@
 
 // Blockquote
 // ----------------------------------------------------------------------------/
-@blockquote-font-family: @font-serif;
+@blockquote-font-family: @font-serif; // can be set to off
 @blockquote-font-size: @h3-font-size;
 @blockquote-font-style: italic;
 @blockquote-leading: @h3-leading;
@@ -141,7 +140,6 @@
 
 
 // Forms
-
 // ----------------------------------------------------------------------------/
 @form-padding-y: @base-padding-y;
 @form-padding-x: @base-padding-x;
@@ -208,7 +206,7 @@
 
 
 // Breakpoints
-// Notice it's using wrapper widths to calculate breakpoints
+// notice it's using wrapper widths to calculate breakpoints
 // ----------------------------------------------------------------------------/
 
 // small screen

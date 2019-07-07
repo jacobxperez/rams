@@ -5,7 +5,9 @@ code,
 kbd,
 pre,
 samp {
-	font-family: @code-font-family;
+	& when not (@code-font-family = off) {
+		font-family: @code-font-family;
+	}
 }
 
 code {

@@ -396,7 +396,7 @@ input[type=button] {
 	display: inline-block;
 	padding: .5em .875em;
 	border: .0625em solid rgba(0, 0, 0, 0.3);
-	background-color: #fff;
+	background-color: #e6e6e6;
 	color: #333;
 	text-align: center;
 	vertical-align: middle;
@@ -416,7 +416,7 @@ button:hover,
 input[type=button]:active,
 input[type=button]:focus,
 input[type=button]:hover {
-	background-color: #eeeeee;
+	background-color: #d5d5d5;
 	text-decoration: none;
 }
 

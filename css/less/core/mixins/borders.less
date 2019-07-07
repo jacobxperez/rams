@@ -2,28 +2,63 @@
 // -----------------------------------------------------------------------------
 
 .border(@width: @base-border-width, @style: @base-border-style, @color: @base-border-color, @base: @base-font-size, @unit: em) {
-	@a: unit((@width / @base), @unit);
-	border: @a @style @color;
+
+	& when (isnumber(@width)) {
+		@a: unit((@width / @base), @unit);
+		border: @a @style @color;
+	}
+
+	& when (iskeyword(@width)) {
+		// If the width is set to none it will not output a border property
+	}
 }
 
 .border-top(@width: @base-border-width, @style: @base-border-style, @color: @base-border-color, @base: @base-font-size, @unit: em) {
-	@a: unit((@width / @base), @unit);
-	border-top: @a @style @color;
+
+	& when (isnumber(@width)) {
+		@a: unit((@width / @base), @unit);
+		border-top: @a @style @color;
+	}
+
+	& when (iskeyword(@width)) {
+		// If the width is set to none it will not output a border property
+	}
 }
 
 .border-right(@width: @base-border-width, @style: @base-border-style, @color: @base-border-color, @base: @base-font-size, @unit: em) {
-	@b: unit((@width / @base), @unit);
-	border-right: @b @style @color;
+
+	& when (isnumber(@width)) {
+		@a: unit((@width / @base), @unit);
+		border-right: @a @style @color;
+	}
+
+	& when (iskeyword(@width)) {
+		// If the width is set to none it will not output a border property
+	}
 }
 
 .border-bottom(@width: @base-border-width, @style: @base-border-style, @color: @base-border-color, @base: @base-font-size, @unit: em) {
-	@c: unit((@width / @base), @unit);
-	border-bottom: @c @style @color;
+
+	& when (isnumber(@width)) {
+		@a: unit((@width / @base), @unit);
+		border-bottom: @a @style @color;
+	}
+
+	& when (iskeyword(@width)) {
+		// If the width is set to none it will not output a border property
+	}
 }
 
 .border-left(@width: @base-border-width, @style: @base-border-style, @color: @base-border-color, @base: @base-font-size, @unit: em) {
-	@d: unit((@width / @base), @unit);
-	border-left: @d @style @color;
+
+	& when (isnumber(@width)) {
+		@a: unit((@width / @base), @unit);
+		border-left: @a @style @color;
+	}
+
+	& when (iskeyword(@width)) {
+		// If the width is set to none it will not output a border property
+	}
 }
 
 

@@ -24,27 +24,33 @@
 // -----------------------------------------------------------------------------
 
 .font-size(@size: @base-font-size, @base: @base-font-size, @unit: %) {
-	& when (@unit = %) {
-		@a: percentage(@size / @base);
-		font-size: @a;
+
+	& when not (@size = off) {
+
+		& when (@unit = %) {
+			@a: percentage(@size / @base);
+			font-size: @a;
+		}
+
+		& when (@unit = vw),
+		(@unit = vh) {
+			@a: unit(((@size / @base) * 100), @unit);
+			font-size: @a;
+		}
+
+		& when (@unit = em),
+		(@unit = rem) {
+			@a: unit((@size / @base), @unit);
+			font-size: @a;
+		}
+
+		& when (@unit = none) {
+			@a: unit((@size / @base));
+			font-size: @a;
+		}
+		
 	}
 
-	& when (@unit = vw),
-	(@unit = vh) {
-		@a: unit(((@size / @base) * 100), @unit);
-		font-size: @a;
-	}
-
-	& when (@unit = em),
-	(@unit = rem) {
-		@a: unit((@size / @base), @unit);
-		font-size: @a;
-	}
-
-	& when (@unit = none) {
-		@a: unit((@size / @base));
-		font-size: @a;
-	}
 }
 
 
@@ -52,21 +58,27 @@
 // -----------------------------------------------------------------------------
 
 .line-height(@height: @base-line-height, @base: @base-font-size, @unit: none) {
-	& when (@unit = em),
-	(@unit = rem) {
-		@a: unit((@height / @base), @unit);
-		line-height: @a;
+
+	& when not (@height = off) {
+
+		& when (@unit = em),
+		(@unit = rem) {
+			@a: unit((@height / @base), @unit);
+			line-height: @a;
+		}
+
+		& when (@unit = %) {
+			@a: percentage(@height / @base);
+			line-height: @a;
+		}
+
+		& when (@unit = none) {
+			@a: unit((@height / @base));
+			line-height: @a;
+		}
+
 	}
 
-	& when (@unit = %) {
-		@a: percentage(@height / @base);
-		line-height: @a;
-	}
-
-	& when (@unit = none) {
-		@a: unit((@height / @base));
-		line-height: @a;
-	}
 }
 
 

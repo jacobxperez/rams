@@ -2,72 +2,102 @@
 // -----------------------------------------------------------------------------
 
 .padding(@top: @base-padding-y, @right: @base-padding-x, @bottom: @top, @left: @right, @base: @base-font-size, @unit: em) {
-	& when (@unit = em),
-	(@unit = rem) {
-		@a: unit((@top / @base), @unit);
-		@b: unit((@right / @base), @unit);
-		@c: unit((@bottom / @base), @unit);
-		@d: unit((@left / @base), @unit);
-		padding: @a @b @c @d;
+
+	& when not (@top = off) {
+
+		& when (@unit = em),
+		(@unit = rem) {
+			@a: unit((@top / @base), @unit);
+			@b: unit((@right / @base), @unit);
+			@c: unit((@bottom / @base), @unit);
+			@d: unit((@left / @base), @unit);
+			padding: @a @b @c @d;
+		}
+
+		& when (@unit = %) {
+			@a: percentage(@top / @base);
+			@b: percentage(@right / @base);
+			@c: percentage(@bottom / @base);
+			@d: percentage(@left / @base);
+			padding: @a @b @c @d;
+		}
+
 	}
 
-	& when (@unit = %) {
-		@a: percentage(@top / @base);
-		@b: percentage(@right / @base);
-		@c: percentage(@bottom / @base);
-		@d: percentage(@left / @base);
-		padding: @a @b @c @d;
-	}
 }
 
 .padding-top(@top: @base-padding-y, @base: @base-font-size, @unit: em) {
-	& when (@unit = em),
-	(@unit = rem) {
-		@a: unit((@top / @base), @unit);
-		padding-top: @a;
+
+	& when not (@top = off) {
+
+		& when (@unit = em),
+		(@unit = rem) {
+			@a: unit((@top / @base), @unit);
+			padding-top: @a;
+		}
+
+		& when (@unit = %) {
+			@a: percentage(@top / @base);
+			padding-top: @a;
+		}
+
 	}
 
-	& when (@unit = %) {
-		@a: percentage(@top / @base);
-		padding-top: @a;
-	}
 }
 
 .padding-right(@right: @base-padding-x, @base: @base-font-size, @unit: em) {
-	& when (@unit = em),
-	(@unit = rem) {
-		@a: unit((@right / @base), @unit);
-		padding-right: @a;
+
+	& when not (@right = off) {
+
+		& when (@unit = em),
+		(@unit = rem) {
+			@a: unit((@right / @base), @unit);
+			padding-right: @a;
+		}
+
+		& when (@unit = %) {
+			@a: percentage(@right / @base);
+			padding-right: @a;
+		}
+
 	}
 
-	& when (@unit = %) {
-		@a: percentage(@right / @base);
-		padding-right: @a;
-	}
 }
 
 .padding-bottom(@bottom: @base-padding-y, @base: @base-font-size, @unit: em) {
-	& when (@unit = em),
-	(@unit = rem) {
-		@a: unit((@bottom / @base), @unit);
-		padding-bottom: @a;
+
+	& when not (@bottom = off) {
+
+		& when (@unit = em),
+		(@unit = rem) {
+			@a: unit((@bottom / @base), @unit);
+			padding-bottom: @a;
+		}
+
+		& when (@unit = %) {
+			@a: percentage(@bottom / @base);
+			padding-bottom: @a;
+		}
+
 	}
 
-	& when (@unit = %) {
-		@a: percentage(@bottom / @base);
-		padding-bottom: @a;
-	}
 }
 
 .padding-left(@left: @base-padding-x, @base: @base-font-size, @unit: em) {
-	& when (@unit = em),
-	(@unit = rem) {
-		@a: unit((@left / @base), @unit);
-		padding-left: @a;
+
+	& when not (@left = off) {
+
+		& when (@unit = em),
+		(@unit = rem) {
+			@a: unit((@left / @base), @unit);
+			padding-left: @a;
+		}
+
+		& when (@unit = %) {
+			@a: percentage(@left / @base);
+			padding-left: @a;
+		}
+
 	}
 
-	& when (@unit = %) {
-		@a: percentage(@left / @base);
-		padding-left: @a;
-	}
 }

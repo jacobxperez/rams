@@ -158,41 +158,36 @@ h4,
 h5,
 h6 {
 	font-weight: 700;
+	margin-bottom: 1.5rem;
 	text-rendering: optimizelegibility;
 }
 
 h1 {
-	margin-bottom: 1.5rem;
 	font-size: 293.75%;
 	line-height: 1.0212766;
 }
 
 h2 {
-	margin-bottom: 1.5rem;
 	font-size: 206.25%;
 	line-height: 1.09090909;
 }
 
 h3 {
-	margin-bottom: 1.5rem;
 	font-size: 143.75%;
 	line-height: 1.56521739;
 }
 
 h4 {
-	margin-bottom: 1.5rem;
 	font-size: 100%;
 	line-height: 1.5;
 }
 
 h5 {
-	margin-bottom: 1.5rem;
 	font-size: 100%;
 	line-height: 1.5;
 }
 
 h6 {
-	margin-bottom: 1.5rem;
 	font-size: 100%;
 	line-height: 1.5;
 }

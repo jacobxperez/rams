@@ -3,62 +3,47 @@
 
 .border(@width: @base-border-width, @style: @base-border-style, @color: @base-border-color, @base: @base-font-size, @unit: em) {
 
-	& when (isnumber(@width)) {
+	& when not (@width = off) {
 		@a: unit((@width / @base), @unit);
 		border: @a @style @color;
 	}
 
-	& when (iskeyword(@width)) {
-		// If the width is set to off it will not output a border property
-	}
 }
 
 .border-top(@width: @base-border-width, @style: @base-border-style, @color: @base-border-color, @base: @base-font-size, @unit: em) {
 
-	& when (isnumber(@width)) {
+	& when not (@width = off) {
 		@a: unit((@width / @base), @unit);
 		border-top: @a @style @color;
 	}
 
-	& when (iskeyword(@width)) {
-		// If the width is set to off it will not output a border property
-	}
 }
 
 .border-right(@width: @base-border-width, @style: @base-border-style, @color: @base-border-color, @base: @base-font-size, @unit: em) {
 
-	& when (isnumber(@width)) {
+	& when not (@width = off) {
 		@a: unit((@width / @base), @unit);
 		border-right: @a @style @color;
 	}
 
-	& when (iskeyword(@width)) {
-		// If the width is set to off it will not output a border property
-	}
 }
 
 .border-bottom(@width: @base-border-width, @style: @base-border-style, @color: @base-border-color, @base: @base-font-size, @unit: em) {
 
-	& when (isnumber(@width)) {
+	& when not (@width = off) {
 		@a: unit((@width / @base), @unit);
 		border-bottom: @a @style @color;
 	}
 
-	& when (iskeyword(@width)) {
-		// If the width is set to off it will not output a border property
-	}
 }
 
 .border-left(@width: @base-border-width, @style: @base-border-style, @color: @base-border-color, @base: @base-font-size, @unit: em) {
 
-	& when (isnumber(@width)) {
+	& when not (@width = off) {
 		@a: unit((@width / @base), @unit);
 		border-left: @a @style @color;
 	}
 
-	& when (iskeyword(@width)) {
-		// If the width is set to off it will not output a border property
-	}
 }
 
 
@@ -66,6 +51,7 @@
 // -----------------------------------------------------------------------------
 
 .border-radius(@top-left: @base-border-radius, @top-right: @base-border-radius, @bottom-right: @top-left, @bottom-left: @top-right, @base: @base-font-size, @unit: em) {
+
 	@a: unit((@top-left / @base), @unit);
 	@b: unit((@top-right / @base), @unit);
 	@c: unit((@bottom-right / @base), @unit);
@@ -73,6 +59,7 @@
 	-webkit-border-radius: @a @b @c @d;
 	-moz-border-radius: @a @b @c @d;
 	border-radius: @a @b @c @d;
+
 }
 
 
@@ -80,6 +67,7 @@
 // -----------------------------------------------------------------------------
 
 .border-color (@color: @base-border-color; @amount: 6.5%; @switch: none) {
+	
 	& when (@switch = none) {
 		border-color: @color;
 	}
@@ -99,4 +87,5 @@
 	& when (@switch = desaturate) {
 		border-color: desaturate(@color, @amount);
 	}
+
 }

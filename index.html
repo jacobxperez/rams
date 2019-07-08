@@ -49,15 +49,14 @@
 
 				<h2 id="about">About</h2>
 
-				<p>Essentials is a CSS reset framework build on <a href="http://lesscss.org/">LESS</a> which allows you to build websites with your own components without getting on your way. for more details on building your own components check out
+				<p>Essentials is a CSS reset framework build on <a href="http://lesscss.org/">LESS</a> which allows you to build websites with your own components without getting on your way. for more details on adding your own components check out
 					<a href="#custom-build">custom build</a>.</p>
 
 				<h2 id="getting-started">Getting Started</h2>
 
 				<p>Start by <strong><a href="https://github.com/jacobxperez/essentials/archive/master.zip">downloading</a></strong> the <a href="https://github.com/jacobxperez/essentials">repository</a> or by cloning the project:</p>
 
-				<pre
-					class="editor-colors lang-"><div class="line"><span class="syntax--text syntax--plain syntax--null-grammar"><span>git&nbsp;clone&nbsp;</span><span class="syntax--markup syntax--underline syntax--link syntax--https syntax--hyperlink"><span>https://github.com/jacobxperez/essentials.git</span></span></span></div></pre>
+				<pre class="editor-colors lang-css"><div class="line"><span class="syntax--text syntax--plain syntax--null-grammar"><span>$&nbsp;git&nbsp;clone&nbsp;</span><span class="syntax--markup syntax--underline syntax--link syntax--https syntax--hyperlink"><span>https://github.com/jacobxperez/essentials.git</span></span></span></div></pre>
 
 				<p><em>Keep in mind that this project is under active development and no stable version has been release.</em></p>
 
@@ -80,28 +79,25 @@
 					<li><a href="https://github.com/jacobxperez/essentials/blob/master/css/less/settings.less">/css/less/settings.less</a> (for changing the settings)</li>
 				</ul>
 
-				<p>All the main modules that builds <a href="https://github.com/jacobxperez/essentials/blob/master/css/style.css">style.css</a> can be found under folder <a
-						href="https://github.com/jacobxperez/essentials/tree/master/css/less/core">core</a>.</p>
-
+				<p>All main components and dependencies can be found under folder <a href="https://github.com/jacobxperez/essentials/tree/master/css/less/core">core</a>.</p>
 				<ul>
 					<li><a href="https://github.com/jacobxperez/essentials/tree/master/css/less/core">/css/less/core</a>
 						<ul>
-							<li><a href="https://github.com/jacobxperez/essentials/tree/master/css/less/core/reset">reset</a> (css reset)</li>
-							<li><a href="https://github.com/jacobxperez/essentials/tree/master/css/less/core/layout">layout</a> (grid system)</li>
-							<li><a href="https://github.com/jacobxperez/essentials/tree/master/css/less/core/mixins">mixins</a> (LESS mixins)</li>
+							<li><a href="https://github.com/jacobxperez/essentials/tree/master/css/less/core/reset">reset</a></li>
+							<li><a href="https://github.com/jacobxperez/essentials/tree/master/css/less/core/mixins">mixins</a></li>
 						</ul>
 					</li>
 				</ul>
 
-				<p>To ensure future compatibility we recommend to leave all <a href="https://github.com/jacobxperez/essentials/tree/master/css/less/core">core</a> modules untouched unless you have to, and instead add all custom code on top of it
-					under folder <a href="https://github.com/jacobxperez/essentials/tree/master/css/less/styles">styles</a> then link to them on file <a href="https://github.com/jacobxperez/essentials/blob/master/css/style.less">style.less</a> for
-					compiling.</p>
+				<p>We recommend to add all extra modules under folder <a href="https://github.com/jacobxperez/essentials/tree/master/css/less/components">components</a> then link to them on file <a
+						href="https://github.com/jacobxperez/essentials/blob/master/css/style.less">style.less</a> for compiling.</p>
 
 				<ul>
-					<li><a href="https://github.com/jacobxperez/essentials/tree/master/css/less/styles">/css/less/styles</a>
+					<li><a href="https://github.com/jacobxperez/essentials/tree/master/css/less/components">/css/less/components</a>
 						<ul>
-							<li><a href="https://github.com/jacobxperez/essentials/tree/master/css/less/styles/modules">modules</a> (add custom modules here)</li>
-							<li><a href="https://github.com/jacobxperez/essentials/tree/master/css/less/styles/navigation">navigation</a> (add custom navigation here)</li>
+							<li><a href="https://github.com/jacobxperez/essentials/tree/master/css/less/components/layout">layout</a></li>
+							<li><a href="https://github.com/jacobxperez/essentials/tree/master/css/less/components/modules">modules</a></li>
+							<li><a href="https://github.com/jacobxperez/essentials/tree/master/css/less/components/navigation">navigation</a></li>
 						</ul>
 					</li>
 				</ul>

@@ -19,7 +19,7 @@ Base CSS reset for layout and typography
 
 ## About
 
-Essentials is a CSS reset framework build on [LESS](http://lesscss.org/) which allows you to build websites with your own components without getting on your way. for more details on building your own components check out [custom build](#custom-build).
+Essentials is a CSS reset framework build on [LESS](http://lesscss.org/) which allows you to build websites with your own components without getting on your way. for more details on adding your own components check out [custom build](#custom-build).
 
 ### Project Status
 
@@ -29,7 +29,7 @@ Project under active development. No stable version has been release.
 
 Start by **[downloading](https://github.com/jacobxperez/essentials/archive/master.zip)** the [repository](https://github.com/jacobxperez/essentials) or by cloning the project:
 
-	git clone https://github.com/jacobxperez/essentials.git
+	$ git clone https://github.com/jacobxperez/essentials.git
 
 *Keep in mind that this project is under active development and no stable version has been release.*
 
@@ -46,18 +46,18 @@ The easiest way to include [Essentials](https://jacobxperez.github.io/essentials
 * [/css/style.less](https://github.com/jacobxperez/essentials/blob/master/css/style.less) (for compiling all LESS modules)
 * [/css/less/settings.less](https://github.com/jacobxperez/essentials/blob/master/css/less/settings.less) (for changing the settings)
 
-All the main modules that builds [style.css](https://github.com/jacobxperez/essentials/blob/master/css/style.css) can be found under folder [core](https://github.com/jacobxperez/essentials/tree/master/css/less/core).
+All main components and dependencies can be found under folder [core](https://github.com/jacobxperez/essentials/tree/master/css/less/core).
 
 * [/css/less/core](https://github.com/jacobxperez/essentials/tree/master/css/less/core)
-	* [reset](https://github.com/jacobxperez/essentials/tree/master/css/less/core/reset) (css reset)
-	* [layout](https://github.com/jacobxperez/essentials/tree/master/css/less/core/layout) (grid system)
-	* [mixins](https://github.com/jacobxperez/essentials/tree/master/css/less/core/mixins) (LESS mixins)
+	* [reset](https://github.com/jacobxperez/essentials/tree/master/css/less/core/reset)
+	* [mixins](https://github.com/jacobxperez/essentials/tree/master/css/less/core/mixins)
 
-To ensure future compatibility we recommend to leave all [core](https://github.com/jacobxperez/essentials/tree/master/css/less/core) modules untouched unless you have to, and instead add all custom code on top of it under folder [styles](https://github.com/jacobxperez/essentials/tree/master/css/less/styles) then link to them on file [style.less](https://github.com/jacobxperez/essentials/blob/master/css/style.less) for compiling.
+We recommend to add all extra modules under folder [components](https://github.com/jacobxperez/essentials/tree/master/css/less/components) then link to them on file [style.less](https://github.com/jacobxperez/essentials/blob/master/css/style.less) for compiling.
 
-* [/css/less/styles](https://github.com/jacobxperez/essentials/tree/master/css/less/styles)
-	* [modules](https://github.com/jacobxperez/essentials/tree/master/css/less/styles/modules) (add custom modules here)
-	* [navigation](https://github.com/jacobxperez/essentials/tree/master/css/less/styles/navigation) (add custom navigation here)
+* [/css/less/components](https://github.com/jacobxperez/essentials/tree/master/css/less/components)
+	* [layout](https://github.com/jacobxperez/essentials/tree/master/css/less/components/layout)
+	* [modules](https://github.com/jacobxperez/essentials/tree/master/css/less/components/modules)
+	* [navigation](https://github.com/jacobxperez/essentials/tree/master/css/less/components/navigation)
 
 *By default Essentials has no predefine navigation, use your own custom code.*
 

@@ -1,1 +1,1 @@
-This are [Essentials](https://jacobxperez.github.io/essentials/) core modules
+This are [Essentials](https://jacobxperez.github.io/essentials/) core components

@@ -426,16 +426,6 @@ button[disabled],
 html input[disabled] {
 	cursor: default;
 }
-@media screen and (min-height: 100em) {
-	html {
-		font-size: 1vh;
-	}
-}
-@media screen and (min-width: 100em) {
-	html {
-		font-size: 1vw;
-	}
-}
 
 .container:after,
 .container:before,
@@ -1143,6 +1133,16 @@ body > .container:only-child {
 	.show-medium,
 	.show-small {
 		display: none;
+	}
+}
+@media screen and (min-height: 100em) {
+	html {
+		font-size: 1vh;
+	}
+}
+@media screen and (min-width: 100em) {
+	html {
+		font-size: 1vw;
 	}
 }
 @media print {

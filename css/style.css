@@ -455,11 +455,13 @@ body > .container:first-child {
 	padding-top: 2.5em;
 }
 
-body > .container:last-child {
+body > .container:last-child,
+body > .container:last-of-type {
 	padding-bottom: 3.75em;
 }
 
-body > .container:only-child {
+body > .container:only-child,
+body > .container:only-of-type {
 	padding-top: 2.5em;
 	padding-bottom: 3.75em;
 }

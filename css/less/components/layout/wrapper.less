@@ -13,13 +13,19 @@ body > .@{wrapper-class}:first-child {
 	.padding-top(@wrapper-padding-top);
 }
 
-body > .@{wrapper-class}:last-child {
-	.padding-bottom(@wrapper-padding-bottom);
+body {
+	> .@{wrapper-class}:last-child,
+	> .@{wrapper-class}:last-of-type {
+		.padding-bottom(@wrapper-padding-bottom);
+	}
 }
 
-body > .@{wrapper-class}:only-child {
-	.padding-top(@wrapper-padding-top);
-	.padding-bottom(@wrapper-padding-bottom);
+body {
+	> .@{wrapper-class}:only-child,
+	> .@{wrapper-class}:only-of-type  {
+		.padding-top(@wrapper-padding-top);
+		.padding-bottom(@wrapper-padding-bottom);
+	}
 }
 
 

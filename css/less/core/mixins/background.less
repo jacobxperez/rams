@@ -11,7 +11,7 @@
 // Gradients
 // -----------------------------------------------------------------------------
 
-.gradient(@color: #e6e6e6; @amount: 6.5%; @switch: false) {
+.gradient(@color: @background-color; @amount: 6.5%; @switch: false) {
 	& when (@switch = false) {
 		@top: @color;
 		@bottom: darken(@color, @amount);

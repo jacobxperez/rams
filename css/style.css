@@ -402,23 +402,20 @@ input[type=button] {
 	z-index: 1;
 }
 
-.button:active,
 .button:focus,
 .button:hover,
-button:active,
 button:focus,
 button:hover,
-input[type=button]:active,
 input[type=button]:focus,
 input[type=button]:hover {
-	background-color: #f7f7f7;
+	background-color: #eeeeee;
 	text-decoration: none;
 }
 
 .button:active,
 button:active,
 input[type=button]:active {
-	background-color: #d5d5d5;
+	background-color: #dedede;
 }
 
 button,

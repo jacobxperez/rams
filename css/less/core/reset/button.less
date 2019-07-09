@@ -18,8 +18,12 @@ input[type=button] {
 	&:active,
 	&:focus,
 	&:hover {
-		.background-color(@button-background; @switch: dark);
+		background-color: @button-background-hover;
 		text-decoration: none;
+	}
+
+	&:active {
+		background-color: @button-background-active;
 	}
 }
 

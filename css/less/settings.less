@@ -162,8 +162,11 @@
 @button-padding-y: @base-padding-y;
 @button-padding-x: @base-padding-x;
 
-@button-background: @secondary;
 @button-color: @font-color;
+@button-background: @secondary;
+@button-background-hover: lighten(@button-background, 6.5%);
+@button-background-active: darken(@button-background, 6.5%);
+
 @button-border-width: @base-border-width; // can be set to off
 @button-border-color: @base-border-color;
 @button-border-radius: @base-border-radius;

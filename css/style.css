@@ -411,8 +411,14 @@ button:hover,
 input[type=button]:active,
 input[type=button]:focus,
 input[type=button]:hover {
-	background-color: #d5d5d5;
+	background-color: #f7f7f7;
 	text-decoration: none;
+}
+
+.button:active,
+button:active,
+input[type=button]:active {
+	background-color: #d5d5d5;
 }
 
 button,

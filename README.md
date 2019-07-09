@@ -23,7 +23,7 @@ Essentials is a CSS reset framework build on [LESS](http://lesscss.org/) which a
 
 ### Project Status
 
-Project under active development. No stable version has been release.
+Project under active development. **NO** stable version has been release.
 
 ## Getting Started
 
@@ -59,7 +59,7 @@ We recommend to add all extra modules under folder [components](https://github.c
 	* [modules](https://github.com/jacobxperez/essentials/tree/master/css/less/components/modules)
 	* [navigation](https://github.com/jacobxperez/essentials/tree/master/css/less/components/navigation)
 
-*By default Essentials has no predefine navigation, use your own custom code.*
+*At this stage of development Essentials has no predefine navigation.*
 
 ### Features
 

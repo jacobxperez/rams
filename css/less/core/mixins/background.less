@@ -8,32 +8,6 @@
 }
 
 
-// Background Color
-// -----------------------------------------------------------------------------
-
-.background-color (@color: #e6e6e6; @amount: 6.5%; @switch: none) {
-	& when (@switch = none) {
-		background-color: @color;
-	}
-
-	& when (@switch = light) {
-		background-color: lighten(@color, @amount);
-	}
-
-	& when (@switch = dark) {
-		background-color: darken(@color, @amount);
-	}
-
-	& when (@switch = saturate) {
-		background-color: saturate(@color, @amount);
-	}
-
-	& when (@switch = desaturate) {
-		background-color: desaturate(@color, @amount);
-	}
-}
-
-
 // Gradients
 // -----------------------------------------------------------------------------
 

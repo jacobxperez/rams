@@ -1,6 +1,6 @@
 # [Essentials](https://jacobxperez.github.io/essentials/)
 
-Base CSS reset for layout and typography
+The Dynamic CSS Reset Framework.
 
 ## Table of Contents
 
@@ -19,7 +19,7 @@ Base CSS reset for layout and typography
 
 ## About
 
-Essentials is a CSS reset framework build on [LESS](http://lesscss.org/) which allows you to build websites with your own components without getting on your way. for more details on adding your own components check out [custom build](#custom-build).
+Essentials is a dynamic CSS reset framework for layout and typography build on [LESS](http://lesscss.org/).
 
 ### Project Status
 

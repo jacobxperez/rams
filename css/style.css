@@ -1140,14 +1140,14 @@ body > .container:only-of-type {
 		display: none;
 	}
 }
-@media screen and (min-height: 100em) {
+@media screen and (min-height: 120em) {
 	html {
-		font-size: 1vh;
+		font-size: .83333333vh;
 	}
 }
-@media screen and (min-width: 100em) {
+@media screen and (min-width: 120em) {
 	html {
-		font-size: 1vw;
+		font-size: .83333333vw;
 	}
 }
 @media print {

@@ -30,7 +30,7 @@ html {
 body {
 	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Nimbus Sans L", "Liberation Sans", FreeSans, sans-serif;
 	font-weight: 400;
-	color: #333;
+	color: #555;
 	line-height: 1.5;
 	background-color: #fff;
 	overflow: auto;
@@ -140,14 +140,14 @@ hr {
 }
 
 ::-moz-selection {
-	background-color: #c2daff;
-	color: #000;
+	background-color: #06f;
+	color: #fff;
 	text-shadow: none;
 }
 
 ::selection {
-	background-color: #c2daff;
-	color: #000;
+	background-color: #06f;
+	color: #fff;
 	text-shadow: none;
 }
 
@@ -228,7 +228,7 @@ dfn {
 
 abbr[title],
 dfn[title] {
-	border-bottom: .0625em dotted #333;
+	border-bottom: .0625em dotted #555;
 	text-decoration: none;
 	cursor: help;
 }
@@ -267,16 +267,16 @@ samp {
 
 code {
 	line-height: 1;
-	background-color: #e6e6e6;
-	color: #555;
+	background-color: #333;
+	color: #e6e6e6;
 }
 
 pre {
 	margin-bottom: 1.5rem;
 	padding: .5em .875em;
 	white-space: pre;
-	background-color: #e6e6e6;
-	color: #555;
+	background-color: #333;
+	color: #e6e6e6;
 	overflow: auto;
 }
 
@@ -370,7 +370,7 @@ input[type=week]:focus,
 select:focus,
 textarea:focus {
 	border-color: #06f;
-	color: #333;
+	color: #555;
 	box-shadow: none;
 }
 
@@ -392,7 +392,7 @@ input[type=button] {
 	padding: .5em .875em;
 	border: .0625em solid rgba(0, 0, 0, 0.3);
 	background-color: #e6e6e6;
-	color: #333;
+	color: #555;
 	text-align: center;
 	vertical-align: middle;
 	cursor: pointer;

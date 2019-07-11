@@ -64,17 +64,17 @@ a {
 	color: @link-color;
 	cursor: pointer;
 
-	&:hover {
-		text-decoration: @link-decoration-hover;
-	}
-
 	&:focus {
 		outline: thin dotted;
 		outline-offset: -2px;
 	}
 
-	&:active,
 	&:hover {
+		text-decoration: @link-decoration-hover;
+	}
+
+	&:hover,
+	&:active {
 		outline: 0;
 	}
 }

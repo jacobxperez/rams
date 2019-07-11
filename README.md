@@ -19,7 +19,7 @@ The Dynamic CSS Reset Framework.
 
 ## About
 
-Essentials is a dynamic CSS reset framework build on [LESS](http://lesscss.org/) from the ground up.
+Essentials is a dynamic CSS reset framework build on [LESS](http://lesscss.org/).
 
 ### Project Status
 

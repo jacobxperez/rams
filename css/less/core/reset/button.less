@@ -15,7 +15,10 @@ input[type=button] {
 	.border-radius(@button-border-radius);
 	z-index: 1;
 
-	&:focus,
+	&:focus {
+		background-color: @button-background-hover;
+	}
+
 	&:hover {
 		background-color: @button-background-hover;
 		text-decoration: none;

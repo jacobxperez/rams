@@ -157,34 +157,35 @@ h3,
 h4,
 h5,
 h6 {
-	font-weight: 700;
+	font-weight: 400;
 	margin-bottom: 1.5rem;
 	text-rendering: optimizelegibility;
 }
 
 h1 {
-	font-size: 293.75%;
-	line-height: 1.0212766;
+	margin-bottom: 1.125rem;
+	font-size: 300%;
+	line-height: 1.125;
 }
 
 h2 {
-	font-size: 206.25%;
-	line-height: 1.09090909;
+	font-size: 200%;
+	line-height: 1.125;
 }
 
 h3 {
-	font-size: 143.75%;
-	line-height: 1.56521739;
+	font-size: 150%;
+	line-height: 1.5;
 }
 
 h4 {
-	font-size: 100%;
-	line-height: 1.5;
+	font-size: 125%;
+	line-height: 1.2;
 }
 
 h5 {
-	font-size: 100%;
-	line-height: 1.5;
+	font-size: 112.5%;
+	line-height: 1.33333333;
 }
 
 h6 {
@@ -208,13 +209,13 @@ a {
 	cursor: pointer;
 }
 
-a:hover {
-	text-decoration: underline;
-}
-
 a:focus {
 	outline: thin dotted;
 	outline-offset: -2px;
+}
+
+a:hover {
+	text-decoration: underline;
 }
 
 a:active,
@@ -267,7 +268,7 @@ samp {
 
 code {
 	line-height: 1;
-	background-color: #333;
+	background-color: #222;
 	color: #e6e6e6;
 }
 
@@ -275,7 +276,7 @@ pre {
 	margin-bottom: 1.5rem;
 	padding: .5em .875em;
 	white-space: pre;
-	background-color: #333;
+	background-color: #222;
 	color: #e6e6e6;
 	overflow: auto;
 }
@@ -292,7 +293,7 @@ q {
 
 blockquote {
 	margin-bottom: 1.5rem;
-	font-size: 143.75%;
+	font-size: 150%;
 	font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, "Nimbus Roman No9 L", "Liberation Serif", FreeSerif, serif;
 	font-style: italic;
 }
@@ -310,7 +311,7 @@ blockquote small:before {
 blockquote small {
 	display: block;
 	width: 100%;
-	font-size: 60.86956522%;
+	font-size: 58.33333333%;
 }
 
 table {
@@ -381,7 +382,7 @@ textarea {
 }
 
 :not([type=submit]):invalid {
-	border-color: #f22;
+	border-color: #da1e28;
 	box-shadow: none;
 }
 
@@ -403,10 +404,13 @@ input[type=button] {
 }
 
 .button:focus,
-.button:hover,
 button:focus,
+input[type=button]:focus {
+	background-color: #eeeeee;
+}
+
+.button:hover,
 button:hover,
-input[type=button]:focus,
 input[type=button]:hover {
 	background-color: #eeeeee;
 	text-decoration: none;

@@ -312,6 +312,7 @@ blockquote small {
 	display: block;
 	width: 100%;
 	font-size: 58.33333333%;
+	line-height: 1.71428571em;
 }
 
 table {
@@ -382,19 +383,21 @@ textarea {
 }
 
 :not([type=submit]):invalid {
-	border-color: #da1e28;
+	border-color: #f30;
 	box-shadow: none;
 }
 
 .button,
 button,
 input[type=button] {
+	position: relative;
 	display: inline-block;
 	padding: .5em .875em;
 	border: .0625em solid rgba(0, 0, 0, 0.3);
 	background-color: #e6e6e6;
 	color: #555;
 	text-align: center;
+	white-space: nowrap;
 	vertical-align: middle;
 	cursor: pointer;
 	-webkit-border-radius: .25em .25em .25em .25em;

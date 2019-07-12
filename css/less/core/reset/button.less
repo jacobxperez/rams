@@ -4,12 +4,14 @@
 .@{button-class},
 button,
 input[type=button] {
+	position: relative;
 	display: inline-block;
 	.padding(@button-padding-y; @button-padding-x);
 	.border(@button-border-width; solid; @button-border-color);
 	background-color: @button-background;
 	color: @button-color;
 	text-align: center;
+	white-space: nowrap;
 	vertical-align: middle;
 	cursor: pointer;
 	.border-radius(@button-border-radius);

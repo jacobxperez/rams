@@ -109,4 +109,4 @@ the Free Software Foundation, either version 3 of the License, or
 any later version. This program is distributed in the hope that it will be useful,
 but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-[GNU General Public License v3](https://www.gnu.org/licenses/gpl-3.0.html) for more details.
+[GPLv3](https://www.gnu.org/licenses/gpl-3.0.html) for more details.

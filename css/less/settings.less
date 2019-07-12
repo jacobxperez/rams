@@ -1,7 +1,7 @@
 // Global Styles
 // common shared styles among selectors
 // always work on px and the mixins will output in relative units
-// variables with comment "can be set to off" will not output a style declaration
+// variables that can be set to off will not output a style declaration
 // ----------------------------------------------------------------------------/
 
 // colors
@@ -9,9 +9,9 @@
 @background-color: #fff;
 @primary: #06f;
 @secondary: #e6e6e6;
-@danger: #da1e28;
-@warning: #fdd13a;
-@success: #24a249;
+@danger: #f30;
+@warning: #fc0;
+@success: #0c3;
 
 // margins
 @base-margin-y: 20px;
@@ -71,6 +71,7 @@
 @hr-border-color: @base-border-color;
 
 // indentation
+// for list items
 @indent: 32px;
 
 
@@ -181,25 +182,6 @@
 @selection-color: #fff;
 
 
-// Page Wrapper
-// ----------------------------------------------------------------------------/
-@wrapper-class: container;
-@wrapper-padding: 20px;
-@wrapper-padding-top: @wrapper-padding * 2;
-@wrapper-padding-bottom: @wrapper-padding * 3;
-
-// small wrapper widths
-@wrapper-small-min-width: (280px + (@wrapper-padding * 2));
-@wrapper-small-max-width: (640px + (@wrapper-padding * 2));
-
-// medium wrapper widths
-@wrapper-medium-min-width: (@wrapper-small-max-width + 1);
-@wrapper-medium-max-width: (800px + (@wrapper-padding * 2));
-
-// large wrapper widths
-@wrapper-large-max-width: (940px + (@wrapper-padding * 2));
-
-
 // Grid System
 // ----------------------------------------------------------------------------/
 @grid-wrapper-class: row;
@@ -219,8 +201,27 @@
 @large-columns: 12;
 
 
+// Page Wrapper
+// ----------------------------------------------------------------------------/
+@wrapper-class: container;
+@wrapper-padding: 20px;
+@wrapper-padding-top: @wrapper-padding * 2;
+@wrapper-padding-bottom: @wrapper-padding * 3;
+
+// small wrapper widths
+@wrapper-small-min-width: (280px + (@wrapper-padding * 2));
+@wrapper-small-max-width: (640px + (@wrapper-padding * 2));
+
+// medium wrapper widths
+@wrapper-medium-min-width: (@wrapper-small-max-width + 1);
+@wrapper-medium-max-width: (800px + (@wrapper-padding * 2));
+
+// large wrapper widths
+@wrapper-large-max-width: (940px + (@wrapper-padding * 2));
+
+
 // Breakpoints
-// notice it's using wrapper widths to calculate breakpoints
+// !notice it's using wrapper widths to calculate breakpoints
 // ----------------------------------------------------------------------------/
 
 // small screen
@@ -235,6 +236,7 @@
 
 
 // Scale Breakpoint
+// at this point all elements will begin to scale up
 // ----------------------------------------------------------------------------/
 @scale-min-width: 1920px;
 @breakpoint-scale-min: unit((@scale-min-width / @root-font-size), em);

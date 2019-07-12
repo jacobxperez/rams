@@ -14,16 +14,14 @@ body > .@{wrapper-class}:first-child {
 }
 
 body {
-	> .@{wrapper-class}:last-child,
-	> .@{wrapper-class}:last-of-type {
+	> .@{wrapper-class}:only-child  {
+		.padding-top(@wrapper-padding-top);
 		.padding-bottom(@wrapper-padding-bottom);
 	}
 }
 
 body {
-	> .@{wrapper-class}:only-child,
-	> .@{wrapper-class}:only-of-type  {
-		.padding-top(@wrapper-padding-top);
+	> .@{wrapper-class}:last-child {
 		.padding-bottom(@wrapper-padding-bottom);
 	}
 }

@@ -462,14 +462,12 @@ body > .container:first-child {
 	padding-top: 2.5em;
 }
 
-body > .container:last-child,
-body > .container:last-of-type {
+body > .container:only-child {
+	padding-top: 2.5em;
 	padding-bottom: 3.75em;
 }
 
-body > .container:only-child,
-body > .container:only-of-type {
-	padding-top: 2.5em;
+body > .container:last-child {
 	padding-bottom: 3.75em;
 }
 @media screen and (max-width: 61.1875em) {

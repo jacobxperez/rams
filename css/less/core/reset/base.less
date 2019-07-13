@@ -21,6 +21,7 @@ html {
 
 html {
 	.font-size(@base: @root-font-size);
+	-webkit-text-size-adjust: 100%;
 }
 
 body {
@@ -104,11 +105,12 @@ ul {
 	list-style-position: outside;
 }
 
-ol ol,
-ol ul,
-ul ol,
-ul ul {
-	margin-bottom: 0;
+dl dl,
+dl ol,
+dl ul,
+ol dl,
+ul dl {
+	margin: 0;
 }
 
 nav ol,

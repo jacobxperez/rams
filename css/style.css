@@ -26,6 +26,7 @@ html {
 
 html {
 	font-size: 100%;
+	-webkit-text-size-adjust: 100%;
 }
 
 body {
@@ -109,11 +110,12 @@ ul {
 	list-style-position: outside;
 }
 
-ol ol,
-ol ul,
-ul ol,
-ul ul {
-	margin-bottom: 0;
+dl dl,
+dl ol,
+dl ul,
+ol dl,
+ul dl {
+	margin: 0;
 }
 
 nav ol,
@@ -230,8 +232,9 @@ dfn {
 
 abbr[title],
 dfn[title] {
-	border-bottom: .0625em dotted #555;
-	text-decoration: none;
+	border-bottom: 0 none;
+	text-decoration: underline;
+	text-decoration: underline dotted;
 	cursor: help;
 }
 
@@ -388,8 +391,16 @@ textarea {
 	box-shadow: none;
 }
 
+[type="button"],
+[type="reset"],
+[type="submit"],
+button {
+	-webkit-appearance: button;
+}
+
 .button,
 button,
+input[type="submit"],
 input[type=button] {
 	position: relative;
 	display: inline-block;
@@ -409,12 +420,14 @@ input[type=button] {
 
 .button:focus,
 button:focus,
+input[type="submit"]:focus,
 input[type=button]:focus {
 	background-color: #eeeeee;
 }
 
 .button:hover,
 button:hover,
+input[type="submit"]:hover,
 input[type=button]:hover {
 	background-color: #eeeeee;
 	text-decoration: none;
@@ -422,6 +435,7 @@ input[type=button]:hover {
 
 .button:active,
 button:active,
+input[type="submit"]:active,
 input[type=button]:active {
 	background-color: #dedede;
 }

@@ -1,9 +1,16 @@
 // Button
 // ----------------------------------------------------------------------------/
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+	-webkit-appearance: button;
+}
 
 .@{button-class},
 button,
-input[type=button] {
+input[type=button],
+input[type="submit"] {
 	position: relative;
 	display: inline-block;
 	.padding(@button-padding-y; @button-padding-x);

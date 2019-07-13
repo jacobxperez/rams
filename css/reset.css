@@ -441,8 +441,9 @@ input[type=button]:active {
 }
 
 button,
-input[type=button],
-select {
+input[type="submit"],
+select,
+input[type=button] {
 	overflow: visible;
 	text-transform: none;
 }

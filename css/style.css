@@ -445,9 +445,26 @@ input[type=button] {
 	text-transform: none;
 }
 
+.disabled,
 button[disabled],
 html input[disabled] {
-	cursor: default;
+	background-color: #bebebe;
+	color: #8c8c8c;
+	cursor: not-allowed;
+}
+
+.disabled:active,
+.disabled:focus,
+.disabled:hover,
+button[disabled]:active,
+button[disabled]:focus,
+button[disabled]:hover,
+html input[disabled]:active,
+html input[disabled]:focus,
+html input[disabled]:hover {
+	background-color: #bebebe;
+	color: #8c8c8c;
+	text-decoration: none;
 }
 
 .container:after,

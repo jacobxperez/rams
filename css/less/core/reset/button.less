@@ -43,7 +43,18 @@ select {
 	text-transform: none;
 }
 
+.disabled,
 button[disabled],
 html input[disabled] {
-	cursor: default;
+	background-color: @button-disabled-background;
+	color: @button-disabled-color;
+	cursor: not-allowed;
+
+	&:focus,
+	&:hover,
+	&:active {
+		background-color: @button-disabled-background;
+		color: @button-disabled-color;
+		text-decoration: none;
+	}
 }

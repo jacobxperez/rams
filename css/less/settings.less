@@ -7,11 +7,12 @@
 // colors
 @font-color: #555;
 @background-color: #fff;
+@default: #e6e6e6;
 @primary: #06f;
-@secondary: #e6e6e6;
-@danger: #f30;
-@warning: #fc0;
-@success: #0c3;
+@secondary: #636;
+@danger: #f00;
+@warning: #ff0;
+@success: #0c0;
 
 // margins
 @base-margin-y: 20px;
@@ -167,7 +168,8 @@
 @button-padding-x: @base-padding-x;
 
 @button-color: @font-color;
-@button-background: @secondary;
+@button-background: @default;
+@button-background-focus: darken(@button-background, 1%);
 @button-background-hover: lighten(@button-background, 3%);
 @button-background-active: darken(@button-background, 3%);
 
@@ -178,7 +180,7 @@
 
 // Selection
 // ----------------------------------------------------------------------------/
-@selection-background: @primary;
+@selection-background: @secondary;
 @selection-color: #fff;
 
 

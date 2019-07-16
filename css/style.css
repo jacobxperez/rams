@@ -387,7 +387,7 @@ textarea {
 }
 
 :not([type=submit]):invalid {
-	border-color: #f00;
+	border-color: #c00;
 	box-shadow: none;
 }
 
@@ -421,14 +421,11 @@ input[type=button] {
 .button:focus,
 button:focus,
 input[type="submit"]:focus,
-input[type=button]:focus {
-	background-color: #e3e3e3;
-}
-
 .button:hover,
 button:hover,
+input[type=button]:hover,
 input[type="submit"]:hover,
-input[type=button]:hover {
+input[type=button]:focus {
 	background-color: #eeeeee;
 	text-decoration: none;
 }
@@ -1103,6 +1100,76 @@ body > .container:last-child {
 	.large-1 .large-1 {
 		width: 100%;
 	}
+}
+
+.button-primary {
+	background-color: #06f;
+	color: #fff;
+}
+
+.button-primary:focus,
+.button-primary:hover {
+	background-color: #1472ff;
+}
+
+.button-primary:active {
+	background-color: #005eeb;
+}
+
+.button-secondary {
+	background-color: #636;
+	color: #fff;
+}
+
+.button-secondary:focus,
+.button-secondary:hover {
+	background-color: #743a74;
+}
+
+.button-secondary:active {
+	background-color: #582c58;
+}
+
+.button-danger {
+	background-color: #c00;
+	color: #fff;
+}
+
+.button-danger:focus,
+.button-danger:hover {
+	background-color: #e00000;
+}
+
+.button-danger:active {
+	background-color: #b80000;
+}
+
+.button-warning {
+	background-color: #fc0;
+	color: #333;
+}
+
+.button-warning:focus,
+.button-warning:hover {
+	background-color: #ffd014;
+}
+
+.button-warning:active {
+	background-color: #ebbc00;
+}
+
+.button-success {
+	background-color: #393;
+	color: #fff;
+}
+
+.button-success:focus,
+.button-success:hover {
+	background-color: #38a838;
+}
+
+.button-success:active {
+	background-color: #2e8a2e;
 }
 @font-face {
 	font-family: "icons";

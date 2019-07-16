@@ -445,7 +445,7 @@ input[type=button] {
 	text-transform: none;
 }
 
-.disabled,
+.button-disabled,
 button[disabled],
 html input[disabled] {
 	background-color: #bebebe;
@@ -453,9 +453,9 @@ html input[disabled] {
 	cursor: not-allowed;
 }
 
-.disabled:active,
-.disabled:focus,
-.disabled:hover,
+.button-disabled:active,
+.button-disabled:focus,
+.button-disabled:hover,
 button[disabled]:active,
 button[disabled]:focus,
 button[disabled]:hover,

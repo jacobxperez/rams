@@ -97,6 +97,12 @@ figure {
 	margin: 1.25em;
 }
 
+progress[value] {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
 dd,
 ol,
 ul {

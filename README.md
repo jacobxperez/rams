@@ -1,6 +1,6 @@
 # [Essentials](https://jacobxperez.github.io/essentials/)
 
-The Dynamic CSS Reset Framework.
+The Dynamic CSS Framework.
 
 ## Table of Contents
 
@@ -19,7 +19,7 @@ The Dynamic CSS Reset Framework.
 
 ## About
 
-Essentials is a dynamic CSS reset framework build on [LESS](http://lesscss.org/).
+Essentials is a dynamic CSS framework build on [LESS](http://lesscss.org/).
 
 ### Project Status
 

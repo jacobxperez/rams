@@ -1,6 +1,6 @@
 # [Essentials](https://jacobxperez.github.io/essentials/)
 
-The Dynamic CSS Framework.
+Base CSS Framework — Built with LESS
 
 ## Table of Contents
 
@@ -9,7 +9,6 @@ The Dynamic CSS Framework.
 * [Getting Started](#getting-started)
 	* [Default Build](#default-build)
 	* [Custom Build](#custom-build)
-	* [Features](#features)
 * [Contributing](#contributing)
 	* [Bug Reports](#bug-reports)
 	* [Feature Requests](#feature-requests)
@@ -19,7 +18,7 @@ The Dynamic CSS Framework.
 
 ## About
 
-Essentials is a dynamic CSS framework build on [LESS](http://lesscss.org/).
+Essentials is a dynamic CSS framework build with [LESS](http://lesscss.org/) a preprocessor that extends the capabilities of CSS with dynamic behavior such as variables, mixings, operations and functions.
 
 ### Project Status
 
@@ -60,13 +59,6 @@ We recommend to add all extra modules under folder [components](https://github.c
 	* [navigation](https://github.com/jacobxperez/essentials/tree/master/css/less/components/navigation)
 
 *At this stage of development Essentials has no predefine navigation.*
-
-### Features
-
-* Fluid and responsive grid system
-* Minimal design with no decorative styles
-* No more pixels everything is set to relative units
-* Build on LESS with mixin library
 
 ## Contributing
 

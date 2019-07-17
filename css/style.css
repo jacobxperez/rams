@@ -1124,6 +1124,22 @@ body > .container:last-child {
 	}
 }
 
+.nav .nav-link:focus,
+.nav .nav-link:hover,
+.nav-list .nav-link:focus,
+.nav-list .nav-link:hover {
+	color: #003d99;
+}
+
+.nav .active,
+.nav-list .active {
+	font-weight: 700;
+}
+
+.nav li {
+	display: inline-block;
+}
+
 .button-primary {
 	background-color: #06f;
 	color: #fff;

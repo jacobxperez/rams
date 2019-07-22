@@ -2189,16 +2189,6 @@ body > .container:last-child {
 		display: none;
 	}
 }
-@media screen and (min-height: 120em) {
-	html {
-		font-size: .83333333vh;
-	}
-}
-@media screen and (min-width: 120em) {
-	html {
-		font-size: .83333333vw;
-	}
-}
 @media print {
 	body,
 	html {

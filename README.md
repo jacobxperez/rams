@@ -18,7 +18,7 @@ Base CSS Framework — Built with LESS
 
 ## About
 
-Essentials is a dynamic CSS framework build with [LESS](http://lesscss.org/) a preprocessor that extends the capabilities of CSS with dynamic behavior such as variables, mixings, operations and functions.
+Essentials is a base CSS framework build with [LESS](http://lesscss.org/) a preprocessor that extends the capabilities of CSS with dynamic behavior such as variables, mixings, operations and functions.
 
 ### Project Status
 

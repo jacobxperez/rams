@@ -149,13 +149,13 @@ hr {
 }
 
 ::-moz-selection {
-	background-color: #636;
+	background-color: #493d99;
 	color: #fff;
 	text-shadow: none;
 }
 
 ::selection {
-	background-color: #636;
+	background-color: #493d99;
 	color: #fff;
 	text-shadow: none;
 }
@@ -420,6 +420,9 @@ input[type=button] {
 	-webkit-border-radius: .25em .25em .25em .25em;
 	-moz-border-radius: .25em .25em .25em .25em;
 	border-radius: .25em .25em .25em .25em;
+	-webkit-text-shadow: .0625em 0 .0625em rgba(0, 0, 0, 0.3);
+	-moz-text-shadow: .0625em 0 .0625em rgba(0, 0, 0, 0.3);
+	text-shadow: .0625em 0 .0625em rgba(0, 0, 0, 0.3);
 	z-index: 1;
 }
 
@@ -1157,17 +1160,17 @@ body > .container:last-child {
 }
 
 .button-secondary {
-	background-color: #636;
+	background-color: #493d99;
 	color: #fff;
 }
 
 .button-secondary:focus,
 .button-secondary:hover {
-	background-color: #743a74;
+	background-color: #5043a8;
 }
 
 .button-secondary:active {
-	background-color: #582c58;
+	background-color: #42378a;
 }
 
 .button-danger {
@@ -1185,17 +1188,17 @@ body > .container:last-child {
 }
 
 .button-warning {
-	background-color: #fc0;
-	color: #333;
+	background-color: #fa0;
+	color: #fff;
 }
 
 .button-warning:focus,
 .button-warning:hover {
-	background-color: #ffd014;
+	background-color: #ffb114;
 }
 
 .button-warning:active {
-	background-color: #ebbc00;
+	background-color: #eb9c00;
 }
 
 .button-success {

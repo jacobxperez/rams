@@ -518,6 +518,16 @@ body > .container:last-child {
 		max-width: 42.5em;
 	}
 }
+@media screen and (min-height: 120em) {
+	html {
+		font-size: .83333333vh;
+	}
+}
+@media screen and (min-width: 120em) {
+	html {
+		font-size: .83333333vw;
+	}
+}
 
 .row {
 	margin-left: -0.625rem;

@@ -1155,6 +1155,10 @@ body > .container:last-child {
 	display: inline-block;
 }
 
+.nav-list .nav-title {
+	margin-bottom: 1.5em;
+}
+
 .button-primary {
 	background-color: #06f;
 	color: #fff;

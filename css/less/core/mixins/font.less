@@ -11,7 +11,7 @@
 // Font Face
 // -----------------------------------------------------------------------------
 
-.font-face(@name, @path) {
+.font-face(@name; @path) {
 	@font-face {
 		font-family: "@{name}";
 		src: url("@{path}@{name}.eot");
@@ -23,7 +23,7 @@
 // Font Size
 // -----------------------------------------------------------------------------
 
-.font-size(@size: @base-font-size, @base: @base-font-size, @unit: %) {
+.font-size(@size: @base-font-size; @base: @base-font-size; @unit: %) {
 
 	& when not (@size = off) {
 
@@ -48,7 +48,7 @@
 			@a: unit((@size / @base));
 			font-size: @a;
 		}
-		
+
 	}
 
 }
@@ -57,7 +57,7 @@
 // Line Height
 // -----------------------------------------------------------------------------
 
-.line-height(@height: @base-line-height, @base: @base-font-size, @unit: none) {
+.line-height(@height: @base-line-height; @base: @base-font-size; @unit: none) {
 
 	& when not (@height = off) {
 

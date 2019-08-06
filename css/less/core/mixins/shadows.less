@@ -1,28 +1,29 @@
 // Box Shadow
 // -----------------------------------------------------------------------------
 
-.box-shadow(@hr, @ve, @bl, @arguments) {
+.box-shadow(@hr; @ve; @bl; @rgba: rgba(0, 0, 0, 0.3);) {
 
 	@a: unit((@hr / @root-font-size), em);
 	@b: unit((@ve / @root-font-size), em);
 	@c: unit((@bl / @root-font-size), em);
 
-	-webkit-box-shadow: @a @b @c @arguments;
-	-moz-box-shadow: @a @b @c @arguments;
-	box-shadow: @a @b @c @arguments;
+	-webkit-box-shadow: @a @b @c @rgba;
+	-moz-box-shadow: @a @b @c @rgba;
+	box-shadow: @a @b @c @rgba;
 }
 
 
 // Text Shadow
 // -----------------------------------------------------------------------------
 
-.text-shadow(@hr, @ve, @bl, @arguments) {
+.text-shadow(@hr; @ve; @bl; @rgba: rgba(0, 0, 0, 0.3);) {
 
 	@a: unit((@hr / @root-font-size), em);
 	@b: unit((@ve / @root-font-size), em);
 	@c: unit((@bl / @root-font-size), em);
 
-	-webkit-text-shadow: @a @b @c @arguments;
-	-moz-text-shadow: @a @b @c @arguments;
-	text-shadow: @a @b @c @arguments;
+	-webkit-text-shadow: @a @b @c @rgba;
+	-moz-text-shadow: @a @b @c @rgba;
+	text-shadow: @a @b @c @rgba;
+
 }

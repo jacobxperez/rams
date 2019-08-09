@@ -11,30 +11,13 @@
 // Gradients
 // -----------------------------------------------------------------------------
 
-.gradient(@color: @background-color; @amount: 6.5%; @switch: false) {
-	& when (@switch = false) {
+.gradient(@top-color: @background-color; @top-amount: 0%; @bottom-color: darken(@top-color, 5%); @bottom-amount: 100%) {
 
-		@top: @color;
-		@bottom: darken(@color, @amount);
+	background-image: -moz-linear-gradient(top, @top-color @top-amount, @bottom-color @bottom-amount);
+	background-image: -webkit-gradient(left top, left bottom, color-stop(@top-amount, @top-color), color-stop(@bottom-amount, @bottom-color));
+	background-image: -webkit-linear-gradient(top, @top-color @top-amount, @bottom-color @bottom-amount);
+	background-image: -o-linear-gradient(top, @top-color @top-amount, @bottom-color @bottom-amount);
+	background-image: -ms-linear-gradient(top, @top-color @top-amount, @bottom-color @bottom-amount);
+	background-image: linear-gradient(top bottom, @top-color @top-amount, @bottom-color @bottom-amount);
 
-		background-image: -moz-linear-gradient(top, @top 0%, @bottom 100%);
-		background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, @top), color-stop(100%, @bottom));
-		background-image: -webkit-linear-gradient(top, @top 0%, @bottom 100%);
-		background-image: -o-linear-gradient(top, @top 0%, @bottom 100%);
-		background-image: -ms-linear-gradient(top, @top 0%, @bottom 100%);
-		background-image: linear-gradient(top bottom, @top 0%, @bottom 100%);
-	}
-
-	& when (@switch = true) {
-
-		@top: darken(@color, @amount);
-		@bottom: @color;
-
-		background-image: -moz-linear-gradient(top, @top 0%, @bottom 100%);
-		background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, @top), color-stop(100%, @bottom));
-		background-image: -webkit-linear-gradient(top, @top 0%, @bottom 100%);
-		background-image: -o-linear-gradient(top, @top 0%, @bottom 100%);
-		background-image: -ms-linear-gradient(top, @top 0%, @bottom 100%);
-		background-image: linear-gradient(top bottom, @top 0%, @bottom 100%);
-	}
 }

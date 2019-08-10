@@ -1143,6 +1143,28 @@ body > .container:last-child {
 	}
 }
 
+.nav .active,
+.nav .nav-title,
+.nav-list .active,
+.nav-list .nav-title {
+	font-weight: 700;
+}
+
+.nav .nav-link:focus,
+.nav .nav-link:hover,
+.nav-list .nav-link:focus,
+.nav-list .nav-link:hover {
+	color: #003d99;
+}
+
+.nav li {
+	display: inline-block;
+}
+
+.nav-list .nav-title {
+	margin-bottom: 1.5em;
+}
+
 .navbar {
 	position: fixed;
 	top: 0;

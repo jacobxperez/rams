@@ -1176,10 +1176,6 @@ body > .container:last-child {
 
 .navbar a {
 	color: #fff;
-	-webkit-transition: all .3s ease-in-out 0s;
-	-moz-transition: all .3s ease-in-out 0s;
-	-o-transition: all .3s ease-in-out 0s;
-	transition: all .3s ease-in-out 0s;
 }
 
 .navbar a:focus {
@@ -1190,6 +1186,10 @@ body > .container:last-child {
 .navbar a:hover {
 	color: #cccccc;
 	text-decoration: none;
+	-webkit-transition: all .3s ease-in-out 0s;
+	-moz-transition: all .3s ease-in-out 0s;
+	-o-transition: all .3s ease-in-out 0s;
+	transition: all .3s ease-in-out 0s;
 }
 
 .brand {
@@ -1200,7 +1200,6 @@ body > .container:last-child {
 	padding-right: .625em;
 	font-size: 125%;
 	line-height: 2.2;
-	font-weight: 700;
 }
 
 .brand .icon-logo {

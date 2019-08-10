@@ -11,7 +11,6 @@
 
 	a {
 		color: #fff;
-		.transition();
 
 		&:focus {
 			outline: 0;
@@ -21,6 +20,7 @@
 		&:hover {
 			color: darken(#fff, 20%);
 			text-decoration: none;
+			.transition();
 		}
 	}
 }
@@ -33,7 +33,6 @@
 	.padding-right(10px);
 	.font-size(20px);
 	.line-height(44px, @base: 20px);
-	font-weight: 700;
 
 	.icon-logo {
 		.margin-right(5px);

@@ -421,9 +421,6 @@ input[type=button] {
 	-webkit-border-radius: .25em .25em .25em .25em;
 	-moz-border-radius: .25em .25em .25em .25em;
 	border-radius: .25em .25em .25em .25em;
-	-webkit-text-shadow: .0625em 0 .0625em rgba(0, 0, 0, 0.3);
-	-moz-text-shadow: .0625em 0 .0625em rgba(0, 0, 0, 0.3);
-	text-shadow: .0625em 0 .0625em rgba(0, 0, 0, 0.3);
 	z-index: 1;
 }
 
@@ -489,23 +486,31 @@ html input[disabled]:hover {
 	clear: both;
 }
 
-.container {
-	min-width: 20em;
-	max-width: 61.25em;
-	margin: 0 auto;
+.container,
+.container-full {
+	width: 100%;
 	padding-left: 1.25em;
 	padding-right: 1.25em;
 }
 
+.container {
+	min-width: 20em;
+	max-width: 61.25em;
+	margin: 0 auto;
+}
+
+body > .container-full:first-child,
 body > .container:first-child {
 	padding-top: 2.5em;
 }
 
+body > .container-full:only-child,
 body > .container:only-child {
 	padding-top: 2.5em;
 	padding-bottom: 3.75em;
 }
 
+body > .container-full:last-child,
 body > .container:last-child {
 	padding-bottom: 3.75em;
 }

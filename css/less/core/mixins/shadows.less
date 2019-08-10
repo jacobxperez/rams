@@ -1,29 +1,52 @@
 // Box Shadow
 // -----------------------------------------------------------------------------
 
-.box-shadow(@hr; @ve; @bl; @rgba: rgba(0, 0, 0, 0.3);) {
+.box-shadow(@hr: 0; @ve: 0; @bl: 0; @rgba: rgba(0, 0, 0, 0.3); @hr2: false; @ve2: 0; @bl2: 0; @rgba2: rgba(0, 0, 0, 0.3);) {
 
 	@a: unit((@hr / @root-font-size), em);
 	@b: unit((@ve / @root-font-size), em);
 	@c: unit((@bl / @root-font-size), em);
+	@d: unit((@hr2 / @root-font-size), em);
+	@e: unit((@ve2 / @root-font-size), em);
+	@f: unit((@bl2 / @root-font-size), em);
 
-	-webkit-box-shadow: @a @b @c @rgba;
-	-moz-box-shadow: @a @b @c @rgba;
-	box-shadow: @a @b @c @rgba;
+	& when (@hr2 = false) {
+		-webkit-box-shadow: @a @b @c @rgba;
+		-moz-box-shadow: @a @b @c @rgba;
+		box-shadow: @a @b @c @rgba;
+	}
+
+	& when (isnumber(@hr2)) {
+		-webkit-box-shadow: @a @b @c @rgba, @d @e @f @rgba2;
+		-moz-box-shadow: @a @b @c @rgba, @d @e @f @rgba2;
+		box-shadow: @a @b @c @rgba, @d @e @f @rgba2;
+	}
+
 }
 
 
 // Text Shadow
 // -----------------------------------------------------------------------------
 
-.text-shadow(@hr; @ve; @bl; @rgba: rgba(0, 0, 0, 0.3);) {
+.text-shadow(@hr: 0; @ve: 0; @bl: 0; @rgba: rgba(0, 0, 0, 0.3); @hr2: false; @ve2: 0; @bl2: 0; @rgba2: rgba(0, 0, 0, 0.3);) {
 
 	@a: unit((@hr / @root-font-size), em);
 	@b: unit((@ve / @root-font-size), em);
 	@c: unit((@bl / @root-font-size), em);
+	@d: unit((@hr2 / @root-font-size), em);
+	@e: unit((@ve2 / @root-font-size), em);
+	@f: unit((@bl2 / @root-font-size), em);
 
-	-webkit-text-shadow: @a @b @c @rgba;
-	-moz-text-shadow: @a @b @c @rgba;
-	text-shadow: @a @b @c @rgba;
+	& when (@hr2 = false) {
+		-webkit-text-shadow: @a @b @c @rgba;
+		-moz-text-shadow: @a @b @c @rgba;
+		text-shadow: @a @b @c @rgba;
+	}
+
+	& when (isnumber(@hr2)) {
+		-webkit-text-shadow: @a @b @c @rgba, @d @e @f @rgba2;
+		-moz-text-shadow: @a @b @c @rgba, @d @e @f @rgba2;
+		text-shadow: @a @b @c @rgba, @d @e @f @rgba2;
+	}
 
 }

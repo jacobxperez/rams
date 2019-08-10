@@ -1157,7 +1157,7 @@ body > .container:last-child {
 	color: #003d99;
 }
 
-.nav li {
+.nav > li {
 	display: inline-block;
 }
 

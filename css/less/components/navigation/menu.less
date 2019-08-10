@@ -1,0 +1,34 @@
+// Menu
+// ----------------------------------------------------------------------------/
+
+.dropdown {
+	position: static;
+
+	.icon-menu {
+		.padding-top(10px, @base: 24px);
+		.padding-bottom(10px, @base: 24px);
+		.font-size(24px);
+		.line-height(24px, @base: 24px);
+	}
+}
+
+.menu {
+	position: absolute;
+	top: 100%;
+	right: 0;
+	width: 100%;
+	font-style: normal;
+	font-weight: 400;
+	text-align: left;
+	background-color: lighten(#333, 1%);
+	display: none;
+
+	li {
+		.border-bottom();
+	}
+
+	a {
+		.padding-left(20px);
+		.padding-right(20px);
+	}
+}

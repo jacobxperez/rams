@@ -1143,6 +1143,109 @@ body > .container:last-child {
 	}
 }
 
+.navbar {
+	position: fixed;
+	top: 0;
+	z-index: 100;
+	width: 100%;
+	border-bottom: .0625em solid rgba(0, 0, 0, 0.3);
+	background-color: #333;
+}
+
+.navbar a {
+	color: #fff;
+	-webkit-transition: all .3s ease-in-out 0s;
+	-moz-transition: all .3s ease-in-out 0s;
+	-o-transition: all .3s ease-in-out 0s;
+	transition: all .3s ease-in-out 0s;
+}
+
+.navbar a:focus {
+	outline: 0;
+}
+
+.navbar a.active,
+.navbar a:hover {
+	color: #cccccc;
+	text-decoration: none;
+}
+
+.brand {
+	float: left;
+	display: block;
+	margin-left: -0.625em;
+	padding-left: .625em;
+	padding-right: .625em;
+	font-size: 125%;
+	line-height: 2.2;
+	font-weight: 700;
+}
+
+.brand .icon-logo {
+	margin-right: .3125em;
+}
+
+.brand .icon-logo:before {
+	content: '\e8b1';
+}
+
+.nav {
+	margin-bottom: 0;
+}
+
+.nav {
+	float: right;
+}
+
+.nav > li {
+	float: left;
+}
+
+.nav a {
+	padding: .625em .875em;
+}
+
+.nav > li:last-child {
+	margin-right: -0.625em;
+}
+
+.navbar + .container {
+	padding-top: 5em;
+	padding-bottom: 3.75em;
+}
+
+.dropdown {
+	position: static;
+}
+
+.dropdown .icon-menu {
+	padding-top: .41666667em;
+	padding-bottom: .41666667em;
+	font-size: 150%;
+	line-height: 1;
+}
+
+.menu {
+	position: absolute;
+	top: 100%;
+	right: 0;
+	width: 100%;
+	font-style: normal;
+	font-weight: 400;
+	text-align: left;
+	background-color: #363636;
+	display: none;
+}
+
+.menu li {
+	border-bottom: .0625em solid rgba(0, 0, 0, 0.3);
+}
+
+.menu a {
+	padding-left: 1.25em;
+	padding-right: 1.25em;
+}
+
 .button-primary {
 	background-color: #06f;
 	color: #fff;

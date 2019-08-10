@@ -1,0 +1,72 @@
+// Navbar
+// ----------------------------------------------------------------------------/
+
+.navbar {
+	position: fixed;
+	top: 0;
+	z-index: 100;
+	width: 100%;
+	.border-bottom();
+	background-color: #333;
+
+	a {
+		color: #fff;
+		.transition();
+
+		&:focus {
+			outline: 0;
+		}
+
+		&.active,
+		&:hover {
+			color: darken(#fff, 20%);
+			text-decoration: none;
+		}
+	}
+}
+
+.brand {
+	float: left;
+	display: block;
+	.margin-left(-10px);
+	.padding-left(10px);
+	.padding-right(10px);
+	.font-size(20px);
+	.line-height(44px, @base: 20px);
+	font-weight: 700;
+
+	.icon-logo {
+		.margin-right(5px);
+	}
+
+	.icon-logo:before {
+		content: '\e8b1'
+	}
+}
+
+.nav {
+	margin-bottom: 0;
+}
+
+.nav {
+	float: right;
+}
+
+.nav {
+	> li {
+		float: left;
+	}
+
+	a {
+		.padding(10px);
+	}
+}
+
+.nav > li:last-child {
+	.margin-right(-10px);
+}
+
+.navbar + .@{wrapper-class} {
+	.padding-top(@wrapper-padding-top * 2);
+	.padding-bottom(@wrapper-padding-bottom);
+}

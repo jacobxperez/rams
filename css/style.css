@@ -1230,9 +1230,9 @@ body > .container:last-child {
 	margin-right: -0.625em;
 }
 
-.navbar + .container {
+.navbar + .container,
+.navbar + .container-full {
 	padding-top: 5em;
-	padding-bottom: 3.75em;
 }
 
 .dropdown {

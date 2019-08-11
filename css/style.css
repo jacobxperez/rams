@@ -1337,9 +1337,9 @@ body > .container:last-child {
 	background-color: #2e8a2e;
 }
 @font-face {
-	font-family: "icons";
+	font-family: 'icons';
 	src: url("../fonts/icons/icons.eot");
-	src: url("../fonts/icons/icons.eot?#iefix") format("embedded-opentype"), url("../fonts/icons/icons.woff2") format("woff2"), url("../fonts/icons/icons.woff") format("woff"), url("../fonts/icons/icons.ttf") format("truetype"), url("../fonts/icons/icons.svg#icons") format("svg");
+	src: url("../fonts/icons/icons.eot?#iefix") format('embedded-opentype'), url("../fonts/icons/icons.woff2") format('woff2'), url("../fonts/icons/icons.woff") format('woff'), url("../fonts/icons/icons.ttf") format('truetype'), url("../fonts/icons/icons.svg#icons") format('svg');
 }
 
 [class^="icon-"]:before {

@@ -149,14 +149,14 @@ hr {
 }
 
 ::-moz-selection {
-	background-color: #493d99;
-	color: #fff;
+	background-color: #cde1ff;
+	color: #000;
 	text-shadow: none;
 }
 
 ::selection {
-	background-color: #493d99;
-	color: #fff;
+	background-color: #cde1ff;
+	color: #000;
 	text-shadow: none;
 }
 

@@ -58,8 +58,6 @@ We recommend to add all extra modules under folder [components](https://github.c
 	* [modules](https://github.com/jacobxperez/essentials/tree/master/css/less/components/modules)
 	* [navigation](https://github.com/jacobxperez/essentials/tree/master/css/less/components/navigation)
 
-*At this stage of development Essentials has no predefine navigation.*
-
 ## Contributing
 
 Help us make [Essentials](https://jacobxperez.github.io/essentials/) better for everyone, any contribution will be considered. Use the [issue tracker](https://github.com/jacobxperez/essentials/issues) for bug reports, features requests and submitting pull requests. Please read our [Design Principles](#design-principles) to better understand the nature and the direction of the project.

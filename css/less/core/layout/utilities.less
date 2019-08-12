@@ -1,3 +1,64 @@
+// Position
+// ----------------------------------------------------------------------------/
+
+.fixed-top {
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	z-index: 1000;
+}
+
+.fixed-bottom {
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 1000;
+}
+
+.sticky-top {
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+	z-index: 1000;
+}
+
+
+// Alignment
+// ----------------------------------------------------------------------------/
+
+.indent {
+	.padding-left(@indent);
+}
+
+.text-indent {
+	.text-indent();
+}
+
+.text-outdent {
+	.padding-left(@indent);
+	.text-indent(-@indent);
+}
+
+.text-left {
+	text-align: left;
+}
+
+.text-right {
+	text-align: right;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-justify {
+	text-align: justify;
+	hyphens: auto;
+}
+
+
 // Visibility
 // ----------------------------------------------------------------------------/
 

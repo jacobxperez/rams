@@ -1244,7 +1244,7 @@ body > .container:last-child {
 
 .menu {
 	position: absolute;
-	top: 100%;
+	left: 0;
 	right: 0;
 	width: 100%;
 	font-style: normal;
@@ -1252,11 +1252,21 @@ body > .container:last-child {
 	text-align: left;
 	background-color: #272727;
 	display: none;
+	z-index: 1020;
 }
 
 .menu a {
 	padding-left: 1.25em;
 	padding-right: 1.25em;
+}
+
+.fixed-top .menu,
+.sticky-top .menu {
+	top: 100%;
+}
+
+.fixed-bottom .menu {
+	bottom: 100%;
 }
 
 .button-primary {
@@ -1350,6 +1360,14 @@ body > .container:last-child {
 	position: sticky;
 	top: 0;
 	z-index: 1000;
+}
+
+.top {
+	top: 100%;
+}
+
+.bottom {
+	bottom: 100%;
 }
 
 .indent {

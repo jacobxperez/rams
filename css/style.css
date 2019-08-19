@@ -1181,7 +1181,6 @@ body > .container:last-child {
 .navbar a.active,
 .navbar a:hover {
 	color: #cccccc;
-	text-decoration: none;
 	-webkit-transition: all .3s ease-in-out 0s;
 	-moz-transition: all .3s ease-in-out 0s;
 	-o-transition: all .3s ease-in-out 0s;
@@ -1198,12 +1197,8 @@ body > .container:last-child {
 	line-height: 2.2;
 }
 
-.brand .icon-logo {
+.brand .logo {
 	margin-right: .3125em;
-}
-
-.brand .icon-logo:before {
-	content: '\e8b1';
 }
 
 .nav {

@@ -1,7 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
 
-const getDropdown = $('.dropdown');
-const getMenu = $('.menu');
+	const getDropdown = $('.dropdown');
+	const getMenu = $('.menu');
+
 
 	// 1 Dropdown Menu
 	getDropdown.each(function() {

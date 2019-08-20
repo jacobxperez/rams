@@ -1247,6 +1247,9 @@ body > .container:last-child {
 	text-align: left;
 	background-color: #272727;
 	display: none;
+	-webkit-text-shadow: 0 .0625em .125em rgba(0, 0, 0, 0.3);
+	-moz-text-shadow: 0 .0625em .125em rgba(0, 0, 0, 0.3);
+	text-shadow: 0 .0625em .125em rgba(0, 0, 0, 0.3);
 	opacity: .95;
 	z-index: 1020;
 }

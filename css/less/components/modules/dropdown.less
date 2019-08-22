@@ -1,0 +1,46 @@
+// Dropdown
+// ----------------------------------------------------------------------------/
+
+.dropdown {
+	position: static;
+
+	[class^="@{icon-class}-"] {
+		.padding-top(10px; 24px);
+		.padding-bottom(10px; 24px);
+		.font-size(24px);
+		.line-height(24px; 24px);
+	}
+}
+
+.box {
+	position: absolute;
+	left: 0;
+	right: 0;
+	width: 100%;
+	background-color: transparent;
+	font-style: normal;
+	font-weight: 400;
+	text-align: left;
+	visibility: hidden;
+	.transition();
+	z-index: 1020;
+}
+
+.fixed-top,
+.sticky-top {
+	.box {
+		top: 100%;
+	}
+}
+
+.fixed-bottom {
+	.box {
+		bottom: 100%;
+	}
+}
+
+.drop {
+	.box {
+		visibility: visible;
+	}
+}

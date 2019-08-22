@@ -1230,28 +1230,49 @@ body > .container:last-child {
 	position: static;
 }
 
-.dropdown .icon-menu {
+.dropdown [class^="icon-"] {
 	padding-top: .41666667em;
 	padding-bottom: .41666667em;
 	font-size: 150%;
 	line-height: 1;
 }
 
-.menu {
+.box {
 	position: absolute;
 	left: 0;
 	right: 0;
 	width: 100%;
+	background-color: transparent;
 	font-style: normal;
 	font-weight: 400;
 	text-align: left;
+	visibility: hidden;
+	-webkit-transition: all .3s ease-in-out 0s;
+	-moz-transition: all .3s ease-in-out 0s;
+	-o-transition: all .3s ease-in-out 0s;
+	transition: all .3s ease-in-out 0s;
+	z-index: 1020;
+}
+
+.fixed-top .box,
+.sticky-top .box {
+	top: 100%;
+}
+
+.fixed-bottom .box {
+	bottom: 100%;
+}
+
+.drop .box {
+	visibility: visible;
+}
+
+.menu {
 	background-color: #272727;
-	display: none;
 	-webkit-text-shadow: 0 .0625em .125em rgba(0, 0, 0, 0.3);
 	-moz-text-shadow: 0 .0625em .125em rgba(0, 0, 0, 0.3);
 	text-shadow: 0 .0625em .125em rgba(0, 0, 0, 0.3);
-	opacity: .95;
-	z-index: 1020;
+	opacity: 0;
 }
 
 .menu a {
@@ -1259,13 +1280,8 @@ body > .container:last-child {
 	padding-right: 1.25em;
 }
 
-.fixed-top .menu,
-.sticky-top .menu {
-	top: 100%;
-}
-
-.fixed-bottom .menu {
-	bottom: 100%;
+.drop .menu {
+	opacity: .95;
 }
 
 .button-primary {

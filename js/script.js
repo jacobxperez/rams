@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // 1 Dropdown Menu
     getDropdown.each(function() {
+        // toggle class drop on click
         this.addEventListener('click', function() {
             $(this).toggleClass('drop');
         });
@@ -16,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
             var target = $(this.hash);
             target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
 
-            // Hide dropdown
+            // hide dropdown
             getDropdown.toggleClass('drop');
 
             if (target.length) {

@@ -1,32 +1,41 @@
 document.addEventListener('DOMContentLoaded', function() {
 
-    const getDropdown = $('.dropdown');
-    const getMenu = $('.menu');
+    // Variables
+    const getDropdown = document.querySelectorAll('.dropdown');
+    const getDropdownLength = getDropdown.length;
 
-    // 1 Dropdown Menu
-    getDropdown.each(function() {
-        // toggle class drop on click
-        this.addEventListener('click', function() {
-            $(this).toggleClass('drop');
-        });
-    });
+    // Dropdown
+    for (var i = 0; i < getDropdownLength; i++) {
 
-    // 2 Smooth Scrolling on internal links
-    $('a[href*="#"]:not([href="#"])').click(function() {
-        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-            var target = $(this.hash);
-            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+        getDropdown[i].addEventListener('click', function(e) {
+            if (!this.classList.contains('drop')) {
 
-            // hide dropdown
-            getDropdown.toggleClass('drop');
+                e.stopPropagation();
+                this.classList.add('drop');
 
-            if (target.length) {
-                $('html, body').animate({
-                    scrollTop: target.offset().top
-                }, 1000);
-                return false;
+            } else if (this.classList.contains('drop')) {
+
+                e.stopPropagation();
+                this.classList.remove('drop');
+
             }
+
+        });
+
+    };
+
+    // Hide dropdown on window click
+    document.addEventListener('click', function(e) {
+        // check if target is not dropdown
+        if (e.target != getDropdown) {
+
+            for (var i = 0; i < getDropdownLength; i++) {
+                // removes class drop from dropdown
+                getDropdown[i].classList.remove('drop');
+            };
+
         }
+
     });
 
 });

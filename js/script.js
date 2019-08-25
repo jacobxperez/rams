@@ -7,6 +7,7 @@
 document.addEventListener('DOMContentLoaded', function() {
 
     // Variables
+    const intLinks = document.querySelectorAll('a[href^="#"]');
     const getDropdown = document.querySelectorAll('.dropdown');
     const dropdownLength = getDropdown.length;
 
@@ -43,5 +44,19 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
     });
+
+    // Smooth scroll
+    for (var i = 0; i < intLinks.length; i++) {
+        intLinks[i].addEventListener('click', function(e) {
+
+            e.preventDefault();
+
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+
+        });
+
+    };
 
 });

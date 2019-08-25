@@ -1,3 +1,9 @@
+/* Essentials <https://github.com/jacobxperez/essentials>
+ * Copyright (C) 2019 Jacob Perez <jacobxperez@gmx.com>
+ * Licensed under the Apache License, Version 2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
+------------------------------------------------------------------------------*/
+
 document.addEventListener('DOMContentLoaded', function() {
 
     // Variables

@@ -4,7 +4,7 @@
 .dropdown {
 	position: static;
 
-	[class^="@{icon-class}-"] {
+	> [class^="@{icon-class}-"] {
 		.padding-top(10px; 24px);
 		.padding-bottom(10px; 24px);
 		.font-size(24px);
@@ -17,6 +17,7 @@
 	left: 0;
 	right: 0;
 	width: 100%;
+	.min-width(160px);
 	background-color: transparent;
 	font-style: normal;
 	font-weight: 400;

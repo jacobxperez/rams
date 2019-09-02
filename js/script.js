@@ -10,9 +10,10 @@ document.addEventListener("DOMContentLoaded", function() {
     const intLinks = document.querySelectorAll("a[href^='#']");
     const getDropdown = document.querySelectorAll(".dropdown");
     const dropdownLength = getDropdown.length;
+    var i;
 
     // Dropdown
-    for (var i = 0; i < dropdownLength; i++) {
+    for (i = 0; i < dropdownLength; i++) {
 
         getDropdown[i].addEventListener("click", function(e) {
             if (!this.classList.contains("drop")) {
@@ -29,24 +30,24 @@ document.addEventListener("DOMContentLoaded", function() {
 
         });
 
-    };
+    }
 
     // Hide dropdown on window click
     document.addEventListener("click", function(e) {
         // check if target is not dropdown
         if (e.target != getDropdown) {
 
-            for (var i = 0; i < dropdownLength; i++) {
+            for (i = 0; i < dropdownLength; i++) {
                 // removes class drop from dropdown
                 getDropdown[i].classList.remove("drop");
-            };
+            }
 
         }
 
     });
 
     // Smooth scroll
-    for (var i = 0; i < intLinks.length; i++) {
+    for (i = 0; i < intLinks.length; i++) {
         intLinks[i].addEventListener("click", function(e) {
 
             e.preventDefault();
@@ -57,6 +58,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
         });
 
-    };
+    }
 
 });

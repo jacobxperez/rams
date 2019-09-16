@@ -7,23 +7,26 @@
 document.addEventListener("DOMContentLoaded", function() {
 
     // Variables
-    const intLinks = document.querySelectorAll("a[href^='#']");
-    const getDropdown = document.querySelectorAll(".dropdown");
-    const dropdownLength = getDropdown.length;
-    var i;
+    const
+        intLinks = document.querySelectorAll("a[href^='#']"),
+        getDropdown = document.querySelectorAll(".dropdown"),
+        dropdownLength = getDropdown.length;
+
+    let
+        i;
 
     // Dropdown
     for (i = 0; i < dropdownLength; i++) {
 
         getDropdown[i].addEventListener("click", function(e) {
+            e.stopPropagation();
+
             if (!this.classList.contains("drop")) {
 
-                e.stopPropagation();
                 this.classList.add("drop");
 
-            } else if (this.classList.contains("drop")) {
+            } else {
 
-                e.stopPropagation();
                 this.classList.remove("drop");
 
             }

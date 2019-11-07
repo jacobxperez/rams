@@ -18,11 +18,11 @@ Base CSS Framework — Built with LESS
 
 ## About
 
-Essentials is a base CSS framework build with [LESS](http://lesscss.org/) a preprocessor that extends the capabilities of CSS with dynamic behavior such as variables, mixings, operations and functions.
+Essentials is a base CSS framework build with [LESS](http://lesscss.org/) a preprocessor that extends the capabilities of CSS with dynamic behavior such as variables, mixins, operations, and functions.
 
 ### Project Status
 
-Project under active development. **NO** stable version has been release.
+Project under active development. **NO** stable version has been released.
 
 ## Getting Started
 
@@ -30,17 +30,17 @@ Start by **[downloading](https://github.com/jacobxperez/essentials/archive/maste
 
 	$ git clone https://github.com/jacobxperez/essentials.git
 
-*Keep in mind that this project is under active development and no stable version has been release.*
+*Keep in mind that this project is under active development and no stable version has been released.*
 
 ### Default Build
 
-The easiest way to include [Essentials](https://jacobxperez.github.io/essentials/) in your projects is by copying the pre-compiled CSS file into your project folder, and then link to it in HTML.
+The easiest way to include [Essentials](https://jacobxperez.github.io/essentials/) in your projects is by copying the pre-compiled CSS file into your project folder and then link to it in HTML.
 
 * [/css/style.css](https://github.com/jacobxperez/essentials/blob/master/css/style.css)
 
 ### Custom Build
 
-[Essentials](https://jacobxperez.github.io/essentials/) is build on [LESS](http://lesscss.org/) which extends the capabilities of CSS. Use [style.less](https://github.com/jacobxperez/essentials/blob/master/css/style.less) for compiling all necessary modules for your website and [settings.less](https://github.com/jacobxperez/essentials/blob/master/css/less/settings.less) for adjusting the values of fonts, colors, padding and more.
+[Essentials](https://jacobxperez.github.io/essentials/) is built on [LESS](http://lesscss.org/) which extends the capabilities of CSS. Use [style.less](https://github.com/jacobxperez/essentials/blob/master/css/style.less) for compiling all necessary modules for your website and [settings.less](https://github.com/jacobxperez/essentials/blob/master/css/less/settings.less) for adjusting the values of fonts, colors, padding and more.
 
 * [/css/style.less](https://github.com/jacobxperez/essentials/blob/master/css/style.less) (for compiling all LESS modules)
 * [/css/less/settings.less](https://github.com/jacobxperez/essentials/blob/master/css/less/settings.less) (for changing the settings)
@@ -52,7 +52,7 @@ All main components and dependencies can be found under folder [core](https://gi
 	* [layout](https://github.com/jacobxperez/essentials/tree/master/css/less/core/layout)
 	* [mixins](https://github.com/jacobxperez/essentials/tree/master/css/less/core/mixins)
 
-We recommend to add all extra modules under folder [components](https://github.com/jacobxperez/essentials/tree/master/css/less/components) then link to them on file [style.less](https://github.com/jacobxperez/essentials/blob/master/css/style.less) for compiling.
+We recommend to adding extra modules under folder [components](https://github.com/jacobxperez/essentials/tree/master/css/less/components) then link to them on file [style.less](https://github.com/jacobxperez/essentials/blob/master/css/style.less) for compiling.
 
 * [/css/less/components](https://github.com/jacobxperez/essentials/tree/master/css/less/components)
 	* [modules](https://github.com/jacobxperez/essentials/tree/master/css/less/components/modules)
@@ -60,7 +60,7 @@ We recommend to add all extra modules under folder [components](https://github.c
 
 ## Contributing
 
-Help us make [Essentials](https://jacobxperez.github.io/essentials/) better for everyone, any contribution will be considered. Use the [issue tracker](https://github.com/jacobxperez/essentials/issues) for bug reports, features requests and submitting pull requests. Please read our [Design Principles](#design-principles) to better understand the nature and the direction of the project.
+Help us make [Essentials](https://jacobxperez.github.io/essentials/) better for everyone, any contribution will be considered. Use the [issue tracker](https://github.com/jacobxperez/essentials/issues) for bug reports, feature requests and submitting pull requests. Please read our [Design Principles](#design-principles) to better understand the nature and the direction of the project.
 
 ### Bug Reports
 
@@ -72,7 +72,7 @@ Before opening a feature request, please take a moment to find out whether your 
 
 ### Pull Requests
 
-Please ask first before embarking on any significant pull request (e.g. implementing features, re-factoring code, porting to a different language), otherwise you risk spending a lot of time working on something that the project's developers might not want to merge into the project. When contributing code to this project always ask yourself these questions.
+Please ask first before embarking on any significant pull request (e.g. implementing features, refactoring code, porting to a different language), otherwise you risk spending a lot of time working on something that the project's developers might not want to merge into the project. When contributing code to this project always ask yourself these questions.
 
 * Is it essential?
 * Will it add value?
@@ -80,7 +80,7 @@ Please ask first before embarking on any significant pull request (e.g. implemen
 
 ## Design Principles
 
-Leo Babauta demonstrates in he's book The Power of Less how to streamline your life by identifying the essential and eliminating the unnecessary. By focusing on the essential and allowing everything else to drop away you will become less stressed and more productive.
+Leo Babauta demonstrates in his book The Power of Less how to streamline your life by identifying the essential and eliminating the unnecessary. By focusing on the essential and allowing everything else to drop away you will become less stressed and more productive.
 
 1. Identify the essential
 2. Eliminate the rest

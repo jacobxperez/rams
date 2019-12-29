@@ -43,7 +43,7 @@ The easiest way to include [Essentials](https://jacobxperez.github.io/essentials
 [Essentials](https://jacobxperez.github.io/essentials/) is built on [LESS](http://lesscss.org/) which extends the capabilities of CSS. Use [style.less](https://github.com/jacobxperez/essentials/blob/master/css/style.less) for compiling all necessary modules for your website and the [settings files](https://github.com/jacobxperez/essentials/blob/master/css/less/settings) for adjusting the values of fonts, colors, padding and more.
 
 * [/css/style.less](https://github.com/jacobxperez/essentials/blob/master/css/style.less) (for compiling all LESS modules)
-* [/css/less/settings](https://github.com/jacobxperez/essentials/blob/master/css/less/settings.less) (for changing the settings)
+* [/css/less/settings](https://github.com/jacobxperez/essentials/blob/master/css/less/settings) (for changing the settings)
 
 All main components and dependencies can be found under folder [core](https://github.com/jacobxperez/essentials/tree/master/css/less/core).
 

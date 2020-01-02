@@ -1,1 +1,1 @@
-Use this folder for adding fonts
+Use this folder for your fonts

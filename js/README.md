@@ -1,1 +1,1 @@
-Use this folder for adding your custom scripts
+Use this folder for your custom scripts

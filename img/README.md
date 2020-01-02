@@ -1,1 +1,1 @@
-Use this folder for adding your images
+Use this folder for your images

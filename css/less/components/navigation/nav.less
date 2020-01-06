@@ -1,5 +1,26 @@
-// Navigation V1.0
+// Navigation V2.0
 // -----------------------------------------------------------------------------
+.nav {
+	margin-bottom: 0;
+}
+
+.nav {
+	float: right;
+}
+
+.nav {
+	> li {
+		float: left;
+	}
+
+	a {
+		.padding(10px);
+	}
+}
+
+.nav > li:last-child {
+	.margin-right(-10px);
+}
 
 .nav-list,
 .nav-inline {
@@ -30,4 +51,12 @@
 		.margin-bottom(@base-leading);
 	}
 
+}
+
+.nav-link {
+	display: block;
+}
+
+.nav-link:hover {
+	text-decoration: none;
 }

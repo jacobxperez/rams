@@ -1,6 +1,5 @@
 // Navbar V1.0
 // ----------------------------------------------------------------------------/
-
 .navbar {
 	width: 100%;
 	background-color: @navbar-background;
@@ -15,6 +14,7 @@
 		&.active,
 		&:hover {
 			color: @navbar-color-hover;
+			text-decoration: none;
 			.transition();
 		}
 	}
@@ -32,28 +32,6 @@
 	.logo {
 		.margin-right(5px);
 	}
-}
-
-.nav {
-	margin-bottom: 0;
-}
-
-.nav {
-	float: right;
-}
-
-.nav {
-	> li {
-		float: left;
-	}
-
-	a {
-		.padding(10px);
-	}
-}
-
-.nav > li:last-child {
-	.margin-right(-10px);
 }
 
 .navbar + .@{wrapper-class},

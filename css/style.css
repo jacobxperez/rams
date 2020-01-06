@@ -1434,6 +1434,14 @@ body > .container:last-child {
     display: none;
 }
 @media screen and (max-width: 42.5em) {
+    .float-left-small {
+        float: left;
+    }
+
+    .float-right-small {
+        float: right;
+    }
+
     .hide-small,
     .show-large,
     .show-medium {
@@ -1441,6 +1449,14 @@ body > .container:last-child {
     }
 }
 @media screen and (min-width: 42.5625em) and (max-width: 61.1875em) {
+    .float-left-medium {
+        float: left;
+    }
+
+    .float-right-medium {
+        float: right;
+    }
+
     .hide-medium,
     .hide-medium-up,
     .show-large,
@@ -1449,6 +1465,14 @@ body > .container:last-child {
     }
 }
 @media screen and (min-width: 61.25em) {
+    .float-left-large {
+        float: left;
+    }
+
+    .float-right-large {
+        float: right;
+    }
+
     .hide-large,
     .hide-medium-up,
     .show-medium,

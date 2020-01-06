@@ -1,0 +1,12 @@
+// Breadcrumb v1.0
+// ----------------------------------------------------------------------------/
+.breadcrumb {
+    li::after {
+        content: @breadcrumb-separator;
+    }
+
+    li:only-child::after,
+    li:last-child::after {
+        content: "";
+    }
+}

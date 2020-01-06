@@ -130,14 +130,6 @@ nav ul {
     list-style-type: none;
 }
 
-nav a {
-    display: block;
-}
-
-nav a:hover {
-    text-decoration: none;
-}
-
 hr {
     -webkit-box-sizing: content-box;
     -moz-box-sizing: content-box;
@@ -1143,6 +1135,26 @@ body > .container:last-child {
     }
 }
 
+.nav {
+    margin-bottom: 0;
+}
+
+.nav {
+    float: right;
+}
+
+.nav > li {
+    float: left;
+}
+
+.nav a {
+    padding: .625em .875em;
+}
+
+.nav > li:last-child {
+    margin-right: -0.625em;
+}
+
 .nav-inline .active,
 .nav-inline .nav-title,
 .nav-list .active,
@@ -1165,6 +1177,23 @@ body > .container:last-child {
     margin-bottom: 1.5em;
 }
 
+.nav-link {
+    display: block;
+}
+
+.nav-link:hover {
+    text-decoration: none;
+}
+
+.breadcrumb li::after {
+    content: " /";
+}
+
+.breadcrumb li:last-child::after,
+.breadcrumb li:only-child::after {
+    content: "";
+}
+
 .navbar {
     width: 100%;
     background-color: #222;
@@ -1181,6 +1210,7 @@ body > .container:last-child {
 .navbar a.active,
 .navbar a:hover {
     color: #cccccc;
+    text-decoration: none;
     -webkit-transition: all .3s ease-in-out 0s;
     -moz-transition: all .3s ease-in-out 0s;
     -o-transition: all .3s ease-in-out 0s;
@@ -1199,26 +1229,6 @@ body > .container:last-child {
 
 .brand .logo {
     margin-right: .3125em;
-}
-
-.nav {
-    margin-bottom: 0;
-}
-
-.nav {
-    float: right;
-}
-
-.nav > li {
-    float: left;
-}
-
-.nav a {
-    padding: .625em .875em;
-}
-
-.nav > li:last-child {
-    margin-right: -0.625em;
 }
 
 .navbar + .container,

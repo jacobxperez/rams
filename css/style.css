@@ -1151,18 +1151,18 @@ body > .container:last-child {
     margin-right: -0.625em;
 }
 
-.nav-inline .active,
 .nav-inline .nav-title,
-.nav-list .active,
 .nav-list .nav-title {
     font-weight: 700;
 }
 
+.nav-inline .active,
 .nav-inline .nav-link:focus,
 .nav-inline .nav-link:hover,
+.nav-list .active,
 .nav-list .nav-link:focus,
 .nav-list .nav-link:hover {
-    color: #003d99;
+    color: #555;
 }
 
 .nav-inline > li {

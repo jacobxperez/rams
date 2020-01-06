@@ -1139,10 +1139,6 @@ body > .container:last-child {
     margin-bottom: 0;
 }
 
-.nav {
-    float: right;
-}
-
 .nav > li {
     float: left;
 }
@@ -1363,6 +1359,14 @@ body > .container:last-child {
 
 .button-success:active {
     background-color: #2e8a2e;
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
 }
 
 .fixed-top {

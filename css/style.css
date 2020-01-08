@@ -1249,7 +1249,8 @@ body > .container:last-child {
     right: 0;
     width: 100%;
     min-width: 10em;
-    background-color: transparent;
+    border: .0625em solid rgba(0, 0, 0, 0.3);
+    background-color: #fff;
     font-style: normal;
     font-weight: 400;
     text-align: left;
@@ -1274,19 +1275,21 @@ body > .container:last-child {
     visibility: visible;
 }
 
-.dropdown-menu {
-    padding-left: 0;
+.navbar .dropdown-menu {
+    border: 0;
     background-color: #272727;
-    list-style-type: none;
     -webkit-text-shadow: 0 .0625em .125em rgba(0, 0, 0, 0.3);
     -moz-text-shadow: 0 .0625em .125em rgba(0, 0, 0, 0.3);
     text-shadow: 0 .0625em .125em rgba(0, 0, 0, 0.3);
-    opacity: 0;
 }
 
-.dropdown-menu a {
+.navbar .dropdown-menu .nav-link {
     padding-left: 1.25em;
     padding-right: 1.25em;
+}
+
+.dropdown-menu {
+    opacity: 0;
 }
 
 .drop > .dropdown-menu {

@@ -1129,6 +1129,22 @@ body > .container:last-child {
     }
 }
 
+.nav-inline:after,
+.nav-inline:before,
+.nav-list:after,
+.nav-list:before,
+.nav:after,
+.nav:before {
+    content: " ";
+    display: table;
+}
+
+.nav-inline:after,
+.nav-list:after,
+.nav:after {
+    clear: both;
+}
+
 .nav,
 .nav ul,
 .nav-inline,

@@ -52,13 +52,10 @@ All main components and dependencies can be found under folder [less](https://gi
     * [mixins](https://github.com/jacobxperez/essentials/tree/master/css/less/mixins)
     * [variables](https://github.com/jacobxperez/essentials/tree/master/css/less/variables)
 
-We recommend adding extra modules under folder [components](https://github.com/jacobxperez/essentials/tree/master/css/less/components) then link to them on file [style.less](https://github.com/jacobxperez/essentials/blob/master/css/style.less) for compiling.
+We recommend adding extra modules under folder [custom](https://github.com/jacobxperez/essentials/tree/master/css/less/components/custom) then link to them on file [style.less](https://github.com/jacobxperez/essentials/blob/master/css/style.less) for compiling.
 
 * [/css/less/components](https://github.com/jacobxperez/essentials/tree/master/css/less/components)
-    * [reset](https://github.com/jacobxperez/essentials/tree/master/css/less/components/reset)
-    * [layout](https://github.com/jacobxperez/essentials/tree/master/css/less/components/layout)
-    * [modules](https://github.com/jacobxperez/essentials/tree/master/css/less/components/modules)
-    * [navigation](https://github.com/jacobxperez/essentials/tree/master/css/less/components/navigation)
+    * [custom](https://github.com/jacobxperez/essentials/tree/master/css/less/components/custom)
 
 ## Contributing
 

@@ -1277,11 +1277,6 @@ body > .container:last-child {
     z-index: 100;
 }
 
-.dropdown-accordion {
-    position: relative;
-    display: none;
-}
-
 .fixed-top .dropdown-box,
 .sticky-top .dropdown-box {
     top: 100%;
@@ -1293,6 +1288,19 @@ body > .container:last-child {
 
 .drop > .dropdown-box {
     visibility: visible;
+}
+
+.dropdown-accordion {
+    position: relative;
+    display: none;
+    width: 100%;
+    font-style: normal;
+    font-weight: 400;
+    text-align: left;
+    -webkit-transition: all .3s ease-in-out 0s;
+    -moz-transition: all .3s ease-in-out 0s;
+    -o-transition: all .3s ease-in-out 0s;
+    transition: all .3s ease-in-out 0s;
 }
 
 .drop > .dropdown-accordion {

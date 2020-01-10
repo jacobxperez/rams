@@ -42,17 +42,17 @@ The easiest way to include [Essentials](https://jacobxperez.github.io/essentials
 
 [Essentials](https://jacobxperez.github.io/essentials/) is built on [LESS](http://lesscss.org/) which extends the capabilities of CSS. Use [style.less](https://github.com/jacobxperez/essentials/blob/master/css/style.less) for compiling all necessary modules for your website and the [variable files](https://github.com/jacobxperez/essentials/blob/master/css/less/variables) for adjusting the values of fonts, colors, padding and more.
 
-* [/css/style.less](https://github.com/jacobxperez/essentials/blob/master/css/style.less) (for compiling all LESS modules)
-* [/css/less/variables](https://github.com/jacobxperez/essentials/blob/master/css/less/variables) (for changing the settings)
+* [/css/style.less](https://github.com/jacobxperez/essentials/blob/master/css/style.less)
+* [/css/less/variables](https://github.com/jacobxperez/essentials/blob/master/css/less/variables)
 
 All main components and dependencies can be found under folder [less](https://github.com/jacobxperez/essentials/tree/master/css/less).
 
-* [/css/less/components](https://github.com/jacobxperez/essentials/tree/master/css/less)
+* [/css/less](https://github.com/jacobxperez/essentials/tree/master/css/less)
     * [components](https://github.com/jacobxperez/essentials/tree/master/css/less/components)
     * [mixins](https://github.com/jacobxperez/essentials/tree/master/css/less/mixins)
     * [variables](https://github.com/jacobxperez/essentials/tree/master/css/less/variables)
 
-We recommend to adding extra modules under folder [components](https://github.com/jacobxperez/essentials/tree/master/css/less/components) then link to them on file [style.less](https://github.com/jacobxperez/essentials/blob/master/css/style.less) for compiling.
+We recommend adding extra modules under folder [components](https://github.com/jacobxperez/essentials/tree/master/css/less/components) then link to them on file [style.less](https://github.com/jacobxperez/essentials/blob/master/css/style.less) for compiling.
 
 * [/css/less/components](https://github.com/jacobxperez/essentials/tree/master/css/less/components)
     * [reset](https://github.com/jacobxperez/essentials/tree/master/css/less/components/reset)

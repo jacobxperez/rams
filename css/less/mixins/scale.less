@@ -2,20 +2,20 @@
 // ----------------------------------------------------------------------------/
 .scale(@vw: @scale-width; @vh: @scale-height){
 
-	@breakpoint-vw: unit((@vw / @root-font-size), em);
-	@breakpoint-vh: unit((@vh / @root-font-size), em);
+    @breakpoint-vw: unit((@vw / @root-font-size), em);
+    @breakpoint-vh: unit((@vh / @root-font-size), em);
 
-	// Scale by Height
-	@media screen and (min-height: @breakpoint-vh) {
-		html {
-			.font-size(@base-font-size; @vh; vh);
-		}
-	}
+    // Scale by Height
+    @media screen and (min-height: @breakpoint-vh) {
+        html {
+            .font-size(@base-font-size; @vh; vh);
+        }
+    }
 
-	// Scale by Width
-	@media screen and (min-width: @breakpoint-vw) {
-		html {
-			.font-size(@base-font-size; @vw; vw);
-		}
-	}
+    // Scale by Width
+    @media screen and (min-width: @breakpoint-vw) {
+        html {
+            .font-size(@base-font-size; @vw; vw);
+        }
+    }
 }

@@ -2,17 +2,17 @@
 // -----------------------------------------------------------------------------
 
 .button(@class; @background-color; @color) {
-	.@{button-class}-@{class} {
-		background-color: @background-color;
-		color: @color;
+    .@{button-class}-@{class} {
+        background-color: @background-color;
+        color: @color;
 
-		&:focus,
-		&:hover {
-			background-color: lighten(@background-color, 4%);
-		}
+        &:focus,
+        &:hover {
+            background-color: lighten(@background-color, 4%);
+        }
 
-		&:active {
-			background-color: darken(@background-color, 4%);;
-		}
-	}
+        &:active {
+            background-color: darken(@background-color, 4%);;
+        }
+    }
 }

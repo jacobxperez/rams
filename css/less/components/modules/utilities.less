@@ -3,11 +3,11 @@
 // Floats
 // ----------------------------------------------------------------------------/
 .float-left {
-	float: left;
+    float: left;
 }
 
 .float-right {
-	float: right;
+    float: right;
 }
 
 
@@ -15,34 +15,34 @@
 // ----------------------------------------------------------------------------/
 
 .fixed-top {
-	position: fixed;
-	top: 0;
-	right: 0;
-	left: 0;
-	z-index: 1000;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1000;
 }
 
 .fixed-bottom {
-	position: fixed;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	z-index: 1000;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
 }
 
 .sticky-top {
-	position: -webkit-sticky;
-	position: sticky;
-	top: 0;
-	z-index: 1000;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .top {
-	top: 100%;
+    top: 100%;
 }
 
 .bottom {
-	bottom: 100%;
+    bottom: 100%;
 }
 
 
@@ -50,33 +50,33 @@
 // ----------------------------------------------------------------------------/
 
 .indent {
-	.padding-left(@indent);
+    .padding-left(@indent);
 }
 
 .text-indent {
-	.text-indent();
+    .text-indent();
 }
 
 .text-outdent {
-	.padding-left(@indent);
-	.text-indent(-@indent);
+    .padding-left(@indent);
+    .text-indent(-@indent);
 }
 
 .text-left {
-	text-align: left;
+    text-align: left;
 }
 
 .text-right {
-	text-align: right;
+    text-align: right;
 }
 
 .text-center {
-	text-align: center;
+    text-align: center;
 }
 
 .text-justify {
-	text-align: justify;
-	hyphens: auto;
+    text-align: justify;
+    hyphens: auto;
 }
 
 
@@ -84,7 +84,7 @@
 // ----------------------------------------------------------------------------/
 
 .show-print {
-	display: none;
+    display: none;
 }
 
 
@@ -92,19 +92,19 @@
 // ----------------------------------------------------------------------------/
 
 @media screen and (max-width: @breakpoint-small-max) {
-	.float-left-@{small-prefix} {
-		float: left;
-	}
+    .float-left-@{small-prefix} {
+        float: left;
+    }
 
-	.float-right-@{small-prefix} {
-		float: right;
-	}
+    .float-right-@{small-prefix} {
+        float: right;
+    }
 
-	.hide-@{small-prefix},
-	.show-@{medium-prefix},
-	.show-@{large-prefix} {
-		display: none;
-	}
+    .hide-@{small-prefix},
+    .show-@{medium-prefix},
+    .show-@{large-prefix} {
+        display: none;
+    }
 }
 
 
@@ -112,20 +112,20 @@
 // ----------------------------------------------------------------------------/
 
 @media screen and (min-width: @breakpoint-medium-min) and (max-width: @breakpoint-medium-max) {
-	.float-left-@{medium-prefix} {
-		float: left;
-	}
+    .float-left-@{medium-prefix} {
+        float: left;
+    }
 
-	.float-right-@{medium-prefix} {
-		float: right;
-	}
+    .float-right-@{medium-prefix} {
+        float: right;
+    }
 
-	.hide-@{medium-prefix}-up,
-	.hide-@{medium-prefix},
-	.show-@{small-prefix},
-	.show-@{large-prefix} {
-		display: none;
-	}
+    .hide-@{medium-prefix}-up,
+    .hide-@{medium-prefix},
+    .show-@{small-prefix},
+    .show-@{large-prefix} {
+        display: none;
+    }
 }
 
 
@@ -133,18 +133,18 @@
 // ----------------------------------------------------------------------------/
 
 @media screen and (min-width: @breakpoint-large-min) {
-	.float-left-@{large-prefix} {
-		float: left;
-	}
+    .float-left-@{large-prefix} {
+        float: left;
+    }
 
-	.float-right-@{large-prefix} {
-		float: right;
-	}
+    .float-right-@{large-prefix} {
+        float: right;
+    }
 
-	.hide-@{medium-prefix}-up,
-	.hide-@{large-prefix},
-	.show-@{small-prefix},
-	.show-@{medium-prefix} {
-		display: none;
-	}
+    .hide-@{medium-prefix}-up,
+    .hide-@{large-prefix},
+    .show-@{small-prefix},
+    .show-@{medium-prefix} {
+        display: none;
+    }
 }

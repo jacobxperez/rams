@@ -2,58 +2,58 @@
 // -----------------------------------------------------------------------------
 
 .height(@height; @base: @base-font-size; @unit: em) {
-	& when (@unit = em),
-	(@unit = rem) {
-		@a: unit((@height / @base), @unit);
-		height: @a;
-	}
+    & when (@unit = em),
+    (@unit = rem) {
+        @a: unit((@height / @base), @unit);
+        height: @a;
+    }
 
-	& when (@unit = %) {
-		@a: percentage(@height / @base);
-		height: @a;
-	}
+    & when (@unit = %) {
+        @a: percentage(@height / @base);
+        height: @a;
+    }
 
-	& when (@unit = vw),
-	(@unit = vh) {
-		@a: unit(((@height / @base) * 100), @unit);
-		height: @a;
-	}
+    & when (@unit = vw),
+    (@unit = vh) {
+        @a: unit(((@height / @base) * 100), @unit);
+        height: @a;
+    }
 }
 
 .max-height(@height; @base: @base-font-size; @unit: em) {
-	& when (@unit = em),
-	(@unit = rem) {
-		@a: unit((@height / @base), @unit);
-		max-height: @a;
-	}
+    & when (@unit = em),
+    (@unit = rem) {
+        @a: unit((@height / @base), @unit);
+        max-height: @a;
+    }
 
-	& when (@unit = %) {
-		@a: percentage(@height / @base);
-		max-height: @a;
-	}
+    & when (@unit = %) {
+        @a: percentage(@height / @base);
+        max-height: @a;
+    }
 
-	& when (@unit = vw),
-	(@unit = vh) {
-		@a: unit(((@height / @base) * 100), @unit);
-		max-height: @a;
-	}
+    & when (@unit = vw),
+    (@unit = vh) {
+        @a: unit(((@height / @base) * 100), @unit);
+        max-height: @a;
+    }
 }
 
 .min-height(@height; @base: @base-font-size; @unit: em) {
-	& when (@unit = em),
-	(@unit = rem) {
-		@a: unit((@height / @base), @unit);
-		min-height: @a;
-	}
+    & when (@unit = em),
+    (@unit = rem) {
+        @a: unit((@height / @base), @unit);
+        min-height: @a;
+    }
 
-	& when (@unit = %) {
-		@a: percentage(@height / @base);
-		min-height: @a;
-	}
+    & when (@unit = %) {
+        @a: percentage(@height / @base);
+        min-height: @a;
+    }
 
-	& when (@unit = vw),
-	(@unit = vh) {
-		@a: unit(((@height / @base) * 100), @unit);
-		min-height: @a;
-	}
+    & when (@unit = vw),
+    (@unit = vh) {
+        @a: unit(((@height / @base) * 100), @unit);
+        min-height: @a;
+    }
 }

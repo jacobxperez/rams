@@ -1,41 +1,41 @@
 // Navbar V1.1
 // ----------------------------------------------------------------------------/
 .navbar {
-	width: 100%;
-	background-color: @navbar-background;
-	z-index: 1025;
+    width: 100%;
+    background-color: @navbar-background;
+    z-index: 1025;
 
-	a {
-		color: @navbar-color;
+    a {
+        color: @navbar-color;
 
-		&:focus {
-			outline: 0;
-		}
+        &:focus {
+            outline: 0;
+        }
 
-		&.active,
-		&:hover {
-			color: @navbar-color-hover;
-			text-decoration: none;
-			.transition();
-		}
-	}
+        &.active,
+        &:hover {
+            color: @navbar-color-hover;
+            text-decoration: none;
+            .transition();
+        }
+    }
 }
 
 .brand {
-	float: left;
-	display: block;
-	.margin-left(-@grid-gutters);
-	.padding-left(@grid-gutters);
-	.padding-right(@grid-gutters);
-	.font-size(20px);
-	.line-height(44px; 20px);
+    float: left;
+    display: block;
+    .margin-left(-@grid-gutters);
+    .padding-left(@grid-gutters);
+    .padding-right(@grid-gutters);
+    .font-size(20px);
+    .line-height(44px; 20px);
 
-	.logo {
-		.margin-right(5px);
-	}
+    .logo {
+        .margin-right(5px);
+    }
 }
 
 .navbar + .@{wrapper-class},
 .navbar + .@{wrapper-class}-full {
-	.padding-top(@wrapper-padding-top * 2);
+    .padding-top(@wrapper-padding-top * 2);
 }

@@ -15,14 +15,14 @@ input[type=url],
 input[type=week],
 select,
 textarea {
-	display: block;
-	.padding(@form-padding-y; @form-padding-x; @unit: rem);
-	.border(@form-border-width; solid; @form-border-color);
-	width: 100%;
-	background-color: @form-background-color;
-	line-height: @base-line-height;
-	.border-radius(@form-border-radius);
-	box-shadow: none;
+    display: block;
+    .padding(@form-padding-y; @form-padding-x; @unit: rem);
+    .border(@form-border-width; solid; @form-border-color);
+    width: 100%;
+    background-color: @form-background-color;
+    line-height: @base-line-height;
+    .border-radius(@form-border-radius);
+    box-shadow: none;
 }
 
 input[type=date]:focus,
@@ -40,18 +40,18 @@ input[type=url]:focus,
 input[type=week]:focus,
 select:focus,
 textarea:focus {
-	border-color: @form-border-color-focus;
-	color: @font-color;
-	box-shadow: none;
+    border-color: @form-border-color-focus;
+    color: @font-color;
+    box-shadow: none;
 }
 
 textarea {
-	.min-height(100px);
-	overflow: auto;
-	resize: vertical;
+    .min-height(100px);
+    overflow: auto;
+    resize: vertical;
 }
 
 :not([type=submit]):invalid {
-	.border-color(@danger);
-	box-shadow: none;
+    .border-color(@danger);
+    box-shadow: none;
 }

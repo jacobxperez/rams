@@ -1,52 +1,52 @@
 // Dropdown V2.0
 // ----------------------------------------------------------------------------/
 .dropdown {
-	position: static;
-	list-style-type: none;
+    position: static;
+    list-style-type: none;
 
-	> [class^="@{icon-class}-"] {
-		.padding-top(10px; 24px);
-		.padding-bottom(10px; 24px);
-		.font-size(24px);
-		.line-height(24px; 24px);
-	}
+    > [class^="@{icon-class}-"] {
+        .padding-top(10px; 24px);
+        .padding-bottom(10px; 24px);
+        .font-size(24px);
+        .line-height(24px; 24px);
+    }
 }
 
 .dropdown-box {
-	position: absolute;
-	.min-width(160px);
-	.border();
-	background-color: @background-color;
-	font-style: normal;
-	font-weight: 400;
-	text-align: left;
-	visibility: hidden;
-	.transition();
-	z-index: 100;
+    position: absolute;
+    .min-width(160px);
+    .border();
+    background-color: @background-color;
+    font-style: normal;
+    font-weight: 400;
+    text-align: left;
+    visibility: hidden;
+    .transition();
+    z-index: 100;
 }
 
 .dropdown-accordion {
-	position: relative;
-	display: none;
+    position: relative;
+    display: none;
 }
 
 .fixed-top,
 .sticky-top {
-	.dropdown-box {
-		top: 100%;
-	}
+    .dropdown-box {
+        top: 100%;
+    }
 }
 
 .fixed-bottom {
-	.dropdown-box {
-		bottom: 100%;
-	}
+    .dropdown-box {
+        bottom: 100%;
+    }
 }
 
 .drop > .dropdown-box {
-	visibility: visible;
+    visibility: visible;
 }
 
 .drop > .dropdown-accordion {
-	display: block;
+    display: block;
 }

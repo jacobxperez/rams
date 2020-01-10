@@ -1,32 +1,32 @@
 // Dropdown Menu V2.0
 // ----------------------------------------------------------------------------/
 .navbar .dropdown-menu {
-	left: 0;
-	right: 0;
-	border: 0;
-	background-color: lighten(@navbar-background, 2%);
-	.text-shadow();
-	z-index: 1000;
+    left: 0;
+    right: 0;
+    border: 0;
+    background-color: lighten(@navbar-background, 2%);
+    .text-shadow();
+    z-index: 1000;
 
-	.nav-link {
-		.padding-left(@wrapper-padding);
-		.padding-right(@wrapper-padding);
-	}
+    .nav-link {
+        .padding-left(@wrapper-padding);
+        .padding-right(@wrapper-padding);
+    }
 }
 
 .dropdown-menu {
-	opacity: 0;
+    opacity: 0;
 }
 
 .drop > .dropdown-menu {
-	opacity: 0.98;
+    opacity: 0.98;
 }
 
 // Responsive
 // ----------------------------------------------------------------------------/
 
 @media screen and (max-width: @breakpoint-medium-max) {
-	.navbar .dropdown-menu {
-		width: 100%;
-	}
+    .navbar .dropdown-menu {
+        width: 100%;
+    }
 }

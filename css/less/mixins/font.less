@@ -2,9 +2,9 @@
 // -----------------------------------------------------------------------------
 
 .font-family(@font-family) {
-	& when not (@font-family = off) {
-		font-family: @font-family;
-	}
+    & when not (@font-family = off) {
+        font-family: @font-family;
+    }
 }
 
 
@@ -12,15 +12,15 @@
 // -----------------------------------------------------------------------------
 
 .font-face(@name; @path) {
-	@font-face {
-		font-family: '@{name}';
-		src: url('@{path}@{name}.eot');
-		src: url('@{path}@{name}.eot?#iefix') format('embedded-opentype'),
-		url('@{path}@{name}.woff2') format('woff2'),
-		url('@{path}@{name}.woff') format('woff'),
-		url('@{path}@{name}.ttf')  format('truetype'),
-		url('@{path}@{name}.svg#@{name}') format('svg');
-	}
+    @font-face {
+        font-family: '@{name}';
+        src: url('@{path}@{name}.eot');
+        src: url('@{path}@{name}.eot?#iefix') format('embedded-opentype'),
+        url('@{path}@{name}.woff2') format('woff2'),
+        url('@{path}@{name}.woff') format('woff'),
+        url('@{path}@{name}.ttf')  format('truetype'),
+        url('@{path}@{name}.svg#@{name}') format('svg');
+    }
 }
 
 
@@ -29,31 +29,31 @@
 
 .font-size(@size: @base-font-size; @base: @base-font-size; @unit: %) {
 
-	& when not (@size = off) {
+    & when not (@size = off) {
 
-		& when (@unit = %) {
-			@a: percentage(@size / @base);
-			font-size: @a;
-		}
+        & when (@unit = %) {
+            @a: percentage(@size / @base);
+            font-size: @a;
+        }
 
-		& when (@unit = vw),
-		(@unit = vh) {
-			@a: unit(((@size / @base) * 100), @unit);
-			font-size: @a;
-		}
+        & when (@unit = vw),
+        (@unit = vh) {
+            @a: unit(((@size / @base) * 100), @unit);
+            font-size: @a;
+        }
 
-		& when (@unit = em),
-		(@unit = rem) {
-			@a: unit((@size / @base), @unit);
-			font-size: @a;
-		}
+        & when (@unit = em),
+        (@unit = rem) {
+            @a: unit((@size / @base), @unit);
+            font-size: @a;
+        }
 
-		& when (@unit = none) {
-			@a: unit((@size / @base));
-			font-size: @a;
-		}
+        & when (@unit = none) {
+            @a: unit((@size / @base));
+            font-size: @a;
+        }
 
-	}
+    }
 
 }
 
@@ -63,25 +63,25 @@
 
 .line-height(@height: @base-line-height; @base: @base-font-size; @unit: none) {
 
-	& when not (@height = off) {
+    & when not (@height = off) {
 
-		& when (@unit = em),
-		(@unit = rem) {
-			@a: unit((@height / @base), @unit);
-			line-height: @a;
-		}
+        & when (@unit = em),
+        (@unit = rem) {
+            @a: unit((@height / @base), @unit);
+            line-height: @a;
+        }
 
-		& when (@unit = %) {
-			@a: percentage(@height / @base);
-			line-height: @a;
-		}
+        & when (@unit = %) {
+            @a: percentage(@height / @base);
+            line-height: @a;
+        }
 
-		& when (@unit = none) {
-			@a: unit((@height / @base));
-			line-height: @a;
-		}
+        & when (@unit = none) {
+            @a: unit((@height / @base));
+            line-height: @a;
+        }
 
-	}
+    }
 
 }
 
@@ -90,9 +90,9 @@
 // -----------------------------------------------------------------------------
 
 .text-indent (@text-indent: @indent; @base: @base-font-size; @unit: em) {
-	& when (@unit = em),
-	(@unit = rem) {
-		@a: unit((@text-indent / @base), @unit);
-		text-indent: @a;
-	}
+    & when (@unit = em),
+    (@unit = rem) {
+        @a: unit((@text-indent / @base), @unit);
+        text-indent: @a;
+    }
 }

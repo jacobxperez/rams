@@ -40,11 +40,11 @@ The easiest way to include [Essentials](https://jacobxperez.github.io/essentials
 
 ### Custom Build
 
-[Essentials](https://jacobxperez.github.io/essentials/) is built on [LESS](http://lesscss.org/) which extends the capabilities of CSS. Use [style.less](https://github.com/jacobxperez/essentials/blob/master/css/style.less) for compiling all necessary modules for your website.
+[Essentials](https://jacobxperez.github.io/essentials/) is built on [LESS](http://lesscss.org/) which extends the capabilities of CSS. Use [style.less](https://github.com/jacobxperez/essentials/blob/master/css/style.less) for compiling all necessary modules for your website. Instead of releasing the project with a version attach to it each file or module will have its one unique version.
 
 * [/css/style.less](https://github.com/jacobxperez/essentials/blob/master/css/style.less)
 
-All main components and dependencies can be found under folder [less](https://github.com/jacobxperez/essentials/tree/master/css/less). The folder [components](https://github.com/jacobxperez/essentials/tree/master/css/less/components) contains all CSS modules organized by type. The folder [mixins](https://github.com/jacobxperez/essentials/tree/master/css/less/mixins) is where all LESS functions are kept and the folder [variables](https://github.com/jacobxperez/essentials/tree/master/css/less/variables) has all necessary files for adjusting the settings of your website. 
+All components and dependencies can be found under folder [less](https://github.com/jacobxperez/essentials/tree/master/css/less). The folder [components](https://github.com/jacobxperez/essentials/tree/master/css/less/components) contains all CSS modules organized by type. The folder [mixins](https://github.com/jacobxperez/essentials/tree/master/css/less/mixins) is where all LESS functions are kept and the folder [variables](https://github.com/jacobxperez/essentials/tree/master/css/less/variables) has all necessary files to adjust the settings of your website.
 
 * [/css/less](https://github.com/jacobxperez/essentials/tree/master/css/less)
     * [components](https://github.com/jacobxperez/essentials/tree/master/css/less/components)

@@ -18,7 +18,7 @@ Base CSS Framework — Built with LESS
 
 ## About
 
-Essentials is a base CSS framework build with [LESS](http://lesscss.org/) intended to be used by small scale web projects. It contains all necessary components to build a website this includes grid system, typography, navigation, buttons, and dropdowns just to name a few.
+Essentials is a base CSS framework build with [LESS](http://lesscss.org/) intended to be used by small scale web projects. It contains all necessary components to build a website this includes grid system, typography, navigation, and dropdowns just to name a few.
 
 ### Project Status
 

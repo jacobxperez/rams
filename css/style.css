@@ -5,8 +5,6 @@
 ------------------------------------------------------------------------------*/
 
 * {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -125,8 +123,6 @@ ul ul {
 }
 
 hr {
-    -webkit-box-sizing: content-box;
-    -moz-box-sizing: content-box;
     box-sizing: content-box;
     display: block;
     height: 1px;
@@ -1224,9 +1220,6 @@ body > .container:last-child {
 .navbar a:hover {
     color: #cccccc;
     text-decoration: none;
-    -webkit-transition: all .3s ease-in-out 0s;
-    -moz-transition: all .3s ease-in-out 0s;
-    -o-transition: all .3s ease-in-out 0s;
     transition: all .3s ease-in-out 0s;
 }
 
@@ -1270,9 +1263,6 @@ body > .container:last-child {
     font-weight: 400;
     text-align: left;
     visibility: hidden;
-    -webkit-transition: all .3s ease-in-out 0s;
-    -moz-transition: all .3s ease-in-out 0s;
-    -o-transition: all .3s ease-in-out 0s;
     transition: all .3s ease-in-out 0s;
     z-index: 100;
 }
@@ -1297,9 +1287,6 @@ body > .container:last-child {
     font-style: normal;
     font-weight: 400;
     text-align: left;
-    -webkit-transition: all .3s ease-in-out 0s;
-    -moz-transition: all .3s ease-in-out 0s;
-    -o-transition: all .3s ease-in-out 0s;
     transition: all .3s ease-in-out 0s;
 }
 
@@ -1312,8 +1299,6 @@ body > .container:last-child {
     right: 0;
     border: 0;
     background-color: #272727;
-    -webkit-text-shadow: 0 .0625em .125em rgba(0, 0, 0, 0.3);
-    -moz-text-shadow: 0 .0625em .125em rgba(0, 0, 0, 0.3);
     text-shadow: 0 .0625em .125em rgba(0, 0, 0, 0.3);
     z-index: 1000;
 }

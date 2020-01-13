@@ -2,11 +2,11 @@
 // ----------------------------------------------------------------------------/
 .navbar {
     width: 100%;
-    background-color: @navbar-background;
+    background-color: @navbar-background-color;
     z-index: 1025;
 
     a {
-        color: @navbar-color;
+        color: @navbar-link-color;
 
         &:focus {
             outline: 0;
@@ -14,7 +14,7 @@
 
         &.active,
         &:hover {
-            color: @navbar-color-hover;
+            color: @navbar-link-color-hover;
             text-decoration: none;
             .transition();
         }

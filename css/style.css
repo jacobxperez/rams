@@ -1180,6 +1180,7 @@ body > .container:last-child {
 }
 
 .nav-link {
+    color: #06f;
     display: block;
 }
 

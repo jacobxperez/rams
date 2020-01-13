@@ -1,0 +1,19 @@
+// Breakpoints V1.0
+// !notice it's using wrapper widths to calculate breakpoints
+// ----------------------------------------------------------------------------/
+
+// small screen
+@breakpoint-small-max: unit((@wrapper-small-max-width / @root-font-size), em);
+
+// medium screen
+@breakpoint-medium-min: unit((@wrapper-medium-min-width / @root-font-size), em);
+@breakpoint-medium-max: unit(((@wrapper-large-max-width - 1) / @root-font-size), em);
+
+// large screen
+@breakpoint-large-min: unit((@wrapper-large-max-width / @root-font-size), em);
+
+
+// Scale
+// ----------------------------------------------------------------------------/
+@scale-width: 1920px;
+@scale-height: @scale-width;

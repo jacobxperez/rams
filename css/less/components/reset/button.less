@@ -1,12 +1,5 @@
 // Button V1.0
 // ----------------------------------------------------------------------------/
-button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
-    -webkit-appearance: button;
-}
-
 .@{button-class},
 button,
 input[type=button],
@@ -46,14 +39,14 @@ select {
 .@{button-class}-disabled,
 button[disabled],
 html input[disabled] {
-    background-color: @button-disabled-background;
+    background-color: @button-disabled-background-color;
     color: @button-disabled-color;
     cursor: not-allowed;
 
     &:focus,
     &:hover,
     &:active {
-        background-color: @button-disabled-background;
+        background-color: @button-disabled-background-color;
         color: @button-disabled-color;
         text-decoration: none;
     }

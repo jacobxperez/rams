@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function() {
     let
         i;
 
-    // Dropdown
+    // Dropdown v1.0
     for (i = 0; i < dropdownLength; i++) {
 
         getDropdown[i].addEventListener("click", function(e) {
@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     });
 
-    // Smooth scroll
+    // Smooth scroll v1.0
     for (i = 0; i < intLinks.length; i++) {
         intLinks[i].addEventListener("click", function(e) {
 

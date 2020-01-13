@@ -24,7 +24,6 @@ html {
 
 html {
     font-size: 100%;
-    -webkit-text-size-adjust: 100%;
 }
 
 body {
@@ -96,8 +95,6 @@ figure {
 }
 
 progress[value] {
-    -webkit-appearance: none;
-    -moz-appearance: none;
     appearance: none;
 }
 
@@ -342,8 +339,6 @@ textarea {
     width: 100%;
     background-color: #fff;
     line-height: 24px;
-    -webkit-border-radius: .25em .25em .25em .25em;
-    -moz-border-radius: .25em .25em .25em .25em;
     border-radius: .25em .25em .25em .25em;
     box-shadow: none;
 }
@@ -393,8 +388,6 @@ input[type=button] {
     white-space: nowrap;
     vertical-align: middle;
     cursor: pointer;
-    -webkit-border-radius: .25em .25em .25em .25em;
-    -moz-border-radius: .25em .25em .25em .25em;
     border-radius: .25em .25em .25em .25em;
     z-index: 1;
 }
@@ -1410,7 +1403,6 @@ body > .container:last-child {
 }
 
 .sticky-top {
-    position: -webkit-sticky;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -1511,8 +1503,6 @@ body > .container:last-child {
 }
 
 [class^="icon-"]:before {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
     display: inline-block;
     font-family: "icons";
     font-size: 93.75%;

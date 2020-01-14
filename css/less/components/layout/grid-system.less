@@ -1,6 +1,5 @@
 // Grid System V1.0
 // ----------------------------------------------------------------------------/
-
 .@{grid-wrapper-class} {
     .margin-left(-@grid-gutters; @unit: rem);
     .margin-right(-@grid-gutters; @unit: rem);
@@ -14,25 +13,25 @@
     .padding-right(@grid-gutters; @unit: rem);
 }
 
+
 // Small Grid
 // ----------------------------------------------------------------------------/
-
 @media screen and (max-width: @breakpoint-small-max) {
     .grid(@small-columns; @small-prefix);
     .grid-child(@small-columns; @small-prefix);
 }
 
+
 // Medium Grid
 // ----------------------------------------------------------------------------/
-
 @media screen and (min-width: @breakpoint-medium-min) {
     .grid(@medium-columns; @medium-prefix);
     .grid-child(@medium-columns; @medium-prefix);
 }
 
+
 // Large Grid
 // ----------------------------------------------------------------------------/
-
 @media screen and (min-width: @breakpoint-large-min) {
     .grid(@large-columns; @large-prefix);
     .grid-child(@large-columns; @large-prefix);

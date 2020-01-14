@@ -1,6 +1,5 @@
 // Font Family V1.0
 // -----------------------------------------------------------------------------
-
 .font-family(@font-family) {
     & when not (@font-family = off) {
         font-family: @font-family;
@@ -10,7 +9,6 @@
 
 // Font Face V1.0
 // -----------------------------------------------------------------------------
-
 .font-face(@name; @path) {
     @font-face {
         font-family: '@{name}';
@@ -26,7 +24,6 @@
 
 // Font Size V1.0
 // -----------------------------------------------------------------------------
-
 .font-size(@size: @base-font-size; @base: @base-font-size; @unit: %) {
 
     & when not (@size = off) {
@@ -60,7 +57,6 @@
 
 // Line Height V1.0
 // -----------------------------------------------------------------------------
-
 .line-height(@height: @base-line-height; @base: @base-font-size; @unit: none) {
 
     & when not (@height = off) {
@@ -88,7 +84,6 @@
 
 // Text Indent V1.0
 // -----------------------------------------------------------------------------
-
 .text-indent (@text-indent: @indent; @base: @base-font-size; @unit: em) {
     & when (@unit = em),
     (@unit = rem) {

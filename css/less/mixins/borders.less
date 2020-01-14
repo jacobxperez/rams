@@ -1,6 +1,5 @@
 // Borders V1.0
 // -----------------------------------------------------------------------------
-
 .border(@width: @base-border-width; @style: @base-border-style; @color: @base-border-color; @base: @base-font-size; @unit: em) {
 
     & when not (@width = off) {
@@ -49,7 +48,6 @@
 
 // Borders Radius V1.0
 // -----------------------------------------------------------------------------
-
 .border-radius(@top-left: @base-border-radius; @top-right: @base-border-radius; @bottom-right: @top-left; @bottom-left: @top-right; @base: @base-font-size; @unit: em) {
 
     @a: unit((@top-left / @base), @unit);
@@ -64,7 +62,6 @@
 
 // Border Color V1.0
 // -----------------------------------------------------------------------------
-
 .border-color (@color: @base-border-color; @amount: 6.5%; @switch: none) {
 
     & when (@switch = none) {

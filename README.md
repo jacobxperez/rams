@@ -40,7 +40,7 @@ The easiest way to include [Essentials](https://jacobxperez.github.io/essentials
 
 ### Custom Build
 
-[Essentials](https://jacobxperez.github.io/essentials/) is built on [LESS](http://lesscss.org/) which extends the capabilities of CSS. Use [style.less](https://github.com/jacobxperez/essentials/blob/master/css/style.less) to compile all modules into the final CSS. To import custom modules use the file [custom.less](https://github.com/jacobxperez/essentials/blob/master/css/custom.less) then compile everything with [style.less](https://github.com/jacobxperez/essentials/blob/master/css/style.less).
+[Essentials](https://jacobxperez.github.io/essentials/) is built on [LESS](http://lesscss.org/) which extends the capabilities of CSS. To import [custom](https://github.com/jacobxperez/essentials/tree/master/css/less/components/custom) modules use the file [custom.less](https://github.com/jacobxperez/essentials/blob/master/css/custom.less) then compile everything with the file [style.less](https://github.com/jacobxperez/essentials/blob/master/css/style.less) to produce the final CSS.
 
 * [/css/style.less](https://github.com/jacobxperez/essentials/blob/master/css/style.less)
 * [/css/custom.less](https://github.com/jacobxperez/essentials/blob/master/css/custom.less)
@@ -61,6 +61,16 @@ The [components](https://github.com/jacobxperez/essentials/tree/master/css/less/
     * [modules](https://github.com/jacobxperez/essentials/tree/master/css/less/components/modules)
     * [navigation](https://github.com/jacobxperez/essentials/tree/master/css/less/components/navigation)
     * [reset](https://github.com/jacobxperez/essentials/tree/master/css/less/components/reset)
+
+The [mixins](https://github.com/jacobxperez/essentials/tree/master/css/less/mixins) folder is where all LESS functions are kept
+
+* [/css/less](https://github.com/jacobxperez/essentials/tree/master/css/less)
+    * [mixins](https://github.com/jacobxperez/essentials/tree/master/css/less/mixins)
+
+The [variables](https://github.com/jacobxperez/essentials/tree/master/css/less/variables) folder has all necessary files to adjust the settings of your website.
+
+* [/css/less](https://github.com/jacobxperez/essentials/tree/master/css/less)
+    * [variables](https://github.com/jacobxperez/essentials/tree/master/css/less/variables)
 
 ## Contributing
 

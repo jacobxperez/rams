@@ -40,7 +40,7 @@ The easiest way to include [Essentials](https://jacobxperez.github.io/essentials
 
 ### Custom Build
 
-[Essentials](https://jacobxperez.github.io/essentials/) is built on [LESS](http://lesscss.org/) which extends the capabilities of CSS. To import [custom](https://github.com/jacobxperez/essentials/tree/master/css/less/components/custom) modules use the file [custom.less](https://github.com/jacobxperez/essentials/blob/master/css/custom.less) then compile everything with the file [style.less](https://github.com/jacobxperez/essentials/blob/master/css/style.less) to produce the final CSS.
+[Essentials](https://jacobxperez.github.io/essentials/) is built on [LESS](http://lesscss.org/) which extends the capabilities of CSS. To import [custom](https://github.com/jacobxperez/essentials/tree/master/css/less/components/custom) modules use the file [custom.less](https://github.com/jacobxperez/essentials/blob/master/css/custom.less) then compile everything with the file [style.less](https://github.com/jacobxperez/essentials/blob/master/css/style.less) to produce the final [CSS](https://github.com/jacobxperez/essentials/blob/master/css/style.css).
 
 * [/css/style.less](https://github.com/jacobxperez/essentials/blob/master/css/style.less)
 * [/css/custom.less](https://github.com/jacobxperez/essentials/blob/master/css/custom.less)

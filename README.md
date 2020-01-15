@@ -62,7 +62,7 @@ The [components](https://github.com/jacobxperez/essentials/tree/master/css/less/
     * [navigation](https://github.com/jacobxperez/essentials/tree/master/css/less/components/navigation)
     * [reset](https://github.com/jacobxperez/essentials/tree/master/css/less/components/reset)
 
-The [mixins](https://github.com/jacobxperez/essentials/tree/master/css/less/mixins) folder is where all LESS functions are kept
+The [mixins](https://github.com/jacobxperez/essentials/tree/master/css/less/mixins) folder is where all LESS functions are kept.
 
 * [/css/less](https://github.com/jacobxperez/essentials/tree/master/css/less)
     * [mixins](https://github.com/jacobxperez/essentials/tree/master/css/less/mixins)
@@ -71,6 +71,11 @@ The [variables](https://github.com/jacobxperez/essentials/tree/master/css/less/v
 
 * [/css/less](https://github.com/jacobxperez/essentials/tree/master/css/less)
     * [variables](https://github.com/jacobxperez/essentials/tree/master/css/less/variables)
+
+To maintain [style.less](https://github.com/jacobxperez/essentials/blob/master/css/style.less) more manageable the folder [imports](https://github.com/jacobxperez/essentials/tree/master/css/less/imports) contains imports such as mixins, variables, and components separated by type.
+
+* [/css/less](https://github.com/jacobxperez/essentials/tree/master/css/less)
+    * [imports](https://github.com/jacobxperez/essentials/tree/master/css/less/imports)
 
 ## Contributing
 

@@ -1260,29 +1260,26 @@ body > .container:last-child {
     display: block;
 }
 
-.navbar .dropdown-menu {
+.navbar .dropdown-box {
     left: 0;
     right: 0;
     border: 0;
     background-color: #272727;
     text-shadow: 0 .0625em .125em rgba(0, 0, 0, 0.3);
+    opacity: 0;
     z-index: 1000;
 }
 
-.navbar .dropdown-menu .nav-link {
+.navbar .dropdown-box .nav-link {
     padding-left: 1.25em;
     padding-right: 1.25em;
 }
 
-.dropdown-menu {
-    opacity: 0;
-}
-
-.drop > .dropdown-menu {
+.drop > .dropdown-box {
     opacity: .98;
 }
 @media screen and (max-width: 61.1875em) {
-    .navbar .dropdown-menu {
+    .navbar .dropdown-box {
         width: 100%;
     }
 }

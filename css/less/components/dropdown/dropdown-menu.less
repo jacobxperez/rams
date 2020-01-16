@@ -1,24 +1,23 @@
 // Dropdown Menu V1.0
 // ----------------------------------------------------------------------------/
-.navbar .dropdown-menu {
-    left: 0;
-    right: 0;
-    border: 0;
-    background-color: lighten(@navbar-background-color, 2%);
-    .text-shadow();
-    z-index: 1000;
+.navbar {
+    .dropdown-box {
+        left: 0;
+        right: 0;
+        border: 0;
+        background-color: lighten(@navbar-background-color, 2%);
+        .text-shadow();
+        opacity: 0;
+        z-index: 1000;
 
-    .nav-link {
-        .padding-left(@wrapper-padding);
-        .padding-right(@wrapper-padding);
+        .nav-link {
+            .padding-left(@wrapper-padding);
+            .padding-right(@wrapper-padding);
+        }
     }
 }
 
-.dropdown-menu {
-    opacity: 0;
-}
-
-.drop > .dropdown-menu {
+.drop > .dropdown-box {
     opacity: 0.98;
 }
 
@@ -26,7 +25,7 @@
 // ----------------------------------------------------------------------------/
 
 @media screen and (max-width: @breakpoint-medium-max) {
-    .navbar .dropdown-menu {
+    .navbar .dropdown-box {
         width: 100%;
     }
 }

@@ -22,7 +22,7 @@ Modular CSS Framework — Built with LESS
 
 ### Project Status
 
-Project under active development. We will be releasing daily to weekly iterations called [snapshots](https://github.com/jacobxperez/essentials/releases) rather then releasing a version each module has been assigned a unique version.
+Project under active development. Rather then releasing a version each module has been assigned a unique version.
 
 ## Getting Started
 

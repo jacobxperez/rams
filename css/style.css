@@ -1209,7 +1209,7 @@ body > .container:last-child {
     color: #cccccc;
 }
 
-.brand {
+.navbar-brand {
     float: left;
     display: block;
     margin-left: -0.625em;
@@ -1217,10 +1217,6 @@ body > .container:last-child {
     padding-right: .625em;
     font-size: 125%;
     line-height: 2.2;
-}
-
-.brand .logo {
-    margin-right: .3125em;
 }
 
 .navbar + .container,

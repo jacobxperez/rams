@@ -18,7 +18,7 @@ Base CSS Framework — Built with LESS
 
 ## About
 
-[Essentials](https://jacobxperez.github.io/essentials/) is a base CSS framework build with [LESS](http://lesscss.org/) intended to be used by small scale web projects. It contains all necessary components to build a website this includes a grid system, typography, navigation, and dropdowns just to name a few.
+[Essentials](https://jacobxperez.github.io/essentials/) is a base CSS framework build with [LESS](http://lesscss.org/) intended to be used by small scale web projects. It contains all necessary components to build a website this includes a grid system, typography, navigation, and dropdowns.
 
 ### Project Status
 
@@ -34,7 +34,7 @@ Start by **[downloading](https://github.com/jacobxperez/essentials/archive/maste
 
 ### Default Build
 
-The easiest way to include [Essentials](https://jacobxperez.github.io/essentials/) in your projects is by copying the pre-compiled CSS file into your project folder and then link to it in HTML.
+The easiest way to include [Essentials](https://jacobxperez.github.io/essentials/) in your projects is by copying the pre-compiled [CSS](https://github.com/jacobxperez/essentials/blob/master/css/style.css) file into your project folder and then link to it in HTML.
 
 * [/css/style.css](https://github.com/jacobxperez/essentials/blob/master/css/style.css)
 
@@ -42,8 +42,9 @@ The easiest way to include [Essentials](https://jacobxperez.github.io/essentials
 
 [Essentials](https://jacobxperez.github.io/essentials/) is built on [LESS](http://lesscss.org/) which extends the capabilities of CSS. To import [custom](https://github.com/jacobxperez/essentials/tree/master/css/less/components/custom) modules use the file [custom.less](https://github.com/jacobxperez/essentials/blob/master/css/custom.less) then compile everything with the file [style.less](https://github.com/jacobxperez/essentials/blob/master/css/style.less) to produce the final [CSS](https://github.com/jacobxperez/essentials/blob/master/css/style.css).
 
-* [/css/style.less](https://github.com/jacobxperez/essentials/blob/master/css/style.less)
-* [/css/custom.less](https://github.com/jacobxperez/essentials/blob/master/css/custom.less)
+* [/css](https://github.com/jacobxperez/essentials/tree/master/css)
+    * [style.less](https://github.com/jacobxperez/essentials/blob/master/css/style.less) (compiling final [CSS](https://github.com/jacobxperez/essentials/blob/master/css/style.css))
+    * [custom.less](https://github.com/jacobxperez/essentials/blob/master/css/custom.less) (custom imports)
 
 All components and dependencies can be found under folder [less](https://github.com/jacobxperez/essentials/tree/master/css/less). To ensure future compatibility each module has been assigned a unique version.
 
@@ -72,7 +73,7 @@ The [variables](https://github.com/jacobxperez/essentials/tree/master/css/less/v
 * [/css/less](https://github.com/jacobxperez/essentials/tree/master/css/less)
     * [variables](https://github.com/jacobxperez/essentials/tree/master/css/less/variables)
 
-To maintain [style.less](https://github.com/jacobxperez/essentials/blob/master/css/style.less) more manageable the folder [imports](https://github.com/jacobxperez/essentials/tree/master/css/less/imports) contains imports such as mixins, variables, and components separated by type.
+To maintain [style.less](https://github.com/jacobxperez/essentials/blob/master/css/style.less) more manageable the folder [imports](https://github.com/jacobxperez/essentials/tree/master/css/less/imports) contains imports regarding mixin files, variable files, and components separated by type.
 
 * [/css/less](https://github.com/jacobxperez/essentials/tree/master/css/less)
     * [imports](https://github.com/jacobxperez/essentials/tree/master/css/less/imports)

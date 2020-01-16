@@ -1,6 +1,6 @@
 # [Essentials](https://jacobxperez.github.io/essentials/)
 
-Base CSS Framework — Built with LESS
+Modular CSS Framework — Built with LESS
 
 ## Table of Contents
 
@@ -18,7 +18,7 @@ Base CSS Framework — Built with LESS
 
 ## About
 
-[Essentials](https://jacobxperez.github.io/essentials/) is a base CSS framework build with [LESS](http://lesscss.org/) intended to be used by small scale web projects. It contains all necessary components to build a website this includes a grid system, typography, navigation, and dropdowns.
+[Essentials](https://jacobxperez.github.io/essentials/) is a modular CSS framework build with [LESS](http://lesscss.org/) intended to be used by small scale web projects. It contains all necessary components to build a website this includes a grid system, typography, navigation, and dropdowns.
 
 ### Project Status
 

@@ -1141,28 +1141,12 @@ body > .container:last-child {
     margin-bottom: 0;
 }
 
-.nav > li {
-    float: left;
-}
-
-.nav > li:last-child {
-    margin-right: -0.625em;
-}
-
 .nav a {
     padding: .625em .875em;
 }
 
 .nav-inline > li {
-    display: inline-block;
-}
-
-.nav-list .nav-title {
-    margin-bottom: 1.5em;
-}
-
-.nav-title {
-    font-weight: 700;
+    float: left;
 }
 
 .nav-link {

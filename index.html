@@ -48,7 +48,11 @@
             <nav class="large-3 medium-2 columns">
                 <ul class="nav-list">
                     <li class="nav-title">On this page</li>
-                    <li><a class="nav-link" href="#about">About</a></li>
+                    <li><a class="nav-link" href="#about">About</a>
+                        <ul>
+                            <li><a href="#project-status">Project Status</a></li>
+                        </ul>
+                    </li>
                     <li><a class="nav-link" href="#getting-started">Getting Started</a>
                         <ul>
                             <li><a class="nav-link" href="#default-build">Default Build</a></li>
@@ -70,67 +74,123 @@
             <main class="large-9 medium-6 columns" role="main">
                 <h2 id="about">About</h2>
 
-                <p>Essentials is a modular CSS framework build with <a href="http://lesscss.org/" rel="nofollow">LESS</a> intended to be used by small scale web projects. It contains all necessary components to build a website this includes a grid system,
-                    typography, navigation, and dropdowns just to name a few.</p>
+                <p>Essentials is a modular CSS framework build with <a href="http://lesscss.org/" rel="nofollow">LESS</a> It contains all necessary components to build a website this includes a grid system, typography, navigation, dropdowns, and
+                    mixins.</p>
+
+                <h3 id="project-status">Project Status</h3>
+
+                <p>Project under active development. We will be releasing daily to weekly iterations called <a href="https://github.com/jacobxperez/essentials/releases">snapshots</a> rather then releasing a version each module has been assigned a
+                    unique version.</p>
 
                 <h2 id="getting-started">Getting Started</h2>
+
                 <p>Start by <strong><a href="https://github.com/jacobxperez/essentials/archive/master.zip">downloading</a></strong> the <a href="https://github.com/jacobxperez/essentials">repository</a> or by cloning the project:</p>
                 <pre><code>$ git clone https://github.com/jacobxperez/essentials.git
 </code></pre>
-                <p><em>Keep in mind that this project is under active development, no stable version has been released.</em></p>
 
                 <h3 id="default-build">Default Build</h3>
+
                 <p>The easiest way to include <a href="https://jacobxperez.github.io/essentials/" rel="nofollow">Essentials</a> in your projects is by copying the pre-compiled CSS file into your project folder and then link to it in HTML.</p>
+
                 <ul>
                     <li><a href="https://github.com/jacobxperez/essentials/blob/master/css/style.css">/css/style.css</a></li>
                 </ul>
 
                 <h3 id="custom-build">Custom Build</h3>
-                <p><a href="https://jacobxperez.github.io/essentials/" rel="nofollow">Essentials</a> is built on <a href="http://lesscss.org/" rel="nofollow">LESS</a> which extends the capabilities of CSS. Use <a
-                        href="https://github.com/jacobxperez/essentials/blob/master/css/style.less">style.less</a> for compiling all necessary modules for your website. To ensure future compatibility each module has been assigned a unique version.</p>
+
+                <p><a href="https://jacobxperez.github.io/essentials/" rel="nofollow">Essentials</a> is built on <a href="http://lesscss.org/" rel="nofollow">LESS</a> which extends the capabilities of CSS. To import <a
+                        href="https://github.com/jacobxperez/essentials/tree/master/css/less/components/custom">custom</a> modules use the file <a href="https://github.com/jacobxperez/essentials/blob/master/css/custom.less">custom.less</a> then
+                    compile everything with the file <a href="https://github.com/jacobxperez/essentials/blob/master/css/style.less">style.less</a> to produce the final <a
+                        href="https://github.com/jacobxperez/essentials/blob/master/css/style.css">CSS</a>.</p>
                 <ul>
-                    <li>
-                        <a href="https://github.com/jacobxperez/essentials/blob/master/css/style.less">/css/style.less</a>
+                    <li><a href="https://github.com/jacobxperez/essentials/tree/master/css">/css</a>
+                        <ul>
+                            <li><a href="https://github.com/jacobxperez/essentials/blob/master/css/style.less">style.less</a> (compiling final <a href="https://github.com/jacobxperez/essentials/blob/master/css/style.css">CSS</a>)</li>
+                            <li><a href="https://github.com/jacobxperez/essentials/blob/master/css/custom.less">custom.less</a> (custom imports)</li>
+                        </ul>
                     </li>
                 </ul>
-                <p>All components and dependencies can be found under folder <a href="https://github.com/jacobxperez/essentials/tree/master/css/less">less</a>. The folder <a
-                        href="https://github.com/jacobxperez/essentials/tree/master/css/less/components">components</a> contains all CSS modules organized by type. The folder <a
-                        href="https://github.com/jacobxperez/essentials/tree/master/css/less/mixins">mixins</a> is where all LESS functions are kept and the folder <a
-                        href="https://github.com/jacobxperez/essentials/tree/master/css/less/variables">variables</a> has all necessary files to adjust the settings of your website.</p>
+
+                <p>All components and dependencies can be found under folder <a href="https://github.com/jacobxperez/essentials/tree/master/css/less">less</a>. To ensure future compatibility each module has been assigned a unique version.</p>
+
                 <ul>
                     <li><a href="https://github.com/jacobxperez/essentials/tree/master/css/less">/css/less</a>
                         <ul>
                             <li><a href="https://github.com/jacobxperez/essentials/tree/master/css/less/components">components</a></li>
                             <li><a href="https://github.com/jacobxperez/essentials/tree/master/css/less/mixins">mixins</a></li>
                             <li><a href="https://github.com/jacobxperez/essentials/tree/master/css/less/variables">variables</a></li>
+                            <li><a href="https://github.com/jacobxperez/essentials/tree/master/css/less/imports">imports</a></li>
                         </ul>
                     </li>
                 </ul>
-                <p>We recommend adding extra modules under folder <a href="https://github.com/jacobxperez/essentials/tree/master/css/less/components/custom">custom</a> then link to them on file <a
-                        href="https://github.com/jacobxperez/essentials/blob/master/css/style.less">style.less</a> for compiling.</p>
+
+                <p>The <a href="https://github.com/jacobxperez/essentials/tree/master/css/less/components">components</a> folder has all CSS modules organized by type. We recommend adding extra modules under folder <a
+                        href="https://github.com/jacobxperez/essentials/tree/master/css/less/components/custom">custom</a> then link to them on file <a href="https://github.com/jacobxperez/essentials/blob/master/css/custom.less">custom.less</a> for
+                    compiling.</p>
+
                 <ul>
                     <li><a href="https://github.com/jacobxperez/essentials/tree/master/css/less/components">/css/less/components</a>
                         <ul>
                             <li><a href="https://github.com/jacobxperez/essentials/tree/master/css/less/components/custom">custom</a></li>
+                            <li><a href="https://github.com/jacobxperez/essentials/tree/master/css/less/components/layout">layout</a></li>
+                            <li><a href="https://github.com/jacobxperez/essentials/tree/master/css/less/components/modules">modules</a></li>
+                            <li><a href="https://github.com/jacobxperez/essentials/tree/master/css/less/components/navigation">navigation</a></li>
+                            <li><a href="https://github.com/jacobxperez/essentials/tree/master/css/less/components/reset">reset</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <p>The <a href="https://github.com/jacobxperez/essentials/tree/master/css/less/mixins">mixins</a> folder is where all LESS functions are kept.</p>
+
+                <ul>
+                    <li><a href="https://github.com/jacobxperez/essentials/tree/master/css/less">/css/less</a>
+                        <ul>
+                            <li><a href="https://github.com/jacobxperez/essentials/tree/master/css/less/mixins">mixins</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <p>The <a href="https://github.com/jacobxperez/essentials/tree/master/css/less/variables">variables</a> folder has all necessary files to adjust the settings of your website.</p>
+
+                <ul>
+                    <li><a href="https://github.com/jacobxperez/essentials/tree/master/css/less">/css/less</a>
+                        <ul>
+                            <li><a href="https://github.com/jacobxperez/essentials/tree/master/css/less/variables">variables</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <p>To maintain <a href="https://github.com/jacobxperez/essentials/blob/master/css/style.less">style.less</a> more manageable the folder <a href="https://github.com/jacobxperez/essentials/tree/master/css/less/imports">imports</a>
+                    contains imports regarding mixin files, variable files, and components separated by type.</p>
+
+                <ul>
+                    <li><a href="https://github.com/jacobxperez/essentials/tree/master/css/less">/css/less</a>
+                        <ul>
+                            <li><a href="https://github.com/jacobxperez/essentials/tree/master/css/less/imports">imports</a></li>
                         </ul>
                     </li>
                 </ul>
 
                 <h2 id="contributing">Contributing</h2>
+
                 <p>Help us make <a href="https://jacobxperez.github.io/essentials/" rel="nofollow">Essentials</a> better for everyone, any contribution will be considered. Use the <a href="https://github.com/jacobxperez/essentials/issues">issue
                         tracker</a> for bug reports, feature requests and submitting pull requests. Please read our <a href="#design-principles">Design Principles</a> to better understand the nature and the direction of the project.</p>
 
                 <h3 id="bug-reports">Bug Reports</h3>
+
                 <p>Please try to be as detailed as possible in your report. What is your environment? What steps will reproduce the issue? What browser(s) and OS experience the problem? What would you expect to be the outcome? All these details will
                     help us fix any potential bugs.</p>
 
                 <h3><a id="feature-requests" href="#feature-requests"></a>Feature Requests</h3>
+
                 <p>Before opening a feature request, please take a moment to find out whether your idea fits with the scope and aims of the project. It's up to you to make a strong case to convince the project's developers of the merits of this
                     feature. Please provide as much detail and context as possible.</p>
 
                 <h3 id="pull-requests">Pull Requests</h3>
+
                 <p>Please ask first before embarking on any significant pull request (e.g. implementing features, refactoring code, porting to a different language), otherwise you risk spending a lot of time working on something that the project's
                     developers might not want to merge into the project. When contributing code to this project always ask yourself these questions.</p>
+
                 <ul>
                     <li>Is it essential?</li>
                     <li>Will it add value?</li>
@@ -138,22 +198,29 @@
                 </ul>
 
                 <h2 id="design-principles">Design Principles</h2>
+
                 <p>Leo Babauta demonstrates in his book The Power of Less how to streamline your life by identifying the essential and eliminating the unnecessary. By focusing on the essential and allowing everything else to drop away you will become
                     less stressed and more productive.</p>
+
                 <ol>
                     <li>Identify the essential</li>
                     <li>Eliminate the rest</li>
                 </ol>
+
                 <blockquote>
                     <p>Perfection is achieved, not when there is nothing more to add, but when there is nothing left to take away. <small>Antoine de Saint-Exupery</small></p>
                 </blockquote>
 
                 <h2 id="license">LICENSE</h2>
+
                 <p>Copyright (C) 2020 <a href="https://github.com/jacobxperez">Jacob Perez</a></p>
+
                 <p>Licensed under the <a href="http://www.apache.org/licenses/LICENSE-2.0" rel="nofollow">Apache License, Version 2.0</a> (the "License");
                     you may not use this file except in compliance with the License.
                     You may obtain a copy of the License at</p>
+
                 <p><a href="http://www.apache.org/licenses/LICENSE-2.0" rel="nofollow">http://www.apache.org/licenses/LICENSE-2.0</a></p>
+
                 <p>Unless required by applicable law or agreed to in writing, software
                     distributed under the License is distributed on an "AS IS" BASIS,
                     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.

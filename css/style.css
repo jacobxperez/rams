@@ -1498,13 +1498,15 @@ body > .container:last-child {
 }
 
 [class^="icon-"]:before {
+    position: relative;
     display: inline-block;
     font-family: "icons";
-    font-size: 93.75%;
+    font-size: 100%;
     font-style: normal;
     font-weight: normal;
     font-variant: normal;
     line-height: .625;
+    top: .125em;
     text-transform: none;
     speak: none;
 }

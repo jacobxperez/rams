@@ -4,13 +4,15 @@
 .font-face(@icon-font-name; @icon-font-path);
 
 [class^="@{icon-class}-"]:before {
+    position: relative;
     display: inline-block;
     font-family: @icon-font-name;
     .font-size(@icon-font-size);
     font-style: normal;
     font-weight: normal;
     font-variant: normal;
-    .line-height(@icon-line-height);
+    .line-height(@icon-line-height, @base: @icon-font-size);
+    .top(2px, @base: @icon-font-size);
     text-transform: none;
     speak: none;
 }

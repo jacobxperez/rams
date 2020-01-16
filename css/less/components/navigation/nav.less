@@ -55,14 +55,19 @@
 .nav-link {
     color: @nav-link-color;
     display: block;
+    .transition();
+
+    &:focus {
+        outline: 0;
+    }
+
+    &:hover {
+        text-decoration: none;
+    }
 }
 
-.active,
+.nav-link-active,
 .nav-link:focus,
 .nav-link:hover {
     color: @nav-link-color-hover;
-}
-
-.nav-link:hover {
-    text-decoration: none;
 }

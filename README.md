@@ -56,6 +56,7 @@ The [components](https://github.com/jacobxperez/essentials/tree/master/css/less/
 
 * [/css/less/components](https://github.com/jacobxperez/essentials/tree/master/css/less/components)
     * [custom](https://github.com/jacobxperez/essentials/tree/master/css/less/components/custom)
+    * [dropdown](https://github.com/jacobxperez/essentials/tree/master/css/less/components/dropdown)
     * [layout](https://github.com/jacobxperez/essentials/tree/master/css/less/components/layout)
     * [modules](https://github.com/jacobxperez/essentials/tree/master/css/less/components/modules)
     * [navigation](https://github.com/jacobxperez/essentials/tree/master/css/less/components/navigation)

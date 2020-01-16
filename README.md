@@ -106,7 +106,6 @@ Leo Babauta demonstrates in his book The Power of Less how to streamline your li
 2. Eliminate the rest
 
 > Perfection is achieved, not when there is nothing more to add, but when there is nothing left to take away.
->
 > — Antoine de Saint-Exupery
 
 ## LICENSE

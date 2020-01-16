@@ -30,8 +30,6 @@ Start by **[downloading](https://github.com/jacobxperez/essentials/archive/maste
 
     $ git clone https://github.com/jacobxperez/essentials.git
 
-*Keep in mind that this project is under active development and no stable version has been released.*
-
 ### Default Build
 
 The easiest way to include [Essentials](https://jacobxperez.github.io/essentials/) in your projects is by copying the pre-compiled [CSS](https://github.com/jacobxperez/essentials/blob/master/css/style.css) file into your project folder and then link to it in HTML.

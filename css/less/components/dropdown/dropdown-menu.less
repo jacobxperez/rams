@@ -23,9 +23,15 @@
 // ----------------------------------------------------------------------------/
 
 @media screen and (max-width: @breakpoint-medium-max) {
-    .navbar .dropdown-box {
-        left: 0;
-        right: 0;
-        width: 100%;
+    .navbar {
+        .dropdown {
+            position: static;
+        }
+
+        .dropdown-box {
+            left: 0;
+            right: 0;
+            width: 100%;
+        }
     }
 }

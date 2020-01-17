@@ -1209,7 +1209,7 @@ body > .container:last-child {
 }
 
 .dropdown {
-    position: static;
+    position: relative;
     list-style-type: none;
 }
 
@@ -1262,6 +1262,10 @@ body > .container:last-child {
     opacity: .98;
 }
 @media screen and (max-width: 61.1875em) {
+    .navbar .dropdown {
+        position: static;
+    }
+
     .navbar .dropdown-box {
         left: 0;
         right: 0;
@@ -1375,6 +1379,14 @@ body > .container:last-child {
 
 .bottom {
     bottom: 100%;
+}
+
+.left {
+    left:: 0;
+}
+
+.right {
+    right: 0;
 }
 
 .indent {

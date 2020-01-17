@@ -2,8 +2,6 @@
 // ----------------------------------------------------------------------------/
 .navbar {
     .dropdown-box {
-        left: 0;
-        right: 0;
         border: 0;
         background-color: lighten(@navbar-background-color, 2%);
         .text-shadow();
@@ -26,6 +24,8 @@
 
 @media screen and (max-width: @breakpoint-medium-max) {
     .navbar .dropdown-box {
+        left: 0;
+        right: 0;
         width: 100%;
     }
 }

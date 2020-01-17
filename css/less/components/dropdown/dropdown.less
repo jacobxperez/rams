@@ -3,33 +3,19 @@
 .dropdown {
     position: static;
     list-style-type: none;
-
-    > [class^="@{icon-class}-"] {
-        .padding-top(10px; 24px);
-        .padding-bottom(10px; 24px);
-        .font-size(24px);
-        .line-height(24px; 24px);
-    }
 }
 
 .dropdown-box {
     position: absolute;
-    .min-width(160px);
+    .min-width(@dropdown-box-min-width);
     .border();
-    background-color: @background-color;
+    background-color: @dropdown-box-background-color;
     font-style: normal;
     font-weight: 400;
     text-align: left;
     visibility: hidden;
     .transition();
     z-index: 100;
-}
-
-.fixed-top,
-.sticky-top {
-    .dropdown-box {
-        top: 100%;
-    }
 }
 
 .fixed-bottom {

@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function() {
         if (e.target != getDropdown) {
 
             for (i = 0; i < dropdownLength; i++) {
-                // removes class drop from dropdown
+                // removes class drop from all dropdowns
                 getDropdown[i].classList.remove("drop");
             }
 

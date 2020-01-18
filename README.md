@@ -58,8 +58,8 @@ The [components](https://github.com/jacobxperez/essentials/tree/master/css/less/
     * [custom](https://github.com/jacobxperez/essentials/tree/master/css/less/components/custom)
     * [dropdown](https://github.com/jacobxperez/essentials/tree/master/css/less/components/dropdown)
     * [layout](https://github.com/jacobxperez/essentials/tree/master/css/less/components/layout)
-    * [modules](https://github.com/jacobxperez/essentials/tree/master/css/less/components/modules)
     * [navigation](https://github.com/jacobxperez/essentials/tree/master/css/less/components/navigation)
+    * [other](https://github.com/jacobxperez/essentials/tree/master/css/less/components/other)
     * [reset](https://github.com/jacobxperez/essentials/tree/master/css/less/components/reset)
 
 The [mixins](https://github.com/jacobxperez/essentials/tree/master/css/less/mixins) folder is where all LESS functions are kept.

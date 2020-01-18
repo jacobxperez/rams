@@ -1425,6 +1425,7 @@ body > .container:last-child {
         float: right;
     }
 
+    .hide-medium-down,
     .hide-small,
     .show-large,
     .show-medium {
@@ -1441,6 +1442,7 @@ body > .container:last-child {
     }
 
     .hide-medium,
+    .hide-medium-down,
     .hide-medium-up,
     .show-large,
     .show-small {

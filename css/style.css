@@ -1246,6 +1246,7 @@ body > .container:last-child {
     min-width: 10em;
     border: .0625em solid rgba(0, 0, 0, 0.3);
     background-color: #fff;
+    font-size: 1rem;
     font-style: normal;
     font-weight: 400;
     text-align: left;

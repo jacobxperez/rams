@@ -12,16 +12,14 @@
         width: @a;
     }
 
-    & when (@unit = vw),
-    (@unit = vh) {
+    & when (@unit = vw), (@unit = vh) {
         @a: unit(((@width / @base) * 100), @unit);
         width: @a;
     }
 }
 
 .max-width(@width; @base: @base-font-size; @unit: em) {
-    & when (@unit = em),
-    (@unit = rem) {
+    & when (@unit = em), (@unit = rem) {
         @a: unit((@width / @base), @unit);
         max-width: @a;
     }
@@ -31,16 +29,14 @@
         max-width: @a;
     }
 
-    & when (@unit = vw),
-    (@unit = vh) {
+    & when (@unit = vw), (@unit = vh) {
         @a: unit(((@width / @base) * 100), @unit);
         max-width: @a;
     }
 }
 
 .min-width(@width; @base: @base-font-size; @unit: em) {
-    & when (@unit = em),
-    (@unit = rem) {
+    & when (@unit = em), (@unit = rem) {
         @a: unit((@width / @base), @unit);
         min-width: @a;
     }
@@ -50,8 +46,7 @@
         min-width: @a;
     }
 
-    & when (@unit = vw),
-    (@unit = vh) {
+    & when (@unit = vw), (@unit = vh) {
         @a: unit(((@width / @base) * 100), @unit);
         min-width: @a;
     }

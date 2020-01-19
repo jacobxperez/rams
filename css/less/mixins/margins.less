@@ -4,8 +4,7 @@
 
     & when not (@top = off) {
 
-        & when (@unit = em),
-        (@unit = rem) {
+        & when (@unit = em), (@unit = rem) {
             @a: unit((@top / @base), @unit);
             @b: unit((@right / @base), @unit);
             @c: unit((@bottom / @base), @unit);
@@ -29,8 +28,7 @@
 
     & when not (@top = off) {
 
-        & when (@unit = em),
-        (@unit = rem) {
+        & when (@unit = em), (@unit = rem) {
             @a: unit((@top / @base), @unit);
             margin-top: @a;
         }
@@ -48,8 +46,7 @@
 
     & when not (@right = off) {
 
-        & when (@unit = em),
-        (@unit = rem) {
+        & when (@unit = em), (@unit = rem) {
             @a: unit((@right / @base), @unit);
             margin-right: @a;
         }
@@ -67,8 +64,7 @@
 
     & when not (@bottom = off) {
 
-        & when (@unit = em),
-        (@unit = rem) {
+        & when (@unit = em), (@unit = rem) {
             @a: unit((@bottom / @base), @unit);
             margin-bottom: @a;
         }
@@ -86,8 +82,7 @@
 
     & when not (@left = off) {
 
-        & when (@unit = em),
-        (@unit = rem) {
+        & when (@unit = em), (@unit = rem) {
             @a: unit((@left / @base), @unit);
             margin-left: @a;
         }

@@ -33,14 +33,12 @@
             font-size: @a;
         }
 
-        & when (@unit = vw),
-        (@unit = vh) {
+        & when (@unit = vw), (@unit = vh) {
             @a: unit(((@size / @base) * 100), @unit);
             font-size: @a;
         }
 
-        & when (@unit = em),
-        (@unit = rem) {
+        & when (@unit = em), (@unit = rem) {
             @a: unit((@size / @base), @unit);
             font-size: @a;
         }
@@ -61,8 +59,7 @@
 
     & when not (@height = off) {
 
-        & when (@unit = em),
-        (@unit = rem) {
+        & when (@unit = em), (@unit = rem) {
             @a: unit((@height / @base), @unit);
             line-height: @a;
         }
@@ -85,9 +82,10 @@
 // Text Indent V1.0
 // -----------------------------------------------------------------------------
 .text-indent (@text-indent: @indent; @base: @base-font-size; @unit: em) {
-    & when (@unit = em),
-    (@unit = rem) {
+
+    & when (@unit = em), (@unit = rem) {
         @a: unit((@text-indent / @base), @unit);
         text-indent: @a;
     }
+
 }

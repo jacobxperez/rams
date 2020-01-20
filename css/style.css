@@ -1171,11 +1171,13 @@ body > .container:last-child {
 
 .nav-breadcrumb li::after {
     content: " /";
+    margin-right: .25em;
 }
 
 .nav-breadcrumb li:last-child::after,
 .nav-breadcrumb li:only-child::after {
     content: "";
+    margin-right: 0;
 }
 
 .navbar {

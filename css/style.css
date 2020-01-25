@@ -441,6 +441,8 @@ html input[disabled]:hover {
     text-decoration: none;
 }
 
+.container-full:after,
+.container-full:before,
 .container:after,
 .container:before,
 .row:after,
@@ -449,6 +451,7 @@ html input[disabled]:hover {
     display: table;
 }
 
+.container-full:after,
 .container:after,
 .row:after {
     clear: both;
@@ -492,14 +495,14 @@ body > .container:last-child {
         max-width: 42.5em;
     }
 }
-@media screen and (min-height: 120em) {
+@media screen and (min-height: 100em) {
     html {
-        font-size: .83333333vh;
+        font-size: 1vh;
     }
 }
-@media screen and (min-width: 120em) {
+@media screen and (min-width: 100em) {
     html {
-        font-size: .83333333vw;
+        font-size: 1vw;
     }
 }
 

@@ -9,9 +9,47 @@ document.addEventListener("DOMContentLoaded", function() {
     // Var counter
     let i;
 
+    // Accordion v1.0
+    const
+        getAccordion = document.querySelectorAll(".js-dropdown-accordion"),
+        accordionLength = getAccordion.length;
+
+    for (i = 0; i < accordionLength; i++) {
+
+        getAccordion[i].addEventListener("click", function(e) {
+            e.stopPropagation();
+
+            // add class show
+            if (this.classList.contains("show") === false) {
+
+                this.classList.add("show");
+                console.log("Add class show");
+
+            } else {
+                const thisChildren = this.children;
+
+                if (this.classList.contains("show") === true) {
+
+                    for (i = 0; i < thisChildren.length; i++) {
+
+                        if (thisChildren[i].classList.contains("accordion-box") === true) {
+                            console.log("True");
+                        }
+
+                    }
+
+                    this.classList.remove("show");
+                    console.log("Remove class show");
+                }
+
+            }
+        });
+
+    }
+
     // Dropdown v1.0
     const
-        getDropdown = document.querySelectorAll(".dropdown"),
+        getDropdown = document.querySelectorAll(".js-dropdown"),
         dropdownLength = getDropdown.length;
 
     for (i = 0; i < dropdownLength; i++) {
@@ -19,16 +57,16 @@ document.addEventListener("DOMContentLoaded", function() {
         getDropdown[i].addEventListener("click", function(e) {
             e.stopPropagation();
 
-            if (!this.classList.contains("drop")) {
+            // add class show
+            if (!this.classList.contains("show")) {
 
-                this.classList.add("drop");
+                this.classList.add("show");
 
             } else {
 
-                this.classList.remove("drop");
+                this.classList.remove("show");
 
             }
-
         });
 
     }
@@ -36,13 +74,11 @@ document.addEventListener("DOMContentLoaded", function() {
     // Hide dropdown on window click
     document.addEventListener("click", function(e) {
         // check if target is not dropdown
-        if (e.target != getDropdown) {
-
+        if (e.target !== getDropdown) {
             for (i = 0; i < dropdownLength; i++) {
                 // removes class drop from all dropdowns
-                getDropdown[i].classList.remove("drop");
+                getDropdown[i].classList.remove("show");
             }
-
         }
 
     });

@@ -1,21 +1,26 @@
-// Dropdown Navbar V1.0
+// Navbar Dropdown V1.0
 // ----------------------------------------------------------------------------/
-.navbar {
-    .dropdown-box {
-        border: 0;
-        background-color: lighten(@navbar-background-color, 2%);
-        .text-shadow();
-        opacity: 0;
-        z-index: 1000;
 
-        .nav-link {
-            .padding-left(@wrapper-padding);
-            .padding-right(@wrapper-padding);
-        }
+.navbar-box {
+    border: 0;
+    background-color: lighten(@navbar-background-color, 2%);
+    .text-shadow();
+    opacity: 0;
+    z-index: 1000;
+
+    .nav-link {
+        .padding-left(@wrapper-padding);
+        .padding-right(@wrapper-padding);
     }
 }
 
-.navbar .drop > .dropdown-box {
+.fixed-bottom {
+    .navbar-box {
+        bottom: 100%;
+    }
+}
+
+.show > .navbar-box {
     opacity: 0.98;
 }
 
@@ -24,15 +29,15 @@
 // ----------------------------------------------------------------------------/
 
 @media screen and (max-width: @breakpoint-medium-max) {
-    .navbar {
-        .dropdown {
-            position: static;
-        }
 
-        .dropdown-box {
-            left: 0;
-            right: 0;
-            width: 100%;
-        }
+    .navbar-dropdown {
+        position: static;
     }
+
+    .navbar-box {
+        left: 0;
+        right: 0;
+        width: 100%;
+    }
+
 }

@@ -32,13 +32,13 @@ document.addEventListener("DOMContentLoaded", function() {
                             // return;
                         }
 
-                    }
+                    } // end for loop
 
                     this.classList.remove("show");
                     console.log("Remove class show");
-                }
+                } // last if
             });
-        }
+        } // end for loop
     })();
     // end Accordion
 
@@ -62,20 +62,19 @@ document.addEventListener("DOMContentLoaded", function() {
 
                     this.classList.remove("show");
 
-                }
+                } // last if
             });
-        }
+        } // end for loop
 
         // Hide dropdown on window click
         document.addEventListener("click", function(e) {
             // check if target is not dropdown
             if (e.target !== getDropdown) {
                 for (let i = 0; i < dropdownLength; i++) {
-                    // removes class drop from all dropdowns
+                    // removes class show from all dropdowns
                     getDropdown[i].classList.remove("show");
-                }
+                } // end for loop
             }
-
         });
     })();
     // end Dropdown
@@ -95,8 +94,8 @@ document.addEventListener("DOMContentLoaded", function() {
                 });
 
             });
-        }
+        } // end for loop
     })();
     // end Smooth Scroll v1.0
 
-});
+}); // end Script

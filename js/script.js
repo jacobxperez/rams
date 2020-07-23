@@ -3,37 +3,33 @@
  * Licensed under the Apache License, Version 2.0
  * http://www.apache.org/licenses/LICENSE-2.0
 ------------------------------------------------------------------------------*/
-
 document.addEventListener("DOMContentLoaded", function() {
 
-    // Var counter
-    let i;
-
     // Accordion v1.0
-    const
-        getAccordion = document.querySelectorAll(".js-dropdown-accordion"),
-        accordionLength = getAccordion.length;
+    (function () {
+        const getAccordion = document.querySelectorAll(".js-toggle-accordion"),
+              accordionLength = getAccordion.length;
 
-    for (i = 0; i < accordionLength; i++) {
+        for (let i = 0; i < accordionLength; i++) {
 
-        getAccordion[i].addEventListener("click", function(e) {
-            e.stopPropagation();
+            getAccordion[i].addEventListener("click", function(e) {
+                e.stopPropagation();
 
-            // add class show
-            if (this.classList.contains("show") === false) {
+                // toggle class show
+                if (this.classList.contains("show") === false) {
 
-                this.classList.add("show");
-                console.log("Add class show");
+                    this.classList.add("show");
+                    console.log("Add class show");
+                    return;
 
-            } else {
-                const thisChildren = this.children;
+                } if (this.classList.contains("show") === true) {
+                    const thisChildren = this.children;
 
-                if (this.classList.contains("show") === true) {
-
-                    for (i = 0; i < thisChildren.length; i++) {
+                    for (let i = 0; i < thisChildren.length; i++) {
 
                         if (thisChildren[i].classList.contains("accordion-box") === true) {
                             console.log("True");
+                            // return;
                         }
 
                     }
@@ -41,62 +37,66 @@ document.addEventListener("DOMContentLoaded", function() {
                     this.classList.remove("show");
                     console.log("Remove class show");
                 }
+            });
+        }
+    })();
+    // end Accordion
 
-            }
-        });
-
-    }
 
     // Dropdown v1.0
-    const
-        getDropdown = document.querySelectorAll(".js-dropdown"),
-        dropdownLength = getDropdown.length;
+    (function () {
+        const getDropdown = document.querySelectorAll(".js-toggle-dropdown"),
+              dropdownLength = getDropdown.length;
 
-    for (i = 0; i < dropdownLength; i++) {
+        for (let i = 0; i < dropdownLength; i++) {
+            getDropdown[i].addEventListener("click", function(e) {
+                e.stopPropagation();
 
-        getDropdown[i].addEventListener("click", function(e) {
-            e.stopPropagation();
+                // toggle class show
+                if (this.classList.contains("show") === false) {
 
-            // add class show
-            if (!this.classList.contains("show")) {
+                    this.classList.add("show");
+                    return;
 
-                this.classList.add("show");
+                } if (this.classList.contains("show") === true) {
 
-            } else {
+                    this.classList.remove("show");
 
-                this.classList.remove("show");
-
-            }
-        });
-
-    }
-
-    // Hide dropdown on window click
-    document.addEventListener("click", function(e) {
-        // check if target is not dropdown
-        if (e.target !== getDropdown) {
-            for (i = 0; i < dropdownLength; i++) {
-                // removes class drop from all dropdowns
-                getDropdown[i].classList.remove("show");
-            }
+                }
+            });
         }
 
-    });
-
-    // Smooth scroll v1.0
-    const intLinks = document.querySelectorAll("a[href^='#']");
-
-    for (i = 0; i < intLinks.length; i++) {
-        intLinks[i].addEventListener("click", function(e) {
-
-            e.preventDefault();
-
-            document.querySelector(this.getAttribute("href")).scrollIntoView({
-                behavior: "smooth"
-            });
+        // Hide dropdown on window click
+        document.addEventListener("click", function(e) {
+            // check if target is not dropdown
+            if (e.target !== getDropdown) {
+                for (let i = 0; i < dropdownLength; i++) {
+                    // removes class drop from all dropdowns
+                    getDropdown[i].classList.remove("show");
+                }
+            }
 
         });
+    })();
+    // end Dropdown
 
-    }
+
+    // Smooth Scroll v1.0
+    (function () {
+        const intLinks = document.querySelectorAll("a[href^='#']");
+
+        for (let i = 0; i < intLinks.length; i++) {
+            intLinks[i].addEventListener("click", function(e) {
+
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute("href")).scrollIntoView({
+                    behavior: "smooth"
+                });
+
+            });
+        }
+    })();
+    // end Smooth Scroll v1.0
 
 });

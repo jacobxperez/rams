@@ -7,10 +7,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Accordion v1.0
     (function () {
-        const getAccordion = document.querySelectorAll(".js-toggle-accordion"),
-              accordionLength = getAccordion.length;
+        const getAccordion = document.querySelectorAll(".js-toggle-accordion");
 
-        for (let i = 0; i < accordionLength; i++) {
+        for (let i = 0; i < getAccordion.length; i++) {
 
             getAccordion[i].addEventListener("click", function(e) {
                 e.stopPropagation();
@@ -29,7 +28,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
                         if (thisChildren[i].classList.contains("accordion-box") === true) {
                             console.log("True");
-                            // return;
                         }
 
                     } // end for loop
@@ -45,10 +43,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Dropdown v1.0
     (function () {
-        const getDropdown = document.querySelectorAll(".js-toggle-dropdown"),
-              dropdownLength = getDropdown.length;
+        const getDropdown = document.querySelectorAll(".js-toggle-dropdown");
 
-        for (let i = 0; i < dropdownLength; i++) {
+        for (let i = 0; i < getDropdown.length; i++) {
             getDropdown[i].addEventListener("click", function(e) {
                 e.stopPropagation();
 
@@ -70,7 +67,7 @@ document.addEventListener("DOMContentLoaded", function() {
         document.addEventListener("click", function(e) {
             // check if target is not dropdown
             if (e.target !== getDropdown) {
-                for (let i = 0; i < dropdownLength; i++) {
+                for (let i = 0; i < getDropdown.length; i++) {
                     // removes class show from all dropdowns
                     getDropdown[i].classList.remove("show");
                 } // end for loop
@@ -96,6 +93,6 @@ document.addEventListener("DOMContentLoaded", function() {
             });
         } // end for loop
     })();
-    // end Smooth Scroll v1.0
+    // end Smooth Scroll
 
 }); // end Script

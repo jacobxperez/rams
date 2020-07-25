@@ -12,29 +12,22 @@ document.addEventListener("DOMContentLoaded", function() {
         for (let i = 0; i < getAccordion.length; i++) {
 
             getAccordion[i].addEventListener("click", function(e) {
-                e.stopPropagation();
+                const getBox = getAccordion[i].querySelector(".accordion-box");
 
                 // toggle class show
                 if (this.classList.contains("show") === false) {
 
                     this.classList.add("show");
                     console.log("Add class show");
-                    return;
 
-                } if (this.classList.contains("show") === true) {
-                    const thisChildren = this.children;
-
-                    for (let i = 0; i < thisChildren.length; i++) {
-
-                        if (thisChildren[i].classList.contains("accordion-box") === true) {
-                            console.log("True");
-                        }
-
-                    } // end for loop
+                } else if (this.classList.contains("show") === true) {
 
                     this.classList.remove("show");
                     console.log("Remove class show");
+
                 } // last if
+
+                e.stopPropagation();
             });
         } // end for loop
     })();
@@ -47,19 +40,19 @@ document.addEventListener("DOMContentLoaded", function() {
 
         for (let i = 0; i < getDropdown.length; i++) {
             getDropdown[i].addEventListener("click", function(e) {
-                e.stopPropagation();
 
                 // toggle class show
                 if (this.classList.contains("show") === false) {
 
                     this.classList.add("show");
-                    return;
 
-                } if (this.classList.contains("show") === true) {
+                } else if (this.classList.contains("show") === true) {
 
                     this.classList.remove("show");
 
                 } // last if
+
+                e.stopPropagation();
             });
         } // end for loop
 

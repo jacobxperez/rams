@@ -18,14 +18,12 @@ document.addEventListener("DOMContentLoaded", function() {
                 if (this.classList.contains("show") === false) {
 
                     this.classList.add("show");
-                    console.log("Add class show");
 
                 } else if (this.classList.contains("show") === true) {
 
                     this.classList.remove("show");
-                    console.log("Remove class show");
 
-                } // last if
+                } // end if block
 
                 e.stopPropagation();
             });
@@ -50,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
                     this.classList.remove("show");
 
-                } // last if
+                } // end if block
 
                 e.stopPropagation();
             });

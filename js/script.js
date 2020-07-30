@@ -7,21 +7,20 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Accordion v1.0
     (function () {
-        const getAccordion = document.querySelectorAll(".js-toggle-accordion");
+        const getAccordion = document.querySelectorAll(".accordion-toggle");
 
         for (let i = 0; i < getAccordion.length; i++) {
 
             getAccordion[i].addEventListener("click", function(e) {
-                const getBox = getAccordion[i].querySelector(".accordion-box");
 
                 // toggle class show
-                if (this.classList.contains("show") === false) {
+                if (this.classList.contains("accordion-active") === false) {
 
-                    this.classList.add("show");
+                    this.classList.add("accordion-active");
 
-                } else if (this.classList.contains("show") === true) {
+                } else if (this.classList.contains("accordion-active") === true) {
 
-                    this.classList.remove("show");
+                    this.classList.remove("accordion-active");
 
                 } // end if block
 
@@ -34,19 +33,19 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Dropdown v1.0
     (function () {
-        const getDropdown = document.querySelectorAll(".js-toggle-dropdown");
+        const getDropdown = document.querySelectorAll(".dropdown-toggle");
 
         for (let i = 0; i < getDropdown.length; i++) {
             getDropdown[i].addEventListener("click", function(e) {
 
                 // toggle class show
-                if (this.classList.contains("show") === false) {
+                if (this.classList.contains("dropdown-active") === false) {
 
-                    this.classList.add("show");
+                    this.classList.add("dropdown-active");
 
-                } else if (this.classList.contains("show") === true) {
+                } else if (this.classList.contains("dropdown-active") === true) {
 
-                    this.classList.remove("show");
+                    this.classList.remove("dropdown-active");
 
                 } // end if block
 
@@ -60,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function() {
             if (e.target !== getDropdown) {
                 for (let i = 0; i < getDropdown.length; i++) {
                     // removes class show from all dropdowns
-                    getDropdown[i].classList.remove("show");
+                    getDropdown[i].classList.remove("dropdown-active");
                 } // end for loop
             }
         });

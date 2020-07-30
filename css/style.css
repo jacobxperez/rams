@@ -1231,7 +1231,7 @@ body > .container:last-child {
     z-index: 100;
 }
 
-.show + .dropdown-box {
+.dropdown-active + .dropdown-box {
     visibility: visible;
 }
 
@@ -1252,7 +1252,7 @@ body > .container:last-child {
     bottom: 100%;
 }
 
-.show + .navbar-box {
+.dropdown-active + .navbar-box {
     opacity: .98;
 }
 @media screen and (max-width: 61.1875em) {
@@ -1278,7 +1278,7 @@ body > .container:last-child {
     transition: all .3s ease-in-out 0s;
 }
 
-.show + .accordion-box {
+.accordion-active + .accordion-box {
     display: block;
 }
 

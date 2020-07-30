@@ -1,11 +1,16 @@
 // Accordion V1.0
 // ----------------------------------------------------------------------------/
+.accordion {
+    position: relative;
+    list-style-type: none;
+}
+
 .accordion-box {
     display: none;
     width: 100%;
     .transition();
 }
 
-.show > .accordion-box {
+.show + .accordion-box {
     display: block;
 }

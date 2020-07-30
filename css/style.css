@@ -1231,7 +1231,7 @@ body > .container:last-child {
     z-index: 100;
 }
 
-.show > .dropdown-box {
+.show + .dropdown-box {
     visibility: visible;
 }
 
@@ -1252,7 +1252,7 @@ body > .container:last-child {
     bottom: 100%;
 }
 
-.show > .navbar-box {
+.show + .navbar-box {
     opacity: .98;
 }
 @media screen and (max-width: 61.1875em) {
@@ -1267,13 +1267,18 @@ body > .container:last-child {
     }
 }
 
+.accordion {
+    position: relative;
+    list-style-type: none;
+}
+
 .accordion-box {
     display: none;
     width: 100%;
     transition: all .3s ease-in-out 0s;
 }
 
-.show > .accordion-box {
+.show + .accordion-box {
     display: block;
 }
 

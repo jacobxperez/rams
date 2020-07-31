@@ -1236,10 +1236,12 @@ body > .container:last-child {
 }
 
 .dropdown-menu {
+    position: absolute;
     z-index: 1000;
-    border: 0;
+    min-width: 10em;
     background-color: #272727;
     text-shadow: 0 .0625em .125em rgba(0, 0, 0, 0.3);
+    visibility: hidden;
     opacity: 0;
 }
 
@@ -1253,6 +1255,7 @@ body > .container:last-child {
 }
 
 .dropdown-active + .dropdown-menu {
+    visibility: visible;
     opacity: .98;
 }
 @media screen and (max-width: 61.1875em) {

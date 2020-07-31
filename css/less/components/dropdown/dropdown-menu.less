@@ -1,10 +1,12 @@
 // Dropdown Menu V1.0
 // ----------------------------------------------------------------------------/
 .dropdown-menu {
+    position: absolute;
     z-index: 1000;
-    border: 0;
+    .min-width(@dropdown-box-min-width);
     background-color: lighten(@navbar-background-color, 2%);
     .text-shadow();
+    visibility: hidden;
     opacity: 0;
 
     .nav-link {
@@ -20,6 +22,7 @@
 }
 
 .dropdown-active + .dropdown-menu {
+    visibility: visible;
     opacity: 0.98;
 }
 

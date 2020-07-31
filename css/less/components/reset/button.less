@@ -5,6 +5,7 @@ button,
 input[type=button],
 input[type="submit"] {
     position: relative;
+    z-index: 1;
     display: inline-block;
     .padding(@button-padding-y; @button-padding-x);
     .border(@button-border-width; solid; @button-border-color);
@@ -13,9 +14,8 @@ input[type="submit"] {
     text-align: center;
     white-space: nowrap;
     vertical-align: middle;
-    cursor: pointer;
     .border-radius(@button-border-radius);
-    z-index: 1;
+    cursor: pointer;
 
     &:focus,
     &:hover {

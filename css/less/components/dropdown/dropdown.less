@@ -5,10 +5,9 @@
     list-style-type: none;
 }
 
-// .dropdown-toggle {}
-
 .dropdown-box {
     position: absolute;
+    z-index: 100;
     .min-width(@dropdown-box-min-width);
     .border();
     background-color: @dropdown-box-background-color;
@@ -18,7 +17,6 @@
     text-align: left;
     visibility: hidden;
     .transition();
-    z-index: 100;
 }
 
 .dropdown-active + .dropdown-box {

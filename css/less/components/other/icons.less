@@ -5,14 +5,14 @@
 
 [class^="@{icon-class}-"]:before {
     position: relative;
+    .top(2px, @base: @icon-font-size);
     display: inline-block;
-    font-family: @icon-font-name;
     .font-size(@icon-font-size);
+    font-family: @icon-font-name;
     font-style: normal;
     font-weight: normal;
     font-variant: normal;
     .line-height(@icon-line-height, @base: @icon-font-size);
-    .top(2px, @base: @icon-font-size);
     text-transform: none;
     speak: none;
 }

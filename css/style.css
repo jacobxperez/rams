@@ -1395,7 +1395,7 @@ body > .container:last-child {
     right: 0;
 }
 
-.indent {
+.block-indent {
     padding-left: 2em;
 }
 

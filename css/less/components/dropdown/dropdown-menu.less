@@ -1,6 +1,6 @@
-// Navbar Dropdown V1.0
+// Dropdown Menu V1.0
 // ----------------------------------------------------------------------------/
-.navbar-box {
+.dropdown-menu {
     border: 0;
     background-color: lighten(@navbar-background-color, 2%);
     .text-shadow();
@@ -14,12 +14,12 @@
 }
 
 .fixed-bottom {
-    .navbar-box {
+    .dropdown-menu {
         bottom: 100%;
     }
 }
 
-.dropdown-active + .navbar-box {
+.dropdown-active + .dropdown-menu {
     opacity: 0.98;
 }
 
@@ -28,11 +28,11 @@
 // ----------------------------------------------------------------------------/
 @media screen and (max-width: @breakpoint-medium-max) {
 
-    .navbar-dropdown {
+    .navbar .dropdown {
         position: static;
     }
 
-    .navbar-box {
+    .dropdown-menu {
         left: 0;
         right: 0;
         width: 100%;

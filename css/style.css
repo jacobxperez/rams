@@ -151,32 +151,32 @@ h6 {
 
 h1 {
     margin-bottom: 1.125rem;
-    font-size: 300%;
+    font-size: 3rem;
     line-height: 1.125;
 }
 
 h2 {
-    font-size: 200%;
+    font-size: 2rem;
     line-height: 1.125;
 }
 
 h3 {
-    font-size: 150%;
+    font-size: 1.5rem;
     line-height: 1.5;
 }
 
 h4 {
-    font-size: 125%;
+    font-size: 1.25rem;
     line-height: 1.2;
 }
 
 h5 {
-    font-size: 112.5%;
+    font-size: 1.125rem;
     line-height: 1.33333333;
 }
 
 h6 {
-    font-size: 100%;
+    font-size: 1rem;
     line-height: 1.5;
 }
 
@@ -230,7 +230,7 @@ mark {
 small,
 sub,
 sup {
-    font-size: 87.5%;
+    font-size: .875rem;
 }
 
 sub,
@@ -281,7 +281,7 @@ q {
 
 blockquote {
     margin-bottom: 1.5rem;
-    font-size: 150%;
+    font-size: 1.5rem;
     font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, "Nimbus Roman No9 L", "Liberation Serif", FreeSerif, serif;
     font-style: italic;
 }
@@ -299,7 +299,7 @@ blockquote small:before {
 blockquote small {
     display: block;
     width: 100%;
-    font-size: 58.33333333%;
+    font-size: .58333333rem;
     line-height: 1.71428571em;
 }
 
@@ -1203,7 +1203,7 @@ body > .container:last-child {
     margin-left: -0.625em;
     padding-left: .625em;
     padding-right: .625em;
-    font-size: 125%;
+    font-size: 1.25rem;
     line-height: 2.2;
 }
 
@@ -1487,7 +1487,7 @@ body > .container:last-child {
     position: relative;
     top: .125em;
     display: inline-block;
-    font-size: 100%;
+    font-size: 1rem;
     font-family: "icons";
     font-style: normal;
     font-weight: normal;

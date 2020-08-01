@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Accordion v1.0
     (function () {
-        const getAccordion = document.querySelectorAll(".js-accordion-toggle");
+        const getAccordion = document.querySelectorAll(".js-accordion");
 
         for (let i = 0; i < getAccordion.length; i++) {
 
@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Dropdown v1.0
     (function () {
-        const getDropdown = document.querySelectorAll(".js-dropdown-toggle");
+        const getDropdown = document.querySelectorAll(".js-dropdown");
 
         for (let i = 0; i < getDropdown.length; i++) {
             getDropdown[i].addEventListener("click", function(e) {

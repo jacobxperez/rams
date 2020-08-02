@@ -299,7 +299,7 @@ blockquote small:before {
 blockquote small {
     display: block;
     width: 100%;
-    font-size: .58333333rem;
+    font-size: .875rem;
     line-height: 1.71428571em;
 }
 

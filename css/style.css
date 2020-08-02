@@ -1240,7 +1240,6 @@ body > .container:last-child {
     z-index: 1000;
     min-width: 10rem;
     background-color: #272727;
-    text-shadow: 0 .0625em .125em rgba(0, 0, 0, 0.3);
     visibility: hidden;
     opacity: 0;
 }

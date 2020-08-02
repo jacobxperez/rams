@@ -1,6 +1,6 @@
 // Borders V1.0
 // -----------------------------------------------------------------------------
-.border(@width: @base-border-width; @style: @base-border-style; @color: @base-border-color; @base: @base-font-size; @unit: em) {
+.border(@width: @base-border-width; @style: @base-border-style; @color: @base-border-color; @base: @base-font-size; @unit: rem) {
 
     & when not (@width = off) {
         @a: unit((@width / @base), @unit);
@@ -9,7 +9,7 @@
 
 }
 
-.border-top(@width: @base-border-width; @style: @base-border-style; @color: @base-border-color; @base: @base-font-size; @unit: em) {
+.border-top(@width: @base-border-width; @style: @base-border-style; @color: @base-border-color; @base: @base-font-size; @unit: rem) {
 
     & when not (@width = off) {
         @a: unit((@width / @base), @unit);
@@ -18,7 +18,7 @@
 
 }
 
-.border-right(@width: @base-border-width; @style: @base-border-style; @color: @base-border-color; @base: @base-font-size; @unit: em) {
+.border-right(@width: @base-border-width; @style: @base-border-style; @color: @base-border-color; @base: @base-font-size; @unit: rem) {
 
     & when not (@width = off) {
         @a: unit((@width / @base), @unit);
@@ -27,7 +27,7 @@
 
 }
 
-.border-bottom(@width: @base-border-width; @style: @base-border-style; @color: @base-border-color; @base: @base-font-size; @unit: em) {
+.border-bottom(@width: @base-border-width; @style: @base-border-style; @color: @base-border-color; @base: @base-font-size; @unit: rem) {
 
     & when not (@width = off) {
         @a: unit((@width / @base), @unit);
@@ -36,7 +36,7 @@
 
 }
 
-.border-left(@width: @base-border-width; @style: @base-border-style; @color: @base-border-color; @base: @base-font-size; @unit: em) {
+.border-left(@width: @base-border-width; @style: @base-border-style; @color: @base-border-color; @base: @base-font-size; @unit: rem) {
 
     & when not (@width = off) {
         @a: unit((@width / @base), @unit);
@@ -48,7 +48,7 @@
 
 // Borders Radius V1.0
 // -----------------------------------------------------------------------------
-.border-radius(@top-left: @base-border-radius; @top-right: @base-border-radius; @bottom-right: @top-left; @bottom-left: @top-right; @base: @base-font-size; @unit: em) {
+.border-radius(@top-left: @base-border-radius; @top-right: @base-border-radius; @bottom-right: @top-left; @bottom-left: @top-right; @base: @base-font-size; @unit: rem) {
 
     @a: unit((@top-left / @base), @unit);
     @b: unit((@top-right / @base), @unit);

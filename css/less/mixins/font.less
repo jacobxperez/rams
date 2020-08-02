@@ -81,7 +81,7 @@
 
 // Text Indent V1.0
 // -----------------------------------------------------------------------------
-.text-indent (@text-indent: @indent; @base: @base-font-size; @unit: em) {
+.text-indent (@text-indent: @indent; @base: @base-font-size; @unit: rem) {
 
     & when (@unit = em), (@unit = rem) {
         @a: unit((@text-indent / @base), @unit);

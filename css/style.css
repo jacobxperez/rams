@@ -90,7 +90,7 @@ img {
 }
 
 figure {
-    margin: 1.25em;
+    margin: 1.25rem;
 }
 
 progress[value] {
@@ -100,7 +100,7 @@ progress[value] {
 dd,
 ol,
 ul {
-    padding-left: 2em;
+    padding-left: 2rem;
 }
 
 dl,
@@ -123,7 +123,7 @@ hr {
     display: block;
     height: 1px;
     margin-bottom: 1.5rem;
-    border-top: .125em solid rgba(0, 0, 0, 0.3);
+    border-top: .125rem solid rgba(0, 0, 0, 0.3);
 }
 
 ::-moz-selection {
@@ -263,7 +263,7 @@ code {
 pre {
     overflow: auto;
     margin-bottom: 1.5rem;
-    padding: .5em .875em;
+    padding: .5rem .875rem;
     white-space: pre;
     background-color: #222;
     color: #e6e6e6;
@@ -314,7 +314,7 @@ table {
 td,
 th {
     display: table-cell;
-    padding: .5em .875em;
+    padding: .5rem .875rem;
     text-align: left;
 }
 
@@ -334,11 +334,11 @@ select,
 textarea {
     display: block;
     padding: .5rem .875rem;
-    border: .0625em solid rgba(0, 0, 0, 0.3);
+    border: .0625rem solid rgba(0, 0, 0, 0.3);
     width: 100%;
     background-color: #fff;
     line-height: 24px;
-    border-radius: .25em .25em .25em .25em;
+    border-radius: .25rem .25rem .25rem .25rem;
     box-shadow: none;
 }
 
@@ -363,7 +363,7 @@ textarea:focus {
 }
 
 textarea {
-    min-height: 6.25em;
+    min-height: 6.25rem;
     overflow: auto;
     resize: vertical;
 }
@@ -380,14 +380,14 @@ input[type=button] {
     position: relative;
     z-index: 1;
     display: inline-block;
-    padding: .5em .875em;
-    border: .0625em solid rgba(0, 0, 0, 0.3);
+    padding: .5rem .875rem;
+    border: .0625rem solid rgba(0, 0, 0, 0.3);
     background-color: #e6e6e6;
     color: #555;
     text-align: center;
     white-space: nowrap;
     vertical-align: middle;
-    border-radius: .25em .25em .25em .25em;
+    border-radius: .25rem .25rem .25rem .25rem;
     cursor: pointer;
 }
 
@@ -459,39 +459,39 @@ html input[disabled]:hover {
 .container,
 .container-full {
     width: 100%;
-    padding-left: 1.25em;
-    padding-right: 1.25em;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
 }
 
 .container {
-    min-width: 20em;
-    max-width: 61.25em;
+    min-width: 20rem;
+    max-width: 61.25rem;
     margin: 0 auto;
 }
 
 body > .container-full:first-child,
 body > .container:first-child {
-    padding-top: 2.5em;
+    padding-top: 2.5rem;
 }
 
 body > .container-full:only-child,
 body > .container:only-child {
-    padding-top: 2.5em;
-    padding-bottom: 3.75em;
+    padding-top: 2.5rem;
+    padding-bottom: 3.75rem;
 }
 
 body > .container-full:last-child,
 body > .container:last-child {
-    padding-bottom: 3.75em;
+    padding-bottom: 3.75rem;
 }
 @media screen and (max-width: 61.1875em) {
     .container {
-        max-width: 52.5em;
+        max-width: 52.5rem;
     }
 }
 @media screen and (max-width: 42.5em) {
     .container {
-        max-width: 42.5em;
+        max-width: 42.5rem;
     }
 }
 @media screen and (min-height: 100em) {
@@ -1144,7 +1144,7 @@ body > .container:last-child {
 }
 
 .nav a {
-    padding: .625em .875em;
+    padding: .625rem .875rem;
 }
 
 .nav-inline > li {
@@ -1173,7 +1173,7 @@ body > .container:last-child {
 
 .nav-breadcrumb li::after {
     content: " /";
-    margin-right: .25em;
+    margin-right: .25rem;
 }
 
 .nav-breadcrumb li:last-child::after,
@@ -1200,16 +1200,16 @@ body > .container:last-child {
 .navbar-brand {
     float: left;
     display: block;
-    margin-left: -0.625em;
-    padding-left: .625em;
-    padding-right: .625em;
+    margin-left: -0.625rem;
+    padding-left: .625rem;
+    padding-right: .625rem;
     font-size: 1.25rem;
     line-height: 2.2;
 }
 
 .navbar + .container,
 .navbar + .container-full {
-    padding-top: 5em;
+    padding-top: 5rem;
 }
 
 .dropdown {
@@ -1220,8 +1220,8 @@ body > .container:last-child {
 .dropdown-box {
     position: absolute;
     z-index: 100;
-    min-width: 10em;
-    border: .0625em solid rgba(0, 0, 0, 0.3);
+    min-width: 10rem;
+    border: .0625rem solid rgba(0, 0, 0, 0.3);
     background-color: #fff;
     font-size: 1rem;
     font-style: normal;
@@ -1238,7 +1238,7 @@ body > .container:last-child {
 .dropdown-menu {
     position: absolute;
     z-index: 1000;
-    min-width: 10em;
+    min-width: 10rem;
     background-color: #272727;
     text-shadow: 0 .0625em .125em rgba(0, 0, 0, 0.3);
     visibility: hidden;
@@ -1246,8 +1246,8 @@ body > .container:last-child {
 }
 
 .dropdown-menu .nav-link {
-    padding-left: 1.25em;
-    padding-right: 1.25em;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
 }
 
 .fixed-bottom .dropdown-menu {
@@ -1396,16 +1396,16 @@ body > .container:last-child {
 }
 
 .block-indent {
-    padding-left: 2em;
+    padding-left: 2rem;
 }
 
 .text-indent {
-    text-indent: 2em;
+    text-indent: 2rem;
 }
 
 .text-outdent {
-    padding-left: 2em;
-    text-indent: -2em;
+    padding-left: 2rem;
+    text-indent: -2rem;
 }
 
 .text-left {
@@ -1485,7 +1485,7 @@ body > .container:last-child {
 
 [class^="icon-"]:before {
     position: relative;
-    top: .125em;
+    top: .125rem;
     display: inline-block;
     font-size: 1rem;
     font-family: "icons";

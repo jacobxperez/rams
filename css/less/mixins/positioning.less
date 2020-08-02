@@ -1,6 +1,6 @@
 // Positioning V1.0
 // -----------------------------------------------------------------------------
-.top(@position: 1px, @base: @base-font-size, @unit: em) {
+.top(@position: 1px, @base: @base-font-size,@unit: rem) {
     & when (@unit = %) {
         @a: percentage(@position / @base);
         top: @a;
@@ -22,7 +22,7 @@
     }
 }
 
-.bottom(@position: 1px, @base: @base-font-size, @unit: em) {
+.bottom(@position: 1px, @base: @base-font-size,@unit: rem) {
     & when (@unit = %) {
         @a: percentage(@position / @base);
         bottom: @a;
@@ -44,7 +44,7 @@
     }
 }
 
-.left(@position: 1px, @base: @base-font-size, @unit: em) {
+.left(@position: 1px, @base: @base-font-size,@unit: rem) {
     & when (@unit = %) {
         @a: percentage(@position / @base);
         left: @a;
@@ -66,7 +66,7 @@
     }
 }
 
-.right(@position: 1px, @base: @base-font-size, @unit: em) {
+.right(@position: 1px, @base: @base-font-size,@unit: rem) {
     & when (@unit = %) {
         @a: percentage(@position / @base);
         right: @a;

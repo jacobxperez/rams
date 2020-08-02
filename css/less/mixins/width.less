@@ -1,6 +1,6 @@
 // Widths V1.0
 // -----------------------------------------------------------------------------
-.width(@width; @base: @base-font-size; @unit: em) {
+.width(@width; @base: @base-font-size;@unit: rem) {
     & when (@unit = em),
     (@unit = rem) {
         @a: unit((@width / @base), @unit);
@@ -18,7 +18,7 @@
     }
 }
 
-.max-width(@width; @base: @base-font-size; @unit: em) {
+.max-width(@width; @base: @base-font-size;@unit: rem) {
     & when (@unit = em), (@unit = rem) {
         @a: unit((@width / @base), @unit);
         max-width: @a;
@@ -35,7 +35,7 @@
     }
 }
 
-.min-width(@width; @base: @base-font-size; @unit: em) {
+.min-width(@width; @base: @base-font-size;@unit: rem) {
     & when (@unit = em), (@unit = rem) {
         @a: unit((@width / @base), @unit);
         min-width: @a;

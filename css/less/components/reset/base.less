@@ -97,14 +97,14 @@ progress[value] {
 dd,
 ol,
 ul {
-    .padding-left(@indent);
+    .padding-left(@list-indent);
 }
 
 dl,
 ol,
 ul {
-    .margin-bottom(@base-leading);
-    list-style-position: outside;
+    .margin-bottom(@list-leading);
+    list-style-position: @list-style-position;
 }
 
 dl dl,

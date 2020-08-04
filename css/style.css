@@ -491,16 +491,6 @@ body > .container:last-child {
         max-width: 42.5rem;
     }
 }
-@media screen and (min-height: 100em) {
-    html {
-        font-size: 1vh;
-    }
-}
-@media screen and (min-width: 100em) {
-    html {
-        font-size: 1vw;
-    }
-}
 
 .row {
     margin-left: -0.625rem;
@@ -2421,6 +2411,16 @@ body > .container:last-child {
 
 .icon-window:before {
     content: "\e0e5";
+}
+@media screen and (min-height: 100em) {
+    html {
+        font-size: 1vh;
+    }
+}
+@media screen and (min-width: 100em) {
+    html {
+        font-size: 1vw;
+    }
 }
 @media print {
     body,

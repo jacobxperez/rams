@@ -1178,13 +1178,13 @@ body > .container:last-child {
     color: #555;
 }
 
-.nav-breadcrumb li::after {
+.breadcrumb li::after {
     content: " /";
     margin-right: .25rem;
 }
 
-.nav-breadcrumb li:last-child::after,
-.nav-breadcrumb li:only-child::after {
+.breadcrumb li:last-child::after,
+.breadcrumb li:only-child::after {
     content: "";
     margin-right: 0;
 }

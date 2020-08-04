@@ -1,7 +1,7 @@
 // Font Family V1.0
 // -----------------------------------------------------------------------------
 .font-family(@font-family) {
-    & when not (@font-family = off) {
+    & when not (@font-family = false) {
         font-family: @font-family;
     }
 }
@@ -26,7 +26,7 @@
 // -----------------------------------------------------------------------------
 .font-size(@size: @base-font-size; @base: @base-font-size; @unit: rem) {
 
-    & when not (@size = off) {
+    & when not (@size = false) {
 
         & when (@unit = %) {
             @a: percentage(@size / @base);
@@ -57,7 +57,7 @@
 // -----------------------------------------------------------------------------
 .line-height(@height: @base-line-height; @base: @base-font-size; @unit: none) {
 
-    & when not (@height = off) {
+    & when not (@height = false) {
 
         & when (@unit = em), (@unit = rem) {
             @a: unit((@height / @base), @unit);

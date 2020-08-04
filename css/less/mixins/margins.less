@@ -2,7 +2,7 @@
 // -----------------------------------------------------------------------------
 .margin(@top: @base-margin-y; @right: @base-margin-x; @bottom: @top; @left: @right; @base: @base-font-size;@unit: rem) {
 
-    & when not (@top = off) {
+    & when not (@top = false) {
 
         & when (@unit = em), (@unit = rem) {
             @a: unit((@top / @base), @unit);
@@ -26,7 +26,7 @@
 
 .margin-top(@top: @base-margin-y; @base: @base-font-size;@unit: rem) {
 
-    & when not (@top = off) {
+    & when not (@top = false) {
 
         & when (@unit = em), (@unit = rem) {
             @a: unit((@top / @base), @unit);
@@ -44,7 +44,7 @@
 
 .margin-right(@right: @base-margin-x; @base: @base-font-size;@unit: rem) {
 
-    & when not (@right = off) {
+    & when not (@right = false) {
 
         & when (@unit = em), (@unit = rem) {
             @a: unit((@right / @base), @unit);
@@ -62,7 +62,7 @@
 
 .margin-bottom(@bottom: @base-margin-y; @base: @base-font-size;@unit: rem) {
 
-    & when not (@bottom = off) {
+    & when not (@bottom = false) {
 
         & when (@unit = em), (@unit = rem) {
             @a: unit((@bottom / @base), @unit);
@@ -80,7 +80,7 @@
 
 .margin-left(@left: @base-margin-x; @base: @base-font-size;@unit: rem) {
 
-    & when not (@left = off) {
+    & when not (@left = false) {
 
         & when (@unit = em), (@unit = rem) {
             @a: unit((@left / @base), @unit);

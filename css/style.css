@@ -440,27 +440,24 @@ html input[disabled]:hover {
     text-decoration: none;
 }
 
-.container-full:after,
-.container-full:before,
-.container:after,
-.container:before,
-.row:after,
-.row:before {
-    content: " ";
-    display: table;
-}
-
-.container-full:after,
-.container:after,
-.row:after {
-    clear: both;
-}
-
 .container,
 .container-full {
     width: 100%;
     padding-left: 1.25rem;
     padding-right: 1.25rem;
+}
+
+.container-full:after,
+.container-full:before,
+.container:after,
+.container:before {
+    content: " ";
+    display: table;
+}
+
+.container-full:after,
+.container:after {
+    clear: both;
 }
 
 .container {
@@ -508,6 +505,16 @@ body > .container:last-child {
 .row {
     margin-left: -0.625rem;
     margin-right: -0.625rem;
+}
+
+.row:after,
+.row:before {
+    content: " ";
+    display: table;
+}
+
+.row:after {
+    clear: both;
 }
 
 .columns {

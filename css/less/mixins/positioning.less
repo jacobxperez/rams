@@ -1,89 +1,98 @@
-// Positioning V1.0
+// Positioning
 // -----------------------------------------------------------------------------
 .top(@position: 1px, @base: @base-font-size,@unit: rem) {
-    & when (@unit = %) {
-        @a: percentage(@position / @base);
-        top: @a;
-    }
 
-    & when (@unit = vw), (@unit = vh) {
-        @a: unit(((@position / @base) * 100), @unit);
-        top: @a;
-    }
+    & when not (@position = false) {
+        & when (@unit = %) {
+            @a: percentage(@position / @base);
+            top: @a;
+        }
 
-    & when (@unit = em), (@unit = rem) {
-        @a: unit((@position / @base), @unit);
-        top: @a;
-    }
+        & when (@unit = vw), (@unit = vh) {
+            @a: unit(((@position / @base) * 100), @unit);
+            top: @a;
+        }
 
-    & when (@unit = none) {
-        @a: unit((@position / @base));
-        top: @a;
+        & when (@unit = em), (@unit = rem) {
+            @a: unit((@position / @base), @unit);
+            top: @a;
+        }
+
+        & when (@unit = none) {
+            @a: unit((@position / @base));
+            top: @a;
+        }
     }
 }
 
 .bottom(@position: 1px, @base: @base-font-size,@unit: rem) {
-    & when (@unit = %) {
-        @a: percentage(@position / @base);
-        bottom: @a;
-    }
+    & when not (@position = false) {
+        & when (@unit = %) {
+            @a: percentage(@position / @base);
+            bottom: @a;
+        }
 
-    & when (@unit = vw), (@unit = vh) {
-        @a: unit(((@position / @base) * 100), @unit);
-        bottom: @a;
-    }
+        & when (@unit = vw), (@unit = vh) {
+            @a: unit(((@position / @base) * 100), @unit);
+            bottom: @a;
+        }
 
-    & when (@unit = em), (@unit = rem) {
-        @a: unit((@position / @base), @unit);
-        bottom: @a;
-    }
+        & when (@unit = em), (@unit = rem) {
+            @a: unit((@position / @base), @unit);
+            bottom: @a;
+        }
 
-    & when (@unit = none) {
-        @a: unit((@position / @base));
-        bottom: @a;
+        & when (@unit = none) {
+            @a: unit((@position / @base));
+            bottom: @a;
+        }
     }
 }
 
 .left(@position: 1px, @base: @base-font-size,@unit: rem) {
-    & when (@unit = %) {
-        @a: percentage(@position / @base);
-        left: @a;
-    }
+    & when not (@position = false) {
+        & when (@unit = %) {
+            @a: percentage(@position / @base);
+            left: @a;
+        }
 
-    & when (@unit = vw), (@unit = vh) {
-        @a: unit(((@position / @base) * 100), @unit);
-        left: @a;
-    }
+        & when (@unit = vw), (@unit = vh) {
+            @a: unit(((@position / @base) * 100), @unit);
+            left: @a;
+        }
 
-    & when (@unit = em), (@unit = rem) {
-        @a: unit((@position / @base), @unit);
-        left: @a;
-    }
+        & when (@unit = em), (@unit = rem) {
+            @a: unit((@position / @base), @unit);
+            left: @a;
+        }
 
-    & when (@unit = none) {
-        @a: unit((@position / @base));
-        left: @a;
+        & when (@unit = none) {
+            @a: unit((@position / @base));
+            left: @a;
+        }
     }
 }
 
 .right(@position: 1px, @base: @base-font-size,@unit: rem) {
-    & when (@unit = %) {
-        @a: percentage(@position / @base);
-        right: @a;
-    }
+    & when not (@position = false) {
+        & when (@unit = %) {
+            @a: percentage(@position / @base);
+            right: @a;
+        }
 
-    & when (@unit = vw), (@unit = vh) {
-        @a: unit(((@position / @base) * 100), @unit);
-        right: @a;
-    }
+        & when (@unit = vw), (@unit = vh) {
+            @a: unit(((@position / @base) * 100), @unit);
+            right: @a;
+        }
 
-    & when (@unit = em), (@unit = rem) {
-        @a: unit((@position / @base), @unit);
-        right: @a;
-    }
+        & when (@unit = em), (@unit = rem) {
+            @a: unit((@position / @base), @unit);
+            right: @a;
+        }
 
-    & when (@unit = none) {
-        @a: unit((@position / @base));
-        right: @a;
+        & when (@unit = none) {
+            @a: unit((@position / @base));
+            right: @a;
+        }
     }
 }

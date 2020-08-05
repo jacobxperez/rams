@@ -1,5 +1,7 @@
-// Opacity V1.0
+// Opacity
 // -----------------------------------------------------------------------------
 .opacity(@opacity: 0.5) {
-    opacity: @opacity;
+    & when not (@opacity = false) {
+        opacity: @opacity;
+    }
 }

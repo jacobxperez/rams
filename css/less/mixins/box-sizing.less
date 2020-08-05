@@ -1,5 +1,7 @@
 // Box Sizing V1.0
 // -----------------------------------------------------------------------------
 .box-sizing(@sizing: border-box) {
-    box-sizing: @sizing;
+    & when not (@sizing = false) {
+        box-sizing: @sizing;
+    }
 }

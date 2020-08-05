@@ -1,12 +1,14 @@
-// Box Shadow V1.0
+// Box Shadow
 // -----------------------------------------------------------------------------
 .box-shadow(@hr: 0; @ve: 0; @bl: 0; @rgba: rgba(0, 0, 0, 0.3);) {
 
-    @a: unit((@hr / @base-font-size), em);
-    @b: unit((@ve / @base-font-size), em);
-    @c: unit((@bl / @base-font-size), em);
+    & when not (@hr = false) {
+        @a: unit((@hr / @base-font-size), em);
+        @b: unit((@ve / @base-font-size), em);
+        @c: unit((@bl / @base-font-size), em);
 
-    box-shadow: @a @b @c @rgba;
+        box-shadow: @a @b @c @rgba;
+    }
 
 }
 
@@ -24,15 +26,17 @@
 }
 
 
-// Text Shadow V1.0
+// Text Shadow
 // -----------------------------------------------------------------------------
 .text-shadow(@hr: 0; @ve: 1px; @bl: 2px; @rgba: rgba(0, 0, 0, 0.3);) {
 
-    @a: unit((@hr / @base-font-size), em);
-    @b: unit((@ve / @base-font-size), em);
-    @c: unit((@bl / @base-font-size), em);
+    & when not (@hr = false) {
+        @a: unit((@hr / @base-font-size), em);
+        @b: unit((@ve / @base-font-size), em);
+        @c: unit((@bl / @base-font-size), em);
 
-    text-shadow: @a @b @c @rgba;
+        text-shadow: @a @b @c @rgba;
+    }
 
 }
 

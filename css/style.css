@@ -442,6 +442,7 @@ html input[disabled]:hover {
 
 .container,
 .container-full {
+    position: relative;
     width: 100%;
     padding-left: 1.25rem;
     padding-right: 1.25rem;
@@ -1195,8 +1196,7 @@ body > .container:last-child {
 }
 
 .navbar-title {
-    float: left;
-    display: block;
+    display: inline-block;
     margin-left: -0.625rem;
     padding-left: .625rem;
     padding-right: .625rem;

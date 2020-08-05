@@ -1249,10 +1249,6 @@ body > .container:last-child {
     opacity: 0;
 }
 
-.fixed-bottom .dropdown-box {
-    bottom: 100%;
-}
-
 .dropdown-active + .dropdown-box {
     opacity: .98;
 }
@@ -1371,7 +1367,6 @@ body > .container:last-child {
     position: fixed;
     right: 0;
     left: 0;
-    z-index: 1000;
 }
 
 .fixed-top {

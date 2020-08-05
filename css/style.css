@@ -1140,7 +1140,7 @@ body > .container:last-child {
     margin-bottom: 0;
 }
 
-.nav a {
+.nav .nav-link {
     padding: .625rem .875rem;
 }
 
@@ -1194,7 +1194,7 @@ body > .container:last-child {
     color: #cccccc;
 }
 
-.navbar-brand {
+.navbar-title {
     float: left;
     display: block;
     margin-left: -0.625rem;

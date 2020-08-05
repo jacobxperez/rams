@@ -8,7 +8,7 @@
 
 .navbar-link {
     display: block;
-    .padding(@navbar-link-padding);
+    .padding(@navbar-link-padding-y; @navbar-link-padding-x);
     color: @navbar-link-color;
     .transition();
 
@@ -31,8 +31,8 @@
     .margin-left(-@grid-gutters);
     .padding-left(@grid-gutters);
     .padding-right(@grid-gutters);
-    .font-size(@h4-font-size);
-    .line-height(24px; @h4-font-size);
+    .font-size(@navbar-title-font-size);
+    .line-height(@navbar-title-line-height; @navbar-title-font-size);
 }
 
 .navbar + .@{wrapper-class},

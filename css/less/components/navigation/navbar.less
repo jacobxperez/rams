@@ -4,14 +4,25 @@
     z-index: 1025;
     width: 100%;
     background-color: @navbar-background-color;
+}
 
-    a {
-        color: @navbar-link-color;
+.navbar-link {
+    display: block;
+    .padding(@navbar-link-padding);
+    color: @navbar-link-color;
+    .transition();
 
-        &.active,
-        &:hover {
-            color: @navbar-link-color-hover;
-        }
+    &.active,
+    &:hover {
+        color: @navbar-link-color-hover;
+    }
+
+    &:focus {
+        outline: 0;
+    }
+
+    &:hover {
+        text-decoration: none;
     }
 }
 
@@ -21,7 +32,7 @@
     .padding-left(@grid-gutters);
     .padding-right(@grid-gutters);
     .font-size(@h4-font-size);
-    .line-height(44px; @h4-font-size);
+    .line-height(24px; @h4-font-size);
 }
 
 .navbar + .@{wrapper-class},

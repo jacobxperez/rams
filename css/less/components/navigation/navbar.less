@@ -4,33 +4,21 @@
     z-index: 1025;
     width: 100%;
     background-color: @navbar-background-color;
-}
 
-.navbar-link {
-    display: block;
-    .padding(@navbar-link-padding-y; @navbar-link-padding-x);
-    color: @navbar-link-color;
-    .transition();
+    .nav-link {
+        .padding(@navbar-link-padding-y; @navbar-link-padding-x);
+        color: @navbar-link-color;
 
-    &.active,
-    &:hover {
+        &.active,
+        &:hover {
         color: @navbar-link-color-hover;
-    }
-
-    &:focus {
-        outline: 0;
-    }
-
-    &:hover {
-        text-decoration: none;
+        }
     }
 }
 
 .navbar-title {
     display: inline-block;
-    .margin-left(-@grid-gutters);
-    .padding-left(@grid-gutters);
-    .padding-right(@grid-gutters);
+    .margin-left(-@navbar-link-padding-x);
     .font-size(@navbar-title-font-size);
     .line-height(@navbar-title-line-height; @navbar-title-font-size);
 }

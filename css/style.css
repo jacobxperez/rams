@@ -1176,31 +1176,19 @@ body > .container:last-child {
     background-color: #222;
 }
 
-.navbar-link {
-    display: block;
+.navbar .nav-link {
     padding: .625rem .875rem;
     color: #fff;
-    transition: all .3s ease-in-out 0s;
 }
 
-.navbar-link.active,
-.navbar-link:hover {
+.navbar .nav-link.active,
+.navbar .nav-link:hover {
     color: #cccccc;
-}
-
-.navbar-link:focus {
-    outline: 0;
-}
-
-.navbar-link:hover {
-    text-decoration: none;
 }
 
 .navbar-title {
     display: inline-block;
-    margin-left: -0.625rem;
-    padding-left: .625rem;
-    padding-right: .625rem;
+    margin-left: -0.875rem;
     font-size: 1.125rem;
     line-height: 1.33333333;
 }
@@ -1253,7 +1241,7 @@ body > .container:last-child {
         width: 100%;
     }
 
-    .navbar .dropdown-box .navbar-link {
+    .navbar .dropdown-box .nav-link {
         padding-left: 1.25rem;
         padding-right: 1.25rem;
     }

@@ -1227,7 +1227,7 @@ body > .container:last-child {
 
 .dropdown-box {
     position: absolute;
-    z-index: 100;
+    z-index: 1000;
     min-width: 10rem;
     border: .0625rem solid rgba(0, 0, 0, 0.3);
     background-color: #fff;
@@ -1244,7 +1244,6 @@ body > .container:last-child {
 }
 
 .navbar .dropdown-box {
-    z-index: 1000;
     border: 0;
     background-color: #272727;
     opacity: 0;

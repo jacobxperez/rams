@@ -482,16 +482,6 @@ body > .container-full:last-child,
 body > .container:last-child {
     padding-bottom: 3.75rem;
 }
-@media screen and (max-width: 61.1875em) {
-    .container {
-        max-width: 52.5rem;
-    }
-}
-@media screen and (max-width: 42.5em) {
-    .container {
-        max-width: 42.5rem;
-    }
-}
 
 .row {
     margin-left: -0.625rem;
@@ -1142,7 +1132,7 @@ body > .container:last-child {
 }
 
 .nav .nav-link {
-    padding: .625rem .875rem;
+    padding: .5rem .875rem;
 }
 
 .nav-inline > li {
@@ -1211,8 +1201,8 @@ body > .container:last-child {
     margin-left: -0.625rem;
     padding-left: .625rem;
     padding-right: .625rem;
-    font-size: 1.25rem;
-    line-height: 1.2;
+    font-size: 1.125rem;
+    line-height: 1.33333333;
 }
 
 .navbar + .container,

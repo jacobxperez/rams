@@ -89,25 +89,31 @@ progress[value] {
     appearance: none;
 }
 
-dd,
-ol,
-ul {
-    .padding-left(@list-indent);
-}
-
 dl,
 ol,
 ul {
     .margin-bottom(@list-leading);
-    list-style-position: @list-style-position;
+    list-style-type: none;
+
+    dl,
+    ol,
+    ul {
+        margin-bottom: 0;
+    }
 }
 
-dl dl,
-ol ol,
-ol ul,
-ul ul,
-ul ol {
-    margin: 0;
+.ol {
+    list-style-type: decimal;
+}
+
+.ul {
+    list-style-type: disc;
+}
+
+.ol,
+.ul {
+    .padding-left(@list-indent);
+    list-style-position: @list-style-position;
 }
 
 hr {

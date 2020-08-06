@@ -22,7 +22,7 @@ Modular CSS Framework — Built with LESS
 
 ### Project Status
 
-Project under active development. Rather then releasing a version each module has been assigned a unique version.
+Project under active development. **NO** stable version has been released.
 
 ## Getting Started
 

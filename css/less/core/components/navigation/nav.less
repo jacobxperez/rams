@@ -1,25 +1,13 @@
 // Navigation V1.0
 // -----------------------------------------------------------------------------
-.nav,
-.nav-list,
-.nav-inline {
-    .clearfix();
-}
-
 .nav {
+    display: flex;
+    flex-wrap: wrap;
     margin-bottom: 0;
 
     .nav-link {
         .padding(@nav-link-padding-y; @nav-link-padding-x);
     }
-}
-
-.nav-inline {
-
-    > li {
-        float: left;
-    }
-
 }
 
 .nav-link {
@@ -40,4 +28,12 @@
 .nav-link:focus,
 .nav-link:hover {
     color: @nav-link-color-hover;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+.flex-column {
+    flex-direction: column;
 }

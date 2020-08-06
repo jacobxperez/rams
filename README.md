@@ -44,43 +44,34 @@ The easiest way to include [Essentials](https://jacobxperez.github.io/essentials
     * [style.less](https://github.com/jacobxperez/essentials/blob/master/css/style.less) (compiling final [CSS](https://github.com/jacobxperez/essentials/blob/master/css/style.css))
     * [custom.less](https://github.com/jacobxperez/essentials/blob/master/css/custom.less) (custom imports)
 
-All components and dependencies can be found under folder [less](https://github.com/jacobxperez/essentials/tree/master/css/less). To ensure future compatibility each module has been assigned a unique version.
+All components and dependencies can be found under folder [core](https://github.com/jacobxperez/essentials/tree/master/css/less/core). To ensure future compatibility we recommend adding extra modules under folder [custom](https://github.com/jacobxperez/essentials/tree/master/css/less/custom) then link to them on file [custom.less](https://github.com/jacobxperez/essentials/blob/master/css/custom.less) for compiling.
 
 * [/css/less](https://github.com/jacobxperez/essentials/tree/master/css/less)
-    * [components](https://github.com/jacobxperez/essentials/tree/master/css/less/components)
-    * [custom](https://github.com/jacobxperez/essentials/tree/master/css/less/custom)
-    * [mixins](https://github.com/jacobxperez/essentials/tree/master/css/less/mixins)
-    * [variables](https://github.com/jacobxperez/essentials/tree/master/css/less/variables)
-    * [imports](https://github.com/jacobxperez/essentials/tree/master/css/less/imports)
-
-The [components](https://github.com/jacobxperez/essentials/tree/master/css/less/components) folder has all CSS modules organized by type.
-
-* [/css/less/components](https://github.com/jacobxperez/essentials/tree/master/css/less/components)
-    * [dropdown](https://github.com/jacobxperez/essentials/tree/master/css/less/components/dropdown)
-    * [layout](https://github.com/jacobxperez/essentials/tree/master/css/less/components/layout)
-    * [navigation](https://github.com/jacobxperez/essentials/tree/master/css/less/components/navigation)
-    * [other](https://github.com/jacobxperez/essentials/tree/master/css/less/components/other)
-    * [reset](https://github.com/jacobxperez/essentials/tree/master/css/less/components/reset)
-
-We recommend adding extra modules under folder [custom](https://github.com/jacobxperez/essentials/tree/master/css/less/custom) then link to them on file [custom.less](https://github.com/jacobxperez/essentials/blob/master/css/custom.less) for compiling.
-
-* [/css/less](https://github.com/jacobxperez/essentials/tree/master/css/less)
+    * [core](https://github.com/jacobxperez/essentials/tree/master/css/less/core)
     * [custom](https://github.com/jacobxperez/essentials/tree/master/css/less/custom)
 
-The [mixins](https://github.com/jacobxperez/essentials/tree/master/css/less/mixins) folder is where all LESS functions are kept.
+The [core](https://github.com/jacobxperez/essentials/tree/master/css/less/core) folder has all CSS modules organized by type.
 
-* [/css/less](https://github.com/jacobxperez/essentials/tree/master/css/less)
-    * [mixins](https://github.com/jacobxperez/essentials/tree/master/css/less/mixins)
+* [less/core](https://github.com/jacobxperez/essentials/tree/master/css/less/core)
+    * [components](https://github.com/jacobxperez/essentials/tree/master/css/less/core/components)
+    * [module](https://github.com/jacobxperez/essentials/tree/master/css/less/core/components/module)
+    * [navigation](https://github.com/jacobxperez/essentials/tree/master/css/less/core/components/navigation)
+    * [reset](https://github.com/jacobxperez/essentials/tree/master/css/less/core/components/reset)
 
-The [variables](https://github.com/jacobxperez/essentials/tree/master/css/less/variables) folder has all necessary files to adjust the settings of your website.
+The [mixins](https://github.com/jacobxperez/essentials/tree/master/css/less/core/mixins) folder is where all LESS functions are kept.
 
-* [/css/less](https://github.com/jacobxperez/essentials/tree/master/css/less)
-    * [variables](https://github.com/jacobxperez/essentials/tree/master/css/less/variables)
+* [less/core](https://github.com/jacobxperez/essentials/tree/master/css/less/core)
+    * [mixins](https://github.com/jacobxperez/essentials/tree/master/css/less/core/mixins)
 
-To maintain [style.less](https://github.com/jacobxperez/essentials/blob/master/css/style.less) more manageable the folder [imports](https://github.com/jacobxperez/essentials/tree/master/css/less/imports) contains imports regarding mixin files, variable files, and components separated by type.
+The [variables](https://github.com/jacobxperez/essentials/tree/master/css/less/core/variables) folder has all necessary files to adjust the settings of your website.
 
-* [/css/less](https://github.com/jacobxperez/essentials/tree/master/css/less)
-    * [imports](https://github.com/jacobxperez/essentials/tree/master/css/less/imports)
+* [less/core](https://github.com/jacobxperez/essentials/tree/master/css/less/core)
+    * [variables](https://github.com/jacobxperez/essentials/tree/master/css/less/core/variables)
+
+To maintain [style.less](https://github.com/jacobxperez/essentials/blob/master/css/style.less) more manageable the folder [imports](https://github.com/jacobxperez/essentials/tree/master/css/less/core/imports) contains imports regarding mixin files and variable files.
+
+* [less/core](https://github.com/jacobxperez/essentials/tree/master/css/less/core)
+    * [imports](https://github.com/jacobxperez/essentials/tree/master/css/less/core/imports)
 
 ## Contributing
 

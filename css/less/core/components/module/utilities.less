@@ -75,18 +75,26 @@
     hyphens: auto;
 }
 
+.leading-top {
+    .margin-top(@base-leading);
+}
+
 .leading {
     .margin-bottom(@base-leading);
 }
 
 
-// Flex -----------------------------------------------------------------------/
+// Flex box -------------------------------------------------------------------/
 .flex-row {
     flex-direction: row;
 }
 
 .flex-column {
     flex-direction: column;
+}
+
+.flex-grow {
+    flex-grow: 100;
 }
 
 .justify-center {

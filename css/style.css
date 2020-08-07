@@ -609,6 +609,7 @@ body > .container:last-child {
 
 .nav {
     display: flex;
+    align-items: center;
     flex-wrap: wrap;
     margin-bottom: 0;
 }
@@ -654,21 +655,20 @@ body > .container:last-child {
     background-color: #222;
 }
 
-.navbar .nav-link {
+.navbar-link {
     padding: .625rem .875rem;
     color: #fff;
 }
 
-.navbar .nav-link.active,
-.navbar .nav-link:hover {
+.navbar-link.active,
+.navbar-link:hover {
     color: #cccccc;
 }
 
-.navbar-title {
-    display: inline-block;
+.navbar > .container > .nav,
+.navbar > .container-full > .nav {
     margin-left: -0.875rem;
-    font-size: 1.125rem;
-    line-height: 1.33333333;
+    margin-right: -0.875rem;
 }
 
 .navbar + .container,
@@ -880,6 +880,10 @@ body > .container:last-child {
     hyphens: auto;
 }
 
+.leading-top {
+    margin-top: 1.5rem;
+}
+
 .leading {
     margin-bottom: 1.5rem;
 }
@@ -890,6 +894,10 @@ body > .container:last-child {
 
 .flex-column {
     flex-direction: column;
+}
+
+.flex-grow {
+    flex-grow: 100;
 }
 
 .justify-center {

@@ -4,23 +4,22 @@
     z-index: 1025;
     width: 100%;
     background-color: @navbar-background-color;
+}
 
-    .nav-link {
-        .padding(@navbar-link-padding-y; @navbar-link-padding-x);
-        color: @navbar-link-color;
+.navbar-link {
+    .padding(@navbar-link-padding-y; @navbar-link-padding-x);
+    color: @navbar-link-color;
 
-        &.active,
-        &:hover {
-        color: @navbar-link-color-hover;
-        }
+    &.active,
+    &:hover {
+    color: @navbar-link-color-hover;
     }
 }
 
-.navbar-title {
-    display: inline-block;
+.navbar > .@{wrapper-class} > .nav,
+.navbar > .@{wrapper-class}-full > .nav {
     .margin-left(-@navbar-link-padding-x);
-    .font-size(@navbar-title-font-size);
-    .line-height(@navbar-title-line-height; @navbar-title-font-size);
+    .margin-right(-@navbar-link-padding-x);
 }
 
 .navbar + .@{wrapper-class},

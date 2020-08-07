@@ -649,6 +649,44 @@ body > .container:last-child {
     margin-right: 0;
 }
 
+.dropdown {
+    position: relative;
+    list-style-type: none;
+}
+
+.dropdown-box {
+    position: absolute;
+    z-index: 1000;
+    min-width: 10rem;
+    border: .0625rem solid rgba(0, 0, 0, 0.3);
+    background-color: #fff;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    text-align: left;
+    visibility: hidden;
+    transition: all .3s ease-in-out 0s;
+}
+
+.dropdown-active + .dropdown-box {
+    visibility: visible;
+}
+
+.accordion {
+    position: relative;
+    list-style-type: none;
+}
+
+.accordion-box {
+    display: none;
+    width: 100%;
+    transition: all .3s ease-in-out 0s;
+}
+
+.accordion-active + .accordion-box {
+    display: block;
+}
+
 .navbar {
     z-index: 1025;
     width: 100%;
@@ -676,36 +714,13 @@ body > .container:last-child {
     padding-top: 5rem;
 }
 
-.dropdown {
-    position: relative;
-    list-style-type: none;
-}
-
-.dropdown-box {
-    position: absolute;
-    z-index: 1000;
-    min-width: 10rem;
-    border: .0625rem solid rgba(0, 0, 0, 0.3);
-    background-color: #fff;
-    font-size: 1rem;
-    font-style: normal;
-    font-weight: 400;
-    text-align: left;
-    visibility: hidden;
-    transition: all .3s ease-in-out 0s;
-}
-
-.dropdown-active + .dropdown-box {
-    visibility: visible;
-}
-
-.navbar .dropdown-box {
+.navbar-box {
     border: 0;
     background-color: #272727;
     opacity: 0;
 }
 
-.dropdown-active + .dropdown-box {
+.dropdown-active + .navbar-box {
     opacity: .98;
 }
 @media screen and (max-width: 61.1875em) {
@@ -713,32 +728,16 @@ body > .container:last-child {
         position: static;
     }
 
-    .navbar .dropdown-box {
+    .navbar-box {
         left: 0;
         right: 0;
         width: 100%;
     }
 
-    .navbar .dropdown-box .nav-link {
+    .navbar-box .nav-link {
         padding-left: 1.25rem;
         padding-right: 1.25rem;
     }
-}
-
-.accordion {
-    position: relative;
-    list-style-type: none;
-}
-
-.accordion-box {
-    display: none;
-    width: 100%;
-    margin-top: 1.5rem;
-    transition: all .3s ease-in-out 0s;
-}
-
-.accordion-active + .accordion-box {
-    display: block;
 }
 
 .button-primary {

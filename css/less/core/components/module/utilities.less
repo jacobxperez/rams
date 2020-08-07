@@ -12,6 +12,16 @@
 
 
 // Position -------------------------------------------------------------------/
+.position-static {
+    position: static;
+}
+
+.position-stretch {
+    left: 0;
+    right: 0;
+    width: 100%;
+}
+
 .fixed-top,
 .fixed-bottom {
     position: fixed;
@@ -84,7 +94,7 @@
 }
 
 
-// Flex box -------------------------------------------------------------------/
+// Grid -----------------------------------------------------------------------/
 .flex-row {
     flex-direction: row;
 }
@@ -97,8 +107,24 @@
     flex-grow: 100;
 }
 
+.justify-start {
+    justify-content: start;
+}
+
+.justify-end {
+    justify-content: end;
+}
+
 .justify-center {
     justify-content: center;
+}
+
+.justify-around {
+    justify-content: space-around;
+}
+
+.justify-between {
+    justify-content: space-between;
 }
 
 

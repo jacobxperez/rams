@@ -449,7 +449,7 @@ html input[disabled]:hover {
 
 .container,
 .container-full {
-    position: relative;
+    display: grid;
     width: 100%;
     padding-left: 1.25rem;
     padding-right: 1.25rem;
@@ -651,7 +651,6 @@ body > .container:last-child {
 
 .dropdown {
     position: relative;
-    list-style-type: none;
 }
 
 .dropdown-box {
@@ -674,7 +673,6 @@ body > .container:last-child {
 
 .accordion {
     position: relative;
-    list-style-type: none;
 }
 
 .accordion-box {
@@ -724,16 +722,6 @@ body > .container:last-child {
     opacity: .98;
 }
 @media screen and (max-width: 61.1875em) {
-    .navbar .dropdown {
-        position: static;
-    }
-
-    .navbar-box {
-        left: 0;
-        right: 0;
-        width: 100%;
-    }
-
     .navbar-box .nav-link {
         padding-left: 1.25rem;
         padding-right: 1.25rem;
@@ -818,6 +806,16 @@ body > .container:last-child {
     float: right;
 }
 
+.position-static {
+    position: static;
+}
+
+.position-stretch {
+    left: 0;
+    right: 0;
+    width: 100%;
+}
+
 .fixed-bottom,
 .fixed-top {
     position: fixed;
@@ -899,8 +897,24 @@ body > .container:last-child {
     flex-grow: 100;
 }
 
+.justify-start {
+    justify-content: start;
+}
+
+.justify-end {
+    justify-content: end;
+}
+
 .justify-center {
     justify-content: center;
+}
+
+.justify-around {
+    justify-content: space-around;
+}
+
+.justify-between {
+    justify-content: space-between;
 }
 
 .show-print {

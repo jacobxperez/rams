@@ -2,14 +2,16 @@
 // ----------------------------------------------------------------------------/
 .grid(@columns; @prefix; @index: 1) when (@index =< @columns) {
     .@{prefix}-@{index} {
-        .width(@index, @columns, %);
+        grid-column: span @index;
     }
+
     .grid(@columns, @prefix, (@index + 1));
 }
 
 .grid-child(@columns; @prefix) when (1 =< @columns) {
     .@{prefix}-@{columns} {
-        .grid(@columns, @prefix);
+        grid-column: span @index;
     }
+
     .grid-child((@columns - 1), @prefix);
 }

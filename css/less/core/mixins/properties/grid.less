@@ -1,0 +1,29 @@
+// Grid
+// ----------------------------------------------------------------------------/
+.column-gap(@gap: @grid-gap; @base: @base-font-size; @unit: rem) {
+
+    & when not (@gap = false) {
+
+        & when (@unit = %) {
+            @a: percentage(@gap / @base);
+            column-gap: @a;
+        }
+
+        & when (@unit = vw), (@unit = vh) {
+            @a: unit(((@gap / @base) * 100), @unit);
+            column-gap: @a;
+        }
+
+        & when (@unit = em), (@unit = rem) {
+            @a: unit((@gap / @base), @unit);
+            column-gap: @a;
+        }
+
+        & when (@unit = none) {
+            @a: unit((@gap / @base));
+            column-gap: @a;
+        }
+
+    }
+
+}

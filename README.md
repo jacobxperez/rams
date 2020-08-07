@@ -47,8 +47,8 @@ The easiest way to include [Essentials](https://jacobxperez.github.io/essentials
 All components and dependencies can be found under folder [core](https://github.com/jacobxperez/essentials/tree/master/css/less/core). To ensure future compatibility we recommend adding extra modules under folder [custom](https://github.com/jacobxperez/essentials/tree/master/css/less/custom) then link to them on file [custom.less](https://github.com/jacobxperez/essentials/blob/master/css/custom.less) for compiling.
 
 * [/css/less](https://github.com/jacobxperez/essentials/tree/master/css/less)
-    * [core](https://github.com/jacobxperez/essentials/tree/master/css/less/core)
     * [custom](https://github.com/jacobxperez/essentials/tree/master/css/less/custom)
+    * [core](https://github.com/jacobxperez/essentials/tree/master/css/less/core)
 
 The [core](https://github.com/jacobxperez/essentials/tree/master/css/less/core) folder has all CSS modules organized by type.
 

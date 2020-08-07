@@ -733,6 +733,7 @@ body > .container:last-child {
 .accordion-box {
     display: none;
     width: 100%;
+    margin-top: 1.5rem;
     transition: all .3s ease-in-out 0s;
 }
 

@@ -5,7 +5,7 @@
 ------------------------------------------------------------------------------*/
 document.addEventListener("DOMContentLoaded", function() {
 
-    // Accordion v1.0
+    // Accordion
     (function () {
         const getAccordion = document.querySelectorAll(".js-accordion");
 
@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // end Accordion
 
 
-    // Dropdown v1.0
+    // Dropdown
     (function () {
         const getDropdown = document.querySelectorAll(".js-dropdown");
 
@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // end Dropdown
 
 
-    // Smooth Scroll v1.0
+    // Smooth Scroll
     (function () {
         const intLinks = document.querySelectorAll("a[href^='#']");
 

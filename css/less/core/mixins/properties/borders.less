@@ -50,12 +50,14 @@
 // -----------------------------------------------------------------------------
 .border-radius(@top-left: @base-border-radius; @top-right: @base-border-radius; @bottom-right: @top-left; @bottom-left: @top-right; @base: @base-font-size; @unit: rem) {
 
-    @a: unit((@top-left / @base), @unit);
-    @b: unit((@top-right / @base), @unit);
-    @c: unit((@bottom-right / @base), @unit);
-    @d: unit((@bottom-left / @base), @unit);
+    & when not (@top-left =  false) {
+        @a: unit((@top-left / @base), @unit);
+        @b: unit((@top-right / @base), @unit);
+        @c: unit((@bottom-right / @base), @unit);
+        @d: unit((@bottom-left / @base), @unit);
 
-    border-radius: @a @b @c @d;
+        border-radius: @a @b @c @d;
+    }
 
 }
 

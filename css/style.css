@@ -344,7 +344,6 @@ textarea {
     width: 100%;
     background-color: #fff;
     line-height: 24px;
-    border-radius: .25rem .25rem .25rem .25rem;
     box-shadow: none;
 }
 
@@ -393,7 +392,6 @@ input[type=button] {
     text-align: center;
     white-space: nowrap;
     vertical-align: middle;
-    border-radius: .25rem .25rem .25rem .25rem;
     cursor: pointer;
 }
 

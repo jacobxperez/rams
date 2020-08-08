@@ -35,7 +35,7 @@ Start by **[downloading](https://github.com/jacobxperez/essentials/archive/maste
 The easiest way to include [Essentials](https://jacobxperez.github.io/essentials/) in your projects is by copying the pre-compiled [CSS](https://github.com/jacobxperez/essentials/blob/master/css/style.css) file into your project folder and then link to it in HTML.
 
 * [/css](https://github.com/jacobxperez/essentials/tree/master/css)
-    * [style.less](https://github.com/jacobxperez/essentials/blob/master/css/style.less)
+    * [style.css](https://github.com/jacobxperez/essentials/blob/master/css/style.css)
 
 ### Custom Build
 

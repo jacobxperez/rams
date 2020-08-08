@@ -52,27 +52,12 @@ All components and dependencies can be found under folder [core](https://github.
     * [custom](https://github.com/jacobxperez/essentials/tree/master/css/less/custom)
     * [core](https://github.com/jacobxperez/essentials/tree/master/css/less/core)
 
-The [core](https://github.com/jacobxperez/essentials/tree/master/css/less/core) folder has all CSS modules organized by type.
+The [core](https://github.com/jacobxperez/essentials/tree/master/css/less/core) folder has all the core files organized by type.
 
 * [less/core](https://github.com/jacobxperez/essentials/tree/master/css/less/core)
     * [components](https://github.com/jacobxperez/essentials/tree/master/css/less/core/components)
     * [mixins](https://github.com/jacobxperez/essentials/tree/master/css/less/core/mixins)
     * [variables](https://github.com/jacobxperez/essentials/tree/master/css/less/core/variables)
-    * [imports](https://github.com/jacobxperez/essentials/tree/master/css/less/core/imports)
-
-The [mixins](https://github.com/jacobxperez/essentials/tree/master/css/less/core/mixins) folder is where all LESS functions are kept.
-
-* [less/core](https://github.com/jacobxperez/essentials/tree/master/css/less/core)
-    * [mixins](https://github.com/jacobxperez/essentials/tree/master/css/less/core/mixins)
-
-The [variables](https://github.com/jacobxperez/essentials/tree/master/css/less/core/variables) folder has all the default values for [variables.less](https://github.com/jacobxperez/essentials/blob/master/css/variables.less).
-
-* [less/core](https://github.com/jacobxperez/essentials/tree/master/css/less/core)
-    * [variables](https://github.com/jacobxperez/essentials/tree/master/css/less/core/variables)
-
-The [imports](https://github.com/jacobxperez/essentials/tree/master/css/less/core/imports) folder contains imports regarding mixin files and variable files.
-
-* [less/core](https://github.com/jacobxperez/essentials/tree/master/css/less/core)
     * [imports](https://github.com/jacobxperez/essentials/tree/master/css/less/core/imports)
 
 ## Contributing

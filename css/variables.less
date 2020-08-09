@@ -3,30 +3,44 @@
 // Variables that can be set to false will NOT output a style declaration
 // ----------------------------------------------------------------------------/
 
-// Page Wrapper ---------------------------------------------------------------/
+// Page Wrapper
+// ----------------------------------------------------------------------------/
 @wrapper-class: container;
 @wrapper-padding: 20px;
 // @wrapper-padding-top: @wrapper-padding * 2;
 // @wrapper-padding-bottom: @wrapper-padding * 3;
 
-// small wrapper widths
-@wrapper-small-width: 640px;
+// min width
+@wrapper-min-width: (280px + (@wrapper-padding * 2));
 
-// medium wrapper widths
-@wrapper-medium-width: 800px;
-
-// large wrapper widths
-@wrapper-large-width: 940px;
+// max width
+@wrapper-max-width: (940px + (@wrapper-padding * 2));
 
 
-// Scale ----------------------------------------------------------------------/
+// Breakpoints
+// ----------------------------------------------------------------------------/
+
+// small screen
+@viewport-small-max-width: (640px + (@wrapper-padding * 2));
+
+// medium screen
+@viewport-medium-min-width: (@viewport-small-max-width + 1 / @base-font-size);
+@viewport-medium-max-width: (@viewport-large-min-width - 1 / @base-font-size);
+
+// large screens
+@viewport-large-min-width: (940px + (@wrapper-padding * 2));
+
+
+// Scale
 // site begins to scale up at a given screen width and height
+// ----------------------------------------------------------------------------/
 
 // @scale-width: 1600px;
 // @scale-height: @scale-width;
 
 
-// Grid System ----------------------------------------------------------------/
+// Grid System
+// ----------------------------------------------------------------------------/
 // @grid-class: grid;
 // @grid-column-class: span-;
 // @grid-gap: 10px;
@@ -41,7 +55,8 @@
 // @large-columns: 12;
 
 
-// Responsive Prefix ----------------------------------------------------------/
+// Responsive Prefix
+// ----------------------------------------------------------------------------/
 
 // small screen
 // @small-prefix: sm-;
@@ -53,7 +68,8 @@
 // @large-prefix: lg-;
 
 
-// Colors ---------------------------------------------------------------------/
+// Colors
+// ----------------------------------------------------------------------------/
 
 // page background color
 // @background-color: #fff;
@@ -74,8 +90,8 @@
 // @default: #e6e6e6;
 
 
-// Typography -----------------------------------------------------------------/
-// for more fonts check out variables folder font-stack.less
+// Typography
+// ----------------------------------------------------------------------------/
 
 // base font family
 // @base-font-family: @font-sans;
@@ -145,7 +161,8 @@
 // @hr-border-color: @base-border-color;
 
 
-// Box Model ------------------------------------------------------------------/
+// Box Model
+// ----------------------------------------------------------------------------/
 
 // margins
 // @base-margin-y: 20px;
@@ -162,35 +179,39 @@
 // @base-border-radius: false;
 
 
-// List Items -----------------------------------------------------------------/
+// List Items
+// ----------------------------------------------------------------------------/
 // @list-indent: @indent; // padding left
 // @list-leading: @base-leading; // margin bottom
 // @list-style-position: outside;
 
 
-// Code -----------------------------------------------------------------------/
+// Code
+// ----------------------------------------------------------------------------/
 // @code-font-family: @font-mono;
-// @code-background-color: #222;
-// @code-color: #e6e6e6;
 
 
-// Pre ------------------------------------------------------------------------/
+// Pre
+// ----------------------------------------------------------------------------/
 // @pre-white-space: pre-wrap;
 
 
-// Blockquote -----------------------------------------------------------------/
+// Blockquote
+// ----------------------------------------------------------------------------/
 // @blockquote-font-family: @font-serif;
 // @blockquote-font-size: @h3-font-size;
 // @blockquote-font-style: italic;
 // @blockquote-leading: @base-leading;
 
 
-// Table ----------------------------------------------------------------------/
+// Table
+// ----------------------------------------------------------------------------/
 // @table-cell-padding-y: @base-padding-y;
 // @table-cell-padding-x: @base-padding-x;
 
 
-// Form -----------------------------------------------------------------------/
+// Form
+// ----------------------------------------------------------------------------/
 // @form-padding-y: @base-padding-y;
 // @form-padding-x: @base-padding-x;
 
@@ -202,7 +223,8 @@
 // @form-border-radius: @base-border-radius;
 
 
-// Button ---------------------------------------------------------------------/
+// Button
+// ----------------------------------------------------------------------------/
 // @button-class: button;
 // @button-padding-y: @base-padding-y;
 // @button-padding-x: @base-padding-x;
@@ -229,19 +251,22 @@
 // @button-disabled-background-color: #bebebe;
 
 
-// Dropdown -------------------------------------------------------------------/
+// Dropdown
+// ----------------------------------------------------------------------------/
 // @dropdown-box-background-color: @background-color;
 // @dropdown-box-min-width: 160px;
 
 
-// Nav ------------------------------------------------------------------------/
+// Nav
+// ----------------------------------------------------------------------------/
 // @nav-link-color: @link-color;
 // @nav-link-color-hover: @font-color;
 // @nav-link-padding-y: @base-padding-y;
 // @nav-link-padding-x: @base-padding-x;
 
 
-// Navbar ---------------------------------------------------------------------/
+// Navbar
+// ----------------------------------------------------------------------------/
 // @navbar-background-color: #222;
 
 // @navbar-title-font-size: 18px;
@@ -253,11 +278,13 @@
 // @navbar-link-padding-x: @base-padding-x;
 
 
-// Breadcrumb -----------------------------------------------------------------/
+// Breadcrumb
+// ----------------------------------------------------------------------------/
 // @breadcrumb-separator: " /";
 
 
-// Iconography ----------------------------------------------------------------/
+// Iconography
+// ----------------------------------------------------------------------------/
 // @icon-class: icon;
 // @icon-font-name: "icons";
 // @icon-font-path: "../fonts/icons/";
@@ -266,6 +293,7 @@
 // @icon-line-height: 10px;
 
 
-// // Selection ------------------------------------------------------------------/
+// // Selection
+// ----------------------------------------------------------------------------/
 // @selection-background: #cde1ff;
 // @selection-color: #000;

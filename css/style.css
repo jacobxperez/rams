@@ -882,7 +882,7 @@ nav .nav-link {
 }
 
 .flex-grow {
-    flex-grow: 100;
+    flex-grow: 1;
 }
 
 .justify-start {
@@ -930,7 +930,7 @@ nav .nav-link {
     }
 
     .sm-flex-grow {
-        flex-grow: 100;
+        flex-grow: 1;
     }
 
     .sm-justify-start {
@@ -982,7 +982,7 @@ nav .nav-link {
     }
 
     .md-flex-grow {
-        flex-grow: 100;
+        flex-grow: 1;
     }
 
     .md-justify-start {
@@ -1035,7 +1035,7 @@ nav .nav-link {
     }
 
     .lg-flex-grow {
-        flex-grow: 100;
+        flex-grow: 1;
     }
 
     .lg-justify-start {

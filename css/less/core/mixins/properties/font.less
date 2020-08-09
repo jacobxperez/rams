@@ -89,3 +89,30 @@
     }
 
 }
+
+
+// Font Color
+// -----------------------------------------------------------------------------
+.color (@color: @font-color; @amount: 6.5%; @switch: none) {
+
+    & when (@switch = none) {
+        color: @color;
+    }
+
+    & when (@switch = light) {
+        color: lighten(@color, @amount);
+    }
+
+    & when (@switch = dark) {
+        color: darken(@color, @amount);
+    }
+
+    & when (@switch = saturate) {
+        color: saturate(@color, @amount);
+    }
+
+    & when (@switch = desaturate) {
+        color: desaturate(@color, @amount);
+    }
+
+}

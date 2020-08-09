@@ -280,10 +280,7 @@ code {
 pre {
     overflow: auto;
     margin-bottom: 1.5rem;
-    padding: .5rem .875rem;
     white-space: pre-wrap;
-    background-color: #222;
-    color: #e6e6e6;
 }
 
 pre code {
@@ -645,7 +642,6 @@ nav .nav-link {
     position: absolute;
     z-index: 1000;
     min-width: 10rem;
-    border: .0625rem solid rgba(0, 0, 0, 0.3);
     background-color: #fff;
     font-size: 1rem;
     font-style: normal;
@@ -701,7 +697,6 @@ nav .nav-link {
 }
 
 .navbar-box {
-    border: 0;
     background-color: #272727;
     opacity: 0;
 }
@@ -784,6 +779,19 @@ nav .nav-link {
 
 .button-success:active {
     background-color: #2e8a2e;
+}
+
+.box {
+    padding: .5rem .875rem;
+}
+
+.box-primary {
+    background-color: #06f;
+    color: #fff;
+}
+
+.frame {
+    border: .0625rem solid rgba(0, 0, 0, 0.3);
 }
 
 .float-left {

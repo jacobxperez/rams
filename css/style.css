@@ -593,7 +593,7 @@ body > .container:last-child {
 
 .nav {
     display: flex;
-    align-items: center;
+    align-items: baseline;
     flex-wrap: wrap;
     margin-bottom: 0;
 }
@@ -917,6 +917,42 @@ body > .container:last-child {
         float: right;
     }
 
+    .sm-flex-row {
+        flex-direction: row;
+    }
+
+    .sm-flex-column {
+        flex-direction: column;
+    }
+
+    .sm-flex-grow {
+        flex-grow: 100;
+    }
+
+    .sm-justify-start {
+        justify-content: start;
+    }
+
+    .sm-justify-end {
+        justify-content: end;
+    }
+
+    .sm-justify-center {
+        justify-content: center;
+    }
+
+    .sm-justify-around {
+        justify-content: space-around;
+    }
+
+    .sm-justify-between {
+        justify-content: space-between;
+    }
+
+    .sm-justify-evenly {
+        justify-content: space-evenly;
+    }
+
     .lg-show,
     .md-down-hide,
     .md-show,
@@ -931,6 +967,42 @@ body > .container:last-child {
 
     .md-float-right {
         float: right;
+    }
+
+    .md-flex-row {
+        flex-direction: row;
+    }
+
+    .md-flex-column {
+        flex-direction: column;
+    }
+
+    .md-flex-grow {
+        flex-grow: 100;
+    }
+
+    .md-justify-start {
+        justify-content: start;
+    }
+
+    .md-justify-end {
+        justify-content: end;
+    }
+
+    .md-justify-center {
+        justify-content: center;
+    }
+
+    .md-justify-around {
+        justify-content: space-around;
+    }
+
+    .md-justify-between {
+        justify-content: space-between;
+    }
+
+    .md-justify-evenly {
+        justify-content: space-evenly;
     }
 
     .lg-show,
@@ -948,6 +1020,42 @@ body > .container:last-child {
 
     .lg-float-right {
         float: right;
+    }
+
+    .lg-flex-row {
+        flex-direction: row;
+    }
+
+    .lg-flex-column {
+        flex-direction: column;
+    }
+
+    .lg-flex-grow {
+        flex-grow: 100;
+    }
+
+    .lg-justify-start {
+        justify-content: start;
+    }
+
+    .lg-justify-end {
+        justify-content: end;
+    }
+
+    .lg-justify-center {
+        justify-content: center;
+    }
+
+    .lg-justify-around {
+        justify-content: space-around;
+    }
+
+    .lg-justify-between {
+        justify-content: space-between;
+    }
+
+    .lg-justify-evenly {
+        justify-content: space-evenly;
     }
 
     .lg-hide,

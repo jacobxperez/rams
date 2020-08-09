@@ -1,35 +1,28 @@
 // Wrapper
 // ----------------------------------------------------------------------------/
-.@{wrapper-class},
-.@{wrapper-class}-full {
+.@{wrapper-class} {
     display: grid;
     width: 100%;
+    .min-width(@wrapper-min-width);
+    .max-width(@wrapper-max-width);
+    margin: 0 auto;
     .padding-left(@wrapper-padding);
     .padding-right(@wrapper-padding);
 }
 
-.@{wrapper-class} {
-    .min-width(@wrapper-min-width);
-    .max-width(@wrapper-max-width);
-    margin: 0 auto;
-}
-
-body > .@{wrapper-class}:first-child,
-body > .@{wrapper-class}-full:first-child {
+body > .@{wrapper-class}:first-child {
     .padding-top(@wrapper-padding-top);
 }
 
 body {
-    > .@{wrapper-class}:only-child,
-    > .@{wrapper-class}-full:only-child  {
+    > .@{wrapper-class}:only-child  {
         .padding-top(@wrapper-padding-top);
         .padding-bottom(@wrapper-padding-bottom);
     }
 }
 
 body {
-    > .@{wrapper-class}:last-child,
-    > .@{wrapper-class}-full:last-child {
+    > .@{wrapper-class}:last-child {
         .padding-bottom(@wrapper-padding-bottom);
     }
 }

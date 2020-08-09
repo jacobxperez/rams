@@ -140,18 +140,18 @@
 
 // Small Screen ---------------------------------------------------------------/
 @media screen and (max-width: @breakpoint-small-max) {
-    .float-left-@{small-prefix} {
+    .@{small-prefix}float-left {
         float: left;
     }
 
-    .float-right-@{small-prefix} {
+    .@{small-prefix}float-right {
         float: right;
     }
 
-    .hide-@{medium-prefix}-down,
-    .hide-@{small-prefix},
-    .show-@{medium-prefix},
-    .show-@{large-prefix} {
+    .@{medium-prefix}down-hide,
+    .@{small-prefix}hide,
+    .@{medium-prefix}show,
+    .@{large-prefix}show {
         display: none;
     }
 }
@@ -159,19 +159,19 @@
 
 // Medium Screen --------------------------------------------------------------/
 @media screen and (min-width: @breakpoint-medium-min) and (max-width: @breakpoint-medium-max) {
-    .float-left-@{medium-prefix} {
+    .@{medium-prefix}float-left {
         float: left;
     }
 
-    .float-right-@{medium-prefix} {
+    .@{medium-prefix}float-right {
         float: right;
     }
 
-    .hide-@{medium-prefix}-up,
-    .hide-@{medium-prefix}-down,
-    .hide-@{medium-prefix},
-    .show-@{small-prefix},
-    .show-@{large-prefix} {
+    .@{medium-prefix}up-hide,
+    .@{medium-prefix}down-hide,
+    .@{medium-prefix}hide,
+    .@{small-prefix}show,
+    .@{large-prefix}show {
         display: none;
     }
 }
@@ -179,18 +179,18 @@
 
 // Large Screen ---------------------------------------------------------------/
 @media screen and (min-width: @breakpoint-large-min) {
-    .float-left-@{large-prefix} {
+    .@{large-prefix}float-left {
         float: left;
     }
 
-    .float-right-@{large-prefix} {
+    .@{large-prefix}float-right {
         float: right;
     }
 
-    .hide-@{medium-prefix}-up,
-    .hide-@{large-prefix},
-    .show-@{small-prefix},
-    .show-@{medium-prefix} {
+    .@{medium-prefix}up-hide,
+    .@{large-prefix}hide,
+    .@{small-prefix}show,
+    .@{medium-prefix}show {
         display: none;
     }
 }

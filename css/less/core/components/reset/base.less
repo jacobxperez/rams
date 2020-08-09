@@ -35,9 +35,20 @@ footer,
 header,
 main,
 menu,
-nav,
 section {
     display: block;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 0;
+    }
 }
 
 audio,

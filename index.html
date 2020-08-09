@@ -15,7 +15,7 @@
     <!-- Navigation -->
     <nav class="navbar fixed-top">
         <div class="container">
-            <ul class="nav sm-hide">
+            <ul class="sm-hide">
                 <li><a class="nav-link navbar-link" href="https://jacobxperez.github.io/essentials/">Essentials</a></li>
                 <li class="flex-grow"></li>
                 <li><a class="nav-link navbar-link" href="#top">Read Me</a></li>
@@ -23,14 +23,14 @@
                 <li><a class="icon-flow-branch nav-link navbar-link" href="https://github.com/jacobxperez/essentials"> Fork</a></li>
             </ul>
 
-            <ul class="nav md-up-hide">
+            <ul class="md-up-hide">
                 <li><a class="nav-link navbar-link" href="https://jacobxperez.github.io/essentials/">Essentials</a></li>
                 <li class="flex-grow"></li>
                 <li class="dropdown position-static">
                     <a class="icon-menu nav-link navbar-link js-dropdown"></a>
 
                     <div class="dropdown-box position-stretch navbar-box">
-                        <ul>
+                        <ul class="flex-column flex-grow">
                             <li><a class="nav-link navbar-link" href="#top">Read Me</a></li>
                             <li><a class="nav-link navbar-link" href="fonts/icons/index.html">Icons</a></li>
                             <li><a class="icon-flow-branch nav-link navbar-link" href="https://github.com/jacobxperez/essentials"> Fork</a></li>
@@ -53,55 +53,36 @@
     <main class="container" role="main">
         <div class="grid">
             <!-- Secondary Nav -->
-            <nav class="lg-span-3 md-span-2 sm-span-4">
-                <p class="sm-hide"><strong>On This Page</strong></p>
+            <nav class="lg-span-3 md-span-2 sm-span-4 leading">
+                <ul class="sm-hide flex-column flex-grow">
+                    <li><p class="sm-hide"><strong>On This Page</strong></p></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#project-status">Project Status</a></li>
+                    <li><a href="#getting-started">Getting Started</a></li>
+                    <li><a href="#default-build">Default Build</a></li>
+                    <li><a href="#custom-build">Custom Build</a></li>
+                    <li><a href="#contributing">Contributing</a></li>
+                    <li><a href="#bug-reports">Bug Reports</a></li>
+                    <li><a href="#feature-requests">Feature Requests</a></li>
+                    <li><a href="#pull-requests">Pull Requests</a></li>
+                    <li><a href="#design-principles">Design Principles</a></li>
+                    <li><a href="#license">LICENSE</a></li>
+                </ul>
 
-                <ul class="sm-hide">
-                    <li><a class="nav-link" href="#about">About</a>
-                        <ul>
+                <ul class="md-up-hide flex-grow">
+                    <li class="accordion flex-column flex-grow">
+                        <a class="nav-link js-accordion"><strong>On This Page<span class="icon-down-open float-right"></span></strong></a>
+
+                        <ul class="accordion-box flex-column flex-grow">
+                            <li><a class="nav-link" href="#about">About</a></li>
                             <li><a class="nav-link" href="#project-status">Project Status</a></li>
-                        </ul>
-                    </li>
-                    <li><a class="nav-link" href="#getting-started">Getting Started</a>
-                        <ul>
+                            <li><a class="nav-link" href="#getting-started">Getting Started</a></li>
                             <li><a class="nav-link" href="#default-build">Default Build</a></li>
                             <li><a class="nav-link" href="#custom-build">Custom Build</a></li>
-                        </ul>
-                    </li>
-                    <li><a class="nav-link" href="#contributing">Contributing</a>
-                        <ul>
+                            <li><a class="nav-link" href="#contributing">Contributing</a></li>
                             <li><a class="nav-link" href="#bug-reports">Bug Reports</a></li>
                             <li><a class="nav-link" href="#feature-requests">Feature Requests</a></li>
                             <li><a class="nav-link" href="#pull-requests">Pull Requests</a></li>
-                        </ul>
-                    </li>
-                    <li><a class="nav-link" href="#design-principles">Design Principles</a></li>
-                    <li><a class="nav-link" href="#license">LICENSE</a></li>
-                </ul>
-
-                <ul class="md-up-hide">
-                    <li class="accordion">
-                        <a class="nav-link js-accordion"><strong>On This Page<span class="icon-down-open float-right"></span></strong></a>
-
-                        <ul class="nav accordion-box leading-top">
-                            <li><a class="nav-link" href="#about">About</a>
-                                <ul>
-                                    <li><a class="nav-link" href="#project-status">Project Status</a></li>
-                                </ul>
-                            </li>
-                            <li><a class="nav-link" href="#getting-started">Getting Started</a>
-                                <ul>
-                                    <li><a class="nav-link" href="#default-build">Default Build</a></li>
-                                    <li><a class="nav-link" href="#custom-build">Custom Build</a></li>
-                                </ul>
-                            </li>
-                            <li><a class="nav-link" href="#contributing">Contributing</a>
-                                <ul>
-                                    <li><a class="nav-link" href="#bug-reports">Bug Reports</a></li>
-                                    <li><a class="nav-link" href="#feature-requests">Feature Requests</a></li>
-                                    <li><a class="nav-link" href="#pull-requests">Pull Requests</a></li>
-                                </ul>
-                            </li>
                             <li><a class="nav-link" href="#design-principles">Design Principles</a></li>
                             <li><a class="nav-link" href="#license">LICENSE</a></li>
                         </ul>

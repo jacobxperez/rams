@@ -38,9 +38,20 @@ footer,
 header,
 main,
 menu,
-nav,
 section {
     display: block;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 0;
 }
 
 audio,
@@ -591,14 +602,7 @@ body > .container:last-child {
     }
 }
 
-.nav {
-    display: flex;
-    align-items: baseline;
-    flex-wrap: wrap;
-    margin-bottom: 0;
-}
-
-.nav .nav-link {
+nav .nav-link {
     padding: .5rem .875rem;
 }
 
@@ -657,16 +661,16 @@ body > .container:last-child {
 
 .accordion {
     position: relative;
+    display: flex;
 }
 
 .accordion-box {
     display: none;
-    width: 100%;
     transition: all .3s ease-in-out 0s;
 }
 
 .accordion-active + .accordion-box {
-    display: block;
+    display: flex;
 }
 
 .navbar {
@@ -685,8 +689,8 @@ body > .container:last-child {
     color: #cccccc;
 }
 
-.navbar > .container > .nav,
-.navbar > .container-full > .nav {
+.navbar > .container > ul,
+.navbar > .container-full > ul {
     margin-left: -0.875rem;
     margin-right: -0.875rem;
 }

@@ -4,11 +4,19 @@
     .padding(@base-padding-y, @base-padding-x);
 }
 
-.box-primary {
-    background-color: @primary;
-    color: #fff;
-}
-
 .frame {
     .border();
+}
+
+.box-primary {
+    .background-color(@primary);
+    .color(#fff);
+}
+
+.frame-primary {
+    .border-color(@primary);
+}
+
+.text-primary {
+    .color(@primary);
 }

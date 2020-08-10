@@ -4,9 +4,16 @@
     .padding(@base-padding-y, @base-padding-x);
 }
 
+.flex-box {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+}
+
 .frame {
     .border();
 }
+
 
 .box-primary {
     .background-color(@primary);
@@ -19,4 +26,32 @@
 
 .text-primary {
     .color(@primary);
+}
+
+
+.box-secondary {
+    .background-color(@secondary);
+    .color(#fff);
+}
+
+.frame-secondary {
+    .border-color(@secondary);
+}
+
+.text-secondary {
+    .color(@secondary);
+}
+
+
+.box-dark {
+    .background-color(#222);
+    .color(#fff);
+}
+
+.frame-dark {
+    .border-color(#222);
+}
+
+.text-dark {
+    .color(#222);
 }

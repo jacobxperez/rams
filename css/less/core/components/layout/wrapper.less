@@ -26,3 +26,12 @@ body {
         .padding-bottom(@wrapper-padding-bottom);
     }
 }
+
+.fixed-top > .@{wrapper-class} > ul {
+    .margin-left(-@navbar-link-padding-x);
+    .margin-right(-@navbar-link-padding-x);
+}
+
+.fixed-top + .@{wrapper-class} {
+    .padding-top(@wrapper-padding-top * 2);
+}

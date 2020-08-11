@@ -1,23 +1,19 @@
 // Dropdown
 // ----------------------------------------------------------------------------/
-.dropdown {
-    position: relative;
-}
-
 .dropdown-box {
     position: absolute;
     z-index: 1000;
+    display: none;
+    width: 100%;
     .min-width(@dropdown-box-min-width);
+    margin-bottom: 0;
     background-color: @dropdown-box-background-color;
-    font-size: 1rem;
-    font-style: normal;
-    font-weight: 400;
-    text-align: left;
     visibility: hidden;
     .transition();
 }
 
 // added by javascript
 .dropdown-active + .dropdown-box {
+    display: block;
     visibility: visible;
 }

@@ -1,11 +1,5 @@
 // Navbar
 // ----------------------------------------------------------------------------/
-.navbar {
-    z-index: 1025;
-    width: 100%;
-    background-color: @navbar-background-color;
-}
-
 .navbar-link {
     .padding(@navbar-link-padding-y; @navbar-link-padding-x);
     color: @navbar-link-color;
@@ -14,15 +8,6 @@
     &:hover {
     color: @navbar-link-color-hover;
     }
-}
-
-.fixed-top > .@{wrapper-class} > ul {
-    .margin-left(-@navbar-link-padding-x);
-    .margin-right(-@navbar-link-padding-x);
-}
-
-.fixed-top + .@{wrapper-class} {
-    .padding-top(@wrapper-padding-top * 2);
 }
 
 

@@ -5,21 +5,8 @@
     width: 100%;
     margin-bottom: 0;
     .min-width(@ghost-box-min-width);
-    background-color: @ghost-box-background-color;
     visibility: hidden;
     .transition();
-}
-
-.static > .ghost-box {
-    left: 0;
-    right: 0;
-    width: auto;
-    .margin-left(-@nav-link-padding-x);
-    .margin-right(-@nav-link-padding-x);
-
-    > * {
-        .padding(0, @wrapper-padding);
-    }
 }
 
 // added by javascript

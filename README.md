@@ -46,12 +46,6 @@ Adjust the [variables](https://github.com/jacobxperez/essentials/blob/master/css
     * [custom.less](https://github.com/jacobxperez/essentials/blob/master/css/custom.less) (write custom modules)
     * [style.less](https://github.com/jacobxperez/essentials/blob/master/css/style.less) (compile everything together)
 
-All components and dependencies can be found under folder [core](https://github.com/jacobxperez/essentials/tree/master/css/less/core). To ensure future compatibility we recommend adding extra modules under folder [custom](https://github.com/jacobxperez/essentials/tree/master/css/less/custom) then link to them on file [custom.less](https://github.com/jacobxperez/essentials/blob/master/css/custom.less) for compiling.
-
-* [/css/less](https://github.com/jacobxperez/essentials/tree/master/css/less)
-    * [custom](https://github.com/jacobxperez/essentials/tree/master/css/less/custom)
-    * [core](https://github.com/jacobxperez/essentials/tree/master/css/less/core)
-
 ## Contributing
 
 Help us make [Essentials](https://jacobxperez.github.io/essentials/) better for everyone, any contribution will be considered. Use the [issue tracker](https://github.com/jacobxperez/essentials/issues) for bug reports, feature requests and submitting pull requests. Please read our [Design Principles](#design-principles) to better understand the nature and the direction of the project.

@@ -766,6 +766,7 @@ body > .container:last-child {
 
 .box {
     padding: .5rem .75rem;
+    background-color: #fff;
 }
 
 .flex-box {

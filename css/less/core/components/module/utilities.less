@@ -12,22 +12,24 @@
 
 
 // Position -------------------------------------------------------------------/
-.position-static {
+.static {
     position: static;
 }
 
-.position-stretch {
+.relative {
+    position: relative;
+}
+
+.fixed-top,
+.fixed-bottom {
     left: 0;
     right: 0;
-    width: 100%;
 }
 
 .fixed-top,
 .fixed-bottom {
     position: fixed;
     z-index: 1025;
-    right: 0;
-    left: 0;
 }
 
 .fixed-top {
@@ -39,11 +41,11 @@
 }
 
 .top {
-    top: 100%;
+    bottom: 100%;
 }
 
 .bottom {
-    bottom: 100%;
+    top: 100%;
 }
 
 .left {

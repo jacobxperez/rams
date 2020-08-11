@@ -470,17 +470,13 @@ body > .container:last-child {
     padding-bottom: 3.75rem;
 }
 
-.fixed-top > .container > ul {
+.fixed-top .container > ul {
     margin-left: -0.75rem;
     margin-right: -0.75rem;
 }
 
 .fixed-top + .container {
     padding-top: 5rem;
-}
-
-.container {
-    column-gap: 1.25rem;
 }
 
 .span-1 {
@@ -850,21 +846,8 @@ body > .container:last-child {
     width: 100%;
     margin-bottom: 0;
     min-width: 10rem;
-    background-color: #fff;
     visibility: hidden;
     transition: all .3s ease-in-out 0s;
-}
-
-.static > .ghost-box {
-    left: 0;
-    right: 0;
-    width: auto;
-    margin-left: -0.75rem;
-    margin-right: -0.75rem;
-}
-
-.static > .ghost-box > * {
-    padding: 0 1.25rem;
 }
 
 .accordion-active + .ghost-box,

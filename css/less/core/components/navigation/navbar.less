@@ -8,29 +8,3 @@
     color: @navbar-link-color-hover;
     }
 }
-
-
-// Navbar box -----------------------------------------------------------------/
-.navbar-box {
-    background-color: lighten(@navbar-background-color, 2%);
-    opacity: 0;
-}
-
-// added by javascript
-.dropdown-active + .navbar-box {
-    opacity: 0.98;
-}
-
-
-// Responsive
-// ----------------------------------------------------------------------------/
-@media screen and (max-width: @breakpoint-medium-max) {
-
-    .navbar-box {
-        .nav-link {
-            .padding-left(@wrapper-padding);
-            .padding-right(@wrapper-padding);
-        }
-    }
-
-}

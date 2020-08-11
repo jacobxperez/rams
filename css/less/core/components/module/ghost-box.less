@@ -1,18 +1,16 @@
-// Dropdown
+// Ghost Box
 // ----------------------------------------------------------------------------/
-.dropdown-box {
-    position: absolute;
-    z-index: 1000;
+.ghost-box {
     display: none;
     width: 100%;
-    .min-width(@dropdown-box-min-width);
     margin-bottom: 0;
-    background-color: @dropdown-box-background-color;
+    .min-width(@ghost-box-min-width);
+    background-color: @ghost-box-background-color;
     visibility: hidden;
     .transition();
 }
 
-.static > .dropdown-box {
+.static > .ghost-box {
     left: 0;
     right: 0;
     width: auto;
@@ -25,7 +23,8 @@
 }
 
 // added by javascript
-.dropdown-active + .dropdown-box {
+.accordion-active + .ghost-box,
+.dropdown-active + .ghost-box {
     display: block;
     visibility: visible;
 }

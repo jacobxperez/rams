@@ -659,6 +659,15 @@ body > .container:last-child {
     color: #555;
 }
 
+.navbar-link {
+    color: #fff;
+}
+
+.navbar-link.active,
+.navbar-link:hover {
+    color: #cccccc;
+}
+
 .breadcrumb li::after {
     content: " /";
     margin-right: .25rem;
@@ -668,15 +677,6 @@ body > .container:last-child {
 .breadcrumb li:only-child::after {
     content: "";
     margin-right: 0;
-}
-
-.navbar-link {
-    color: #fff;
-}
-
-.navbar-link.active,
-.navbar-link:hover {
-    color: #cccccc;
 }
 
 .button-primary {
@@ -747,6 +747,21 @@ body > .container:last-child {
 
 .button-success:active {
     background-color: #2e8a2e;
+}
+
+.ghost-box {
+    display: none;
+    width: 100%;
+    margin-bottom: 0;
+    min-width: 10rem;
+    visibility: hidden;
+    transition: all .3s ease-in-out 0s;
+}
+
+.accordion-active + .ghost-box,
+.dropdown-active + .ghost-box {
+    display: block;
+    visibility: visible;
 }
 
 .box {
@@ -839,21 +854,6 @@ body > .container:last-child {
 
 .text-danger {
     color: #c00;
-}
-
-.ghost-box {
-    display: none;
-    width: 100%;
-    margin-bottom: 0;
-    min-width: 10rem;
-    visibility: hidden;
-    transition: all .3s ease-in-out 0s;
-}
-
-.accordion-active + .ghost-box,
-.dropdown-active + .ghost-box {
-    display: block;
-    visibility: visible;
 }
 @font-face {
     font-family: 'icons';

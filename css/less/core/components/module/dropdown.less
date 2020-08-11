@@ -12,6 +12,18 @@
     .transition();
 }
 
+.static > .dropdown-box {
+    left: 0;
+    right: 0;
+    width: auto;
+    .margin-left(-@nav-link-padding-x);
+    .margin-right(-@nav-link-padding-x);
+
+    > * {
+        .padding(0, @wrapper-padding);
+    }
+}
+
 // added by javascript
 .dropdown-active + .dropdown-box {
     display: block;

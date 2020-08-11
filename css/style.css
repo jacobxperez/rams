@@ -467,6 +467,15 @@ body > .container:last-child {
     padding-bottom: 3.75rem;
 }
 
+.fixed-top > .container > ul {
+    margin-left: -0.875rem;
+    margin-right: -0.875rem;
+}
+
+.fixed-top + .container {
+    padding-top: 5rem;
+}
+
 .grid {
     display: grid;
     grid-template-rows: auto;
@@ -674,37 +683,28 @@ nav .nav-link {
 .dropdown-box {
     position: absolute;
     z-index: 1000;
+    display: none;
+    width: 100%;
     min-width: 10rem;
+    margin-bottom: 0;
     background-color: #fff;
-    font-size: 1rem;
-    font-style: normal;
-    font-weight: 400;
-    text-align: left;
     visibility: hidden;
     transition: all .3s ease-in-out 0s;
 }
 
 .dropdown-active + .dropdown-box {
+    display: block;
     visibility: visible;
-}
-
-.accordion {
-    position: relative;
 }
 
 .accordion-box {
     display: none;
+    margin-bottom: 0;
     transition: all .3s ease-in-out 0s;
 }
 
 .accordion-active + .accordion-box {
     display: block;
-}
-
-.navbar {
-    z-index: 1025;
-    width: 100%;
-    background-color: #222;
 }
 
 .navbar-link {
@@ -715,15 +715,6 @@ nav .nav-link {
 .navbar-link.active,
 .navbar-link:hover {
     color: #cccccc;
-}
-
-.fixed-top > .container > ul {
-    margin-left: -0.875rem;
-    margin-right: -0.875rem;
-}
-
-.fixed-top + .container {
-    padding-top: 5rem;
 }
 
 .navbar-box {
@@ -862,6 +853,45 @@ nav .nav-link {
 
 .text-dark {
     color: #222;
+}
+
+.box-success {
+    background-color: #393;
+    color: #fff;
+}
+
+.frame-success {
+    border-color: #393;
+}
+
+.text-success {
+    color: #393;
+}
+
+.box-warning {
+    background-color: #fa0;
+    color: #fff;
+}
+
+.frame-warning {
+    border-color: #fa0;
+}
+
+.text-warning {
+    color: #fa0;
+}
+
+.box-danger {
+    background-color: #c00;
+    color: #fff;
+}
+
+.frame-danger {
+    border-color: #c00;
+}
+
+.text-danger {
+    color: #c00;
 }
 @font-face {
     font-family: 'icons';
@@ -1811,22 +1841,24 @@ nav .nav-link {
     float: right;
 }
 
-.position-static {
+.static {
     position: static;
 }
 
-.position-stretch {
+.relative {
+    position: relative;
+}
+
+.fixed-bottom,
+.fixed-top {
     left: 0;
     right: 0;
-    width: 100%;
 }
 
 .fixed-bottom,
 .fixed-top {
     position: fixed;
     z-index: 1025;
-    right: 0;
-    left: 0;
 }
 
 .fixed-top {
@@ -1838,11 +1870,11 @@ nav .nav-link {
 }
 
 .top {
-    top: 100%;
+    bottom: 100%;
 }
 
 .bottom {
-    bottom: 100%;
+    top: 100%;
 }
 
 .left {

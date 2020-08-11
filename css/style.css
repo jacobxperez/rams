@@ -320,7 +320,7 @@ table {
 td,
 th {
     display: table-cell;
-    padding: .5rem .875rem;
+    padding: .5rem .75rem;
     text-align: left;
 }
 
@@ -339,7 +339,7 @@ input[type=week],
 select,
 textarea {
     display: block;
-    padding: .5rem .875rem;
+    padding: .5rem .75rem;
     border: .0625rem solid rgba(0, 0, 0, 0.3);
     width: 100%;
     background-color: #fff;
@@ -385,7 +385,7 @@ input[type=button] {
     position: relative;
     z-index: 1;
     display: inline-block;
-    padding: .5rem .875rem;
+    padding: .5rem .75rem;
     border: .0625rem solid rgba(0, 0, 0, 0.3);
     background-color: #e6e6e6;
     color: #555;
@@ -468,8 +468,8 @@ body > .container:last-child {
 }
 
 .fixed-top > .container > ul {
-    margin-left: -0.875rem;
-    margin-right: -0.875rem;
+    margin-left: -0.75rem;
+    margin-right: -0.75rem;
 }
 
 .fixed-top + .container {
@@ -642,7 +642,7 @@ body > .container:last-child {
 }
 
 nav .nav-link {
-    padding: .5rem .875rem;
+    padding: .5rem .75rem;
 }
 
 .nav-link {
@@ -676,10 +676,6 @@ nav .nav-link {
     margin-right: 0;
 }
 
-.dropdown {
-    position: relative;
-}
-
 .dropdown-box {
     position: absolute;
     z-index: 1000;
@@ -690,6 +686,18 @@ nav .nav-link {
     background-color: #fff;
     visibility: hidden;
     transition: all .3s ease-in-out 0s;
+}
+
+.static > .dropdown-box {
+    left: 0;
+    right: 0;
+    width: auto;
+    margin-left: -0.75rem;
+    margin-right: -0.75rem;
+}
+
+.static > .dropdown-box > * {
+    padding: 0 1.25rem;
 }
 
 .dropdown-active + .dropdown-box {
@@ -708,7 +716,6 @@ nav .nav-link {
 }
 
 .navbar-link {
-    padding: .625rem .875rem;
     color: #fff;
 }
 
@@ -803,7 +810,7 @@ nav .nav-link {
 }
 
 .box {
-    padding: .5rem .875rem;
+    padding: .5rem .75rem;
 }
 
 .flex-box {

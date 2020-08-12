@@ -97,7 +97,7 @@ img {
 }
 
 figure {
-    margin: 1.25rem;
+    margin: .625rem;
 }
 
 progress[value] {
@@ -133,7 +133,7 @@ ul ul {
 
 .ol,
 .ul {
-    padding-left: 2rem;
+    padding-left: 1.5rem;
     list-style-position: outside;
 }
 
@@ -1853,16 +1853,16 @@ body > .container:last-child {
 }
 
 .block-indent {
-    padding-left: 2rem;
+    padding-left: 1.5rem;
 }
 
 .text-indent {
-    text-indent: 2rem;
+    text-indent: 1.5rem;
 }
 
 .text-outdent {
-    padding-left: 2rem;
-    text-indent: -2rem;
+    padding-left: 1.5rem;
+    text-indent: -1.5rem;
 }
 
 .text-left {

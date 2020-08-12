@@ -2,13 +2,13 @@
 // ----------------------------------------------------------------------------/
 .@{wrapper-class} {
     display: grid;
-    .column-gap(@grid-gap);
+    .column-gap(@wrapper-gap);
     width: 100%;
     .min-width(@wrapper-min-width);
     .max-width(@wrapper-max-width);
     margin: 0 auto;
-    .padding-left(@wrapper-padding);
-    .padding-right(@wrapper-padding);
+    .padding-left(@wrapper-gap);
+    .padding-right(@wrapper-gap);
 }
 
 body > .@{wrapper-class}:first-child {

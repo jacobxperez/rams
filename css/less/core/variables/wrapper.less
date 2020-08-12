@@ -1,12 +1,12 @@
 // Wrapper
 // ----------------------------------------------------------------------------/
 @wrapper-class: container;
-@wrapper-padding: 20px;
-@wrapper-padding-top: @wrapper-padding * 2;
-@wrapper-padding-bottom: @wrapper-padding * 3;
+@wrapper-gap: 20px;
+@wrapper-padding-top: @wrapper-gap * 2;
+@wrapper-padding-bottom: @wrapper-gap * 3;
 
 // Minimum wrapper width
-@wrapper-min-width-output: (@wrapper-min-width + (@wrapper-padding * 2));
+@wrapper-min-width-output: (@wrapper-min-width + (@wrapper-gap * 2));
 
 // Maximum wrapper width
-@wrapper-max-width-output: (@wrapper-max-width + (@wrapper-padding * 2));
+@wrapper-max-width-output: (@wrapper-max-width + (@wrapper-gap * 2));

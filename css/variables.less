@@ -4,6 +4,7 @@
 // ----------------------------------------------------------------------------/
 
 // Page Wrapper
+// Automatacly calculates wrapper paddings
 // ----------------------------------------------------------------------------/
 @wrapper-class: container;
 // @wrapper-padding: 20px;
@@ -23,7 +24,7 @@
 // small screen
 @viewport-small-max-width: (640px + (@wrapper-padding * 2));
 
-// medium screen
+// medium screen: starts after small max and end before large min
 @viewport-medium-min-width: (@viewport-small-max-width + 1 / @base-font-size);
 @viewport-medium-max-width: (@viewport-large-min-width - 1 / @base-font-size);
 
@@ -255,6 +256,7 @@
 // Ghost Box
 // ----------------------------------------------------------------------------/
 // @ghost-box-min-width: 160px;
+// @ghost-box-background-color: @background-color;
 
 
 // Nav

@@ -754,6 +754,7 @@ body > .container:last-child {
     width: 100%;
     margin-bottom: 0;
     min-width: 10rem;
+    background-color: #fff;
     visibility: hidden;
     transition: all .3s ease-in-out 0s;
 }

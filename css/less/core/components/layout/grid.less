@@ -1,5 +1,10 @@
 // Grid
 // ----------------------------------------------------------------------------/
+.@{grid-wrapper-class} {
+    display: grid;
+    .column-gap(@grid-column-gap);
+}
+
 
 // Grid Generator
 .grid(@large-columns; @grid-column-class);
@@ -8,7 +13,7 @@
 // Small Grid
 // ----------------------------------------------------------------------------/
 @media screen and (max-width: @breakpoint-small-max) {
-    .@{wrapper-class} {
+    .@{grid-wrapper-class} {
         grid-template-columns: repeat(@small-columns, 1fr);
     }
 
@@ -19,7 +24,7 @@
 // Medium Grid
 // ----------------------------------------------------------------------------/
 @media screen and (min-width: @breakpoint-medium-min) and (max-width: @breakpoint-medium-max)  {
-    .@{wrapper-class} {
+    .@{grid-wrapper-class} {
         grid-template-columns: repeat(@medium-columns, 1fr);
     }
 
@@ -30,7 +35,7 @@
 // Large Grid
 // ----------------------------------------------------------------------------/
 @media screen and (min-width: @breakpoint-large-min) {
-    .@{wrapper-class} {
+    .@{grid-wrapper-class} {
         grid-template-columns: repeat(@large-columns, 1fr);
     }
 

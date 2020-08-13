@@ -1967,14 +1967,14 @@ body > .container:last-child {
         display: none;
     }
 }
-@media screen and (min-height: 100em) {
-    html {
-        font-size: 1vh;
-    }
-}
-@media screen and (min-width: 100em) {
+@media screen and (min-width: 100em) and (min-height: 56.25em) {
     html {
         font-size: 1vw;
+    }
+}
+@media screen and (min-width: 56.25em) and (min-height: 100em) {
+    html {
+        font-size: 1.5vw;
     }
 }
 @media print {

@@ -1972,11 +1972,6 @@ body > .container:last-child {
         font-size: 1vw;
     }
 }
-@media screen and (min-width: 56.25em) and (min-height: 100em) {
-    html {
-        font-size: 1.5vw;
-    }
-}
 @media print {
     body,
     html {

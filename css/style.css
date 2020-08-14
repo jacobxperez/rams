@@ -380,70 +380,12 @@ textarea {
     box-shadow: none;
 }
 
-.button,
-button,
-input[type="submit"],
-input[type=button] {
-    position: relative;
-    z-index: 1;
-    display: inline-block;
-    padding: .5rem .75rem;
-    border: .0625rem solid rgba(0, 0, 0, 0.3);
-    background-color: #e6e6e6;
-    color: #555;
-    text-align: center;
-    white-space: nowrap;
-    vertical-align: middle;
-    cursor: pointer;
-}
-
-.button:focus,
-button:focus,
-input[type="submit"]:focus,
-.button:hover,
-button:hover,
-input[type=button]:hover,
-input[type="submit"]:hover,
-input[type=button]:focus {
-    background-color: #eeeeee;
-    text-decoration: none;
-}
-
-.button:active,
-button:active,
-input[type="submit"]:active,
-input[type=button]:active {
-    background-color: #dedede;
-}
-
 button,
 input[type="submit"],
 select,
 input[type=button] {
     overflow: visible;
     text-transform: none;
-}
-
-.button-disabled,
-button[disabled],
-html input[disabled] {
-    background-color: #bebebe;
-    color: #8c8c8c;
-    cursor: not-allowed;
-}
-
-.button-disabled:active,
-.button-disabled:focus,
-.button-disabled:hover,
-button[disabled]:active,
-button[disabled]:focus,
-button[disabled]:hover,
-html input[disabled]:active,
-html input[disabled]:focus,
-html input[disabled]:hover {
-    background-color: #bebebe;
-    color: #8c8c8c;
-    text-decoration: none;
 }
 
 .container {
@@ -684,74 +626,42 @@ body > .container:last-child {
     margin-right: 0;
 }
 
-.button-primary {
-    background-color: #06f;
-    color: #fff;
+.button {
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    padding: .5rem .75rem;
+    border: .0625rem solid rgba(0, 0, 0, 0.3);
+    background-color: #e6e6e6;
+    color: #555;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
 }
 
-.button-primary:focus,
-.button-primary:hover {
-    background-color: #1472ff;
+.button:focus,
+.button:hover {
+    background-color: #eeeeee;
+    text-decoration: none;
 }
 
-.button-primary:active {
-    background-color: #005eeb;
+.button:active {
+    background-color: #dedede;
 }
 
-.button-secondary {
-    background-color: #493d99;
-    color: #fff;
+.button-disabled {
+    background-color: #bebebe;
+    color: #8c8c8c;
+    cursor: not-allowed;
 }
 
-.button-secondary:focus,
-.button-secondary:hover {
-    background-color: #5043a8;
-}
-
-.button-secondary:active {
-    background-color: #42378a;
-}
-
-.button-danger {
-    background-color: #c00;
-    color: #fff;
-}
-
-.button-danger:focus,
-.button-danger:hover {
-    background-color: #e00000;
-}
-
-.button-danger:active {
-    background-color: #b80000;
-}
-
-.button-warning {
-    background-color: #fa0;
-    color: #fff;
-}
-
-.button-warning:focus,
-.button-warning:hover {
-    background-color: #ffb114;
-}
-
-.button-warning:active {
-    background-color: #eb9c00;
-}
-
-.button-success {
-    background-color: #393;
-    color: #fff;
-}
-
-.button-success:focus,
-.button-success:hover {
-    background-color: #38a838;
-}
-
-.button-success:active {
-    background-color: #2e8a2e;
+.button-disabled:active,
+.button-disabled:focus,
+.button-disabled:hover {
+    background-color: #bebebe;
+    color: #8c8c8c;
+    text-decoration: none;
 }
 
 .ghost-box {

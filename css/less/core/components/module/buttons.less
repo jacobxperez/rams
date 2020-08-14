@@ -1,11 +1,40 @@
 // Buttons
 // -----------------------------------------------------------------------------
-.button(primary; @primary; @button-primary-color);
+.@{button-class} {
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    .padding(@button-padding-y; @button-padding-x);
+    .border(@button-border-width; solid; @button-border-color);
+    background-color: @button-background-color;
+    color: @button-color;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    .border-radius(@button-border-radius);
+    cursor: pointer;
 
-.button(secondary; @secondary; @button-secondary-color);
+    &:focus,
+    &:hover {
+        background-color: @button-background-color-hover;
+        text-decoration: none;
+    }
 
-.button(danger; @danger; @button-danger-color);
+    &:active {
+        background-color: @button-background-color-active;
+    }
+}
 
-.button(warning; @warning; @button-warning-color);
+.@{button-class}-disabled, {
+    background-color: @button-disabled-background-color;
+    color: @button-disabled-color;
+    cursor: not-allowed;
 
-.button(success; @success; @button-success-color);
+    &:focus,
+    &:hover,
+    &:active {
+        background-color: @button-disabled-background-color;
+        color: @button-disabled-color;
+        text-decoration: none;
+    }
+}

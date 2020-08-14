@@ -1,53 +1,9 @@
 // Button
 // ----------------------------------------------------------------------------/
-.@{button-class},
-button,
-input[type=button],
-input[type="submit"] {
-    position: relative;
-    z-index: 1;
-    display: inline-block;
-    .padding(@button-padding-y; @button-padding-x);
-    .border(@button-border-width; solid; @button-border-color);
-    background-color: @button-background-color;
-    color: @button-color;
-    text-align: center;
-    white-space: nowrap;
-    vertical-align: middle;
-    .border-radius(@button-border-radius);
-    cursor: pointer;
-
-    &:focus,
-    &:hover {
-        background-color: @button-background-color-hover;
-        text-decoration: none;
-    }
-
-    &:active {
-        background-color: @button-background-color-active;
-    }
-}
-
 button,
 input[type=button],
 input[type="submit"],
 select {
     overflow: visible;
     text-transform: none;
-}
-
-.@{button-class}-disabled,
-button[disabled],
-html input[disabled] {
-    background-color: @button-disabled-background-color;
-    color: @button-disabled-color;
-    cursor: not-allowed;
-
-    &:focus,
-    &:hover,
-    &:active {
-        background-color: @button-disabled-background-color;
-        color: @button-disabled-color;
-        text-decoration: none;
-    }
 }

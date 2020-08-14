@@ -50,6 +50,14 @@ textarea {
     resize: vertical;
 }
 
+button,
+input[type=button],
+input[type="submit"],
+select {
+    overflow: visible;
+    text-transform: none;
+}
+
 :not([type=submit]):invalid {
     .border-color(@danger);
     box-shadow: none;

@@ -375,17 +375,17 @@ textarea {
     resize: vertical;
 }
 
-:not([type=submit]):invalid {
-    border-color: #c00;
-    box-shadow: none;
-}
-
 button,
 input[type="submit"],
 select,
 input[type=button] {
     overflow: visible;
     text-transform: none;
+}
+
+:not([type=submit]):invalid {
+    border-color: #c00;
+    box-shadow: none;
 }
 
 .container {
@@ -627,8 +627,6 @@ body > .container:last-child {
 }
 
 .button {
-    position: relative;
-    z-index: 1;
     display: inline-block;
     padding: .5rem .75rem;
     border: .0625rem solid rgba(0, 0, 0, 0.3);

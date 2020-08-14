@@ -1,6 +1,6 @@
 # [Essentials](https://jacobxperez.github.io/essentials/)
 
-Modular CSS Framework — Built with LESS
+Composable Design System — Built with LESS
 
 ## Table of Contents
 
@@ -18,7 +18,7 @@ Modular CSS Framework — Built with LESS
 
 ## About
 
-[Essentials](https://jacobxperez.github.io/essentials/) is a modular CSS framework build with [LESS](http://lesscss.org/).
+[Essentials](https://jacobxperez.github.io/essentials/) is a front-end composable design system build with [LESS](http://lesscss.org/).
 
 ### Project Status
 

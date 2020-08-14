@@ -18,7 +18,7 @@
 
 // Primary
 // -----------------------------------------------------------------------------
-.box-primary {
+.bg-primary {
     .background-color(@primary);
     .color(#fff);
 }
@@ -34,7 +34,7 @@
 
 // Secondary
 // -----------------------------------------------------------------------------
-.box-secondary {
+.bg-secondary {
     .background-color(@secondary);
     .color(#fff);
 }
@@ -48,25 +48,57 @@
 }
 
 
+// Light
+// -----------------------------------------------------------------------------
+.bg-light {
+    .background-color(@light);
+    .color(#fff);
+}
+
+.frame-light {
+    .border-color(@light);
+}
+
+.text-light {
+    .color(@light);
+}
+
+
+// Neutral
+// -----------------------------------------------------------------------------
+.bg-neutral {
+    .background-color(@neutral);
+    .color(#fff);
+}
+
+.frame-neutral {
+    .border-color(@neutral);
+}
+
+.text-neutral {
+    .color(@neutral);
+}
+
+
 // Dark
 // -----------------------------------------------------------------------------
-.box-dark {
-    .background-color(#222);
+.bg-dark {
+    .background-color(@dark);
     .color(#fff);
 }
 
 .frame-dark {
-    .border-color(#222);
+    .border-color(@dark);
 }
 
 .text-dark {
-    .color(#222);
+    .color(@dark);
 }
 
 
 // Success
 // -----------------------------------------------------------------------------
-.box-success {
+.bg-success {
     .background-color(@success);
     .color(#fff);
 }
@@ -82,7 +114,7 @@
 
 // Warning
 // -----------------------------------------------------------------------------
-.box-warning {
+.bg-warning {
     .background-color(@warning);
     .color(#fff);
 }
@@ -98,7 +130,7 @@
 
 // Danger
 // -----------------------------------------------------------------------------
-.box-danger {
+.bg-danger {
     .background-color(@danger);
     .color(#fff);
 }

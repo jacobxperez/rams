@@ -759,7 +759,6 @@ body > .container:last-child {
     width: 100%;
     margin-bottom: 0;
     min-width: 10rem;
-    background-color: #fff;
     visibility: hidden;
     transition: all .3s ease-in-out 0s;
 }
@@ -771,6 +770,9 @@ body > .container:last-child {
 
 .box {
     padding: .5rem .75rem;
+}
+
+.bg-base {
     background-color: #fff;
 }
 
@@ -811,42 +813,42 @@ body > .container:last-child {
 }
 
 .bg-light {
-    background-color: #fff;
-    color: #fff;
+    background-color: #e5efff;
+    color: #000a19;
 }
 
 .frame-light {
-    border-color: #fff;
+    border-color: #e5efff;
 }
 
 .text-light {
-    color: #fff;
+    color: #e5efff;
 }
 
 .bg-neutral {
-    background-color: #ccc;
+    background-color: #ced7e5;
     color: #fff;
 }
 
 .frame-neutral {
-    border-color: #ccc;
+    border-color: #ced7e5;
 }
 
 .text-neutral {
-    color: #ccc;
+    color: #ced7e5;
 }
 
 .bg-dark {
-    background-color: #222;
+    background-color: #000a19;
     color: #fff;
 }
 
 .frame-dark {
-    border-color: #222;
+    border-color: #000a19;
 }
 
 .text-dark {
-    color: #222;
+    color: #000a19;
 }
 
 .bg-success {
@@ -1833,10 +1835,6 @@ body > .container:last-child {
 
 .float-right {
     float: right;
-}
-
-.static {
-    position: static;
 }
 
 .relative {

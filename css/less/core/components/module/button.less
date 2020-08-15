@@ -4,19 +4,14 @@
     display: inline-block;
     .padding(@button-padding-y; @button-padding-x);
     .border(@button-border-width; solid; @button-border-color);
-    background-color: @button-background-color;
     color: @button-color;
     .border-radius(@button-border-radius);
     cursor: pointer;
 
     &:focus,
     &:hover {
-        background-color: @button-background-color-hover;
+        border-color: @button-border-hover;
         text-decoration: none;
-    }
-
-    &:active {
-        background-color: @button-background-color-active;
     }
 }
 

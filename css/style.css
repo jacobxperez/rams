@@ -589,19 +589,14 @@ body > .container:last-child {
     display: inline-block;
     padding: .5rem .75rem;
     border: .0625rem solid rgba(0, 0, 0, 0.3);
-    background-color: #ccc;
     color: #555;
     cursor: pointer;
 }
 
 .button:focus,
 .button:hover {
-    background-color: #d4d4d4;
+    border-color: rgba(0, 0, 0, 0.5);
     text-decoration: none;
-}
-
-.button:active {
-    background-color: #c4c4c4;
 }
 
 .disabled {
@@ -638,15 +633,6 @@ body > .container:last-child {
 .nav-link:focus,
 .nav-link:hover {
     color: #555;
-}
-
-.navbar-link {
-    color: #fff;
-}
-
-.navbar-link.active,
-.navbar-link:hover {
-    color: #cccccc;
 }
 
 .breadcrumb li::after {

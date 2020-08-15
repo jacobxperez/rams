@@ -21,6 +21,8 @@ html {
 }
 
 body {
+    display: grid;
+    gap: 20px;
     overflow: auto;
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Nimbus Sans L", "Liberation Sans", FreeSans, sans-serif;
     font-weight: 400;
@@ -308,8 +310,6 @@ blockquote small:before {
 
 blockquote small {
     display: block;
-    font-size: .875rem;
-    line-height: 1.71428571em;
 }
 
 table {
@@ -400,16 +400,16 @@ input[type=button] {
 }
 
 body > .container:first-child {
-    padding-top: 2.5rem;
+    margin-top: 2.5rem;
 }
 
 body > .container:only-child {
-    padding-top: 2.5rem;
-    padding-bottom: 3.75rem;
+    margin-top: 2.5rem;
+    margin-bottom: 3.75rem;
 }
 
 body > .container:last-child {
-    padding-bottom: 3.75rem;
+    margin-bottom: 3.75rem;
 }
 
 .fixed-top .container > ul {
@@ -418,7 +418,7 @@ body > .container:last-child {
 }
 
 .fixed-top + .container {
-    padding-top: 5rem;
+    margin-top: 5rem;
 }
 
 .grid {
@@ -743,6 +743,38 @@ body > .container:last-child {
 .bg-danger {
     background-color: #c00;
     color: #fff;
+}
+
+.text-primary {
+    color: #06f;
+}
+
+.text-secondary {
+    color: #493d99;
+}
+
+.text-light {
+    color: #e6e6e6;
+}
+
+.text-neutral {
+    color: #ccc;
+}
+
+.text-dark {
+    color: #222;
+}
+
+.text-success {
+    color: #393;
+}
+
+.text-warning {
+    color: #fa0;
+}
+
+.text-danger {
+    color: #c00;
 }
 
 .ghost-box {

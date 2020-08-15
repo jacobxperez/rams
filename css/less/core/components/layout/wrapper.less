@@ -12,11 +12,11 @@
 }
 
 body > .@{wrapper-class}:first-child {
-    .margin-top(@wrapper-gap * 2);
+    .margin-top(@base-line-height * 2);
 }
 
 body > .@{wrapper-class}:last-child {
-    .margin-bottom(@wrapper-gap * 4);
+    .margin-bottom(@base-line-height * 4);
 }
 
 .fixed-top .@{wrapper-class} > ul {
@@ -25,5 +25,5 @@ body > .@{wrapper-class}:last-child {
 }
 
 .fixed-top + .@{wrapper-class} {
-    .margin-top(@wrapper-gap * 4);
+    .margin-top(@base-line-height * 4);
 }

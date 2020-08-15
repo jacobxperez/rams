@@ -21,8 +21,6 @@ html {
 }
 
 body {
-    display: grid;
-    gap: 20px;
     overflow: auto;
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Nimbus Sans L", "Liberation Sans", FreeSans, sans-serif;
     font-weight: 400;
@@ -172,9 +170,8 @@ h6 {
 }
 
 h1 {
-    margin-bottom: 1.125rem;
     font-size: 3rem;
-    line-height: 1.125;
+    line-height: 1;
 }
 
 h2 {
@@ -400,11 +397,11 @@ input[type=button] {
 }
 
 body > .container:first-child {
-    margin-top: 2.5rem;
+    margin-top: 3rem;
 }
 
 body > .container:last-child {
-    margin-bottom: 5rem;
+    margin-bottom: 6rem;
 }
 
 .fixed-top .container > ul {
@@ -413,7 +410,7 @@ body > .container:last-child {
 }
 
 .fixed-top + .container {
-    margin-top: 5rem;
+    margin-top: 6rem;
 }
 
 .grid {

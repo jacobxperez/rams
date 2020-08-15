@@ -15,17 +15,8 @@ body > .@{wrapper-class}:first-child {
     .margin-top(@wrapper-gap * 2);
 }
 
-body {
-    > .@{wrapper-class}:only-child  {
-        .margin-top(@wrapper-gap * 2);
-        .margin-bottom(@wrapper-gap * 3);
-    }
-}
-
-body {
-    > .@{wrapper-class}:last-child {
-        .margin-bottom(@wrapper-gap * 3);
-    }
+body > .@{wrapper-class}:last-child {
+    .margin-bottom(@wrapper-gap * 4);
 }
 
 .fixed-top .@{wrapper-class} > ul {

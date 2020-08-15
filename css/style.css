@@ -403,13 +403,8 @@ body > .container:first-child {
     margin-top: 2.5rem;
 }
 
-body > .container:only-child {
-    margin-top: 2.5rem;
-    margin-bottom: 3.75rem;
-}
-
 body > .container:last-child {
-    margin-bottom: 3.75rem;
+    margin-bottom: 5rem;
 }
 
 .fixed-top .container > ul {

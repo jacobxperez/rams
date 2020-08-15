@@ -1,6 +1,7 @@
 // Box
 // -----------------------------------------------------------------------------
 .box {
+    display: block;
     .padding(@base-padding-y, @base-padding-x);
 }
 
@@ -19,129 +20,129 @@
 }
 
 
-// Primary
+// Frame Primary
+// -----------------------------------------------------------------------------
+.frame-primary {
+    .border-color(@primary);
+    .color(@primary);
+}
+
+
+// Frame Secondary
+// -----------------------------------------------------------------------------
+.frame-secondary {
+    .border-color(@secondary);
+    .color(@secondary);
+}
+
+
+// Frame Light
+// -----------------------------------------------------------------------------
+.frame-light {
+    .border-color(@light);
+    .color(@light);
+}
+
+
+// Frame Neutral
+// -----------------------------------------------------------------------------
+.frame-neutral {
+    .border-color(@neutral);
+    .color(@neutral);
+}
+
+
+// Frame Dark
+// -----------------------------------------------------------------------------
+.frame-dark {
+    .border-color(@dark);
+    .color(@dark);
+}
+
+
+// Frame Success
+// -----------------------------------------------------------------------------
+.frame-success {
+    .border-color(@success);
+    .color(@success);
+}
+
+
+// Frame Warning
+// -----------------------------------------------------------------------------
+.frame-warning {
+    .border-color(@warning);
+    .color(@warning);
+}
+
+
+// Frame Danger
+// -----------------------------------------------------------------------------
+.frame-danger {
+    .border-color(@danger);
+    .color(@danger);
+}
+
+
+// bg Primary
 // -----------------------------------------------------------------------------
 .bg-primary {
     .background-color(@primary);
     .color(@primary-text);
 }
 
-.frame-primary {
-    .border-color(@primary);
-}
 
-.text-primary {
-    .color(@primary);
-}
-
-
-// Secondary
+// bg Secondary
 // -----------------------------------------------------------------------------
 .bg-secondary {
     .background-color(@secondary);
     .color(@secondary-text);
 }
 
-.frame-secondary {
-    .border-color(@secondary);
-}
 
-.text-secondary {
-    .color(@secondary);
-}
-
-
-// Light
+// bg Light
 // -----------------------------------------------------------------------------
 .bg-light {
     .background-color(@light);
     .color(@light-text);
 }
 
-.frame-light {
-    .border-color(@light);
-}
 
-.text-light {
-    .color(@light);
-}
-
-
-// Neutral
+// bg Neutral
 // -----------------------------------------------------------------------------
 .bg-neutral {
     .background-color(@neutral);
     .color(@neutral-text);
 }
 
-.frame-neutral {
-    .border-color(@neutral);
-}
 
-.text-neutral {
-    .color(@neutral);
-}
-
-
-// Dark
+// bg Dark
 // -----------------------------------------------------------------------------
 .bg-dark {
     .background-color(@dark);
     .color(@dark-text);
 }
 
-.frame-dark {
-    .border-color(@dark);
-}
 
-.text-dark {
-    .color(@dark);
-}
-
-
-// Success
+// bg Success
 // -----------------------------------------------------------------------------
 .bg-success {
     .background-color(@success);
     .color(#fff);
 }
 
-.frame-success {
-    .border-color(@success);
-}
 
-.text-success {
-    .color(@success);
-}
-
-
-// Warning
+// bg Warning
 // -----------------------------------------------------------------------------
 .bg-warning {
     .background-color(@warning);
     .color(#fff);
 }
 
-.frame-warning {
-    .border-color(@warning);
-}
 
-.text-warning {
-    .color(@warning);
-}
-
-
-// Danger
+// bg Danger
 // -----------------------------------------------------------------------------
 .bg-danger {
     .background-color(@danger);
     .color(#fff);
-}
-
-.frame-danger {
-    .border-color(@danger);
-}
-
-.text-danger {
-    .color(@danger);
 }

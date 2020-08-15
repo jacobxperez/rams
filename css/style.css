@@ -11,6 +11,7 @@
     font-size: inherit;
     font-family: inherit;
     line-height: inherit;
+    vertical-align: baseline;
     color: inherit;
     outline: 0;
 }
@@ -138,6 +139,7 @@ ul ul {
 }
 
 hr {
+    box-sizing: content-box;
     display: block;
     height: 1px;
     margin-bottom: 1.5rem;
@@ -306,7 +308,6 @@ blockquote small:before {
 
 blockquote small {
     display: block;
-    width: 100%;
     font-size: .875rem;
     line-height: 1.71428571em;
 }
@@ -343,7 +344,6 @@ textarea {
     display: block;
     padding: .5rem .75rem;
     border: .0625rem solid rgba(0, 0, 0, 0.3);
-    width: 100%;
     line-height: 24px;
     background-color: inherit;
     box-shadow: none;
@@ -632,9 +632,6 @@ body > .container:last-child {
     border: .0625rem solid rgba(0, 0, 0, 0.3);
     background-color: #e6e6e6;
     color: #555;
-    text-align: center;
-    white-space: nowrap;
-    vertical-align: middle;
     cursor: pointer;
 }
 

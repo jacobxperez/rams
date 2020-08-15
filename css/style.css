@@ -1894,12 +1894,12 @@ body > .container:last-child {
 }
 @media screen and (min-width: 120em) and (min-height: 67.5em) {
     html {
-        font-size: 1.2vw;
+        font-size: 1vw;
     }
 }
 @media screen and (min-width: 67.5em) and (min-height: 120em) {
     html {
-        font-size: 1.2vh;
+        font-size: 1vh;
     }
 }
 @media print {

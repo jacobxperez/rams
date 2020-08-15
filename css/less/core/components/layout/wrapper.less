@@ -12,19 +12,19 @@
 }
 
 body > .@{wrapper-class}:first-child {
-    .padding-top(@wrapper-padding-top);
+    .margin-top(@wrapper-gap * 2);
 }
 
 body {
     > .@{wrapper-class}:only-child  {
-        .padding-top(@wrapper-padding-top);
-        .padding-bottom(@wrapper-padding-bottom);
+        .margin-top(@wrapper-gap * 2);
+        .margin-bottom(@wrapper-gap * 3);
     }
 }
 
 body {
     > .@{wrapper-class}:last-child {
-        .padding-bottom(@wrapper-padding-bottom);
+        .margin-bottom(@wrapper-gap * 3);
     }
 }
 
@@ -34,5 +34,5 @@ body {
 }
 
 .fixed-top + .@{wrapper-class} {
-    .padding-top(@wrapper-padding-top * 2);
+    .margin-top(@wrapper-gap * 4);
 }

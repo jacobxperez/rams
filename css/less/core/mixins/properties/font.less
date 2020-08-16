@@ -24,7 +24,7 @@
 
 // Font Size
 // -----------------------------------------------------------------------------
-.font-size(@size: @base-font-size; @base: @base-font-size; @unit: rem) {
+.font-size(@size: @base-font-size; @base: @root-font-size; @unit: rem) {
 
     & when not (@size = false) {
 
@@ -55,7 +55,7 @@
 
 // Line Height
 // -----------------------------------------------------------------------------
-.line-height(@height: @base-line-height; @base: @base-font-size; @unit: none) {
+.line-height(@height: @base-line-height; @base: @root-font-size; @unit: none) {
 
     & when not (@height = false) {
 
@@ -81,7 +81,7 @@
 
 // Text Indent
 // -----------------------------------------------------------------------------
-.text-indent (@text-indent: @indent; @base: @base-font-size; @unit: rem) {
+.text-indent (@text-indent: @indent; @base: @root-font-size; @unit: rem) {
 
     & when (@unit = em), (@unit = rem) {
         @a: unit((@text-indent / @base), @unit);

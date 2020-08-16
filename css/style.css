@@ -588,6 +588,53 @@ body > .container:last-child {
     text-decoration: none;
 }
 
+.button.bg-primary:focus,
+.button.bg-primary:hover {
+    background-color: #1a75ff;
+}
+
+.button.bg-primary:active {
+    background-color: #005ce6;
+}
+
+.button.bg-light:focus,
+.button.bg-light:hover {
+    background-color: #f3f3f3;
+}
+
+.button.bg-light:active {
+    background-color: #d9d9d9;
+}
+
+.button.bg-neutral:focus,
+.button.bg-neutral:hover {
+    background-color: #d9d9d9;
+}
+
+.button.bg-neutral:active {
+    background-color: #bfbfbf;
+}
+
+.button.bg-dark:focus,
+.button.bg-dark:hover {
+    background-color: #2f2f2f;
+}
+
+.button.bg-dark:active {
+    background-color: #151515;
+}
+
+.button.frame-primary:focus,
+.button.frame-primary:hover {
+    border-color: #0056d6;
+    color: #0056d6;
+}
+
+.button.frame-primary:active {
+    border-color: #0056d6;
+    color: #0056d6;
+}
+
 .disabled {
     border-color: #bbb;
     background-color: #e6e6e6;
@@ -622,6 +669,16 @@ body > .container:last-child {
 .nav-link:focus,
 .nav-link:hover {
     color: #555;
+}
+
+.link-dark {
+    color: #fff;
+}
+
+.link-dark:active,
+.link-dark:focus,
+.link-dark:hover {
+    color: #ccc;
 }
 
 .breadcrumb li::after {

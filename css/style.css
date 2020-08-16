@@ -345,7 +345,6 @@ input[type=week]:focus,
 select:focus,
 textarea:focus {
     border-color: #06f;
-    color: #555;
     box-shadow: none;
 }
 

@@ -1776,6 +1776,10 @@ body > .container:last-child {
     content: "\e0e5";
 }
 
+.block {
+    display: block;
+}
+
 .float-left {
     float: left;
 }

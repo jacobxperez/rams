@@ -324,6 +324,7 @@ input[type=week],
 select,
 textarea {
     display: block;
+    width: 100%;
     padding: .5rem .75rem;
     border: .0625rem solid rgba(0, 0, 0, 0.3);
     box-shadow: none;
@@ -708,13 +709,13 @@ body > .container:last-child {
     color: #555;
 }
 
-.link-dark {
+.dark-link {
     color: #fff;
 }
 
-.link-dark:active,
-.link-dark:focus,
-.link-dark:hover {
+.dark-link:active,
+.dark-link:focus,
+.dark-link:hover {
     color: #ccc;
 }
 

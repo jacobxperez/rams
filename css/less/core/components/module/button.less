@@ -16,6 +16,68 @@
 }
 
 
+.@{button-class}.bg-primary {
+    &:focus,
+    &:hover {
+        background-color: lighten(@primary, 5%);
+    }
+
+    &:active {
+        background-color: darken(@primary, 5%);
+    }
+}
+
+
+.@{button-class}.bg-light {
+    &:focus,
+    &:hover {
+        background-color: lighten(@light, 5%);
+    }
+
+    &:active {
+        background-color: darken(@light, 5%);
+    }
+}
+
+
+.@{button-class}.bg-neutral {
+    &:focus,
+    &:hover {
+        background-color: lighten(@neutral, 5%);
+    }
+
+    &:active {
+        background-color: darken(@neutral, 5%);
+    }
+}
+
+
+.@{button-class}.bg-dark {
+    &:focus,
+    &:hover {
+        background-color: lighten(@dark, 5%);
+    }
+
+    &:active {
+        background-color: darken(@dark, 5%);
+    }
+}
+
+
+.@{button-class}.frame-primary {
+    &:focus,
+    &:hover {
+        border-color: darken(@primary, 8%);
+        color: darken(@primary, 8%);
+    }
+
+    &:active {
+        border-color: darken(@primary, 8%);
+        color: darken(@primary, 8%);
+    }
+}
+
+
 // Disabled
 // ----------------------------------------------------------------------------/
 .disabled {

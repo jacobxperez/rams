@@ -9,7 +9,6 @@ h6 {
     .font-family(@headings-font-family);
     font-weight: @headings-font-weight;
     .margin-bottom(@headings-leading);
-    text-rendering: optimizelegibility;
 }
 
 h1 {
@@ -52,11 +51,6 @@ p {
     .margin-bottom(@base-leading);
 }
 
-b,
-strong {
-    font-weight: 700;
-}
-
 a {
     text-decoration: @link-decoration;
     .background-color(transparent);
@@ -76,6 +70,11 @@ a {
     &:active {
         outline: 0;
     }
+}
+
+b,
+strong {
+    font-weight: 700;
 }
 
 i,

@@ -1,6 +1,6 @@
 // Scale
 // ----------------------------------------------------------------------------/
-.viewport-max(@max-width; @max-height; @font-size){
+.viewport-max(@max-width; @max-height; @font-size;){
 
     @max-width-cal: unit((@max-width / @root-font-size), em);
     @max-height-cal: unit((@max-height / @root-font-size), em);
@@ -12,7 +12,7 @@
     }
 }
 
-.viewport-min(@width; @height; @font-size){
+.viewport-min(@width; @height; @font-size;){
 
     @width-cal: unit((@width / @root-font-size), em);
     @height-cal: unit((@height / @root-font-size), em);

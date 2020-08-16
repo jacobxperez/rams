@@ -596,6 +596,15 @@ body > .container:last-child {
     background-color: #005ce6;
 }
 
+.button.bg-secondary:focus,
+.button.bg-secondary:hover {
+    background-color: #5244ab;
+}
+
+.button.bg-secondary:active {
+    background-color: #403687;
+}
+
 .button.bg-light:focus,
 .button.bg-light:hover {
     background-color: #f3f3f3;
@@ -656,15 +665,15 @@ body > .container:last-child {
     color: #d2d2d2;
 }
 
-.button.frame-light:focus,
-.button.frame-light:hover {
-    border-color: #d2d2d2;
-    color: #d2d2d2;
+.button.frame-neutral:focus,
+.button.frame-neutral:hover {
+    border-color: #b8b8b8;
+    color: #b8b8b8;
 }
 
-.button.frame-light:active {
-    border-color: #d2d2d2;
-    color: #d2d2d2;
+.button.frame-neutral:active {
+    border-color: #b8b8b8;
+    color: #b8b8b8;
 }
 
 .button.frame-dark:focus,

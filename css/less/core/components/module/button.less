@@ -29,6 +29,18 @@
 }
 
 
+.@{button-class}.bg-secondary {
+    &:focus,
+    &:hover {
+        background-color: lighten(@secondary, 5%);
+    }
+
+    &:active {
+        background-color: darken(@secondary, 5%);
+    }
+}
+
+
 .@{button-class}.bg-light {
     &:focus,
     &:hover {
@@ -109,16 +121,16 @@
 }
 
 
-.@{button-class}.frame-light {
+.@{button-class}.frame-neutral {
     &:focus,
     &:hover {
-        border-color: darken(@light, 8%);
-        color: darken(@light, 8%);
+        border-color: darken(@neutral, 8%);
+        color: darken(@neutral, 8%);
     }
 
     &:active {
-        border-color: darken(@light, 8%);
-        color: darken(@light, 8%);
+        border-color: darken(@neutral, 8%);
+        color: darken(@neutral, 8%);
     }
 }
 

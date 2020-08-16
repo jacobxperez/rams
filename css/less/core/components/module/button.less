@@ -10,12 +10,13 @@
 
     &:focus,
     &:hover {
-        border-color: @button-border-hover;
         text-decoration: none;
     }
 }
 
 
+// Button Colors
+// ----------------------------------------------------------------------------/
 .@{button-class}.bg-primary {
     &:focus,
     &:hover {
@@ -64,6 +65,8 @@
 }
 
 
+// Buttons Frames
+// ----------------------------------------------------------------------------/
 .@{button-class}.frame-primary {
     &:focus,
     &:hover {
@@ -78,10 +81,66 @@
 }
 
 
+.@{button-class}.frame-secondary {
+    &:focus,
+    &:hover {
+        border-color: darken(@secondary, 8%);
+        color: darken(@secondary, 8%);
+    }
+
+    &:active {
+        border-color: darken(@secondary, 8%);
+        color: darken(@secondary, 8%);
+    }
+}
+
+
+.@{button-class}.frame-light {
+    &:focus,
+    &:hover {
+        border-color: darken(@light, 8%);
+        color: darken(@light, 8%);
+    }
+
+    &:active {
+        border-color: darken(@light, 8%);
+        color: darken(@light, 8%);
+    }
+}
+
+
+.@{button-class}.frame-light {
+    &:focus,
+    &:hover {
+        border-color: darken(@light, 8%);
+        color: darken(@light, 8%);
+    }
+
+    &:active {
+        border-color: darken(@light, 8%);
+        color: darken(@light, 8%);
+    }
+}
+
+
+.@{button-class}.frame-dark {
+    &:focus,
+    &:hover {
+        border-color: darken(@dark, 8%);
+        color: darken(@dark, 8%);
+    }
+
+    &:active {
+        border-color: darken(@dark, 8%);
+        color: darken(@dark, 8%);
+    }
+}
+
+
 // Disabled
 // ----------------------------------------------------------------------------/
 .disabled {
-    border-color: @button-disabled-color;
+    border-color: @button-disabled-border-color;
     background-color: @button-disabled-background-color;
     color: @button-disabled-color;
     cursor: not-allowed;

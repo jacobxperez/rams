@@ -576,15 +576,14 @@ body > .container:last-child {
 
 .button {
     display: inline-block;
-    padding: .5rem .75rem;
-    border: .0625rem solid rgba(0, 0, 0, 0.3);
+    padding: .4375rem .75rem;
+    border: .0625rem solid transparent;
     color: #555;
     cursor: pointer;
 }
 
 .button:focus,
 .button:hover {
-    border-color: rgba(0, 0, 0, 0.5);
     text-decoration: none;
 }
 
@@ -635,8 +634,52 @@ body > .container:last-child {
     color: #0056d6;
 }
 
+.button.frame-secondary:focus,
+.button.frame-secondary:hover {
+    border-color: #3b317c;
+    color: #3b317c;
+}
+
+.button.frame-secondary:active {
+    border-color: #3b317c;
+    color: #3b317c;
+}
+
+.button.frame-light:focus,
+.button.frame-light:hover {
+    border-color: #d2d2d2;
+    color: #d2d2d2;
+}
+
+.button.frame-light:active {
+    border-color: #d2d2d2;
+    color: #d2d2d2;
+}
+
+.button.frame-light:focus,
+.button.frame-light:hover {
+    border-color: #d2d2d2;
+    color: #d2d2d2;
+}
+
+.button.frame-light:active {
+    border-color: #d2d2d2;
+    color: #d2d2d2;
+}
+
+.button.frame-dark:focus,
+.button.frame-dark:hover {
+    border-color: #0e0e0e;
+    color: #0e0e0e;
+}
+
+.button.frame-dark:active {
+    border-color: #0e0e0e;
+    color: #0e0e0e;
+}
+
 .disabled {
-    border-color: #bbb;
+    border-color: #ddd;
     background-color: #e6e6e6;
     color: #bbb;
     cursor: not-allowed;

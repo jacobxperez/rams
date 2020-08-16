@@ -8,6 +8,7 @@
     font-size: inherit;
     font-family: inherit;
     line-height: inherit;
+    text-align: inherit;
     vertical-align: baseline;
     background-color: transparent;
     color: inherit;
@@ -23,6 +24,7 @@ body {
     font-family: @base-font-family;
     font-weight: 400;
     .line-height(@base-line-height);
+    text-align: left;
     color: @font-color;
     background-color: @background-color;
 }
@@ -65,15 +67,6 @@ summary {
     display: list-item;
 }
 
-audio,
-canvas,
-iframe,
-img,
-svg,
-video {
-    vertical-align: middle;
-}
-
 [hidden],
 audio:not([controls]),
 template {
@@ -93,10 +86,6 @@ object {
 
 img {
     height: auto;
-}
-
-figure {
-    .margin();
 }
 
 progress[value] {

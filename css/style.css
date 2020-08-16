@@ -12,6 +12,7 @@
     font-family: inherit;
     line-height: inherit;
     vertical-align: baseline;
+    background-color: transparent;
     color: inherit;
     outline: 0;
 }
@@ -176,12 +177,12 @@ h1 {
 
 h2 {
     font-size: 2rem;
-    line-height: 1.125;
+    line-height: 1.5;
 }
 
 h3 {
     font-size: 1.5rem;
-    line-height: 1.5;
+    line-height: 1;
 }
 
 h4 {
@@ -271,10 +272,6 @@ kbd,
 pre,
 samp {
     font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", "Nimbus Mono L", "Liberation Mono", FreeMono, monospace;
-}
-
-code {
-    line-height: 1;
 }
 
 pre {

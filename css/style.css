@@ -663,12 +663,12 @@ body > .container:last-child {
 }
 
 .dark-link {
-    color: #fff;
+    color: #bbb;
 }
 
 .dark-link:active,
 .dark-link:hover {
-    color: #ccc;
+    color: #fff;
 }
 
 .breadcrumb li::after {

@@ -781,6 +781,38 @@ body > .container:last-child {
     color: #fff;
 }
 
+.primary-text {
+    color: #06f;
+}
+
+.secondary-text {
+    color: #493d99;
+}
+
+.light-text {
+    color: #e6e6e6;
+}
+
+.neutral-text {
+    color: #ccc;
+}
+
+.dark-text {
+    color: #222;
+}
+
+.success-text {
+    color: #393;
+}
+
+.warning-text {
+    color: #fa0;
+}
+
+.danger-text {
+    color: #c00;
+}
+
 .ghost-box {
     display: none;
     width: 100%;

@@ -199,18 +199,15 @@ a {
     cursor: pointer;
 }
 
-a:focus {
-    outline: thin dotted;
-    outline-offset: -2px;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
 a:active,
 a:hover {
     outline: 0;
+    text-decoration: underline;
+}
+
+a:focus {
+    outline: thin dotted;
+    outline-offset: -2px;
 }
 
 b,
@@ -568,107 +565,68 @@ body > .container:last-child {
     cursor: pointer;
 }
 
-.button:focus,
+.button:active,
 .button:hover {
+    outline: 0;
     text-decoration: none;
 }
 
-.button.bg-primary:focus,
-.button.bg-primary:hover {
-    background-color: #1a75ff;
+.button:focus {
+    outline: thin dotted;
+    outline-offset: -2px;
 }
 
-.button.bg-primary:active {
+.button.primary-bg:active,
+.button.primary-bg:hover {
     background-color: #005ce6;
 }
 
-.button.bg-secondary:focus,
-.button.bg-secondary:hover {
-    background-color: #5244ab;
-}
-
-.button.bg-secondary:active {
+.button.secondary-bg:active,
+.button.secondary-bg:hover {
     background-color: #403687;
 }
 
-.button.bg-light:focus,
-.button.bg-light:hover {
-    background-color: #f3f3f3;
-}
-
-.button.bg-light:active {
+.button.light-bg:active,
+.button.light-bg:hover {
     background-color: #d9d9d9;
 }
 
-.button.bg-neutral:focus,
-.button.bg-neutral:hover {
-    background-color: #d9d9d9;
-}
-
-.button.bg-neutral:active {
+.button.neutral-bg:active,
+.button.neutral-bg:hover {
     background-color: #bfbfbf;
 }
 
-.button.bg-dark:focus,
-.button.bg-dark:hover {
-    background-color: #2f2f2f;
-}
-
-.button.bg-dark:active {
+.button.dark-bg:active,
+.button.dark-bg:hover {
     background-color: #151515;
 }
 
-.button.frame-primary:focus,
+.button.frame-primary:active,
 .button.frame-primary:hover {
     border-color: #0056d6;
     color: #0056d6;
 }
 
-.button.frame-primary:active {
-    border-color: #0056d6;
-    color: #0056d6;
-}
-
-.button.frame-secondary:focus,
+.button.frame-secondary:active,
 .button.frame-secondary:hover {
     border-color: #3b317c;
     color: #3b317c;
 }
 
-.button.frame-secondary:active {
-    border-color: #3b317c;
-    color: #3b317c;
-}
-
-.button.frame-light:focus,
+.button.frame-light:active,
 .button.frame-light:hover {
     border-color: #d2d2d2;
     color: #d2d2d2;
 }
 
-.button.frame-light:active {
-    border-color: #d2d2d2;
-    color: #d2d2d2;
-}
-
-.button.frame-neutral:focus,
+.button.frame-neutral:active,
 .button.frame-neutral:hover {
     border-color: #b8b8b8;
     color: #b8b8b8;
 }
 
-.button.frame-neutral:active {
-    border-color: #b8b8b8;
-    color: #b8b8b8;
-}
-
-.button.frame-dark:focus,
+.button.frame-dark:active,
 .button.frame-dark:hover {
-    border-color: #0e0e0e;
-    color: #0e0e0e;
-}
-
-.button.frame-dark:active {
     border-color: #0e0e0e;
     color: #0e0e0e;
 }
@@ -681,11 +639,14 @@ body > .container:last-child {
 }
 
 .disabled:active,
-.disabled:focus,
 .disabled:hover {
     background-color: #e6e6e6;
     color: #bbb;
     text-decoration: none;
+}
+
+.disabled:focus {
+    outline: 0;
 }
 
 .nav-link {
@@ -695,18 +656,10 @@ body > .container:last-child {
     transition: all .3s ease-in-out 0s;
 }
 
-.nav-link:focus {
-    outline: 0;
-}
-
-.nav-link:hover {
-    text-decoration: none;
-}
-
-.nav-link-active,
-.nav-link:focus,
+.nav-link:active,
 .nav-link:hover {
     color: #555;
+    text-decoration: none;
 }
 
 .dark-link {
@@ -714,7 +667,6 @@ body > .container:last-child {
 }
 
 .dark-link:active,
-.dark-link:focus,
 .dark-link:hover {
     color: #ccc;
 }
@@ -735,7 +687,7 @@ body > .container:last-child {
     padding: .5rem .75rem;
 }
 
-.bg-base {
+.base-bg {
     background-color: #fff;
 }
 
@@ -789,76 +741,44 @@ body > .container:last-child {
     color: #c00;
 }
 
-.bg-primary {
+.primary-bg {
     background-color: #06f;
     color: #fff;
 }
 
-.bg-secondary {
+.secondary-bg {
     background-color: #493d99;
     color: #fff;
 }
 
-.bg-light {
+.light-bg {
     background-color: #e6e6e6;
     color: #555;
 }
 
-.bg-neutral {
+.neutral-bg {
     background-color: #ccc;
     color: #555;
 }
 
-.bg-dark {
+.dark-bg {
     background-color: #222;
     color: #fff;
 }
 
-.bg-success {
+.success-bg {
     background-color: #393;
     color: #fff;
 }
 
-.bg-warning {
+.warning-bg {
     background-color: #fa0;
     color: #fff;
 }
 
-.bg-danger {
+.danger-bg {
     background-color: #c00;
     color: #fff;
-}
-
-.text-primary {
-    color: #06f;
-}
-
-.text-secondary {
-    color: #493d99;
-}
-
-.text-light {
-    color: #e6e6e6;
-}
-
-.text-neutral {
-    color: #ccc;
-}
-
-.text-dark {
-    color: #222;
-}
-
-.text-success {
-    color: #393;
-}
-
-.text-warning {
-    color: #fa0;
-}
-
-.text-danger {
-    color: #c00;
 }
 
 .ghost-box {

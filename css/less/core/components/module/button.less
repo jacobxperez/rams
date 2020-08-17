@@ -8,69 +8,55 @@
     .color(@button-color);
     cursor: pointer;
 
-    &:focus,
-    &:hover {
+    &:hover,
+    &:active {
+        outline: 0;
         text-decoration: none;
+    }
+
+    &:focus {
+        outline: thin dotted;
+        outline-offset: -2px;
     }
 }
 
 
 // Button Colors
 // ----------------------------------------------------------------------------/
-.@{button-class}.bg-primary {
-    &:focus,
-    &:hover {
-        background-color: lighten(@primary, 5%);
-    }
-
+.@{button-class}.primary-bg {
+    &:hover,
     &:active {
         background-color: darken(@primary, 5%);
     }
 }
 
 
-.@{button-class}.bg-secondary {
-    &:focus,
-    &:hover {
-        background-color: lighten(@secondary, 5%);
-    }
-
+.@{button-class}.secondary-bg {
+    &:hover,
     &:active {
         background-color: darken(@secondary, 5%);
     }
 }
 
 
-.@{button-class}.bg-light {
-    &:focus,
-    &:hover {
-        background-color: lighten(@light, 5%);
-    }
-
+.@{button-class}.light-bg {
+    &:hover,
     &:active {
         background-color: darken(@light, 5%);
     }
 }
 
 
-.@{button-class}.bg-neutral {
-    &:focus,
-    &:hover {
-        background-color: lighten(@neutral, 5%);
-    }
-
+.@{button-class}.neutral-bg {
+    &:hover,
     &:active {
         background-color: darken(@neutral, 5%);
     }
 }
 
 
-.@{button-class}.bg-dark {
-    &:focus,
-    &:hover {
-        background-color: lighten(@dark, 5%);
-    }
-
+.@{button-class}.dark-bg {
+    &:hover,
     &:active {
         background-color: darken(@dark, 5%);
     }
@@ -80,12 +66,7 @@
 // Buttons Frames
 // ----------------------------------------------------------------------------/
 .@{button-class}.frame-primary {
-    &:focus,
-    &:hover {
-        border-color: darken(@primary, 8%);
-        color: darken(@primary, 8%);
-    }
-
+    &:hover,
     &:active {
         border-color: darken(@primary, 8%);
         color: darken(@primary, 8%);
@@ -94,12 +75,7 @@
 
 
 .@{button-class}.frame-secondary {
-    &:focus,
-    &:hover {
-        border-color: darken(@secondary, 8%);
-        color: darken(@secondary, 8%);
-    }
-
+    &:hover,
     &:active {
         border-color: darken(@secondary, 8%);
         color: darken(@secondary, 8%);
@@ -108,12 +84,7 @@
 
 
 .@{button-class}.frame-light {
-    &:focus,
-    &:hover {
-        border-color: darken(@light, 8%);
-        color: darken(@light, 8%);
-    }
-
+    &:hover,
     &:active {
         border-color: darken(@light, 8%);
         color: darken(@light, 8%);
@@ -122,12 +93,7 @@
 
 
 .@{button-class}.frame-neutral {
-    &:focus,
-    &:hover {
-        border-color: darken(@neutral, 8%);
-        color: darken(@neutral, 8%);
-    }
-
+    &:hover,
     &:active {
         border-color: darken(@neutral, 8%);
         color: darken(@neutral, 8%);
@@ -136,12 +102,7 @@
 
 
 .@{button-class}.frame-dark {
-    &:focus,
-    &:hover {
-        border-color: darken(@dark, 8%);
-        color: darken(@dark, 8%);
-    }
-
+    &:hover,
     &:active {
         border-color: darken(@dark, 8%);
         color: darken(@dark, 8%);
@@ -157,11 +118,14 @@
     color: @button-disabled-color;
     cursor: not-allowed;
 
-    &:focus,
     &:hover,
     &:active {
         background-color: @button-disabled-background-color;
         color: @button-disabled-color;
         text-decoration: none;
+    }
+
+    &:focus {
+        outline: 0;
     }
 }

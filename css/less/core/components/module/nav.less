@@ -6,28 +6,19 @@
     color: @nav-link-color;
     .transition();
 
-    &:focus {
-        outline: 0;
-    }
-
-    &:hover {
+    &:hover,
+    &:active {
+        color: @nav-link-color-hover;
         text-decoration: none;
     }
-}
-
-.nav-link-active,
-.nav-link:focus,
-.nav-link:hover {
-    color: @nav-link-color-hover;
 }
 
 
 .dark-link {
     color: @dark-text;
 
-    &:active,
-    &:focus,
-    &:hover {
+    &:hover,
+    &:active {
         color: #ccc;
     }
 }

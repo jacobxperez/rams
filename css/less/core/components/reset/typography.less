@@ -52,23 +52,20 @@ p {
 }
 
 a {
-    text-decoration: @link-decoration;
+    text-decoration: none;
     .background-color(transparent);
     color: @link-color;
     cursor: pointer;
 
-    &:focus {
-        outline: thin dotted;
-        outline-offset: -2px;
-    }
-
-    &:hover {
-        text-decoration: @link-decoration-hover;
-    }
-
     &:hover,
     &:active {
         outline: 0;
+        text-decoration: underline;
+    }
+
+    &:focus {
+        outline: thin dotted;
+        outline-offset: -2px;
     }
 }
 

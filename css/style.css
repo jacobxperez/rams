@@ -701,42 +701,42 @@ body > .container:last-child {
     border: .0625rem solid rgba(0, 0, 0, 0.3);
 }
 
-.frame-primary {
+.primary-frame {
     border-color: #06f;
     color: #06f;
 }
 
-.frame-secondary {
+.secondary-frame {
     border-color: #493d99;
     color: #493d99;
 }
 
-.frame-light {
+.light-frame {
     border-color: #e6e6e6;
     color: #e6e6e6;
 }
 
-.frame-neutral {
+.neutral-frame {
     border-color: #ccc;
     color: #ccc;
 }
 
-.frame-dark {
+.dark-frame {
     border-color: #222;
     color: #222;
 }
 
-.frame-success {
+.success-frame {
     border-color: #393;
     color: #393;
 }
 
-.frame-warning {
+.warning-frame {
     border-color: #fa0;
     color: #fa0;
 }
 
-.frame-danger {
+.danger-frame {
     border-color: #c00;
     color: #c00;
 }

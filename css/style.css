@@ -583,21 +583,6 @@ body > .container:last-child {
 
 .button.secondary-bg:active,
 .button.secondary-bg:hover {
-    background-color: #403687;
-}
-
-.button.light-bg:active,
-.button.light-bg:hover {
-    background-color: #d9d9d9;
-}
-
-.button.neutral-bg:active,
-.button.neutral-bg:hover {
-    background-color: #bfbfbf;
-}
-
-.button.dark-bg:active,
-.button.dark-bg:hover {
     background-color: #151515;
 }
 
@@ -609,24 +594,6 @@ body > .container:last-child {
 
 .button.frame-secondary:active,
 .button.frame-secondary:hover {
-    border-color: #3b317c;
-    color: #3b317c;
-}
-
-.button.frame-light:active,
-.button.frame-light:hover {
-    border-color: #d2d2d2;
-    color: #d2d2d2;
-}
-
-.button.frame-neutral:active,
-.button.frame-neutral:hover {
-    border-color: #b8b8b8;
-    color: #b8b8b8;
-}
-
-.button.frame-dark:active,
-.button.frame-dark:hover {
     border-color: #0e0e0e;
     color: #0e0e0e;
 }
@@ -662,13 +629,13 @@ body > .container:last-child {
     text-decoration: none;
 }
 
-.dark-link {
-    color: #bbb;
+.alt-link {
+    color: #fff;
 }
 
-.dark-link:active,
-.dark-link:hover {
-    color: #fff;
+.alt-link:active,
+.alt-link:hover {
+    color: #bfbfbf;
 }
 
 .breadcrumb li::after {
@@ -707,21 +674,6 @@ body > .container:last-child {
 }
 
 .secondary-frame {
-    border-color: #493d99;
-    color: #493d99;
-}
-
-.light-frame {
-    border-color: #e6e6e6;
-    color: #e6e6e6;
-}
-
-.neutral-frame {
-    border-color: #ccc;
-    color: #ccc;
-}
-
-.dark-frame {
     border-color: #222;
     color: #222;
 }
@@ -747,21 +699,6 @@ body > .container:last-child {
 }
 
 .secondary-bg {
-    background-color: #493d99;
-    color: #fff;
-}
-
-.light-bg {
-    background-color: #e6e6e6;
-    color: #555;
-}
-
-.neutral-bg {
-    background-color: #ccc;
-    color: #555;
-}
-
-.dark-bg {
     background-color: #222;
     color: #fff;
 }
@@ -786,18 +723,6 @@ body > .container:last-child {
 }
 
 .secondary-text {
-    color: #493d99;
-}
-
-.light-text {
-    color: #e6e6e6;
-}
-
-.neutral-text {
-    color: #ccc;
-}
-
-.dark-text {
     color: #222;
 }
 

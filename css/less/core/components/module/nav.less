@@ -26,13 +26,13 @@
 // Breadcrumb
 // ----------------------------------------------------------------------------/
 .breadcrumb {
-    li::after {
+    a::after {
         content: @breadcrumb-separator;
         .margin-right(4px);
     }
 
-    li:only-child::after,
-    li:last-child::after {
+    a:only-child::after,
+    a:last-child::after {
         content: "";
         margin-right: 0;
     }

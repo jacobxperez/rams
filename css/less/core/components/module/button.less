@@ -16,25 +16,7 @@
 
     &:focus {
         outline: thin dotted;
-        outline-offset: -2px;
-    }
-}
-
-
-// Button Colors
-// ----------------------------------------------------------------------------/
-.@{button-class}.primary-bg {
-    &:hover,
-    &:active {
-        background-color: darken(@primary, 5%);
-    }
-}
-
-
-.@{button-class}.secondary-bg {
-    &:hover,
-    &:active {
-        background-color: darken(@secondary, 5%);
+        outline-offset: unit((-2px / @root-font-size), rem);
     }
 }
 
@@ -55,6 +37,24 @@
     &:active {
         border-color: darken(@secondary, 8%);
         color: darken(@secondary, 8%);
+    }
+}
+
+
+// Button Colors
+// ----------------------------------------------------------------------------/
+.@{button-class}.primary-bg {
+    &:hover,
+    &:active {
+        background-color: darken(@primary, 5%);
+    }
+}
+
+
+.@{button-class}.secondary-bg {
+    &:hover,
+    &:active {
+        background-color: darken(@secondary, 5%);
     }
 }
 

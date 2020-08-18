@@ -207,7 +207,7 @@ a:hover {
 
 a:focus {
     outline: thin dotted;
-    outline-offset: -2px;
+    outline-offset: -0.125rem;
 }
 
 b,
@@ -382,15 +382,6 @@ body > .container:first-child {
 
 body > .container:last-child {
     margin-bottom: 6rem;
-}
-
-.fixed-top .container > ul {
-    margin-left: -0.75rem;
-    margin-right: -0.75rem;
-}
-
-.fixed-top + .container {
-    margin-top: 6rem;
 }
 
 .grid {
@@ -573,17 +564,7 @@ body > .container:last-child {
 
 .button:focus {
     outline: thin dotted;
-    outline-offset: -2px;
-}
-
-.button.primary-bg:active,
-.button.primary-bg:hover {
-    background-color: #005ce6;
-}
-
-.button.secondary-bg:active,
-.button.secondary-bg:hover {
-    background-color: #151515;
+    outline-offset: -0.125rem;
 }
 
 .button.frame-primary:active,
@@ -596,6 +577,16 @@ body > .container:last-child {
 .button.frame-secondary:hover {
     border-color: #0e0e0e;
     color: #0e0e0e;
+}
+
+.button.primary-bg:active,
+.button.primary-bg:hover {
+    background-color: #005ce6;
+}
+
+.button.secondary-bg:active,
+.button.secondary-bg:hover {
+    background-color: #151515;
 }
 
 .disabled {
@@ -638,13 +629,13 @@ body > .container:last-child {
     color: #bfbfbf;
 }
 
-.breadcrumb li::after {
+.breadcrumb a::after {
     content: " /";
     margin-right: .25rem;
 }
 
-.breadcrumb li:last-child::after,
-.breadcrumb li:only-child::after {
+.breadcrumb a:last-child::after,
+.breadcrumb a:only-child::after {
     content: "";
     margin-right: 0;
 }
@@ -716,26 +707,6 @@ body > .container:last-child {
 .danger-bg {
     background-color: #c00;
     color: #fff;
-}
-
-.primary-text {
-    color: #06f;
-}
-
-.secondary-text {
-    color: #222;
-}
-
-.success-text {
-    color: #393;
-}
-
-.warning-text {
-    color: #fa0;
-}
-
-.danger-text {
-    color: #c00;
 }
 
 .ghost-box {
@@ -1731,6 +1702,15 @@ body > .container:last-child {
     bottom: 0;
 }
 
+.fixed-top .container > ul {
+    margin-left: -0.75rem;
+    margin-right: -0.75rem;
+}
+
+.fixed-top + .container {
+    margin-top: 6rem;
+}
+
 .top {
     bottom: 100%;
 }
@@ -1747,7 +1727,7 @@ body > .container:last-child {
     right: 0;
 }
 
-.block-indent {
+.indent {
     padding-left: 1.5rem;
 }
 

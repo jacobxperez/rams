@@ -46,6 +46,15 @@
     bottom: 0;
 }
 
+.fixed-top .@{wrapper-class} > ul {
+    .margin-left(-@nav-link-padding-x);
+    .margin-right(-@nav-link-padding-x);
+}
+
+.fixed-top + .@{wrapper-class} {
+    .margin-top(@base-line-height * 4);
+}
+
 .top {
     bottom: 100%;
 }
@@ -65,7 +74,7 @@
 
 // Alignment
 // ----------------------------------------------------------------------------/
-.block-indent {
+.indent {
     .padding-left(@indent);
 }
 

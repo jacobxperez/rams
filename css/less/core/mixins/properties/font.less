@@ -29,23 +29,19 @@
     & when not (@size = false) {
 
         & when (@unit = %) {
-            @a: percentage(@size / @base);
-            font-size: @a;
+            font-size: percentage(@size / @base);
         }
 
         & when (@unit = vw), (@unit = vh) {
-            @a: unit(((@size / @base) * 100), @unit);
-            font-size: @a;
+            font-size: unit(((@size / @base) * 100), @unit);
         }
 
         & when (@unit = em), (@unit = rem) {
-            @a: unit((@size / @base), @unit);
-            font-size: @a;
+            font-size: unit((@size / @base), @unit);
         }
 
         & when (@unit = none) {
-            @a: unit((@size / @base));
-            font-size: @a;
+            font-size: unit((@size / @base));
         }
 
     }
@@ -60,18 +56,15 @@
     & when not (@height = false) {
 
         & when (@unit = em), (@unit = rem) {
-            @a: unit((@height / @base), @unit);
-            line-height: @a;
+            line-height: unit((@height / @base), @unit);
         }
 
         & when (@unit = %) {
-            @a: percentage(@height / @base);
-            line-height: @a;
+            line-height: percentage(@height / @base);
         }
 
         & when (@unit = none) {
-            @a: unit((@height / @base));
-            line-height: @a;
+            line-height: unit((@height / @base));
         }
 
     }
@@ -84,8 +77,7 @@
 .text-indent (@text-indent: @indent; @base: @root-font-size; @unit: rem;) {
 
     & when (@unit = em), (@unit = rem) {
-        @a: unit((@text-indent / @base), @unit);
-        text-indent: @a;
+        text-indent: unit((@text-indent / @base), @unit);
     }
 
 }

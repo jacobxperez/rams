@@ -4,23 +4,19 @@
 
     & when not (@position = false) {
         & when (@unit = %) {
-            @a: percentage(@position / @base);
-            top: @a;
+            top: percentage(@position / @base);
         }
 
         & when (@unit = vw), (@unit = vh) {
-            @a: unit(((@position / @base) * 100), @unit);
-            top: @a;
+            top: unit(((@position / @base) * 100), @unit);
         }
 
         & when (@unit = em), (@unit = rem) {
-            @a: unit((@position / @base), @unit);
-            top: @a;
+            top: unit((@position / @base), @unit);
         }
 
         & when (@unit = none) {
-            @a: unit((@position / @base));
-            top: @a;
+            top: unit((@position / @base));
         }
     }
 }
@@ -28,23 +24,19 @@
 .bottom(@position: 1px; @base: @root-font-size; @unit: rem;) {
     & when not (@position = false) {
         & when (@unit = %) {
-            @a: percentage(@position / @base);
-            bottom: @a;
+            bottom: percentage(@position / @base);
         }
 
         & when (@unit = vw), (@unit = vh) {
-            @a: unit(((@position / @base) * 100), @unit);
-            bottom: @a;
+            bottom: unit(((@position / @base) * 100), @unit);
         }
 
         & when (@unit = em), (@unit = rem) {
-            @a: unit((@position / @base), @unit);
-            bottom: @a;
+            bottom: unit((@position / @base), @unit);
         }
 
         & when (@unit = none) {
-            @a: unit((@position / @base));
-            bottom: @a;
+            bottom: unit((@position / @base));
         }
     }
 }
@@ -52,23 +44,19 @@
 .left(@position: 1px; @base: @root-font-size; @unit: rem;) {
     & when not (@position = false) {
         & when (@unit = %) {
-            @a: percentage(@position / @base);
-            left: @a;
+            left: percentage(@position / @base);
         }
 
         & when (@unit = vw), (@unit = vh) {
-            @a: unit(((@position / @base) * 100), @unit);
-            left: @a;
+            left: unit(((@position / @base) * 100), @unit);
         }
 
         & when (@unit = em), (@unit = rem) {
-            @a: unit((@position / @base), @unit);
-            left: @a;
+            left: unit((@position / @base), @unit);
         }
 
         & when (@unit = none) {
-            @a: unit((@position / @base));
-            left: @a;
+            left: unit((@position / @base));
         }
     }
 }
@@ -76,23 +64,19 @@
 .right(@position: 1px; @base: @root-font-size; @unit: rem;) {
     & when not (@position = false) {
         & when (@unit = %) {
-            @a: percentage(@position / @base);
-            right: @a;
+            right: percentage(@position / @base);
         }
 
         & when (@unit = vw), (@unit = vh) {
-            @a: unit(((@position / @base) * 100), @unit);
-            right: @a;
+            right: unit(((@position / @base) * 100), @unit);
         }
 
         & when (@unit = em), (@unit = rem) {
-            @a: unit((@position / @base), @unit);
-            right: @a;
+            right: unit((@position / @base), @unit);
         }
 
         & when (@unit = none) {
-            @a: unit((@position / @base));
-            right: @a;
+            right: unit((@position / @base));
         }
     }
 }

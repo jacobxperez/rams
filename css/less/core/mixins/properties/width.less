@@ -3,51 +3,42 @@
 .width(@width; @base: @root-font-size; @unit: rem;) {
     & when (@unit = em),
     (@unit = rem) {
-        @a: unit((@width / @base), @unit);
-        width: @a;
+        width: unit((@width / @base), @unit);
     }
 
     & when (@unit = %) {
-        @a: percentage(@width / @base);
-        width: @a;
+        width: percentage(@width / @base);
     }
 
     & when (@unit = vw), (@unit = vh) {
-        @a: unit(((@width / @base) * 100), @unit);
-        width: @a;
+        width: unit(((@width / @base) * 100), @unit);
     }
 }
 
 .max-width(@width; @base: @root-font-size; @unit: rem;) {
     & when (@unit = em), (@unit = rem) {
-        @a: unit((@width / @base), @unit);
-        max-width: @a;
+        max-width: unit((@width / @base), @unit);
     }
 
     & when (@unit = %) {
-        @a: percentage(@width / @base);
-        max-width: @a;
+        max-width: percentage(@width / @base);
     }
 
     & when (@unit = vw), (@unit = vh) {
-        @a: unit(((@width / @base) * 100), @unit);
-        max-width: @a;
+        max-width: unit(((@width / @base) * 100), @unit);
     }
 }
 
 .min-width(@width; @base: @root-font-size; @unit: rem;) {
     & when (@unit = em), (@unit = rem) {
-        @a: unit((@width / @base), @unit);
-        min-width: @a;
+        min-width: unit((@width / @base), @unit);
     }
 
     & when (@unit = %) {
-        @a: percentage(@width / @base);
-        min-width: @a;
+        min-width: percentage(@width / @base);
     }
 
     & when (@unit = vw), (@unit = vh) {
-        @a: unit(((@width / @base) * 100), @unit);
-        min-width: @a;
+        min-width: unit(((@width / @base) * 100), @unit);
     }
 }

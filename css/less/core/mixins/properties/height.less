@@ -3,19 +3,16 @@
 .height(@height; @base: @root-font-size; @unit: rem;) {
 
     & when (@unit = em), (@unit = rem) {
-        @a: unit((@height / @base), @unit);
-        height: @a;
+        height: unit((@height / @base), @unit);
     }
 
     & when (@unit = %) {
-        @a: percentage(@height / @base);
-        height: @a;
+        height: percentage(@height / @base);
     }
 
     & when (@unit = vw),
     (@unit = vh) {
-        @a: unit(((@height / @base) * 100), @unit);
-        height: @a;
+        height: unit(((@height / @base) * 100), @unit);
     }
 
 }
@@ -23,18 +20,15 @@
 .max-height(@height; @base: @root-font-size; @unit: rem;) {
 
     & when (@unit = em), (@unit = rem) {
-        @a: unit((@height / @base), @unit);
-        max-height: @a;
+        max-height: unit((@height / @base), @unit);
     }
 
     & when (@unit = %) {
-        @a: percentage(@height / @base);
-        max-height: @a;
+        max-height: percentage(@height / @base);
     }
 
     & when (@unit = vw), (@unit = vh) {
-        @a: unit(((@height / @base) * 100), @unit);
-        max-height: @a;
+        max-height: unit(((@height / @base) * 100), @unit);
     }
 
 }
@@ -42,18 +36,15 @@
 .min-height(@height; @base: @root-font-size; @unit: rem;) {
 
     & when (@unit = em), (@unit = rem) {
-        @a: unit((@height / @base), @unit);
-        min-height: @a;
+        min-height: unit((@height / @base), @unit);
     }
 
     & when (@unit = %) {
-        @a: percentage(@height / @base);
-        min-height: @a;
+        min-height: percentage(@height / @base);
     }
 
     & when (@unit = vw), (@unit = vh) {
-        @a: unit(((@height / @base) * 100), @unit);
-        min-height: @a;
+        min-height: unit(((@height / @base) * 100), @unit);
     }
 
 }

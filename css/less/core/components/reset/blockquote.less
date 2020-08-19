@@ -8,6 +8,7 @@ blockquote {
     .margin-bottom(@base-leading);
     .font-size(@blockquote-font-size);
     .font-family(@blockquote-font-family);
+    .line-height(@blockquote-line-height; @blockquote-font-size);
     font-style: @blockquote-font-style;
 
     &:before,
@@ -22,5 +23,6 @@ blockquote {
 
     small {
         display: block;
+        .line-height(@base-line-height; @small-font-size);
     }
 }

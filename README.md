@@ -17,7 +17,7 @@ Composable Design System — Built with [LESS](http://lesscss.org/)
 
 ### Project Status
 
-Project under active development. **NO** stable version has been released.
+Project under active development, there is **NO** stable version as of today. Pleas read our [contributing](https://github.com/jacobxperez/essentials/blob/master/CONTRIBUTING.md) guidelines if you wish to further the development of [Essentials](https://jacobxperez.github.io/essentials/).
 
 ## Getting Started
 

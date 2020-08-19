@@ -16,9 +16,9 @@ In the book The Power of Less, author Leo Babauta demonstrates how to streamline
 
 * Identify the minimum amount of components that can satisfy most designs.
 * Must be easy to maintain, modify, adapt, customize and change with minimum effort.
-* Must be easy to update without effecting custom code or variables.
+* Must be easy to update without effecting [custom](https://github.com/jacobxperez/essentials/blob/master/css/custom.less) code or [variables](https://github.com/jacobxperez/essentials/blob/master/css/variables.less).
 * Must prevent the designer from fighting the framework.
-* Must follow the 80/20 principle, which indicates that 80 percent of the effects comes from 20 percent of the variables.
+* Must follow the 80/20 principle, which indicates that 80 percent of the effects comes from 20 percent of the [variables](https://github.com/jacobxperez/essentials/blob/master/css/variables.less).
 
 ### Bug Reports
 

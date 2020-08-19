@@ -14,11 +14,17 @@ In the book The Power of Less, author Leo Babauta demonstrates how to streamline
 
 ## Design Requirements
 
-* Identify the minimum amount of components that can satisfy most designs.
+* Identify the minimum amount of [components](https://github.com/jacobxperez/essentials/tree/master/css/less/core/components) that can satisfy most designs.
 * Must be easy to maintain, modify, adapt, customize and change with minimum effort.
 * Must be easy to update without effecting [custom](https://github.com/jacobxperez/essentials/blob/master/css/custom.less) code or [variables](https://github.com/jacobxperez/essentials/blob/master/css/variables.less).
 * Must prevent the designer from fighting the framework.
 * Must follow the 80/20 principle, which indicates that 80 percent of the effects comes from 20 percent of the [variables](https://github.com/jacobxperez/essentials/blob/master/css/variables.less).
+
+### Design Considerations
+
+**CSS as first class**: Preprocessors are **NO** replacement for CSS and should only be use to enhance it. When ever possible avoid overcomplicating selectors with fancy logic that will only bring more problems then solutions.
+
+**JavaScript as first class**: Don't build a JavaScript component that requires an external framework, everything should be build using vanilla JavaScript. 
 
 ### Bug Reports
 

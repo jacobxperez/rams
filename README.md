@@ -18,7 +18,7 @@ Composable Design System — Built with [LESS](http://lesscss.org/)
 
 ## About
 
-[Essentials](https://jacobxperez.github.io/essentials/) is a front-end composable design system build with [LESS](http://lesscss.org/).
+[Essentials](https://jacobxperez.github.io/essentials/) is a front-end composable design system.
 
 ### Project Status
 
@@ -68,7 +68,7 @@ Please ask first before embarking on any significant pull request (e.g. implemen
 
 ## Design Principles
 
-Leo Babauta demonstrates in his book The Power of Less how to streamline your life by identifying the essential and eliminating the unnecessary. By focusing on the essential and allowing everything else to drop away you will become less stressed and more productive.
+In the book The Power of Less, author Leo Babauta demonstrates how to streamline your life by identifying the essential and eliminating the unnecessary. By focusing on the essential and allowing everything else to drop away you will become less stressed and more productive.
 
 1. Identify the essential
 2. Eliminate the rest

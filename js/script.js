@@ -14,13 +14,13 @@ document.addEventListener("DOMContentLoaded", function() {
             getToggle[i].addEventListener("click", function(e) {
 
                 // toggle class show
-                if (this.classList.contains("js-toggle-active") === false) {
+                if (this.classList.contains("active") === false) {
 
-                    this.classList.add("js-toggle-active");
+                    this.classList.add("active");
 
-                } else if (this.classList.contains("js-toggle-active") === true) {
+                } else if (this.classList.contains("active") === true) {
 
-                    this.classList.remove("js-toggle-active");
+                    this.classList.remove("active");
 
                 } // end if block
 
@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function() {
             if (e.target !== getToggleReset) {
                 for (let i = 0; i < getToggleReset.length; i++) {
                     // removes class show from all dropdowns
-                    getToggleReset[i].classList.remove("js-toggle-active");
+                    getToggleReset[i].classList.remove("active");
                 } // end for loop
             }
         });

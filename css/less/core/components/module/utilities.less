@@ -1,8 +1,8 @@
 // Utilities
 // ----------------------------------------------------------------------------/
-
 .block {
     display: block;
+    width: 100%;
 }
 
 // Floats
@@ -104,6 +104,9 @@
     hyphens: auto;
 }
 
+
+// Leading
+// ----------------------------------------------------------------------------/
 .leading-top {
     .margin-top(@base-leading);
 }
@@ -113,14 +116,10 @@
 }
 
 
-// Grid and Flex Box
+// Flex Box
 // ----------------------------------------------------------------------------/
 .flex {
     display: flex;
-}
-
-.flex-row {
-    flex-direction: row;
 }
 
 .flex-column {
@@ -129,30 +128,6 @@
 
 .flex-grow {
     flex-grow: 1;
-}
-
-.justify-start {
-    justify-content: start;
-}
-
-.justify-end {
-    justify-content: end;
-}
-
-.justify-center {
-    justify-content: center;
-}
-
-.justify-around {
-    justify-content: space-around;
-}
-
-.justify-between {
-    justify-content: space-between;
-}
-
-.justify-evenly {
-    justify-content: space-evenly;
 }
 
 

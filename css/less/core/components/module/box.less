@@ -1,12 +1,8 @@
 // Box
-// -----------------------------------------------------------------------------
+// ----------------------------------------------------------------------------/
 .box {
     display: block;
     .padding(@base-padding-y, @base-padding-x);
-}
-
-.base-bg {
-    background-color: @background-color;
 }
 
 .flex-box {
@@ -15,86 +11,19 @@
     flex-direction: column;
 }
 
-.frame {
-    .border(@base-border-width);
+// Ghost Box
+// ----------------------------------------------------------------------------/
+.ghost-box {
+    display: none;
+    width: 100%;
+    margin-bottom: 0;
+    .min-width(@ghost-box-min-width);
+    visibility: hidden;
+    .transition();
 }
 
-
-// Primary Frame
-// -----------------------------------------------------------------------------
-.primary-frame {
-    .border-color(@primary);
-    .color(@primary);
-}
-
-
-// Secondary Frame
-// -----------------------------------------------------------------------------
-.secondary-frame {
-    .border-color(@secondary);
-    .color(@secondary);
-}
-
-
-// Success Frame
-// -----------------------------------------------------------------------------
-.success-frame {
-    .border-color(@success);
-    .color(@success);
-}
-
-
-// Warning Frame
-// -----------------------------------------------------------------------------
-.warning-frame {
-    .border-color(@warning);
-    .color(@warning);
-}
-
-
-// Danger Frame
-// -----------------------------------------------------------------------------
-.danger-frame {
-    .border-color(@danger);
-    .color(@danger);
-}
-
-
-// Primary Background
-// -----------------------------------------------------------------------------
-.primary-bg {
-    .background-color(@primary);
-    .color(@primary-fg);
-}
-
-
-// Secondary Background
-// -----------------------------------------------------------------------------
-.secondary-bg {
-    .background-color(@secondary);
-    .color(@secondary-fg);
-}
-
-
-// Success Background
-// -----------------------------------------------------------------------------
-.success-bg {
-    .background-color(@success);
-    .color(@success-fg);
-}
-
-
-// Warning Background
-// -----------------------------------------------------------------------------
-.warning-bg {
-    .background-color(@warning);
-    .color(@warning-fg);
-}
-
-
-// Danger Background
-// -----------------------------------------------------------------------------
-.danger-bg {
-    .background-color(@danger);
-    .color(@danger-fg);
+// added by javascript
+.active + .ghost-box {
+    display: block;
+    visibility: visible;
 }

@@ -1,0 +1,58 @@
+// Background Colors
+// ----------------------------------------------------------------------------/
+.base-bg {
+    background-color: @background-color;
+}
+
+
+// Primary Background
+.primary-bg {
+    .background-color(@primary);
+    .color(@primary-fg);
+}
+
+
+// Secondary Background
+.secondary-bg {
+    .background-color(@secondary);
+    .color(@secondary-fg);
+}
+
+
+// Success Background
+.success-bg {
+    .background-color(@success);
+    .color(@success-fg);
+}
+
+
+// Warning Background
+.warning-bg {
+    .background-color(@warning);
+    .color(@warning-fg);
+}
+
+
+// Danger Background
+.danger-bg {
+    .background-color(@danger);
+    .color(@danger-fg);
+}
+
+
+// Button Colors
+// ----------------------------------------------------------------------------/
+.@{button-class}.primary-bg {
+    &:hover,
+    &:active {
+        background-color: darken(@primary, 5%);
+    }
+}
+
+
+.@{button-class}.secondary-bg {
+    &:hover,
+    &:active {
+        background-color: darken(@secondary, 5%);
+    }
+}

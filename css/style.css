@@ -32,19 +32,6 @@ body {
     background-color: #fff;
 }
 
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-main,
-menu,
-section {
-    display: block;
-}
-
 nav,
 nav ul {
     display: flex;
@@ -59,40 +46,21 @@ nav ul {
     margin-bottom: 0;
 }
 
-audio,
-canvas,
-progress,
-video {
-    display: inline-block;
-}
-
 summary {
     display: list-item;
 }
 
-[hidden],
-audio:not([controls]),
-template {
+[hidden] {
     display: none;
-    height: 0;
 }
 
 svg:not(:root) {
     overflow: hidden;
 }
 
-embed,
-img,
-object {
-    max-width: 100%;
-}
-
 img {
     height: auto;
-}
-
-progress[value] {
-    appearance: none;
+    border-style: none;
 }
 
 dl,
@@ -1815,10 +1783,6 @@ body > .container:last-child {
     justify-content: space-evenly;
 }
 
-.show-print {
-    display: none;
-}
-
 .transparent {
     opacity: .95;
 }
@@ -1870,9 +1834,5 @@ body > .container:last-child {
         max-width: 100%;
         margin: 0;
         padding: 0;
-    }
-
-    .hide-print {
-        display: none;
     }
 }

@@ -9,6 +9,7 @@ Composable Design System — Built with [LESS](http://lesscss.org/)
 * [Getting Started](#getting-started)
     * [Default Build](#default-build)
     * [Custom Build](#custom-build)
+    * [Contributing](#contributing)
 * [LICENSE](#license)
 
 ## About

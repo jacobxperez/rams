@@ -22,9 +22,11 @@ In the book The Power of Less, author Leo Babauta demonstrates how to streamline
 
 ### Design Considerations
 
+**HTML as first class**: Build the structure in HTML first then style the component in CSS.
+
 **CSS as first class**: Preprocessors are **NO** replacement for CSS and should only be use to enhance it. When ever possible avoid overcomplicating selectors with fancy logic that will only bring more problems then solutions.
 
-**JavaScript as first class**: Don't build a JavaScript component that requires an external framework, everything should be build using vanilla JavaScript. 
+**JavaScript as first class**: Don't build a JavaScript component that requires an external framework, everything should be build using vanilla JavaScript.
 
 ### Bug Reports
 

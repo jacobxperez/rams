@@ -43,7 +43,7 @@ Adjust the [variables](https://github.com/jacobxperez/essentials/blob/master/css
 
 ### [Contributing](https://github.com/jacobxperez/essentials/blob/master/CONTRIBUTING.md)
 
-Help us make [Essentials](https://jacobxperez.github.io/essentials/) better for everyone, please read our [contributing](https://github.com/jacobxperez/essentials/blob/master/CONTRIBUTING.md) guidelines to better understand the nature of the project.
+Help us make [Essentials](https://jacobxperez.github.io/essentials/) better for everyone, please read our [contributing](https://github.com/jacobxperez/essentials/blob/master/CONTRIBUTING.md) guidelines to better understand the nature and the direction of the project. Use the [issue tracker](https://github.com/jacobxperez/essentials/issues) for bug reports, feature requests and submitting pull requests.
 
 ## LICENSE
 

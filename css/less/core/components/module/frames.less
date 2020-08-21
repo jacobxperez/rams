@@ -42,7 +42,8 @@
 
 // Buttons Frames
 // ----------------------------------------------------------------------------/
-.@{button-class}.frame-primary {
+.@{button-class}.primary-frame {
+    &.active,
     &:hover,
     &:active {
         border-color: darken(@primary, 8%);
@@ -51,7 +52,8 @@
 }
 
 
-.@{button-class}.frame-secondary {
+.@{button-class}.secondary-frame {
+    &.active,
     &:hover,
     &:active {
         border-color: darken(@secondary, 8%);

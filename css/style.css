@@ -1745,10 +1745,8 @@ body > .container:last-child {
     flex-wrap: wrap;
 }
 
-.flex-list {
-    display: flex;
+.flex-column {
     flex-direction: column;
-    width: 100%;
 }
 
 .flex-grow {

@@ -38,9 +38,9 @@ The easiest way to include [Essentials](https://jacobxperez.github.io/essentials
 Adjust the [variables](https://github.com/jacobxperez/essentials/blob/master/css/variables.less) and if needed, add [custom](https://github.com/jacobxperez/essentials/blob/master/css/custom.less) code then compile everything together in [style.less](https://github.com/jacobxperez/essentials/blob/master/css/style.less) to produce the final [CSS](https://github.com/jacobxperez/essentials/blob/master/css/style.css). Optional, comment out unwanted components from [style.less](https://github.com/jacobxperez/essentials/blob/master/css/style.less) then compile your project.
 
 * [/css](https://github.com/jacobxperez/essentials/tree/master/css)
-    * [variables.less](https://github.com/jacobxperez/essentials/blob/master/css/variables.less) (adjust the settings)
     * [custom.less](https://github.com/jacobxperez/essentials/blob/master/css/custom.less) (write custom modules)
     * [style.less](https://github.com/jacobxperez/essentials/blob/master/css/style.less) (compile everything together)
+    * [variables.less](https://github.com/jacobxperez/essentials/blob/master/css/variables.less) (adjust the settings)
 
 ### [Contributing](https://github.com/jacobxperez/essentials/blob/master/CONTRIBUTING.md)
 

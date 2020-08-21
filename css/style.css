@@ -32,32 +32,23 @@ body {
     background-color: #fff;
 }
 
-nav,
-nav ul {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-nav {
-    align-items: baseline;
-}
-
-nav ul {
-    margin-bottom: 0;
+audio,
+canvas,
+embed,
+iframe,
+img,
+object,
+svg,
+video {
+    display: block;
+    height: auto;
+    max-width: 100%;
+    width: 100%;
+    vertical-align: middle;
 }
 
 summary {
     display: list-item;
-}
-
-[hidden] {
-    display: none;
-}
-
-img {
-    height: auto;
-    max-width: 100%;
-    border-style: none;
 }
 
 hr {
@@ -66,6 +57,10 @@ hr {
     height: 1px;
     margin-bottom: 1.5rem;
     border-top: .0625rem solid rgba(0, 0, 0, 0.3);
+}
+
+[hidden] {
+    display: none;
 }
 
 ::-moz-selection {
@@ -224,6 +219,10 @@ ul ul {
 .ul {
     padding-left: 1.5rem;
     list-style-position: outside;
+}
+
+nav ul {
+    margin-bottom: 0;
 }
 
 code,

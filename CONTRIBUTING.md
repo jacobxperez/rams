@@ -9,6 +9,8 @@ In the book The Power of Less, author Leo Babauta demonstrates how to streamline
 1. Identify the essential
 2. Eliminate the rest
 
+This two principles of identify the essential and eliminate the rest form the foundation in which we will build a front-end composable design system.
+
 > Perfection is achieved, not when there is nothing more to add, but when there is nothing left to take away.
 > — Antoine de Saint-Exupery
 

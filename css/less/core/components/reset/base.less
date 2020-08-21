@@ -29,32 +29,23 @@ body {
     background-color: @background-color;
 }
 
-nav,
-nav ul {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-nav {
-    align-items: baseline;
-
-    ul {
-        margin-bottom: 0;
-    }
+img,
+svg,
+audio,
+video,
+canvas,
+iframe,
+embed,
+object {
+  display: block;
+  height: auto;
+  max-width: 100%;
+  width: 100%;
+  vertical-align: middle;
 }
 
 summary {
     display: list-item;
-}
-
-[hidden] {
-    display: none;
-}
-
-img {
-    height: auto;
-    max-width: 100%;
-    border-style: none;
 }
 
 hr {
@@ -63,6 +54,10 @@ hr {
     height: 1px;
     .margin-bottom(@base-leading);
     .border-top(@hr-border-width; @hr-border-style; @hr-border-color);
+}
+
+[hidden] {
+    display: none;
 }
 
 .selection();

@@ -1742,6 +1742,7 @@ body > .container:last-child {
 
 .flex {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .flex-column {

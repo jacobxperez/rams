@@ -613,47 +613,33 @@ body > .container:last-child {
     visibility: visible;
 }
 
-.frame {
+.outline {
     border: .0625rem solid rgba(0, 0, 0, 0.3);
 }
 
-.primary-frame {
+.primary-outline {
     border-color: #06f;
     color: #06f;
 }
 
-.secondary-frame {
+.secondary-outline {
     border-color: #222;
     color: #222;
 }
 
-.success-frame {
+.success-outline {
     border-color: #393;
     color: #393;
 }
 
-.warning-frame {
+.warning-outline {
     border-color: #fa0;
     color: #fa0;
 }
 
-.danger-frame {
+.danger-outline {
     border-color: #c00;
     color: #c00;
-}
-
-.button.primary-frame.active,
-.button.primary-frame:active,
-.button.primary-frame:hover {
-    border-color: #0056d6;
-    color: #0056d6;
-}
-
-.button.secondary-frame.active,
-.button.secondary-frame:active,
-.button.secondary-frame:hover {
-    border-color: #0e0e0e;
-    color: #0e0e0e;
 }
 
 .base-bg {
@@ -685,6 +671,41 @@ body > .container:last-child {
     color: #fff;
 }
 
+.button.primary-outline.active,
+.button.primary-outline:active,
+.button.primary-outline:hover {
+    border-color: #0056d6;
+    color: #0056d6;
+}
+
+.button.secondary-outline.active,
+.button.secondary-outline:active,
+.button.secondary-outline:hover {
+    border-color: #0e0e0e;
+    color: #0e0e0e;
+}
+
+.button.success-outline.active,
+.button.success-outline:active,
+.button.success-outline:hover {
+    border-color: #297a29;
+    color: #297a29;
+}
+
+.button.warning-outline.active,
+.button.warning-outline:active,
+.button.warning-outline:hover {
+    border-color: #d68f00;
+    color: #d68f00;
+}
+
+.button.danger-outline.active,
+.button.danger-outline:active,
+.button.danger-outline:hover {
+    border-color: #a30000;
+    color: #a30000;
+}
+
 .button.primary-bg.active,
 .button.primary-bg:active,
 .button.primary-bg:hover {
@@ -695,6 +716,24 @@ body > .container:last-child {
 .button.secondary-bg:active,
 .button.secondary-bg:hover {
     background-color: #151515;
+}
+
+.button.success-bg.active,
+.button.success-bg:active,
+.button.success-bg:hover {
+    background-color: #2d862d;
+}
+
+.button.warning-bg.active,
+.button.warning-bg:active,
+.button.warning-bg:hover {
+    background-color: #e69900;
+}
+
+.button.danger-bg.active,
+.button.danger-bg:active,
+.button.danger-bg:hover {
+    background-color: #b30000;
 }
 @font-face {
     font-family: 'icons';

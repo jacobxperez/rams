@@ -9,7 +9,10 @@ blockquote {
     .font-size(@blockquote-font-size);
     .font-family(@blockquote-font-family);
     .line-height(@blockquote-line-height; @blockquote-font-size);
-    font-style: @blockquote-font-style;
+
+    & when not (@blockquote-font-style = false) {
+        font-style: @blockquote-font-style;
+    }
 
     &:before,
     &:after {

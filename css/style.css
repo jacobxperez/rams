@@ -85,36 +85,43 @@ h6 {
     margin-bottom: 1.5rem;
 }
 
+.h1,
 h1 {
     font-size: 3rem;
     line-height: 1;
 }
 
+.h2,
 h2 {
     font-size: 2rem;
     line-height: 1.5;
 }
 
+.h3,
 h3 {
     font-size: 1.5rem;
     line-height: 1;
 }
 
+.h4,
 h4 {
     font-size: 1.25rem;
     line-height: 1.2;
 }
 
+.h5,
 h5 {
     font-size: 1.125rem;
     line-height: 1.33333333;
 }
 
+.h6,
 h6 {
     font-size: 1rem;
     line-height: 1.5;
 }
 
+.leading,
 p {
     margin-bottom: 1.5rem;
 }
@@ -316,7 +323,7 @@ input[type=url]:focus,
 input[type=week]:focus,
 select:focus,
 textarea:focus {
-    border-color: #06f;
+    border-color: rgba(0, 0, 0, 0.5);
     box-shadow: none;
 }
 
@@ -1773,10 +1780,6 @@ body > .container:last-child {
 
 .leading-top {
     margin-top: 1.5rem;
-}
-
-.leading {
-    margin-bottom: 1.5rem;
 }
 
 .flex {

@@ -5,10 +5,10 @@ blockquote, q {
 }
 
 blockquote {
-    .margin-bottom(@base-leading);
     .font-size(@blockquote-font-size);
     .font-family(@blockquote-font-family);
     .line-height(@blockquote-line-height; @blockquote-font-size);
+    &:extend(.leading);
 
     & when not (@blockquote-font-style = false) {
         font-style: @blockquote-font-style;

@@ -8,7 +8,8 @@ h5,
 h6 {
     .font-family(@headings-font-family);
     font-weight: @headings-font-weight;
-    .margin-bottom(@base-leading);
+    &:extend(.leading);
+    // .margin-bottom(@base-leading);
 }
 
 .h1,
@@ -47,9 +48,8 @@ h6 {
     .line-height(@h6-line-height; @h6-font-size);
 }
 
-.leading,
 p {
-    .margin-bottom(@base-leading);
+    &:extend(.leading);
 }
 
 a {

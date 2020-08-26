@@ -52,8 +52,8 @@ hr {
     .box-sizing(content-box);
     display: block;
     height: 1px;
-    .margin-bottom(@base-leading);
     .border-top(@hr-border-width; @hr-border-style; @hr-border-color);
+    &:extend(.leading);
 }
 
 [hidden] {

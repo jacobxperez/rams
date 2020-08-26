@@ -55,7 +55,6 @@ hr {
     box-sizing: content-box;
     display: block;
     height: 1px;
-    margin-bottom: 1.5rem;
     border-top: .0625rem solid rgba(0, 0, 0, 0.3);
 }
 
@@ -84,6 +83,7 @@ h3,
 h4,
 h5,
 h6,
+hr,
 ol,
 p,
 pre,

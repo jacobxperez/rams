@@ -1,6 +1,12 @@
 # Contributing
 
-Help us make [Essentials](https://jacobxperez.github.io/essentials/) better for everyone, any contribution will be considered. Use the [issue tracker](https://github.com/jacobxperez/essentials/issues) for bug reports, feature requests and submitting pull requests.
+If your interested in contributing to this project, is important to read the following sections to better understand the nature and the direction of the project.
+
+## Design Philosophy
+
+Perhaps the most famous quote from Dieter Rams's "Good design is as little design as possible"
+meaning that by omitting the unnecessary the essential comes to the forefront. The product
+becomes useful, understandable, easy to use and long-lasting.
 
 ## Design Principles
 
@@ -9,7 +15,7 @@ In the book The Power of Less, author Leo Babauta demonstrates how to streamline
 1. Identify the essential
 2. Eliminate the rest
 
-This two principles of identify the essential and eliminate the rest form the foundation in which we will build a composable design system.
+This two principles of identify the essential and eliminate the rest form the foundation of this project.
 
 > Perfection is achieved, not when there is nothing more to add, but when there is nothing left to take away.
 > — Antoine de Saint-Exupery
@@ -19,7 +25,7 @@ This two principles of identify the essential and eliminate the rest form the fo
 * Identify the minimum amount of [components](https://github.com/jacobxperez/essentials/tree/master/css/less/core/components) that can satisfy most designs.
 * Must be easy to maintain, modify, adapt, customize and change with minimum effort.
 * Must be easy to update without effecting [custom](https://github.com/jacobxperez/essentials/blob/master/css/custom.less) code or [variables](https://github.com/jacobxperez/essentials/blob/master/css/variables.less).
-* Must prevent the designer from fighting the framework.
+* Must be unobtrusive to prevent the designer from fighting the framework.
 * Must follow the 80/20 principle, which indicates that 80 percent of the effects comes from 20 percent of the [variables](https://github.com/jacobxperez/essentials/blob/master/css/variables.less).
 
 ### Design Considerations

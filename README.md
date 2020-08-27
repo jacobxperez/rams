@@ -1,6 +1,6 @@
 # [Essentials](https://jacobxperez.github.io/essentials/)
 
-Composable Design System — Built with [LESS](http://lesscss.org/)
+Composable Design System — Assemble with [LESS](http://lesscss.org/)
 
 ## Table of Contents
 

@@ -1,6 +1,6 @@
 # Contributing
 
-If your interested in contributing to this project, is important to read the following sections to better understand the nature and the direction of the project.
+Before you contributing to this project is important to read the following sections to better understand the nature and the direction of the project.
 
 ## Design Philosophy
 

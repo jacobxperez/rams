@@ -5,6 +5,16 @@ the following sections to better understand the nature and the direction of the
 project. Use the [issue tracker](https://github.com/jacobxperez/essentials/issues)
 for bug reports, feature requests and submitting pull requests.
 
+## Table of Contents
+
+* [Design Philosophy](#design-philosophy)
+* [Design Principles](#design-principles)
+* [Design Requirements](#design-requirements)
+    * [Design Considerations](#design-considerations)
+    * [Bug Reports](#bug-reports)
+    * [Feature Requests](#feature-requests)
+    * [Pull Requests](#pull-requests)
+
 ## Design Philosophy
 
 Perhaps the most famous quote from Dieter Rams "Good design is as little design

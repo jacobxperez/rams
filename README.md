@@ -18,7 +18,7 @@ Composable Design System — Assemble with [LESS](http://lesscss.org/)
 
 ### Project Status
 
-This project is under active development and there is **NO** stable version as of today. Pleas read our [contributing](https://github.com/jacobxperez/essentials/blob/master/CONTRIBUTING.md) guidelines if you wish to further the development of [Essentials](https://jacobxperez.github.io/essentials/).
+This project is under active development and there is **NO** stable version as of today. Pleas read our [contributing](https://github.com/jacobxperez/essentials/blob/master/CONTRIBUTING.md) guidelines if you wish to further the development of [Essentials](https://jacobxperez.github.io/essentials/), any contribution will be considered.
 
 ## Getting Started
 

@@ -10,10 +10,10 @@ for bug reports, feature requests and submitting pull requests.
 * [Design Philosophy](#design-philosophy)
 * [Design Principles](#design-principles)
 * [Design Requirements](#design-requirements)
-    * [Design Considerations](#design-considerations)
-    * [Bug Reports](#bug-reports)
-    * [Feature Requests](#feature-requests)
-    * [Pull Requests](#pull-requests)
+* [Design Considerations](#design-considerations)
+* [Bug Reports](#bug-reports)
+* [Feature Requests](#feature-requests)
+* [Pull Requests](#pull-requests)
 
 ## Design Philosophy
 
@@ -45,7 +45,7 @@ foundation of this project.
 * Must be unobtrusive to prevent the designer from fighting the framework.
 * Must follow the 80/20 principle, which indicates that 80 percent of the effects comes from 20 percent of the [variables](https://github.com/jacobxperez/essentials/blob/master/css/variables.less).
 
-### Design Considerations
+## Design Considerations
 
 **HTML as first class**: Build the structure in HTML first then style the component
 in CSS.
@@ -57,21 +57,21 @@ with fancy logic that will only bring more problems then solutions.
 **JavaScript as first class**: Don't build a JavaScript component that requires
 an external framework, everything should be build using vanilla JavaScript.
 
-### Bug Reports
+## Bug Reports
 
 Please try to be as detailed as possible in your report. What is your environment?
 What steps will reproduce the issue? What browser(s) and OS experience the problem?
 What would you expect to be the outcome? All these details will help us fix any
 potential bugs.
 
-### Feature Requests
+## Feature Requests
 
 Before opening a feature request, please take a moment to find out whether your
 idea fits with the scope and aims of the project. It's up to you to make a strong
 case to convince the project's developers of the merits of this feature. Please
 provide as much detail and context as possible.
 
-### Pull Requests
+## Pull Requests
 
 Please ask first before embarking on any significant pull request (e.g.
 implementing features, refactoring code, porting to a different language), otherwise

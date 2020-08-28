@@ -8,7 +8,7 @@ for bug reports, feature requests and submitting pull requests.
 ## Design Philosophy
 
 Perhaps the most famous quote from Dieter Rams "Good design is as little design
-as possible" meaning that by omitting the unnecessary the essential comes to the
+as possible" meaning that by removing the unnecessary the essential comes to the
 forefront. The product becomes useful, understandable, easy to use and long-lasting.
 
 ## Design Principles

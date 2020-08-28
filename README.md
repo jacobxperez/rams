@@ -44,7 +44,10 @@ Adjust the [variables](https://github.com/jacobxperez/essentials/blob/master/css
 
 ### [Contributing](https://github.com/jacobxperez/essentials/blob/master/CONTRIBUTING.md)
 
-If your interested in contributing to this project please start by reading our [contributing](https://github.com/jacobxperez/essentials/blob/master/CONTRIBUTING.md) guidelines to better understand the nature and the direction of the project.
+If your interested in contributing to this project please start by reading our
+[contributing](https://github.com/jacobxperez/essentials/blob/master/CONTRIBUTING.md)
+guidelines to better understand the nature and the direction of the project, any
+contribution will be considered.
 
 ## LICENSE
 

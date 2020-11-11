@@ -55,7 +55,7 @@ only be use to enhance it. When ever possible avoid overcomplicating selectors
 with fancy logic that will only bring more problems then solutions.
 
 **JavaScript as first class**: Don't build a JavaScript component that requires
-an external framework, everything should be build using vanilla JavaScript.
+an external framework, everything should be build with JavaScript.
 
 ## Bug Reports
 

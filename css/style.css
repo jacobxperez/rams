@@ -1782,7 +1782,35 @@ body > .container:last-child {
     flex-grow: 1;
 }
 
-.transparent {
+.content-start {
+    justify-content: start;
+}
+
+.content-end {
+    justify-content: end;
+}
+
+.content-center {
+    justify-content: center;
+}
+
+.content-stretch {
+    justify-content: stretch;
+}
+
+.content-around {
+    justify-content: space-around;
+}
+
+.content-between {
+    justify-content: space-between;
+}
+
+.content-evenly {
+    justify-content: space-evenly;
+}
+
+.opacity {
     opacity: .95;
 }
 @media screen and (max-width: 42.5em) {

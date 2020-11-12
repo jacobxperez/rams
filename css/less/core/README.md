@@ -1,1 +1,1 @@
-**Warning!** Do not delete or edit Core files unless you are debugging or contributing to [Essentials](https://github.com/jacobxperez/essentials). Use [custom.less](https://github.com/jacobxperez/essentials/blob/master/css/custom.less) for adding extra modules.
+**Warning!** Do not delete or edit Core files unless you are debugging or contributing to [Essentials](https://github.com/jacobxperez/essentials). Use [custom](https://github.com/jacobxperez/essentials/tree/master/css/less/custom) for adding extra modules.

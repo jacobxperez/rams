@@ -1,9 +1,6 @@
 # Contributing
 
-Welcome developers, before you contributing to this project is important to read
-the following sections to better understand the nature and the direction of the
-project. Use the [issue tracker](https://github.com/jacobxperez/essentials/issues)
-for bug reports, feature requests and submitting pull requests.
+Welcome developers, before you contribute to this project is important to read the following sections to better understand the nature and the direction of the project. Use the [issue tracker](https://github.com/jacobxperez/essentials/issues) for bug reports, feature requests, and submitting pull requests.
 
 ## Table of Contents
 
@@ -19,7 +16,7 @@ for bug reports, feature requests and submitting pull requests.
 
 Perhaps the most famous quote from Dieter Rams "Good design is as little design
 as possible" meaning that by removing the unnecessary the essential comes to the
-forefront. The product becomes useful, understandable, easy to use and long-lasting.
+forefront. The product becomes useful, understandable, easy to use, and long-lasting.
 
 ## Design Principles
 
@@ -31,7 +28,7 @@ stressed and more productive.
 1. Identify the essential
 2. Eliminate the rest
 
-This two principles of identify the essential and eliminate the rest form the
+These two principles, identify the essential and eliminate the rest form the
 foundation of this project.
 
 > Perfection is achieved, not when there is nothing more to add, but when there is nothing left to take away.
@@ -40,22 +37,22 @@ foundation of this project.
 ## Design Requirements
 
 * Identify the minimum amount of [components](https://github.com/jacobxperez/essentials/tree/master/css/less/core/components) that can satisfy most designs.
-* Must be easy to maintain, modify, adapt, customize and change with minimum effort.
-* Must be easy to update without effecting [custom](https://github.com/jacobxperez/essentials/blob/master/css/custom.less) code or [variables](https://github.com/jacobxperez/essentials/blob/master/css/variables.less).
+* Must be easy to maintain, modify, adapt, customize, and change with minimum effort.
+* Must be easy to update without affecting [custom](https://github.com/jacobxperez/essentials/blob/master/css/custom.less) code or [variables](https://github.com/jacobxperez/essentials/blob/master/css/variables.less).
 * Must be unobtrusive to prevent the designer from fighting the framework.
-* Must follow the 80/20 principle, which indicates that 80 percent of the effects comes from 20 percent of the [variables](https://github.com/jacobxperez/essentials/blob/master/css/variables.less).
+* Must follow the 80/20 principle, which indicates that 80 percent of the effects come from 20 percent of the [variables](https://github.com/jacobxperez/essentials/blob/master/css/variables.less).
 
 ## Design Considerations
 
-**HTML as first class**: Build the structure in HTML first then style the component
-in CSS.
+**HTML as first-class**: Build the structure in HTML first then style the
+component in CSS.
 
-**CSS as first class**: Preprocessors are **NO** replacement for CSS and should
-only be use to enhance it. When ever possible avoid overcomplicating selectors
-with fancy logic that will only bring more problems then solutions.
+**CSS as first-class**: Preprocessors are **NO** replacement for CSS and should
+only be used to enhance it. Whenever possible avoid overcomplicating selectors
+with fancy logic that will only bring more problems than solutions.
 
-**JavaScript as first class**: Don't build a JavaScript component that requires
-an external framework, everything should be build with JavaScript.
+**JavaScript as first-class**: Don't build a JavaScript component that requires
+an external framework, everything should be built with JavaScript.
 
 ## Bug Reports
 
@@ -73,11 +70,11 @@ provide as much detail and context as possible.
 
 ## Pull Requests
 
-Please ask first before embarking on any significant pull request (e.g.
-implementing features, refactoring code, porting to a different language), otherwise
-you risk spending a lot of time working on something that the project's developers
-might not want to merge into the project. When contributing code to this project
-always ask yourself these questions.
+Please ask first before embarking on any significant pull request (e.g. implementing
+features, refactoring code, porting to a different language), otherwise you 
+risk spending a lot of time working on something that the project's developers
+might not want to merge into the project. When contributing code to this
+project always asks yourself these questions.
 
 * Is it essential?
 * Will it add value?

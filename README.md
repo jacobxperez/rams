@@ -5,7 +5,6 @@ Composable Design System — Assemble with [LESS](http://lesscss.org/)
 ## Table of Contents
 
 * [About](#about)
-    * [Project Status](#project-status)
 * [Getting Started](#getting-started)
     * [Default Build](#default-build)
     * [Custom Build](#custom-build)
@@ -15,10 +14,6 @@ Composable Design System — Assemble with [LESS](http://lesscss.org/)
 ## About
 
 [Essentials](https://jacobxperez.github.io/essentials/) is a front-end composable design system.
-
-### Project Status
-
-This project is under active development and there is **NO** stable version as of today. Please read our [contributing](https://github.com/jacobxperez/essentials/blob/master/CONTRIBUTING.md) guidelines if you wish to further the development of [Essentials](https://jacobxperez.github.io/essentials/), any contribution will be considered.
 
 ## Getting Started
 

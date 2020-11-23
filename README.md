@@ -8,6 +8,7 @@ Composable Design System — Assemble with [LESS](http://lesscss.org/)
 * [Getting Started](#getting-started)
     * [Default Build](#default-build)
     * [Custom Build](#custom-build)
+    * [Updating](#updating)
     * [Contributing](#contributing)
 * [LICENSE](#license)
 
@@ -37,6 +38,11 @@ Adjust the [variables](https://github.com/jacobxperez/essentials/blob/master/css
     * [custom.less](https://github.com/jacobxperez/essentials/blob/master/css/custom.less) (write custom modules)
     * [style.less](https://github.com/jacobxperez/essentials/blob/master/css/style.less) (compile everything together)
     * [variables.less](https://github.com/jacobxperez/essentials/blob/master/css/variables.less) (adjust the settings)
+
+### Updating
+
+To update replace the [core](https://github.com/jacobxperez/essentials/tree/master/css/less/core)
+folder with the new version, then make sure everything compiles correctly.
 
 ### [Contributing](https://github.com/jacobxperez/essentials/blob/master/CONTRIBUTING.md)
 

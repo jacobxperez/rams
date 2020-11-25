@@ -5,14 +5,21 @@
 
 
 // min width
-@wrapper-min-width: (280px + (@wrapper-gap * 2));
+@wrapper-min-width: 280px;
 
 // max width
-@wrapper-max-width: (940px + (@wrapper-gap * 2));
+@wrapper-max-width: 940px;
 
 
-// Minimum wrapper width
+// calculate min width
+@cal-wrapper-min-width: (@wrapper-min-width + (@wrapper-gap * 2));
+
+// calculate max width
+@cal-wrapper-max-width: (@wrapper-max-width + (@wrapper-gap * 2));
+
+
+// Minimum wrapper width output
 @wrapper-min-width-output: (@wrapper-min-width + (@wrapper-gap * 2));
 
-// Maximum wrapper width
+// Maximum wrapper width output
 @wrapper-max-width-output: (@wrapper-max-width + (@wrapper-gap * 2));

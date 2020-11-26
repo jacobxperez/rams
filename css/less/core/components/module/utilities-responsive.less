@@ -1,0 +1,39 @@
+// Utilities Responsive
+// ----------------------------------------------------------------------------/
+
+
+// Small Screen
+// ----------------------------------------------------------------------------/
+@media screen and (max-width: @breakpoint-small-max) {
+    .@{medium-prefix}down-hide,
+    .@{small-prefix}hide,
+    .@{medium-prefix}show,
+    .@{large-prefix}show {
+        display: none;
+    }
+}
+
+
+// Medium Screen
+// ----------------------------------------------------------------------------/
+@media screen and (min-width: @breakpoint-medium-min) and (max-width: @breakpoint-medium-max) {
+    .@{medium-prefix}up-hide,
+    .@{medium-prefix}down-hide,
+    .@{medium-prefix}hide,
+    .@{small-prefix}show,
+    .@{large-prefix}show {
+        display: none;
+    }
+}
+
+
+// Large Screen
+// ----------------------------------------------------------------------------/
+@media screen and (min-width: @breakpoint-large-min) {
+    .@{medium-prefix}up-hide,
+    .@{large-prefix}hide,
+    .@{small-prefix}show,
+    .@{medium-prefix}show {
+        display: none;
+    }
+}

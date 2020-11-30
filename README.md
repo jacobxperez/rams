@@ -14,7 +14,7 @@ Composable Design System — Assemble with [LESS](http://lesscss.org/)
 ## About
 
 [Essentials](https://jacobxperez.github.io/essentials/) is a composable front-end framework
-for small scale websites.
+for web development.
 
 ## Getting Started
 

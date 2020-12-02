@@ -14,18 +14,18 @@ ul {
 }
 
 .ol {
-    list-style-type: decimal;
+    list-style-type: @ol-list-style-type;
 
     > li > .ol {
-        list-style-type: hebrew;
+        list-style-type: @ol-list-style-type-sub;
     }
 }
 
 .ul {
-    list-style-type: disc;
+    list-style-type: @ul-list-style-type;
 
     > li > .ul {
-        list-style-type: circle;
+        list-style-type: @ul-list-style-type-sub;
     }
 }
 

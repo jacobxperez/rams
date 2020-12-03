@@ -1,14 +1,5 @@
 // Breakpoints
 // ----------------------------------------------------------------------------/
-// small screen
-@small-prefix: sm-;
-
-// medium screen
-@medium-prefix: md-;
-
-// large screen
-@large-prefix: lg-;
-
 
 // small screen
 @viewport-small-max-width: (640px + (@wrapper-gap * 2));
@@ -30,14 +21,3 @@
 
 // large screen
 @breakpoint-large-min: unit((@viewport-large-min-width / @root-font-size), em);
-
-
-// scale portrait
-@portrait-font-size: 1vw;
-@portrait-min-width: 1920px;
-@portrait-min-height: 1080px;
-
-// scale landscape
-@landscape-font-size: 1vh;
-@landscape-min-width: @portrait-min-height;
-@landscape-min-height: @portrait-min-width;

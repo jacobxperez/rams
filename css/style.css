@@ -74,28 +74,6 @@ hr {
     text-shadow: none;
 }
 
-.leading,
-blockquote,
-dl,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-hr,
-ol,
-p,
-pre,
-table,
-ul {
-    margin-bottom: 1.5rem;
-}
-
-.leading-top {
-    margin-top: 1.5rem;
-}
-
 h1,
 h2,
 h3,
@@ -355,6 +333,28 @@ input[type=button] {
 :not([type=submit]):invalid {
     border-color: #c00;
     box-shadow: none;
+}
+
+.leading,
+blockquote,
+dl,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+ol,
+p,
+pre,
+table,
+ul {
+    margin-bottom: 1.5rem;
+}
+
+.leading-top {
+    margin-top: 1.5rem;
 }
 
 .container {

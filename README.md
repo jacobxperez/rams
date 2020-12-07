@@ -40,6 +40,7 @@ Adjust the [variables](https://github.com/jacobxperez/essentials/blob/master/css
     * [variables.less](https://github.com/jacobxperez/essentials/blob/master/css/variables.less) (adjust the settings)
 
 ### Examples
+This are examples that incorporates the framework with custom components and layouts.
 
 * **[Company](https://github.com/jacobxperez/company)**:
 A single page website template for your company marketing.

@@ -41,10 +41,10 @@ Adjust the [variables](https://github.com/jacobxperez/essentials/blob/master/css
 
 ### Examples
 
-**[Company](https://github.com/jacobxperez/company)**:
+* **[Company](https://github.com/jacobxperez/company)**:
 A single page website template for your company marketing.
 
-**[Vaporwave Aesthetic](https://github.com/jacobxperez/vaporwave-aesthetic)**:
+* **[Vaporwave Aesthetic](https://github.com/jacobxperez/vaporwave-aesthetic)**:
 A template with vaporwave aesthetics.
 
 ### [Contributing](https://github.com/jacobxperez/essentials/blob/master/CONTRIBUTING.md)

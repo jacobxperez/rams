@@ -8,6 +8,7 @@ Composable Design System — Assemble with [LESS](http://lesscss.org/)
 * [Getting Started](#getting-started)
     * [Default Build](#default-build)
     * [Custom Build](#custom-build)
+    * [Examples](#examples)
     * [Contributing](#contributing)
 * [LICENSE](#license)
 
@@ -37,6 +38,14 @@ Adjust the [variables](https://github.com/jacobxperez/essentials/blob/master/css
     * [custom.less](https://github.com/jacobxperez/essentials/blob/master/css/custom.less) (write custom modules)
     * [style.less](https://github.com/jacobxperez/essentials/blob/master/css/style.less) (compile everything together)
     * [variables.less](https://github.com/jacobxperez/essentials/blob/master/css/variables.less) (adjust the settings)
+
+### Examples
+
+**[Company](https://github.com/jacobxperez/company)**:
+A single page website template for your company marketing.
+
+**[Vaporwave Aesthetic](https://github.com/jacobxperez/vaporwave-aesthetic)**:
+A template with vaporwave aesthetics.
 
 ### [Contributing](https://github.com/jacobxperez/essentials/blob/master/CONTRIBUTING.md)
 

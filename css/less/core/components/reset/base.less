@@ -15,20 +15,6 @@
     outline: 0;
 }
 
-html {
-    .font-size(@base-font-size; @unit: %);
-}
-
-body {
-    overflow: auto;
-    font-family: @base-font-family;
-    font-weight: 400;
-    .line-height(@base-line-height);
-    text-align: left;
-    color: @font-color;
-    background-color: @background-color;
-}
-
 img,
 svg,
 audio,
@@ -48,12 +34,18 @@ summary {
     display: list-item;
 }
 
-hr {
-    .box-sizing(content-box);
-    display: block;
-    height: 1px;
-    .border-top(@hr-border-width; @hr-border-style; @hr-border-color);
-    &:extend(.leading);
+html {
+    .font-size(@base-font-size; @unit: %);
+}
+
+body {
+    overflow: auto;
+    font-family: @base-font-family;
+    font-weight: 400;
+    .line-height(@base-line-height);
+    text-align: left;
+    color: @font-color;
+    background-color: @background-color;
 }
 
 [hidden] {

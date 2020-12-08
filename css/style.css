@@ -18,20 +18,6 @@
     outline: 0;
 }
 
-html {
-    font-size: 100%;
-}
-
-body {
-    overflow: auto;
-    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Nimbus Sans L", "Liberation Sans", FreeSans, sans-serif;
-    font-weight: 400;
-    line-height: 1.5;
-    text-align: left;
-    color: #555;
-    background-color: #fff;
-}
-
 audio,
 canvas,
 embed,
@@ -51,11 +37,18 @@ summary {
     display: list-item;
 }
 
-hr {
-    box-sizing: content-box;
-    display: block;
-    height: 1px;
-    border-top: .0625rem solid rgba(0, 0, 0, 0.3);
+html {
+    font-size: 100%;
+}
+
+body {
+    overflow: auto;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Nimbus Sans L", "Liberation Sans", FreeSans, sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: left;
+    color: #555;
+    background-color: #fff;
 }
 
 [hidden] {
@@ -178,6 +171,13 @@ sup {
 
 sub {
     bottom: -0.25em;
+}
+
+hr {
+    box-sizing: content-box;
+    display: block;
+    height: 1px;
+    border-top: .0625rem solid rgba(0, 0, 0, 0.3);
 }
 
 dl,

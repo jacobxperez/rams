@@ -9,7 +9,6 @@ h6 {
     .font-family(@headings-font-family);
     font-weight: @headings-font-weight;
     &:extend(.leading);
-    // .margin-bottom(@base-leading);
 }
 
 .h1,
@@ -111,4 +110,12 @@ sup {
 
 sub {
     bottom: -.25em;
+}
+
+hr {
+    .box-sizing(content-box);
+    display: block;
+    height: 1px;
+    .border-top(@hr-border-width; @hr-border-style; @hr-border-color);
+    &:extend(.leading);
 }

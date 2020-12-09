@@ -1,6 +1,6 @@
 // Positioning
 // -----------------------------------------------------------------------------
-.top(@position: 1px; @base: @root-font-size; @unit: rem;) {
+.top(@position; @base: @root-font-size; @unit: rem;) {
 
     & when not (@position = false) {
         & when (@unit = %) {
@@ -21,7 +21,7 @@
     }
 }
 
-.bottom(@position: 1px; @base: @root-font-size; @unit: rem;) {
+.bottom(@position; @base: @root-font-size; @unit: rem;) {
     & when not (@position = false) {
         & when (@unit = %) {
             bottom: percentage(@position / @base);
@@ -41,7 +41,7 @@
     }
 }
 
-.left(@position: 1px; @base: @root-font-size; @unit: rem;) {
+.left(@position; @base: @root-font-size; @unit: rem;) {
     & when not (@position = false) {
         & when (@unit = %) {
             left: percentage(@position / @base);
@@ -61,7 +61,7 @@
     }
 }
 
-.right(@position: 1px; @base: @root-font-size; @unit: rem;) {
+.right(@position; @base: @root-font-size; @unit: rem;) {
     & when not (@position = false) {
         & when (@unit = %) {
             right: percentage(@position / @base);

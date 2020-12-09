@@ -55,18 +55,6 @@ body {
     display: none;
 }
 
-::-moz-selection {
-    background-color: #cde1ff;
-    color: #000;
-    text-shadow: none;
-}
-
-::selection {
-    background-color: #cde1ff;
-    color: #000;
-    text-shadow: none;
-}
-
 h1,
 h2,
 h3,
@@ -355,6 +343,18 @@ ul {
 
 .leading-top {
     margin-top: 1.5rem;
+}
+
+::-moz-selection {
+    background-color: #cde1ff;
+    color: #000;
+    text-shadow: none;
+}
+
+::selection {
+    background-color: #cde1ff;
+    color: #000;
+    text-shadow: none;
 }
 
 .container {

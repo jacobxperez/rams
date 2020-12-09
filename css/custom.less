@@ -34,20 +34,20 @@
 
 // Small Breakpoint
 // ----------------------------------------------------------------------------/
-// @media screen and (max-width: @breakpoint-small-max) {
+// @media screen and (max-width: unit((@breakpoint-small-max-width / @root-font-size), em)) {
 //     // Add code
 // }
 
 
 // Medium Breakpoint
 // ----------------------------------------------------------------------------/
-// @media screen and (min-width: @breakpoint-medium-min) and (max-width: @breakpoint-medium-max)  {
+// @media screen and (min-width: unit((@breakpoint-medium-min-width / @root-font-size), em)) and (max-width: unit(((@breakpoint-medium-max-width ) / @root-font-size), em))  {
 //     // Add code
 // }
 
 
 // Large Breakpoint
 // ----------------------------------------------------------------------------/
-// @media screen and (min-width: @breakpoint-large-min) {
+// @media screen and (min-width: unit((@breakpoint-large-min-width / @root-font-size), em)) {
 //     // Add code
 // }

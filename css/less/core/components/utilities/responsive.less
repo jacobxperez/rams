@@ -4,7 +4,7 @@
 
 // Small Screen
 // ----------------------------------------------------------------------------/
-@media screen and (max-width: @breakpoint-small-max) {
+@media screen and (max-width: unit((@breakpoint-small-max-width / @root-font-size), em)) {
     .@{medium-prefix}down-hide,
     .@{small-prefix}hide,
     .@{medium-prefix}show,
@@ -16,7 +16,7 @@
 
 // Medium Screen
 // ----------------------------------------------------------------------------/
-@media screen and (min-width: @breakpoint-medium-min) and (max-width: @breakpoint-medium-max) {
+@media screen and (min-width: unit((@breakpoint-medium-min-width / @root-font-size), em)) and (max-width: unit(((@breakpoint-medium-max-width ) / @root-font-size), em)) {
     .@{medium-prefix}up-hide,
     .@{medium-prefix}down-hide,
     .@{medium-prefix}hide,
@@ -29,7 +29,7 @@
 
 // Large Screen
 // ----------------------------------------------------------------------------/
-@media screen and (min-width: @breakpoint-large-min) {
+@media screen and (min-width: unit((@breakpoint-large-min-width / @root-font-size), em)) {
     .@{medium-prefix}up-hide,
     .@{large-prefix}hide,
     .@{small-prefix}show,

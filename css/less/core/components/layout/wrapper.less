@@ -2,19 +2,19 @@
 // ----------------------------------------------------------------------------/
 .@{wrapper-class} {
     display: grid;
-    .column-gap(@wrapper-gap);
+    .column-gap(@wrapper-gap; @base: @base-font-size);
     width: 100%;
-    .min-width(@wrapper-min-width);
-    .max-width(@wrapper-max-width);
+    .min-width(@wrapper-min-width; @base: @base-font-size);
+    .max-width(@wrapper-max-width; @base: @base-font-size);
     margin: 0 auto;
-    .padding-left(@wrapper-gap);
-    .padding-right(@wrapper-gap);
+    .padding-left(@wrapper-gap; @base: @base-font-size);
+    .padding-right(@wrapper-gap; @base: @base-font-size);
 }
 
 body > .@{wrapper-class}:first-child {
-    .margin-top(@base-line-height * 2);
+    .margin-top(@base-line-height * 2; @base: @base-font-size);
 }
 
 body > .@{wrapper-class}:last-child {
-    .margin-bottom(@base-line-height * 4);
+    .margin-bottom(@base-line-height * 4; @base: @base-font-size);
 }

@@ -93,6 +93,8 @@
 // Page Wrapper
 // ----------------------------------------------------------------------------/
 // @wrapper-class: container;
+// @wrapper-margin-top: @base-line-height * 2;
+// @wrapper-margin-bottom: @base-line-height * 4;
 // @wrapper-gap: 20px;
 
 // min width
@@ -128,6 +130,19 @@
 
 // large screen
 // @large-prefix: lg-;
+
+
+// Breakpoints
+// ----------------------------------------------------------------------------/
+// small screen
+// @breakpoint-small-max-width: (640px + (@wrapper-gap * 2));
+
+// medium screen: starts after small-max and end before large-min
+// @breakpoint-medium-min-width: (@breakpoint-small-max-width + 1 / @base-font-size);
+// @breakpoint-medium-max-width: (@breakpoint-large-min-width - 1 / @base-font-size);
+
+// large screens
+// @breakpoint-large-min-width: (@wrapper-max-width + (@wrapper-gap * 2));
 
 
 // Base Box Model
@@ -259,16 +274,3 @@
 // ----------------------------------------------------------------------------/
 // @selection-background: #cde1ff;
 // @selection-color: #000;
-
-
-// Breakpoints
-// ----------------------------------------------------------------------------/
-// small screen
-// @breakpoint-small-max-width: (640px + (@wrapper-gap * 2));
-
-// medium screen: starts after small-max and end before large-min
-// @breakpoint-medium-min-width: (@breakpoint-small-max-width + 1 / @base-font-size);
-// @breakpoint-medium-max-width: (@breakpoint-large-min-width - 1 / @base-font-size);
-
-// large screens
-// @breakpoint-large-min-width: (@wrapper-max-width + (@wrapper-gap * 2));

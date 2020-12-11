@@ -8,21 +8,21 @@
 
 // branding
 @primary: #06f; // background color
-@primary-fg: #fff; // foreground color
+@primary-fg: contrast(@primary); // foreground color
 
 @secondary: #222;
-@secondary-fg: #fff;
+@secondary-fg: contrast(@secondary);
 
 // actions
 @success: #393;
-@success-fg: #fff;
+@success-fg: contrast(@success);
 
 @warning: #fa0;
-@warning-fg: #fff;
+@warning-fg: contrast(@warning);
 
 @danger: #c00;
-@danger-fg: #fff;
+@danger-fg: contrast(@danger);
 
 // disabled
 @disabled: #e6e6e6;
-@disabled-text: #bbb;
+@disabled-text: lighten(contrast(@disabled), 60%);

@@ -2,11 +2,11 @@
 // ----------------------------------------------------------------------------/
 
 // small screen
-@breakpoint-small-max-width: (640px + (@wrapper-gap * 2));
+@screen-small-max-width: (640px + (@wrapper-gap * 2));
 
 // medium screen: starts after small-max and end before large-min
-@breakpoint-medium-min-width: (@breakpoint-small-max-width + 1 / @base-font-size);
-@breakpoint-medium-max-width: (@breakpoint-large-min-width - 1 / @base-font-size);
+@screen-medium-min-width: (@screen-small-max-width + 1 / @base-font-size);
+@screen-medium-max-width: (@screen-large-min-width - 1 / @base-font-size);
 
 // large screens
-@breakpoint-large-min-width: (@wrapper-max-width);
+@screen-large-min-width: (@wrapper-max-width);

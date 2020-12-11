@@ -1,6 +1,6 @@
 // Heights
 // -----------------------------------------------------------------------------
-.height(@height; @base: @root-font-size; @unit: rem;) {
+.height(@height; @base: @base-font-size; @unit: rem;) {
 
     & when (@unit = em), (@unit = rem) {
         height: unit((@height / @base), @unit);
@@ -17,7 +17,7 @@
 
 }
 
-.max-height(@height; @base: @root-font-size; @unit: rem;) {
+.max-height(@height; @base: @base-font-size; @unit: rem;) {
 
     & when (@unit = em), (@unit = rem) {
         max-height: unit((@height / @base), @unit);
@@ -33,7 +33,7 @@
 
 }
 
-.min-height(@height; @base: @root-font-size; @unit: rem;) {
+.min-height(@height; @base: @base-font-size; @unit: rem;) {
 
     & when (@unit = em), (@unit = rem) {
         min-height: unit((@height / @base), @unit);

@@ -14,24 +14,24 @@
 
 // branding
 // @primary: #06f; // background color
-// @primary-fg: #fff; // foreground color
+// @primary-fg: contrast(@primary); // foreground color
 
 // @secondary: #222;
-// @secondary-fg: #fff;
+// @secondary-fg: contrast(@secondary);
 
 // actions
 // @success: #393;
-// @success-fg: #fff;
+// @success-fg: contrast(@success);
 
 // @warning: #fa0;
-// @warning-fg: #fff;
+// @warning-fg: contrast(@warning);
 
 // @danger: #c00;
-// @danger-fg: #fff;
+// @danger-fg: contrast(@danger);
 
 // disabled
 // @disabled: #e6e6e6;
-// @disabled-text: #bbb;
+// @disabled-text: lighten(contrast(@disabled), 60%);
 
 
 // Typography
@@ -42,10 +42,13 @@
 // font size
 // @base-font-size: 16px;
 
-// line height
-// @base-line-height: 24px;
+// type scale
+// @type-scale: 1.25;
 
-// leading "margin bottom"
+// line height
+// @base-line-height: 25px;
+
+// leading: margin bottom
 // @base-leading: @base-line-height;
 
 // link
@@ -56,35 +59,40 @@
 // @headings-font-weight: 400;
 
 // heading 1
-// @h1-font-size: 48px;
-// @h1-line-height: 48px;
+// @h1-font-size: (ceil(@h2-font-size * @type-scale));
+// @h1-line-height: @base-line-height * 2;
 
 // heading 2
-// @h2-font-size: 32px;
-// @h2-line-height: 48px;
+// @h2-font-size: (ceil(@h3-font-size * @type-scale));
+// @h2-line-height: @base-line-height * 2;
 
 // heading 3
-// @h3-font-size: 24px;
+// @h3-font-size: (ceil(@h4-font-size * @type-scale));
 // @h3-line-height: @base-line-height;
 
 // heading 4
-// @h4-font-size: 20px;
+// @h4-font-size: (ceil(@h5-font-size * @type-scale));
 // @h4-line-height: @base-line-height;
 
 // heading 5
-// @h5-font-size: 18px;
+// @h5-font-size: (ceil(@h6-font-size * @type-scale));
 // @h5-line-height: @base-line-height;
 
 // heading 6
-// @h6-font-size: 16px;
+// @h6-font-size: @base-font-size;
 // @h6-line-height: @base-line-height;
 
 // small
-// @small-font-size: 14px;
+// @small-font-size: (ceil(@base-font-size / @type-scale));
 
 // mark
 // @mark-background: #fc0;
 // @mark-color: #000;
+
+// hr
+// @hr-border-width: @base-border-width; // can be set to false
+// @hr-border-style: @base-border-style;
+// @hr-border-color: @base-border-color;
 
 // indentation
 // @indent: @base-line-height;

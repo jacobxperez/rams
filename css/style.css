@@ -45,7 +45,7 @@ body {
     overflow: auto;
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Nimbus Sans L", "Liberation Sans", FreeSans, sans-serif;
     font-weight: 400;
-    line-height: 1.5;
+    line-height: 1.5625;
     text-align: left;
     color: #555;
     background-color: #fff;
@@ -66,38 +66,38 @@ h6 {
 
 .h1,
 h1 {
-    font-size: 3rem;
+    font-size: 3.125rem;
     line-height: 1;
 }
 
 .h2,
 h2 {
-    font-size: 2rem;
-    line-height: 1.5;
+    font-size: 2.5rem;
+    line-height: 1.25;
 }
 
 .h3,
 h3 {
-    font-size: 1.5rem;
-    line-height: 1;
+    font-size: 2rem;
+    line-height: .78125;
 }
 
 .h4,
 h4 {
-    font-size: 1.25rem;
-    line-height: 1.2;
+    font-size: 1.5625rem;
+    line-height: 1;
 }
 
 .h5,
 h5 {
-    font-size: 1.125rem;
-    line-height: 1.33333333;
+    font-size: 1.25rem;
+    line-height: 1.25;
 }
 
 .h6,
 h6 {
     font-size: 1rem;
-    line-height: 1.5;
+    line-height: 1.5625;
 }
 
 a {
@@ -144,7 +144,7 @@ mark {
 small,
 sub,
 sup {
-    font-size: .875rem;
+    font-size: .8125rem;
 }
 
 sub,
@@ -204,7 +204,7 @@ ul ul {
 
 .ol,
 .ul {
-    padding-left: 1.5rem;
+    padding-left: 1.5625rem;
     list-style-position: outside;
 }
 
@@ -230,9 +230,9 @@ q {
 }
 
 blockquote {
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, "Nimbus Roman No9 L", "Liberation Serif", FreeSerif, serif;
-    line-height: 2;
+    line-height: 1.5625;
     font-style: italic;
 }
 
@@ -248,7 +248,7 @@ blockquote small:before {
 
 blockquote small {
     display: block;
-    line-height: 1.71428571;
+    line-height: 1.92307692;
 }
 
 table {
@@ -338,11 +338,11 @@ p,
 pre,
 table,
 ul {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.5625rem;
 }
 
 .leading-top {
-    margin-top: 1.5rem;
+    margin-top: 1.5625rem;
 }
 
 ::-moz-selection {
@@ -369,11 +369,11 @@ ul {
 }
 
 body > .container:first-child {
-    margin-top: 3rem;
+    margin-top: 3.125rem;
 }
 
 body > .container:last-child {
-    margin-bottom: 6rem;
+    margin-bottom: 6.25rem;
 }
 
 .grid {
@@ -562,14 +562,14 @@ body > .container:last-child {
 .disabled {
     border-color: #ddd;
     background-color: #e6e6e6;
-    color: #bbb;
+    color: #999999;
     cursor: not-allowed;
 }
 
 .disabled:active,
 .disabled:hover {
     background-color: #e6e6e6;
-    color: #bbb;
+    color: #999999;
     text-decoration: none;
 }
 
@@ -669,7 +669,7 @@ body > .container:last-child {
 .button.primary-outline:hover,
 .primary-bg {
     background-color: #06f;
-    color: #fff;
+    color: #ffffff;
 }
 
 .button.secondary-outline.active,
@@ -677,7 +677,7 @@ body > .container:last-child {
 .button.secondary-outline:hover,
 .secondary-bg {
     background-color: #222;
-    color: #fff;
+    color: #ffffff;
 }
 
 .button.success-outline.active,
@@ -685,7 +685,7 @@ body > .container:last-child {
 .button.success-outline:hover,
 .success-bg {
     background-color: #393;
-    color: #fff;
+    color: #ffffff;
 }
 
 .button.warning-outline.active,
@@ -693,7 +693,7 @@ body > .container:last-child {
 .button.warning-outline:hover,
 .warning-bg {
     background-color: #fa0;
-    color: #fff;
+    color: #000000;
 }
 
 .button.danger-outline.active,
@@ -701,7 +701,7 @@ body > .container:last-child {
 .button.danger-outline:hover,
 .danger-bg {
     background-color: #c00;
-    color: #fff;
+    color: #ffffff;
 }
 
 .button.primary-bg.active,
@@ -1720,7 +1720,7 @@ body > .container:last-child {
 }
 
 .fixed-top + .container {
-    margin-top: 6rem;
+    margin-top: 6.25rem;
 }
 
 .top {
@@ -1740,16 +1740,16 @@ body > .container:last-child {
 }
 
 .indent {
-    padding-left: 1.5rem;
+    padding-left: 1.5625rem;
 }
 
 .text-indent {
-    text-indent: 1.5rem;
+    text-indent: 1.5625rem;
 }
 
 .text-outdent {
-    padding-left: 1.5rem;
-    text-indent: -1.5rem;
+    padding-left: 1.5625rem;
+    text-indent: -1.5625rem;
 }
 
 .text-left {

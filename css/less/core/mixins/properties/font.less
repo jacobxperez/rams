@@ -1,6 +1,6 @@
 // Font Family
 // -----------------------------------------------------------------------------
-.font-family(@font-family;) {
+.font-family(@font-family) {
     & when not (@font-family = false) {
         font-family: @font-family;
     }
@@ -9,7 +9,7 @@
 
 // Font Face
 // -----------------------------------------------------------------------------
-.font-face(@name; @path;) {
+.font-face(@name; @path) {
     @font-face {
         font-family: '@{name}';
         src: url('@{path}@{name}.eot');
@@ -24,7 +24,7 @@
 
 // Font Size
 // -----------------------------------------------------------------------------
-.font-size(@size; @base: @base-font-size; @unit: rem;) {
+.font-size(@size; @base: @base-font-size; @unit: rem) {
 
     & when not (@size = false) {
 
@@ -51,7 +51,7 @@
 
 // Line Height
 // -----------------------------------------------------------------------------
-.line-height(@height: @base-line-height; @base: @base-font-size; @unit: none;) {
+.line-height(@height: @base-line-height; @base: @base-font-size; @unit: none) {
 
     & when not (@height = false) {
 
@@ -74,7 +74,7 @@
 
 // Text Indent
 // -----------------------------------------------------------------------------
-.text-indent (@text-indent: @indent; @base: @base-font-size; @unit: rem;) {
+.text-indent (@text-indent: @indent; @base: @base-font-size; @unit: rem) {
 
     & when (@unit = em), (@unit = rem) {
         text-indent: unit((@text-indent / @base), @unit);
@@ -85,7 +85,7 @@
 
 // Font Color
 // -----------------------------------------------------------------------------
-.color (@color: @font-color;) {
+.color (@color: @font-color) {
 
     & when not (@color = false) {
         color: @color;

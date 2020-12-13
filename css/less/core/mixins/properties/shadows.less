@@ -1,6 +1,6 @@
 // Box Shadow
 // -----------------------------------------------------------------------------
-.box-shadow(@hr: 0; @ve: 0; @bl: 0; @rgba: rgba(0, 0, 0, 0.3);) {
+.box-shadow(@hr: 0; @ve: 0; @bl: 0; @rgba: rgba(0, 0, 0, 0.3)) {
 
     & when not (@hr = false) {
         @a: unit((@hr / @base-font-size), em);
@@ -28,7 +28,7 @@
 
 // Text Shadow
 // -----------------------------------------------------------------------------
-.text-shadow(@hr: 0; @ve: 1px; @bl: 2px; @rgba: rgba(0, 0, 0, 0.3);) {
+.text-shadow(@hr: 0; @ve: 1px; @bl: 2px; @rgba: rgba(0, 0, 0, 0.3)) {
 
     & when not (@hr = false) {
         @a: unit((@hr / @base-font-size), em);

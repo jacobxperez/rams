@@ -45,7 +45,7 @@ body {
     overflow: auto;
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Nimbus Sans L", "Liberation Sans", FreeSans, sans-serif;
     font-weight: 400;
-    line-height: 1.5625;
+    line-height: 1.5;
     text-align: left;
     color: #555;
     background-color: #fff;
@@ -67,37 +67,31 @@ h6 {
 .h1,
 h1 {
     font-size: 3.125rem;
-    line-height: 1;
 }
 
 .h2,
 h2 {
     font-size: 2.5rem;
-    line-height: 1.25;
 }
 
 .h3,
 h3 {
     font-size: 2rem;
-    line-height: .78125;
 }
 
 .h4,
 h4 {
     font-size: 1.5625rem;
-    line-height: 1;
 }
 
 .h5,
 h5 {
     font-size: 1.25rem;
-    line-height: 1.25;
 }
 
 .h6,
 h6 {
     font-size: 1rem;
-    line-height: 1.5625;
 }
 
 a {
@@ -204,7 +198,7 @@ ul ul {
 
 .ol,
 .ul {
-    padding-left: 1.5625rem;
+    padding-left: 1.5rem;
     list-style-position: outside;
 }
 
@@ -232,7 +226,7 @@ q {
 blockquote {
     font-size: 2rem;
     font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, "Nimbus Roman No9 L", "Liberation Serif", FreeSerif, serif;
-    line-height: 1.5625;
+    line-height: 1.5;
     font-style: italic;
 }
 
@@ -248,7 +242,7 @@ blockquote small:before {
 
 blockquote small {
     display: block;
-    line-height: 1.92307692;
+    line-height: 1.84615385;
 }
 
 table {
@@ -338,11 +332,11 @@ p,
 pre,
 table,
 ul {
-    margin-bottom: 1.5625rem;
+    margin-bottom: 1.5rem;
 }
 
 .leading-top {
-    margin-top: 1.5625rem;
+    margin-top: 1.5rem;
 }
 
 ::-moz-selection {
@@ -369,11 +363,11 @@ ul {
 }
 
 body > .container:first-child {
-    margin-top: 3.125rem;
+    margin-top: 3rem;
 }
 
 body > .container:last-child {
-    margin-bottom: 6.25rem;
+    margin-bottom: 6rem;
 }
 
 .grid {
@@ -1720,7 +1714,7 @@ body > .container:last-child {
 }
 
 .fixed-top + .container {
-    margin-top: 6.25rem;
+    margin-top: 6rem;
 }
 
 .top {
@@ -1740,16 +1734,16 @@ body > .container:last-child {
 }
 
 .indent {
-    padding-left: 1.5625rem;
+    padding-left: 1.5rem;
 }
 
 .text-indent {
-    text-indent: 1.5625rem;
+    text-indent: 1.5rem;
 }
 
 .text-outdent {
-    padding-left: 1.5625rem;
-    text-indent: -1.5625rem;
+    padding-left: 1.5rem;
+    text-indent: -1.5rem;
 }
 
 .text-left {

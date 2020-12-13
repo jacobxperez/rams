@@ -5,7 +5,7 @@
         grid-column: span @index;
     }
 
-    .grid(@columns, @prefix, (@index + 1));
+    .grid(@columns; @prefix; (@index + 1));
 }
 
 .grid-responsive(@columns; @prefix; @index: 1;) when (@index =< @columns) {
@@ -13,7 +13,7 @@
         grid-column: span @index;
     }
 
-    .grid-responsive(@columns, @prefix, (@index + 1));
+    .grid-responsive(@columns; @prefix; (@index + 1));
 }
 
 .grid-child(@columns; @prefix;) when (1 =< @columns) {
@@ -21,5 +21,5 @@
         grid-column: span @index;
     }
 
-    .grid-child((@columns - 1), @prefix);
+    .grid-child((@columns - 1); @prefix);
 }

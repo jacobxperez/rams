@@ -29,14 +29,14 @@ The easiest way to include [Essentials](https://jacobxperez.github.io/essentials
 
     <link rel="stylesheet" href="css/style.css">
 
-* [/css](https://github.com/jacobxperez/essentials/tree/master/css/less/less)
+* [/css](https://github.com/jacobxperez/essentials/tree/master/css/less)
     * [style.css](https://github.com/jacobxperez/essentials/blob/master/css/style.css)
 
 ### Custom Build
 
 Adjust the [variables](https://github.com/jacobxperez/essentials/blob/master/css/less/variables.less) and if needed, add [custom](https://github.com/jacobxperez/essentials/blob/master/css/less/custom.less) code then compile everything together in [style.less](https://github.com/jacobxperez/essentials/blob/master/css/less/style.less) to produce the final [CSS](https://github.com/jacobxperez/essentials/blob/master/css/style.css). Optional, comment out unwanted components from [style.less](https://github.com/jacobxperez/essentials/blob/master/css/less/style.less) then compile your project. Check out [Editors and Plugins](http://lesscss.org/tools/#editors-and-plugins) for compiling [LESS](http://lesscss.org/).
 
-* [/css/less](https://github.com/jacobxperez/essentials/tree/master/css/less/less)
+* [/css/less](https://github.com/jacobxperez/essentials/tree/master/css/less)
     * [custom.less](https://github.com/jacobxperez/essentials/blob/master/css/less/custom.less) (write custom modules)
     * [style.less](https://github.com/jacobxperez/essentials/blob/master/css/less/style.less) (compile everything together)
     * [variables.less](https://github.com/jacobxperez/essentials/blob/master/css/less/variables.less) (adjust the settings)

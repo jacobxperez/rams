@@ -1,6 +1,6 @@
 # Contributing
 
-Welcome developers, before you contribute to this project is important to read the following sections to better understand the nature and the direction of the project. Use the [issue tracker](https://github.com/jacobxperez/essentials/issues) for bug reports, feature requests, and submitting pull requests.
+Welcome developers, before you contribute to this project is important to read the following sections to better understand the nature and the direction of the project. Use the [issue tracker](https://github.com/jacobxperez/essentials/issues) for [bug reports](#bug-reports), [feature requests](#feature-requests), and submitting [pull requests](#pull-requests).
 
 ## Table of Contents
 
@@ -71,7 +71,7 @@ provide as much detail and context as possible.
 ## Pull Requests
 
 Please ask first before embarking on any significant pull request (e.g. implementing
-features, refactoring code, porting to a different language), otherwise you 
+features, refactoring code, porting to a different language), otherwise you
 risk spending a lot of time working on something that the project's developers
 might not want to merge into the project. When contributing code to this
 project always asks yourself these questions.

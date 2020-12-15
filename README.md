@@ -1,6 +1,6 @@
 # [Essentials](https://jacobxperez.github.io/essentials/)
 
-Composable Front-end Framework — Built with [LESS](http://lesscss.org/)
+Modular Front-end Framework for Designers — Built with [LESS](http://lesscss.org/)
 
 ## Table of Contents
 
@@ -14,8 +14,8 @@ Composable Front-end Framework — Built with [LESS](http://lesscss.org/)
 
 ## About
 
-[Essentials](https://jacobxperez.github.io/essentials/) is a composable front-end framework
-for web development.
+[Essentials](https://jacobxperez.github.io/essentials/) is a modular front-end framework
+for web designers.
 
 ## Getting Started
 
@@ -53,9 +53,9 @@ A template with vaporwave aesthetics.
 ### [Contributing](https://github.com/jacobxperez/essentials/blob/master/CONTRIBUTING.md)
 
 If your interested in contributing to this project please start by reading our
-[contributing](https://github.com/jacobxperez/essentials/blob/master/CONTRIBUTING.md)
-guidelines to better understand the nature and the direction of the project, any
-contribution will be considered.
+[contributing guidelines](https://github.com/jacobxperez/essentials/blob/master/CONTRIBUTING.md)
+to better understand the nature and the direction of the project, any contribution
+will be considered.
 
 ## LICENSE
 

@@ -1,6 +1,6 @@
 # [Essentials](https://jacobxperez.github.io/essentials/)
 
-Modular Front-end Framework for Designers — Built with [LESS](http://lesscss.org/)
+Modular Front-end Framework for Web Designers — Built with [LESS](http://lesscss.org/)
 
 ## Table of Contents
 

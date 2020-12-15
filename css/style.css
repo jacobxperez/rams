@@ -90,6 +90,7 @@ h6 {
     font-size: 1rem;
 }
 
+.link,
 a {
     text-decoration: none;
     background-color: transparent;
@@ -97,12 +98,15 @@ a {
     cursor: pointer;
 }
 
+.link:active,
+.link:hover,
 a:active,
 a:hover {
     outline: 0;
     text-decoration: underline;
 }
 
+.link:focus,
 a:focus {
     outline: thin dotted;
     outline-offset: -0.125rem;

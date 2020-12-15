@@ -128,7 +128,7 @@ dfn[title] {
 
 mark {
     background-color: #fc0;
-    color: #000;
+    color: #000000;
 }
 
 small,
@@ -1798,10 +1798,6 @@ body > .container:last-child {
 
 .content-evenly {
     justify-content: space-evenly;
-}
-
-.opacity {
-    opacity: .95;
 }
 @media screen and (max-width: 42.5em) {
     .lg-show,

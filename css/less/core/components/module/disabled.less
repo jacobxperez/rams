@@ -1,0 +1,19 @@
+// Disabled
+// ----------------------------------------------------------------------------/
+.disabled {
+    border-color: @button-disabled-border-color;
+    background-color: @button-disabled-background-color;
+    color: @button-disabled-color;
+    cursor: not-allowed;
+
+    &:hover,
+    &:active {
+        background-color: @button-disabled-background-color;
+        color: @button-disabled-color;
+        text-decoration: none;
+    }
+
+    &:focus {
+        outline: 0;
+    }
+}

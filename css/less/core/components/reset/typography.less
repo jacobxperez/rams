@@ -51,24 +51,6 @@ p {
     &:extend(.leading);
 }
 
-a {
-    text-decoration: none;
-    .background-color(transparent);
-    color: @link-color;
-    cursor: pointer;
-
-    &:hover,
-    &:active {
-        outline: 0;
-        text-decoration: underline;
-    }
-
-    &:focus {
-        outline: thin dotted;
-        outline-offset: unit((-2px / @root-font-size), rem);
-    }
-}
-
 b,
 strong {
     font-weight: 700;

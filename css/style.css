@@ -1733,47 +1733,41 @@ body > .container:last-child {
     right: 0;
 }
 
-.indent {
-    padding-left: 1.5rem;
-}
-
-.text-indent {
-    text-indent: 1.5rem;
-}
-
-.text-outdent {
-    padding-left: 1.5rem;
-    text-indent: -1.5rem;
-}
-
-.text-left {
-    text-align: left;
-}
-
-.text-right {
-    text-align: right;
-}
-
-.text-center {
-    text-align: center;
-}
-
-.text-justify {
-    text-align: justify;
-    hyphens: auto;
-}
-
 .flex {
     display: flex;
     flex-wrap: wrap;
+}
+
+.flex-row-reverse {
+    flex-direction: row-reverse;
 }
 
 .flex-column {
     flex-direction: column;
 }
 
+.flex-column-reverse {
+    flex-direction: column-reverse;
+}
+
 .flex-grow {
     flex-grow: 1;
+}
+
+.self-start {
+    justify-self: start;
+}
+
+.self-end {
+    justify-self: end;
+}
+
+.self-center {
+    justify-self: center;
+}
+
+.self-stretch {
+    justify-self: stretch;
 }
 
 .content-start {

@@ -72,39 +72,6 @@
 }
 
 
-// Alignment
-// ----------------------------------------------------------------------------/
-.indent {
-    .padding-left(@indent);
-}
-
-.text-indent {
-    .text-indent(@indent);
-}
-
-.text-outdent {
-    .padding-left(@indent);
-    .text-indent(-@indent);
-}
-
-.text-left {
-    text-align: left;
-}
-
-.text-right {
-    text-align: right;
-}
-
-.text-center {
-    text-align: center;
-}
-
-.text-justify {
-    text-align: justify;
-    hyphens: auto;
-}
-
-
 // Flex Box
 // ----------------------------------------------------------------------------/
 .flex {
@@ -112,12 +79,39 @@
     flex-wrap: wrap;
 }
 
+.flex-row-reverse {
+    flex-direction: row-reverse;
+}
+
 .flex-column {
     flex-direction: column;
 }
 
+.flex-column-reverse {
+    flex-direction: column-reverse;
+}
+
 .flex-grow {
     flex-grow: 1;
+}
+
+
+// Justify Self
+// ----------------------------------------------------------------------------/
+.self-start {
+    justify-self: start;
+}
+
+.self-end {
+    justify-self: end;
+}
+
+.self-center {
+    justify-self: center;
+}
+
+.self-stretch {
+    justify-self: stretch;
 }
 
 

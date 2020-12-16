@@ -1,4 +1,4 @@
-// Buttons
+// Button
 // ----------------------------------------------------------------------------/
 .@{button-class} {
     display: inline-block;
@@ -17,26 +17,5 @@
     &:focus {
         outline: thin dotted;
         outline-offset: unit((-2px / @root-font-size), rem);
-    }
-}
-
-
-// Disabled
-// ----------------------------------------------------------------------------/
-.disabled {
-    border-color: @button-disabled-border-color;
-    background-color: @button-disabled-background-color;
-    color: @button-disabled-color;
-    cursor: not-allowed;
-
-    &:hover,
-    &:active {
-        background-color: @button-disabled-background-color;
-        color: @button-disabled-color;
-        text-decoration: none;
-    }
-
-    &:focus {
-        outline: 0;
     }
 }

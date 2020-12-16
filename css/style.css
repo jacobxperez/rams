@@ -90,28 +90,6 @@ h6 {
     font-size: 1rem;
 }
 
-.link,
-a {
-    text-decoration: none;
-    background-color: transparent;
-    color: #06f;
-    cursor: pointer;
-}
-
-.link:active,
-.link:hover,
-a:active,
-a:hover {
-    outline: 0;
-    text-decoration: underline;
-}
-
-.link:focus,
-a:focus {
-    outline: thin dotted;
-    outline-offset: -0.125rem;
-}
-
 b,
 strong {
     font-weight: 700;
@@ -315,6 +293,47 @@ input[type=button] {
 :not([type=submit]):invalid {
     border-color: #c00;
     box-shadow: none;
+}
+
+.button {
+    display: inline-block;
+    padding: .4375rem .75rem;
+    border: .0625rem solid transparent;
+    color: #555;
+    cursor: pointer;
+}
+
+.button:active,
+.button:hover {
+    outline: 0;
+    text-decoration: none;
+}
+
+.button:focus {
+    outline: thin dotted;
+    outline-offset: -0.125rem;
+}
+
+.link,
+a {
+    text-decoration: none;
+    background-color: transparent;
+    color: #06f;
+    cursor: pointer;
+}
+
+.link:active,
+.link:hover,
+a:active,
+a:hover {
+    outline: 0;
+    text-decoration: underline;
+}
+
+.link:focus,
+a:focus {
+    outline: thin dotted;
+    outline-offset: -0.125rem;
 }
 
 .leading,
@@ -534,43 +553,6 @@ body > .container:last-child {
     }
 }
 
-.button {
-    display: inline-block;
-    padding: .4375rem .75rem;
-    border: .0625rem solid transparent;
-    color: #555;
-    cursor: pointer;
-}
-
-.button:active,
-.button:hover {
-    outline: 0;
-    text-decoration: none;
-}
-
-.button:focus {
-    outline: thin dotted;
-    outline-offset: -0.125rem;
-}
-
-.disabled {
-    border-color: #ddd;
-    background-color: #e6e6e6;
-    color: #999999;
-    cursor: not-allowed;
-}
-
-.disabled:active,
-.disabled:hover {
-    background-color: #e6e6e6;
-    color: #999999;
-    text-decoration: none;
-}
-
-.disabled:focus {
-    outline: 0;
-}
-
 .nav-link {
     display: block;
     padding: .5rem .75rem;
@@ -726,6 +708,24 @@ body > .container:last-child {
 .button.danger-bg:active,
 .button.danger-bg:hover {
     background-color: #b30000;
+}
+
+.disabled {
+    border-color: #ddd;
+    background-color: #e6e6e6;
+    color: #999999;
+    cursor: not-allowed;
+}
+
+.disabled:active,
+.disabled:hover {
+    background-color: #e6e6e6;
+    color: #999999;
+    text-decoration: none;
+}
+
+.disabled:focus {
+    outline: 0;
 }
 @font-face {
     font-family: 'icons';

@@ -611,27 +611,27 @@ body > .container:last-child {
     border: .0625rem solid rgba(0, 0, 0, 0.3);
 }
 
-.primary-outline {
+.outline-primary {
     border-color: #06f;
     color: #06f;
 }
 
-.secondary-outline {
+.outline-secondary {
     border-color: #222;
     color: #222;
 }
 
-.success-outline {
+.outline-success {
     border-color: #393;
     color: #393;
 }
 
-.warning-outline {
+.outline-warning {
     border-color: #fa0;
     color: #fa0;
 }
 
-.danger-outline {
+.outline-danger {
     border-color: #c00;
     color: #c00;
 }
@@ -640,41 +640,41 @@ body > .container:last-child {
     background-color: #fff;
 }
 
-.button.primary-outline.active,
-.button.primary-outline:active,
-.button.primary-outline:hover,
+.button.primary.active,
+.button.primary:active,
+.button.primary:hover,
 .primary-bg {
     background-color: #06f;
     color: #ffffff;
 }
 
-.button.secondary-outline.active,
-.button.secondary-outline:active,
-.button.secondary-outline:hover,
+.button.secondary.active,
+.button.secondary:active,
+.button.secondary:hover,
 .secondary-bg {
     background-color: #222;
     color: #ffffff;
 }
 
-.button.success-outline.active,
-.button.success-outline:active,
-.button.success-outline:hover,
+.button.success.active,
+.button.success:active,
+.button.success:hover,
 .success-bg {
     background-color: #393;
     color: #ffffff;
 }
 
-.button.warning-outline.active,
-.button.warning-outline:active,
-.button.warning-outline:hover,
+.button.warning.active,
+.button.warning:active,
+.button.warning:hover,
 .warning-bg {
     background-color: #fa0;
     color: #000000;
 }
 
-.button.danger-outline.active,
-.button.danger-outline:active,
-.button.danger-outline:hover,
+.button.danger.active,
+.button.danger:active,
+.button.danger:hover,
 .danger-bg {
     background-color: #c00;
     color: #ffffff;

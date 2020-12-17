@@ -1733,12 +1733,42 @@ body > .container:last-child {
     right: 0;
 }
 
+.indent {
+    padding-left: 1.5rem;
+}
+
+.text-indent {
+    text-indent: 1.5rem;
+}
+
+.text-outdent {
+    padding-left: 1.5rem;
+    text-indent: -1.5rem;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-justify {
+    text-align: justify;
+    hyphens: auto;
+}
+
 .flex {
     display: flex;
     flex-wrap: wrap;
 }
 
-.flex-row-reverse {
+.row-reverse {
     flex-direction: row-reverse;
 }
 
@@ -1746,12 +1776,32 @@ body > .container:last-child {
     flex-direction: column;
 }
 
-.flex-column-reverse {
+.column-reverse {
     flex-direction: column-reverse;
 }
 
 .flex-grow {
     flex-grow: 1;
+}
+
+.align-start {
+    align-self: flex-start;
+}
+
+.align-end {
+    align-self: flex-end;
+}
+
+.align-center {
+    align-self: center;
+}
+
+.align-baseline {
+    align-self: baseline;
+}
+
+.align-stretch {
+    align-self: stretch;
 }
 
 .self-start {

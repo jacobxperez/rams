@@ -1667,7 +1667,10 @@ body > .container:last-child {
 
 .block {
     display: block;
-    width: 100%;
+}
+
+.max-width {
+    max-width: 100%;
 }
 
 .float-left {
@@ -1702,10 +1705,6 @@ body > .container:last-child {
     top: 0;
 }
 
-.fixed-bottom {
-    bottom: 0;
-}
-
 .fixed-top .container > ul {
     margin-left: -0.75rem;
     margin-right: -0.75rem;
@@ -1713,6 +1712,10 @@ body > .container:last-child {
 
 .fixed-top + .container {
     margin-top: 6rem;
+}
+
+.fixed-bottom {
+    bottom: 0;
 }
 
 .top {

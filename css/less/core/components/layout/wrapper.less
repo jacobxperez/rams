@@ -18,3 +18,15 @@ body > .@{wrapper-class}:first-child {
 body > .@{wrapper-class}:last-child {
     .margin-bottom(@wrapper-margin-bottom);
 }
+
+// mixin called with utilities
+.fixed-top-wrapper () {
+    .@{wrapper-class} > ul {
+        .margin-left(-@nav-link-padding-x);
+        .margin-right(-@nav-link-padding-x);
+    }
+
+    + .@{wrapper-class} {
+        .margin-top(@base-line-height * 4);
+    }
+}

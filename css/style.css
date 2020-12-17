@@ -640,41 +640,38 @@ body > .container:last-child {
     background-color: #fff;
 }
 
-.button.primary.active,
-.button.primary:active,
-.button.primary:hover,
+.button.outline-primary.active,
+.button.outline-primary:active,
+.button.outline-primary:hover,
 .primary-bg {
     background-color: #06f;
     color: #ffffff;
 }
 
-.button.secondary.active,
-.button.secondary:active,
-.button.secondary:hover,
+.button.outline-secondary.active,
+.button.outline-secondary:active,
+.button.outline-secondary:hover,
 .secondary-bg {
     background-color: #222;
     color: #ffffff;
 }
 
-.button.success.active,
-.button.success:active,
-.button.success:hover,
+.button.outline-success.active,
+.button.outline-success:active,
+.button.outline-success:hover,
 .success-bg {
     background-color: #393;
     color: #ffffff;
 }
 
-.button.warning.active,
-.button.warning:active,
-.button.warning:hover,
 .warning-bg {
     background-color: #fa0;
     color: #000000;
 }
 
-.button.danger.active,
-.button.danger:active,
-.button.danger:hover,
+.button.outline-danger.active,
+.button.outline-danger:active,
+.button.outline-danger:hover,
 .danger-bg {
     background-color: #c00;
     color: #ffffff;

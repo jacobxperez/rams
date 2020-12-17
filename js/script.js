@@ -6,7 +6,7 @@
 document.addEventListener("DOMContentLoaded", function() {
 
     // Toggle
-    (function () {
+    (function() {
         const getToggle = document.querySelectorAll(".js-toggle");
         const getToggleReset = document.querySelectorAll(".js-toggle-reset");
 
@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
     // Smooth Scroll
-    (function () {
+    (function() {
         const intLinks = document.querySelectorAll("a[href^='#']");
 
         for (let i = 0; i < intLinks.length; i++) {

@@ -3,9 +3,9 @@
 @media screen and (max-width: unit((@screen-small-max-width / @root-font-size), em)) {
     .small-grid();
 
-    .@{small-prefix}hide,
-    .@{medium-prefix}show,
-    .@{large-prefix}show {
+    .@{small-prefix}none,
+    .@{medium-prefix}block,
+    .@{large-prefix}block {
         display: none;
     }
 }
@@ -16,9 +16,9 @@
 @media screen and (min-width: unit((@screen-medium-min-width / @root-font-size), em)) and (max-width: unit(((@screen-medium-max-width ) / @root-font-size), em)) {
     .medium-grid ();
 
-    .@{medium-prefix}hide,
-    .@{small-prefix}show,
-    .@{large-prefix}show {
+    .@{medium-prefix}none,
+    .@{small-prefix}block,
+    .@{large-prefix}block {
         display: none;
     }
 }
@@ -29,9 +29,9 @@
 @media screen and (min-width: unit((@screen-large-min-width / @root-font-size), em)) {
     .large-grid ();
 
-    .@{large-prefix}hide,
-    .@{small-prefix}show,
-    .@{medium-prefix}show {
+    .@{large-prefix}none,
+    .@{small-prefix}block,
+    .@{medium-prefix}block {
         display: none;
     }
 }

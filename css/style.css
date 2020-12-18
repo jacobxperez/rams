@@ -1738,9 +1738,9 @@ body > .container:last-child {
         grid-column: span 4;
     }
 
-    .lg-show,
-    .md-show,
-    .sm-hide {
+    .lg-block,
+    .md-block,
+    .sm-none {
         display: none;
     }
 }
@@ -1781,9 +1781,9 @@ body > .container:last-child {
         grid-column: span 8;
     }
 
-    .lg-show,
-    .md-hide,
-    .sm-show {
+    .lg-block,
+    .md-none,
+    .sm-block {
         display: none;
     }
 }
@@ -1840,9 +1840,9 @@ body > .container:last-child {
         grid-column: span 12;
     }
 
-    .lg-hide,
-    .md-show,
-    .sm-show {
+    .lg-none,
+    .md-block,
+    .sm-block {
         display: none;
     }
 }

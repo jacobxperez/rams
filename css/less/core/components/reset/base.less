@@ -36,6 +36,10 @@ summary {
 
 html {
     .font-size(@base-font-size; @root-font-size; %);
+
+    & when not (@clamp-font-size = false) {
+        font-size: @clamp-font-size;
+    }
 }
 
 body {

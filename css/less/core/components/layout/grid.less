@@ -5,10 +5,8 @@
     .column-gap(@grid-column-gap);
 }
 
-
 // Grid Generator
 .grid(@large-columns; @grid-column-class);
-
 
 // Small Grid
 .small-grid () {
@@ -19,7 +17,6 @@
     .grid-responsive(@small-columns; @small-prefix);
 }
 
-
 // Medium Grid
 .medium-grid () {
     .@{grid-wrapper-class} {
@@ -28,7 +25,6 @@
 
     .grid-responsive(@medium-columns; @medium-prefix);
 }
-
 
 // Large Grid
 .large-grid () {

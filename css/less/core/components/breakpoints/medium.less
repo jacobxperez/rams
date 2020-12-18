@@ -1,0 +1,11 @@
+// Medium Screen
+// ----------------------------------------------------------------------------/
+@media screen and (min-width: unit((@screen-medium-min-width / @root-font-size), em)) and (max-width: unit(((@screen-medium-max-width ) / @root-font-size), em)) {
+    .medium-grid ();
+
+    .@{medium-prefix}none,
+    .@{small-prefix}block,
+    .@{large-prefix}block {
+        display: none;
+    }
+}

@@ -1,0 +1,47 @@
+// Position
+// ----------------------------------------------------------------------------/
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.fixed-top,
+.fixed-bottom {
+    left: 0;
+    right: 0;
+}
+
+.fixed-top,
+.fixed-bottom {
+    position: fixed;
+    z-index: 1025;
+}
+
+.fixed-top {
+    top: 0;
+    .fixed-top-wrapper();
+    .fixed-top-nav();
+}
+
+.fixed-bottom {
+    bottom: 0;
+}
+
+.top {
+    bottom: 100%;
+}
+
+.bottom {
+    top: 100%;
+}
+
+.left {
+    left: 0;
+}
+
+.right {
+    right: 0;
+}

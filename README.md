@@ -22,7 +22,7 @@ set of components, yet allows for the creation of unique individual designs.
 
 Start by **[downloading](https://github.com/jacobxperez/essentials/archive/master.zip)** the [repository](https://github.com/jacobxperez/essentials) or by cloning the project:
 
-    $ git clone https://github.com/jacobxperez/essentials.git
+    git clone https://github.com/jacobxperez/essentials.git
 
 ### Default Build
 

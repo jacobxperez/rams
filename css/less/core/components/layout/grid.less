@@ -2,11 +2,16 @@
 // ----------------------------------------------------------------------------/
 .@{grid-wrapper-class} {
     display: grid;
-    .column-gap(@grid-column-gap);
+    .grid-gap(@grid-column-gap);
 }
 
 // Grid Generator
 .grid(@large-columns; @grid-column-class);
+
+// spans all columns
+.span {
+    grid-column: 1 ~"/" -1;
+}
 
 // Small Grid
 .small-grid () {

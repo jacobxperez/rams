@@ -1,5 +1,33 @@
 // Grid
 // ----------------------------------------------------------------------------/
+.grid-gap(@gap: @grid-gap; @base: @base-font-size; @unit: rem) {
+
+    & when not (@gap = false) {
+
+        & when (@unit = %) {
+            @a: percentage(@gap / @base);
+            grid-gap: @a;
+        }
+
+        & when (@unit = vw), (@unit = vh) {
+            @a: unit(((@gap / @base) * 100), @unit);
+            grid-gap: @a;
+        }
+
+        & when (@unit = em), (@unit = rem) {
+            @a: unit((@gap / @base), @unit);
+            grid-gap: @a;
+        }
+
+        & when (@unit = none) {
+            @a: unit((@gap / @base));
+            grid-gap: @a;
+        }
+
+    }
+
+}
+
 .column-gap(@gap: @grid-gap; @base: @base-font-size; @unit: rem) {
 
     & when not (@gap = false) {
@@ -22,6 +50,34 @@
         & when (@unit = none) {
             @a: unit((@gap / @base));
             column-gap: @a;
+        }
+
+    }
+
+}
+
+.row-gap(@gap: @grid-gap; @base: @base-font-size; @unit: rem) {
+
+    & when not (@gap = false) {
+
+        & when (@unit = %) {
+            @a: percentage(@gap / @base);
+            row-gap: @a;
+        }
+
+        & when (@unit = vw), (@unit = vh) {
+            @a: unit(((@gap / @base) * 100), @unit);
+            row-gap: @a;
+        }
+
+        & when (@unit = em), (@unit = rem) {
+            @a: unit((@gap / @base), @unit);
+            row-gap: @a;
+        }
+
+        & when (@unit = none) {
+            @a: unit((@gap / @base));
+            row-gap: @a;
         }
 
     }

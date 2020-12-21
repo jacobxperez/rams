@@ -143,6 +143,44 @@ hr {
     border-top: .0625rem solid rgba(0, 0, 0, 0.3);
 }
 
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote {
+    font-size: 2rem;
+    font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, "Nimbus Roman No9 L", "Liberation Serif", FreeSerif, serif;
+    font-style: italic;
+}
+
+blockquote:after,
+blockquote:before {
+    content: '';
+    content: none;
+}
+
+blockquote small:before {
+    content: "— ";
+}
+
+blockquote small {
+    display: block;
+    line-height: 1.84615385;
+}
+
+code,
+kbd,
+pre,
+samp {
+    font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", "Nimbus Mono L", "Liberation Mono", FreeMono, monospace;
+}
+
+pre {
+    overflow: auto;
+    white-space: pre-wrap;
+}
+
 dl,
 ol,
 ul {
@@ -185,44 +223,6 @@ ul ul {
 
 nav ul {
     margin-bottom: 0;
-}
-
-code,
-kbd,
-pre,
-samp {
-    font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", "Nimbus Mono L", "Liberation Mono", FreeMono, monospace;
-}
-
-pre {
-    overflow: auto;
-    white-space: pre-wrap;
-}
-
-blockquote,
-q {
-    quotes: none;
-}
-
-blockquote {
-    font-size: 2rem;
-    font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, "Nimbus Roman No9 L", "Liberation Serif", FreeSerif, serif;
-    font-style: italic;
-}
-
-blockquote:after,
-blockquote:before {
-    content: '';
-    content: none;
-}
-
-blockquote small:before {
-    content: "— ";
-}
-
-blockquote small {
-    display: block;
-    line-height: 1.84615385;
 }
 
 table {
@@ -1546,27 +1546,6 @@ body > .container:last-child {
     display: block;
 }
 
-.flex {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.row-reverse {
-    flex-direction: row-reverse;
-}
-
-.flex-column {
-    flex-direction: column;
-}
-
-.column-reverse {
-    flex-direction: column-reverse;
-}
-
-.flex-grow {
-    flex-grow: 1;
-}
-
 .border {
     border: .0625rem solid rgba(0, 0, 0, 0.3);
 }
@@ -1615,6 +1594,27 @@ body > .container:last-child {
 .border-danger {
     border-color: #c00;
     color: #c00;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.row-reverse {
+    flex-direction: row-reverse;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.column-reverse {
+    flex-direction: column-reverse;
+}
+
+.flex-grow {
+    flex-grow: 1;
 }
 
 .text-left {

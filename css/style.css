@@ -475,6 +475,36 @@ body > .container:last-child {
     margin-right: 0;
 }
 
+.button.primary-bg.active,
+.button.primary-bg:active,
+.button.primary-bg:hover {
+    background-color: #005ce6;
+}
+
+.button.secondary-bg.active,
+.button.secondary-bg:active,
+.button.secondary-bg:hover {
+    background-color: #151515;
+}
+
+.button.success-bg.active,
+.button.success-bg:active,
+.button.success-bg:hover {
+    background-color: #2d862d;
+}
+
+.button.warning-bg.active,
+.button.warning-bg:active,
+.button.warning-bg:hover {
+    background-color: #e69900;
+}
+
+.button.danger-bg.active,
+.button.danger-bg:active,
+.button.danger-bg:hover {
+    background-color: #b30000;
+}
+
 .box {
     display: block;
     padding: .5rem .75rem;
@@ -533,36 +563,6 @@ body > .container:last-child {
 .danger-bg {
     background-color: #c00;
     color: #ffffff;
-}
-
-.button.primary-bg.active,
-.button.primary-bg:active,
-.button.primary-bg:hover {
-    background-color: #005ce6;
-}
-
-.button.secondary-bg.active,
-.button.secondary-bg:active,
-.button.secondary-bg:hover {
-    background-color: #151515;
-}
-
-.button.success-bg.active,
-.button.success-bg:active,
-.button.success-bg:hover {
-    background-color: #2d862d;
-}
-
-.button.warning-bg.active,
-.button.warning-bg:active,
-.button.warning-bg:hover {
-    background-color: #e69900;
-}
-
-.button.danger-bg.active,
-.button.danger-bg:active,
-.button.danger-bg:hover {
-    background-color: #b30000;
 }
 
 .disabled {

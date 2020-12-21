@@ -2,7 +2,8 @@
  * Copyright (C) 2020 Jacob Perez <jacobxperez@gmx.com>
  * Licensed under the Apache License, Version 2.0
  * http://www.apache.org/licenses/LICENSE-2.0
-------------------------------------------------------------------------------*/
+==============================================================================*/
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -206,7 +207,6 @@ q {
 blockquote {
     font-size: 2rem;
     font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, "Nimbus Roman No9 L", "Liberation Serif", FreeSerif, serif;
-    line-height: 1.5;
     font-style: italic;
 }
 

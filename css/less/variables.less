@@ -1,7 +1,8 @@
 // Variables
-// Always work on px and the mixins will output in relative units
-// Variables that can be set to false will NOT output a style declaration
-// ----------------------------------------------------------------------------/
+// Move edited variables to file custom.less
+// Always work with px and the mixins will output in relative units
+// Variables that can be set to false will *NOT* output a style declaration
+// ============================================================================/
 
 
 // Main Color Palette
@@ -28,10 +29,10 @@
 // ----------------------------------------------------------------------------/
 // base font family
 // @base-font-family: @font-sans;
-// @scale-font-size: clamp(1rem, 1vw, 1.25rem); // can be set to false
 
 // font size
 // @base-font-size: 16px;
+// @scale-font-size: clamp(1rem, 1vw, 1.25rem); // can be set to false
 
 // type scale
 // @type-scale: 1.25;
@@ -81,7 +82,7 @@
 // @mark-color: contrast(@mark-background);
 
 // hr
-// @hr-border-width: @base-border-width; // can be set to false
+// @hr-border-width: @base-border-width;
 // @hr-border-style: @base-border-style;
 // @hr-border-color: @base-border-color;
 
@@ -138,7 +139,7 @@
 // @screen-medium-max-width: (@screen-large-min-width - 1 / @base-font-size);
 
 // large screens
-// @screen-large-min-width: (@wrapper-max-width + (@wrapper-gap * 2));
+// @screen-large-min-width: (@wrapper-max-width);
 
 
 // Base Box Model
@@ -172,13 +173,6 @@
 // @ul-list-style-type-sub: circle;
 
 
-// hr
-// ----------------------------------------------------------------------------/
-// @hr-border-width: @base-border-width; // can be set to false
-// @hr-border-style: @base-border-style;
-// @hr-border-color: @base-border-color;
-
-
 // Code
 // ----------------------------------------------------------------------------/
 // @code-font-family: @font-mono;
@@ -193,7 +187,7 @@
 // ----------------------------------------------------------------------------/
 // @blockquote-font-family: @font-serif;
 // @blockquote-font-size: @h3-font-size;
-// @blockquote-line-height: 48px;
+// @blockquote-line-height: false;
 // @blockquote-font-style: italic;
 
 
@@ -267,7 +261,6 @@
 // @danger-text: contrast(@danger);
 // @danger-hover: darken(@danger, 5%);
 
-// disabled
 // @disabled: #e6e6e6;
 // @disabled-text: lighten(contrast(@disabled), 60%);
 
@@ -287,7 +280,7 @@
 // @icon-line-height: 10px;
 
 
-// // Selection
+// Selection
 // ----------------------------------------------------------------------------/
 // @selection-background: #cde1ff;
 // @selection-color: contrast(@selection-background);

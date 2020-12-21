@@ -1,6 +1,6 @@
 # Contributing
 
-Welcome designers, before you contribute to this project is important to read the following sections to better understand the nature and the direction of the project. Use the [issue tracker](https://github.com/jacobxperez/essentials/issues) for [bug reports](#bug-reports), [feature requests](#feature-requests), and submitting [pull requests](#pull-requests).
+Welcome designers, before you contribute to this project is important to read the following sections to better understand the vision and the direction of the project. Use the [issue tracker](https://github.com/jacobxperez/essentials/issues) for [bug reports](#bug-reports), [feature requests](#feature-requests), and submitting [pull requests](#pull-requests).
 
 ## Table of Contents
 
@@ -28,7 +28,7 @@ stressed and more productive.
 1. Identify the essential
 2. Eliminate the rest
 
-These two principles, identify the essential and eliminate the rest form the
+These two principles, identifying the essential and eliminate the rest form the
 foundation of this project.
 
 > Perfection is achieved, not when there is nothing more to add, but when there is nothing left to take away.

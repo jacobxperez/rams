@@ -545,6 +545,9 @@ body > .container:last-child {
     color: #ffffff;
 }
 
+.button.border-warning.active,
+.button.border-warning:active,
+.button.border-warning:hover,
 .warning-bg {
     background-color: #fa0;
     color: #000000;

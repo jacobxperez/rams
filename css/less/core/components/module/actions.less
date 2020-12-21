@@ -15,6 +15,36 @@
     color: @danger-text;
 }
 
+
+// Buttons
+// ----------------------------------------------------------------------------/
+.@{button-class}.success-bg {
+    &.active,
+    &:hover,
+    &:active {
+        background-color: @success-hover;
+    }
+}
+
+.@{button-class}.warning-bg {
+    &.active,
+    &:hover,
+    &:active {
+        background-color: @warning-hover;
+    }
+}
+
+.@{button-class}.danger-bg {
+    &.active,
+    &:hover,
+    &:active {
+        background-color: @danger-hover;
+    }
+}
+
+
+// Disabled
+// ----------------------------------------------------------------------------/
 .disabled {
     border-color: @button-disabled-border-color;
     background-color: @button-disabled-background-color;

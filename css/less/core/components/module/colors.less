@@ -15,3 +15,36 @@
     background-color: @secondary;
     color: @secondary-text;
 }
+
+// Tertiary Background
+.tertiary-bg {
+    background-color: @tertiary;
+    color: @tertiary-text;
+}
+
+
+// Buttons
+// ----------------------------------------------------------------------------/
+.@{button-class}.primary-bg {
+    &.active,
+    &:hover,
+    &:active {
+        background-color: @primary-hover;
+    }
+}
+
+.@{button-class}.secondary-bg {
+    &.active,
+    &:hover,
+    &:active {
+        background-color: @secondary-hover;
+    }
+}
+
+.@{button-class}.tertiary-bg {
+    &.active,
+    &:hover,
+    &:active {
+        background-color: @secondary-hover;
+    }
+}

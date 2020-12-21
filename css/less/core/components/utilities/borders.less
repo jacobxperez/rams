@@ -33,6 +33,11 @@
     color: @secondary;
 }
 
+.border-tertiary{
+    border-color: @tertiary;
+    color: @tertiary;
+}
+
 .border-success{
     border-color: @success;
     color: @success;
@@ -65,6 +70,14 @@
     &:hover,
     &:active {
         &:extend(.secondary-bg);
+    }
+}
+
+.button.border-tertiary{
+    &.active,
+    &:hover,
+    &:active {
+        &:extend(.tertiary-bg);
     }
 }
 

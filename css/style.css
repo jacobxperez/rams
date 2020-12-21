@@ -514,6 +514,9 @@ body > .container:last-child {
     color: #ffffff;
 }
 
+.button.border-tertiary.active,
+.button.border-tertiary:active,
+.button.border-tertiary:hover,
 .tertiary-bg {
     background-color: #222;
     color: #ffffff;
@@ -1590,6 +1593,11 @@ body > .container:last-child {
 }
 
 .border-secondary {
+    border-color: #222;
+    color: #222;
+}
+
+.border-tertiary {
     border-color: #222;
     color: #222;
 }

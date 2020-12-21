@@ -385,7 +385,7 @@ body > .container:last-child {
 
 .grid {
     display: grid;
-    grid-gap: 1.25rem;
+    column-gap: 1.25rem;
 }
 
 .span-1 {

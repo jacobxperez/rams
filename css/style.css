@@ -510,7 +510,7 @@ body > .container:last-child {
 .button.border-secondary:active,
 .button.border-secondary:hover,
 .secondary-bg {
-    background-color: #222;
+    background-color: #663380;
     color: #ffffff;
 }
 
@@ -531,13 +531,13 @@ body > .container:last-child {
 .button.secondary-bg.active,
 .button.secondary-bg:active,
 .button.secondary-bg:hover {
-    background-color: #151515;
+    background-color: #572c6e;
 }
 
 .button.tertiary-bg.active,
 .button.tertiary-bg:active,
 .button.tertiary-bg:hover {
-    background-color: #151515;
+    background-color: #572c6e;
 }
 
 .button.border-success.active,
@@ -1593,8 +1593,8 @@ body > .container:last-child {
 }
 
 .border-secondary {
-    border-color: #222;
-    color: #222;
+    border-color: #663380;
+    color: #663380;
 }
 
 .border-tertiary {

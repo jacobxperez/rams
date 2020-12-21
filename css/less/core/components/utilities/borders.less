@@ -1,48 +1,64 @@
-// Outlines
+// Borders
 // ----------------------------------------------------------------------------/
-.outline {
+.border {
     .border(@base-border-width);
 }
 
+.border-left {
+    .border-left(@base-border-width);
+}
 
-// Primary outline
-.outline-primary{
+.border-top {
+    .border-top(@base-border-width);
+}
+
+.border-right {
+    .border-right(@base-border-width);
+}
+
+.border-bottom {
+    .border-bottom(@base-border-width);
+}
+
+
+// Primary border
+.border-primary{
     border-color: @primary;
     color: @primary;
 }
 
 
-// Secondary outline
-.outline-secondary{
+// Secondary border
+.border-secondary{
     border-color: @secondary;
     color: @secondary;
 }
 
 
-// Success outline
-.outline-success{
+// Success border
+.border-success{
     border-color: @success;
     color: @success;
 }
 
 
-// Warning outline
-.outline-warning{
+// Warning border
+.border-warning{
     border-color: @warning;
     color: @warning;
 }
 
 
-// Danger outline
-.outline-danger{
+// Danger border
+.border-danger{
     border-color: @danger;
     color: @danger;
 }
 
 
-// Button Outlines
+// Button borders
 // ----------------------------------------------------------------------------/
-.@{button-class}.outline-primary{
+.@{button-class}.border-primary{
     &.active,
     &:hover,
     &:active {
@@ -51,7 +67,7 @@
 }
 
 
-.@{button-class}.outline-secondary{
+.@{button-class}.border-secondary{
     &.active,
     &:hover,
     &:active {
@@ -59,7 +75,7 @@
     }
 }
 
-.@{button-class}.outline-success{
+.@{button-class}.border-success{
     &.active,
     &:hover,
     &:active {
@@ -67,15 +83,15 @@
     }
 }
 
-.@{button-class}.outline-warning{
+.@{button-class}.border-warning{
     &.active,
     &:hover,
     &:active {
-        &:extend(.outline-warning-bg);
+        &:extend(.border-warning-bg);
     }
 }
 
-.@{button-class}.outline-danger{
+.@{button-class}.border-danger{
     &.active,
     &:hover,
     &:active {

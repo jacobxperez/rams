@@ -14,8 +14,8 @@ Welcome designers, before you contribute to this project is important to read th
 
 ## Design Philosophy
 
-Perhaps the most famous quote from Dieter Rams "Good design is as little design
-as possible" meaning that by removing the unnecessary the essential comes to the
+Perhaps the most famous quote from Dieter Rams "**Good design is as little design
+as possible**" meaning that by removing the unnecessary the essential comes to the
 forefront. The product becomes useful, understandable, easy to use, and long-lasting.
 
 ## Design Principles

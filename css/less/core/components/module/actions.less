@@ -18,7 +18,7 @@
 
 // Buttons
 // ----------------------------------------------------------------------------/
-.@{button-class}.success-bg {
+.button.success-bg {
     &.active,
     &:hover,
     &:active {
@@ -26,7 +26,7 @@
     }
 }
 
-.@{button-class}.warning-bg {
+.button.warning-bg {
     &.active,
     &:hover,
     &:active {
@@ -34,7 +34,7 @@
     }
 }
 
-.@{button-class}.danger-bg {
+.button.danger-bg {
     &.active,
     &:hover,
     &:active {
@@ -46,15 +46,14 @@
 // Disabled
 // ----------------------------------------------------------------------------/
 .disabled {
-    border-color: @button-disabled-border-color;
-    background-color: @button-disabled-background-color;
-    color: @button-disabled-color;
+    background-color: @disabled;
+    color: @disabled-text;
     cursor: not-allowed;
 
     &:hover,
     &:active {
-        background-color: @button-disabled-background-color;
-        color: @button-disabled-color;
+        background-color: @disabled;
+        color: @disabled-text;
         text-decoration: none;
     }
 

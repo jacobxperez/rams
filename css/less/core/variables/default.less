@@ -1,0 +1,282 @@
+// Default Variables
+// ============================================================================/
+
+
+// Main Color Palette
+// ----------------------------------------------------------------------------/
+// page background color
+@background-color: #fff;
+
+// base font color
+@font-color: #555;
+
+// branding
+@primary: #06f;
+@primary-text: contrast(@primary);
+@primary-hover: darken(@primary, 5%);
+
+@secondary: #222;
+@secondary-text: contrast(@secondary);
+@secondary-hover: darken(@secondary, 5%);
+
+
+// Typography
+// ----------------------------------------------------------------------------/
+// base font family
+@base-font-family: @font-sans;
+
+// font size
+@root-font-size: 16px; // not in custom variables
+@base-font-size: 16px;
+@scale-font-size: clamp(1rem, 1vw, 1.25rem); // can be set to false
+
+// type scale
+@type-scale: 1.25;
+
+// line height
+@base-line-height: 24px;
+
+// leading: margin bottom
+@base-leading: @base-line-height;
+
+// link
+@link-color: @primary;
+
+// headings
+@headings-font-family: false;
+@headings-font-weight: 400;
+
+// heading 1
+@h1-font-size: (ceil(@h2-font-size * @type-scale));
+@h1-line-height: false;
+
+// heading 2
+@h2-font-size: (ceil(@h3-font-size * @type-scale));
+@h2-line-height: false;
+
+// heading 3
+@h3-font-size: (ceil(@h4-font-size * @type-scale));
+@h3-line-height: false;
+
+// heading 4
+@h4-font-size: (ceil(@h5-font-size * @type-scale));
+@h4-line-height: false;
+
+// heading 5
+@h5-font-size: (ceil(@h6-font-size * @type-scale));
+@h5-line-height: false;
+
+// heading 6
+@h6-font-size: @base-font-size;
+@h6-line-height: false;
+
+// small
+@small-font-size: (ceil(@base-font-size / @type-scale));
+
+// mark
+@mark-background: #fc0;
+@mark-color: contrast(@mark-background);
+
+// hr
+@hr-border-width: @base-border-width;
+@hr-border-style: @base-border-style;
+@hr-border-color: @base-border-color;
+
+
+// Page Wrapper
+// ----------------------------------------------------------------------------/
+@wrapper-class: container;
+@wrapper-margin-top: @base-line-height * 2;
+@wrapper-margin-bottom: @base-line-height * 4;
+@wrapper-gap: 20px;
+
+// min width
+@wrapper-min-width: (280px + (@wrapper-gap * 2));
+
+// max width
+@wrapper-max-width: (940px + (@wrapper-gap * 2));
+
+
+// Grid System
+// ----------------------------------------------------------------------------/
+@grid-wrapper-class: grid;
+@grid-column-class: span-;
+@grid-column-gap: @wrapper-gap;
+
+// small grid
+@small-columns: 4;
+
+// medium grid
+@medium-columns: 8;
+
+// large grid
+@large-columns: 12;
+
+
+// Responsive Prefix
+// ----------------------------------------------------------------------------/
+// small screen
+@small-prefix: sm-;
+
+// medium screen
+@medium-prefix: md-;
+
+// large screen
+@large-prefix: lg-;
+
+
+// Breakpoints
+// ----------------------------------------------------------------------------/
+// small screen
+@screen-small-max-width: (640px + (@wrapper-gap * 2));
+
+// medium screen: starts after small-max and end before large-min
+@screen-medium-min-width: (@screen-small-max-width + 1 / @base-font-size);
+@screen-medium-max-width: (@screen-large-min-width - 1 / @base-font-size);
+
+// large screens
+@screen-large-min-width: (@wrapper-max-width);
+
+
+// Base Box Model
+// ----------------------------------------------------------------------------/
+// margins
+@base-margin-y: 10px;
+@base-margin-x: 10px;
+
+// paddings
+@base-padding-y: 8px;
+@base-padding-x: 12px;
+
+// borders
+@base-border-width: 1px;
+@base-border-style: solid;
+@base-border-color: rgba(0, 0, 0, 0.3);
+@base-border-radius: 4px;
+
+
+// List ul, li, dl
+// ----------------------------------------------------------------------------/
+@list-indent: @base-line-height; // padding left
+@list-style-position: outside;
+
+// order list
+@ol-list-style-type: decimal;
+@ol-list-style-type-sub: hebrew;
+
+// unorder list
+@ul-list-style-type: disc;
+@ul-list-style-type-sub: circle;
+
+
+// Code
+// ----------------------------------------------------------------------------/
+@code-font-family: @font-mono;
+
+
+// Pre
+// ----------------------------------------------------------------------------/
+@pre-white-space: pre-wrap;
+
+
+// Blockquote
+// ----------------------------------------------------------------------------/
+@blockquote-font-family: @font-serif;
+@blockquote-font-size: @h3-font-size;
+@blockquote-line-height: false;
+@blockquote-font-style: italic;
+
+
+// Table
+// ----------------------------------------------------------------------------/
+@table-cell-padding-y: @base-padding-y;
+@table-cell-padding-x: @base-padding-x;
+
+
+// Form
+// ----------------------------------------------------------------------------/
+@form-padding-y: @base-padding-y;
+@form-padding-x: @base-padding-x;
+
+@form-background-color: false;
+@form-color: false;
+
+@form-border-width: @base-border-width; // can be set to false
+@form-border-style: @base-border-style;
+@form-border-color: @base-border-color;
+@form-border-color-focus: rgba(0, 0, 0, 0.5);
+@form-border-radius: false;
+
+
+// Nav
+// ----------------------------------------------------------------------------/
+@nav-link-color: @link-color;
+@nav-link-color-hover: @font-color;
+@nav-link-padding-y: @base-padding-y;
+@nav-link-padding-x: @base-padding-x;
+
+// alternative link
+@alt-link-color: @background-color;
+@alt-link-color-hover: darken(@alt-link-color, 25%);
+
+
+// Breadcrumb
+// ----------------------------------------------------------------------------/
+@breadcrumb-separator: " /";
+
+
+// Button
+// ----------------------------------------------------------------------------/
+@button-class: button;
+@button-color: @font-color;
+
+@button-padding-y: @base-padding-y - @button-border-width;
+@button-padding-x: @base-padding-x;
+
+@button-border-width: @base-border-width; // can be set to false
+@button-border-style: @base-border-style;
+@button-border-color: transparent;
+@button-border-radius: false;
+
+@button-disabled-color: @disabled-text;
+@button-disabled-background-color: @disabled;
+@button-disabled-border-color: #ddd;
+
+
+// Call to Action Colors
+// ----------------------------------------------------------------------------/
+@success: #393;
+@success-text: contrast(@success);
+@success-hover: darken(@success, 5%);
+
+@warning: #fa0;
+@warning-text: contrast(@warning);
+@warning-hover: darken(@warning, 5%);
+
+@danger: #c00;
+@danger-text: contrast(@danger);
+@danger-hover: darken(@danger, 5%);
+
+@disabled: #e6e6e6;
+@disabled-text: lighten(contrast(@disabled), 60%);
+
+
+// Ghost Box
+// ----------------------------------------------------------------------------/
+@ghost-box-min-width: 160px;
+
+
+// Iconography
+// ----------------------------------------------------------------------------/
+@icon-class: icon-;
+@icon-font-name: "icons";
+@icon-font-path: "../fonts/icons/";
+
+@icon-font-size: @base-font-size;
+@icon-line-height: 10px;
+
+
+// Selection
+// ----------------------------------------------------------------------------/
+@selection-background: #cde1ff;
+@selection-color: contrast(@selection-background);

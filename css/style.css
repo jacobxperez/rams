@@ -299,7 +299,7 @@ input[type=button] {
 
 .button {
     display: inline-block;
-    padding: .4375rem .75rem;
+    padding: .5rem .75rem;
     border: .0625rem solid transparent;
     color: #555;
     cursor: pointer;
@@ -577,7 +577,6 @@ body > .container:last-child {
 }
 
 .disabled {
-    border-color: #ddd;
     background-color: #e6e6e6;
     color: #999999;
     cursor: not-allowed;

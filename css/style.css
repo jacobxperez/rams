@@ -300,7 +300,6 @@ input[type=button] {
 .button {
     display: inline-block;
     padding: .5rem .75rem;
-    border: .0625rem solid transparent;
     color: #555;
     cursor: pointer;
 }

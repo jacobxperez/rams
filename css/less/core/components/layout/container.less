@@ -1,0 +1,31 @@
+// Container
+// ----------------------------------------------------------------------------/
+.container {
+    display: grid;
+    .column-gap(@container-gap);
+    width: 100%;
+    .min-width(@container-min-width);
+    .max-width(@container-max-width);
+    margin: 0 auto;
+    .padding-left(@container-gap);
+    .padding-right(@container-gap);
+}
+
+.max-width {
+    max-width: 100%;
+}
+
+body > .container:first-child {
+    .margin-top(@container-margin-top);
+}
+
+body > .container:last-child {
+    .margin-bottom(@container-margin-bottom);
+}
+
+// mixin call for utilities
+.fixed-top-wrapper () {
+    + .container {
+        .margin-top(@base-line-height * 4);
+    }
+}

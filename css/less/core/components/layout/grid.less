@@ -14,7 +14,9 @@
     grid-column: 1 ~"/" -1;
 }
 
-// Small Grid
+
+// Breakpoints
+// ----------------------------------------------------------------------------/
 .small-grid () {
     .@{grid-wrapper-class} {
         grid-template-columns: repeat(@small-columns, 1fr);
@@ -23,7 +25,6 @@
     .grid-responsive(@small-columns; @small-prefix);
 }
 
-// Medium Grid
 .medium-grid () {
     .@{grid-wrapper-class} {
         grid-template-columns: repeat(@medium-columns, 1fr);
@@ -32,7 +33,6 @@
     .grid-responsive(@medium-columns; @medium-prefix);
 }
 
-// Large Grid
 .large-grid () {
     .@{grid-wrapper-class} {
         grid-template-columns: repeat(@large-columns, 1fr);

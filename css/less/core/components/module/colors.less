@@ -1,47 +1,108 @@
-// Branding Colors
+// Colors
 // ----------------------------------------------------------------------------/
-.base-bg {
-    background-color: @background-color;
-}
-
-.primary-bg {
+.primary {
     background-color: @primary;
     color: @primary-text;
 }
 
-.secondary-bg {
+.primary-hover {
+    &.active,
+    &:focus,
+    &:hover,
+    &:active {
+        background-color: @primary-hover;
+        color: @primary-text;
+    }
+}
+
+.secondary {
     background-color: @secondary;
     color: @secondary-text;
 }
 
-.tertiary-bg {
+.secondary-hover {
+    &.active,
+    &:focus,
+    &:hover,
+    &:active {
+        background-color: @secondary-hover;
+        color: @secondary-text;
+    }
+}
+
+.tertiary {
     background-color: @tertiary;
     color: @tertiary-text;
 }
 
-
-// Buttons
-// ----------------------------------------------------------------------------/
-.button.primary-bg {
+.tertiary-hover {
     &.active,
+    &:focus,
     &:hover,
     &:active {
-        background-color: @primary-hover;
+        background-color: @tertiary-hover;
+        color: @tertiary-text;
     }
 }
 
-.button.secondary-bg {
+.success {
+    background-color: @success;
+    color: @success-text;
+}
+
+.success-hover {
     &.active,
+    &:focus,
     &:hover,
     &:active {
-        background-color: @secondary-hover;
+        background-color: @success-hover;
+        color: @success-text;
     }
 }
 
-.button.tertiary-bg {
+.warning {
+    background-color: @warning;
+    color: @warning-text;
+}
+
+.warning-hover {
     &.active,
+    &:focus,
     &:hover,
     &:active {
-        background-color: @secondary-hover;
+        background-color: @warning-hover;
+        color: @warning-text;
+    }
+}
+
+.danger {
+    background-color: @danger;
+    color: @danger-text;
+}
+
+.danger-hover {
+    &.active,
+    &:focus,
+    &:hover,
+    &:active {
+        background-color: @danger-hover;
+        color: @danger-text;
+    }
+}
+
+.disabled {
+    background-color: @disabled;
+    color: @disabled-text;
+    cursor: not-allowed;
+
+    &:hover,
+    &:active {
+        background-color: @disabled;
+        color: @disabled-text;
+        text-decoration: none;
+    }
+
+    &:focus {
+        outline: 0;
     }
 }

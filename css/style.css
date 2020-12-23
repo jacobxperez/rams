@@ -14,7 +14,7 @@
     line-height: inherit;
     text-align: inherit;
     vertical-align: baseline;
-    background-color: transparent;
+    background-color: inherit;
     color: inherit;
     outline: 0;
 }
@@ -318,7 +318,6 @@ input[type=button] {
 .link,
 a {
     text-decoration: none;
-    background-color: transparent;
     color: #06f;
     cursor: pointer;
 }
@@ -484,101 +483,88 @@ body > .container:last-child {
     width: 100%;
     margin-bottom: 0;
     min-width: 10rem;
-    visibility: hidden;
-    transition: all .3s ease-in-out 0s;
 }
 
 .active + .ghost-box {
     display: block;
-    visibility: visible;
 }
 
-.base-bg {
-    background-color: #fff;
-}
-
-.button.border-primary.active,
-.button.border-primary:active,
-.button.border-primary:hover,
-.primary-bg {
+.primary {
     background-color: #06f;
     color: #ffffff;
 }
 
-.button.border-secondary.active,
-.button.border-secondary:active,
-.button.border-secondary:hover,
-.secondary-bg {
+.primary-hover.active,
+.primary-hover:active,
+.primary-hover:focus,
+.primary-hover:hover {
+    background-color: #005ce6;
+    color: #ffffff;
+}
+
+.secondary {
     background-color: #663380;
     color: #ffffff;
 }
 
-.button.border-tertiary.active,
-.button.border-tertiary:active,
-.button.border-tertiary:hover,
-.tertiary-bg {
+.secondary-hover.active,
+.secondary-hover:active,
+.secondary-hover:focus,
+.secondary-hover:hover {
+    background-color: #572c6e;
+    color: #ffffff;
+}
+
+.tertiary {
     background-color: #222;
     color: #ffffff;
 }
 
-.button.primary-bg.active,
-.button.primary-bg:active,
-.button.primary-bg:hover {
-    background-color: #005ce6;
+.tertiary-hover.active,
+.tertiary-hover:active,
+.tertiary-hover:focus,
+.tertiary-hover:hover {
+    background-color: #151515;
+    color: #ffffff;
 }
 
-.button.secondary-bg.active,
-.button.secondary-bg:active,
-.button.secondary-bg:hover {
-    background-color: #572c6e;
-}
-
-.button.tertiary-bg.active,
-.button.tertiary-bg:active,
-.button.tertiary-bg:hover {
-    background-color: #572c6e;
-}
-
-.button.border-success.active,
-.button.border-success:active,
-.button.border-success:hover,
-.success-bg {
+.success {
     background-color: #393;
     color: #ffffff;
 }
 
-.button.border-warning.active,
-.button.border-warning:active,
-.button.border-warning:hover,
-.warning-bg {
+.success-hover.active,
+.success-hover:active,
+.success-hover:focus,
+.success-hover:hover {
+    background-color: #2d862d;
+    color: #ffffff;
+}
+
+.warning {
     background-color: #fa0;
     color: #000000;
 }
 
-.button.border-danger.active,
-.button.border-danger:active,
-.button.border-danger:hover,
-.danger-bg {
+.warning-hover.active,
+.warning-hover:active,
+.warning-hover:focus,
+.warning-hover:hover {
+    background-color: #e69900;
+    color: #000000;
+}
+
+.danger {
     background-color: #c00;
     color: #ffffff;
 }
 
-.button.success-bg.active,
-.button.success-bg:active,
-.button.success-bg:hover {
-    background-color: #2d862d;
-}
-
-.button.warning-bg.active,
-.button.warning-bg:active,
-.button.warning-bg:hover {
-    background-color: #e69900;
-}
-
-.button.danger-bg.active,
-.button.danger-bg:active,
-.button.danger-bg:hover {
+.danger-hover.active,
+.danger-hover:active,
+.danger-hover:focus,
+.danger-hover:hover {
     background-color: #b30000;
+    color: #ffffff;
 }
 
 .disabled {

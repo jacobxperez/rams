@@ -521,7 +521,6 @@ body > .container:last-child {
 
 .primary-hover.active,
 .primary-hover:active,
-.primary-hover:focus,
 .primary-hover:hover {
     background-color: #005ce6;
     color: #ffffff;
@@ -534,7 +533,6 @@ body > .container:last-child {
 
 .secondary-hover.active,
 .secondary-hover:active,
-.secondary-hover:focus,
 .secondary-hover:hover {
     background-color: #002d70;
     color: #ffffff;
@@ -547,7 +545,6 @@ body > .container:last-child {
 
 .tertiary-hover.active,
 .tertiary-hover:active,
-.tertiary-hover:focus,
 .tertiary-hover:hover {
     background-color: #151515;
     color: #ffffff;
@@ -560,7 +557,6 @@ body > .container:last-child {
 
 .success-hover.active,
 .success-hover:active,
-.success-hover:focus,
 .success-hover:hover {
     background-color: #2d862d;
     color: #ffffff;
@@ -573,7 +569,6 @@ body > .container:last-child {
 
 .warning-hover.active,
 .warning-hover:active,
-.warning-hover:focus,
 .warning-hover:hover {
     background-color: #e69900;
     color: #000000;
@@ -586,7 +581,6 @@ body > .container:last-child {
 
 .danger-hover.active,
 .danger-hover:active,
-.danger-hover:focus,
 .danger-hover:hover {
     background-color: #b30000;
     color: #ffffff;

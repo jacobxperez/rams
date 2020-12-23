@@ -1,18 +1,15 @@
 // Buttons
 // ----------------------------------------------------------------------------/
-.button(@class; @bg; @bg-hover; @color) {
+.button(@class; @bg; @color; @hover) {
     .button-@{class} {
-        background-color: @background-color;
+        background-color: @bg;
         color: @color;
 
+        &.active,
         &:focus,
         &:hover,
         &:active {
-            background-color: @bg-hover;
-        }
-
-        &:active {
-            background-color: @bg-hover;
+            background-color: @hover;
         }
     }
 }

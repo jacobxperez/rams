@@ -302,6 +302,7 @@ input[type=button] {
     padding: .5rem .75rem;
     color: #555;
     cursor: pointer;
+    transition: all .3s ease-in-out 0s;
 }
 
 .button:active,
@@ -489,6 +490,30 @@ body > .container:last-child {
     display: block;
 }
 
+.primary-text {
+    color: #06f;
+}
+
+.secondary-text {
+    color: #003789;
+}
+
+.tertiary-text {
+    color: #222;
+}
+
+.success-text {
+    color: #393;
+}
+
+.warning-text {
+    color: #fa0;
+}
+
+.danger-text {
+    color: #c00;
+}
+
 .primary {
     background-color: #06f;
     color: #ffffff;
@@ -503,7 +528,7 @@ body > .container:last-child {
 }
 
 .secondary {
-    background-color: #663380;
+    background-color: #003789;
     color: #ffffff;
 }
 
@@ -511,7 +536,7 @@ body > .container:last-child {
 .secondary-hover:active,
 .secondary-hover:focus,
 .secondary-hover:hover {
-    background-color: #572c6e;
+    background-color: #002d70;
     color: #ffffff;
 }
 
@@ -1553,32 +1578,26 @@ body > .container:last-child {
 
 .border-primary {
     border-color: #06f;
-    color: #06f;
 }
 
 .border-secondary {
-    border-color: #663380;
-    color: #663380;
+    border-color: #003789;
 }
 
 .border-tertiary {
     border-color: #222;
-    color: #222;
 }
 
 .border-success {
     border-color: #393;
-    color: #393;
 }
 
 .border-warning {
     border-color: #fa0;
-    color: #fa0;
 }
 
 .border-danger {
     border-color: #c00;
-    color: #c00;
 }
 
 .flex {

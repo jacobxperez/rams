@@ -14,7 +14,6 @@
     line-height: inherit;
     text-align: inherit;
     vertical-align: baseline;
-    background-color: inherit;
     color: inherit;
     outline: 0;
 }
@@ -256,7 +255,6 @@ textarea {
     width: 100%;
     padding: .5rem .75rem;
     border: .0625rem solid rgba(0, 0, 0, 0.3);
-    box-shadow: none;
 }
 
 input[type=date]:focus,
@@ -275,7 +273,6 @@ input[type=week]:focus,
 select:focus,
 textarea:focus {
     border-color: rgba(0, 0, 0, 0.5);
-    box-shadow: none;
 }
 
 textarea {
@@ -284,17 +281,17 @@ textarea {
     resize: vertical;
 }
 
+[type="button"],
+[type="reset"],
+[type="submit"],
 button,
-input[type="submit"],
-select,
-input[type=button] {
+select {
     overflow: visible;
     text-transform: none;
 }
 
 :not([type=submit]):invalid {
     border-color: #c00;
-    box-shadow: none;
 }
 
 .button {
@@ -319,6 +316,7 @@ input[type=button] {
 .link,
 a {
     text-decoration: none;
+    background-color: transparent;
     color: #06f;
     cursor: pointer;
 }
@@ -337,6 +335,10 @@ a:focus {
     outline-offset: -0.125rem;
 }
 
+.leading-top {
+    margin-top: 1.5rem;
+}
+
 .leading,
 blockquote,
 dl,
@@ -353,10 +355,6 @@ pre,
 table,
 ul {
     margin-bottom: 1.5rem;
-}
-
-.leading-top {
-    margin-top: 1.5rem;
 }
 
 .container {
@@ -484,6 +482,7 @@ body > .container:last-child {
     width: 100%;
     margin-bottom: 0;
     min-width: 10rem;
+    background-color: #fff;
 }
 
 .active + .ghost-box {

@@ -90,10 +90,10 @@
 @container-margin-bottom: @base-line-height * 4;
 @container-gap: 20px;
 
-// min width
+// min width 320px
 @container-min-width: (280px + (@container-gap * 2));
 
-// max width
+// max width 960px
 @container-max-width: (940px + (@container-gap * 2));
 
 
@@ -196,11 +196,11 @@
 
 // Form
 // ----------------------------------------------------------------------------/
-@form-padding-y: @base-padding-y;
-@form-padding-x: @base-padding-x;
-
 @form-background-color: false;
 @form-color: false;
+
+@form-padding-y: @base-padding-y;
+@form-padding-x: @base-padding-x;
 
 @form-border-width: @base-border-width;
 @form-border-style: @base-border-style;
@@ -260,13 +260,13 @@
 // Ghost Box
 // ----------------------------------------------------------------------------/
 @ghost-box-min-width: 160px;
+@ghost-box-background-color: @background-color;
 
 
 // Iconography
 // ----------------------------------------------------------------------------/
 @icon-font-name: "icons";
 @icon-font-path: "../fonts/icons/";
-
 @icon-font-size: @base-font-size;
 @icon-line-height: 10px;
 

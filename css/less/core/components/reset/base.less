@@ -34,7 +34,7 @@ summary {
 }
 
 html {
-    .font-size(@base-font-size; @root-font-size; %);
+    .font-size(@base-font-size; 16px; %);
 
     & when not (@scale-font-size = false) {
         font-size: @scale-font-size;

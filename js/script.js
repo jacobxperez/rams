@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function() {
             });
         } // end for loop
 
-        // Hide ghost-box on window click
+        // Hide drop-box on window click
         document.addEventListener("click", function(e) {
             // check if target is not dropdown
             if (e.target !== getToggleReset) {

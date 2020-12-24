@@ -477,15 +477,16 @@ body > .container:last-child {
     padding: .5rem .75rem;
 }
 
-.ghost-box {
+.drop-box {
     display: none;
     width: 100%;
     margin-bottom: 0;
     min-width: 10rem;
     background-color: #fff;
+    color: #555;
 }
 
-.active + .ghost-box {
+.active + .drop-box {
     display: block;
 }
 

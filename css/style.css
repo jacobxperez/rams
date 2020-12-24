@@ -63,27 +63,27 @@ h6 {
 
 .h1,
 h1 {
-    font-size: 3.125rem;
+    font-size: 2.5rem;
 }
 
 .h2,
 h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
 }
 
 .h3,
 h3 {
-    font-size: 2rem;
+    font-size: 1.5625rem;
 }
 
 .h4,
 h4 {
-    font-size: 1.5625rem;
+    font-size: 1.25rem;
 }
 
 .h5,
 h5 {
-    font-size: 1.25rem;
+    font-size: 1rem;
 }
 
 .h6,
@@ -118,7 +118,7 @@ mark {
 small,
 sub,
 sup {
-    font-size: .8125rem;
+    font-size: .75rem;
 }
 
 sub,
@@ -165,7 +165,6 @@ blockquote small:before {
 
 blockquote small {
     display: block;
-    line-height: 1.84615385;
 }
 
 code,
@@ -1820,6 +1819,35 @@ body > .container:last-child {
         grid-column: span 8;
     }
 
+    .h1,
+    h1 {
+        font-size: 3.375rem;
+    }
+
+    .h2,
+    h2 {
+        font-size: 2.75rem;
+    }
+
+    .h3,
+    h3 {
+        font-size: 2.125rem;
+    }
+
+    .h4,
+    h4 {
+        font-size: 1.6875rem;
+    }
+
+    .h5,
+    h5 {
+        font-size: 1.375rem;
+    }
+
+    blockquote {
+        font-size: 2.125rem;
+    }
+
     .lg-block,
     .md-none,
     .sm-block {
@@ -1877,6 +1905,35 @@ body > .container:last-child {
 
     .lg-span-12 {
         grid-column: span 12;
+    }
+
+    .h1,
+    h1 {
+        font-size: 3.75rem;
+    }
+
+    .h2,
+    h2 {
+        font-size: 3rem;
+    }
+
+    .h3,
+    h3 {
+        font-size: 2.375rem;
+    }
+
+    .h4,
+    h4 {
+        font-size: 1.875rem;
+    }
+
+    .h5,
+    h5 {
+        font-size: 1.5rem;
+    }
+
+    blockquote {
+        font-size: 2.375rem;
     }
 
     .lg-none,

@@ -13,32 +13,32 @@ h6 {
 
 .h1,
 h1 {
-    .font-size(@h1-font-size);
+    .font-size(@h2-font-size);
 }
 
 .h2,
 h2 {
-    .font-size(@h2-font-size);
+    .font-size(@h3-font-size);
 }
 
 .h3,
 h3 {
-    .font-size(@h3-font-size);
+    .font-size(@h4-font-size);
 }
 
 .h4,
 h4 {
-    .font-size(@h4-font-size);
+    .font-size(@h5-font-size);
 }
 
 .h5,
 h5 {
-    .font-size(@h5-font-size);
+    .font-size(@h6-font-size);
 }
 
 .h6,
 h6 {
-    .font-size(@h6-font-size);
+    .font-size(@base-font-size);
 }
 
 p {
@@ -95,4 +95,58 @@ hr {
     height: 1px;
     .border-top(@hr-border-width; @hr-border-style; @hr-border-color);
     &:extend(.leading);
+}
+
+.medium-type-scale () {
+    .h1,
+    h1 {
+        .font-size((ceil(@h2-font-size * @type-scale-medium)));
+    }
+
+    .h2,
+    h2 {
+        .font-size((ceil(@h3-font-size * @type-scale-medium)));
+    }
+
+    .h3,
+    h3 {
+        .font-size((ceil(@h4-font-size * @type-scale-medium)));
+    }
+
+    .h4,
+    h4 {
+        .font-size((ceil(@h5-font-size * @type-scale-medium)));
+    }
+
+    .h5,
+    h5 {
+        .font-size((ceil(@base-font-size * @type-scale-medium)));
+    }
+}
+
+.large-type-scale () {
+    .h1,
+    h1 {
+        .font-size((ceil(@h2-font-size * @type-scale-large)));
+    }
+
+    .h2,
+    h2 {
+        .font-size((ceil(@h3-font-size * @type-scale-large)));
+    }
+
+    .h3,
+    h3 {
+        .font-size((ceil(@h4-font-size * @type-scale-large)));
+    }
+
+    .h4,
+    h4 {
+        .font-size((ceil(@h5-font-size * @type-scale-large)));
+    }
+
+    .h5,
+    h5 {
+        .font-size((ceil(@base-font-size * @type-scale-large)));
+    }
 }

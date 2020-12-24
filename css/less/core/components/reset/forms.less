@@ -21,7 +21,6 @@ textarea {
     .border-radius(@form-border-radius);
     .background-color(@form-background-color);
     .color(@form-color);
-    box-shadow: none;
 }
 
 input[type=date]:focus,
@@ -40,7 +39,6 @@ input[type=week]:focus,
 select:focus,
 textarea:focus {
     border-color: @form-border-color-focus;
-    box-shadow: none;
 }
 
 textarea {
@@ -50,14 +48,14 @@ textarea {
 }
 
 button,
-input[type=button],
-input[type="submit"],
-select {
+select,
+[type="button"],
+[type="reset"],
+[type="submit"] {
     overflow: visible;
     text-transform: none;
 }
 
 :not([type=submit]):invalid {
-    .border-color(@danger);
-    box-shadow: none;
+    border-color: @danger;
 }

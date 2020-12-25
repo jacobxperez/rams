@@ -1783,6 +1783,35 @@ body > .container:last-child {
     }
 }
 @media screen and (min-width: 42.50390625em) and (max-width: 61.24609375em) {
+    .h1,
+    h1 {
+        font-size: 3.125rem;
+    }
+
+    .h2,
+    h2 {
+        font-size: 2.625rem;
+    }
+
+    .h3,
+    h3 {
+        font-size: 2.125rem;
+    }
+
+    .h4,
+    h4 {
+        font-size: 1.8125rem;
+    }
+
+    .h5,
+    h5 {
+        font-size: 1.4375rem;
+    }
+
+    blockquote {
+        font-size: 2.625rem;
+    }
+
     .grid {
         grid-template-columns: repeat(8, 1fr);
     }
@@ -1819,35 +1848,6 @@ body > .container:last-child {
         grid-column: span 8;
     }
 
-    .h1,
-    h1 {
-        font-size: 3.125rem;
-    }
-
-    .h2,
-    h2 {
-        font-size: 2.625rem;
-    }
-
-    .h3,
-    h3 {
-        font-size: 2.125rem;
-    }
-
-    .h4,
-    h4 {
-        font-size: 1.8125rem;
-    }
-
-    .h5,
-    h5 {
-        font-size: 1.4375rem;
-    }
-
-    blockquote {
-        font-size: 2.625rem;
-    }
-
     .lg-block,
     .md-none,
     .sm-block {
@@ -1855,6 +1855,35 @@ body > .container:last-child {
     }
 }
 @media screen and (min-width: 61.25em) {
+    .h1,
+    h1 {
+        font-size: 3.5625rem;
+    }
+
+    .h2,
+    h2 {
+        font-size: 2.9375rem;
+    }
+
+    .h3,
+    h3 {
+        font-size: 2.4375rem;
+    }
+
+    .h4,
+    h4 {
+        font-size: 2.0625rem;
+    }
+
+    .h5,
+    h5 {
+        font-size: 1.625rem;
+    }
+
+    blockquote {
+        font-size: 2.9375rem;
+    }
+
     .grid {
         grid-template-columns: repeat(12, 1fr);
     }
@@ -1905,35 +1934,6 @@ body > .container:last-child {
 
     .lg-span-12 {
         grid-column: span 12;
-    }
-
-    .h1,
-    h1 {
-        font-size: 3.5625rem;
-    }
-
-    .h2,
-    h2 {
-        font-size: 2.9375rem;
-    }
-
-    .h3,
-    h3 {
-        font-size: 2.4375rem;
-    }
-
-    .h4,
-    h4 {
-        font-size: 2.0625rem;
-    }
-
-    .h5,
-    h5 {
-        font-size: 1.625rem;
-    }
-
-    blockquote {
-        font-size: 2.9375rem;
     }
 
     .lg-none,

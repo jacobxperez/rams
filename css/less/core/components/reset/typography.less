@@ -38,7 +38,7 @@ h5 {
 
 .h6,
 h6 {
-    .font-size(@h6-font-size);
+    .font-size(@base-font-size);
 }
 
 p {
@@ -120,7 +120,7 @@ hr {
 
     .h5,
     h5 {
-        .font-size((ceil(@h6-font-size * @type-scale-medium)));
+        .font-size((ceil(@base-font-size * @type-scale-medium)));
     }
 }
 
@@ -147,6 +147,6 @@ hr {
 
     .h5,
     h5 {
-        .font-size((ceil(@h6-font-size * @type-scale-large)));
+        .font-size((ceil(@base-font-size * @type-scale-large)));
     }
 }

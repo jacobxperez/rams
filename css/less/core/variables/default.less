@@ -45,8 +45,8 @@
 
 // type scale
 @type-scale-small: 1.2;
-@type-scale-medium: 1.4;
-@type-scale-large: 1.6;
+@type-scale-medium: 1.414;
+@type-scale-large: 1.618;
 
 // heading 1
 @h1-font-size: (ceil(@h2-font-size * @type-scale-small));
@@ -61,10 +61,7 @@
 @h4-font-size: (ceil(@h5-font-size * @type-scale-small));
 
 // heading 5
-@h5-font-size: (ceil(@h6-font-size * @type-scale-small));
-
-// heading 6
-@h6-font-size: @base-font-size;
+@h5-font-size: (ceil(@base-font-size * @type-scale-small));
 
 // small
 @small-font-size: 12px;
@@ -173,7 +170,6 @@
 // Blockquote
 // ----------------------------------------------------------------------------/
 @blockquote-font-family: @font-serif;
-@blockquote-font-size: @h3-font-size;
 @blockquote-font-style: italic;
 
 

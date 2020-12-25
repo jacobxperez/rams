@@ -13,32 +13,32 @@ h6 {
 
 .h1,
 h1 {
-    .font-size(@h2-font-size);
+    .font-size(@h1-font-size);
 }
 
 .h2,
 h2 {
-    .font-size(@h3-font-size);
+    .font-size(@h2-font-size);
 }
 
 .h3,
 h3 {
-    .font-size(@h4-font-size);
+    .font-size(@h3-font-size);
 }
 
 .h4,
 h4 {
-    .font-size(@h5-font-size);
+    .font-size(@h4-font-size);
 }
 
 .h5,
 h5 {
-    .font-size(@h6-font-size);
+    .font-size(@h5-font-size);
 }
 
 .h6,
 h6 {
-    .font-size(@base-font-size);
+    .font-size(@h6-font-size);
 }
 
 p {
@@ -120,7 +120,7 @@ hr {
 
     .h5,
     h5 {
-        .font-size((ceil(@base-font-size * @type-scale-medium)));
+        .font-size((ceil(@h6-font-size * @type-scale-medium)));
     }
 }
 
@@ -147,6 +147,6 @@ hr {
 
     .h5,
     h5 {
-        .font-size((ceil(@base-font-size * @type-scale-large)));
+        .font-size((ceil(@h6-font-size * @type-scale-large)));
     }
 }

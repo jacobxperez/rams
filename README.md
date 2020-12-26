@@ -14,9 +14,9 @@ Modular Front-end Framework for Web Designers — Built with [LESS](http://lessc
 
 ## About
 
-[Essentials](https://jacobxperez.github.io/essentials/) is a modular front-end framework
-for web designers. Unlike other monolith frameworks, Essentials provides a minimum
-set of components, yet allows for the creation of unique individual designs.
+Unlike other monolith frameworks, [Essentials](https://jacobxperez.github.io/essentials/) 
+provides a minimum set of components, yet allows for the creation of unique individual
+designs. By removing the unnecessary the essential comes to the light.
 
 ## Getting Started
 

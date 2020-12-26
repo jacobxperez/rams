@@ -20,10 +20,10 @@ forefront. The product becomes useful, understandable, easy to use, and long-las
 
 ## Design Principles
 
-In The Power of Less, author Leo Babauta demonstrates how to streamline your
-life by identifying the essential and eliminating the unnecessary. By focusing
-on the essential and allowing everything else to drop away you will become less
-stressed and more productive.
+In The Power of Less, author [Leo Babauta](https://leobabauta.com/) demonstrates
+how to streamline your life by identifying the essential and eliminating the
+unnecessary. By focusing on the essential and allowing everything else to drop
+away you will become less stressed and more productive.
 
 1. Identify the essential
 2. Eliminate the rest

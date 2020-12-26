@@ -1,6 +1,6 @@
 # [Essentials](https://jacobxperez.github.io/essentials/)
 
-Modular Front-end Framework for Web Designers — Built with [LESS](http://lesscss.org/)
+Minimal Front-end Framework for Web Designers — Built with [LESS](http://lesscss.org/)
 
 ## Table of Contents
 
@@ -14,8 +14,8 @@ Modular Front-end Framework for Web Designers — Built with [LESS](http://lessc
 
 ## About
 
-Unlike other monolith frameworks, [Essentials](https://jacobxperez.github.io/essentials/) 
-provides a minimum set of components, yet allows for the creation of unique individual
+Unlike other monolith frameworks, [Essentials](https://jacobxperez.github.io/essentials/)
+provides a minimum set of components that allows for the creation of unique individual
 designs. By removing the unnecessary the essential comes to the light.
 
 ## Getting Started

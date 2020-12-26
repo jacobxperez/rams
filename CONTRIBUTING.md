@@ -20,8 +20,8 @@ forefront. The product becomes useful, understandable, easy to use, and long-las
 
 ## Design Principles
 
-In the book The Power of Less, author Leo Babauta demonstrates how to streamline
-your life by identifying the essential and eliminating the unnecessary. By focusing
+In The Power of Less, author Leo Babauta demonstrates how to streamline your
+life by identifying the essential and eliminating the unnecessary. By focusing
 on the essential and allowing everything else to drop away you will become less
 stressed and more productive.
 

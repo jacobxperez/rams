@@ -1691,68 +1691,72 @@ body > .container:last-child {
     float: right;
 }
 
-.content-start {
-    justify-content: start;
-}
-
-.content-end {
-    justify-content: end;
-}
-
-.content-center {
-    justify-content: center;
-}
-
-.content-stretch {
-    justify-content: stretch;
-}
-
-.content-around {
-    justify-content: space-around;
-}
-
-.content-between {
-    justify-content: space-between;
-}
-
-.content-evenly {
-    justify-content: space-evenly;
-}
-
-.self-start {
+.row-start {
     justify-self: start;
 }
 
-.self-end {
+.row-end {
     justify-self: end;
 }
 
-.self-center {
+.row-center {
     justify-self: center;
 }
 
-.self-stretch {
+.row-stretch {
     justify-self: stretch;
 }
 
-.align-start {
+.rows-start {
+    justify-items: start;
+}
+
+.rows-end {
+    justify-items: end;
+}
+
+.rows-center {
+    justify-items: center;
+}
+
+.rows-stretch {
+    justify-items: stretch;
+}
+
+.column-start {
     align-self: flex-start;
 }
 
-.align-end {
+.column-end {
     align-self: flex-end;
 }
 
-.align-center {
+.column-center {
     align-self: center;
 }
 
-.align-baseline {
+.column-baseline {
     align-self: baseline;
 }
 
-.align-stretch {
+.column-stretch {
     align-self: stretch;
+}
+
+.columns-start {
+    align-items: start;
+}
+
+.columns-end {
+    align-items: end;
+}
+
+.columns-center {
+    align-items: center;
+}
+
+.columns-stretch {
+    align-items: stretch;
 }
 @media screen and (max-width: 42.5em) {
     .grid {

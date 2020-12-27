@@ -13,27 +13,27 @@ h6 {
 
 .h1,
 h1 {
-    .font-size(@h1-font-size);
+    .font-size(@h1-font-size-small);
 }
 
 .h2,
 h2 {
-    .font-size(@h2-font-size);
+    .font-size(@h2-font-size-small);
 }
 
 .h3,
 h3 {
-    .font-size(@h3-font-size);
+    .font-size(@h3-font-size-small);
 }
 
 .h4,
 h4 {
-    .font-size(@h4-font-size);
+    .font-size(@h4-font-size-small);
 }
 
 .h5,
 h5 {
-    .font-size(@h5-font-size);
+    .font-size(@h5-font-size-small);
 }
 
 .h6,
@@ -100,53 +100,53 @@ hr {
 .medium-type-scale () {
     .h1,
     h1 {
-        .font-size((ceil(@h2-font-size * @type-scale-medium)));
+        .font-size(@h1-font-size-medium);
     }
 
     .h2,
     h2 {
-        .font-size((ceil(@h3-font-size * @type-scale-medium)));
+        .font-size(@h2-font-size-medium);
     }
 
     .h3,
     h3 {
-        .font-size((ceil(@h4-font-size * @type-scale-medium)));
+        .font-size(@h3-font-size-medium);
     }
 
     .h4,
     h4 {
-        .font-size((ceil(@h5-font-size * @type-scale-medium)));
+        .font-size(@h4-font-size-medium);
     }
 
     .h5,
     h5 {
-        .font-size((ceil(@base-font-size * @type-scale-medium)));
+        .font-size(@h5-font-size-medium);
     }
 }
 
 .large-type-scale () {
     .h1,
     h1 {
-        .font-size((ceil(@h2-font-size * @type-scale-large)));
+        .font-size(@h1-font-size-large);
     }
 
     .h2,
     h2 {
-        .font-size((ceil(@h3-font-size * @type-scale-large)));
+        .font-size(@h2-font-size-large);
     }
 
     .h3,
     h3 {
-        .font-size((ceil(@h4-font-size * @type-scale-large)));
+        .font-size(@h3-font-size-large);
     }
 
     .h4,
     h4 {
-        .font-size((ceil(@h5-font-size * @type-scale-large)));
+        .font-size(@h4-font-size-large);
     }
 
     .h5,
     h5 {
-        .font-size((ceil(@base-font-size * @type-scale-large)));
+        .font-size(@h5-font-size-large);
     }
 }

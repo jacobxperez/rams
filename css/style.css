@@ -1789,22 +1789,22 @@ body > .container:last-child {
 
     .h2,
     h2 {
-        font-size: 2.625rem;
+        font-size: 2.5rem;
     }
 
     .h3,
     h3 {
-        font-size: 2.125rem;
+        font-size: 2rem;
     }
 
     .h4,
     h4 {
-        font-size: 1.8125rem;
+        font-size: 1.5625rem;
     }
 
     .h5,
     h5 {
-        font-size: 1.4375rem;
+        font-size: 1.25rem;
     }
 
     .grid {
@@ -1852,27 +1852,27 @@ body > .container:last-child {
 @media screen and (min-width: 61.25em) {
     .h1,
     h1 {
-        font-size: 3.5625rem;
+        font-size: 4rem;
     }
 
     .h2,
     h2 {
-        font-size: 2.9375rem;
+        font-size: 3.0625rem;
     }
 
     .h3,
     h3 {
-        font-size: 2.4375rem;
+        font-size: 2.3125rem;
     }
 
     .h4,
     h4 {
-        font-size: 2.0625rem;
+        font-size: 1.75rem;
     }
 
     .h5,
     h5 {
-        font-size: 1.625rem;
+        font-size: 1.3125rem;
     }
 
     .grid {

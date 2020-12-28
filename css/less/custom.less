@@ -12,31 +12,31 @@
 
 // Grid Areas: Use this template to build your own custom grid
 // ----------------------------------------------------------------------------/
-// .grid {
-//     display: grid;
-//     grid-gap: 1.25em;
-//     grid-template-columns: repeat(4, 1fr);
-//     grid-template-areas:
-//         "a a a a"
-//         "b c c c"
-//         "d d d d";
-// }
-//
-// header {
-//     grid-area: a;
-// }
-//
-// aside {
-//     grid-area: b;
-// }
-//
-// article {
-//     grid-area: c;
-// }
-//
-// footer {
-//     grid-area: d;
-// }
+.grid {
+    display: grid;
+    grid-gap: 1.25em;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+        "a a a a"
+        "b c c c"
+        "d d d d";
+}
+
+header {
+    grid-area: a;
+}
+
+aside {
+    grid-area: b;
+}
+
+article {
+    grid-area: c;
+}
+
+footer {
+    grid-area: d;
+}
 
 
 // Small Breakpoint
@@ -44,13 +44,13 @@
 .small-screen () {
     // Add code or import styles for small screens
 
-    // .grid {
-    //     grid-template-areas:
-    //         "a a a a"
-    //         "b b b b"
-    //         "c c c c"
-    //         "d d d d";
-    // }
+    .grid {
+        grid-template-areas:
+            "a a a a"
+            "b b b b"
+            "c c c c"
+            "d d d d";
+    }
 }
 
 

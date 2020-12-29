@@ -1654,7 +1654,8 @@ footer {
 }
 @media screen and (max-width: 42.5em) {
     .grid {
-        grid-template-areas: "a a a a" "b b b b" "c c c c" "d d d d";
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: "a a" "b b" "c c" "d d";
     }
 
     .lg-block,

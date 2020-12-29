@@ -48,27 +48,30 @@
 @type-scale-medium: 1.25;
 @type-scale-large: 1.3;
 
-// ------------------------------------------------------------------ //
+// heading 1
 @h1-font-size-small: (ceil(@h2-font-size-small * @type-scale-small));
 @h1-font-size-medium: (ceil(@h2-font-size-medium * @type-scale-medium));
 @h1-font-size-large: (ceil(@h2-font-size-large * @type-scale-large));
 
+// heading 2
 @h2-font-size-small: (ceil(@h3-font-size-small * @type-scale-small));
 @h2-font-size-medium: (ceil(@h3-font-size-medium * @type-scale-medium));
 @h2-font-size-large: (ceil(@h3-font-size-large * @type-scale-large));
 
+// heading 3
 @h3-font-size-small: (ceil(@h4-font-size-small * @type-scale-small));
 @h3-font-size-medium: (ceil(@h4-font-size-medium * @type-scale-medium));
 @h3-font-size-large: (ceil(@h4-font-size-large * @type-scale-large));
 
+// heading 4
 @h4-font-size-small: (ceil(@h5-font-size-small * @type-scale-small));
 @h4-font-size-medium: (ceil(@h5-font-size-medium * @type-scale-medium));
 @h4-font-size-large: (ceil(@h5-font-size-large * @type-scale-large));
 
+// heading 5
 @h5-font-size-small: (ceil(@base-font-size * @type-scale-small));
 @h5-font-size-medium: (ceil(@base-font-size * @type-scale-medium));
 @h5-font-size-large: (ceil(@base-font-size * @type-scale-large));
-// ------------------------------------------------------------------ //
 
 // small
 @small-font-size: 12px;
@@ -95,21 +98,17 @@
 @container-max-width: (940px + (@container-gap * 2));
 
 
-// Grid System
+// Breakpoints
 // ----------------------------------------------------------------------------/
-@grid-wrapper-class: grid;
-@grid-column-class: span-;
-@grid-column-gap: @container-gap;
-@grid-row-gap: false;
+// small screen
+@screen-small-max-width: (640px + (@container-gap * 2));
 
-// small grid
-@small-columns: 4;
+// medium screen
+@screen-medium-min-width: (@screen-small-max-width + 1 / @base-font-size);
+@screen-medium-max-width: (@screen-large-min-width - 1 / @base-font-size);
 
-// medium grid
-@medium-columns: 8;
-
-// large grid
-@large-columns: 12;
+// large screens
+@screen-large-min-width: (@container-max-width);
 
 
 // Responsive Prefix
@@ -122,19 +121,6 @@
 
 // large screen
 @large-prefix: lg-;
-
-
-// Breakpoints
-// ----------------------------------------------------------------------------/
-// small screen
-@screen-small-max-width: (640px + (@container-gap * 2));
-
-// medium screen
-@screen-medium-min-width: (@screen-small-max-width + 1 / @base-font-size);
-@screen-medium-max-width: (@screen-large-min-width - 1 / @base-font-size);
-
-// large screens
-@screen-large-min-width: (@container-max-width);
 
 
 // Box Model

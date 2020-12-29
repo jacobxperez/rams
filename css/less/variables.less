@@ -74,21 +74,17 @@
 // @container-max-width: (940px + (@container-gap * 2));
 
 
-// Grid System
+// Breakpoints
 // ----------------------------------------------------------------------------/
-// @grid-wrapper-class: grid;
-// @grid-column-class: span-;
-// @grid-column-gap: @container-gap;
-// @grid-row-gap: false;
+// small screen
+// @screen-small-max-width: (640px + (@container-gap * 2));
 
-// small grid
-// @small-columns: 4;
+// medium screen
+// @screen-medium-min-width: (@screen-small-max-width + 1 / @base-font-size);
+// @screen-medium-max-width: (@screen-large-min-width - 1 / @base-font-size);
 
-// medium grid
-// @medium-columns: 8;
-
-// large grid
-// @large-columns: 12;
+// large screens
+// @screen-large-min-width: (@container-max-width);
 
 
 // Responsive Prefix
@@ -101,19 +97,6 @@
 
 // large screen
 // @large-prefix: lg-;
-
-
-// Breakpoints
-// ----------------------------------------------------------------------------/
-// small screen
-// @screen-small-max-width: (640px + (@container-gap * 2));
-
-// medium screen
-// @screen-medium-min-width: (@screen-small-max-width + 1 / @base-font-size);
-// @screen-medium-max-width: (@screen-large-min-width - 1 / @base-font-size);
-
-// large screens
-// @screen-large-min-width: (@container-max-width);
 
 
 // Box Model

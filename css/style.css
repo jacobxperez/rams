@@ -1481,7 +1481,7 @@ body > .container:last-child {
 
 .grid {
     display: grid;
-    grid-gap: 1.25em;
+    column-gap: 1.25rem;
     grid-template-columns: repeat(4, 1fr);
     grid-template-areas: "a a a a" "b c c c" "d d d d";
 }

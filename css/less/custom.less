@@ -7,51 +7,13 @@
 
 // Import custom modules or start writing them here
 // ----------------------------------------------------------------------------/
-// @import "modules/";
-
-
-// Grid Areas: Use this template to build your own custom grid
-// ----------------------------------------------------------------------------/
-.grid {
-    display: grid;
-    .column-gap(@container-gap);
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-areas:
-        "a a a a"
-        "b c c c"
-        "d d d d";
-}
-
-header {
-    grid-column: a;
-}
-
-aside {
-    grid-area: b;
-}
-
-article {
-    grid-area: c;
-}
-
-footer {
-    grid-column: d;
-}
+@import "modules/grid.less";
 
 
 // Small Breakpoint
 // ----------------------------------------------------------------------------/
 .small-screen () {
     // Add code or import styles for small screens
-
-    .grid {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-areas:
-            "a a"
-            "b b"
-            "c c"
-            "d d";
-    }
 }
 
 

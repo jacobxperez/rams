@@ -184,15 +184,15 @@ ul {
     list-style-type: none;
 }
 
-dl dl,
-dl ol,
-dl ul,
-ol dl,
-ol ol,
-ol ul,
-ul dl,
-ul ol,
-ul ul {
+.dl .dl,
+.dl .ol,
+.dl .ul,
+.ol .dl,
+.ol .ol,
+.ol .ul,
+.ul .dl,
+.ul .ol,
+.ul .ul {
     margin-bottom: 0;
 }
 
@@ -216,10 +216,6 @@ ul ul {
 .ul {
     padding-left: 1.5rem;
     list-style-position: outside;
-}
-
-nav ul {
-    margin-bottom: 0;
 }
 
 table {
@@ -337,9 +333,11 @@ a:focus {
     margin-top: 1.5rem;
 }
 
+.dl,
 .leading,
+.ol,
+.ul,
 blockquote,
-dl,
 h1,
 h2,
 h3,
@@ -347,11 +345,9 @@ h4,
 h5,
 h6,
 hr,
-ol,
 p,
 pre,
-table,
-ul {
+table {
     margin-bottom: 1.5rem;
 }
 

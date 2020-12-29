@@ -1487,7 +1487,7 @@ body > .container:last-child {
 }
 
 header {
-    grid-area: a;
+    grid-column: a;
 }
 
 aside {
@@ -1499,7 +1499,7 @@ article {
 }
 
 footer {
-    grid-area: d;
+    grid-column: d;
 }
 
 .inline {

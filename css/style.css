@@ -39,7 +39,6 @@ summary {
 
 html {
     font-size: 100%;
-    font-size: clamp(1rem, 1vw, 1.25rem);
 }
 
 body {

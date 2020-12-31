@@ -1488,10 +1488,6 @@ footer {
     grid-column: 1 / -1;
 }
 
-aside {
-    grid-column: span 1;
-}
-
 article {
     grid-column: span 3;
 }
@@ -1653,7 +1649,9 @@ article {
     }
 
     article,
-    aside {
+    section,
+    aside,
+    nav {
         grid-column: 1 / -1;
     }
 

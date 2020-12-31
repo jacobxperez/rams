@@ -293,7 +293,6 @@ select,
     padding: 0.5rem 0.75rem 0.5rem 0.75rem;
     color: #555;
     cursor: pointer;
-    transition: all 0.3s ease-in-out 0s;
 }
 
 .button:hover,
@@ -378,7 +377,6 @@ body>.container:last-child {
     display: block;
     padding: 0.5rem 0.75rem 0.5rem 0.75rem;
     color: #06f;
-    transition: all 0.3s ease-in-out 0s;
 }
 
 .nav-link.active,
@@ -1484,23 +1482,19 @@ body>.container:last-child {
     display: grid;
     column-gap: 1.25rem;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-areas: "a a a a""b c c c""d d d d";
 }
 
-header {
-    grid-column: a;
+header,
+footer {
+    grid-column: 1 / -1;
 }
 
 aside {
-    grid-area: b;
+    grid-column: span 1;
 }
 
 article {
-    grid-area: c;
-}
-
-footer {
-    grid-column: d;
+    grid-column: span 3;
 }
 
 .inline {
@@ -1657,7 +1651,11 @@ footer {
 @media screen and (max-width: 42.5em) {
     .grid {
         grid-template-columns: repeat(2, 1fr);
-        grid-template-areas: "a a""b b""c c""d d";
+    }
+
+    article,
+    aside {
+        grid-column: 1 / -1;
     }
 
     .sm-none,

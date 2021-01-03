@@ -85,30 +85,30 @@
 @hr-border-color: @base-border-color;
 
 
-// Page Container
+// Page wrapper
 // ----------------------------------------------------------------------------/
-@container-margin-top: @base-line-height * 2;
-@container-margin-bottom: @base-line-height * 4;
-@container-gap: 20px;
+@wrapper-margin-top: @base-line-height * 2;
+@wrapper-margin-bottom: @base-line-height * 4;
+@wrapper-gap: 20px;
 
 // min width
-@container-min-width: (280px + (@container-gap * 2));
+@wrapper-min-width: (280px + (@wrapper-gap * 2));
 
 // max width
-@container-max-width: (940px + (@container-gap * 2));
+@wrapper-max-width: (940px + (@wrapper-gap * 2));
 
 
 // Breakpoints
 // ----------------------------------------------------------------------------/
 // small screen
-@screen-small-max-width: (640px + (@container-gap * 2));
+@screen-small-max-width: (640px + (@wrapper-gap * 2));
 
 // medium screen
 @screen-medium-min-width: (@screen-small-max-width + 1 / @base-font-size);
 @screen-medium-max-width: (@screen-large-min-width - 1 / @base-font-size);
 
 // large screens
-@screen-large-min-width: (@container-max-width);
+@screen-large-min-width: (@wrapper-max-width);
 
 
 // Responsive Prefix

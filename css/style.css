@@ -349,7 +349,7 @@ table {
     margin-bottom: 1.5rem;
 }
 
-.container {
+.wrapper {
     display: grid;
     column-gap: 1.25rem;
     width: 100%;
@@ -364,11 +364,11 @@ table {
     max-width: 100%;
 }
 
-body>.container:first-child {
+body>.wrapper:first-child {
     margin-top: 3rem;
 }
 
-body>.container:last-child {
+body>.wrapper:last-child {
     margin-bottom: 6rem;
 }
 
@@ -1607,11 +1607,11 @@ section {
     top: 0;
 }
 
-.fixed-top+.container {
+.fixed-top+.wrapper {
     margin-top: 6rem;
 }
 
-.fixed-top .container>ul {
+.fixed-top .wrapper>ul {
     margin-left: -0.75rem;
     margin-right: -0.75rem;
 }
@@ -1751,7 +1751,7 @@ section {
         display: none;
     }
 
-    .container {
+    .wrapper {
         max-width: 100%;
         margin: 0;
         padding: 0;

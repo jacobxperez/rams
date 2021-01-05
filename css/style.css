@@ -433,7 +433,7 @@ body>.wrapper:last-child {
 }
 
 .dark-text {
-    color: #222;
+    color: #252525;
 }
 
 .success-text {
@@ -485,14 +485,14 @@ body>.wrapper:last-child {
 }
 
 .dark {
-    background-color: #222;
+    background-color: #252525;
     color: #ffffff;
 }
 
 .dark-hover.active,
 .dark-hover:hover,
 .dark-hover:active {
-    background-color: #151515;
+    background-color: #181818;
     color: #ffffff;
 }
 
@@ -1542,7 +1542,7 @@ section {
 }
 
 .border-dark {
-    border-color: #222;
+    border-color: #252525;
 }
 
 .border-success {

@@ -8,8 +8,8 @@
     color: @secondary;
 }
 
-.tertiary-text {
-    color: @tertiary;
+.dark-text {
+    color: @dark;
 }
 
 .success-text {
@@ -52,17 +52,31 @@
     }
 }
 
-.tertiary {
-    background-color: @tertiary;
-    color: @tertiary-text;
+.light {
+    background-color: @light;
+    color: @light-text;
 }
 
-.tertiary-hover {
+.light-hover {
     &.active,
     &:hover,
     &:active {
-        background-color: @tertiary-hover;
-        color: @tertiary-text;
+        background-color: @light-hover;
+        color: @light-text;
+    }
+}
+
+.dark {
+    background-color: @dark;
+    color: @dark-text;
+}
+
+.dark-hover {
+    &.active,
+    &:hover,
+    &:active {
+        background-color: @dark-hover;
+        color: @dark-text;
     }
 }
 

@@ -309,7 +309,7 @@ select,
 a {
     text-decoration: none;
     background-color: transparent;
-    color: #06f;
+    color: #05f;
     cursor: pointer;
 }
 
@@ -375,7 +375,7 @@ body>.wrapper:last-child {
 .nav-link {
     display: block;
     padding: 0.5rem 0.75rem 0.5rem 0.75rem;
-    color: #06f;
+    color: #05f;
 }
 
 .nav-link.active,
@@ -425,14 +425,14 @@ body>.wrapper:last-child {
 }
 
 .primary-text {
-    color: #06f;
+    color: #05f;
 }
 
 .secondary-text {
-    color: #003789;
+    color: #555;
 }
 
-.tertiary-text {
+.dark-text {
     color: #222;
 }
 
@@ -449,37 +449,49 @@ body>.wrapper:last-child {
 }
 
 .primary {
-    background-color: #06f;
+    background-color: #05f;
     color: #ffffff;
 }
 
 .primary-hover.active,
 .primary-hover:hover,
 .primary-hover:active {
-    background-color: #005ce6;
+    background-color: #004de6;
     color: #ffffff;
 }
 
 .secondary {
-    background-color: #003789;
+    background-color: #555;
     color: #ffffff;
 }
 
 .secondary-hover.active,
 .secondary-hover:hover,
 .secondary-hover:active {
-    background-color: #002d70;
+    background-color: #484848;
     color: #ffffff;
 }
 
-.tertiary {
+.light {
+    background-color: #fff;
+    color: #555;
+}
+
+.light-hover.active,
+.light-hover:hover,
+.light-hover:active {
+    background-color: #f2f2f2;
+    color: #555;
+}
+
+.dark {
     background-color: #222;
     color: #ffffff;
 }
 
-.tertiary-hover.active,
-.tertiary-hover:hover,
-.tertiary-hover:active {
+.dark-hover.active,
+.dark-hover:hover,
+.dark-hover:active {
     background-color: #151515;
     color: #ffffff;
 }
@@ -1522,14 +1534,14 @@ section {
 }
 
 .border-primary {
-    border-color: #06f;
+    border-color: #05f;
 }
 
 .border-secondary {
-    border-color: #003789;
+    border-color: #555;
 }
 
-.border-tertiary {
+.border-dark {
     border-color: #222;
 }
 

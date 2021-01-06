@@ -117,7 +117,7 @@ mark {
 small,
 sub,
 sup {
-    font-size: 0.75rem;
+    font-size: 0.75em;
 }
 
 sub,
@@ -558,7 +558,7 @@ body>.wrapper:last-child {
 [class^="icon-"]:before {
     position: relative;
     display: inline-block;
-    font-size: 1rem;
+    font-size: 1em;
     font-family: "icons";
     font-style: normal;
     font-weight: normal;

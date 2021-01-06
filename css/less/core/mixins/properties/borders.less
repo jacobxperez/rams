@@ -1,6 +1,6 @@
 // Borders
 // ----------------------------------------------------------------------------/
-.border(@width: @base-border-width; @style: solid; @color: @base-border-color; @base: @base-font-size; @unit: rem) {
+.border(@width: @border-width; @style: solid; @color: @border-color; @base: @font-size; @unit: rem) {
 
     & when not (@width = false) {
         @a: unit((@width / @base), @unit);
@@ -9,7 +9,7 @@
 
 }
 
-.border-top(@width: @base-border-width; @style: solid; @color: @base-border-color; @base: @base-font-size; @unit: rem) {
+.border-top(@width: @border-width; @style: solid; @color: @border-color; @base: @font-size; @unit: rem) {
 
     & when not (@width = false) {
         @a: unit((@width / @base), @unit);
@@ -18,7 +18,7 @@
 
 }
 
-.border-right(@width: @base-border-width; @style: solid; @color: @base-border-color; @base: @base-font-size; @unit: rem) {
+.border-right(@width: @border-width; @style: solid; @color: @border-color; @base: @font-size; @unit: rem) {
 
     & when not (@width = false) {
         @a: unit((@width / @base), @unit);
@@ -27,7 +27,7 @@
 
 }
 
-.border-bottom(@width: @base-border-width; @style: solid; @color: @base-border-color; @base: @base-font-size; @unit: rem) {
+.border-bottom(@width: @border-width; @style: solid; @color: @border-color; @base: @font-size; @unit: rem) {
 
     & when not (@width = false) {
         @a: unit((@width / @base), @unit);
@@ -36,7 +36,7 @@
 
 }
 
-.border-left(@width: @base-border-width; @style: solid; @color: @base-border-color; @base: @base-font-size; @unit: rem) {
+.border-left(@width: @border-width; @style: solid; @color: @border-color; @base: @font-size; @unit: rem) {
 
     & when not (@width = false) {
         @a: unit((@width / @base), @unit);
@@ -48,7 +48,7 @@
 
 // Borders Radius
 // ----------------------------------------------------------------------------/
-.border-radius(@top-left: @base-border-radius; @top-right: @base-border-radius; @bottom-right: @top-left; @bottom-left: @top-right; @base: @base-font-size; @unit: rem) {
+.border-radius(@top-left: @border-radius; @top-right: @border-radius; @bottom-right: @top-left; @bottom-left: @top-right; @base: @font-size; @unit: rem) {
 
     & when not (@top-left =  false) {
         @a: unit((@top-left / @base), @unit);
@@ -63,7 +63,7 @@
 
 // Border Color
 // ----------------------------------------------------------------------------/
-.border-color (@color: @base-border-color) {
+.border-color (@color: @border-color) {
 
     & when not (@color = false) {
         border-color: @color;

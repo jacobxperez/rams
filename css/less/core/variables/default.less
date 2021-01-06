@@ -31,15 +31,11 @@
 
 // Typography
 // ----------------------------------------------------------------------------/
-// font family
-@base-font-family: @font-sans;
-
-// font size
-@base-font-size: 16px;
+// main font
+@font-family: @font-sans;
+@font-size: 16px;
 @scale-font-size: false;
-
-// line height
-@base-line-height: 24px;
+@line-height: 24px;
 
 // headings
 @headings-font-family: false;
@@ -71,9 +67,9 @@
 @h4-font-size-large: (ceil(@h5-font-size-large * @type-scale-large));
 
 // heading 5
-@h5-font-size-small: (ceil(@base-font-size * @type-scale-small));
-@h5-font-size-medium: (ceil(@base-font-size * @type-scale-medium));
-@h5-font-size-large: (ceil(@base-font-size * @type-scale-large));
+@h5-font-size-small: (ceil(@font-size * @type-scale-small));
+@h5-font-size-medium: (ceil(@font-size * @type-scale-medium));
+@h5-font-size-large: (ceil(@font-size * @type-scale-large));
 
 // small
 @small-font-size: 12px;
@@ -83,14 +79,14 @@
 @mark-color: contrast(@mark-background);
 
 // hr
-@hr-border-width: @base-border-width;
-@hr-border-color: @base-border-color;
+@hr-border-width: @border-width;
+@hr-border-color: @border-color;
 
 
 // Page wrapper
 // ----------------------------------------------------------------------------/
-@wrapper-margin-top: @base-line-height * 2;
-@wrapper-margin-bottom: @base-line-height * 4;
+@wrapper-margin-top: @line-height * 2;
+@wrapper-margin-bottom: @line-height * 4;
 @wrapper-gap: 20px;
 
 // min width
@@ -106,8 +102,8 @@
 @screen-small-max-width: (640px + (@wrapper-gap * 2));
 
 // medium screen
-@screen-medium-min-width: (@screen-small-max-width + 1 / @base-font-size);
-@screen-medium-max-width: (@screen-large-min-width - 1 / @base-font-size);
+@screen-medium-min-width: (@screen-small-max-width + 1 / @font-size);
+@screen-medium-max-width: (@screen-large-min-width - 1 / @font-size);
 
 // large screens
 @screen-large-min-width: (@wrapper-max-width);
@@ -128,17 +124,17 @@
 // Box Model
 // ----------------------------------------------------------------------------/
 // margins
-@base-margin-y: 20px;
-@base-margin-x: 20px;
+@margin-y: 20px;
+@margin-x: 20px;
 
 // paddings
-@base-padding-y: 8px;
-@base-padding-x: 12px;
+@padding-y: 8px;
+@padding-x: 12px;
 
 // borders
-@base-border-width: 1px;
-@base-border-color: rgba(0, 0, 0, 0.3);
-@base-border-radius: 4px;
+@border-width: 1px;
+@border-color: rgba(0, 0, 0, 0.3);
+@border-radius: 4px;
 
 
 // List ul, li, dl
@@ -170,18 +166,18 @@
 
 // Table
 // ----------------------------------------------------------------------------/
-@table-cell-padding-y: @base-padding-y;
-@table-cell-padding-x: @base-padding-x;
+@table-cell-padding-y: @padding-y;
+@table-cell-padding-x: @padding-x;
 
 
 // Form
 // ----------------------------------------------------------------------------/
 @form-background-color: false;
 @form-color: false;
-@form-padding-y: @base-padding-y;
-@form-padding-x: @base-padding-x;
-@form-border-width: @base-border-width;
-@form-border-color: @base-border-color;
+@form-padding-y: @padding-y;
+@form-padding-x: @padding-x;
+@form-border-width: @border-width;
+@form-border-color: @border-color;
 @form-border-color-focus: rgba(0, 0, 0, 0.5);
 @form-border-radius: false;
 
@@ -190,8 +186,8 @@
 // ----------------------------------------------------------------------------/
 @nav-link-color: @link-color;
 @nav-link-color-hover: @font-color;
-@nav-link-padding-y: @base-padding-y;
-@nav-link-padding-x: @base-padding-x;
+@nav-link-padding-y: @padding-y;
+@nav-link-padding-x: @padding-x;
 
 // alternative link
 @alt-link-color: @background-color;
@@ -206,8 +202,8 @@
 // Button
 // ----------------------------------------------------------------------------/
 @button-color: @font-color;
-@button-padding-y: @base-padding-y;
-@button-padding-x: @base-padding-x;
+@button-padding-y: @padding-y;
+@button-padding-x: @padding-x;
 @button-border-radius: false;
 
 
@@ -238,7 +234,7 @@
 // ----------------------------------------------------------------------------/
 @icon-font-name: "icons";
 @icon-font-path: "../fonts/icons/";
-@icon-font-size: @base-font-size;
+@icon-font-size: @font-size;
 @icon-line-height: 10px;
 
 

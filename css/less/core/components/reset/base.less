@@ -34,7 +34,7 @@ summary {
 }
 
 html {
-    .font-size(@base-font-size; 16px; %);
+    .font-size(@font-size; 16px; %);
 
     & when not (@scale-font-size = false) {
         font-size: @scale-font-size;
@@ -43,9 +43,9 @@ html {
 
 body {
     overflow: auto;
-    font-family: @base-font-family;
+    font-family: @font-family;
     font-weight: 400;
-    .line-height(@base-line-height);
+    .line-height(@line-height);
     text-align: left;
     color: @font-color;
     background-color: @background-color;

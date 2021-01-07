@@ -18,12 +18,12 @@ Use the [issue tracker](https://github.com/jacobxperez/essentials/issues) for
 * [Pull Requests](#pull-requests)
 
 ## Essence
-To ensure a successful design we must set limits in the number of components.
-Hudini, polyfill and other similar technologies are all attempts to bypass the
-limitations of CSS and JavaScript, however without the fundamental knowledge of
-design their use becomes arbitrary. The developer seeks to dominate technology
-while the designer works within the limitations of his tools. Without limits
-a designer may be overwhelmed by the array of components at his disposal.
+To leave room for the designer self-expression we must set limits in the number
+of components. Without limits a designer may be overwhelmed by the array of
+components at his disposal. Hudini, polyfill and other similar technologies are
+all attempts to bypass the limitations of CSS and JavaScript, however without the
+fundamental knowledge of design their use becomes arbitrary. The developer seeks
+to dominate technology while the designer works within the limitations of his tools.
 
 ## Design Philosophy
 

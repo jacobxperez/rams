@@ -36,8 +36,8 @@ summary {
 html {
     .font-size(@font-size; 16px; %);
 
-    & when not (@scale-font-size = false) {
-        font-size: @scale-font-size;
+    & when not (@font-scale = false) {
+        font-size: @font-scale;
     }
 }
 

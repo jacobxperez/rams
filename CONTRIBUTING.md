@@ -18,12 +18,13 @@ Use the [issue tracker](https://github.com/jacobxperez/essentials/issues) for
 * [Pull Requests](#pull-requests)
 
 ## Essence
-To leave room for the designer self-expression we must set limits on the number
-of components. Without limits a designer may be overwhelmed by the array of
-components at his disposal. Hudini, polyfill and other similar technologies are
-all attempts to bypass the limitations of CSS and JavaScript, however without the
-fundamental knowledge of design their use becomes arbitrary. The developer seeks
-to dominate technology while the designer works within the limitations of his tools.
+To leave room designer self-expression we must set limits on the number of
+components. Without limits, a designer may be overwhelmed by the array of
+components at his disposal. Houdini, polyfill, and other similar technologies
+are all attempts to bypass the limitations of CSS and JavaScript however,
+without the fundamental knowledge of design, their use becomes arbitrary. The
+developer seeks to dominate technology while the designer works within the
+limitations of his tools.
 
 ## Design Philosophy
 
@@ -87,7 +88,7 @@ Please ask first before embarking on any significant pull request (e.g. implemen
 features, refactoring code, porting to a different language), otherwise you
 risk spending a lot of time working on something that the project's developers
 might not want to merge into the project. When contributing code to this
-project always asks yourself these questions.
+project always ask yourself these questions.
 
 * Is it essential?
 * Will it add value?

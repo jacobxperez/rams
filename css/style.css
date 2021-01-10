@@ -101,6 +101,7 @@ dfn {
     font-style: italic;
 }
 
+.tooltip,
 abbr[title],
 dfn[title] {
     text-decoration: underline;
@@ -361,10 +362,6 @@ table {
     padding-right: 1.25rem;
 }
 
-.max-width {
-    max-width: 100%;
-}
-
 body>.wrapper:first-child {
     margin-top: 3rem;
 }
@@ -407,16 +404,11 @@ body>.wrapper:last-child {
     margin-right: 0;
 }
 
-.box {
-    display: block;
-    padding: 0.5rem 0.75rem 0.5rem 0.75rem;
-}
-
 .drop-box {
     display: none;
-    width: 100%;
     margin-bottom: 0;
-    min-width: 10rem;
+    width: 100%;
+    max-width: 10rem;
     background-color: #fff;
     color: #555;
 }
@@ -1506,6 +1498,15 @@ section {
     grid-column: span 3;
 }
 
+.box {
+    display: block;
+    padding: 0.5rem 0.75rem 0.5rem 0.75rem;
+}
+
+.max-width {
+    max-width: 100%;
+}
+
 .inline {
     display: inline;
 }
@@ -1596,6 +1597,7 @@ section {
     hyphens: auto;
 }
 
+.tooltip,
 .relative {
     position: relative;
 }

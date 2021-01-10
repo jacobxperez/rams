@@ -1,0 +1,15 @@
+// Drop Box
+// ----------------------------------------------------------------------------/
+.drop-box {
+    display: none;
+    margin-bottom: 0;
+    width: 100%;
+    .max-width(@drop-box-max-width);
+    background-color: @background-color;
+    color: @font-color;
+}
+
+// added by javascript
+.active + .drop-box {
+    display: block;
+}

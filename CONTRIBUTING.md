@@ -18,8 +18,8 @@ Use the [issue tracker](https://github.com/jacobxperez/essentials/issues) for
 * [Pull Requests](#pull-requests)
 
 ## Essence
-To leave room for designer self-expression we must set limits on the number of
-components. Without limits, a designer may be overwhelmed by the array of
+To leave room for the designer self-expression we must set limits on the number
+of components. Without limits, a designer may be overwhelmed by the array of
 components at his disposal. Houdini, polyfill, and other similar technologies
 are all attempts to bypass the limitations of CSS and JavaScript however,
 without the fundamental knowledge of design, their use becomes arbitrary. The

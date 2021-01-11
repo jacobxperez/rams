@@ -1,0 +1,15 @@
+// Dropdown
+// ----------------------------------------------------------------------------/
+.drop-box {
+    display: none;
+    margin-bottom: 0;
+    width: 100%;
+    background-color: @background-color;
+    color: @font-color;
+}
+
+// added by javascript
+.tooltip:hover + .drop-box,
+.active + .drop-box {
+    display: block;
+}

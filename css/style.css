@@ -408,11 +408,11 @@ body>.wrapper:last-child {
     display: none;
     margin-bottom: 0;
     width: 100%;
-    max-width: 10rem;
     background-color: #fff;
     color: #555;
 }
 
+.tooltip:hover+.drop-box,
 .active+.drop-box {
     display: block;
 }
@@ -1501,6 +1501,10 @@ section {
 .box {
     display: block;
     padding: 0.5rem 0.75rem 0.5rem 0.75rem;
+}
+
+.min-width {
+    max-width: 10rem;
 }
 
 .max-width {

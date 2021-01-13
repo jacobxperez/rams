@@ -421,27 +421,31 @@ body>.wrapper:last-child {
     display: block;
 }
 
-.text-primary {
+.primary-text {
     color: #05f;
 }
 
-.text-secondary {
+.secondary-text {
     color: #555;
 }
 
-.text-dark {
+.light-text {
+    color: #fff;
+}
+
+.dark-text {
     color: #252525;
 }
 
-.text-success {
+.success-text {
     color: #393;
 }
 
-.text-warning {
+.warning-text {
     color: #fa0;
 }
 
-.text-danger {
+.danger-text {
     color: #c00;
 }
 
@@ -539,7 +543,7 @@ body>.wrapper:last-child {
 .disabled:active {
     background-color: #e6e6e6;
     color: #999999;
-    text-decoration: none;
+    decoration: none;
 }
 
 .disabled:focus {

@@ -421,34 +421,6 @@ body>.wrapper:last-child {
     display: block;
 }
 
-.primary-text {
-    color: #05f;
-}
-
-.secondary-text {
-    color: #555;
-}
-
-.light-text {
-    color: #fff;
-}
-
-.dark-text {
-    color: #252525;
-}
-
-.success-text {
-    color: #393;
-}
-
-.warning-text {
-    color: #fa0;
-}
-
-.danger-text {
-    color: #c00;
-}
-
 .primary {
     background-color: #05f;
     color: #ffffff;
@@ -531,6 +503,34 @@ body>.wrapper:last-child {
 .danger-hover:active {
     background-color: #b30000;
     color: #ffffff;
+}
+
+.primary-text {
+    color: #05f;
+}
+
+.secondary-text {
+    color: #555;
+}
+
+.light-text {
+    color: #fff;
+}
+
+.dark-text {
+    color: #252525;
+}
+
+.success-text {
+    color: #393;
+}
+
+.warning-text {
+    color: #fa0;
+}
+
+.danger-text {
+    color: #c00;
 }
 
 .disabled {

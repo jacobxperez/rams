@@ -409,13 +409,11 @@ body>.wrapper:last-child {
     margin-bottom: 0;
     width: 100%;
     min-width: 10rem;
-    max-width: 10rem;
     background-color: transparent;
     color: #555;
     z-index: 100;
 }
 
-.tooltip:hover+.drop-box,
 .tooltip:hover>.drop-box,
 .active+.drop-box {
     display: block;

@@ -3,14 +3,12 @@
 .font-face(@icon-font-name; @icon-font-path);
 
 [class^="icon-"]:before {
-    position: relative;
     display: inline-block;
     .font-size(@icon-font-size; @unit: em);
     font-family: @icon-font-name;
     font-style: normal;
     font-weight: normal;
     font-variant: normal;
-    vertical-align: middle;
     .line-height(@icon-line-height, @base: @icon-font-size);
     text-transform: none;
     speak: none;

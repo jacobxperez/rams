@@ -555,14 +555,12 @@ body>.wrapper:last-child {
 }
 
 [class^="icon-"]:before {
-    position: relative;
     display: inline-block;
     font-size: 1em;
     font-family: "icons";
     font-style: normal;
     font-weight: normal;
     font-variant: normal;
-    vertical-align: middle;
     line-height: 0.625;
     text-transform: none;
     speak: none;

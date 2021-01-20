@@ -4,16 +4,16 @@
     display: grid;
     .column-gap(@wrapper-gap);
     grid-template-columns: repeat(4, 1fr);
-}
 
-header,
-footer {
-    grid-column: 1 ~"/" -1;
-}
+    header,
+    footer {
+        grid-column: 1 ~"/" -1;
+    }
 
-article,
-section {
-    grid-column: span 3;
+    article,
+    section {
+        grid-column: span 3;
+    }
 }
 
 
@@ -23,13 +23,13 @@ section {
 
     .grid {
         grid-template-columns: repeat(2, 1fr);
-    }
 
-    article,
-    section,
-    aside,
-    nav {
-        grid-column: 1 ~"/" -1;
+        article,
+        section,
+        aside,
+        nav {
+            grid-column: 1 ~"/" -1;
+        }
     }
 
 }

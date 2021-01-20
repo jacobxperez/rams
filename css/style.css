@@ -352,8 +352,6 @@ table {
 }
 
 .wrapper {
-    display: grid;
-    column-gap: 1.25rem;
     width: 100%;
     min-width: 20rem;
     max-width: 61.25rem;
@@ -1492,13 +1490,13 @@ body>.wrapper:last-child {
     grid-template-columns: repeat(4, 1fr);
 }
 
-header,
-footer {
+.grid header,
+.grid footer {
     grid-column: 1 / -1;
 }
 
-article,
-section {
+.grid article,
+.grid section {
     grid-column: span 3;
 }
 
@@ -1667,10 +1665,10 @@ section {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    article,
-    section,
-    aside,
-    nav {
+    .grid article,
+    .grid section,
+    .grid aside,
+    .grid nav {
         grid-column: 1 / -1;
     }
 

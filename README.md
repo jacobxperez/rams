@@ -11,6 +11,8 @@ Minimal Front-end Framework for Web Designers — Built with [LESS](http://lessc
     * [Examples](#examples)
     * [Contributing](#contributing)
 * [LICENSE](#license)
+    * [Content](#content)
+    * [Code](#code)
 
 ## About
 

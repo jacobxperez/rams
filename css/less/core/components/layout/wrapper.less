@@ -8,18 +8,3 @@
     .padding-left(@wrapper-gap);
     .padding-right(@wrapper-gap);
 }
-
-body > .wrapper:first-child {
-    .margin-top(@wrapper-margin-top);
-}
-
-body > .wrapper:last-child {
-    .margin-bottom(@wrapper-margin-bottom);
-}
-
-// mixin call for utilities
-.fixed-top-wrapper () {
-    + .wrapper {
-        .margin-top(@line-height * 4);
-    }
-}

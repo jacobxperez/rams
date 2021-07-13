@@ -1,3 +1,23 @@
+// Layout
+// ----------------------------------------------------------------------------/
+body > .wrapper:first-child {
+    .margin-top(@wrapper-margin-top);
+}
+
+body > .wrapper:last-child {
+    .margin-bottom(@wrapper-margin-bottom);
+}
+
+.fixed-top + .wrapper {
+        .margin-top(@line-height * 4);
+}
+
+.fixed-top .wrapper > ul {
+    .margin-left(-@nav-link-padding-x);
+    .margin-right(-@nav-link-padding-x);
+}
+
+
 // Grid
 // ----------------------------------------------------------------------------/
 .grid {
@@ -17,9 +37,9 @@
 }
 
 
-// Small Breakpoint
+// Small Screen Breakpoint
 // ----------------------------------------------------------------------------/
-.small-grid () {
+.small-layout () {
 
     .grid {
         grid-template-columns: repeat(2, 1fr);
@@ -35,15 +55,15 @@
 }
 
 
-// Medium Breakpoint
+// Medium Screen Breakpoint
 // ----------------------------------------------------------------------------/
-.medium-grid () {
+.medium-layout () {
     // Add code
 }
 
 
-// Large Breakpoint
+// Large Screen Breakpoint
 // ----------------------------------------------------------------------------/
-.large-grid () {
+.large-layout () {
     // Add code
 }

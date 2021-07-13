@@ -29,7 +29,7 @@
     & when not (@size = false) {
 
         & when (@unit = %) {
-            font-size: percentage(@size / @base);
+            font-size: percentage((@size / @base));
         }
 
         & when (@unit = vw), (@unit = vh) {

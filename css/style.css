@@ -3,7 +3,6 @@
  * Licensed under the Apache License, Version 2.0
  * http://www.apache.org/licenses/LICENSE-2.0
 ==============================================================================*/
-
 * {
     box-sizing: border-box;
     margin: 0;
@@ -373,14 +372,24 @@ table {
     text-decoration: none;
 }
 
-.light-link {
+.alpha-link {
     color: #fff;
 }
 
-.light-link.active,
-.light-link:hover,
-.light-link:active {
+.alpha-link.active,
+.alpha-link:hover,
+.alpha-link:active {
     color: #bfbfbf;
+}
+
+.beta-link {
+    color: #252525;
+}
+
+.beta-link.active,
+.beta-link:hover,
+.beta-link:active {
+    color: #656565;
 }
 
 .breadcrumb li::after {

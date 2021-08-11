@@ -29,6 +29,15 @@
     bottom: 0;
 }
 
+.fixed-top + .wrapper {
+    .margin-top(@line-height * 4);
+}
+
+.fixed-top .wrapper > ul {
+    .margin-left(-@nav-link-padding-x);
+    .margin-right(-@nav-link-padding-x);
+}
+
 .top {
     bottom: 100%;
 }

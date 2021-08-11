@@ -27,7 +27,7 @@ The developer may seek to dominate his technology while the designer is forced t
 work within the limitation of his tools. By limiting or restricting the choices
 the modern web designer is forced to choose the essential and because he has not
 been trained to dominate or conquer technology, he can work in harmony; in fact,
-he uses the limitations to discover his design.
+he uses the limitations to discover new designs.
 
 ## Design Philosophy
 

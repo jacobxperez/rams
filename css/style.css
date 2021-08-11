@@ -381,7 +381,7 @@ body>.wrapper:last-child {
 }
 
 .alpha-link {
-    color: #fff;
+    color: #ffffff;
 }
 
 .alpha-link.active,
@@ -391,13 +391,13 @@ body>.wrapper:last-child {
 }
 
 .beta-link {
-    color: #252525;
+    color: #ffffff;
 }
 
 .beta-link.active,
 .beta-link:hover,
 .beta-link:active {
-    color: #656565;
+    color: #bfbfbf;
 }
 
 .breadcrumb li::after {
@@ -439,38 +439,26 @@ body>.wrapper:last-child {
 }
 
 .secondary {
-    background-color: #555;
+    background-color: #252525;
     color: #ffffff;
 }
 
 .secondary-hover.active,
 .secondary-hover:hover,
 .secondary-hover:active {
-    background-color: #484848;
-    color: #ffffff;
-}
-
-.light {
-    background-color: #fff;
-    color: #555;
-}
-
-.light-hover.active,
-.light-hover:hover,
-.light-hover:active {
-    background-color: #f2f2f2;
-    color: #555;
-}
-
-.dark {
-    background-color: #252525;
-    color: #ffffff;
-}
-
-.dark-hover.active,
-.dark-hover:hover,
-.dark-hover:active {
     background-color: #181818;
+    color: #ffffff;
+}
+
+.tertiary {
+    background-color: #555;
+    color: #ffffff;
+}
+
+.tertiary-hover.active,
+.tertiary-hover:hover,
+.tertiary-hover:active {
+    background-color: #484848;
     color: #ffffff;
 }
 
@@ -515,15 +503,11 @@ body>.wrapper:last-child {
 }
 
 .secondary-text {
-    color: #555;
-}
-
-.light-text {
-    color: #fff;
-}
-
-.dark-text {
     color: #252525;
+}
+
+.tertiary-text {
+    color: #555;
 }
 
 .success-text {
@@ -1550,11 +1534,11 @@ body>.wrapper:last-child {
 }
 
 .border-secondary {
-    border-color: #555;
+    border-color: #252525;
 }
 
-.border-dark {
-    border-color: #252525;
+.border-tertiary {
+    border-color: #555;
 }
 
 .border-success {

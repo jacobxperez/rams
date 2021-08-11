@@ -462,6 +462,18 @@ body>.wrapper:last-child {
     color: #ffffff;
 }
 
+.primary-text {
+    color: #05f;
+}
+
+.secondary-text {
+    color: #252525;
+}
+
+.tertiary-text {
+    color: #555;
+}
+
 .success {
     background-color: #393;
     color: #ffffff;
@@ -496,18 +508,6 @@ body>.wrapper:last-child {
 .danger-hover:active {
     background-color: #b30000;
     color: #ffffff;
-}
-
-.primary-text {
-    color: #05f;
-}
-
-.secondary-text {
-    color: #252525;
-}
-
-.tertiary-text {
-    color: #555;
 }
 
 .success-text {

@@ -18,16 +18,15 @@ Use the [issue tracker](https://github.com/jacobxperez/essentials/issues) for
 * [Pull Requests](#pull-requests)
 
 ## Essence
-The modern web designer faces few limitations on his approach to design and often
-he chooses the wrong combination. Without limits, a designer may be overwhelmed
+The modern web designer faces few limitations on his approach to design and will
+often choose the wrong combination. Without limits, a designer may be overwhelmed
 by the array of components at his disposal. Houdini, polyfill, and other similar
 technologies are all attempts to bypass the limitations of CSS and JavaScript
 however, without the fundamental knowledge of design, their use becomes arbitrary.
-The developer may seek to dominate his technology while the designer is forced to
-work within the limitation of his tools. By limiting or restricting the choices
-the modern web designer is forced to choose the essential and because he has not
-been trained to dominate or conquer technology, he can work in harmony; in fact,
-he uses the limitations to discover new designs.
+The developer is trained to dominate his technology while the designer is forced to
+work within the limitation of it. By limiting or restricting the choices
+the designer is forced to choose the essential and because he has not
+been trained as a developer he uses the limitations to discover new designs.
 
 ## Design Philosophy
 

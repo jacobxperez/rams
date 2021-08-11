@@ -359,6 +359,14 @@ table {
     padding-right: 1.25rem;
 }
 
+body>.wrapper:first-child {
+    margin-top: 3rem;
+}
+
+body>.wrapper:last-child {
+    margin-bottom: 6rem;
+}
+
 .nav-link {
     display: block;
     padding: 0.5rem 0.75rem 0.5rem 0.75rem;
@@ -1485,23 +1493,6 @@ table {
     content: "\e0e5";
 }
 
-body>.wrapper:first-child {
-    margin-top: 3rem;
-}
-
-body>.wrapper:last-child {
-    margin-bottom: 6rem;
-}
-
-.fixed-top+.wrapper {
-    margin-top: 6rem;
-}
-
-.fixed-top .wrapper>ul {
-    margin-left: -0.75rem;
-    margin-right: -0.75rem;
-}
-
 .grid {
     display: grid;
     column-gap: 1.25rem;
@@ -1645,6 +1636,15 @@ body>.wrapper:last-child {
     bottom: 0;
 }
 
+.fixed-top+.wrapper {
+    margin-top: 6rem;
+}
+
+.fixed-top .wrapper>ul {
+    margin-left: -0.75rem;
+    margin-right: -0.75rem;
+}
+
 .top {
     bottom: 100%;
 }
@@ -1670,17 +1670,6 @@ body>.wrapper:last-child {
 }
 
 @media screen and (max-width: 42.5em) {
-    .grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .grid article,
-    .grid section,
-    .grid aside,
-    .grid nav {
-        grid-column: 1 / -1;
-    }
-
     .grid {
         grid-template-columns: repeat(2, 1fr);
     }

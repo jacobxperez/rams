@@ -12,7 +12,6 @@ Use the [issue tracker](https://github.com/jacobxperez/essentials/issues) for
 * [Design Philosophy](#design-philosophy)
 * [Design Principles](#design-principles)
 * [Design Requirements](#design-requirements)
-* [Design Considerations](#design-considerations)
 * [Bug Reports](#bug-reports)
 * [Feature Requests](#feature-requests)
 * [Pull Requests](#pull-requests)
@@ -57,18 +56,6 @@ foundation of this project.
 * Must be easy to update without affecting [custom](https://github.com/jacobxperez/essentials/blob/master/css/less/custom.less) code or [variables](https://github.com/jacobxperez/essentials/blob/master/css/less/variables.less).
 * Must be unobtrusive to prevent the designer from fighting the framework.
 * Must follow the 80/20 principle, which indicates that 80 percent of the effects come from 20 percent of the [variables](https://github.com/jacobxperez/essentials/blob/master/css/less/variables.less).
-
-## Design Considerations
-
-**HTML as first-class**: Build the structure in HTML first then style the
-component in CSS.
-
-**CSS as first-class**: Preprocessors are **NO** replacement for CSS and should
-only be used to enhance it. Whenever possible avoid overcomplicating selectors
-with fancy logic that will only bring more problems than solutions.
-
-**JavaScript as first-class**: Don't build a JavaScript component that requires
-an external framework, everything should be built with JavaScript.
 
 ## Bug Reports
 

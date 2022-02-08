@@ -1,6 +1,6 @@
 # [Essentials](https://jacobxperez.github.io/essentials/)
 
-Minimal Front-end Framework for Web Designers — Built with [LESS](http://lesscss.org/)
+Minimal Front-end Framework — Built with [LESS](http://lesscss.org/)
 
 ## Table of Contents
 

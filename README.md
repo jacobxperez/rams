@@ -56,7 +56,7 @@ This examples incorporate the framework with custom components and layouts.
 A single page website template for your company marketing.
 
 * **[Jacob Perez](https://github.com/jacobxperez/blog)**:
-Author personal website
+Author personal website.
 
 * **[Vaporwave Aesthetic](https://github.com/jacobxperez/vaporwave-aesthetic)**:
 A template with vaporwave aesthetics.

@@ -34,7 +34,7 @@ in your projects is by copying the pre-compiled
 [CSS](https://github.com/jacobxperez/essentials/blob/master/css/style.css)
 file into your project folder and then link to it in HTML.
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/main.css">
 
 * [/css](https://github.com/jacobxperez/essentials/tree/master/css/less)
     * [style.css](https://github.com/jacobxperez/essentials/blob/master/css/style.css)

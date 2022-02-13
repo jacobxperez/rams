@@ -43,11 +43,12 @@ file into your project folder and then link to it in HTML.
 
 Adjust the [variables](https://github.com/jacobxperez/essentials/blob/master/css/less/variables.less) and if needed, add [custom](https://github.com/jacobxperez/essentials/blob/master/css/less/custom.less) [modules](https://github.com/jacobxperez/essentials/tree/master/css/less/modules) then compile everything together in [style.less](https://github.com/jacobxperez/essentials/blob/master/css/less/style.less) to produce the final [CSS](https://github.com/jacobxperez/essentials/blob/master/css/style.css). Optional, comment out unwanted components from [style.less](https://github.com/jacobxperez/essentials/blob/master/css/less/style.less) then compile your project. Check out [Editors and Plugins](http://lesscss.org/tools/#editors-and-plugins) for compiling [LESS](http://lesscss.org/).
 
-* [/css/less](https://github.com/jacobxperez/essentials/tree/master/css/less)
-    * [modules](https://github.com/jacobxperez/essentials/tree/master/css/less/modules) (add custom components)
-    * [custom.less](https://github.com/jacobxperez/essentials/blob/master/css/less/custom.less) (write or import custom [modules](https://github.com/jacobxperez/essentials/tree/master/css/less/modules))
-    * [style.less](https://github.com/jacobxperez/essentials/blob/master/css/less/style.less) (compile everything together)
-    * [variables.less](https://github.com/jacobxperez/essentials/blob/master/css/less/variables.less) (adjust the settings)
+* [/css](https://github.com/jacobxperez/essentials/tree/master/css)
+    * [core](https://github.com/jacobxperez/essentials/tree/master/css/core) (important files for compiling)
+    * [modules](https://github.com/jacobxperez/essentials/tree/master/css/modules) (add custom components)
+    * [themes](https://github.com/jacobxperez/essentials/tree/master/css/themes) (includes files for [main](https://github.com/jacobxperez/essentials/tree/master/css/themes/main) and [dark](https://github.com/jacobxperez/essentials/tree/master/css/themes/dark) themes)
+    * [dark.css](https://github.com/jacobxperez/essentials/blob/master/css/dark.css) (pre-compiled [dark](https://github.com/jacobxperez/essentials/tree/master/css/themes/dark)  theme)
+    * [main.css](https://github.com/jacobxperez/essentials/blob/master/css/main.css) (pre-compiled [main](https://github.com/jacobxperez/essentials/tree/master/css/themes/main) theme)
 
 ### Examples
 These examples incorporate the framework with custom components and layouts.
@@ -56,7 +57,7 @@ These examples incorporate the framework with custom components and layouts.
 A single-page website template for your company marketing.
 
 * **[Jacob Perez](https://github.com/jacobxperez/blog)**:
-Author personal website.
+Author personal website and blog template.
 
 * **[Vaporwave Aesthetic](https://github.com/jacobxperez/vaporwave-aesthetic)**:
 A template with vaporwave aesthetics.

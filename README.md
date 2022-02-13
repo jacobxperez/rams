@@ -30,7 +30,7 @@ Start by **[downloading](https://github.com/jacobxperez/essentials/archive/maste
 ### Default Build
 
 The easiest way to include [Essentials](https://jacobxperez.github.io/essentials/) in your
-projects is by copying the pre-compiled [CSS](https://github.com/jacobxperez/essentials/blob/master/css/style.css)
+projects is by copying the pre-compiled [CSS](https://github.com/jacobxperez/essentials/blob/master/css/main.css)
 file into your project folder and then linking to it in HTML.
 
     <link rel="stylesheet" href="css/main.css">
@@ -40,11 +40,11 @@ file into your project folder and then linking to it in HTML.
 
 ### Custom Build
 
-Adjust the [variables](https://github.com/jacobxperez/essentials/blob/master/css/less/variables.less) and if needed, add [custom](https://github.com/jacobxperez/essentials/blob/master/css/less/custom.less) [modules](https://github.com/jacobxperez/essentials/tree/master/css/less/modules) then compile everything together in [style.less](https://github.com/jacobxperez/essentials/blob/master/css/less/style.less) to produce the final [CSS](https://github.com/jacobxperez/essentials/blob/master/css/style.css). Optional, comment out unwanted components from [style.less](https://github.com/jacobxperez/essentials/blob/master/css/less/style.less) then compile your project. Check out [Editors and Plugins](http://lesscss.org/tools/#editors-and-plugins) for compiling [LESS](http://lesscss.org/).
+Check out [Editors and Plugins](http://lesscss.org/tools/#editors-and-plugins) for compiling [LESS](http://lesscss.org/).
 
 * [/css](https://github.com/jacobxperez/essentials/tree/master/css)
     * [core](https://github.com/jacobxperez/essentials/tree/master/css/core) (**important** files for compiling)
-    * [modules](https://github.com/jacobxperez/essentials/tree/master/css/modules) (add custom components)
+    * [modules](https://github.com/jacobxperez/essentials/tree/master/css/modules) (custom components shared between [themes](https://github.com/jacobxperez/essentials/tree/master/css/themes))
     * [themes](https://github.com/jacobxperez/essentials/tree/master/css/themes) (includes files for [main](https://github.com/jacobxperez/essentials/tree/master/css/themes/main) and [dark](https://github.com/jacobxperez/essentials/tree/master/css/themes/dark) themes)
     * [dark.css](https://github.com/jacobxperez/essentials/blob/master/css/dark.css) (pre-compiled [dark](https://github.com/jacobxperez/essentials/tree/master/css/themes/dark)  theme)
     * [main.css](https://github.com/jacobxperez/essentials/blob/master/css/main.css) (pre-compiled [main](https://github.com/jacobxperez/essentials/tree/master/css/themes/main) theme)

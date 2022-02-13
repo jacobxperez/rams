@@ -43,7 +43,7 @@ file into your project folder and then linking to it in HTML.
 Adjust the [variables](https://github.com/jacobxperez/essentials/blob/master/css/less/variables.less) and if needed, add [custom](https://github.com/jacobxperez/essentials/blob/master/css/less/custom.less) [modules](https://github.com/jacobxperez/essentials/tree/master/css/less/modules) then compile everything together in [style.less](https://github.com/jacobxperez/essentials/blob/master/css/less/style.less) to produce the final [CSS](https://github.com/jacobxperez/essentials/blob/master/css/style.css). Optional, comment out unwanted components from [style.less](https://github.com/jacobxperez/essentials/blob/master/css/less/style.less) then compile your project. Check out [Editors and Plugins](http://lesscss.org/tools/#editors-and-plugins) for compiling [LESS](http://lesscss.org/).
 
 * [/css](https://github.com/jacobxperez/essentials/tree/master/css)
-    * [core](https://github.com/jacobxperez/essentials/tree/master/css/core) (important files for compiling)
+    * [core](https://github.com/jacobxperez/essentials/tree/master/css/core) (**important** files for compiling)
     * [modules](https://github.com/jacobxperez/essentials/tree/master/css/modules) (add custom components)
     * [themes](https://github.com/jacobxperez/essentials/tree/master/css/themes) (includes files for [main](https://github.com/jacobxperez/essentials/tree/master/css/themes/main) and [dark](https://github.com/jacobxperez/essentials/tree/master/css/themes/dark) themes)
     * [dark.css](https://github.com/jacobxperez/essentials/blob/master/css/dark.css) (pre-compiled [dark](https://github.com/jacobxperez/essentials/tree/master/css/themes/dark)  theme)

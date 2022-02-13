@@ -4,10 +4,7 @@
 
 // Main Colors
 // ----------------------------------------------------------------------------/
-// background color
 @background-color: #fff;
-
-// font color
 @font-color: #555;
 @link-color: @primary;
 
@@ -27,6 +24,12 @@
 
 // Typography
 // ----------------------------------------------------------------------------/
+// font stack
+@font-sans: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Nimbus Sans L", "Liberation Sans", FreeSans, sans-serif;
+@font-system: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+@font-serif: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, "Nimbus Roman No9 L", "Liberation Serif", FreeSerif, serif;
+@font-mono: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", "Nimbus Mono L", "Liberation Mono", FreeMono, monospace;
+
 // main font
 @font-family: @font-sans;
 @font-size: 16px;
@@ -178,32 +181,30 @@
 @form-border-radius: false;
 
 
-// Nav
-// ----------------------------------------------------------------------------/
-@nav-link-color: @link-color;
-@nav-link-color-hover: @font-color;
-@nav-link-padding-y: @padding-y;
-@nav-link-padding-x: @padding-x;
-
-// links
-@alpha-link: contrast(@primary);
-@alpha-link-hover: darken(@alpha-link, 25%);
-
-@beta-link: contrast(@secondary);
-@beta-link-hover: darken(@beta-link, 25%);
-
-
-// Breadcrumb
-// ----------------------------------------------------------------------------/
-@breadcrumb-separator: " /";
-
-
 // Button
 // ----------------------------------------------------------------------------/
 @button-color: @font-color;
 @button-padding-y: @padding-y;
 @button-padding-x: @padding-x;
 @button-border-radius: false;
+
+
+// Navigation
+// ----------------------------------------------------------------------------/
+@nav-link-color: @link-color;
+@nav-link-color-hover: @font-color;
+@nav-link-padding-y: @padding-y;
+@nav-link-padding-x: @padding-x;
+
+// nav links
+@alpha-link: contrast(@primary);
+@alpha-link-hover: darken(@alpha-link, 25%);
+
+@beta-link: contrast(@secondary);
+@beta-link-hover: darken(@beta-link, 25%);
+
+// breadcrumb
+@breadcrumb-separator: " /";
 
 
 // Dropdown

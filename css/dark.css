@@ -310,7 +310,7 @@ select,
 a {
     text-decoration: none;
     background-color: transparent;
-    color: #05f;
+    color: #00ac25;
     cursor: pointer;
 }
 
@@ -370,7 +370,7 @@ body>.wrapper:last-child {
 .nav-link {
     display: block;
     padding: 0.5rem 0.75rem 0.5rem 0.75rem;
-    color: #05f;
+    color: #00ac25;
 }
 
 .nav-link.active,
@@ -427,14 +427,14 @@ body>.wrapper:last-child {
 }
 
 .primary {
-    background-color: #05f;
+    background-color: #00ac25;
     color: #ffffff;
 }
 
 .primary-hover.active,
 .primary-hover:hover,
 .primary-hover:active {
-    background-color: #004de6;
+    background-color: #009320;
     color: #ffffff;
 }
 
@@ -463,7 +463,7 @@ body>.wrapper:last-child {
 }
 
 .primary-text {
-    color: #05f;
+    color: #00ac25;
 }
 
 .secondary-text {
@@ -1530,7 +1530,7 @@ body>.wrapper:last-child {
 }
 
 .border-primary {
-    border-color: #05f;
+    border-color: #00ac25;
 }
 
 .border-secondary {

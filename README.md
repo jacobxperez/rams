@@ -63,7 +63,7 @@ A template with vaporwave aesthetics.
 
 ### [Contributing](https://github.com/jacobxperez/essentials/blob/master/CONTRIBUTING.md)
 
-If you are interested in contributing to this project please start by reading our
+If you are interested in contributing to this project please read our
 [contributing guidelines](https://github.com/jacobxperez/essentials/blob/master/CONTRIBUTING.md)
 to better understand the nature and the direction of the project, any contribution
 will be considered.

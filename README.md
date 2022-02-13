@@ -17,9 +17,9 @@ Minimal Front-end Framework — Built with [LESS](http://lesscss.org/)
 ## About
 
 Unlike other monolith frameworks, [Essentials](https://jacobxperez.github.io/essentials/)
-provides a minimum set of components which gives the designer the freedom to explore and
+provides a minimum set of components that gives the designer the freedom to explore and
 discover new designs. By removing the unnecessary the essential comes to the light, thus
-leaving room for the designer self-expression.
+leaving room for the designer's self-expression.
 
 ## Getting Started
 
@@ -50,10 +50,10 @@ Adjust the [variables](https://github.com/jacobxperez/essentials/blob/master/css
     * [variables.less](https://github.com/jacobxperez/essentials/blob/master/css/less/variables.less) (adjust the settings)
 
 ### Examples
-This examples incorporate the framework with custom components and layouts.
+These examples incorporate the framework with custom components and layouts.
 
 * **[Company](https://github.com/jacobxperez/company)**:
-A single page website template for your company marketing.
+A single-page website template for your company marketing.
 
 * **[Jacob Perez](https://github.com/jacobxperez/blog)**:
 Author personal website.
@@ -63,7 +63,7 @@ A template with vaporwave aesthetics.
 
 ### [Contributing](https://github.com/jacobxperez/essentials/blob/master/CONTRIBUTING.md)
 
-If your interested in contributing to this project please start by reading our
+If you are interested in contributing to this project please start by reading our
 [contributing guidelines](https://github.com/jacobxperez/essentials/blob/master/CONTRIBUTING.md)
 to better understand the nature and the direction of the project, any contribution
 will be considered.

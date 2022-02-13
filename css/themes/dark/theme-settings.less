@@ -2,22 +2,11 @@
 // check out variables-reference.less for more variables
 // ============================================================================/
 
-// Typography
-// ----------------------------------------------------------------------------/
-@font-family: @font-sans;
-@font-size: 16px;
-@line-height: 24px;
-
-// type scale
-// @font-scale: clamp(1rem, 1vw, 1.25rem);
-@type-scale-small: 1.2;
-@type-scale-medium: 1.25;
-@type-scale-large: 1.3;
-
 // Theme Colors
 // ----------------------------------------------------------------------------/
 @background-color: #252525;
 @font-color: #aaa;
+@link-color: @primary;
 
 // branding
 @primary: #05f;
@@ -32,9 +21,18 @@
 @tertiary-text: contrast(@tertiary);
 @tertiary-hover: darken(@tertiary, 5%);
 
-// link
-@link-color: @primary;
-
 // selection
 @selection-background: #cde1ff;
 @selection-color: contrast(@selection-background);
+
+// Typography
+// ----------------------------------------------------------------------------/
+@font-family: @font-sans;
+@font-size: 16px;
+@line-height: 24px;
+
+// type scale
+// @font-scale: clamp(1rem, 1vw, 1.25rem); // default false
+@type-scale-small: 1.2;
+@type-scale-medium: 1.25;
+@type-scale-large: 1.3;

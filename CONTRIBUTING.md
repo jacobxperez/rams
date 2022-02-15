@@ -51,11 +51,11 @@ foundation of this project.
 
 ## Design Requirements
 
-* Identify the minimum amount of [components](https://github.com/jacobxperez/essentials/tree/master/css/less/core/components) that can satisfy most designs.
+* Identify the minimum amount of components that can satisfy most designs.
 * Must be easy to maintain, modify, adapt, customize, and change with minimum effort.
-* Must be easy to update without affecting [custom](https://github.com/jacobxperez/essentials/blob/master/css/less/custom.less) code or [variables](https://github.com/jacobxperez/essentials/blob/master/css/less/variables.less).
+* Must be easy to update without affecting custom modules or theme settings.
 * Must be unobtrusive to prevent the designer from fighting the framework.
-* Must follow the 80/20 principle, which indicates that 80 percent of the effects come from 20 percent of the [variables](https://github.com/jacobxperez/essentials/blob/master/css/less/variables.less).
+* Must follow the 80/20 principle, which indicates that 80 percent of the effects come from 20 percent of the variables.
 
 ## Bug Reports
 

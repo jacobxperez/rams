@@ -18,8 +18,8 @@ Minimal Front-end Framework — Built with [LESS](http://lesscss.org/)
 
 Unlike other monolith frameworks, [Essentials](https://jacobxperez.github.io/essentials/)
 provides a minimum set of components that gives the developer the freedom to explore and
-discover new designs. By removing the unnecessary the essential comes to the light thus
-leaving room for the designer's self-expression.
+discover new designs. When removing the unnecessary, the essential comes to the front,
+which leaves room for the designer's self-expression.
 
 ## Getting Started
 
@@ -62,7 +62,7 @@ Check out [Editors and Plugins](http://lesscss.org/tools/#editors-and-plugins) f
         * [settings.less](https://github.com/jacobxperez/essentials/blob/master/css/themes/main/settings.less) (adjust the settings)
         * [variables.less](https://github.com/jacobxperez/essentials/blob/master/css/themes/main/variables.less) (variables referance)
     * [dark](https://github.com/jacobxperez/essentials/tree/master/css/themes/dark)
-        * [modules](https://github.com/jacobxperez/essentials/tree/master/css/themes/dark/modules) (local moduels for dark theme)
+        * [modules](https://github.com/jacobxperez/essentials/tree/master/css/themes/dark/modules) (custom local moduels for dark theme)
         * [dark.less](https://github.com/jacobxperez/essentials/blob/master/css/themes/dark/dark.less) (compiles to [dark.css](https://github.com/jacobxperez/essentials/blob/master/css/dark.css))
         * [settings.less](https://github.com/jacobxperez/essentials/blob/master/css/themes/dark/settings.less) (adjust the settings)
         * [variables.less](https://github.com/jacobxperez/essentials/blob/master/css/themes/dark/variables.less) (variables referance)

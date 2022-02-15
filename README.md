@@ -36,7 +36,7 @@ file into your project folder and then linking to it in HTML.
     <link rel="stylesheet" href="css/main.css">
 
 * [/css](https://github.com/jacobxperez/essentials/tree/master/css/less)
-    * [style.css](https://github.com/jacobxperez/essentials/blob/master/css/style.css)
+    * [main.css](https://github.com/jacobxperez/essentials/blob/master/css/main.css)
 
 ### Custom Build
 

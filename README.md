@@ -50,6 +50,7 @@ Check out [Editors and Plugins](http://lesscss.org/tools/#editors-and-plugins) f
     * [main.css](https://github.com/jacobxperez/essentials/blob/master/css/main.css) (pre-compiled [main](https://github.com/jacobxperez/essentials/tree/master/css/themes/main) theme)
 
 ### Examples
+
 These examples incorporate the framework with custom components and layouts.
 
 * **[Company](https://github.com/jacobxperez/company)**:

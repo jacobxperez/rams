@@ -18,7 +18,7 @@ Minimal Front-end Framework — Built with [LESS](http://lesscss.org/)
 
 Unlike other monolith frameworks, [Essentials](https://jacobxperez.github.io/essentials/)
 provides a minimum set of components that gives the developer the freedom to explore and discover
-new designs. When removing the unnecessary, the essential gives room to the designer's self-expression.
+new designs.
 
 ## Getting Started
 

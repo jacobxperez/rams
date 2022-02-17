@@ -44,7 +44,7 @@ utilizing the same source code. Just as in art school, the designer can quickly 
 Check out [Editors and Plugins](http://lesscss.org/tools/#editors-and-plugins) for compiling [LESS](http://lesscss.org/).
 
 * [/css](https://github.com/jacobxperez/essentials/tree/master/css)
-    * [core](https://github.com/jacobxperez/essentials/tree/master/css/core) (**important** files for compiling)
+    * [core](https://github.com/jacobxperez/essentials/tree/master/css/core) (**important files for compiling themes**)
     * [modules](https://github.com/jacobxperez/essentials/tree/master/css/modules) (global scope custom modules, shared between [themes](https://github.com/jacobxperez/essentials/tree/master/css/themes))
     * [themes](https://github.com/jacobxperez/essentials/tree/master/css/themes) (includes files for [main](https://github.com/jacobxperez/essentials/tree/master/css/themes/main) and [dark](https://github.com/jacobxperez/essentials/tree/master/css/themes/dark) themes)
         * [main](https://github.com/jacobxperez/essentials/tree/master/css/themes/main) (theme)

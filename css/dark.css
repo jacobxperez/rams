@@ -1553,19 +1553,10 @@ body>.wrapper:last-child {
 
 .flex {
     display: flex;
+}
+
+.flex-wrap {
     flex-wrap: wrap;
-}
-
-.row-reverse {
-    flex-direction: row-reverse;
-}
-
-.flex-column {
-    flex-direction: column;
-}
-
-.column-reverse {
-    flex-direction: column-reverse;
 }
 
 .flex-grow,
@@ -1645,28 +1636,6 @@ body>.wrapper:last-child {
         display: none;
     }
 
-    .sm-flex {
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    .sm-row-reverse {
-        flex-direction: row-reverse;
-    }
-
-    .sm-flex-column {
-        flex-direction: column;
-    }
-
-    .sm-column-reverse {
-        flex-direction: column-reverse;
-    }
-
-    .sm-flex-grow,
-    .sm-flex-grow-children>* {
-        flex-grow: 1;
-    }
-
     .sm-relative {
         position: relative;
     }
@@ -1729,28 +1698,6 @@ body>.wrapper:last-child {
         display: none;
     }
 
-    .md-flex {
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    .md-row-reverse {
-        flex-direction: row-reverse;
-    }
-
-    .md-flex-column {
-        flex-direction: column;
-    }
-
-    .md-column-reverse {
-        flex-direction: column-reverse;
-    }
-
-    .md-flex-grow,
-    .md-flex-grow-children>* {
-        flex-grow: 1;
-    }
-
     .md-relative {
         position: relative;
     }
@@ -1811,28 +1758,6 @@ body>.wrapper:last-child {
     .sm-block,
     .md-block {
         display: none;
-    }
-
-    .lg-flex {
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    .lg-row-reverse {
-        flex-direction: row-reverse;
-    }
-
-    .lg-flex-column {
-        flex-direction: column;
-    }
-
-    .lg-column-reverse {
-        flex-direction: column-reverse;
-    }
-
-    .lg-flex-grow,
-    .lg-flex-grow-children>* {
-        flex-grow: 1;
     }
 
     .lg-relative {

@@ -1627,14 +1627,6 @@ body>.wrapper:last-child {
     right: 0;
 }
 
-.float-left {
-    float: left;
-}
-
-.float-right {
-    float: right;
-}
-
 @media screen and (max-width: 42.5em) {
     .grid {
         grid-template-columns: repeat(2, 1fr);

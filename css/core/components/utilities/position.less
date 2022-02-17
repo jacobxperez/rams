@@ -9,41 +9,25 @@
     position: absolute;
 }
 
-.fixed-top,
-.fixed-bottom {
-    left: 0;
-    right: 0;
-}
-
-.fixed-top,
-.fixed-bottom {
+.fixed {
     position: fixed;
-    z-index: 1025;
 }
 
-.fixed-top {
-    top: 0;
-}
-
-.fixed-bottom {
-    bottom: 0;
-}
-
-.fixed-top + .wrapper {
+.fixed.top + .wrapper {
     .margin-top(@line-height * 4);
 }
 
-.fixed-top .wrapper > ul {
+.fixed.top .wrapper > ul {
     .margin-left(-@nav-link-padding-x);
     .margin-right(-@nav-link-padding-x);
 }
 
 .top {
-    bottom: 100%;
+    top: 0;
 }
 
 .bottom {
-    top: 100%;
+    bottom: 0;
 }
 
 .left {

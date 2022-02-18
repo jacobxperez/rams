@@ -29,7 +29,6 @@ object {
     height: auto;
     max-width: 100%;
     width: 100%;
-    vertical-align: middle;
 }
 
 summary {
@@ -530,7 +529,7 @@ body>.wrapper:last-child {
 .disabled:active {
     background-color: #e6e6e6;
     color: #999999;
-    decoration: none;
+    text-decoration: none;
 }
 
 .disabled:focus {
@@ -552,7 +551,6 @@ body>.wrapper:last-child {
     font-variant: normal;
     line-height: 0.625;
     text-transform: none;
-    speak: none;
 }
 
 .icon-address:before {

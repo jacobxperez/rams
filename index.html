@@ -70,21 +70,24 @@
             </ul>
 
             <!-- Accordion Menu: show on small screens -->
-            <ul class="sm-block border">
-                <li>
-                    <a class="nav-link flex js-toggle"><strong>Contents</strong> <span class="flex-grow"></span> <span
-                            class="icon-down-open"></span></a>
-
-                    <ul class="drop-box">
-                        <li><a class="nav-link" href="#getting-started">Getting Started</a></li>
-                        <li><a class="nav-link" href="#default-build">Default Build</a></li>
-                        <li><a class="nav-link" href="#custom-build">Custom Build</a></li>
-                        <li><a class="nav-link" href="#examples">Examples</a></li>
-                        <li><a class="nav-link" href="#contributing">Contributing</a></li>
-                        <li><a class="nav-link" href="#license">LICENSE</a></li>
-                    </ul>
-                </li>
-            </ul>
+            <div class="sm-block">
+                <ul class="flex flex-column border">
+                    <li class="js-toggle">
+                        <a class="nav-link flex"><strong>Contents</strong> <span class="flex-grow"></span> <span
+                                class="icon-down-open"></span></a>
+                    </li>
+                    <li class="drop-box">
+                        <ul>
+                            <li><a class="nav-link" href="#getting-started">Getting Started</a></li>
+                            <li><a class="nav-link" href="#default-build">Default Build</a></li>
+                            <li><a class="nav-link" href="#custom-build">Custom Build</a></li>
+                            <li><a class="nav-link" href="#examples">Examples</a></li>
+                            <li><a class="nav-link" href="#contributing">Contributing</a></li>
+                            <li><a class="nav-link" href="#license">LICENSE</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
             <!-- end Accordion Menu -->
         </nav>
         <!-- end Secondary Nav -->

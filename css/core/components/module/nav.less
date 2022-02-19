@@ -5,6 +5,7 @@
     .padding(@nav-link-padding-y; @nav-link-padding-x);
     color: @nav-link-color;
 
+    li.active > &,
     &.active,
     &:hover,
     &:active {
@@ -16,6 +17,7 @@
 .alpha-link {
     color: @alpha-link;
 
+    li.active > &,
     &.active,
     &:hover,
     &:active {
@@ -26,18 +28,11 @@
 .beta-link {
     color: @beta-link;
 
+    li.active > &,
     &.active,
     &:hover,
     &:active {
         color: @beta-link-hover;
-    }
-}
-
-// mixin call for utilities
-.fix-wrapper-nav () {
-    .wrapper > ul {
-        .margin-left(-@nav-link-padding-x);
-        .margin-right(-@nav-link-padding-x);
     }
 }
 

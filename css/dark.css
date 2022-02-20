@@ -191,7 +191,7 @@ ul {
 .dl .ul,
 .ol .ul,
 .ul .ul {
-    margin-bottom: 0;
+    margin: 0;
 }
 
 .ol {
@@ -327,10 +327,6 @@ a:focus {
     outline-offset: -0.125rem;
 }
 
-.leading-top {
-    margin-top: 1.5rem;
-}
-
 .leading,
 h1,
 h2,
@@ -346,7 +342,7 @@ pre,
 .ol,
 .ul,
 table {
-    margin-bottom: 1.5rem;
+    margin: 0.75rem 0rem 0.75rem 0rem;
 }
 
 .wrapper {

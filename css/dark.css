@@ -1498,6 +1498,10 @@ li.active>.danger-hover,
     grid-column: span 3;
 }
 
+.margin {
+    margin: 1.25rem 1.25rem 1.25rem 1.25rem;
+}
+
 .padding {
     padding: 0.5rem 0.75rem 0.5rem 0.75rem;
 }

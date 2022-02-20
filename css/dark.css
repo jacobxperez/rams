@@ -547,8 +547,8 @@ li.active>.danger-hover,
 
 @font-face {
     font-family: 'icons';
-    src: url('../fonts/icons/icons.eot');
-    src: url('../fonts/icons/icons.eot?#iefix') format('embedded-opentype'), url('../fonts/icons/icons.woff2') format('woff2'), url('../fonts/icons/icons.woff') format('woff'), url('../fonts/icons/icons.ttf') format('truetype'), url('../fonts/icons/icons.svg#icons') format('svg');
+    src: url('modules/fonts/icons/icons.eot');
+    src: url('modules/fonts/icons/icons.eot?#iefix') format('embedded-opentype'), url('modules/fonts/icons/icons.woff2') format('woff2'), url('modules/fonts/icons/icons.woff') format('woff'), url('modules/fonts/icons/icons.ttf') format('truetype'), url('modules/fonts/icons/icons.svg#icons') format('svg');
 }
 
 [class^="icon-"]:before {

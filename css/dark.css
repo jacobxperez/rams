@@ -1632,6 +1632,10 @@ li.active>.danger-hover,
     position: fixed;
 }
 
+.sticky {
+    position: sticky;
+}
+
 .fixed+.wrapper {
     margin-top: 6rem;
 }

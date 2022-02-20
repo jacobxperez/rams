@@ -1506,14 +1506,6 @@ li.active>.danger-hover,
     max-width: 100%;
 }
 
-.inline {
-    display: inline;
-}
-
-.block {
-    display: block;
-}
-
 .border {
     border: 0.0625rem solid rgba(0, 0, 0, 0.3);
 }
@@ -1556,6 +1548,14 @@ li.active>.danger-hover,
 
 .border-danger {
     border-color: #c00;
+}
+
+.inline {
+    display: inline;
+}
+
+.block {
+    display: block;
 }
 
 .flex {

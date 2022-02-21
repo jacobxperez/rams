@@ -1498,8 +1498,45 @@ li.active>.danger-hover,
     margin: 1.25rem 1.25rem 1.25rem 1.25rem;
 }
 
+.margin-top {
+    margin-top: 1.25rem;
+}
+
+.margin-right {
+    margin-right: 1.25rem;
+}
+
+.margin-bottom {
+    margin-bottom: 1.25rem;
+}
+
+.margin-left {
+    margin-left: 1.25rem;
+}
+
+.margin-stretch {
+    margin-left: -0.75rem;
+    margin-right: -0.75rem;
+}
+
 .padding {
     padding: 0.5rem 0.75rem 0.5rem 0.75rem;
+}
+
+.padding-top {
+    margin-top: 0.5rem;
+}
+
+.padding-right {
+    padding-right: 0.75rem;
+}
+
+.padding-bottom {
+    padding-bottom: 0.5rem;
+}
+
+.padding-left {
+    padding-left: 0.75rem;
 }
 
 .max-width {
@@ -1556,6 +1593,10 @@ li.active>.danger-hover,
 
 .block {
     display: block;
+}
+
+.inline-block {
+    display: inline-block;
 }
 
 .flex {
@@ -1636,16 +1677,6 @@ li.active>.danger-hover,
     position: sticky;
 }
 
-.fixed+.wrapper {
-    margin-top: 6rem;
-}
-
-.fixed .wrapper>ul,
-.sticky .wrapper>ul {
-    margin-left: -0.75rem;
-    margin-right: -0.75rem;
-}
-
 .fixed.top,
 .fixed.bottom {
     z-index: 1000;
@@ -1665,6 +1696,10 @@ li.active>.danger-hover,
 
 .right {
     right: 0;
+}
+
+.fixed+.wrapper {
+    margin-top: 6rem;
 }
 
 @media screen and (max-width: 42.5em) {

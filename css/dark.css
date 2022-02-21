@@ -291,6 +291,7 @@ select,
     padding: 0.5rem 0.75rem 0.5rem 0.75rem;
     background-color: transparent;
     color: #aaa;
+    text-align: center;
     cursor: pointer;
 }
 
@@ -1642,23 +1643,6 @@ li.active>.danger-hover,
 .flex-grow,
 .flex-grow-children>* {
     flex-grow: 1;
-}
-
-.text-left {
-    text-align: left;
-}
-
-.text-right {
-    text-align: right;
-}
-
-.text-center {
-    text-align: center;
-}
-
-.text-justify {
-    text-align: justify;
-    hyphens: auto;
 }
 
 .relative {

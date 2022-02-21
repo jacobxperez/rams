@@ -21,7 +21,7 @@ ul {
 .ol {
     list-style-type: @ol-list-style-type;
 
-    > li > .ol {
+    > li:first-child > .ol {
         list-style-type: @ol-list-style-type-sub;
     }
 }
@@ -29,7 +29,7 @@ ul {
 .ul {
     list-style-type: @ul-list-style-type;
 
-    > li > .ul {
+    > li:first-child > .ul {
         list-style-type: @ul-list-style-type-sub;
     }
 }

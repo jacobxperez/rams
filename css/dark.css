@@ -366,7 +366,6 @@ body>.wrapper:last-child {
 .nav {
     background-color: #e6e6e6;
     width: 100%;
-    position: relative;
     z-index: 1000;
 }
 

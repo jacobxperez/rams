@@ -369,13 +369,13 @@ body>.wrapper:last-child {
     z-index: 1000;
 }
 
+.nav-bar.top+.wrapper {
+    margin-top: 6rem;
+}
+
 .nav-bar .wrapper>ul {
     margin-left: -0.75rem;
     margin-right: -0.75rem;
-}
-
-.nav-bar+.wrapper {
-    margin-top: 6rem;
 }
 
 .nav-link {

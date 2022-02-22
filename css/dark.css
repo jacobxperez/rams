@@ -363,18 +363,18 @@ body>.wrapper:last-child {
     margin-bottom: 6rem;
 }
 
-.nav-bar {
+.nav {
     background-color: #e6e6e6;
     width: 100%;
     position: relative;
     z-index: 1000;
 }
 
-.nav-bar.top+.wrapper {
+.nav.top+.wrapper {
     margin-top: 6rem;
 }
 
-.nav-bar .wrapper>ul {
+.nav .wrapper>ul {
     margin-left: -0.75rem;
     margin-right: -0.75rem;
 }

@@ -1,5 +1,20 @@
 // Navigation
 // ----------------------------------------------------------------------------/
+.nav-bar {
+    width: 100%;
+    position: relative;
+    z-index: 1000;
+
+    .wrapper > ul {
+        .margin-left(-@nav-link-padding-x);
+        .margin-right(-@nav-link-padding-x);
+    }
+}
+
+// adds margin to wrapper when
+// nav-bar is fixed
+.nav-bar-wrapper();
+
 .nav-link {
     display: block;
     .padding(@nav-link-padding-y; @nav-link-padding-x);

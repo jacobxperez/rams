@@ -6,7 +6,7 @@
 }
 
 .success-hover {
-    li.active > &,
+    .active > &,
     &.active,
     &:hover,
     &:active {
@@ -21,7 +21,7 @@
 }
 
 .warning-hover {
-    li.active > &,
+    .active > &,
     &.active,
     &:hover,
     &:active {
@@ -36,7 +36,7 @@
 }
 
 .danger-hover {
-    li.active > &,
+    .active > &,
     &.active,
     &:hover,
     &:active {
@@ -58,6 +58,23 @@
 
 .danger-text {
     color: @danger;
+}
+
+
+// Borders
+// ----------------------------------------------------------------------------/
+.border-action() {
+    .border-success {
+        border-color: @success;
+    }
+    
+    .border-warning {
+        border-color: @warning;
+    }
+    
+    .border-danger {
+        border-color: @danger;
+    }
 }
 
 

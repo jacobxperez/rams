@@ -369,6 +369,10 @@ body>.wrapper:last-child {
     z-index: 1000;
 }
 
+.nav>.nav-link {
+    display: inline-block;
+}
+
 .nav.top+.wrapper {
     margin-top: 6rem;
 }

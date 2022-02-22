@@ -20,27 +20,20 @@
     flex-wrap: wrap;
 }
 
-.flex-end {
-    justify-content: flex-end;
-}
-
-.flex-center {
-    justify-content: center;
-}
-
-.flex-space-between {
-    justify-content: space-between;
-}
-
-.flex-space-around{
-    justify-content: space-around;
-}
-
-.flex-space-evenly {
-    justify-content: space-evenly;
-}
-
 .flex-grow,
 .flex-grow-children > * {
     flex-grow: 1;
+}
+
+// Gap
+.gap {
+    .gap(@wrapper-gap);
+}
+
+.row-gap {
+    .row-gap(@wrapper-gap);
+}
+
+.column-gap {
+    .column-gap(@wrapper-gap);
 }

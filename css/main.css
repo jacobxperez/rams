@@ -1648,6 +1648,23 @@ li.active>.danger-hover,
     column-gap: 1.25rem;
 }
 
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-justify {
+    text-align: justify;
+    hyphens: auto;
+}
+
 .relative {
     position: relative;
 }
@@ -1678,23 +1695,6 @@ li.active>.danger-hover,
 
 .right {
     right: 0;
-}
-
-.text-left {
-    text-align: left;
-}
-
-.text-right {
-    text-align: right;
-}
-
-.text-center {
-    text-align: center;
-}
-
-.text-justify {
-    text-align: justify;
-    hyphens: auto;
 }
 
 @media screen and (max-width: 42.5em) {
@@ -1741,6 +1741,11 @@ li.active>.danger-hover,
     .h5,
     h5 {
         font-size: 1.25rem;
+    }
+
+    .grid div,
+    .grid li {
+        grid-column: span 2;
     }
 
     .md-none,

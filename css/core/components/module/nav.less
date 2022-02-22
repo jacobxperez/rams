@@ -1,13 +1,10 @@
 // Navigation
 // ----------------------------------------------------------------------------/
 .nav {
+    display: flex;
     background-color: @nav-background-color;
     width: 100%;
     z-index: 1000;
-
-    > .nav-link {
-        display: inline-block;
-    }
 
     &.top + .wrapper {
         .margin-top(@line-height * 4);
@@ -24,7 +21,7 @@
     .padding(@nav-link-padding-y; @nav-link-padding-x);
     color: @nav-link-color;
 
-    li.active > &,
+    .active > &,
     &.active,
     &:hover,
     &:active {
@@ -36,7 +33,7 @@
 .alpha-link {
     color: @alpha-link;
 
-    li.active > &,
+    .active > &,
     &.active,
     &:hover,
     &:active {
@@ -47,7 +44,7 @@
 .beta-link {
     color: @beta-link;
 
-    li.active > &,
+    .active > &,
     &.active,
     &:hover,
     &:active {

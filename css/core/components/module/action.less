@@ -80,19 +80,13 @@
 
 // Disabled
 // ----------------------------------------------------------------------------/
-.disabled {
+.disabled,
+.disabled:hover,
+.disabled:active,
+.disabled:focus {
     background-color: @disabled;
     color: @disabled-text;
+    text-decoration: none;
+    outline: 0;
     cursor: not-allowed;
-
-    &:hover,
-    &:active {
-        background-color: @disabled;
-        color: @disabled-text;
-        text-decoration: none;
-    }
-
-    &:focus {
-        outline: 0;
-    }
 }

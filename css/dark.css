@@ -99,7 +99,6 @@ dfn {
     font-style: italic;
 }
 
-.tooltip,
 abbr[title],
 dfn[title] {
     text-decoration: underline;
@@ -541,21 +540,15 @@ body>.wrapper:last-child {
     color: #c00;
 }
 
-.disabled {
-    background-color: #e6e6e6;
-    color: #999999;
-    cursor: not-allowed;
-}
-
+.disabled,
 .disabled:hover,
-.disabled:active {
+.disabled:active,
+.disabled:focus {
     background-color: #e6e6e6;
     color: #999999;
     text-decoration: none;
-}
-
-.disabled:focus {
     outline: 0;
+    cursor: not-allowed;
 }
 
 @font-face {

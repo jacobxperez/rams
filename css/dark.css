@@ -1703,8 +1703,8 @@ body>.wrapper:last-child {
     }
 
     .sm-none,
-    .md-block,
-    .lg-block {
+    .md-display,
+    .lg-display {
         display: none;
     }
 }
@@ -1742,8 +1742,8 @@ body>.wrapper:last-child {
     }
 
     .md-none,
-    .sm-block,
-    .lg-block {
+    .sm-display,
+    .lg-display {
         display: none;
     }
 }
@@ -1776,8 +1776,8 @@ body>.wrapper:last-child {
     }
 
     .lg-none,
-    .sm-block,
-    .md-block {
+    .sm-display,
+    .md-display {
         display: none;
     }
 }

@@ -56,39 +56,40 @@
 
     <main class="wrapper grid">
         <!-- Secondary Nav -->
-        <nav class="leading">
-            <ul class="sm-none">
-                <li>
+        <nav>
+            <ul>
+                <li class="sm-none">
                     <p><strong>Contents</strong></p>
                 </li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#getting-started">Getting Started</a></li>
-                <li><a href="#default-build">Default Build</a></li>
-                <li><a href="#custom-build">Custom Build</a></li>
-                <li><a href="#examples">Examples</a></li>
-                <li><a href="#contributing">Contributing</a></li>
-                <li><a href="#license">LICENSE</a></li>
-            </ul>
+                <li class="sm-none"><a href="#about">About</a></li>
+                <li class="sm-none"><a href="#getting-started">Getting Started</a></li>
+                <li class="sm-none"><a href="#default-build">Default Build</a></li>
+                <li class="sm-none"><a href="#custom-build">Custom Build</a></li>
+                <li class="sm-none"><a href="#examples">Examples</a></li>
+                <li class="sm-none"><a href="#contributing">Contributing</a></li>
+                <li class="sm-none"><a href="#license">LICENSE</a></li>
 
-            <!-- Accordion Menu: show on small screens -->
-            <ul class="sm-display flex flex-column border">
-                <li class="js-toggle">
-                    <a class="nav-link flex"><strong>Contents</strong> <span class="flex-grow"></span> <span
-                            class="icon-down-open"></span></a>
-                </li>
-                <li class="drop-box">
-                    <ul>
-                        <li><a class="nav-link" href="#about">About</a></li>
-                        <li><a class="nav-link" href="#getting-started">Getting Started</a></li>
-                        <li><a class="nav-link" href="#default-build">Default Build</a></li>
-                        <li><a class="nav-link" href="#custom-build">Custom Build</a></li>
-                        <li><a class="nav-link" href="#examples">Examples</a></li>
-                        <li><a class="nav-link" href="#contributing">Contributing</a></li>
-                        <li><a class="nav-link" href="#license">LICENSE</a></li>
+                <!-- Accordion Menu: show on small screens -->
+                <li class="sm-display">
+                    <ul class="flex flex-column border">
+                        <li>
+                            <a class="nav-link flex js-toggle"><strong class="flex-grow">Contents</strong> <span
+                                    class="icon-down-open"></span></a>
+
+                            <ul class="drop-box">
+                                <li><a class="nav-link" href="#about">About</a></li>
+                                <li><a class="nav-link" href="#getting-started">Getting Started</a></li>
+                                <li><a class="nav-link" href="#default-build">Default Build</a></li>
+                                <li><a class="nav-link" href="#custom-build">Custom Build</a></li>
+                                <li><a class="nav-link" href="#examples">Examples</a></li>
+                                <li><a class="nav-link" href="#contributing">Contributing</a></li>
+                                <li><a class="nav-link" href="#license">LICENSE</a></li>
+                            </ul>
+                        </li>
                     </ul>
                 </li>
+                <!-- end Accordion Menu -->
             </ul>
-            <!-- end Accordion Menu -->
         </nav>
         <!-- end Secondary Nav -->
 
@@ -96,7 +97,8 @@
         <article>
             <h2 id="about">About</h2>
 
-            <p>Unlike other monolith frameworks, <a href="https://jacobxperez.github.io/essentials/" rel="nofollow">Essentials</a>
+            <p>Unlike other monolith frameworks, <a href="https://jacobxperez.github.io/essentials/"
+                    rel="nofollow">Essentials</a>
                 provides a minimum set of components that gives the designer the freedom to explore and discover
                 new designs. By removing the unnecessary, the essential simplifies the design process.</p>
 

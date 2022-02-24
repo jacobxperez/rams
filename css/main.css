@@ -49,6 +49,24 @@ body {
     background-color: #fff;
 }
 
+.leading,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+hr,
+blockquote,
+pre,
+.dl,
+.ol,
+.ul,
+table {
+    margin: 0.75rem 0rem 0.75rem 0rem;
+}
+
 h1,
 h2,
 h3,
@@ -325,24 +343,6 @@ a:active {
 a:focus {
     outline: thin dotted;
     outline-offset: -0.125rem;
-}
-
-.leading,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-hr,
-blockquote,
-pre,
-.dl,
-.ol,
-.ul,
-table {
-    margin: 0.75rem 0rem 0.75rem 0rem;
 }
 
 .wrapper {
@@ -1681,19 +1681,36 @@ body>.wrapper:last-child {
     right: 0;
 }
 
-@media screen and (max-width: 42.5em) {
-    .grid {
-        grid-template-columns: repeat(1, 1fr);
+@media screen and (min-width: 61.25em) {
+
+    .h1,
+    h1 {
+        font-size: 4rem;
     }
 
-    .grid article,
-    .grid section {
-        grid-column: 1 / -1;
+    .h2,
+    h2 {
+        font-size: 3.0625rem;
     }
 
-    .sm-none,
-    .md-display,
-    .lg-display {
+    .h3,
+    h3 {
+        font-size: 2.3125rem;
+    }
+
+    .h4,
+    h4 {
+        font-size: 1.75rem;
+    }
+
+    .h5,
+    h5 {
+        font-size: 1.3125rem;
+    }
+
+    .lg-none,
+    .sm-display,
+    .md-display {
         display: none;
     }
 }
@@ -1737,36 +1754,19 @@ body>.wrapper:last-child {
     }
 }
 
-@media screen and (min-width: 61.25em) {
-
-    .h1,
-    h1 {
-        font-size: 4rem;
+@media screen and (max-width: 42.5em) {
+    .grid {
+        grid-template-columns: repeat(1, 1fr);
     }
 
-    .h2,
-    h2 {
-        font-size: 3.0625rem;
+    .grid article,
+    .grid section {
+        grid-column: 1 / -1;
     }
 
-    .h3,
-    h3 {
-        font-size: 2.3125rem;
-    }
-
-    .h4,
-    h4 {
-        font-size: 1.75rem;
-    }
-
-    .h5,
-    h5 {
-        font-size: 1.3125rem;
-    }
-
-    .lg-none,
-    .sm-display,
-    .md-display {
+    .sm-none,
+    .md-display,
+    .lg-display {
         display: none;
     }
 }

@@ -1555,16 +1555,16 @@ body>.wrapper:last-child {
     border-bottom: 0.0625rem solid rgba(0, 0, 0, 0.3);
 }
 
-.border-primary {
-    border-color: #05f;
+.border-tertiary {
+    border-color: #555;
 }
 
 .border-secondary {
     border-color: #252525;
 }
 
-.border-tertiary {
-    border-color: #555;
+.border-primary {
+    border-color: #05f;
 }
 
 .border-success {

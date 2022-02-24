@@ -1,14 +1,9 @@
 // Navigation
 // ----------------------------------------------------------------------------/
 .nav {
-    display: flex;
     background-color: @nav-background-color;
     width: 100%;
     z-index: 1000;
-
-    &.top + .wrapper {
-        .margin-top(@line-height * 3);
-    }
 
     .wrapper > ul {
         .margin-left(-@nav-link-padding-x);

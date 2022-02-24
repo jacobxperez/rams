@@ -1687,9 +1687,7 @@ body>.wrapper:last-child {
     }
 
     .grid article,
-    .grid section,
-    .grid aside,
-    .grid nav {
+    .grid section {
         grid-column: 1 / -1;
     }
 

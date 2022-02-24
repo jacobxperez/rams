@@ -346,8 +346,9 @@ a:focus {
 }
 
 .wrapper {
+    display: grid;
     width: 100%;
-    min-width: 20rem;
+    min-width: 17.5rem;
     max-width: 61.25rem;
     margin: 0 auto;
     padding-left: 1.25rem;
@@ -370,7 +371,7 @@ body>.wrapper:last-child {
 }
 
 .nav.top+.wrapper {
-    margin-top: 6rem;
+    margin-top: 4.5rem;
 }
 
 .nav .wrapper>ul {

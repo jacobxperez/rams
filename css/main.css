@@ -384,7 +384,6 @@ body>.wrapper:last-child {
     color: #05f;
 }
 
-.active>.nav-link,
 .nav-link.active,
 .nav-link:hover,
 .nav-link:active {
@@ -396,7 +395,6 @@ body>.wrapper:last-child {
     color: #ffffff;
 }
 
-.active>.alpha-link,
 .alpha-link.active,
 .alpha-link:hover,
 .alpha-link:active {
@@ -407,7 +405,6 @@ body>.wrapper:last-child {
     color: #ffffff;
 }
 
-.active>.beta-link,
 .beta-link.active,
 .beta-link:hover,
 .beta-link:active {
@@ -443,7 +440,6 @@ body>.wrapper:last-child {
     color: #ffffff;
 }
 
-.active>.tertiary-hover,
 .tertiary-hover.active,
 .tertiary-hover:hover,
 .tertiary-hover:active {
@@ -456,7 +452,6 @@ body>.wrapper:last-child {
     color: #ffffff;
 }
 
-.active>.secondary-hover,
 .secondary-hover.active,
 .secondary-hover:hover,
 .secondary-hover:active {
@@ -469,7 +464,6 @@ body>.wrapper:last-child {
     color: #ffffff;
 }
 
-.active>.primary-hover,
 .primary-hover.active,
 .primary-hover:hover,
 .primary-hover:active {
@@ -494,7 +488,6 @@ body>.wrapper:last-child {
     color: #ffffff;
 }
 
-.active>.success-hover,
 .success-hover.active,
 .success-hover:hover,
 .success-hover:active {
@@ -507,7 +500,6 @@ body>.wrapper:last-child {
     color: #000000;
 }
 
-.active>.warning-hover,
 .warning-hover.active,
 .warning-hover:hover,
 .warning-hover:active {
@@ -520,7 +512,6 @@ body>.wrapper:last-child {
     color: #ffffff;
 }
 
-.active>.danger-hover,
 .danger-hover.active,
 .danger-hover:hover,
 .danger-hover:active {

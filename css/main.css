@@ -346,7 +346,6 @@ a:focus {
 }
 
 .wrapper {
-    display: grid;
     width: 100%;
     min-width: 17.5rem;
     max-width: 61.25rem;

@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 });
 
             });
-        } // end for loop
+        };
     })();
     // end Smooth Scroll
 

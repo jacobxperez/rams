@@ -6,7 +6,7 @@
 document.addEventListener("DOMContentLoaded", () => {
 
     // Dropdown Toggle
-    (function () {
+    (() => {
         const getDropDown = document.querySelectorAll('[data-dropdown]');
 
         // toggle class active
@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     // Smooth Scroll
-    (function () {
+    (() => {
         const intLinks = document.querySelectorAll("a[href^='#']");
 
         for (let i = 0; i < intLinks.length; i++) {

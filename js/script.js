@@ -8,7 +8,6 @@ document.addEventListener("DOMContentLoaded", function () {
     // Dropdown Toggle
     (function () {
         const getDropDown = document.querySelectorAll('[data-dropdown]');
-        const getDropDownMenu = document.querySelectorAll('[data-dropdown="menu"]');
 
         // toggle class active
         for (let i = 0; i < getDropDown.length; i++) {
@@ -30,11 +29,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Close dropdown menu on document click
         document.addEventListener("click", function (e) {
-            for (let i = 0; i < getDropDownMenu.length; i++) {
+            for (let i = 0; i < getDropDown.length; i++) {
 
-                if (e.target !== getDropDownMenu[i]) {
+                if (e.target !== getDropDown[i].hasAttribute("menu")) {
 
-                    getDropDownMenu[i].classList.remove("active");
+                    getDropDown[i].classList.remove("active").hasAttribute("menu");
 
                 };
 

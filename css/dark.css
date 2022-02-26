@@ -362,61 +362,6 @@ body>.wrapper:last-child {
     margin-bottom: 6rem;
 }
 
-.nav {
-    background-color: #e6e6e6;
-    width: 100%;
-    z-index: 1000;
-}
-
-.nav .wrapper>ul {
-    margin-left: -0.75rem;
-    margin-right: -0.75rem;
-}
-
-.nav-link {
-    display: block;
-    padding: 0.5rem 0.75rem 0.5rem 0.75rem;
-    color: #00ac25;
-}
-
-.nav-link.active,
-.nav-link:hover,
-.nav-link:active {
-    color: #aaa;
-    text-decoration: none;
-}
-
-.alpha-link {
-    color: #ffffff;
-}
-
-.alpha-link.active,
-.alpha-link:hover,
-.alpha-link:active {
-    color: #bfbfbf;
-}
-
-.beta-link {
-    color: #ffffff;
-}
-
-.beta-link.active,
-.beta-link:hover,
-.beta-link:active {
-    color: #bfbfbf;
-}
-
-.breadcrumb li::after {
-    content: " /";
-    margin-right: 0.25rem;
-}
-
-.breadcrumb li:only-child::after,
-.breadcrumb li:last-child::after {
-    content: "";
-    margin-right: 0;
-}
-
 .drop-box {
     display: none;
     margin-bottom: 0;
@@ -430,15 +375,54 @@ body>.wrapper:last-child {
     display: block;
 }
 
+.nav-link {
+    display: block;
+    padding: 0.5rem 0.75rem 0.5rem 0.75rem;
+}
+
+.nav-link.active,
+.nav-link:hover,
+.nav-link:active {
+    color: #aaa;
+    text-decoration: none;
+}
+
+.nav {
+    background-color: #252525;
+    width: 100%;
+    z-index: 1000;
+}
+
+.nav .nav-link {
+    color: #fff;
+}
+
+.nav .nav-link.active,
+.nav .nav-link:hover,
+.nav .nav-link:active {
+    color: #aaa;
+}
+
+.breadcrumb li::after {
+    content: " /";
+    margin-right: 0.25rem;
+}
+
+.breadcrumb li:only-child::after,
+.breadcrumb li:last-child::after {
+    content: "";
+    margin-right: 0;
+}
+
 .tertiary {
-    background-color: #555;
+    background-color: #aaa;
     color: #ffffff;
 }
 
 .tertiary-hover.active,
 .tertiary-hover:hover,
 .tertiary-hover:active {
-    background-color: #484848;
+    background-color: #9d9d9d;
     color: #ffffff;
 }
 
@@ -467,7 +451,7 @@ body>.wrapper:last-child {
 }
 
 .tertiary-text {
-    color: #555;
+    color: #aaa;
 }
 
 .secondary-text {
@@ -1555,7 +1539,7 @@ body>.wrapper:last-child {
 }
 
 .border-tertiary {
-    border-color: #555;
+    border-color: #aaa;
 }
 
 .border-secondary {

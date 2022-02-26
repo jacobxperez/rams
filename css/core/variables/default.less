@@ -13,11 +13,11 @@
 @primary-text: contrast(@primary);
 @primary-hover: darken(@primary, 5%);
 
-@secondary: #252525;
+@secondary: #333;
 @secondary-text: contrast(@secondary);
 @secondary-hover: darken(@secondary, 5%);
 
-@tertiary: #555;
+@tertiary: @font-color;
 @tertiary-text: contrast(@tertiary);
 @tertiary-hover: darken(@tertiary, 5%);
 
@@ -179,20 +179,13 @@
 
 // Navigation
 // ----------------------------------------------------------------------------/
-@nav-background-color: #e6e6e6;
+@nav-background-color: #252525;
 
 // nav link
-@nav-link-color: @link-color;
-@nav-link-color-hover: @font-color;
+@nav-link-color: #fff;
+@nav-link-color-hover: #aaa;
 @nav-link-padding-y: @padding-y;
 @nav-link-padding-x: @padding-x;
-
-// alt nav links
-@alpha-link: contrast(@primary);
-@alpha-link-hover: darken(@alpha-link, 25%);
-
-@beta-link: contrast(@secondary);
-@beta-link-hover: darken(@beta-link, 25%);
 
 // breadcrumb
 @breadcrumb-separator: " /";

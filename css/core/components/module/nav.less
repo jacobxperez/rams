@@ -1,46 +1,30 @@
 // Navigation
 // ----------------------------------------------------------------------------/
+.nav-link {
+    display: block;
+    .padding(@nav-link-padding-y; @nav-link-padding-x);
+
+    &.active,
+    &:hover,
+    &:active {
+        color: @font-color;
+        text-decoration: none;
+    }
+}
+
 .nav {
     background-color: @nav-background-color;
     width: 100%;
     z-index: 1000;
 
-    .wrapper > ul {
-        .margin-left(-@nav-link-padding-x);
-        .margin-right(-@nav-link-padding-x);
-    }
-}
-
-.nav-link {
-    display: block;
-    .padding(@nav-link-padding-y; @nav-link-padding-x);
-    color: @nav-link-color;
-
-    &.active,
-    &:hover,
-    &:active {
-        color: @nav-link-color-hover;
-        text-decoration: none;
-    }
-}
-
-.alpha-link {
-    color: @alpha-link;
-
-    &.active,
-    &:hover,
-    &:active {
-        color: @alpha-link-hover;
-    }
-}
-
-.beta-link {
-    color: @beta-link;
-
-    &.active,
-    &:hover,
-    &:active {
-        color: @beta-link-hover;
+    .nav-link {
+        color: @nav-link-color;
+    
+        &.active,
+        &:hover,
+        &:active {
+            color: @nav-link-color-hover;
+        }
     }
 }
 

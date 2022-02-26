@@ -86,19 +86,15 @@
 // ----------------------------------------------------------------------------/
 @wrapper-margin-top: @line-height * 3;
 @wrapper-margin-bottom: @line-height * 4;
+@wrapper-min-width: 320px;
+@wrapper-max-width: 980px;
 @wrapper-gap: 20px;
-
-// min width
-@wrapper-min-width: (320px - (@wrapper-gap * 2));
-
-// max width
-@wrapper-max-width: (940px + (@wrapper-gap * 2));
 
 
 // Breakpoints
 // ----------------------------------------------------------------------------/
 // small screen
-@screen-small-max-width: (640px + (@wrapper-gap * 2));
+@screen-small-max-width: 680px;
 
 // medium screen
 @screen-medium-min-width: (@screen-small-max-width + 1 / @font-size);

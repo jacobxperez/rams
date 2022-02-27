@@ -51,8 +51,8 @@ Check out [Editors and Plugins](http://lesscss.org/tools/#editors-and-plugins) f
             * [modules](https://github.com/jacobxperez/essentials/tree/master/css/themes/main/modules) (local scope custom moduels, only for main theme)
             * [main.less](https://github.com/jacobxperez/essentials/blob/master/css/themes/main/main.less) (compiles to [main.css](https://github.com/jacobxperez/essentials/blob/master/css/main.css))
             * [settings.less](https://github.com/jacobxperez/essentials/blob/master/css/themes/main/settings.less) (adjust the settings)
-            * [variables.less](https://github.com/jacobxperez/essentials/blob/master/css/themes/main/variables.less) (variables use as reference)
         * [dark](https://github.com/jacobxperez/essentials/tree/master/css/themes/dark) (theme)
+        * [variables.less](https://github.com/jacobxperez/essentials/blob/master/css/themes/variables.less) (global variables, shared between themes)
     * [main.css](https://github.com/jacobxperez/essentials/blob/master/css/main.css) (pre-compiled [main](https://github.com/jacobxperez/essentials/tree/master/css/themes/main) theme)
     * [dark.css](https://github.com/jacobxperez/essentials/blob/master/css/dark.css) (pre-compiled [dark](https://github.com/jacobxperez/essentials/tree/master/css/themes/dark)  theme)
 

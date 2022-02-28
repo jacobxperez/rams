@@ -375,32 +375,42 @@ body>.wrapper:last-child {
     display: block;
 }
 
-.nav-link {
+.nav {
+    background-color: #222;
+    color: #aaa;
+    width: 100%;
+    z-index: 1000;
+}
+
+.nav-link,
+.tab {
     display: block;
     padding: 0.5rem 0.75rem 0.5rem 0.75rem;
 }
 
 .nav-link.active,
+.tab.active,
 .nav-link:hover,
-.nav-link:active {
-    color: #555;
+.tab:hover,
+.nav-link:active,
+.tab:active {
     text-decoration: none;
 }
 
-.nav {
-    background-color: #222;
-    width: 100%;
-    z-index: 1000;
-}
-
-.nav .nav-link {
+.nav-link {
     color: #fff;
 }
 
-.nav .nav-link.active,
-.nav .nav-link:hover,
-.nav .nav-link:active {
+.nav-link.active,
+.nav-link:hover,
+.nav-link:active {
     color: #aaa;
+}
+
+.tab.active,
+.tab:hover,
+.tab:active {
+    color: #555;
 }
 
 .breadcrumb li::after {

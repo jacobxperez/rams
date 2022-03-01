@@ -39,22 +39,12 @@ file into your project folder and then linking to it in HTML.
 
 ### Custom Build
 
-Essentials is capable of handling and maintaining multiple [themes](https://github.com/jacobxperez/essentials/tree/master/css/themes)
-utilizing the same source code. Just as in art school, the designer can quickly generate several designs to test before choosing the best option.
-Check out [Editors and Plugins](http://lesscss.org/tools/#editors-and-plugins) for compiling [LESS](http://lesscss.org/).
-
-* [/css](https://github.com/jacobxperez/essentials/tree/master/css)
-    * [core](https://github.com/jacobxperez/essentials/tree/master/css/core) (**important files for compiling themes**)
-    * [modules](https://github.com/jacobxperez/essentials/tree/master/css/modules) (global scope custom modules, shared between [themes](https://github.com/jacobxperez/essentials/tree/master/css/themes))
-    * [themes](https://github.com/jacobxperez/essentials/tree/master/css/themes) (includes files for [main](https://github.com/jacobxperez/essentials/tree/master/css/themes/main) and [dark](https://github.com/jacobxperez/essentials/tree/master/css/themes/dark) themes)
-        * [main](https://github.com/jacobxperez/essentials/tree/master/css/themes/main) (theme)
-            * [modules](https://github.com/jacobxperez/essentials/tree/master/css/themes/main/modules) (local scope custom moduels, only for main theme)
-            * [main.less](https://github.com/jacobxperez/essentials/blob/master/css/themes/main/main.less) (compiles to [main.css](https://github.com/jacobxperez/essentials/blob/master/css/main.css))
-            * [settings.less](https://github.com/jacobxperez/essentials/blob/master/css/themes/main/settings.less) (adjust the settings)
-        * [dark](https://github.com/jacobxperez/essentials/tree/master/css/themes/dark) (theme)
-        * [variables.less](https://github.com/jacobxperez/essentials/blob/master/css/themes/variables.less) (global variables, shared between themes)
-    * [main.css](https://github.com/jacobxperez/essentials/blob/master/css/main.css) (pre-compiled [main](https://github.com/jacobxperez/essentials/tree/master/css/themes/main) theme)
-    * [dark.css](https://github.com/jacobxperez/essentials/blob/master/css/dark.css) (pre-compiled [dark](https://github.com/jacobxperez/essentials/tree/master/css/themes/dark)  theme)
+Add custom [modules](https://github.com/jacobxperez/essentials/tree/master/css/modules), edit the
+[variables.less](https://github.com/jacobxperez/essentials/blob/master/css/themes/variables.less),
+uncomment unused components from [main.less](https://github.com/jacobxperez/essentials/blob/master/css/themes/main/main.less) then
+compile to produce the final [CSS](https://github.com/jacobxperez/essentials/blob/master/css/main.css).
+Check out [Editors and Plugins](http://lesscss.org/tools/#editors-and-plugins)
+for compiling [LESS](http://lesscss.org/).
 
 ### Examples
 

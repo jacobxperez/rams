@@ -1,3 +1,18 @@
+// Text Colors
+// ----------------------------------------------------------------------------/
+.success-text {
+    color: @success;
+}
+
+.warning-text {
+    color: @warning;
+}
+
+.danger-text {
+    color: @danger;
+}
+
+
 // Background Colors
 // ----------------------------------------------------------------------------/
 .success {
@@ -43,40 +58,36 @@
 }
 
 
-// Text Colors
-// ----------------------------------------------------------------------------/
-.success-text {
-    color: @success;
-}
-
-.warning-text {
-    color: @warning;
-}
-
-.danger-text {
-    color: @danger;
-}
-
-
 // Borders
 // ----------------------------------------------------------------------------/
-.border-action() {
-    .border-success {
+.action-borders() {
+    .success-border {
         border-color: @success;
     }
     
-    .border-warning {
+    .warning-border {
         border-color: @warning;
     }
     
-    .border-danger {
+    .danger-border {
         border-color: @danger;
+    }
+
+    .success-hover,
+    .warning-hover,
+    .danger-hover {
+        &.active,
+        &:hover,
+        &:active {
+            border-color: @border-color;
+        }
     }
 }
 
 
 // Disabled
 // ----------------------------------------------------------------------------/
+:disabled,
 .disabled,
 .disabled:hover,
 .disabled:active,

@@ -370,6 +370,11 @@ body>.wrapper:last-child {
     z-index: 100;
 }
 
+.box {
+    padding: 0.5rem 0.75rem 0.5rem 0.75rem;
+    background-color: #252525;
+}
+
 .active+.drop-box {
     display: block;
 }

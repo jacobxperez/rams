@@ -313,6 +313,7 @@ select,
 
 .button:hover,
 .button:active {
+    background-color: rgba(0, 0, 0, 0.1);
     outline: 0;
     text-decoration: none;
 }

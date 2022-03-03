@@ -7,32 +7,15 @@
     z-index: 1000;
 }
 
-.nav-link,
-.tab {
+.nav-link {
     display: block;
     .padding(@nav-link-padding-y; @nav-link-padding-x);
-
-    &.active,
-    &:hover,
-    &:active {
-        text-decoration: none;
-    }
-}
-
-.nav-link {
     color: @nav-link-color;
 
     &.active,
     &:hover,
     &:active {
         color: @nav-link-color-hover;
-    }
-}
-
-.tab {
-    &.active,
-    &:hover,
-    &:active {
-        color: @font-color;
+        text-decoration: none;
     }
 }

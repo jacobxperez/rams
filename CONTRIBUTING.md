@@ -15,6 +15,7 @@ following sections to better understand the vision of the project. Use the [issu
 * [Pull Requests](#pull-requests)
 
 ## Essence
+
 The modern web designer faces few limitations on his approach to design and will
 often choose the wrong combination. Without limits, a designer may be overwhelmed
 by the array of components at his disposal. Houdini, polyfill, and other similar
@@ -33,16 +34,16 @@ forefront. The product becomes useful, understandable, easy to use, and long-las
 
 ## Design Principles
 
-In The Power of Less, author [Leo Babauta](https://leobabauta.com/) demonstrates
-how to streamline your life by identifying the essential and eliminating the
-unnecessary. By focusing on the essential and allowing everything else to drop
-away you will become less stressed and more productive.
+In The Power of Less, author [Leo Babauta](https://leobabauta.com/) demonstrates how
+to streamline your life by identifying the essential and eliminating the unnecessary.
+By focusing on the essentials and allowing everything else to drop away you will become
+less stressed and more productive.
 
 1. Identify the essential
 2. Eliminate the rest
 
-These two principles, identifying the essential and eliminate the rest form the
-foundation of this project.
+These two principles, identifying the essential and eliminating the rest form
+the foundation of this project.
 
 > Perfection is achieved, not when there is nothing more to add, but when there is nothing left to take away.
 > — Antoine de Saint-Exupery
@@ -63,18 +64,17 @@ potential bugs.
 
 ## Feature Requests
 
-Before opening a feature request, please take a moment to find out whether your
-idea fits with the scope and aims of the project. It's up to you to make a strong
-case to convince the project's developers of the merits of this feature. Please
-provide as much detail and context as possible.
+Before opening a feature request, please take a moment to find out whether your idea
+fits with the scope and aims of the project. It's up to you to convince the project's
+developers of the merits of this feature. Please provide as much detail and context
+as possible.
 
 ## Pull Requests
 
-Please ask first before embarking on any significant pull request (e.g. implementing
-features, refactoring code, porting to a different language), otherwise you
-risk spending a lot of time working on something that the project's developers
-might not want to merge into the project. When contributing code to this
-project always ask yourself these questions.
+Ask first before embarking on any significant pull request (e.g. implementing features,
+refactoring code, porting to a different language), otherwise you risk spending a lot of
+time working on something that the project's developers might not want to merge into the
+project. When contributing code to this project ask yourself these questions.
 
 * Is it essential?
 * Will it add value?

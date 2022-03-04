@@ -373,11 +373,27 @@ body>.wrapper:last-child {
     z-index: 100;
 }
 
+.drop-box.top {
+    top: auto;
+    bottom: 100%;
+}
+
+.drop-box.bottom {
+    bottom: auto;
+    top: 100%;
+}
+
 .box {
     padding: 0.5rem 0.75rem 0.5rem 0.75rem;
     background-color: #fff;
 }
 
+[data-dropdown="tooltip"] {
+    position: relative;
+}
+
+[data-dropdown="tooltip"]:hover>.drop-box,
+.active>.drop-box,
 .active+.drop-box {
     display: block;
     visibility: visible;

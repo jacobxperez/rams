@@ -16,15 +16,16 @@ following sections to better understand the vision of the project. Use the [issu
 
 ## Essence
 
-The modern web designer faces few limitations on his approach to design and will
-often choose the wrong combination. Without limits, a designer may be overwhelmed
-by the array of components at his disposal. Houdini, polyfill, and other similar
-technologies are all attempts to bypass the limitations of CSS and JavaScript
-however, without the fundamental knowledge of design, their use becomes arbitrary.
-The developer is trained to dominate his technology while the designer is forced to
-work within the limitation of it. By limiting or restricting the choices
-the designer is forced to choose the essential and because he has not
-been trained as a developer he uses the limitations to discover new designs.
+The modern web designer faces few limitations on his approach to design and
+will often choose the wrong combination. Without limits, a designer may be
+overwhelmed by the array of components at his disposal. Houdini, polyfill,
+and other similar technologies are all attempts to bypass the limitations of
+CSS and JavaScript however, without the fundamental knowledge of design,
+their use becomes arbitrary. The developer is trained to dominate his
+technology while the designer is forced to work within the limitation of it.
+By limiting or restricting the choices, the designer is forced to choose the
+essential and because he has not been trained as a developer he uses the
+limitations to discover new designs.
 
 ## Design Philosophy
 
@@ -34,15 +35,15 @@ forefront. The product becomes useful, understandable, easy to use, and long-las
 
 ## Design Principles
 
-In The Power of Less, author [Leo Babauta](https://leobabauta.com/) explains how to
+In The Power of Less, [Leo Babauta](https://leobabauta.com/) explains how to
 streamline your life by identifying the essential and eliminating the unnecessary.
-By focusing on the essentials and allowing everything else to drop away you will
-become less stressed and more productive.
+By focusing on the essentials and allowing everything else to fade away, anyone
+can become less stressed and more productive.
 
 1. Identify the essential
 2. Eliminate the rest
 
-These two principles, identifying the essential and eliminating the rest form
+These two principles of identifying the essential and eliminating the rest form
 the foundation of this project.
 
 > Perfection is achieved, not when there is nothing more to add, but when there is nothing left to take away.

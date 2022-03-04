@@ -390,27 +390,25 @@ body>.wrapper:last-child {
     z-index: 1000;
 }
 
-.nav-link {
-    display: block;
-    padding: 0.5rem 0.75rem 0.5rem 0.75rem;
+.nav .link {
     color: #fff;
 }
 
-.nav-link.active,
-.nav-link:hover,
-.nav-link:active {
+.nav .link.active,
+.nav .link:hover,
+.nav .link:active {
     color: #aaa;
     text-decoration: none;
 }
 
-.tab {
+.tap {
     display: block;
     padding: 0.5rem 0.75rem 0.5rem 0.75rem;
 }
 
-.tab.active,
-.tab:hover,
-.tab:active {
+.tap.active,
+.tap:hover,
+.tap:active {
     color: #aaa;
     text-decoration: none;
 }

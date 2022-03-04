@@ -24,7 +24,8 @@ new designs. By removing the unnecessary, the essential simplifies the design pr
 
 ## Getting Started
 
-Start by **[downloading](https://github.com/jacobxperez/rams/archive/master.zip)** the [repository](https://github.com/jacobxperez/rams) or by cloning the project:
+Start by **[downloading](https://github.com/jacobxperez/rams/archive/master.zip)** the
+[repository](https://github.com/jacobxperez/rams) or by cloning the project:
 
     git clone https://github.com/jacobxperez/rams.git
 

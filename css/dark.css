@@ -117,7 +117,8 @@ dfn {
 }
 
 abbr[title],
-dfn[title] {
+dfn[title],
+[data-dropdown="tooltip"] {
     text-decoration: underline;
     text-decoration: underline dotted;
     cursor: help;
@@ -364,6 +365,7 @@ body>.wrapper:last-child {
 
 .drop-box {
     display: none;
+    visibility: hidden;
     margin-bottom: 0;
     min-width: 10rem;
     background-color: transparent;
@@ -378,6 +380,7 @@ body>.wrapper:last-child {
 
 .active+.drop-box {
     display: block;
+    visibility: visible;
 }
 
 .nav {

@@ -57,7 +57,8 @@ the foundation of this project.
 * Identify the minimum amount of components that can satisfy most designs.
 * Must be unobtrusive to prevent the designer from fighting the framework.
 * Must be easy to update, maintain, modify, adapt, customize, and change with minimum effort.
-* Must follow the 80/20 principle, which indicates that 80 percent of the effects come from 20 percent of the variables.
+* Must follow the [80/20 principle](https://jacobxperez.github.io/blog/post/heuristic/the-80-20-principle/),
+which indicates that 80 percent of the effects come from 20 percent of the variables.
 
 ## Bug Reports
 

@@ -15,6 +15,7 @@ following sections to better understand the vision of the project. Use the [issu
 * [Bug Reports](#bug-reports)
 * [Feature Requests](#feature-requests)
 * [Pull Requests](#pull-requests)
+* [Acknowledgment](#acknowledgment)
 
 ## Essence
 
@@ -37,10 +38,10 @@ forefront. The product becomes useful, understandable, easy to use, and long-las
 
 ## Design Principles
 
-In The Power of Less, [Leo Babauta](https://leobabauta.com/) explains how to
+In the book, The Power of Less, [Leo Babauta](https://leobabauta.com/) explains how to
 streamline your life by identifying the essential and eliminating the unnecessary.
-By focusing on the essentials and allowing everything else to fade away, anyone
-can become less stressed and more productive.
+By focusing on the essentials and allowing everything else to fade away, you can
+become less stressed and more productive.
 
 1. Identify the essential
 2. Eliminate the rest
@@ -82,3 +83,9 @@ project. When contributing code to this project ask yourself these questions.
 * Is it essential?
 * Will it add value?
 * Is this change necessary?
+
+## Acknowledgment 
+
+I want to dedicate this project to all developers, architects, and designers who
+have fiddled with the limitations of CSS. I know your pain, your struggles, and
+your frustrations. May we all find peace and tranquility in our hearts and mind.

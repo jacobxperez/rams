@@ -5,9 +5,11 @@
 ------------------------------------------------------------------------------*/
 document.addEventListener("DOMContentLoaded", () => {
 
-    // Dropdown Toggle
+    // Dropdown
     (() => {
         const getDropDown = document.querySelectorAll('[data-dropdown]');
+        const getMenu = document.querySelectorAll('[data-dropdown="menu"]');
+        const getToolTip = document.querySelectorAll('[data-dropdown="tooltip"]');
 
         // toggle class active
         for (let i = 0; i < getDropDown.length; i++) {
@@ -27,21 +29,26 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         };
 
-        // Close dropdown menu on document click
+        // Close dropdown on document click
         document.addEventListener("click", function (e) {
-            for (let i = 0; i < getDropDown.length; i++) {
+            for (let i = 0; i < getMenu.length; i++) {
+                if (e.target !== getMenu[i]) {
 
-                if (e.target !== getDropDown[i].hasAttribute("menu")) {
-
-                    getDropDown[i].classList.remove("active").hasAttribute("menu");
+                    getMenu[i].classList.remove("active");
 
                 };
+            }
 
+            for (let i = 0; i < getToolTip.length; i++) {
+                if (e.target !== getToolTip[i]) {
+
+                    getToolTip[i].classList.remove("active");
+
+                };
             };
         });
-
     })();
-    // end Dropdown Toggle
+    // end Dropdown
 
 
     // Smooth Scroll

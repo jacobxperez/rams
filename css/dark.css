@@ -265,6 +265,7 @@ textarea {
     width: 100%;
     padding: 0.5rem 0.75rem 0.5rem 0.75rem;
     border: 0.0625rem solid rgba(0, 0, 0, 0.3);
+    background-color: transparent;
 }
 
 input[type=date]:focus,
@@ -282,6 +283,8 @@ input[type=url]:focus,
 input[type=week]:focus,
 select:focus,
 textarea:focus {
+    background-color: #fffdf3;
+    color: #000;
     border-color: rgba(0, 0, 0, 0.5);
 }
 
@@ -399,18 +402,6 @@ body>.wrapper:last-child {
     visibility: visible;
 }
 
-.tap {
-    display: block;
-    padding: 0.5rem 0.75rem 0.5rem 0.75rem;
-}
-
-.tap.active,
-.tap:hover,
-.tap:active {
-    color: #aaa;
-    text-decoration: none;
-}
-
 .breadcrumb li::after {
     content: " /";
     margin-right: 0.25rem;
@@ -427,6 +418,18 @@ body>.wrapper:last-child {
     color: #aaa;
     width: 100%;
     z-index: 1000;
+}
+
+.tap {
+    display: block;
+    padding: 0.5rem 0.75rem 0.5rem 0.75rem;
+}
+
+.tap.active,
+.tap:hover,
+.tap:active {
+    color: #aaa;
+    text-decoration: none;
 }
 
 .nav-link {

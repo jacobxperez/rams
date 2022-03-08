@@ -669,6 +669,7 @@ body>.wrapper:last-child {
     font-weight: normal;
     font-variant: normal;
     line-height: 0.625;
+    vertical-align: middle;
     text-transform: none;
 }
 

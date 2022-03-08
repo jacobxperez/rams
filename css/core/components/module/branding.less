@@ -1,3 +1,72 @@
+// Background Colors
+// ----------------------------------------------------------------------------/
+.tertiary,
+[data-solid="tertiary"] {
+    background-color: @tertiary;
+    color: @tertiary-text;
+}
+
+[data-outline="tertiary"] {
+    color: @tertiary;
+    border-color: @tertiary;
+}
+
+[data-solid="tertiary"],
+[data-outline="tertiary"] {
+    &.active,
+    &:hover,
+    &:active {
+        border-color: @border-color;
+        background-color: @tertiary-hover;
+        color: @tertiary-text;
+    }
+}
+
+.secondary, 
+[data-solid="secondary"] {
+    background-color: @secondary;
+    color: @secondary-text;
+}
+
+[data-outline="secondary"] {
+    color: @secondary;
+    border-color: @secondary;
+}
+
+[data-solid="secondary"],
+[data-outline="secondary"] {
+    &.active,
+    &:hover,
+    &:active {
+        border-color: @border-color;
+        background-color: @secondary-hover;
+        color: @secondary-text;
+    }
+}
+
+.primary,
+[data-solid="primary"] {
+    background-color: @primary;
+    color: @primary-text;
+}
+
+[data-outline="primary"] {
+    color: @primary;
+    border-color: @primary;
+}
+
+[data-solid="primary"],
+[data-outline="primary"] {
+    &.active,
+    &:hover,
+    &:active {
+        border-color: @border-color;
+        background-color: @primary-hover;
+        color: @primary-text;
+    }
+}
+
+
 // Text Colors
 // ----------------------------------------------------------------------------/
 .text-tertiary {
@@ -13,56 +82,16 @@
 }
 
 
-// Background Colors
+// Borders Colors
 // ----------------------------------------------------------------------------/
-.tertiary {
-    background-color: @tertiary;
-    color: @tertiary-text;
+.border-tertiary {
+    border-color: @tertiary;
 }
 
-.tertiary-hover {
-    &.active,
-    &:hover,
-    &:active {
-        background-color: @tertiary-hover;
-        color: @tertiary-text;
-    }
+.border-secondary {
+    border-color: @secondary;
 }
 
-.secondary {
-    background-color: @secondary;
-    color: @secondary-text;
-}
-
-.secondary-hover {
-    &.active,
-    &:hover,
-    &:active {
-        background-color: @secondary-hover;
-        color: @secondary-text;
-    }
-}
-
-.primary {
-    background-color: @primary;
-    color: @primary-text;
-}
-
-.primary-hover {
-    &.active,
-    &:hover,
-    &:active {
-        background-color: @primary-hover;
-        color: @primary-text;
-    }
-}
-
-.tertiary-hover,
-.secondary-hover,
-.primary-hover {
-    &.active,
-    &:hover,
-    &:active {
-        border-color: @border-color;
-    }
+.border-primary {
+    border-color: @primary;
 }

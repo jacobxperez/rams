@@ -1,3 +1,72 @@
+// Background Colors
+// ----------------------------------------------------------------------------/
+.success,
+[data-solid="success"] {
+    background-color: @success;
+    color: @success-text;
+}
+
+[data-outline="success"] {
+    color: @success;
+    border-color: @success;
+}
+
+[data-solid="success"],
+[data-outline="success"] {
+    &.active,
+    &:hover,
+    &:active {
+        border-color: @border-color;
+        background-color: @success-hover;
+        color: @success-text;
+    }
+}
+
+.warning, 
+[data-solid="warning"] {
+    background-color: @warning;
+    color: @warning-text;
+}
+
+[data-outline="warning"] {
+    color: @warning;
+    border-color: @warning;
+}
+
+[data-solid="warning"],
+[data-outline="warning"] {
+    &.active,
+    &:hover,
+    &:active {
+        border-color: @border-color;
+        background-color: @warning-hover;
+        color: @warning-text;
+    }
+}
+
+.danger,
+[data-solid="danger"] {
+    background-color: @danger;
+    color: @danger-text;
+}
+
+[data-outline="danger"] {
+    color: @danger;
+    border-color: @danger;
+}
+
+[data-solid="danger"],
+[data-outline="danger"] {
+    &.active,
+    &:hover,
+    &:active {
+        border-color: @border-color;
+        background-color: @danger-hover;
+        color: @danger-text;
+    }
+}
+
+
 // Text Colors
 // ----------------------------------------------------------------------------/
 .text-success {
@@ -13,75 +82,19 @@
 }
 
 
-// Background Colors
-// ----------------------------------------------------------------------------/
-.success {
-    background-color: @success;
-    color: @success-text;
-}
-
-.success-hover {
-    &.active,
-    &:hover,
-    &:active {
-        background-color: @success-hover;
-        color: @success-text;
-    }
-}
-
-.warning {
-    background-color: @warning;
-    color: @warning-text;
-}
-
-.warning-hover {
-    &.active,
-    &:hover,
-    &:active {
-        background-color: @warning-hover;
-        color: @warning-text;
-    }
-}
-
-.danger {
-    background-color: @danger;
-    color: @danger-text;
-}
-
-.danger-hover {
-    &.active,
-    &:hover,
-    &:active {
-        background-color: @danger-hover;
-        color: @danger-text;
-    }
-}
-
-
 // Borders
 // ----------------------------------------------------------------------------/
-.action-borders() {
-    .border-success {
-        border-color: @success;
-    }
-    
-    .border-warning {
-        border-color: @warning;
-    }
-    
-    .border-danger {
-        border-color: @danger;
-    }
 
-    .success-hover,
-    .warning-hover,
-    .danger-hover {
-        &.active,
-        &:hover,
-        &:active {
-            border-color: @border-color;
-        }
-    }
+.border-success {
+    border-color: @success;
+}
+    
+.border-warning {
+    border-color: @warning;
+}
+    
+.border-danger {
+    border-color: @danger;
 }
 
 

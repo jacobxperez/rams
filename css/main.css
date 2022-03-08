@@ -310,6 +310,7 @@ select,
 .button {
     display: inline-block;
     padding: 0.5rem 0.75rem 0.5rem 0.75rem;
+    border: 0.0625rem solid transparent;
     background-color: transparent;
     text-align: center;
     cursor: pointer;
@@ -339,6 +340,8 @@ a {
 a:hover,
 .link:active,
 a:active {
+    background-color: transparent;
+    border-color: transparent;
     outline: 0;
     text-decoration: underline;
 }
@@ -420,6 +423,19 @@ body>.wrapper:last-child {
     z-index: 1000;
 }
 
+.nav-link {
+    display: block;
+    padding: 0.5rem 0.75rem 0.5rem 0.75rem;
+    color: #fff;
+}
+
+.nav-link.active,
+.nav-link:hover,
+.nav-link:active {
+    color: #aaa;
+    text-decoration: none;
+}
+
 .tap {
     display: block;
     padding: 0.5rem 0.75rem 0.5rem 0.75rem;
@@ -429,17 +445,6 @@ body>.wrapper:last-child {
 .tap:hover,
 .tap:active {
     color: #555;
-    text-decoration: none;
-}
-
-.nav-link {
-    color: #fff;
-}
-
-.nav-link.active,
-.nav-link:hover,
-.nav-link:active {
-    color: #aaa;
     text-decoration: none;
 }
 

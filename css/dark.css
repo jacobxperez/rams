@@ -304,7 +304,7 @@ select,
 }
 
 :not([type=submit]):invalid {
-    border-color: #c00;
+    border-color: #ff3d00;
 }
 
 .button {
@@ -560,13 +560,13 @@ body>.wrapper:last-child {
 
 .success,
 [data-solid="success"] {
-    background-color: #393;
+    background-color: #00c853;
     color: #ffffff;
 }
 
 [data-outline="success"] {
-    color: #393;
-    border-color: #393;
+    color: #00c853;
+    border-color: #00c853;
 }
 
 [data-solid="success"].active,
@@ -576,19 +576,19 @@ body>.wrapper:last-child {
 [data-solid="success"]:active,
 [data-outline="success"]:active {
     border-color: rgba(0, 0, 0, 0.3);
-    background-color: #2d862d;
+    background-color: #00af48;
     color: #ffffff;
 }
 
 .warning,
 [data-solid="warning"] {
-    background-color: #fa0;
+    background-color: #ffab00;
     color: #000000;
 }
 
 [data-outline="warning"] {
-    color: #fa0;
-    border-color: #fa0;
+    color: #ffab00;
+    border-color: #ffab00;
 }
 
 [data-solid="warning"].active,
@@ -598,19 +598,19 @@ body>.wrapper:last-child {
 [data-solid="warning"]:active,
 [data-outline="warning"]:active {
     border-color: rgba(0, 0, 0, 0.3);
-    background-color: #e69900;
+    background-color: #e69a00;
     color: #000000;
 }
 
 .danger,
 [data-solid="danger"] {
-    background-color: #c00;
+    background-color: #ff3d00;
     color: #ffffff;
 }
 
 [data-outline="danger"] {
-    color: #c00;
-    border-color: #c00;
+    color: #ff3d00;
+    border-color: #ff3d00;
 }
 
 [data-solid="danger"].active,
@@ -620,32 +620,32 @@ body>.wrapper:last-child {
 [data-solid="danger"]:active,
 [data-outline="danger"]:active {
     border-color: rgba(0, 0, 0, 0.3);
-    background-color: #b30000;
+    background-color: #e63700;
     color: #ffffff;
 }
 
 .text-success {
-    color: #393;
+    color: #00c853;
 }
 
 .text-warning {
-    color: #fa0;
+    color: #ffab00;
 }
 
 .text-danger {
-    color: #c00;
+    color: #ff3d00;
 }
 
 .border-success {
-    border-color: #393;
+    border-color: #00c853;
 }
 
 .border-warning {
-    border-color: #fa0;
+    border-color: #ffab00;
 }
 
 .border-danger {
-    border-color: #c00;
+    border-color: #ff3d00;
 }
 
 :disabled,
@@ -1817,13 +1817,13 @@ body>.wrapper:last-child {
 }
 
 ::-moz-selection {
-    background-color: #cde1ff;
+    background-color: #d8e5ff;
     color: #000000;
     text-shadow: none;
 }
 
 ::selection {
-    background-color: #cde1ff;
+    background-color: #d8e5ff;
     color: #000000;
     text-shadow: none;
 }

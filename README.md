@@ -1,6 +1,6 @@
 # [RAMs](https://jacobxperez.github.io/rams/)
 
-Design framework, built with [less](http://lesscss.org/) but better.
+Designers framework, built with [less](http://lesscss.org/) code but better.
 
 ---
 

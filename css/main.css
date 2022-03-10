@@ -373,6 +373,12 @@ body>.wrapper:last-child {
     position: relative;
 }
 
+[data-dropdown="tooltip"] [data-dropdown="box"] {
+    padding: 0.5rem 0.75rem 0.5rem 0.75rem;
+    background-color: #2f2f2f;
+    color: #ffffff;
+}
+
 [data-dropdown="box"] {
     display: none;
     visibility: hidden;

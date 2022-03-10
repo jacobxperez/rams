@@ -3,12 +3,18 @@
 [data-dropdown="tooltip"] {
     position: relative;
     &:extend(abbr[title]);
+
+    [data-dropdown="box"] {
+        .padding();
+        background-color: @tooltip-box-background;
+        color: @tooltip-box-text-color;
+    }
 }
 
 [data-dropdown="box"] {
     display: none;
     visibility: hidden;
-    .min-width(@dropdown-width);
+    .min-width(@dropdown-box-width);
     background-color: transparent;
     color: @font-color;
     z-index: 100;

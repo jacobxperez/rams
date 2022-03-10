@@ -425,6 +425,10 @@ body>.wrapper:last-child {
     z-index: 1000;
 }
 
+[data-navbar="sub"] {
+    background-color: #2f2f2f;
+}
+
 [data-navbar="top"] {
     position: fixed;
     top: 0;

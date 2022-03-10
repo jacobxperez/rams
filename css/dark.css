@@ -376,7 +376,6 @@ body>.wrapper:last-child {
 [data-dropdown="box"] {
     display: none;
     visibility: hidden;
-    margin-bottom: 0;
     min-width: 10rem;
     background-color: transparent;
     color: #aaa;

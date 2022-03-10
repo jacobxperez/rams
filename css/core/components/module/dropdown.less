@@ -1,6 +1,6 @@
 // Dropdown
 // ----------------------------------------------------------------------------/
-.dropdown {
+[data-dropdown="box"] {
     display: none;
     visibility: hidden;
     margin-bottom: 0;
@@ -8,21 +8,6 @@
     background-color: transparent;
     color: @font-color;
     z-index: 100;
-
-    &.top {
-        top: auto;
-        bottom: 100%;
-    }
-
-    &.bottom {
-        bottom: auto;
-        top: 100%;
-    }
-}
-
-.box {
-    .padding();
-    background-color: @box-background;
 }
 
 [data-dropdown="tooltip"] {
@@ -30,9 +15,14 @@
     &:extend(abbr[title]);
 }
 
-[data-dropdown="tooltip"]:hover > .dropdown,
-.active > .dropdown,
-.active + .dropdown {
+[data-dropdown="tooltip"]:hover > [data-dropdown="box"],
+.active > [data-dropdown="box"],
+.active + [data-dropdown="box"] {
     display: block;
     visibility: visible;
+}
+
+.box {
+    .padding();
+    background-color: @box-background;
 }

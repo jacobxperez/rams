@@ -17,7 +17,7 @@
 
         <p class="flex flex-wrap"><span class="flex-grow">Learn more about RAMs and how to get started.</span> <a
                 href="https://github.com/jacobxperez/rams/blob/master/css/core/components/index.html" target="_blank"
-                class="icon-pencil">
+                data-icon="pencil">
                 Edit
                 Page</a></p>
 
@@ -25,25 +25,26 @@
     </header>
 
     <!-- Navbar -->
-    <nav class="nav fixed top">
+    <nav data-navbar="top">
         <ul class="flex">
-            <li><a class="nav-link" href="https://jacobxperez.github.io/rams/">RAMs</a></li>
+            <li><a data-nav="navbar" href="https://jacobxperez.github.io/rams/">RAMs</a></li>
 
             <li class="flex-grow"></li>
 
-            <li class="sm-none"><a class="nav-link" href="#top">Read Me</a></li>
-            <li class="sm-none"><a class="nav-link" href="fonts/icons/index.html">Icons</a></li>
-            <li class="sm-none"><a class="icon-flow-branch nav-link" href="https://github.com/jacobxperez/rams">
+            <li class="sm-none"><a data-nav="navbar" href="#top">Read Me</a></li>
+            <li class="sm-none"><a data-nav="navbar" href="fonts/icons/index.html">Icons</a></li>
+            <li class="sm-none"><a data-nav="navbar" data-icon="flow-branch" href="https://github.com/jacobxperez/rams">
                     Fork</a></li>
 
             <!-- Dropdown Menu: show on small screens -->
             <li class="sm-display">
-                <a class="icon-menu nav-link" data-dropdown="menu"></a>
+                <a data-nav="navbar" data-icon="menu" data-dropdown="menu"></a>
 
-                <ul class="dropdown secondary absolute left right">
-                    <li><a class="nav-link" href="#top">Read Me</a></li>
-                    <li><a class="nav-link" href="fonts/icons/index.html">Icons</a></li>
-                    <li><a class="icon-flow-branch nav-link" href="https://github.com/jacobxperez/rams"> Fork</a>
+                <ul class="secondary absolute left right" data-dropdown="box">
+                    <li><a data-nav="navbar" href="#top">Read Me</a></li>
+                    <li><a data-nav="navbar" href="fonts/icons/index.html">Icons</a></li>
+                    <li><a data-nav="navbar" data-icon="flow-branch" href="https://github.com/jacobxperez/rams">
+                            Fork</a>
                     </li>
                 </ul>
             </li>
@@ -65,7 +66,8 @@
                     data-outline="primary">button</a></p>
 
             <p>Lorem ipsum dolor sit amet
-                <span data-dropdown="tooltip">consectetur<span class="dropdown absolute left secondary box">Lorem ipsum
+                <span data-dropdown="tooltip">consectetur<span class="absolute left secondary box"
+                        data-dropdown="box">Lorem ipsum
                         dolor sit amet.</span></span>
                 adipisicing elit. Velit, laborum.
             </p>

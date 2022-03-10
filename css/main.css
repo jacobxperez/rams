@@ -397,8 +397,9 @@ body>[data-container]:last-child {
     visibility: visible;
 }
 
-.box {
+[data-box] {
     padding: 0.5rem 0.75rem 0.5rem 0.75rem;
+    border: 0.0625rem solid rgba(0, 0, 0, 0.3);
     background-color: #fff;
 }
 

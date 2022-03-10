@@ -395,17 +395,6 @@ body>.wrapper:last-child {
     background-color: #fff;
 }
 
-.breadcrumb li::after {
-    content: " /";
-    margin-right: 0.25rem;
-}
-
-.breadcrumb li:only-child::after,
-.breadcrumb li:last-child::after {
-    content: "";
-    margin-right: 0;
-}
-
 [data-nav] {
     display: block;
     padding: 0.5rem 0.75rem 0.5rem 0.75rem;
@@ -416,6 +405,17 @@ body>.wrapper:last-child {
 [data-nav]:active {
     color: #555;
     text-decoration: none;
+}
+
+.breadcrumb li::after {
+    content: " /";
+    margin-right: 0.25rem;
+}
+
+.breadcrumb li:only-child::after,
+.breadcrumb li:last-child::after {
+    content: "";
+    margin-right: 0;
 }
 
 [data-navbar] {

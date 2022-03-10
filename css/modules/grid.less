@@ -1,8 +1,13 @@
 // Grid: modify the grid to your project specifications
 // ----------------------------------------------------------------------------/
-.grid {
+[data-grid] {
     display: grid;
-    .column-gap(@wrapper-gap);
+    .column-gap(@container-gap);
+}
+
+[data-grid="main"] {
+    display: grid;
+    .column-gap(@container-gap);
     grid-template-columns: repeat(4, 1fr);
 
     header,
@@ -21,7 +26,7 @@
 // ----------------------------------------------------------------------------/
 .small-grid () {
 
-    .grid {
+    [data-grid="main"] {
         display: block;
     }
 
@@ -32,7 +37,7 @@
 // ----------------------------------------------------------------------------/
 .medium-grid () {
 
-    .grid {
+    [data-grid="main"] {
         div,
         li {
             grid-column: span 2;

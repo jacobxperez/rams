@@ -1,21 +1,13 @@
 // Nav
 // ----------------------------------------------------------------------------/
-.nav {
-    .background-color(@nav-background);
-    color: @nav-link-color-hover;
-    width: 100%;
-    z-index: 1000;
-}
-
-.nav-link {
+[data-nav] {
     display: block;
     .padding(@nav-link-padding-y; @nav-link-padding-x);
-    color: @nav-link-color;
 
     &.active,
     &:hover,
     &:active {
-        color: @nav-link-color-hover;
+        color: @font-color;
         text-decoration: none;
     }
 }

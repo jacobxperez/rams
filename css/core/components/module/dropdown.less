@@ -1,5 +1,10 @@
 // Dropdown
 // ----------------------------------------------------------------------------/
+[data-dropdown="tooltip"] {
+    position: relative;
+    &:extend(abbr[title]);
+}
+
 [data-dropdown="box"] {
     display: none;
     visibility: hidden;
@@ -8,11 +13,6 @@
     background-color: transparent;
     color: @font-color;
     z-index: 100;
-}
-
-[data-dropdown="tooltip"] {
-    position: relative;
-    &:extend(abbr[title]);
 }
 
 [data-dropdown="tooltip"]:hover > [data-dropdown="box"],

@@ -369,6 +369,10 @@ body>.wrapper:last-child {
     margin-bottom: 5.5rem;
 }
 
+[data-dropdown="tooltip"] {
+    position: relative;
+}
+
 [data-dropdown="box"] {
     display: none;
     visibility: hidden;
@@ -377,10 +381,6 @@ body>.wrapper:last-child {
     background-color: transparent;
     color: #555;
     z-index: 100;
-}
-
-[data-dropdown="tooltip"] {
-    position: relative;
 }
 
 [data-dropdown="tooltip"]:hover>[data-dropdown="box"],
@@ -458,26 +458,6 @@ body>.wrapper:last-child {
     text-decoration: none;
 }
 
-.border {
-    border: 0.0625rem solid rgba(0, 0, 0, 0.3);
-}
-
-.border-left {
-    border-left: 0.0625rem solid rgba(0, 0, 0, 0.3);
-}
-
-.border-top {
-    border-top: 0.0625rem solid rgba(0, 0, 0, 0.3);
-}
-
-.border-right {
-    border-right: 0.0625rem solid rgba(0, 0, 0, 0.3);
-}
-
-.border-bottom {
-    border-bottom: 0.0625rem solid rgba(0, 0, 0, 0.3);
-}
-
 [data-button="tertiary"] {
     background-color: #555;
     color: #ffffff;
@@ -541,30 +521,6 @@ body>.wrapper:last-child {
     color: #ffffff;
 }
 
-.text-tertiary {
-    color: #555;
-}
-
-.text-secondary {
-    color: #333;
-}
-
-.text-primary {
-    color: #05f;
-}
-
-.border-tertiary {
-    border-color: #555;
-}
-
-.border-secondary {
-    border-color: #333;
-}
-
-.border-primary {
-    border-color: #05f;
-}
-
 [data-button="success"] {
     background-color: #00c853;
     color: #ffffff;
@@ -620,30 +576,6 @@ body>.wrapper:last-child {
     border-color: rgba(0, 0, 0, 0.3);
     background-color: #e63700;
     color: #ffffff;
-}
-
-.text-success {
-    color: #00c853;
-}
-
-.text-warning {
-    color: #ffab00;
-}
-
-.text-danger {
-    color: #ff3d00;
-}
-
-.border-success {
-    border-color: #00c853;
-}
-
-.border-warning {
-    border-color: #ffab00;
-}
-
-.border-danger {
-    border-color: #ff3d00;
 }
 
 :disabled,
@@ -1616,6 +1548,26 @@ body>.wrapper:last-child {
     display: block;
 }
 
+.border {
+    border: 0.0625rem solid rgba(0, 0, 0, 0.3);
+}
+
+.border-left {
+    border-left: 0.0625rem solid rgba(0, 0, 0, 0.3);
+}
+
+.border-top {
+    border-top: 0.0625rem solid rgba(0, 0, 0, 0.3);
+}
+
+.border-right {
+    border-right: 0.0625rem solid rgba(0, 0, 0, 0.3);
+}
+
+.border-bottom {
+    border-bottom: 0.0625rem solid rgba(0, 0, 0, 0.3);
+}
+
 .flex {
     display: flex;
 }
@@ -1680,10 +1632,6 @@ body>.wrapper:last-child {
 
 .fixed {
     position: fixed;
-}
-
-.sticky {
-    position: sticky;
 }
 
 .top {

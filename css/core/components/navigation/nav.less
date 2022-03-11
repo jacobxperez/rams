@@ -13,21 +13,9 @@
 }
 
 
-// Navlist
+// Breadcrumb
 // ----------------------------------------------------------------------------/
-[data-navlist] {
-    display: flex;
-    flex-direction: column;
-}
-
-
-// Navline
-// ----------------------------------------------------------------------------/
-[data-navline] {
-    display: flex;
-}
-
-[data-navline="breadcrumb"] {
+[data-flex="breadcrumb"] {
     li::after {
         content: @breadcrumb-separator;
         .margin-right(4px);

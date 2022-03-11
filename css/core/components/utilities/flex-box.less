@@ -1,27 +1,27 @@
 // Flex Box
 // ----------------------------------------------------------------------------/
-.flex {
+[data-flex] {
     display: flex;
 }
 
-.flex-row-reverse {
+[data-flex="row-reverse"] {
     flex-direction: row-reverse;
 }
 
-.flex-column {
+[data-flex="column"] {
     flex-direction: column;
 }
 
-.flex-column-reverse {
+[data-flex="column-reverse"] {
     flex-direction: column-reverse;
 }
 
-.flex-wrap {
+[data-flex="wrap"] {
     flex-wrap: wrap;
 }
 
-.flex-grow,
-.flex-grow-children > * {
+[data-flex-item="grow"],
+[data-flex="grow-children"] > * {
     flex-grow: 1;
 }
 

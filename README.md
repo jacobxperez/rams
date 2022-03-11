@@ -1,6 +1,6 @@
 # [RAMs](https://jacobxperez.github.io/rams/)
 
-Designers framework, built with [less](http://lesscss.org/) but better.
+Design framework, built with [less](http://lesscss.org/) but better.
 
 ---
 
@@ -18,9 +18,8 @@ Designers framework, built with [less](http://lesscss.org/) but better.
 
 ## About
 
-Unlike other monolith frameworks, [RAMs](https://jacobxperez.github.io/rams/)
-provides a minimum set of components that gives the designer the freedom to explore and discover
-new designs. By removing the unnecessary, the essential simplifies the design process.
+[RAMs](https://jacobxperez.github.io/rams/) is a design framework that uses the
+power of data attributes to style components. 
 
 ## Getting Started
 

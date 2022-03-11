@@ -405,9 +405,14 @@ body>[data-container]:last-child {
     text-decoration: none;
 }
 
+[data-flex="breadcrumb"] {
+    flex-wrap: wrap;
+    column-gap: 0.3125rem;
+}
+
 [data-flex="breadcrumb"] li::after {
-    content: " /";
-    margin-right: 0.25rem;
+    content: "/";
+    margin-left: 0.3125rem;
 }
 
 [data-flex="breadcrumb"] li:only-child::after,

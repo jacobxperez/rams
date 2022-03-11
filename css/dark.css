@@ -73,32 +73,28 @@ h6 {
     font-weight: 400;
 }
 
-.h1,
 h1 {
     font-size: 2.625rem;
 }
 
-.h2,
 h2 {
     font-size: 2.1875rem;
 }
 
-.h3,
+[data-text="large"],
 h3 {
     font-size: 1.8125rem;
 }
 
-.h4,
 h4 {
     font-size: 1.5rem;
 }
 
-.h5,
+[data-text="medium"],
 h5 {
     font-size: 1.25rem;
 }
 
-.h6,
 h6 {
     font-size: 1rem;
 }
@@ -127,7 +123,7 @@ mark {
     color: #000000;
 }
 
-.small,
+[data-text="small"],
 small,
 sub,
 sup {
@@ -393,6 +389,10 @@ body>[data-container]:last-child {
     background-color: #252525;
 }
 
+[data-box="border"] {
+    padding: 0;
+}
+
 [data-nav] {
     display: block;
     padding: 0.5rem 0.75rem 0.5rem 0.75rem;
@@ -574,6 +574,23 @@ body>[data-container]:last-child {
     border-color: rgba(0, 0, 0, 0.3);
     background-color: #e63700;
     color: #ffffff;
+}
+
+[data-text="left"] {
+    text-align: left;
+}
+
+[data-text="right"] {
+    text-align: right;
+}
+
+[data-text="center"] {
+    text-align: center;
+}
+
+[data-text="justify"] {
+    text-align: justify;
+    hyphens: auto;
 }
 
 :disabled,
@@ -1545,14 +1562,6 @@ body>[data-container]:last-child {
     grid-column: span 3;
 }
 
-.block {
-    display: block;
-}
-
-.border {
-    border: 0.0625rem solid rgba(0, 0, 0, 0.3);
-}
-
 [data-flex] {
     display: flex;
 }
@@ -1590,23 +1599,6 @@ body>[data-container]:last-child {
     column-gap: 1.25rem;
 }
 
-[data-text="left"] {
-    text-align: left;
-}
-
-[data-text="right"] {
-    text-align: right;
-}
-
-[data-text="center"] {
-    text-align: center;
-}
-
-[data-text="justify"] {
-    text-align: justify;
-    hyphens: auto;
-}
-
 .relative {
     position: relative;
 }
@@ -1635,29 +1627,29 @@ body>[data-container]:last-child {
     right: 0;
 }
 
-@media screen and (min-width: 61.25em) {
+.block {
+    display: block;
+}
 
-    .h1,
+@media screen and (min-width: 61.25em) {
     h1 {
         font-size: 4rem;
     }
 
-    .h2,
     h2 {
         font-size: 3.0625rem;
     }
 
-    .h3,
+    [data-text="large"],
     h3 {
         font-size: 2.3125rem;
     }
 
-    .h4,
     h4 {
         font-size: 1.75rem;
     }
 
-    .h5,
+    [data-text="medium"],
     h5 {
         font-size: 1.3125rem;
     }
@@ -1670,28 +1662,24 @@ body>[data-container]:last-child {
 }
 
 @media screen and (min-width: 42.50390625em) and (max-width: 61.24609375em) {
-
-    .h1,
     h1 {
         font-size: 3.125rem;
     }
 
-    .h2,
     h2 {
         font-size: 2.5rem;
     }
 
-    .h3,
+    [data-text="large"],
     h3 {
         font-size: 2rem;
     }
 
-    .h4,
     h4 {
         font-size: 1.5625rem;
     }
 
-    .h5,
+    [data-text="medium"],
     h5 {
         font-size: 1.25rem;
     }

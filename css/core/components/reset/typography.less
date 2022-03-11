@@ -18,32 +18,28 @@ h6 {
     &:extend(.leading);
 }
 
-.h1,
 h1 {
     .font-size(@h1-font-size-small);
 }
 
-.h2,
 h2 {
     .font-size(@h2-font-size-small);
 }
 
-.h3,
+[data-text="large"],
 h3 {
     .font-size(@h3-font-size-small);
 }
 
-.h4,
 h4 {
     .font-size(@h4-font-size-small);
 }
 
-.h5,
+[data-text="medium"],
 h5 {
     .font-size(@h5-font-size-small);
 }
 
-.h6,
 h6 {
     .font-size(@font-size);
 }
@@ -75,7 +71,7 @@ mark {
     color: @mark-text;
 }
 
-.small,
+[data-text="small"],
 small,
 sub,
 sup {
@@ -105,54 +101,48 @@ hr {
 }
 
 .medium-type-scale () {
-    .h1,
     h1 {
         .font-size(@h1-font-size-medium);
     }
 
-    .h2,
     h2 {
         .font-size(@h2-font-size-medium);
     }
 
-    .h3,
+    [data-text="large"],
     h3 {
         .font-size(@h3-font-size-medium);
     }
 
-    .h4,
     h4 {
         .font-size(@h4-font-size-medium);
     }
 
-    .h5,
+    [data-text="medium"],
     h5 {
         .font-size(@h5-font-size-medium);
     }
 }
 
 .large-type-scale () {
-    .h1,
     h1 {
         .font-size(@h1-font-size-large);
     }
 
-    .h2,
     h2 {
         .font-size(@h2-font-size-large);
     }
 
-    .h3,
+    [data-text="large"],
     h3 {
         .font-size(@h3-font-size-large);
     }
 
-    .h4,
     h4 {
         .font-size(@h4-font-size-large);
     }
 
-    .h5,
+    [data-text="medium"],
     h5 {
         .font-size(@h5-font-size-large);
     }

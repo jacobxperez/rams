@@ -1541,8 +1541,6 @@ body>[data-container]:last-child {
 }
 
 [data-grid="main"] {
-    display: grid;
-    column-gap: 1.25rem;
     grid-template-columns: repeat(4, 1fr);
 }
 

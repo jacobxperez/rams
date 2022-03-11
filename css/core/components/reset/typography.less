@@ -1,6 +1,6 @@
 // Typography
 // ----------------------------------------------------------------------------/
-.leading {
+[data-leading] {
     .margin((@line-height / 2), 0);
 }
 
@@ -15,7 +15,7 @@ h6 {
     }
     .font-family(@headings-font-family);
     font-weight: @headings-font-weight;
-    &:extend(.leading);
+    &:extend([data-leading]);
 }
 
 h1 {
@@ -45,7 +45,7 @@ h6 {
 }
 
 p {
-    &:extend(.leading);
+    &:extend([data-leading]);
 }
 
 b,

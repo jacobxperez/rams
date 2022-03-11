@@ -6,7 +6,7 @@ blockquote, q {
 
 blockquote {
     .font-family(@blockquote-font-family);
-    &:extend(.leading);
+    &:extend([data-leading]);
 
     & when not (@blockquote-font-style = false) {
         font-style: @blockquote-font-style;

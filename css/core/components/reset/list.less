@@ -6,36 +6,32 @@ ul {
     list-style-type: none;
 }
 
-.dl,
-.ol,
-.ul {
+[data-list] {
     &:extend(.leading);
 
-    .dl,
-    .ol,
-    .ul {
+    [data-list] {
         margin: 0;
     }
 }
 
-.ol {
+[data-list="ol"] {
     list-style-type: @ol-list-style-type;
 
-    > li:first-child > .ol {
+    > li:first-child > [data-list="ol"] {
         list-style-type: @ol-list-style-type-sub;
     }
 }
 
-.ul {
+[data-list="ul"] {
     list-style-type: @ul-list-style-type;
 
-    > li:first-child > .ul {
+    > li:first-child > [data-list="ul"] {
         list-style-type: @ul-list-style-type-sub;
     }
 }
 
-.ol,
-.ul {
+[data-list="ol"],
+[data-list="ul"] {
     .padding-left(@line-height);
     list-style-position: outside;
 }

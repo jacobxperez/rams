@@ -1,6 +1,6 @@
 // Display
 // ----------------------------------------------------------------------------/
-.block {
+[data-display~="block"] {
     display: block;
 }
 
@@ -8,9 +8,9 @@
 // Small Screen
 // ----------------------------------------------------------------------------/
 .small-display () {
-    .sm-none,
-    .md-display,
-    .lg-display {
+    [data-display~="small-none"],
+    [data-display~="medium"],
+    [data-display~="large"] {
         display: none;
     }
 }
@@ -19,9 +19,9 @@
 // Medium Screen
 // ----------------------------------------------------------------------------/
 .medium-display () {
-    .md-none,
-    .sm-display,
-    .lg-display {
+    [data-display~="medium-none"],
+    [data-display~="small"],
+    [data-display~="large"] {
         display: none;
     }
 }
@@ -30,9 +30,9 @@
 // Large Screen
 // ----------------------------------------------------------------------------/
 .large-display () {
-    .lg-none,
-    .sm-display,
-    .md-display {
+    [data-display~="large-none"],
+    [data-display~="small"],
+    [data-display~="medium"] {
         display: none;
     }
 }

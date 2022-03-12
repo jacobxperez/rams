@@ -4,36 +4,35 @@
     display: flex;
 }
 
-[data-flex="row-reverse"] {
+[data-flex~="row-reverse"] {
     flex-direction: row-reverse;
 }
 
-[data-flex="column"] {
+[data-flex~="column"] {
     flex-direction: column;
 }
 
-[data-flex="column-reverse"] {
+[data-flex~="column-reverse"] {
     flex-direction: column-reverse;
 }
 
-[data-flex="wrap"] {
+[data-flex~="wrap"] {
     flex-wrap: wrap;
 }
 
-[data-flex-item="grow"],
-[data-flex="grow-children"] > * {
+[data-flex-item~="grow"],
+[data-flex~="grow-children"] > * {
     flex-grow: 1;
 }
 
-// Gap
-.gap {
+[data-flex~="gap"] {
     .gap(@container-gap);
 }
 
-.row-gap {
+[data-flex~="row-gap"] {
     .row-gap(@container-gap);
 }
 
-.column-gap {
+[data-flex~="column-gap"] {
     .column-gap(@container-gap);
 }

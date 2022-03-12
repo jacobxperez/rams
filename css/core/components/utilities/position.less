@@ -1,29 +1,33 @@
 // Position
 // ----------------------------------------------------------------------------/
-.relative {
+[data-position] {
+    position: static;
+}
+
+[data-position~="relative"] {
     position: relative;
 }
 
-.absolute {
+[data-position~="absolute"] {
     position: absolute;
 }
 
-.fixed {
+[data-position~="fixed"] {
     position: fixed;
 }
 
-.top {
+[data-position~="top"] {
     top: 0;
 }
 
-.bottom {
+[data-position~="bottom"] {
     bottom: 0;
 }
 
-.left {
+[data-position~="left"] {
     left: 0;
 }
 
-.right {
+[data-position~="right"] {
     right: 0;
 }

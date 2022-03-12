@@ -31,8 +31,8 @@ Start by **[downloading](https://github.com/jacobxperez/rams/archive/master.zip)
 
 ### Default Build
 
-The easiest way to include [RAMs](https://jacobxperez.github.io/rams/) in your
-projects is by copying the pre-compiled [CSS](https://github.com/jacobxperez/rams/blob/master/css/main.css)
+The easiest way to start using [RAMs](https://jacobxperez.github.io/rams/) is by
+copying the pre-compiled [CSS](https://github.com/jacobxperez/rams/blob/master/css/main.css)
 file into your project folder and then linking to it in HTML.
 
     <link rel="stylesheet" href="css/main.css">

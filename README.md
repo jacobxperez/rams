@@ -1,12 +1,13 @@
 # [RAMs](https://jacobxperez.github.io/rams/)
 
-Design framework, built with [less](http://lesscss.org/) but better.
+Zero-class Design Framework, built with [less](http://lesscss.org/) but better.
 
 ---
 
 ## Table of Contents
 
 * [About](#about)
+* [Features](#features)
 * [Getting Started](#getting-started)
     * [Default Build](#default-build)
     * [Custom Build](#custom-build)
@@ -22,10 +23,16 @@ Design framework, built with [less](http://lesscss.org/) but better.
 utilizes the power of [data-attributes](https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes)
 to style components. 
 
+## Features
+
+* Zero-class framework
+* Powered by data-attributes
+* Dark mode enabled
+
 ## Getting Started
 
 Start by **[downloading](https://github.com/jacobxperez/rams/archive/master.zip)** the
-[repository](https://github.com/jacobxperez/rams) or by cloning the project:
+[repository](https://github.com/jacobxperez/rams) or by cloning the project
 
     git clone https://github.com/jacobxperez/rams.git
 

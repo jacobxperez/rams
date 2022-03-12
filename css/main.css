@@ -315,6 +315,7 @@ select,
 }
 
 [data-link],
+[data-button="link"],
 a {
     text-decoration: none;
     background-color: transparent;
@@ -323,8 +324,10 @@ a {
 }
 
 [data-link]:hover,
+[data-button="link"]:hover,
 a:hover,
 [data-link]:active,
+[data-button="link"]:active,
 a:active {
     background-color: transparent;
     border-color: transparent;
@@ -333,6 +336,7 @@ a:active {
 }
 
 [data-link]:focus,
+[data-button="link"]:focus,
 a:focus {
     outline: thin dotted;
     outline-offset: -0.125rem;

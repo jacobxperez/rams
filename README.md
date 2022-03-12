@@ -28,6 +28,7 @@ to style components.
 * Zero-class framework
 * Powered by data-attributes
 * Dark mode enabled
+* Built with [less](http://lesscss.org/) but better
 
 ## Getting Started
 

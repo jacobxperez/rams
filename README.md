@@ -1,6 +1,6 @@
 # [RAMs](https://jacobxperez.github.io/rams/)
 
-Zero-class Framework, built with [less](http://lesscss.org/) but better.
+zero-class Framework built with [less](http://lesscss.org/), but better.
 
 ---
 
@@ -19,8 +19,9 @@ Zero-class Framework, built with [less](http://lesscss.org/) but better.
 
 ## About
 
-[RAMs](https://jacobxperez.github.io/rams/) is a zero-class framework that
-utilizes the power of [data-attributes](https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes)
+[RAMs](https://jacobxperez.github.io/rams/) is a modern CSS framework with
+zero-class Architecture that utilizes the power of
+[data-attributes](https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes)
 to style components. 
 
 ### Features

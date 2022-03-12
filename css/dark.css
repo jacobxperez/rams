@@ -610,6 +610,25 @@ body>[data-container]:last-child {
     cursor: not-allowed;
 }
 
+[data-grid] {
+    display: grid;
+    column-gap: 1.25rem;
+}
+
+[data-grid="main"] {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+[data-grid="main"] header,
+[data-grid="main"] footer {
+    grid-column: 1 / -1;
+}
+
+[data-grid="main"] article,
+[data-grid="main"] section {
+    grid-column: span 3;
+}
+
 @font-face {
     font-family: 'icons';
     src: url('../fonts/icons/icons.eot');
@@ -1546,25 +1565,6 @@ body>[data-container]:last-child {
 
 [data-icon="window"]:before {
     content: "\e0e5";
-}
-
-[data-grid] {
-    display: grid;
-    column-gap: 1.25rem;
-}
-
-[data-grid="main"] {
-    grid-template-columns: repeat(4, 1fr);
-}
-
-[data-grid="main"] header,
-[data-grid="main"] footer {
-    grid-column: 1 / -1;
-}
-
-[data-grid="main"] article,
-[data-grid="main"] section {
-    grid-column: span 3;
 }
 
 [data-flex] {

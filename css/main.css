@@ -599,10 +599,10 @@ body>[data-container]:last-child {
 }
 
 :disabled,
-.disabled,
-.disabled:hover,
-.disabled:active,
-.disabled:focus {
+[data-state="disabled"],
+[data-state="disabled"]:hover,
+[data-state="disabled"]:active,
+[data-state="disabled"]:focus {
     background-color: #e6e6e6;
     color: #999999;
     text-decoration: none;

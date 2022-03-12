@@ -25,7 +25,7 @@ to style components.
 
 ### Features
 
-* Zero-class framework
+* zero-class Architecture
 * Powered by data-attributes
 * Dark mode enabled
 * Built with [less](http://lesscss.org/) but better

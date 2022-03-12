@@ -41,10 +41,10 @@ file into your project folder and then linking to it in HTML.
 
 ### Custom Build
 
-Add custom [modules](https://github.com/jacobxperez/rams/tree/master/css/modules), edit the
-[variables.less](https://github.com/jacobxperez/rams/blob/master/css/themes/variables.less),
-uncomment unused components from [main.less](https://github.com/jacobxperez/rams/blob/master/css/themes/main/main.less) then
-compile to produce the final [CSS](https://github.com/jacobxperez/rams/blob/master/css/main.css).
+Edit the [variables.less](https://github.com/jacobxperez/rams/blob/master/css/themes/variables.less),
+add custom [modules](https://github.com/jacobxperez/rams/tree/master/css/modules),
+then compile [main.less](https://github.com/jacobxperez/rams/blob/master/css/themes/main/main.less)
+to produce the final [CSS](https://github.com/jacobxperez/rams/blob/master/css/main.css).
 Check out [Editors and Plugins](http://lesscss.org/tools/#editors-and-plugins)
 for compiling [LESS](http://lesscss.org/).
 

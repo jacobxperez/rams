@@ -405,8 +405,13 @@ body>[data-container]:last-child {
 [data-nav].active,
 [data-nav]:hover,
 [data-nav]:active {
-    color: #aaa;
     text-decoration: none;
+}
+
+[data-nav="link"].active,
+[data-nav="link"]:hover,
+[data-nav="link"]:active {
+    color: #aaa;
 }
 
 [data-navbar] {
@@ -1628,7 +1633,7 @@ body>[data-container]:last-child {
     justify-content: space-around;
 }
 
-[data-flex~="evenly"] {
+[data-flex~="even"] {
     justify-content: space-evenly;
 }
 

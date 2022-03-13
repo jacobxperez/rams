@@ -1,0 +1,17 @@
+// Breadcrumb
+// ----------------------------------------------------------------------------/
+[data-flex~="breadcrumb"] {
+    flex-wrap: wrap;
+    .column-gap(5px);
+    
+    li::after {
+        content: @breadcrumb-separator;
+        .margin-left(5px);
+    }
+
+    li:only-child::after,
+    li:last-child::after {
+        content: "";
+        margin-left: 0;
+    }
+}

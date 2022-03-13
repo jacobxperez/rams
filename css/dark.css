@@ -436,7 +436,7 @@ body>[data-container]:last-child {
     top: 0;
 }
 
-[data-navbar="top"] [data-dropdown="box"] {
+[data-navbar="top"] [data-dropbox] {
     top: 100%;
 }
 
@@ -445,7 +445,7 @@ body>[data-container]:last-child {
     bottom: 0;
 }
 
-[data-navbar="bottom"] [data-dropdown="box"] {
+[data-navbar="bottom"] [data-dropbox] {
     bottom: 100%;
 }
 

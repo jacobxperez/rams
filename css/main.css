@@ -329,8 +329,6 @@ a:hover,
 [data-link]:active,
 [data-button="link"]:active,
 a:active {
-    background-color: transparent;
-    border-color: transparent;
     outline: 0;
     text-decoration: underline;
 }
@@ -340,6 +338,12 @@ a:active {
 a:focus {
     outline: thin dotted;
     outline-offset: -0.125rem;
+}
+
+[data-button="link"]:hover,
+[data-button="link"]:active {
+    background-color: transparent;
+    border-color: transparent;
 }
 
 [data-container] {
@@ -395,10 +399,6 @@ body>[data-container]:last-child {
     background-color: transparent;
 }
 
-[data-box="border"] {
-    padding: 0;
-}
-
 [data-nav] {
     display: block;
     padding: 0.5rem 0.75rem 0.5rem 0.75rem;
@@ -414,6 +414,10 @@ body>[data-container]:last-child {
 [data-nav="link"]:hover,
 [data-nav="link"]:active {
     color: #555;
+}
+
+[data-flex~="nav"] {
+    border: 0.0625rem solid rgba(0, 0, 0, 0.3);
 }
 
 [data-navbar] {

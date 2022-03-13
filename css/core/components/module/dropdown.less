@@ -3,26 +3,28 @@
 [data-dropdown="tooltip"] {
     position: relative;
     &:extend(abbr[title]);
-
-    [data-dropdown="box"] {
-        .padding();
-        background-color: @tooltip-box-background;
-        color: @tooltip-box-text-color;
-    }
 }
 
-[data-dropdown="box"] {
+[data-dropbox] {
     display: none;
     visibility: hidden;
-    .min-width(@dropdown-box-width);
+    .min-width(@dropbox-min-width);
     background-color: transparent;
     color: @font-color;
     z-index: 100;
 }
 
-[data-dropdown="tooltip"]:hover > [data-dropdown="box"],
-.active > [data-dropdown="box"],
-.active + [data-dropdown="box"] {
+[data-dropbox="tip"] {
+    .padding();
+    background-color: @tip-background;
+    color: @tip-text-color;
+    position: absolute;
+    left: 0;
+}
+
+[data-dropdown="tooltip"]:hover > [data-dropbox="tip"],
+.active > [data-dropbox],
+.active + [data-dropbox] {
     display: block;
     visibility: visible;
 }

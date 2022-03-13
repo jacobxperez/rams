@@ -365,13 +365,7 @@ body>[data-container]:last-child {
     position: relative;
 }
 
-[data-dropdown="tooltip"] [data-dropdown="box"] {
-    padding: 0.5rem 0.75rem 0.5rem 0.75rem;
-    background-color: #2f2f2f;
-    color: #ffffff;
-}
-
-[data-dropdown="box"] {
+[data-dropbox] {
     display: none;
     visibility: hidden;
     min-width: 10rem;
@@ -380,9 +374,17 @@ body>[data-container]:last-child {
     z-index: 100;
 }
 
-[data-dropdown="tooltip"]:hover>[data-dropdown="box"],
-.active>[data-dropdown="box"],
-.active+[data-dropdown="box"] {
+[data-dropbox="tip"] {
+    padding: 0.5rem 0.75rem 0.5rem 0.75rem;
+    background-color: #2f2f2f;
+    color: #ffffff;
+    position: absolute;
+    left: 0;
+}
+
+[data-dropdown="tooltip"]:hover>[data-dropbox="tip"],
+.active>[data-dropbox],
+.active+[data-dropbox] {
     display: block;
     visibility: visible;
 }

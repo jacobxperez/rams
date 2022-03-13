@@ -51,7 +51,7 @@ file into your project folder and then linking to it in HTML.
 
 ### Custom Build
 
-Edit the [variables.less](https://github.com/jacobxperez/rams/blob/master/css/themes/variables.less),
+Edit the [settings.less](https://github.com/jacobxperez/rams/blob/master/css/themes/main/settings.less),
 add custom [modules](https://github.com/jacobxperez/rams/tree/master/css/modules),
 then compile [main.less](https://github.com/jacobxperez/rams/blob/master/css/themes/main/main.less)
 to produce the final [CSS](https://github.com/jacobxperez/rams/blob/master/css/main.css).

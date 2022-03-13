@@ -1664,10 +1664,6 @@ body>[data-container]:last-child {
     right: 0;
 }
 
-[data-display~="block"] {
-    display: block;
-}
-
 @media screen and (min-width: 61.25em) {
     h1 {
         font-size: 4rem;

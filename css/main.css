@@ -422,7 +422,7 @@ body>[data-container]:last-child {
 [data-flex~="breadcrumb"] li:only-child::after,
 [data-flex~="breadcrumb"] li:last-child::after {
     content: "";
-    margin-right: 0;
+    margin-left: 0;
 }
 
 [data-navbar] {
@@ -1591,8 +1591,12 @@ body>[data-container]:last-child {
     flex-wrap: wrap;
 }
 
-[data-flex-item~="grow"],
-[data-flex~="grow-children"]>* {
+[data-flex~="wrap-reverse"] {
+    flex-wrap: wrap-reverse;
+}
+
+[data-flex~="grow-children"]>*,
+[data-flex~="grow"] {
     flex-grow: 1;
 }
 
@@ -1606,6 +1610,26 @@ body>[data-container]:last-child {
 
 [data-flex~="column-gap"] {
     column-gap: 1.25rem;
+}
+
+[data-flex~="end"] {
+    justify-content: flex-end;
+}
+
+[data-flex~="center"] {
+    justify-content: center;
+}
+
+[data-flex~="between"] {
+    justify-content: space-between;
+}
+
+[data-flex~="around"] {
+    justify-content: space-around;
+}
+
+[data-flex~="evenly"] {
+    justify-content: space-evenly;
 }
 
 [data-position] {

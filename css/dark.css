@@ -592,23 +592,6 @@ body>[data-container]:last-child {
     color: #ffffff;
 }
 
-[data-text~="left"] {
-    text-align: left;
-}
-
-[data-text~="right"] {
-    text-align: right;
-}
-
-[data-text~="center"] {
-    text-align: center;
-}
-
-[data-text~="justify"] {
-    text-align: justify;
-    hyphens: auto;
-}
-
 :disabled,
 [data-state="disabled"],
 [data-state="disabled"]:hover,
@@ -1576,6 +1559,23 @@ body>[data-container]:last-child {
 
 [data-icon="window"]:before {
     content: "\e0e5";
+}
+
+[data-text~="left"] {
+    text-align: left;
+}
+
+[data-text~="right"] {
+    text-align: right;
+}
+
+[data-text~="center"] {
+    text-align: center;
+}
+
+[data-text~="justify"] {
+    text-align: justify;
+    hyphens: auto;
 }
 
 [data-flex] {

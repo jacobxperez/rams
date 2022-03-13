@@ -10,8 +10,6 @@ a {
 
     &:hover,
     &:active {
-        background-color: transparent;
-        border-color: transparent;
         outline: 0;
         text-decoration: underline;
     }
@@ -19,5 +17,13 @@ a {
     &:focus {
         outline: thin dotted;
         outline-offset: unit((-2px / @font-size), rem);
+    }
+}
+
+[data-button="link"] {
+    &:hover,
+    &:active {
+        background-color: transparent;
+        border-color: transparent;
     }
 }

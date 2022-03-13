@@ -8,7 +8,7 @@ following sections to better understand the vision of the project. Use the [issu
 
 ## Table of Contents
 
-* [Essence](#essence)
+* [Design Essence](#design-essence)
 * [Design Philosophy](#design-philosophy)
 * [Design Principles](#design-principles)
 * [Design Requirements](#design-requirements)
@@ -17,7 +17,7 @@ following sections to better understand the vision of the project. Use the [issu
 * [Pull Requests](#pull-requests)
 * [Acknowledgment](#acknowledgment)
 
-## Essence
+## Design Essence
 
 The modern web designer faces few limitations on his approach to design and
 will often choose the wrong combination. Without limits, a designer may be

@@ -1596,7 +1596,7 @@ body>[data-container]:last-child {
 }
 
 [data-flex~="grow-children"]>*,
-[data-flex~="grow"] {
+[data-flex-item~="grow"] {
     flex-grow: 1;
 }
 

@@ -11,7 +11,6 @@ zero-class Framework built with [less](http://lesscss.org/), but better.
 * [Getting Started](#getting-started)
     * [Default Build](#default-build)
     * [Custom Build](#custom-build)
-    * [Examples](#examples)
     * [Contributing](#contributing)
 * [LICENSE](#license)
     * [Content](#content)
@@ -57,19 +56,6 @@ then compile [main.less](https://github.com/jacobxperez/rams/blob/master/css/the
 to produce the final [CSS](https://github.com/jacobxperez/rams/blob/master/css/main.css).
 Check out [Editors and Plugins](http://lesscss.org/tools/#editors-and-plugins)
 for compiling [LESS](http://lesscss.org/).
-
-### Examples
-
-These examples incorporate the framework with custom components and layouts.
-
-* **[Company](https://github.com/jacobxperez/company)**:
-A single-page website template for your company marketing.
-
-* **[Jacob Perez](https://github.com/jacobxperez/blog)**:
-Personal website and blog template.
-
-* **[Vaporwave Aesthetic](https://github.com/jacobxperez/vaporwave-aesthetic)**:
-A template with vaporwave aesthetics.
 
 ### [Contributing](https://github.com/jacobxperez/rams/blob/master/CONTRIBUTING.md)
 

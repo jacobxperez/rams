@@ -354,7 +354,7 @@ a:focus {
 }
 
 [data-container="fit"] {
-    max-width: 61.25rem;
+    max-width: 62.5rem;
 }
 
 body>[data-container]:first-child {

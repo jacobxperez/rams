@@ -58,6 +58,13 @@ to produce the final [CSS](https://github.com/jacobxperez/rams/blob/master/css/m
 Check out [Editors and Plugins](http://lesscss.org/tools/#editors-and-plugins)
 for compiling [LESS](http://lesscss.org/).
 
+* [settings.less](https://github.com/jacobxperez/rams/blob/master/css/themes/main/settings.less)
+(variables for font, colors, and more)
+* [modules](https://github.com/jacobxperez/rams/tree/master/css/modules)
+(add custom modules here)
+* [main.less](https://github.com/jacobxperez/rams/blob/master/css/themes/main/main.less)
+(produces the final [CSS](https://github.com/jacobxperez/rams/blob/master/css/main.css))
+
 ### [Contributing](https://github.com/jacobxperez/rams/blob/master/CONTRIBUTING.md)
 
 Before submitting a pull request, please read our [contributing guidelines](https://github.com/jacobxperez/rams/blob/master/CONTRIBUTING.md)

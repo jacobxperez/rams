@@ -63,7 +63,7 @@ for compiling [LESS](http://lesscss.org/).
 * [modules](https://github.com/jacobxperez/rams/tree/master/css/modules)
 (add custom modules here)
 * [main.less](https://github.com/jacobxperez/rams/blob/master/css/themes/main/main.less)
-(produces the final [CSS](https://github.com/jacobxperez/rams/blob/master/css/main.css))
+(compile to produce the final [CSS](https://github.com/jacobxperez/rams/blob/master/css/main.css))
 
 ### [Contributing](https://github.com/jacobxperez/rams/blob/master/CONTRIBUTING.md)
 

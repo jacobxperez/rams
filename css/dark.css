@@ -394,12 +394,14 @@ body>[data-container]:last-child {
 }
 
 [data-box] {
+    display: block;
     padding: 0.5rem 0.75rem 0.5rem 0.75rem;
     border: 0.0625rem solid rgba(0, 0, 0, 0.3);
     background-color: transparent;
 }
 
-[data-nav] {
+[data-nav],
+[data-item~="nav"] {
     display: block;
     padding: 0.5rem 0.75rem 0.5rem 0.75rem;
 }

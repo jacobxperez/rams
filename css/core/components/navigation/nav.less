@@ -1,9 +1,12 @@
 // Nav
 // ----------------------------------------------------------------------------/
-[data-nav] {
+[data-nav],
+[data-item~="nav"] {
     display: block;
     .padding(@nav-padding-y; @nav-padding-x);
+}
 
+[data-nav] {
     &.active,
     &:hover,
     &:active {

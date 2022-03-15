@@ -365,6 +365,11 @@ body>[data-container]:last-child {
     margin-bottom: 5.5rem;
 }
 
+[data-grid] {
+    display: grid;
+    column-gap: 1.25rem;
+}
+
 [data-dropdown="tooltip"] {
     position: relative;
 }
@@ -601,11 +606,6 @@ body>[data-container]:last-child {
     text-decoration: none;
     outline: 0;
     cursor: not-allowed;
-}
-
-[data-grid] {
-    display: grid;
-    column-gap: 1.25rem;
 }
 
 [data-grid="main"] {

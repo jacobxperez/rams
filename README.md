@@ -29,7 +29,7 @@ easy to read, and more scalable.
 * zero-class Architecture
 * Powered by data-attributes
 * Dark mode enabled
-* Built with [less](http://lesscss.org/) but better
+* Built with [less](http://lesscss.org/), but better
 
 ## Getting Started
 

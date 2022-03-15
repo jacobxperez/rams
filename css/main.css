@@ -483,6 +483,10 @@ body>[data-container]:last-child {
     margin-left: 0;
 }
 
+[data-button~="outline"] {
+    border-color: rgba(0, 0, 0, 0.3);
+}
+
 [data-button~="tertiary"] {
     background-color: #555;
     color: #ffffff;

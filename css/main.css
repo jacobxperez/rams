@@ -476,124 +476,116 @@ body>[data-container]:last-child {
     margin-left: 0;
 }
 
-[data-button="tertiary"] {
+[data-button~="tertiary"] {
     background-color: #555;
     color: #ffffff;
 }
 
-[data-button="tertiary-outline"] {
+[data-button="tertiary outline"] {
     color: #555;
     border-color: #555;
 }
 
-[data-button="tertiary"].active,
-[data-button="tertiary-outline"].active,
-[data-button="tertiary"]:hover,
-[data-button="tertiary-outline"]:hover,
-[data-button="tertiary"]:active,
-[data-button="tertiary-outline"]:active {
+[data-button~="tertiary"].active,
+[data-button~="tertiary"]:hover,
+[data-button~="tertiary"]:active {
     border-color: rgba(0, 0, 0, 0.3);
     background-color: #484848;
     color: #ffffff;
 }
 
-[data-button="secondary"] {
+[data-button~="secondary"] {
     background-color: #333;
     color: #ffffff;
 }
 
-[data-button="secondary-outline"] {
+[data-button="secondary outline"] {
     color: #333;
     border-color: #333;
 }
 
-[data-button="secondary"].active,
-[data-button="secondary-outline"].active,
-[data-button="secondary"]:hover,
-[data-button="secondary-outline"]:hover,
-[data-button="secondary"]:active,
-[data-button="secondary-outline"]:active {
+[data-button~="secondary"].active,
+[data-button~="secondary"]:hover,
+[data-button~="secondary"]:active {
     border-color: rgba(0, 0, 0, 0.3);
     background-color: #262626;
     color: #ffffff;
 }
 
-[data-button="primary"] {
+[data-button~="primary"] {
     background-color: #05f;
     color: #ffffff;
 }
 
-[data-button="primary-outline"] {
+[data-button="primary outline"] {
     color: #05f;
     border-color: #05f;
 }
 
-[data-button="primary"].active,
-[data-button="primary-outline"].active,
-[data-button="primary"]:hover,
-[data-button="primary-outline"]:hover,
-[data-button="primary"]:active,
-[data-button="primary-outline"]:active {
+[data-button~="primary"].active,
+[data-button~="primary"]:hover,
+[data-button~="primary"]:active {
     border-color: rgba(0, 0, 0, 0.3);
     background-color: #004de6;
     color: #ffffff;
 }
 
-[data-button="success"] {
+[data-button~="success"] {
     background-color: #00c853;
     color: #ffffff;
 }
 
-[data-button="success-outline"] {
+[data-button="success outline"] {
     color: #00c853;
     border-color: #00c853;
 }
 
-[data-button="success"].active,
-[data-button="success-outline"].active,
-[data-button="success"]:hover,
-[data-button="success-outline"]:hover,
-[data-button="success"]:active,
-[data-button="success-outline"]:active {
+[data-button~="success"].active,
+[data-button~="success"]:hover,
+[data-button~="success"]:active {
     border-color: rgba(0, 0, 0, 0.3);
     background-color: #00af48;
     color: #ffffff;
 }
 
-[data-button="warning"] {
+[data-button~="warning"] {
     background-color: #ffab00;
     color: #000000;
 }
 
-[data-button="warning-outline"] {
+[data-button="warning outline"] {
     color: #ffab00;
     border-color: #ffab00;
 }
 
-[data-button="warning-outline"].active,
-[data-button="warning-outline"]:hover,
-[data-button="warning-outline"]:active {
+[data-button~="warning"].active,
+[data-button~="warning"]:hover,
+[data-button~="warning"]:active {
     border-color: rgba(0, 0, 0, 0.3);
     background-color: #e69a00;
     color: #000000;
 }
 
-[data-button="danger"] {
+[data-button~="danger"] {
     background-color: #ff3d00;
     color: #ffffff;
 }
 
-[data-button="danger-outline"] {
+[data-button="danger outline"] {
     color: #ff3d00;
     border-color: #ff3d00;
 }
 
-[data-button="danger-outline"].active,
-[data-button="danger-outline"]:hover,
-[data-button="danger-outline"]:active {
+[data-button~="danger"].active,
+[data-button~="danger"]:hover,
+[data-button~="danger"]:active {
     border-color: rgba(0, 0, 0, 0.3);
     background-color: #e63700;
     color: #ffffff;
+}
+
+[data-button~="outline"] {
+    background-color: transparent;
 }
 
 :disabled,
@@ -601,6 +593,7 @@ body>[data-container]:last-child {
 [data-state="disabled"]:hover,
 [data-state="disabled"]:active,
 [data-state="disabled"]:focus {
+    border-color: #e6e6e6;
     background-color: #e6e6e6;
     color: #999999;
     text-decoration: none;

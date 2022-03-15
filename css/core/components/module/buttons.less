@@ -1,17 +1,16 @@
 // Button Colors
 // ----------------------------------------------------------------------------/
-[data-button="tertiary"] {
+[data-button~="tertiary"] {
     background-color: @tertiary;
     color: @tertiary-text;
 }
 
-[data-button="tertiary-outline"] {
+[data-button="tertiary outline"] {
     color: @tertiary;
     border-color: @tertiary;
 }
 
-[data-button="tertiary"],
-[data-button="tertiary-outline"] {
+[data-button~="tertiary"] {
     &.active,
     &:hover,
     &:active {
@@ -21,18 +20,17 @@
     }
 }
 
-[data-button="secondary"] {
+[data-button~="secondary"] {
     background-color: @secondary;
     color: @secondary-text;
 }
 
-[data-button="secondary-outline"] {
+[data-button="secondary outline"] {
     color: @secondary;
     border-color: @secondary;
 }
 
-[data-button="secondary"],
-[data-button="secondary-outline"] {
+[data-button~="secondary"] {
     &.active,
     &:hover,
     &:active {
@@ -42,18 +40,17 @@
     }
 }
 
-[data-button="primary"] {
+[data-button~="primary"] {
     background-color: @primary;
     color: @primary-text;
 }
 
-[data-button="primary-outline"] {
+[data-button="primary outline"] {
     color: @primary;
     border-color: @primary;
 }
 
-[data-button="primary"],
-[data-button="primary-outline"] {
+[data-button~="primary"] {
     &.active,
     &:hover,
     &:active {
@@ -63,21 +60,17 @@
     }
 }
 
-
-// Button Action Colors
-// ----------------------------------------------------------------------------/
-[data-button="success"] {
+[data-button~="success"] {
     background-color: @success;
     color: @success-text;
 }
 
-[data-button="success-outline"] {
+[data-button="success outline"] {
     color: @success;
     border-color: @success;
 }
 
-[data-button="success"],
-[data-button="success-outline"] {
+[data-button~="success"] {
     &.active,
     &:hover,
     &:active {
@@ -87,17 +80,17 @@
     }
 }
  
-[data-button="warning"] {
+[data-button~="warning"] {
     background-color: @warning;
     color: @warning-text;
 }
 
-[data-button="warning-outline"] {
+[data-button="warning outline"] {
     color: @warning;
     border-color: @warning;
 }
 
-[data-button="warning-outline"] {
+[data-button~="warning"] {
     &.active,
     &:hover,
     &:active {
@@ -107,17 +100,17 @@
     }
 }
 
-[data-button="danger"] {
+[data-button~="danger"] {
     background-color: @danger;
     color: @danger-text;
 }
 
-[data-button="danger-outline"] {
+[data-button="danger outline"] {
     color: @danger;
     border-color: @danger;
 }
 
-[data-button="danger-outline"] {
+[data-button~="danger"] {
     &.active,
     &:hover,
     &:active {
@@ -125,4 +118,8 @@
         background-color: @danger-hover;
         color: @danger-text;
     }
+}
+
+[data-button~="outline"] {
+    background-color: transparent;
 }

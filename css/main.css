@@ -44,7 +44,7 @@ body {
     font-weight: 400;
     line-height: 1.375;
     text-align: left;
-    color: #555;
+    color: #333;
     background-color: #fff;
     overflow: auto;
 }
@@ -379,7 +379,7 @@ body>[data-container]:last-child {
     visibility: hidden;
     min-width: 10rem;
     background-color: transparent;
-    color: #555;
+    color: #333;
     z-index: 100;
 }
 
@@ -420,7 +420,7 @@ body>[data-container]:last-child {
 [data-nav="link"].active,
 [data-nav="link"]:hover,
 [data-nav="link"]:active {
-    color: #555;
+    color: #333;
 }
 
 [data-flex~="nav"] {
@@ -488,38 +488,38 @@ body>[data-container]:last-child {
 }
 
 [data-button~="tertiary"] {
-    background-color: #555;
+    background-color: #333;
     color: #ffffff;
 }
 
 [data-button="tertiary outline"] {
-    color: #555;
-    border-color: #555;
+    color: #333;
+    border-color: #333;
 }
 
 [data-button~="tertiary"].active,
 [data-button~="tertiary"]:hover,
 [data-button~="tertiary"]:active {
     border-color: rgba(0, 0, 0, 0.3);
-    background-color: #484848;
+    background-color: #262626;
     color: #ffffff;
 }
 
 [data-button~="secondary"] {
-    background-color: #333;
+    background-color: #003bb1;
     color: #ffffff;
 }
 
 [data-button="secondary outline"] {
-    color: #333;
-    border-color: #333;
+    color: #003bb1;
+    border-color: #003bb1;
 }
 
 [data-button~="secondary"].active,
 [data-button~="secondary"]:hover,
 [data-button~="secondary"]:active {
     border-color: rgba(0, 0, 0, 0.3);
-    background-color: #262626;
+    background-color: #003398;
     color: #ffffff;
 }
 

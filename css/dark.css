@@ -506,20 +506,20 @@ body>[data-container]:last-child {
 }
 
 [data-button~="secondary"] {
-    background-color: #333;
+    background-color: #003bb1;
     color: #ffffff;
 }
 
 [data-button="secondary outline"] {
-    color: #333;
-    border-color: #333;
+    color: #003bb1;
+    border-color: #003bb1;
 }
 
 [data-button~="secondary"].active,
 [data-button~="secondary"]:hover,
 [data-button~="secondary"]:active {
     border-color: rgba(0, 0, 0, 0.3);
-    background-color: #262626;
+    background-color: #003398;
     color: #ffffff;
 }
 

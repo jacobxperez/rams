@@ -21,8 +21,8 @@ zero-class Framework built with [less](http://lesscss.org/), but better.
 [RAMs](https://jacobxperez.github.io/rams/) is a modern CSS framework with
 zero-class Architecture that utilizes the power of
 [data-attributes](https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes)
-for styling components. As a result, your CSS and HTML become less cluttered
-easy to read, and more scalable.
+for styling components. By removing class names from your CSS, your HTML becomes
+less cluttered easy to read, and more scalable.
 
 ### Features
 
@@ -67,8 +67,8 @@ for compiling [LESS](http://lesscss.org/).
 
 ### [Contributing](https://github.com/jacobxperez/rams/blob/master/CONTRIBUTING.md)
 
-Before submitting a pull request, please read our [contributing guidelines](https://github.com/jacobxperez/rams/blob/master/CONTRIBUTING.md)
-to learn more about the project.
+If you are interested in contributing to this project, please read our
+[contributing-guidelines](https://github.com/jacobxperez/rams/blob/master/CONTRIBUTING.md).
 
 ## LICENSE
 

@@ -269,7 +269,7 @@ input[type=url]:focus,
 input[type=week]:focus,
 select:focus,
 textarea:focus {
-    background-color: #fff8eb;
+    background-color: #fff9ef;
     color: #000000;
     border-color: rgba(0, 0, 0, 0.5);
 }

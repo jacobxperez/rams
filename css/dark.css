@@ -385,7 +385,7 @@ body>[data-container]:last-child {
 
 [data-dropbox="tip"] {
     padding: 0.5rem 0.75rem 0.5rem 0.75rem;
-    background-color: #2f2f2f;
+    background-color: #2a2a2a;
     color: #ffffff;
     position: absolute;
     left: 0;
@@ -435,7 +435,7 @@ body>[data-container]:last-child {
 }
 
 [data-navbar="sub"] {
-    background-color: #2f2f2f;
+    background-color: #2a2a2a;
 }
 
 [data-navbar="top"] {
@@ -506,20 +506,20 @@ body>[data-container]:last-child {
 }
 
 [data-button~="secondary"] {
-    background-color: #003bb1;
+    background-color: #03a;
     color: #ffffff;
 }
 
 [data-button="secondary outline"] {
-    color: #003bb1;
-    border-color: #003bb1;
+    color: #03a;
+    border-color: #03a;
 }
 
 [data-button~="secondary"].active,
 [data-button~="secondary"]:hover,
 [data-button~="secondary"]:active {
     border-color: rgba(0, 0, 0, 0.3);
-    background-color: #003398;
+    background-color: #002b91;
     color: #ffffff;
 }
 

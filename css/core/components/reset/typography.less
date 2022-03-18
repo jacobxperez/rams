@@ -18,28 +18,32 @@ h6 {
     &:extend([data-leading]);
 }
 
+[data-text~="h1"],
 h1 {
     .font-size(@h1-font-size-small);
 }
 
+[data-text~="h2"],
 h2 {
     .font-size(@h2-font-size-small);
 }
 
-[data-text~="large"],
+[data-text~="h3"],
 h3 {
     .font-size(@h3-font-size-small);
 }
 
+[data-text~="h4"],
 h4 {
     .font-size(@h4-font-size-small);
 }
 
-[data-text~="medium"],
+[data-text~="h5"],
 h5 {
     .font-size(@h5-font-size-small);
 }
 
+[data-text~="h6"],
 h6 {
     .font-size(@font-size);
 }
@@ -101,48 +105,54 @@ hr {
 }
 
 .medium-type-scale () {
+    [data-text~="h1"],
     h1 {
         .font-size(@h1-font-size-medium);
     }
 
+    [data-text~="h2"],
     h2 {
         .font-size(@h2-font-size-medium);
     }
 
-    [data-text~="large"],
+    [data-text~="h3"],
     h3 {
         .font-size(@h3-font-size-medium);
     }
 
+    [data-text~="h4"],
     h4 {
         .font-size(@h4-font-size-medium);
     }
 
-    [data-text~="medium"],
+    [data-text~="h5"],
     h5 {
         .font-size(@h5-font-size-medium);
     }
 }
 
 .large-type-scale () {
+    [data-text~="h1"],
     h1 {
         .font-size(@h1-font-size-large);
     }
 
+    [data-text~="h2"],
     h2 {
         .font-size(@h2-font-size-large);
     }
 
-    [data-text~="large"],
+    [data-text~="h3"],
     h3 {
         .font-size(@h3-font-size-large);
     }
 
+    [data-text~="h4"],
     h4 {
         .font-size(@h4-font-size-large);
     }
 
-    [data-text~="medium"],
+    [data-text~="h5"],
     h5 {
         .font-size(@h5-font-size-large);
     }

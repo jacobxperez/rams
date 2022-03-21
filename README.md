@@ -26,7 +26,7 @@ less cluttered easy to read, and more scalable.
 
 ### Features
 
-* zero-class Architecture
+* [zero-class Architecture](https://jacobxperez.github.io/blog/post/css/zero-class/architecture/)
 * Powered by data-attributes
 * Dark mode enabled
 * Built with [less](http://lesscss.org/), but better

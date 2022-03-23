@@ -18,33 +18,33 @@ h6 {
     &:extend([data-leading]);
 }
 
-[data-text~="h1"],
-h1 {
+h1,
+[data-text~="h1"] {
     .font-size(@h1-font-size-small);
 }
 
-[data-text~="h2"],
-h2 {
+h2,
+[data-text~="h2"] {
     .font-size(@h2-font-size-small);
 }
 
-[data-text~="h3"],
-h3 {
+h3,
+[data-text~="h3"] {
     .font-size(@h3-font-size-small);
 }
 
-[data-text~="h4"],
-h4 {
+h4,
+[data-text~="h4"] {
     .font-size(@h4-font-size-small);
 }
 
-[data-text~="h5"],
-h5 {
+h5,
+[data-text~="h5"] {
     .font-size(@h5-font-size-small);
 }
 
-[data-text~="h6"],
-h6 {
+h6,
+[data-text~="h6"] {
     .font-size(@font-size);
 }
 
@@ -75,10 +75,10 @@ mark {
     color: @mark-text;
 }
 
-[data-text~="small"],
 small,
 sub,
-sup {
+sup,
+[data-text~="small"] {
     .font-size(@small-font-size; @unit: em);
 }
 
@@ -105,55 +105,55 @@ hr {
 }
 
 .medium-type-scale () {
-    [data-text~="h1"],
-    h1 {
+    h1,
+    [data-text~="h1"] {
         .font-size(@h1-font-size-medium);
     }
 
-    [data-text~="h2"],
-    h2 {
+    h2,
+    [data-text~="h2"] {
         .font-size(@h2-font-size-medium);
     }
 
-    [data-text~="h3"],
-    h3 {
+    h3,
+    [data-text~="h3"] {
         .font-size(@h3-font-size-medium);
     }
 
-    [data-text~="h4"],
-    h4 {
+    h4,
+    [data-text~="h4"] {
         .font-size(@h4-font-size-medium);
     }
 
-    [data-text~="h5"],
-    h5 {
+    h5,
+    [data-text~="h5"] {
         .font-size(@h5-font-size-medium);
     }
 }
 
 .large-type-scale () {
-    [data-text~="h1"],
-    h1 {
+    h1,
+    [data-text~="h1"] {
         .font-size(@h1-font-size-large);
     }
 
-    [data-text~="h2"],
-    h2 {
+    h2,
+    [data-text~="h2"] {
         .font-size(@h2-font-size-large);
     }
 
-    [data-text~="h3"],
-    h3 {
+    h3,
+    [data-text~="h3"] {
         .font-size(@h3-font-size-large);
     }
 
-    [data-text~="h4"],
-    h4 {
+    h4,
+    [data-text~="h4"] {
         .font-size(@h4-font-size-large);
     }
 
-    [data-text~="h5"],
-    h5 {
+    h5,
+    [data-text~="h5"] {
         .font-size(@h5-font-size-large);
     }
 }

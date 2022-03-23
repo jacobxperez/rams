@@ -73,33 +73,33 @@ h6 {
     font-weight: 400;
 }
 
-[data-text~="h1"],
-h1 {
+h1,
+[data-text~="h1"] {
     font-size: 2.625rem;
 }
 
-[data-text~="h2"],
-h2 {
+h2,
+[data-text~="h2"] {
     font-size: 2.1875rem;
 }
 
-[data-text~="h3"],
-h3 {
+h3,
+[data-text~="h3"] {
     font-size: 1.8125rem;
 }
 
-[data-text~="h4"],
-h4 {
+h4,
+[data-text~="h4"] {
     font-size: 1.5rem;
 }
 
-[data-text~="h5"],
-h5 {
+h5,
+[data-text~="h5"] {
     font-size: 1.25rem;
 }
 
-[data-text~="h6"],
-h6 {
+h6,
+[data-text~="h6"] {
     font-size: 1rem;
 }
 
@@ -127,10 +127,10 @@ mark {
     color: #000000;
 }
 
-[data-text~="small"],
 small,
 sub,
-sup {
+sup,
+[data-text~="small"] {
     font-size: 0.75em;
 }
 
@@ -237,6 +237,8 @@ th {
     padding: 0.5rem 0.75rem 0.5rem 0.75rem;
 }
 
+select,
+textarea,
 input[type=date],
 input[type=datetime-local],
 input[type=email],
@@ -248,9 +250,7 @@ input[type=tel],
 input[type=text],
 input[type=time],
 input[type=url],
-input[type=week],
-select,
-textarea {
+input[type=week] {
     display: block;
     width: 100%;
     padding: 0.5rem 0.75rem 0.5rem 0.75rem;
@@ -258,6 +258,8 @@ textarea {
     background-color: transparent;
 }
 
+select:focus,
+textarea:focus,
 input[type=date]:focus,
 input[type=datetime-local]:focus,
 input[type=datetime]:focus,
@@ -270,9 +272,7 @@ input[type=tel]:focus,
 input[type=text]:focus,
 input[type=time]:focus,
 input[type=url]:focus,
-input[type=week]:focus,
-select:focus,
-textarea:focus {
+input[type=week]:focus {
     background-color: #fff9ef;
     color: #000000;
     border-color: rgba(0, 0, 0, 0.5);
@@ -322,28 +322,28 @@ button:focus,
     outline-offset: -0.125rem;
 }
 
+a,
 [data-link],
-[data-button="link"],
-a {
+[data-button="link"] {
     text-decoration: none;
     background-color: transparent;
     color: #05f;
     cursor: pointer;
 }
 
+a:hover,
 [data-link]:hover,
 [data-button="link"]:hover,
-a:hover,
+a:active,
 [data-link]:active,
-[data-button="link"]:active,
-a:active {
+[data-button="link"]:active {
     outline: 0;
     text-decoration: underline;
 }
 
+a:focus,
 [data-link]:focus,
-[data-button="link"]:focus,
-a:focus {
+[data-button="link"]:focus {
     outline: thin dotted;
     outline-offset: -0.125rem;
 }
@@ -410,7 +410,6 @@ body>[data-container]:last-child {
     display: block;
     padding: 0.5rem 0.75rem 0.5rem 0.75rem;
     border: 0.0625rem solid rgba(0, 0, 0, 0.3);
-    background-color: transparent;
 }
 
 [data-nav],
@@ -472,7 +471,6 @@ body>[data-container]:last-child {
 [data-nav="navbar"]:hover,
 [data-nav="navbar"]:active {
     color: #b3b3b3;
-    text-decoration: none;
 }
 
 [data-flex~="breadcrumb"] {
@@ -480,15 +478,14 @@ body>[data-container]:last-child {
     column-gap: 0.3125rem;
 }
 
-[data-flex~="breadcrumb"] li::after {
+[data-flex~="breadcrumb"] li::before {
     content: "/";
-    margin-left: 0.3125rem;
+    margin-right: 0.3125rem;
 }
 
-[data-flex~="breadcrumb"] li:only-child::after,
-[data-flex~="breadcrumb"] li:last-child::after {
+[data-flex~="breadcrumb"] li:first-child::before {
     content: "";
-    margin-left: 0;
+    margin-right: 0;
 }
 
 [data-button~="outline"] {
@@ -1684,28 +1681,28 @@ body>[data-container]:last-child {
 
 @media screen and (min-width: 61.25em) {
 
-    [data-text~="h1"],
-    h1 {
+    h1,
+    [data-text~="h1"] {
         font-size: 4rem;
     }
 
-    [data-text~="h2"],
-    h2 {
+    h2,
+    [data-text~="h2"] {
         font-size: 3.0625rem;
     }
 
-    [data-text~="h3"],
-    h3 {
+    h3,
+    [data-text~="h3"] {
         font-size: 2.3125rem;
     }
 
-    [data-text~="h4"],
-    h4 {
+    h4,
+    [data-text~="h4"] {
         font-size: 1.75rem;
     }
 
-    [data-text~="h5"],
-    h5 {
+    h5,
+    [data-text~="h5"] {
         font-size: 1.3125rem;
     }
 
@@ -1718,28 +1715,28 @@ body>[data-container]:last-child {
 
 @media screen and (min-width: 42.50390625em) and (max-width: 61.24609375em) {
 
-    [data-text~="h1"],
-    h1 {
+    h1,
+    [data-text~="h1"] {
         font-size: 3.125rem;
     }
 
-    [data-text~="h2"],
-    h2 {
+    h2,
+    [data-text~="h2"] {
         font-size: 2.5rem;
     }
 
-    [data-text~="h3"],
-    h3 {
+    h3,
+    [data-text~="h3"] {
         font-size: 2rem;
     }
 
-    [data-text~="h4"],
-    h4 {
+    h4,
+    [data-text~="h4"] {
         font-size: 1.5625rem;
     }
 
-    [data-text~="h5"],
-    h5 {
+    h5,
+    [data-text~="h5"] {
         font-size: 1.25rem;
     }
 

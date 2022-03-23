@@ -1,5 +1,7 @@
 // Forms
 // ----------------------------------------------------------------------------/
+select,
+textarea,
 input[type=date],
 input[type=datetime-local],
 input[type=email],
@@ -11,9 +13,7 @@ input[type=tel],
 input[type=text],
 input[type=time],
 input[type=url],
-input[type=week],
-select,
-textarea {
+input[type=week] {
     display: block;
     width: 100%;
     .padding(@form-padding-y; @form-padding-x);
@@ -23,6 +23,8 @@ textarea {
     .color(@form-color);
 }
 
+select:focus,
+textarea:focus,
 input[type=date]:focus,
 input[type=datetime-local]:focus,
 input[type=datetime]:focus,
@@ -35,9 +37,7 @@ input[type=tel]:focus,
 input[type=text]:focus,
 input[type=time]:focus,
 input[type=url]:focus,
-input[type=week]:focus,
-select:focus,
-textarea:focus {
+input[type=week]:focus {
     .background-color(@form-background-focus);
     .color(@form-color-focus);
     border-color: @form-border-color-focus;

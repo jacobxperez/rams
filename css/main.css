@@ -378,10 +378,6 @@ body>[data-container]:last-child {
     column-gap: 1.25rem;
 }
 
-[data-flex] {
-    display: flex;
-}
-
 [data-dropdown="tooltip"] {
     position: relative;
 }
@@ -1587,6 +1583,10 @@ body>[data-container]:last-child {
 [data-text~="justify"] {
     text-align: justify;
     hyphens: auto;
+}
+
+[data-flex] {
+    display: flex;
 }
 
 [data-flex~="row-reverse"] {

@@ -4,14 +4,13 @@
     flex-wrap: wrap;
     .column-gap(5px);
     
-    li::after {
+    li::before {
         content: @breadcrumb-separator;
-        .margin-left(5px);
+        .margin-right(5px);
     }
 
-    li:only-child::after,
-    li:last-child::after {
+    li:first-child::before {
         content: "";
-        margin-left: 0;
+        margin-right: 0;
     }
 }

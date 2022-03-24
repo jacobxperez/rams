@@ -1,6 +1,6 @@
 # [RAMs](https://jacobxperez.github.io/rams/)
 
-zero-class Framework built with [less](http://lesscss.org/), but better.
+Zero-Class Framework built with [less](http://lesscss.org/), but better.
 
 ---
 
@@ -19,14 +19,14 @@ zero-class Framework built with [less](http://lesscss.org/), but better.
 ## About
 
 [RAMs](https://jacobxperez.github.io/rams/) is a modern CSS framework with
-zero-class Architecture that utilizes the power of
+Zero-Class Architecture that utilizes the power of
 [data-attributes](https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes)
 for styling components. By removing class names from CSS, your HTML becomes
 less cluttered easy to read, and more scalable.
 
 ### Features
 
-* [zero-class Architecture](https://jacobxperez.github.io/blog/post/css/zero-class/architecture/)
+* [Zero-Class Architecture](https://jacobxperez.github.io/blog/post/css/zero-class/architecture/)
 * Powered by data-attributes
 * Dark mode enabled
 * Built with [less](http://lesscss.org/), but better

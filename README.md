@@ -18,9 +18,8 @@ Zero-Class Framework built with [less](http://lesscss.org/), but better.
 
 ## About
 
-[RAMs](https://jacobxperez.github.io/rams/) is a modern CSS framework with
-Zero-Class Architecture that utilizes the power of
-[data-attributes](https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes)
+[RAMs](https://jacobxperez.github.io/rams/) is a CSS framework with Zero-Class
+Architecture that utilizes the power of [data-attributes](https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes)
 for styling components. By removing class names from CSS, your HTML becomes
 less cluttered easy to read, and more scalable.
 

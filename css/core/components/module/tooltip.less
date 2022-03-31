@@ -1,0 +1,18 @@
+// Tooltip
+// ----------------------------------------------------------------------------/
+[data-dropdown="tooltip"] {
+    position: relative;
+    &:extend(abbr[title]);
+}
+
+[data-dropbox="tip"] {
+    .padding();
+    background-color: @tip-background;
+    color: @tip-text-color;
+    position: absolute;
+    left: 0;
+}
+
+[data-dropdown="tooltip"]:hover > [data-dropbox="tip"] {
+    &:extend(.active + [data-dropbox]);
+}

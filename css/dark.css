@@ -378,10 +378,6 @@ body>[data-container]:last-child {
     column-gap: 1.25rem;
 }
 
-[data-dropdown="tooltip"] {
-    position: relative;
-}
-
 [data-dropbox] {
     display: none;
     visibility: hidden;
@@ -391,19 +387,23 @@ body>[data-container]:last-child {
     z-index: 100;
 }
 
+.active>[data-dropbox],
+.active+[data-dropbox],
+[data-dropdown="tooltip"]:hover>[data-dropbox="tip"] {
+    display: block;
+    visibility: visible;
+}
+
+[data-dropdown="tooltip"] {
+    position: relative;
+}
+
 [data-dropbox="tip"] {
     padding: 0.5rem 0.75rem 0.5rem 0.75rem;
     background-color: #2a2a2a;
     color: #ffffff;
     position: absolute;
     left: 0;
-}
-
-[data-dropdown="tooltip"]:hover>[data-dropbox="tip"],
-.active>[data-dropbox],
-.active+[data-dropbox] {
-    display: block;
-    visibility: visible;
 }
 
 [data-accordion] {

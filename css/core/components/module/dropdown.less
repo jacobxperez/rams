@@ -1,10 +1,5 @@
 // Dropdown
 // ----------------------------------------------------------------------------/
-[data-dropdown="tooltip"] {
-    position: relative;
-    &:extend(abbr[title]);
-}
-
 [data-dropbox] {
     display: none;
     visibility: hidden;
@@ -14,15 +9,6 @@
     z-index: 100;
 }
 
-[data-dropbox="tip"] {
-    .padding();
-    background-color: @tip-background;
-    color: @tip-text-color;
-    position: absolute;
-    left: 0;
-}
-
-[data-dropdown="tooltip"]:hover > [data-dropbox="tip"],
 .active > [data-dropbox],
 .active + [data-dropbox] {
     display: block;

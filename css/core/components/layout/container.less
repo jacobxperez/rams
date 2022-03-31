@@ -1,5 +1,13 @@
 // Containers
 // ----------------------------------------------------------------------------/
+body > [data-container]:first-child {
+    .margin-top(@container-margin-top);
+}
+
+body > [data-container]:last-child {
+    .margin-bottom(@container-margin-bottom);
+}
+
 [data-container] {
     .min-width(@container-min-width);
     margin: 0 auto;
@@ -9,12 +17,4 @@
 
 [data-container="fit"] {
     .max-width(@container-max-width);
-}
-
-body > [data-container]:first-child {
-    .margin-top(@container-margin-top);
-}
-
-body > [data-container]:last-child {
-    .margin-bottom(@container-margin-bottom);
 }

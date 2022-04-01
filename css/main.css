@@ -422,12 +422,6 @@ body>[data-container]:last-child {
     padding: 0.5rem 0.75rem 0.5rem 0.75rem;
 }
 
-[data-box] {
-    display: block;
-    padding: 0.5rem 0.75rem 0.5rem 0.75rem;
-    border: 0.0625rem solid rgba(0, 0, 0, 0.3);
-}
-
 [data-nav] {
     display: block;
     padding: 0.5rem 0.75rem 0.5rem 0.75rem;
@@ -616,6 +610,12 @@ body>[data-container]:last-child {
 
 [data-button~="outline"] {
     background-color: transparent;
+}
+
+[data-box] {
+    display: block;
+    padding: 0.5rem 0.75rem 0.5rem 0.75rem;
+    border: 0.0625rem solid rgba(0, 0, 0, 0.3);
 }
 
 :disabled,

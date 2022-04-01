@@ -22,3 +22,15 @@ button,
         outline-offset: unit((-2px / @font-size), rem);
     }
 }
+
+[data-button="link"] {
+    &:extend(a all);
+}
+
+[data-button="link"] {
+    &:hover,
+    &:active {
+        background-color: transparent;
+        border-color: transparent;
+    }
+}

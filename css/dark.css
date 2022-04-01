@@ -322,6 +322,12 @@ button:focus,
     outline-offset: -0.125rem;
 }
 
+[data-button="link"]:hover,
+[data-button="link"]:active {
+    background-color: transparent;
+    border-color: transparent;
+}
+
 a,
 [data-link],
 [data-button="link"] {
@@ -333,9 +339,9 @@ a,
 
 a:hover,
 [data-link]:hover,
-[data-button="link"]:hover,
 a:active,
 [data-link]:active,
+[data-button="link"]:hover,
 [data-button="link"]:active {
     outline: 0;
     text-decoration: underline;
@@ -346,12 +352,6 @@ a:focus,
 [data-button="link"]:focus {
     outline: thin dotted;
     outline-offset: -0.125rem;
-}
-
-[data-button="link"]:hover,
-[data-button="link"]:active {
-    background-color: transparent;
-    border-color: transparent;
 }
 
 body>[data-container]:first-child {

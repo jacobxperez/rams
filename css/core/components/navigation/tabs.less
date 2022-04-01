@@ -1,0 +1,22 @@
+// Tabs
+// ----------------------------------------------------------------------------/
+[data-tabs] {
+    display: flex;
+    .border-bottom(@width:2px);
+}
+
+[data-nav="tab"] {
+    position: relative;
+    .top(2px);
+    .border-bottom(@width:2px; @color:transparent);
+    color: #666;
+    z-index: 1;
+
+    &.active,
+    &:hover,
+    &:active {
+        border-color: @primary;
+        color: @font-color;
+        z-index: 5;
+    }
+}

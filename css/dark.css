@@ -463,6 +463,27 @@ body>[data-container]:last-child {
     margin-right: 0;
 }
 
+[data-tabs] {
+    display: flex;
+    border-bottom: 0.125rem solid rgba(0, 0, 0, 0.3);
+}
+
+[data-nav="tab"] {
+    position: relative;
+    top: 0.125rem;
+    border-bottom: 0.125rem solid transparent;
+    color: #666;
+    z-index: 1;
+}
+
+[data-nav="tab"].active,
+[data-nav="tab"]:hover,
+[data-nav="tab"]:active {
+    border-color: #00ac25;
+    color: #aaa;
+    z-index: 5;
+}
+
 [data-navbar] {
     background-color: #222;
     color: #b3b3b3;

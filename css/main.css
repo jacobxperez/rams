@@ -303,7 +303,6 @@ button,
     padding: 0.5rem 0.75rem 0.5rem 0.75rem;
     border: 0.0625rem solid transparent;
     background-color: transparent;
-    text-align: center;
     cursor: pointer;
 }
 
@@ -380,7 +379,11 @@ body>[data-container]:last-child {
 
 [data-box] {
     display: block;
+    width: 100%;
     padding: 0.5rem 0.75rem 0.5rem 0.75rem;
+}
+
+[data-box~="border"] {
     border: 0.0625rem solid rgba(0, 0, 0, 0.3);
 }
 
@@ -436,13 +439,8 @@ body>[data-container]:last-child {
 [data-nav].active,
 [data-nav]:hover,
 [data-nav]:active {
-    text-decoration: none;
-}
-
-[data-nav="link"].active,
-[data-nav="link"]:hover,
-[data-nav="link"]:active {
     color: #333;
+    text-decoration: none;
 }
 
 [data-flex~="nav"] {

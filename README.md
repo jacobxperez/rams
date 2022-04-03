@@ -45,23 +45,23 @@ file into your project folder and then linking to it in HTML.
 
     <link rel="stylesheet" href="css/main.css">
 
-* [/css](https://github.com/jacobxperez/rams/tree/master/css/less)
+* [/css](https://github.com/jacobxperez/rams/tree/master/css/)
     * [main.css](https://github.com/jacobxperez/rams/blob/master/css/main.css)
 
 ### Custom Build
 
-Edit the [settings.less](https://github.com/jacobxperez/rams/blob/master/css/themes/main/settings.less),
-add custom [modules](https://github.com/jacobxperez/rams/tree/master/css/modules),
-then compile [main.less](https://github.com/jacobxperez/rams/blob/master/css/themes/main/main.less)
+Edit the [settings.less](https://github.com/jacobxperez/rams/blob/master/less/themes/main/settings.less),
+add custom [modules](https://github.com/jacobxperez/rams/tree/master/less/modules),
+then compile [main.less](https://github.com/jacobxperez/rams/blob/master/less/themes/main/main.less)
 to produce the final [CSS](https://github.com/jacobxperez/rams/blob/master/css/main.css).
 Check out [Editors and Plugins](http://lesscss.org/tools/#editors-and-plugins)
 for compiling [LESS](http://lesscss.org/).
 
-* [settings.less](https://github.com/jacobxperez/rams/blob/master/css/themes/main/settings.less)
+* [settings.less](https://github.com/jacobxperez/rams/blob/master/less/themes/main/settings.less)
 (variables for font, colors, and more)
-* [modules](https://github.com/jacobxperez/rams/tree/master/css/modules)
+* [modules](https://github.com/jacobxperez/rams/tree/master/less/modules)
 (add custom modules here)
-* [main.less](https://github.com/jacobxperez/rams/blob/master/css/themes/main/main.less)
+* [main.less](https://github.com/jacobxperez/rams/blob/master/less/themes/main/main.less)
 (compile to produce the final [CSS](https://github.com/jacobxperez/rams/blob/master/css/main.css))
 
 ### [Contributing](https://github.com/jacobxperez/rams/blob/master/CONTRIBUTING.md)

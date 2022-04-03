@@ -57,12 +57,17 @@ to produce the final [CSS](https://github.com/jacobxperez/rams/blob/master/css/m
 Check out [Editors and Plugins](http://lesscss.org/tools/#editors-and-plugins)
 for compiling [LESS](http://lesscss.org/).
 
-* [settings.less](https://github.com/jacobxperez/rams/blob/master/less/themes/main/settings.less)
-(variables for font, colors, and more)
-* [modules](https://github.com/jacobxperez/rams/tree/master/less/modules)
-(add custom modules here)
-* [main.less](https://github.com/jacobxperez/rams/blob/master/less/themes/main/main.less)
-(compile to produce the final [CSS](https://github.com/jacobxperez/rams/blob/master/css/main.css))
+* [/less](https://github.com/jacobxperez/rams/tree/master/less/)
+    * [core](https://github.com/jacobxperez/rams/tree/master/less/core) (important files for compiling)
+    * [modules](https://github.com/jacobxperez/rams/tree/master/less/modules)
+    (add custom modules here)
+    * [themes](https://github.com/jacobxperez/rams/tree/master/less/themes) (multiple themes can be added)
+        * [main](https://github.com/jacobxperez/rams/tree/master/less/themes/main) (main theme files)
+            * [main.less](https://github.com/jacobxperez/rams/blob/master/less/themes/main/main.less)
+            (compile to produce the final [CSS](https://github.com/jacobxperez/rams/blob/master/css/main.css))
+            * [settings.less](https://github.com/jacobxperez/rams/blob/master/less/themes/main/settings.less)
+            (variables for font, colors, and more)
+        * [dark](https://github.com/jacobxperez/rams/tree/master/less/themes/dark) (dark theme files)
 
 ### [Contributing](https://github.com/jacobxperez/rams/blob/master/CONTRIBUTING.md)
 

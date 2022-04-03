@@ -310,9 +310,9 @@ button:hover,
 [data-button]:hover,
 button:active,
 [data-button]:active {
-    background-color: rgba(0, 0, 0, 0.1);
     outline: 0;
     text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
 button:focus,
@@ -362,10 +362,10 @@ body>[data-container]:last-child {
 }
 
 [data-container] {
-    min-width: 20rem;
     margin: 0 auto;
     padding-left: 1.25rem;
     padding-right: 1.25rem;
+    min-width: 20rem;
 }
 
 [data-container="fit"] {
@@ -483,9 +483,9 @@ body>[data-container]:last-child {
 }
 
 [data-navbar] {
+    width: 100%;
     background-color: #222;
     color: #b3b3b3;
-    width: 100%;
     z-index: 1000;
 }
 
@@ -1817,10 +1817,13 @@ body>[data-container]:last-child {
         display: none;
     }
 
-    [data-container="fit"] {
-        max-width: 100%;
+    [data-container] {
         margin: 0;
         padding: 0;
+    }
+
+    [data-container="fit"] {
+        max-width: 100%;
     }
 }
 

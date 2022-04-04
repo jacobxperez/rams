@@ -4,7 +4,7 @@ button,
 [data-button] {
     display: inline-block;
     .padding(@button-padding-y; @button-padding-x);
-    .border(@button-border-width; @color: @button-border-color;);
+    .border(@button-border-width; @color: @button-border-color; );
     .border-radius(@button-border-radius);
     .background-color(transparent);
     cursor: pointer;
@@ -27,6 +27,7 @@ button,
 }
 
 [data-button="link"] {
+
     &:hover,
     &:active {
         background-color: transparent;

@@ -13,6 +13,7 @@ h6 {
     & when (iscolor(@headings-font-color)) {
         color: @headings-font-color;
     }
+
     .font-family(@headings-font-family);
     font-weight: @headings-font-weight;
     &:extend([data-leading]);
@@ -105,6 +106,7 @@ hr {
 }
 
 .medium-type-scale () {
+
     h1,
     [data-text~="h1"] {
         .font-size(@h1-font-size-medium);
@@ -132,6 +134,7 @@ hr {
 }
 
 .large-type-scale () {
+
     h1,
     [data-text~="h1"] {
         .font-size(@h1-font-size-large);

@@ -69,10 +69,10 @@ for compiling [LESS](http://lesscss.org/).
             (variables for font, colors, and more)
         * [dark](https://github.com/jacobxperez/rams/tree/master/less/themes/dark) (dark theme files)
 
-### [Contributing](https://github.com/jacobxperez/rams/blob/master/CONTRIBUTING.md)
+### [Contributing](https://github.com/jacobxperez/rams/blob/master/.github/CONTRIBUTING.md)
 
 If you are interested in contributing to this project, please read our
-[contributing-guidelines](https://github.com/jacobxperez/rams/blob/master/CONTRIBUTING.md).
+[contributing-guidelines](https://github.com/jacobxperez/rams/blob/master/.github/CONTRIBUTING.md).
 
 ## LICENSE
 

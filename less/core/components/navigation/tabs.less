@@ -2,21 +2,35 @@
 // ----------------------------------------------------------------------------/
 [data-tabs] {
     display: flex;
-    .border-bottom(@tabs-border-width);
 }
 
-[data-nav="tab"] {
+[data-tabs~="line"] {
+    .border-bottom(@tab-border-width);
+}
+
+[data-tab] {
     position: relative;
+    z-index: 1;
+    display: block;
+    .padding(@nav-padding-y; @nav-padding-x);
+    color: @tab-link-color;
+
+    &.active,
+    &:hover,
+    &:active {
+        z-index: 5;
+        color: @tab-link-color-active;
+        text-decoration: none;
+    }
+}
+
+[data-tab~="line"] {
     .top(2px);
     .border-bottom(@tab-border-width; @color: transparent);
-    color: #666;
-    z-index: 1;
 
     &.active,
     &:hover,
     &:active {
         border-color: @tab-border-color-active;
-        color: @tab-link-color-active;
-        z-index: 5;
     }
 }

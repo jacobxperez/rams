@@ -369,9 +369,8 @@ body>[data-container]:last-child {
 }
 
 [data-dropbox] {
-    z-index: 100;
+    z-index: -10;
     display: none;
-    visibility: hidden;
     min-width: 10rem;
     background-color: transparent;
     color: #aaa;
@@ -379,8 +378,8 @@ body>[data-container]:last-child {
 
 .active>[data-dropbox],
 .active+[data-dropbox] {
+    z-index: 100;
     display: block;
-    visibility: visible;
 }
 
 [data-tooltip] {

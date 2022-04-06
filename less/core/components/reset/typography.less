@@ -64,8 +64,7 @@ dfn {
     font-style: italic;
 }
 
-abbr[title],
-dfn[title] {
+[title]:where(abbr, dfn) {
     text-decoration: underline;
     text-decoration: underline dotted;
     cursor: help;

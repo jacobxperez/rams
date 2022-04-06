@@ -1,18 +1,25 @@
 // Tooltip
 // ----------------------------------------------------------------------------/
-[data-dropdown="tooltip"] {
+[data-tooltip] {
     position: relative;
     &:extend(abbr[title]);
+
+    &::before {
+        content: attr(data-tooltip);
+        position: absolute;
+        z-index: -10;
+        top: 100%;
+        left: 0;
+        .min-width(@dropbox-min-width);
+        .padding();
+        background-color: @tip-background;
+        color: @tip-text-color;
+        opacity: 0;
+        transition:opacity 0.4s ease-out; 
+    }
 }
 
-[data-dropbox="tip"] {
-    position: absolute;
-    left: 0;
-    .padding();
-    background-color: @tip-background;
-    color: @tip-text-color;
-}
-
-[data-dropdown="tooltip"]:hover > [data-dropbox="tip"] {
-    &:extend(.active + [data-dropbox]);
+[data-tooltip]:hover::before {
+    z-index: 10;
+    opacity: 1;
 }

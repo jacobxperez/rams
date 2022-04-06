@@ -98,7 +98,7 @@ dfn {
 
 abbr[title],
 dfn[title],
-[data-dropdown="tooltip"] {
+[data-tooltip] {
     text-decoration: underline;
     text-decoration: underline dotted;
     cursor: help;
@@ -378,22 +378,32 @@ body>[data-container]:last-child {
 }
 
 .active>[data-dropbox],
-.active+[data-dropbox],
-[data-dropdown="tooltip"]:hover>[data-dropbox="tip"] {
+.active+[data-dropbox] {
     display: block;
     visibility: visible;
 }
 
-[data-dropdown="tooltip"] {
+[data-tooltip] {
     position: relative;
 }
 
-[data-dropbox="tip"] {
+[data-tooltip]::before {
+    content: attr(data-tooltip);
     position: absolute;
+    z-index: -10;
+    top: 100%;
     left: 0;
+    min-width: 10rem;
     padding: 0.5rem 0.75rem 0.5rem 0.75rem;
     background-color: #2a2a2a;
     color: #ffffff;
+    opacity: 0;
+    transition: opacity 0.4s ease-out;
+}
+
+[data-tooltip]:hover::before {
+    z-index: 10;
+    opacity: 1;
 }
 
 [data-accordion] {

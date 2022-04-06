@@ -31,10 +31,8 @@
 
 [data-nav="navbar"] {
     color: @navbar-link-color;
+}
 
-    &.active,
-    &:hover,
-    &:active {
-        color: @navbar-link-color-active;
-    }
+[data-nav="navbar"]:is(.active, :hover, :active) {
+    color: @navbar-link-color-active;
 }

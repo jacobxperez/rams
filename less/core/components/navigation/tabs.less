@@ -14,23 +14,19 @@
     display: block;
     .padding(@nav-padding-y; @nav-padding-x);
     color: @tab-link-color;
+}
 
-    &.active,
-    &:hover,
-    &:active {
-        z-index: 5;
-        color: @tab-link-color-active;
-        text-decoration: none;
-    }
+[data-tab]:is(.active, :hover, :active) {
+    z-index: 5;
+    color: @tab-link-color-active;
+    text-decoration: none;
 }
 
 [data-tab~="line"] {
     .top(2px);
     .border-bottom(@tab-border-width; @color: transparent);
+}
 
-    &.active,
-    &:hover,
-    &:active {
-        border-color: @tab-border-color-active;
-    }
+[data-tab~="line"]:is(.active, :hover, :active) {
+    border-color: @tab-border-color-active;
 }

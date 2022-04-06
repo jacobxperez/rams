@@ -24,10 +24,9 @@ button,
 
 [data-button="link"] {
     &:extend(a all);
+}
 
-    &:hover,
-    &:active {
-        background-color: transparent;
-        border-color: transparent;
-    }
+[data-button="link"]:is(.active, :hover, :active) {
+    background-color: transparent;
+    border-color: transparent;
 }

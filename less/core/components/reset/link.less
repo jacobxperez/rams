@@ -1,20 +1,18 @@
 // Link
 // ----------------------------------------------------------------------------/
-a,
-[data-link] {
-    background-color: transparent;
+:where(a) {
     text-decoration: none;
+    background-color: transparent;
     color: @link-color;
     cursor: pointer;
+}
 
-    &:hover,
-    &:active {
-        text-decoration: underline;
-        outline: 0;
-    }
+a:where(:hover, :active) {
+    outline: 0;
+    text-decoration: underline;
+}
 
-    &:focus {
-        outline: thin dotted;
-        outline-offset: unit((-2px / @font-size), rem);
-    }
+a:where(:focus) {
+    outline: thin dotted;
+    outline-offset: unit((-2px / @font-size), rem);
 }

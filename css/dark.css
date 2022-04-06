@@ -96,8 +96,7 @@ dfn {
     font-style: italic;
 }
 
-abbr[title],
-dfn[title],
+[title]:where(abbr, dfn),
 [data-tooltip] {
     text-decoration: underline;
     text-decoration: underline dotted;
@@ -287,17 +286,15 @@ button,
     cursor: pointer;
 }
 
-button:hover,
-[data-button]:hover,
-button:active,
-[data-button]:active {
+button:is(:hover, :active),
+[data-button]:is(:hover, :active) {
     outline: 0;
     text-decoration: none;
     background-color: rgba(0, 0, 0, 0.1);
 }
 
-button:focus,
-[data-button]:focus {
+button:is(:focus),
+[data-button]:is(:focus) {
     outline: thin dotted;
     outline-offset: -0.125rem;
 }
@@ -307,27 +304,22 @@ button:focus,
     border-color: transparent;
 }
 
-a,
-[data-link],
+:where(a),
 [data-button="link"] {
-    background-color: transparent;
     text-decoration: none;
+    background-color: transparent;
     color: #00ac25;
     cursor: pointer;
 }
 
-a:hover,
-[data-link]:hover,
-a:active,
-[data-link]:active,
+a:where(:hover, :active),
 [data-button="link"]:hover,
 [data-button="link"]:active {
-    text-decoration: underline;
     outline: 0;
+    text-decoration: underline;
 }
 
-a:focus,
-[data-link]:focus,
+a:where(:focus),
 [data-button="link"]:focus {
     outline: thin dotted;
     outline-offset: -0.125rem;

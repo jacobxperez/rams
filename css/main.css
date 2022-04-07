@@ -620,8 +620,6 @@ body>[data-container]:last-child {
     background-color: transparent;
 }
 
-:disabled,
-:disabled:is(:hover, :active, :focus),
 [data-state="disabled"],
 [data-state="disabled"]:is(:hover, :active, :focus) {
     border-color: #e6e6e6;

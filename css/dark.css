@@ -141,23 +141,22 @@ q {
     quotes: none;
 }
 
+blockquote:is(:before, :after) {
+    content: '';
+    content: none;
+}
+
 blockquote {
     font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, "Nimbus Roman No9 L", "Liberation Serif", FreeSerif, serif;
     font-style: italic;
 }
 
-blockquote:before,
-blockquote:after {
-    content: '';
-    content: none;
+blockquote small {
+    display: block;
 }
 
 blockquote small:before {
     content: "— ";
-}
-
-blockquote small {
-    display: block;
 }
 
 code,
@@ -478,10 +477,6 @@ body>[data-container]:last-child {
     color: #b3b3b3;
 }
 
-[data-navbar="sub"] {
-    background-color: #2a2a2a;
-}
-
 [data-navbar="top"] {
     position: fixed;
     top: 0;
@@ -498,6 +493,10 @@ body>[data-container]:last-child {
 
 [data-navbar="bottom"] [data-dropbox] {
     bottom: 100%;
+}
+
+[data-navbar="sub"] {
+    background-color: #2a2a2a;
 }
 
 [data-nav="navbar"] {

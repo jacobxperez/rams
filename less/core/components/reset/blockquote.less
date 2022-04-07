@@ -5,6 +5,11 @@ q {
     quotes: none;
 }
 
+blockquote:is(:before, :after) {
+    content: '';
+    content: none;
+}
+
 blockquote {
     .font-family(@blockquote-font-family);
     &:extend([data-leading]);
@@ -13,17 +18,11 @@ blockquote {
         font-style: @blockquote-font-style;
     }
 
-    &:before,
-    &:after {
-        content: '';
-        content: none;
+    small {
+        display: block;
     }
 
     small:before {
         content: "— ";
-    }
-
-    small {
-        display: block;
     }
 }

@@ -5,7 +5,7 @@
     .padding(@nav-padding-y; @nav-padding-x);
 }
 
-[data-nav]:is(.active, :hover, :active) {
+[data-nav]:where(.active, :hover, :active) {
     color: @nav-link-color-active;
     text-decoration: none;
 }

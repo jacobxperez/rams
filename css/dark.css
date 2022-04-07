@@ -361,15 +361,24 @@ body>[data-container]:last-child {
 [data-dropbox] {
     z-index: -10;
     display: none;
+    visibility: hidden;
     min-width: 10rem;
     background-color: transparent;
     color: #aaa;
+}
+
+[data-dropbox="menu"] {
+    display: block;
+    opacity: 0;
+    transition: opacity 0.2s ease-out;
 }
 
 .active>[data-dropbox],
 .active+[data-dropbox] {
     z-index: 100;
     display: block;
+    visibility: visible;
+    opacity: 1;
 }
 
 [data-tooltip] {
@@ -416,7 +425,7 @@ body>[data-container]:last-child {
     padding: 0.5rem 0.75rem 0.5rem 0.75rem;
 }
 
-[data-nav]:is(.active, :hover, :active) {
+[data-nav]:where(.active, :hover, :active) {
     color: #aaa;
     text-decoration: none;
 }

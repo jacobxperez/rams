@@ -15,10 +15,11 @@
         background-color: @tooltip-background;
         color: @tooltip-text-color;
         opacity: 0;
-        transition: opacity 0.4s ease-out; 
+        transition: @tooltip-transition;
     }
 }
 
+[data-tooltip].active::before,
 [data-tooltip]:hover::before {
     z-index: 10;
     opacity: 1;

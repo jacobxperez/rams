@@ -7,13 +7,31 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Dropdown
     (() => {
-        const getDropDown = document.querySelectorAll('[data-dropdown]');
-        const getMenu = document.querySelectorAll('[data-dropdown="menu"]');
-        const getToolTip = document.querySelectorAll('[data-dropdown="tooltip"]');
+        const getToggle = document.querySelectorAll('[data-toggle]');
+        const getPop = document.querySelectorAll('[data-toggle="pop"]');
+        const getToolTip = document.querySelectorAll('[data-tooltip]');
 
         // toggle class active
-        for (let i = 0; i < getDropDown.length; i++) {
-            getDropDown[i].addEventListener("click", function (e) {
+        for (let i = 0; i < getToggle.length; i++) {
+            getToggle[i].addEventListener("click", function (e) {
+
+                if (this.classList.contains("active") === false) {
+
+                    this.classList.add("active");
+
+                } else if (this.classList.contains("active") === true) {
+
+                    this.classList.remove("active");
+
+                };
+
+                e.stopPropagation();
+            });
+        };
+
+        // tooltip toogle state
+        for (let i = 0; i < getToolTip.length; i++) {
+            getToolTip[i].addEventListener("click", function (e) {
 
                 if (this.classList.contains("active") === false) {
 
@@ -31,10 +49,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Close dropdown on document click
         document.addEventListener("click", function (e) {
-            for (let i = 0; i < getMenu.length; i++) {
-                if (e.target !== getMenu[i]) {
+            for (let i = 0; i < getPop.length; i++) {
+                if (e.target !== getPop[i]) {
 
-                    getMenu[i].classList.remove("active");
+                    getPop[i].classList.remove("active");
 
                 };
             }

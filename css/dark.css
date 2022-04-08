@@ -399,6 +399,7 @@ body>[data-container]:last-child {
     transition: opacity 0.4s ease-out;
 }
 
+[data-tooltip].active::before,
 [data-tooltip]:hover::before {
     z-index: 10;
     opacity: 1;

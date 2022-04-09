@@ -28,7 +28,7 @@ body {
     text-align: left;
     color: #aaa;
     background-color: #252525;
-    overflow: auto;
+    overflow-wrap: break-word;
 }
 
 [data-leading],
@@ -389,7 +389,7 @@ body>[data-container]:last-child {
     content: attr(data-tooltip);
     position: absolute;
     z-index: -10;
-    top: 100%;
+    bottom: 100%;
     left: 0;
     min-width: 10rem;
     padding: 0.5rem 0.75rem 0.5rem 0.75rem;

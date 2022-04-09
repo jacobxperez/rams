@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         };
 
-        // tooltip toogle state
+        // toggle class active on tooltip
         for (let i = 0; i < getToolTip.length; i++) {
             getToolTip[i].addEventListener("click", function (e) {
 

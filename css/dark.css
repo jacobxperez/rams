@@ -28,6 +28,19 @@ html {
     overflow-wrap: break-word;
 }
 
+img,
+svg,
+picture,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+    display: block;
+    max-width: 100%;
+}
+
 [data-leading],
 h1,
 h2,
@@ -138,7 +151,7 @@ q {
     quotes: none;
 }
 
-blockquote:is(:before, :after) {
+blockquote:where(:before, :after) {
     content: '';
     content: none;
 }
@@ -148,11 +161,11 @@ blockquote {
     font-style: italic;
 }
 
-blockquote small {
+:where(blockquote) small {
     display: block;
 }
 
-blockquote small:before {
+:where(blockquote) small::before {
     content: "— ";
 }
 

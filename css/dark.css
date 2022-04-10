@@ -297,8 +297,6 @@ select,
 
 button:where(:hover, :active),
 [data-button]:is(:hover, :active) {
-    outline: 0;
-    text-decoration: none;
     background-color: rgba(0, 0, 0, 0.1);
 }
 
@@ -321,10 +319,9 @@ button:where(:focus),
     cursor: pointer;
 }
 
-a:where(:hover, :active),
+a:where(:hover, :active):not([data-nav], [data-tab], [data-button]),
 [data-button="link"]:hover,
 [data-button="link"]:active {
-    outline: 0;
     text-decoration: underline;
 }
 
@@ -434,7 +431,6 @@ body>[data-container]:last-child {
 
 [data-nav]:where(.active, :hover, :active) {
     color: #aaa;
-    text-decoration: none;
 }
 
 [data-flex~="nav"] {
@@ -474,7 +470,6 @@ body>[data-container]:last-child {
 [data-tab]:is(.active, :hover, :active) {
     z-index: 5;
     color: #aaa;
-    text-decoration: none;
 }
 
 [data-tab~="line"] {

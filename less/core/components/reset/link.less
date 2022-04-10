@@ -7,8 +7,7 @@
     cursor: pointer;
 }
 
-a:where(:hover, :active) {
-    outline: 0;
+a:where(:hover, :active):not([data-nav], [data-tab], [data-button]) {
     text-decoration: underline;
 }
 

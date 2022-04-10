@@ -5,7 +5,7 @@ q {
     quotes: none;
 }
 
-blockquote:is(:before, :after) {
+blockquote:where(:before, :after) {
     content: '';
     content: none;
 }
@@ -17,12 +17,12 @@ blockquote {
     & when not (@blockquote-font-style = false) {
         font-style: @blockquote-font-style;
     }
+}
 
-    small {
-        display: block;
-    }
+:where(blockquote) small {
+    display: block;
+}
 
-    small:before {
-        content: "— ";
-    }
+:where(blockquote) small::before {
+    content: "— ";
 }

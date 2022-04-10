@@ -15,7 +15,7 @@
 }
 
 html {
-    .font-size(@font-size; 16px; %);
+    .font-size(@font-size; 16px; percent);
     font-family: @font-family;
     font-weight: 400;
     .line-height(@line-height);
@@ -28,3 +28,16 @@ html {
         font-size: @font-scale;
     }
 }
+
+img,
+svg,
+picture,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+    display: block;
+    max-width: 100%;
+  }

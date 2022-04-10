@@ -1,6 +1,6 @@
 // Button
 // ----------------------------------------------------------------------------/
-button,
+:where(button),
 [data-button] {
     display: inline-block;
     .padding(@button-padding-y; @button-padding-x);
@@ -10,14 +10,14 @@ button,
     cursor: pointer;
 }
 
-button:is(:hover, :active),
+button:where(:hover, :active),
 [data-button]:is(:hover, :active) {
     outline: 0;
     text-decoration: none;
     .background-color(@button-background-active);
 }
 
-button:is(:focus),
+button:where(:focus),
 [data-button]:is(:focus) {
     outline: thin dotted;
     outline-offset: unit((-2px / @font-size), rem);

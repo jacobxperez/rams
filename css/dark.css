@@ -273,7 +273,7 @@ select,
     border-color: #ff3d00;
 }
 
-button,
+:where(button),
 [data-button] {
     display: inline-block;
     padding: 0.5rem 0.75rem 0.5rem 0.75rem;
@@ -282,14 +282,14 @@ button,
     cursor: pointer;
 }
 
-button:is(:hover, :active),
+button:where(:hover, :active),
 [data-button]:is(:hover, :active) {
     outline: 0;
     text-decoration: none;
     background-color: rgba(0, 0, 0, 0.1);
 }
 
-button:is(:focus),
+button:where(:focus),
 [data-button]:is(:focus) {
     outline: thin dotted;
     outline-offset: -0.125rem;

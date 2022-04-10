@@ -28,7 +28,7 @@
 
     & when not (@size = false) {
 
-        & when (@unit = %) {
+        & when (@unit = percent) {
             font-size: percentage((@size / @base));
         }
 
@@ -59,7 +59,7 @@
             line-height: unit((@height / @base), @unit);
         }
 
-        & when (@unit = %) {
+        & when (@unit = percent) {
             line-height: percentage(@height / @base);
         }
 

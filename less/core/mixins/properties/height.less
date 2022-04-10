@@ -6,7 +6,7 @@
         height: unit((@height / @base), @unit);
     }
 
-    & when (@unit = %) {
+    & when (@unit = percent) {
         height: percentage(@height / @base);
     }
 
@@ -23,7 +23,7 @@
         max-height: unit((@height / @base), @unit);
     }
 
-    & when (@unit = %) {
+    & when (@unit = percent) {
         max-height: percentage(@height / @base);
     }
 
@@ -39,7 +39,7 @@
         min-height: unit((@height / @base), @unit);
     }
 
-    & when (@unit = %) {
+    & when (@unit = percent) {
         min-height: percentage(@height / @base);
     }
 

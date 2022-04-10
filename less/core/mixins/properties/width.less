@@ -6,7 +6,7 @@
         width: unit((@width / @base), @unit);
     }
 
-    & when (@unit = %) {
+    & when (@unit = percent) {
         width: percentage(@width / @base);
     }
 
@@ -20,7 +20,7 @@
         max-width: unit((@width / @base), @unit);
     }
 
-    & when (@unit = %) {
+    & when (@unit = percent) {
         max-width: percentage(@width / @base);
     }
 
@@ -34,7 +34,7 @@
         min-width: unit((@width / @base), @unit);
     }
 
-    & when (@unit = %) {
+    & when (@unit = percent) {
         min-width: percentage(@width / @base);
     }
 

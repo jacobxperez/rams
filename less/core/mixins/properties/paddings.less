@@ -12,7 +12,7 @@
             padding: @a @b @c @d;
         }
 
-        & when (@unit = %) {
+        & when (@unit = percent) {
             @a: percentage(@top / @base);
             @b: percentage(@right / @base);
             @c: percentage(@bottom / @base);
@@ -33,7 +33,7 @@
             padding-top: @a;
         }
 
-        & when (@unit = %) {
+        & when (@unit = percent) {
             @a: percentage(@top / @base);
             padding-top: @a;
         }
@@ -51,7 +51,7 @@
             padding-right: @a;
         }
 
-        & when (@unit = %) {
+        & when (@unit = percent) {
             @a: percentage(@right / @base);
             padding-right: @a;
         }
@@ -69,7 +69,7 @@
             padding-bottom: @a;
         }
 
-        & when (@unit = %) {
+        & when (@unit = percent) {
             @a: percentage(@bottom / @base);
             padding-bottom: @a;
         }
@@ -87,7 +87,7 @@
             padding-left: @a;
         }
 
-        & when (@unit = %) {
+        & when (@unit = percent) {
             @a: percentage(@left / @base);
             padding-left: @a;
         }

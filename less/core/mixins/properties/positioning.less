@@ -3,7 +3,7 @@
 .top(@position; @base: @font-size; @unit: rem) {
 
     & when not (@position = false) {
-        & when (@unit = %) {
+        & when (@unit = percent) {
             top: percentage(@position / @base);
         }
 
@@ -23,7 +23,7 @@
 
 .bottom(@position; @base: @font-size; @unit: rem) {
     & when not (@position = false) {
-        & when (@unit = %) {
+        & when (@unit = percent) {
             bottom: percentage(@position / @base);
         }
 
@@ -43,7 +43,7 @@
 
 .left(@position; @base: @font-size; @unit: rem) {
     & when not (@position = false) {
-        & when (@unit = %) {
+        & when (@unit = percent) {
             left: percentage(@position / @base);
         }
 
@@ -63,7 +63,7 @@
 
 .right(@position; @base: @font-size; @unit: rem) {
     & when not (@position = false) {
-        & when (@unit = %) {
+        & when (@unit = percent) {
             right: percentage(@position / @base);
         }
 

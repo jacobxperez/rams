@@ -12,7 +12,7 @@
             margin: @a @b @c @d;
         }
 
-        & when (@unit = %) {
+        & when (@unit = percent) {
             @a: percentage(@top / @base);
             @b: percentage(@right / @base);
             @c: percentage(@bottom / @base);
@@ -33,7 +33,7 @@
             margin-top: @a;
         }
 
-        & when (@unit = %) {
+        & when (@unit = percent) {
             @a: percentage(@top / @base);
             margin-top: @a;
         }
@@ -51,7 +51,7 @@
             margin-right: @a;
         }
 
-        & when (@unit = %) {
+        & when (@unit = percent) {
             @a: percentage(@right / @base);
             margin-right: @a;
         }
@@ -69,7 +69,7 @@
             margin-bottom: @a;
         }
 
-        & when (@unit = %) {
+        & when (@unit = percent) {
             @a: percentage(@bottom / @base);
             margin-bottom: @a;
         }
@@ -87,7 +87,7 @@
             margin-left: @a;
         }
 
-        & when (@unit = %) {
+        & when (@unit = percent) {
             @a: percentage(@left / @base);
             margin-left: @a;
         }

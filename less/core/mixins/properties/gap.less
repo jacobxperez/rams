@@ -4,7 +4,7 @@
 
     & when not (@gap = false) {
 
-        & when (@unit = %) {
+        & when (@unit = percent) {
             gap: percentage((@gap / @base));
         }
 
@@ -28,7 +28,7 @@
 
     & when not (@gap = false) {
 
-        & when (@unit = %) {
+        & when (@unit = percent) {
             row-gap: percentage((@gap / @base));
         }
 
@@ -53,7 +53,7 @@
 
     & when not (@gap = false) {
 
-        & when (@unit = %) {
+        & when (@unit = percent) {
             column-gap: percentage((@gap / @base));
         }
 

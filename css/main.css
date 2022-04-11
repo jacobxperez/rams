@@ -186,7 +186,7 @@ ul {
     list-style-type: none;
 }
 
-:where([data-list]) [data-list] {
+[data-list]:where([data-list]) [data-list] {
     margin: 0;
 }
 

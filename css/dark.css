@@ -51,7 +51,9 @@ h6,
 p,
 blockquote,
 pre,
-:where([data-list]):not(nav [data-list]),
+[data-list="ol"],
+[data-list="ul"],
+[data-list="dl"],
 table {
     margin: 0.6875rem 0rem 0.6875rem 0rem;
 }
@@ -186,10 +188,6 @@ ul {
     list-style-type: none;
 }
 
-[data-list]:where([data-list]) [data-list] {
-    margin: 0;
-}
-
 [data-list="ol"] {
     list-style-type: decimal;
 }
@@ -211,6 +209,12 @@ ul {
 :where([data-list="dl"]) dd {
     padding-left: 1.375rem;
     list-style-position: outside;
+}
+
+[data-list="ol"] [data-list],
+[data-list="ul"] [data-list],
+[data-list="dl"] [data-list] {
+    margin: 0;
 }
 
 table {

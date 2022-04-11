@@ -5,14 +5,6 @@ ul {
     list-style-type: none;
 }
 
-:where([data-list]):not(nav [data-list]) {
-    &:extend([data-leading]);
-}
-
-[data-list]:where([data-list]) [data-list] {
-    margin: 0;
-}
-
 [data-list="ol"] {
     list-style-type: @ol-list-style-type;
 
@@ -34,4 +26,14 @@ ul {
 :where([data-list="dl"]) dd {
     .padding-left(@line-height);
     list-style-position: outside;
+}
+
+[data-list="ol"],
+[data-list="ul"],
+[data-list="dl"] {
+    &:extend([data-leading]);
+
+    [data-list] {
+        margin: 0;
+    }
 }

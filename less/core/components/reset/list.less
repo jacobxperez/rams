@@ -1,17 +1,16 @@
-// List Items dl, ol, ul
+// List Items
 // ----------------------------------------------------------------------------/
-dl,
 ol,
 ul {
     list-style-type: none;
 }
 
-[data-list] {
+:where([data-list]):not(nav [data-list]) {
     &:extend([data-leading]);
+}
 
-    [data-list] {
-        margin: 0;
-    }
+:where([data-list]) [data-list] {
+    margin: 0;
 }
 
 [data-list="ol"] {
@@ -31,7 +30,8 @@ ul {
 }
 
 [data-list="ol"],
-[data-list="ul"] {
+[data-list="ul"],
+:where([data-list="dl"]) dd {
     .padding-left(@line-height);
     list-style-position: outside;
 }

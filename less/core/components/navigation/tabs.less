@@ -13,10 +13,12 @@
     z-index: 1;
     display: block;
     .padding(@nav-padding-y; @nav-padding-x);
+    color: @tab-link-color;
 }
 
 [data-tab]:where([data-state="active"], :hover, :active) {
     z-index: 5;
+    color: @tab-link-active;
 }
 
 [data-tab="line"] {
@@ -25,5 +27,5 @@
 }
 
 [data-tab="line"]:where([data-state="active"], :hover, :active) {
-    border-color: @tab-border-color-active;
+    border-color: @tab-border-active;
 }

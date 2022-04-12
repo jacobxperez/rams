@@ -461,10 +461,12 @@ body>[data-container]:last-child {
     z-index: 1;
     display: block;
     padding: 0.5rem 0.75rem 0.5rem 0.75rem;
+    color: #777;
 }
 
 [data-tab]:where([data-state="active"], :hover, :active) {
     z-index: 5;
+    color: #333;
 }
 
 [data-tab="line"] {

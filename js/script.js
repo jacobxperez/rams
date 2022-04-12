@@ -15,13 +15,13 @@ document.addEventListener("DOMContentLoaded", () => {
         for (let i = 0; i < getToggle.length; i++) {
             getToggle[i].addEventListener("click", function (e) {
 
-                if (this.classList.contains("active") === false) {
+                if (this.hasAttribute('data-state', 'active') === false) {
 
-                    this.classList.add("active");
+                    this.setAttribute('data-state', 'active');
 
-                } else if (this.classList.contains("active") === true) {
+                } else if (this.hasAttribute('data-state', 'active') === true) {
 
-                    this.classList.remove("active");
+                    this.removeAttribute('data-state', 'active');
 
                 };
 
@@ -33,13 +33,13 @@ document.addEventListener("DOMContentLoaded", () => {
         for (let i = 0; i < getToolTip.length; i++) {
             getToolTip[i].addEventListener("click", function (e) {
 
-                if (this.classList.contains("active") === false) {
+                if (this.hasAttribute('data-state', 'active') === false) {
 
-                    this.classList.add("active");
+                    this.setAttribute('data-state', 'active');
 
-                } else if (this.classList.contains("active") === true) {
+                } else if (this.hasAttribute('data-state', 'active') === true) {
 
-                    this.classList.remove("active");
+                    this.removeAttribute('data-state', 'active');
 
                 };
 
@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
             for (let i = 0; i < getPop.length; i++) {
                 if (e.target !== getPop[i]) {
 
-                    getPop[i].classList.remove("active");
+                    getPop[i].removeAttribute('data-state', 'active');
 
                 };
             }
@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", () => {
             for (let i = 0; i < getToolTip.length; i++) {
                 if (e.target !== getToolTip[i]) {
 
-                    getToolTip[i].classList.remove("active");
+                    getToolTip[i].removeAttribute('data-state', 'active');
 
                 };
             };

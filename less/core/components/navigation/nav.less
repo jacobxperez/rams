@@ -5,10 +5,6 @@
     .padding(@nav-padding-y; @nav-padding-x);
 }
 
-[data-nav]:where(.active, :hover, :active) {
+[data-nav]:where([data-state="active"], :hover, :active) {
     color: @nav-link-color-active;
-}
-
-[data-flex~="nav"] {
-    .border();
 }

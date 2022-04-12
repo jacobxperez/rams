@@ -9,7 +9,7 @@
     color: @tertiary-text;
 }
 
-[data-button~="tertiary"]:is(.active, :hover, :active) {
+[data-button~="tertiary"]:is([data-state="active"], :hover, :active) {
     border-color: @border-color;
     background-color: @tertiary-active;
     color: @tertiary-text;
@@ -25,7 +25,7 @@
     color: @secondary-text;
 }
 
-[data-button~="secondary"]:is(.active, :hover, :active) {
+[data-button~="secondary"]:is([data-state="active"], :hover, :active) {
     border-color: @border-color;
     background-color: @secondary-active;
     color: @secondary-text;
@@ -41,7 +41,7 @@
     color: @primary-text;
 }
 
-[data-button~="primary"]:is(.active, :hover, :active) {
+[data-button~="primary"]:is([data-state="active"], :hover, :active) {
     border-color: @border-color;
     background-color: @primary-active;
     color: @primary-text;
@@ -57,7 +57,7 @@
     color: @success-text;
 }
 
-[data-button~="success"]:is(.active, :hover, :active) {
+[data-button~="success"]:is([data-state="active"], :hover, :active) {
     border-color: @border-color;
     background-color: @success-active;
     color: @success-text;
@@ -73,7 +73,7 @@
     color: @warning-text;
 }
 
-[data-button~="warning"]:is(.active, :hover, :active) {
+[data-button~="warning"]:is([data-state="active"], :hover, :active) {
     border-color: @border-color;
     background-color: @warning-active;
     color: @warning-text;
@@ -89,7 +89,7 @@
     color: @danger-text;
 }
 
-[data-button~="danger"]:is(.active, :hover, :active) {
+[data-button~="danger"]:is([data-state="active"], :hover, :active) {
     border-color: @border-color;
     background-color: @danger-active;
     color: @danger-text;

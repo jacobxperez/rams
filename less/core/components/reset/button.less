@@ -34,7 +34,7 @@ button:where(:focus),
     &:extend(a:where(:focus));
 }
 
-[data-button="link"]:is(.active, :hover, :active) {
+[data-button="link"]:is([data-state="active"], :hover, :active) {
     background-color: transparent;
     border-color: transparent;
 }

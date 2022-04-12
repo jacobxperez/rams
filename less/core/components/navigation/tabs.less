@@ -1,23 +1,29 @@
 // Tabs
 // ----------------------------------------------------------------------------/
-[data-nav="tab"] {
-    position: relative;
-    z-index: 1;
+[data-tabs] {
+    display: flex;
 }
 
-[data-nav="tab"]:is([data-state="active"], :hover, :active) {
-    z-index: 5;
-}
-
-[data-flex~="line"] {
+[data-tabs="line"] {
     .border-bottom(@tab-border-width);
 }
 
-:where([data-flex~="line"]) [data-nav="tab"] {
+[data-tab] {
+    position: relative;
+    z-index: 1;
+    display: block;
+    .padding(@nav-padding-y; @nav-padding-x);
+}
+
+[data-tab]:where([data-state="active"], :hover, :active) {
+    z-index: 5;
+}
+
+[data-tab="line"] {
     .top(@tab-border-width);
     .border-bottom(@tab-border-width; @color: transparent);
 }
 
-:where([data-flex~="line"]) [data-nav="tab"]:is([data-state="active"], :hover, :active) {
+[data-tab="line"]:where([data-state="active"], :hover, :active) {
     border-color: @tab-border-color-active;
 }

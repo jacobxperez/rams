@@ -1,6 +1,5 @@
 // Button
 // ----------------------------------------------------------------------------/
-:where(button),
 [data-button] {
     display: inline-block;
     .padding(@button-padding-y; @button-padding-x);
@@ -10,12 +9,10 @@
     cursor: pointer;
 }
 
-button:where(:hover, :active),
 [data-button]:is(:hover, :active) {
     .background-color(@button-background-active);
 }
 
-button:where(:focus),
 [data-button]:is(:focus) {
     outline: thin dotted;
     outline-offset: unit((-2px / @font-size), rem);
@@ -27,7 +24,7 @@ button:where(:focus),
 
 [data-button="link"]:hover,
 [data-button="link"]:active {
-    &:extend(a:where(:hover, :active):not([data-nav], [data-button]));
+    &:extend(a:where(:hover, :active):not([data-nav], [data-tab], [data-button]));
 }
 
 [data-button="link"]:focus {

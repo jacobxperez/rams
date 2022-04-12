@@ -290,7 +290,6 @@ select,
     border-color: #ff3d00;
 }
 
-:where(button),
 [data-button] {
     display: inline-block;
     padding: 0.5rem 0.75rem 0.5rem 0.75rem;
@@ -299,12 +298,10 @@ select,
     cursor: pointer;
 }
 
-button:where(:hover, :active),
 [data-button]:is(:hover, :active) {
     background-color: rgba(0, 0, 0, 0.1);
 }
 
-button:where(:focus),
 [data-button]:is(:focus) {
     outline: thin dotted;
     outline-offset: -0.125rem;
@@ -323,7 +320,7 @@ button:where(:focus),
     cursor: pointer;
 }
 
-a:where(:hover, :active):not([data-nav], [data-button]),
+a:where(:hover, :active):not([data-nav], [data-tab], [data-button]),
 [data-button="link"]:hover,
 [data-button="link"]:active {
     text-decoration: underline;
@@ -437,10 +434,6 @@ body>[data-container]:last-child {
     color: #aaa;
 }
 
-[data-flex~="nav"] {
-    border: 0.0625rem solid rgba(0, 0, 0, 0.3);
-}
-
 [data-flex~="breadcrumb"] {
     column-gap: 0.3125rem;
 }
@@ -455,25 +448,31 @@ body>[data-container]:last-child {
     margin-right: 0;
 }
 
-[data-nav="tab"] {
-    position: relative;
-    z-index: 1;
+[data-tabs] {
+    display: flex;
 }
 
-[data-nav="tab"]:is([data-state="active"], :hover, :active) {
-    z-index: 5;
-}
-
-[data-flex~="line"] {
+[data-tabs="line"] {
     border-bottom: 0.125rem solid rgba(0, 0, 0, 0.3);
 }
 
-:where([data-flex~="line"]) [data-nav="tab"] {
+[data-tab] {
+    position: relative;
+    z-index: 1;
+    display: block;
+    padding: 0.5rem 0.75rem 0.5rem 0.75rem;
+}
+
+[data-tab]:where([data-state="active"], :hover, :active) {
+    z-index: 5;
+}
+
+[data-tab="line"] {
     top: 0.125rem;
     border-bottom: 0.125rem solid transparent;
 }
 
-:where([data-flex~="line"]) [data-nav="tab"]:is([data-state="active"], :hover, :active) {
+[data-tab="line"]:where([data-state="active"], :hover, :active) {
     border-color: #00ac25;
 }
 

@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 } else if (this.hasAttribute('data-state', 'active') === true) {
 
-                    this.removeAttribute('data-state', 'active');
+                    this.removeAttribute('data-state');
 
                 };
 
@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 } else if (this.hasAttribute('data-state', 'active') === true) {
 
-                    this.removeAttribute('data-state', 'active');
+                    this.removeAttribute('data-state');
 
                 };
 
@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
             for (let i = 0; i < getPop.length; i++) {
                 if (e.target !== getPop[i]) {
 
-                    getPop[i].removeAttribute('data-state', 'active');
+                    getPop[i].removeAttribute('data-state');
 
                 };
             }
@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", () => {
             for (let i = 0; i < getToolTip.length; i++) {
                 if (e.target !== getToolTip[i]) {
 
-                    getToolTip[i].removeAttribute('data-state', 'active');
+                    getToolTip[i].removeAttribute('data-state');
 
                 };
             };

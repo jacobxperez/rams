@@ -1,31 +1,25 @@
 // Tabs
 // ----------------------------------------------------------------------------/
-[data-tabs] {
-    display: flex;
-}
-
-[data-tabs="line"] {
+[data-nav="line"] {
     .border-bottom(@tab-border-width);
 }
 
-[data-tab] {
+[data-link="line"] {
     position: relative;
     z-index: 1;
-    display: block;
-    .padding(@nav-padding-y; @nav-padding-x);
     color: @tab-link-color;
 }
 
-[data-tab]:where([data-state="active"], :hover, :active) {
+[data-link="line"]:where([data-state="active"], :hover, :active) {
     z-index: 5;
     color: @tab-link-active;
 }
 
-[data-tab="line"] {
+[data-link="line"] {
     .top(@tab-border-width);
     .border-bottom(@tab-border-width; @color: transparent);
 }
 
-[data-tab="line"]:where([data-state="active"], :hover, :active) {
+[data-link="line"]:where([data-state="active"], :hover, :active) {
     border-color: @tab-border-active;
 }

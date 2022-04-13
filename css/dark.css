@@ -287,7 +287,7 @@ select,
 }
 
 :not([type=submit]):invalid {
-    border-color: #ff3d00;
+    border-color: #da1e28;
 }
 
 [data-button] {
@@ -320,7 +320,7 @@ select,
     cursor: pointer;
 }
 
-a:where(:hover, :active):not([data-nav], [data-tab], [data-button]),
+a:where(:hover, :active):not([data-link], [data-button]),
 [data-button="link"]:hover,
 [data-button="link"]:active {
     text-decoration: underline;
@@ -426,55 +426,53 @@ body>[data-container]:last-child {
 }
 
 [data-nav] {
+    display: flex;
+}
+
+[data-link] {
     display: block;
     padding: 0.5rem 0.75rem 0.5rem 0.75rem;
 }
 
-[data-nav]:where([data-state="active"], :hover, :active) {
+[data-link]:where([data-state="active"], :hover, :active) {
     color: #aaa;
 }
 
-[data-flex~="breadcrumb"] {
+[data-nav="breadcrumb"] {
     column-gap: 0.3125rem;
 }
 
-[data-flex~="breadcrumb"] li::before {
+[data-nav="breadcrumb"] li::before {
     content: "/";
     margin-right: 0.3125rem;
 }
 
-[data-flex~="breadcrumb"] li:first-child::before {
+[data-nav="breadcrumb"] li:first-child::before {
     content: "";
     margin-right: 0;
 }
 
-[data-tabs] {
-    display: flex;
-}
-
-[data-tabs="line"] {
+[data-nav="line"] {
     border-bottom: 0.125rem solid rgba(0, 0, 0, 0.3);
 }
 
-[data-tab] {
+[data-link="line"] {
     position: relative;
     z-index: 1;
-    display: block;
-    padding: 0.5rem 0.75rem 0.5rem 0.75rem;
     color: #777;
 }
 
-[data-tab]:where([data-state="active"], :hover, :active) {
+[data-link="line"]:where([data-state="active"], :hover, :active) {
     z-index: 5;
     color: #aaa;
 }
 
-[data-tab="line"] {
+[data-link="line"] {
     top: 0.125rem;
     border-bottom: 0.125rem solid transparent;
 }
 
-[data-tab="line"]:where([data-state="active"], :hover, :active) {
+[data-link="line"]:where([data-state="active"], :hover, :active) {
     border-color: #00ac25;
 }
 
@@ -507,11 +505,11 @@ body>[data-container]:last-child {
     background-color: #2a2a2a;
 }
 
-[data-nav="navbar"] {
+[data-link="navbar"] {
     color: #ffffff;
 }
 
-[data-nav="navbar"]:is([data-state="active"], :hover, :active) {
+[data-link="navbar"]:is([data-state="active"], :hover, :active) {
     color: #b3b3b3;
 }
 
@@ -568,51 +566,51 @@ body>[data-container]:last-child {
 }
 
 [data-button~="success"] {
-    background-color: #00c853;
+    background-color: #198038;
     color: #ffffff;
 }
 
 [data-button~="success"]:is([data-state="active"], :hover, :active) {
     border-color: rgba(0, 0, 0, 0.3);
-    background-color: #00af48;
+    background-color: #156b2f;
     color: #ffffff;
 }
 
 [data-button="success outline"] {
-    border-color: #00c853;
-    color: #00c853;
+    border-color: #198038;
+    color: #198038;
 }
 
 [data-button~="warning"] {
-    background-color: #ffab00;
-    color: #000000;
+    background-color: #ff832b;
+    color: #ffffff;
 }
 
 [data-button~="warning"]:is([data-state="active"], :hover, :active) {
     border-color: rgba(0, 0, 0, 0.3);
-    background-color: #e69a00;
-    color: #000000;
+    background-color: #ff7412;
+    color: #ffffff;
 }
 
 [data-button="warning outline"] {
-    border-color: #ffab00;
-    color: #ffab00;
+    border-color: #ff832b;
+    color: #ff832b;
 }
 
 [data-button~="danger"] {
-    background-color: #ff3d00;
+    background-color: #da1e28;
     color: #ffffff;
 }
 
 [data-button~="danger"]:is([data-state="active"], :hover, :active) {
     border-color: rgba(0, 0, 0, 0.3);
-    background-color: #e63700;
+    background-color: #c41b24;
     color: #ffffff;
 }
 
 [data-button="danger outline"] {
-    border-color: #ff3d00;
-    color: #ff3d00;
+    border-color: #da1e28;
+    color: #da1e28;
 }
 
 [data-button~="outline"] {

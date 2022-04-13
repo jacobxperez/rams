@@ -30,27 +30,27 @@
 
     <!-- Navbar -->
     <nav data-navbar="top">
-        <ul data-flex="navbar">
-            <li><a data-nav="navbar" href="https://jacobxperez.github.io/rams/">RAMs</a></li>
+        <ul data-nav>
+            <li><a data-link="navbar" href="https://jacobxperez.github.io/rams/">RAMs</a></li>
 
             <li data-item="grow"></li>
 
-            <li data-display="small-none"><a data-nav="navbar" href="../../../index.html">Read Me</a></li>
-            <li data-display="small-none"><a data-nav="navbar" href="#top">Components</a></li>
-            <li data-display="small-none"><a data-nav="navbar" href="../../../fonts/icons/index.html">Icons</a></li>
-            <li data-display="small-none"><a data-nav="navbar" data-icon="flow-branch"
+            <li data-display="small-none"><a data-link="navbar" href="../../../index.html">Read Me</a></li>
+            <li data-display="small-none"><a data-link="navbar" href="#top">Components</a></li>
+            <li data-display="small-none"><a data-link="navbar" href="../../../fonts/icons/index.html">Icons</a></li>
+            <li data-display="small-none"><a data-link="navbar" data-icon="flow-branch"
                     href="https://github.com/jacobxperez/rams">
                     Fork</a></li>
 
             <!-- Dropdown Menu: show on small screens -->
             <li data-display="small">
-                <a data-nav="navbar" data-icon="menu" data-toggle="pop"></a>
+                <a data-link="navbar" data-icon="menu" data-toggle="pop"></a>
 
                 <ul data-navbar="sub" data-dropbox="menu" data-position="absolute left right">
-                    <li><a data-nav="navbar" href="../../../index.html">Read Me</a></li>
-                    <li><a data-nav="navbar" href="#top">Components</a></li>
-                    <li><a data-nav="navbar" href="../../../fonts/icons/index.html">Icons</a></li>
-                    <li><a data-nav="navbar" data-icon="flow-branch" href="https://github.com/jacobxperez/rams">
+                    <li><a data-link="navbar" href="../../../index.html">Read Me</a></li>
+                    <li><a data-link="navbar" href="#top">Components</a></li>
+                    <li><a data-link="navbar" href="../../../fonts/icons/index.html">Icons</a></li>
+                    <li><a data-link="navbar" data-icon="flow-branch" href="https://github.com/jacobxperez/rams">
                             Fork</a>
                     </li>
                 </ul>
@@ -69,6 +69,25 @@
 
         <!-- Content -->
         <article>
+
+            <section>
+                <h2>Layout</h2>
+
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+
+                <h3>Container</h3>
+
+                <p>Center page content with data-container</p>
+
+                <h3>Grid</h3>
+
+                <p>Empower your layouts with CSS Grid using data-grid</p>
+
+                <h3>Flex Box</h3>
+
+                <p>Give flexibility to your layouts with data-flex</p>
+            </section>
+
             <section>
                 <h2>Text</h2>
 
@@ -127,7 +146,7 @@
 
                 <ul data-list="border">
                     <li>
-                        <a data-toggle data-nav data-flex>
+                        <a data-toggle data-link data-flex>
                             <strong data-item="grow">Content</strong>
                             <span data-icon="down-open"></span>
                         </a>
@@ -138,7 +157,7 @@
                     </li>
 
                     <li>
-                        <a data-toggle data-nav data-flex>
+                        <a data-toggle data-link data-flex>
                             <strong data-item="grow">Content</strong>
                             <span data-icon="down-open"></span>
                         </a>
@@ -149,7 +168,7 @@
                     </li>
 
                     <li>
-                        <a data-toggle data-nav data-flex>
+                        <a data-toggle data-link data-flex>
                             <strong data-item="grow">Content</strong>
                             <span data-icon="down-open"></span>
                         </a>
@@ -166,44 +185,44 @@
 
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
 
-                <h3>Navbar</h3>
+                <h3>Breadcrumb</h3>
 
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+
+                <nav>
+                    <ul data-nav="breadcrumb">
+                        <li><span>Link</span></li>
+                        <li><a>Link</a></li>
+                        <li><a>Link</a></li>
+                        <li><a>Link</a></li>
+                    </ul>
+                </nav>
 
                 <h3>Tabs</h3>
 
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
 
                 <nav>
-                    <ul data-tabs="line">
-                        <li><a data-tab="line" data-state="active">Tab</a></li>
-                        <li><a data-tab="line">Tab</a></li>
-                        <li><a data-tab="line">Tab</a></li>
-                        <li><a data-tab="line">Tab</a></li>
+                    <ul data-nav="line">
+                        <li><a data-link="line" data-state="active">Tab</a></li>
+                        <li><a data-link="line">Tab</a></li>
+                        <li><a data-link="line">Tab</a></li>
+                        <li><a data-link="line">Tab</a></li>
                     </ul>
                 </nav>
 
-                <h3>Breadcrumb</h3>
-
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-            </section>
-
-            <section>
-                <h2>Layout</h2>
+                <h3>Navbar</h3>
 
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
 
-                <h3>Container</h3>
-
-                <p>Center page content with data-container</p>
-
-                <h3>Grid</h3>
-
-                <p>Empower your layouts with CSS Grid using data-grid</p>
-
-                <h3>Flex Box</h3>
-
-                <p>Give flexibility to your layouts with data-flex</p>
+                <nav data-navbar>
+                    <ul data-nav>
+                        <li><a data-link="navbar" data-state="active">Link</a></li>
+                        <li><a data-link="navbar">Link</a></li>
+                        <li><a data-link="navbar">Link</a></li>
+                        <li><a data-link="navbar">Link</a></li>
+                    </ul>
+                </nav>
             </section>
 
             <section>

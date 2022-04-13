@@ -1,25 +1,25 @@
 // Tabs
 // ----------------------------------------------------------------------------/
 [data-nav="line"] {
-    .border-bottom(@tab-border-width);
+    .border-bottom(@line-border-width);
 }
 
 [data-link="line"] {
     position: relative;
     z-index: 1;
-    color: @tab-link-color;
+    color: @line-link-color;
 }
 
 [data-link="line"]:where([data-state="active"], :hover, :active) {
     z-index: 5;
-    color: @tab-link-active;
+    color: @line-link-active;
 }
 
 [data-link="line"] {
-    .top(@tab-border-width);
-    .border-bottom(@tab-border-width; @color: transparent);
+    .top(@line-border-width);
+    .border-bottom(@line-border-width; @color: transparent);
 }
 
 [data-link="line"]:where([data-state="active"], :hover, :active) {
-    border-color: @tab-border-active;
+    border-color: @line-border-active;
 }

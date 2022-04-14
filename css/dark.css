@@ -517,36 +517,20 @@ body>[data-container]:last-child {
     border-color: rgba(0, 0, 0, 0.3);
 }
 
-[data-button~="tertiary"] {
-    background-color: #aaa;
-    color: #ffffff;
-}
-
-[data-button~="tertiary"]:is([data-state="active"], :hover, :active) {
-    border-color: rgba(0, 0, 0, 0.3);
-    background-color: #9d9d9d;
-    color: #ffffff;
-}
-
-[data-button="tertiary outline"] {
-    border-color: #aaa;
-    color: #aaa;
-}
-
 [data-button~="secondary"] {
-    background-color: #03a;
+    background-color: #aaa;
     color: #ffffff;
 }
 
 [data-button~="secondary"]:is([data-state="active"], :hover, :active) {
     border-color: rgba(0, 0, 0, 0.3);
-    background-color: #002b91;
+    background-color: #9d9d9d;
     color: #ffffff;
 }
 
 [data-button="secondary outline"] {
-    border-color: #03a;
-    color: #03a;
+    border-color: #aaa;
+    color: #aaa;
 }
 
 [data-button~="primary"] {

@@ -1707,7 +1707,7 @@ body>[data-container]:last-child {
     }
 }
 
-@media screen and (min-width: 42.50390625em) and (max-width: 61.24609375em) {
+@media screen and (min-width: 42.5625em) and (max-width: 61.1875em) {
 
     h1,
     [data-text~="h1"] {

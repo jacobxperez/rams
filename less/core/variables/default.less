@@ -82,14 +82,14 @@
 // Breakpoints
 // ----------------------------------------------------------------------------/
 // small screen
-@screen-small-max-width: 680px;
+@screen-small-max-width: unit((680px / 16px), em);
 
 // medium screen
-@screen-medium-min-width: (@screen-small-max-width + 1 / @font-size);
-@screen-medium-max-width: (@screen-large-min-width - 1 / @font-size);
+@screen-medium-min-width: unit((681px / 16px), em);
+@screen-medium-max-width: unit((979px / 16px), em);
 
 // large screens
-@screen-large-min-width: 980px;
+@screen-large-min-width: unit((980px / 16px), em);
 
 
 // Box Model

@@ -480,7 +480,7 @@ body>[data-container]:last-child {
     z-index: 1000;
     width: 100%;
     background-color: #222;
-    color: #b3b3b3;
+    color: #bbbbbb;
 }
 
 [data-navbar="top"] {
@@ -510,7 +510,7 @@ body>[data-container]:last-child {
 }
 
 [data-link="navbar"]:is([data-state="active"], :hover, :active) {
-    color: #b3b3b3;
+    color: #bbbbbb;
 }
 
 [data-button~="outline"] {

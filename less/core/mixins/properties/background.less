@@ -12,20 +12,10 @@
 .gradient(@first-color: @background-color; @first-amount: 0%; @second-color: darken(@first-color, 5%); @second-amount: 100%; @third-color: false; @third-amount: 0%) {
 
     & when (@third-color = false) {
-        background-image: -moz-linear-gradient(top, @first-color @first-amount, @second-color @second-amount);
-        background-image: -webkit-gradient(left top, left bottom, color-stop(@first-amount, @first-color), color-stop(@second-amount, @second-color));
-        background-image: -webkit-linear-gradient(top, @first-color @first-amount, @second-color @second-amount);
-        background-image: -o-linear-gradient(top, @first-color @first-amount, @second-color @second-amount);
-        background-image: -ms-linear-gradient(top, @first-color @first-amount, @second-color @second-amount);
         background-image: linear-gradient(to top, @first-color @first-amount, @second-color @second-amount);
     }
 
     & when (iscolor(@third-color)) {
-        background-image: -moz-linear-gradient(top, @first-color @first-amount, @second-color @second-amount, @third-color @third-amount);
-        background-image: -webkit-gradient(left top, left bottom, color-stop(@first-amount, @first-color), color-stop(@second-amount, @second-color), color-stop(@third-amount, @third-color));
-        background-image: -webkit-linear-gradient(top, @first-color @first-amount, @second-color @second-amount, @third-color @third-amount);
-        background-image: -o-linear-gradient(top, @first-color @first-amount, @second-color @second-amount, @third-color @third-amount);
-        background-image: -ms-linear-gradient(top, @first-color @first-amount, @second-color @second-amount, @third-color @third-amount);
         background-image: linear-gradient(to top, @first-color @first-amount, @second-color @second-amount, @third-color @third-amount);
     }
 

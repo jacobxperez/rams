@@ -69,27 +69,27 @@ h6 {
 
 h1,
 [data-text~="h1"] {
-    font-size: 2.625rem;
+    font-size: 2.48832rem;
 }
 
 h2,
 [data-text~="h2"] {
-    font-size: 2.1875rem;
+    font-size: 2.0736rem;
 }
 
 h3,
 [data-text~="h3"] {
-    font-size: 1.8125rem;
+    font-size: 1.728rem;
 }
 
 h4,
 [data-text~="h4"] {
-    font-size: 1.5rem;
+    font-size: 1.44rem;
 }
 
 h5,
 [data-text~="h5"] {
-    font-size: 1.25rem;
+    font-size: 1.2rem;
 }
 
 h6,
@@ -1677,27 +1677,27 @@ body>[data-container]:last-child {
 
     h1,
     [data-text~="h1"] {
-        font-size: 4rem;
+        font-size: 4.16157959rem;
     }
 
     h2,
     [data-text~="h2"] {
-        font-size: 3.0625rem;
+        font-size: 3.12900721rem;
     }
 
     h3,
     [data-text~="h3"] {
-        font-size: 2.3125rem;
+        font-size: 2.352637rem;
     }
 
     h4,
     [data-text~="h4"] {
-        font-size: 1.75rem;
+        font-size: 1.7689rem;
     }
 
     h5,
     [data-text~="h5"] {
-        font-size: 1.3125rem;
+        font-size: 1.33rem;
     }
 
     [data-display~="large-none"],
@@ -1711,27 +1711,27 @@ body>[data-container]:last-child {
 
     h1,
     [data-text~="h1"] {
-        font-size: 3.125rem;
+        font-size: 3.43597384rem;
     }
 
     h2,
     [data-text~="h2"] {
-        font-size: 2.5rem;
+        font-size: 2.68435456rem;
     }
 
     h3,
     [data-text~="h3"] {
-        font-size: 2rem;
+        font-size: 2.097152rem;
     }
 
     h4,
     [data-text~="h4"] {
-        font-size: 1.5625rem;
+        font-size: 1.6384rem;
     }
 
     h5,
     [data-text~="h5"] {
-        font-size: 1.25rem;
+        font-size: 1.28rem;
     }
 
     [data-grid="main"] div,

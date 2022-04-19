@@ -5,8 +5,8 @@
 ------------------------------------------------------------------------------*/
 document.addEventListener("DOMContentLoaded", () => {
 
-    // Dropdown
-    (() => {
+    // Dropdown function 
+    const dropDown = () => {
         const getToggle = document.querySelectorAll('[data-toggle]');
         const getPop = document.querySelectorAll('[data-toggle="pop"]');
         const getToolTip = document.querySelectorAll('[data-tooltip]');
@@ -65,12 +65,12 @@ document.addEventListener("DOMContentLoaded", () => {
                 };
             };
         });
-    })();
-    // end Dropdown
+    };
+    // end Dropdwon
 
 
     // Smooth Scroll
-    (() => {
+    const smoothScroll = () => {
         const intLinks = document.querySelectorAll("a[href^='#']");
 
         for (let i = 0; i < intLinks.length; i++) {
@@ -84,7 +84,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
             });
         };
-    })();
+    }
     // end Smooth Scroll
+
+
+    // start functions
+    dropDown();
+    smoothScroll();
 
 });

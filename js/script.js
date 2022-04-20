@@ -23,10 +23,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
                     this.removeAttribute('data-state');
 
-                };
+                }
 
                 e.stopPropagation();
-            });
+            })
         };
 
         // toggle class active on tooltip
@@ -41,10 +41,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
                     this.removeAttribute('data-state');
 
-                };
+                }
 
                 e.stopPropagation();
-            });
+            })
         };
 
         // Close dropdown on document click
@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                     getPop[i].removeAttribute('data-state');
 
-                };
+                }
             }
 
             for (let i = 0; i < getToolTip.length; i++) {
@@ -62,10 +62,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
                     getToolTip[i].removeAttribute('data-state');
 
-                };
-            };
-        });
+                }
+            }
+        })
     };
+
+    dropDown();
     // end Dropdwon
 
 
@@ -80,16 +82,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 document.querySelector(this.getAttribute("href")).scrollIntoView({
                     behavior: "smooth"
-                });
+                })
 
-            });
-        };
-    }
-    // end Smooth Scroll
+            })
+        }
+    };
 
-
-    // start functions
-    dropDown();
     smoothScroll();
+    // end Smooth Scroll
 
 });

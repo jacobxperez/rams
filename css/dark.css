@@ -26,6 +26,7 @@ html {
     color: #aaa;
     background-color: #252525;
     overflow-wrap: break-word;
+    scroll-behavior: smooth;
 }
 
 img,

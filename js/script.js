@@ -70,25 +70,4 @@ document.addEventListener("DOMContentLoaded", () => {
     dropDown();
     // end Dropdwon
 
-
-    // Smooth Scroll
-    const smoothScroll = () => {
-        const intLinks = document.querySelectorAll("a[href^='#']");
-
-        for (let i = 0; i < intLinks.length; i++) {
-            intLinks[i].addEventListener("click", function (e) {
-
-                e.preventDefault();
-
-                document.querySelector(this.getAttribute("href")).scrollIntoView({
-                    behavior: "smooth"
-                })
-
-            })
-        }
-    };
-
-    smoothScroll();
-    // end Smooth Scroll
-
 });

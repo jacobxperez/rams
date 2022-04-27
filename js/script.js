@@ -9,42 +9,36 @@ document.addEventListener("DOMContentLoaded", () => {
         const getToggle = document.querySelectorAll('[data-toggle]');
         const getPop = document.querySelectorAll('[data-toggle="pop"]');
         const getToolTip = document.querySelectorAll('[data-tooltip]');
-    
-        function toggle(trigger) {
-            trigger.hasAttribute('data-state', 'active') === false ?
-                trigger.setAttribute('data-state', 'active') :
-                trigger.removeAttribute('data-state');
-        }
-    
-        // toggle dropdwon
-        for (let i = 0; i < getToggle.length; i++) {
-            getToggle[i].addEventListener("click", function (e) {
-                toggle(this);
-                e.stopPropagation();
-            })
-        }
-    
-        // toggle tooltip
-        for (let i = 0; i < getToolTip.length; i++) {
-            getToolTip[i].addEventListener("click", function (e) {
-                toggle(this);
-                e.stopPropagation();
-            })
+
+        // toggles attribute
+        function toggleAttr(selector) {
+            for (let i = 0; i < selector.length; i++) {
+                selector[i].addEventListener("click", function (e) {
+                    this.hasAttribute('data-state', 'active') === false ?
+                        this.setAttribute('data-state', 'active') :
+                        this.removeAttribute('data-state');
+
+                    e.stopPropagation();
+                })
+            }
         };
-    
+
+        toggleAttr(getToggle);
+        toggleAttr(getToolTip);
+
+        // removes attribute
+        function removeAtt(event, selector) {
+            for (let i = 0; i < selector.length; i++) {
+                if (event.target !== selector[i]) {
+                    selector[i].removeAttribute('data-state');
+                }
+            }
+        };
+
         // Close dropdown and tooltips on document click
         document.addEventListener("click", function (e) {
-            for (let i = 0; i < getPop.length; i++) {
-                if (e.target !== getPop[i]) {
-                    getPop[i].removeAttribute('data-state');
-                }
-            }
-    
-            for (let i = 0; i < getToolTip.length; i++) {
-                if (e.target !== getToolTip[i]) {
-                    getToolTip[i].removeAttribute('data-state');
-                }
-            }
+            removeAtt(e, getPop);
+            removeAtt(e, getToolTip);
         });
     };
 

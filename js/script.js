@@ -8,7 +8,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // toggles
     function toggle() {
         const getToggle = document.querySelectorAll('[data-toggle]');
-        const getTogglePop = document.querySelectorAll('[data-toggle="pop"]');
         const getToolTip = document.querySelectorAll('[data-tooltip]');
 
         // toggles attribute
@@ -18,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     item.setAttribute('data-state', 'active') :
                     item.removeAttribute('data-state');
                 e.stopPropagation();
-            });
+            })
         }
 
         getToggle.forEach(toggleAttr);
@@ -26,15 +25,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // removes attribute
         function removeAtt(item, e) {
-            if (e.target !== item) {
+            if (e.target !== item && item.matches('[data-toggle="pop"]')) {
                 item.removeAttribute('data-state');
             }
-        };
+        }
 
         document.addEventListener("click", e => {
-            getTogglePop.forEach(removeAtt);
+            getToggle.forEach(removeAtt);
             getToolTip.forEach(removeAtt);
-        });
+        })
     }
 
     toggle();

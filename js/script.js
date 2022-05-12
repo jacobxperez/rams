@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // toggles attribute
         function toggleAttr(item) {
             item.addEventListener("click", e => {
-                item.hasAttribute('data-state', 'active') === false ?
+                !item.hasAttribute('data-state', 'active') ?
                     item.setAttribute('data-state', 'active') :
                     item.removeAttribute('data-state');
                 e.stopPropagation();

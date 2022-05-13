@@ -4,20 +4,19 @@
  * http://www.apache.org/licenses/LICENSE-2.0
 ------------------------------------------------------------------------------*/
 document.addEventListener("DOMContentLoaded", () => {
-
     // toggles
     function toggle() {
-        const getToggle = document.querySelectorAll('[data-toggle]');
-        const getToolTip = document.querySelectorAll('[data-tooltip]');
+        const getToggle = document.querySelectorAll("[data-toggle]");
+        const getToolTip = document.querySelectorAll("[data-tooltip]");
 
         // toggles attribute
         function toggleAttr(item) {
-            item.addEventListener("click", e => {
-                !item.hasAttribute('data-state', 'active') ?
-                    item.setAttribute('data-state', 'active') :
-                    item.removeAttribute('data-state');
+            item.addEventListener("click", (e) => {
+                !item.hasAttribute("data-state", "active")
+                    ? item.setAttribute("data-state", "active")
+                    : item.removeAttribute("data-state");
                 e.stopPropagation();
-            })
+            });
         }
 
         getToggle.forEach(toggleAttr);
@@ -25,16 +24,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
         function removeAtt(item, match, e) {
             if (e.target !== item && item.matches(match)) {
-                item.removeAttribute('data-state');
+                item.removeAttribute("data-state");
             }
         }
 
-        document.addEventListener("click", e => {
-            getToggle.forEach(item => removeAtt(item, '[data-toggle="pop"]', e));
-            getToolTip.forEach(item => removeAtt(item, '[data-tooltip]', e));
-        })
+        document.addEventListener("click", (e) => {
+            getToggle.forEach((item) => removeAtt(item, '[data-toggle="pop"]', e));
+            getToolTip.forEach((item) => removeAtt(item, "[data-tooltip]", e));
+        });
     }
 
     toggle();
-
 });

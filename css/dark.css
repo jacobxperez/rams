@@ -19,7 +19,9 @@
 
 html {
     font-size: 100%;
-    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Nimbus Sans L", "Liberation Sans", FreeSans, sans-serif;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
+        Helvetica, Arial, "Nimbus Sans L", "Liberation Sans", FreeSans,
+        sans-serif;
     font-weight: 400;
     line-height: 1.375;
     text-align: left;
@@ -155,12 +157,13 @@ q {
 }
 
 blockquote:where(:before, :after) {
-    content: '';
+    content: "";
     content: none;
 }
 
 blockquote {
-    font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, "Nimbus Roman No9 L", "Liberation Serif", FreeSerif, serif;
+    font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia,
+        "Nimbus Roman No9 L", "Liberation Serif", FreeSerif, serif;
     font-style: italic;
 }
 
@@ -176,7 +179,9 @@ code,
 kbd,
 pre,
 samp {
-    font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", "Nimbus Mono L", "Liberation Mono", FreeMono, monospace;
+    font-family: "Courier New", Courier, "Lucida Sans Typewriter",
+        "Lucida Typewriter", "Nimbus Mono L", "Liberation Mono", FreeMono,
+        monospace;
 }
 
 pre {
@@ -193,7 +198,7 @@ ul {
     list-style-type: decimal;
 }
 
-[data-list="ol"]>li:first-child>[data-list="ol"] {
+[data-list="ol"] > li:first-child > [data-list="ol"] {
     list-style-type: hebrew;
 }
 
@@ -201,7 +206,7 @@ ul {
     list-style-type: disc;
 }
 
-[data-list="ul"]>li:first-child>[data-list="ul"] {
+[data-list="ul"] > li:first-child > [data-list="ul"] {
     list-style-type: circle;
 }
 
@@ -233,18 +238,18 @@ th {
 
 select,
 textarea,
-input[type=date],
-input[type=datetime-local],
-input[type=email],
-input[type=month],
-input[type=number],
-input[type=password],
-input[type=search],
-input[type=tel],
-input[type=text],
-input[type=time],
-input[type=url],
-input[type=week] {
+input[type="date"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"] {
     display: block;
     width: 100%;
     padding: 0.5rem 0.75rem 0.5rem 0.75rem;
@@ -254,19 +259,19 @@ input[type=week] {
 
 select:focus,
 textarea:focus,
-input[type=date]:focus,
-input[type=datetime-local]:focus,
-input[type=datetime]:focus,
-input[type=email]:focus,
-input[type=month]:focus,
-input[type=number]:focus,
-input[type=password]:focus,
-input[type=search]:focus,
-input[type=tel]:focus,
-input[type=text]:focus,
-input[type=time]:focus,
-input[type=url]:focus,
-input[type=week]:focus {
+input[type="date"]:focus,
+input[type="datetime-local"]:focus,
+input[type="datetime"]:focus,
+input[type="email"]:focus,
+input[type="month"]:focus,
+input[type="number"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="text"]:focus,
+input[type="time"]:focus,
+input[type="url"]:focus,
+input[type="week"]:focus {
     background-color: #fff9ef;
     color: #000000;
     border-color: rgba(0, 0, 0, 0.5);
@@ -287,7 +292,7 @@ select,
     text-transform: none;
 }
 
-:not([type=submit]):invalid {
+:not([type="submit"]):invalid {
     border-color: #da1e28;
 }
 
@@ -333,11 +338,11 @@ a:where(:focus),
     outline-offset: -0.125rem;
 }
 
-body>[data-container]:first-child {
+body > [data-container]:first-child {
     margin-top: 4.125rem;
 }
 
-body>[data-container]:last-child {
+body > [data-container]:last-child {
     margin-bottom: 5.5rem;
 }
 
@@ -371,11 +376,11 @@ body>[data-container]:last-child {
     border: 0.0625rem solid rgba(0, 0, 0, 0.3);
 }
 
-[data-list="border"]>li {
+[data-list="border"] > li {
     border-bottom: 0.0625rem solid rgba(0, 0, 0, 0.3);
 }
 
-[data-list="border"]>li:last-child {
+[data-list="border"] > li:last-child {
     border: 0;
 }
 
@@ -394,8 +399,8 @@ body>[data-container]:last-child {
     transition: opacity 0.2s ease-out;
 }
 
-[data-state="active"]>[data-dropbox],
-[data-state="active"]+[data-dropbox] {
+[data-state="active"] > [data-dropbox],
+[data-state="active"] + [data-dropbox] {
     z-index: 100;
     display: block;
     visibility: visible;
@@ -627,9 +632,13 @@ body>[data-container]:last-child {
 }
 
 @font-face {
-    font-family: 'icons';
-    src: url('../fonts/icons/icons.eot');
-    src: url('../fonts/icons/icons.eot?#iefix') format('embedded-opentype'), url('../fonts/icons/icons.woff2') format('woff2'), url('../fonts/icons/icons.woff') format('woff'), url('../fonts/icons/icons.ttf') format('truetype'), url('../fonts/icons/icons.svg#icons') format('svg');
+    font-family: "icons";
+    src: url("../fonts/icons/icons.eot");
+    src: url("../fonts/icons/icons.eot?#iefix") format("embedded-opentype"),
+        url("../fonts/icons/icons.woff2") format("woff2"),
+        url("../fonts/icons/icons.woff") format("woff"),
+        url("../fonts/icons/icons.ttf") format("truetype"),
+        url("../fonts/icons/icons.svg#icons") format("svg");
 }
 
 [data-icon]:before {
@@ -686,7 +695,7 @@ body>[data-container]:last-child {
     flex-wrap: wrap-reverse;
 }
 
-[data-flex~="grow-children"]>*,
+[data-flex~="grow-children"] > *,
 [data-item~="grow"] {
     flex-grow: 1;
 }
@@ -756,7 +765,6 @@ body>[data-container]:last-child {
 }
 
 @media screen and (min-width: 61.25em) {
-
     h1,
     [data-text~="h1"] {
         font-size: 4.16157959rem;
@@ -790,7 +798,6 @@ body>[data-container]:last-child {
 }
 
 @media screen and (min-width: 42.5625em) and (max-width: 61.1875em) {
-
     h1,
     [data-text~="h1"] {
         font-size: 3.43597384rem;
@@ -841,7 +848,6 @@ body>[data-container]:last-child {
 }
 
 @media print {
-
     html,
     body {
         height: auto;

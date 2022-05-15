@@ -11,12 +11,9 @@ blockquote:where(:before, :after) {
 }
 
 blockquote {
-    .font-family(@blockquote-font-family);
+    font-family: var(--blockquote-font);
+    font-style: italic;
     &:extend([data-leading]);
-
-    & when not (@blockquote-font-style = false) {
-        font-style: @blockquote-font-style;
-    }
 }
 
 :where(blockquote) small {

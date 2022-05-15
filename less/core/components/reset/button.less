@@ -2,20 +2,20 @@
 // ----------------------------------------------------------------------------/
 [data-button] {
     display: inline-block;
-    .padding(@button-padding-y; @button-padding-x);
+    padding: @button-padding-y @button-padding-x;
     .border(@button-border-width; @color: @button-border-color);
     .border-radius(@button-border-radius);
-    .background-color(transparent);
+    background-color: transparent;
     cursor: pointer;
 }
 
 [data-button]:is(:hover, :active) {
-    .background-color(@button-background-active);
+    background-color: @button-background-active;
 }
 
 [data-button]:is(:focus) {
     outline: thin dotted;
-    outline-offset: unit((-2px / @font-size), rem);
+    outline-offset: -0.125rem;
 }
 
 [data-button="link"] {

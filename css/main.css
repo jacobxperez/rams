@@ -17,13 +17,37 @@
     outline: 0;
 }
 
-html {
-    font-size: 100%;
-    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
+:root {
+    --font-size: 100%;
+    --line-height: 1.5;
+    --leading: 1.5rem;
+    --base-font: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
         Helvetica, Arial, "Nimbus Sans L", "Liberation Sans", FreeSans,
         sans-serif;
+    --code-font: "Courier New", Courier, "Lucida Sans Typewriter",
+        "Lucida Typewriter", "Nimbus Mono L", "Liberation Mono", FreeMono,
+        monospace;
+    --blockquote-font: TimesNewRoman, "Times New Roman", Times, Baskerville,
+        Georgia, "Nimbus Roman No9 L", "Liberation Serif", FreeSerif, serif;
+    --h1: 200%;
+    --h2: 150%;
+    --h3: 125%;
+    --h4: 110%;
+    --h5: 105%;
+    --sm: 75%;
+    --type-scale-sm: 1.2;
+    --type-scale-md: 1.5;
+    --type-scale-lg: 2;
+    --gap: 1.25rem;
+    --space-y: 0.5rem;
+    --space-x: 0.75rem;
+}
+
+html {
+    font-size: var(--font-size);
+    font-family: var(--base-font);
     font-weight: 400;
-    line-height: 1.375;
+    line-height: var(--line-height);
     text-align: left;
     color: #333;
     background-color: #fff;
@@ -58,7 +82,7 @@ pre,
 [data-list="ul"],
 [data-list="dl"],
 table {
-    margin: 0.6875rem 0rem 0.6875rem 0rem;
+    margin: calc(var(--leading) / 2) 0;
 }
 
 h1,
@@ -72,32 +96,32 @@ h6 {
 
 h1,
 [data-text~="h1"] {
-    font-size: 2.48832rem;
+    font-size: calc(var(--h1) * var(--type-scale-sm));
 }
 
 h2,
 [data-text~="h2"] {
-    font-size: 2.0736rem;
+    font-size: calc(var(--h2) * var(--type-scale-sm));
 }
 
 h3,
 [data-text~="h3"] {
-    font-size: 1.728rem;
+    font-size: calc(var(--h3) * var(--type-scale-sm));
 }
 
 h4,
 [data-text~="h4"] {
-    font-size: 1.44rem;
+    font-size: calc(var(--h4) * var(--type-scale-sm));
 }
 
 h5,
 [data-text~="h5"] {
-    font-size: 1.2rem;
+    font-size: calc(var(--font-size) * var(--type-scale-sm));
 }
 
 h6,
 [data-text~="h6"] {
-    font-size: 1rem;
+    font-size: var(--font-size);
 }
 
 b,
@@ -127,7 +151,7 @@ small,
 sub,
 sup,
 [data-text~="small"] {
-    font-size: 0.75rem;
+    font-size: var(--sm);
 }
 
 sub,
@@ -146,7 +170,7 @@ sub {
 
 hr {
     display: block;
-    margin: 1.375rem 0rem 1.375rem 0rem;
+    margin: var(--leading) 0;
     min-height: 0.0625rem;
     border-top: 0.0625rem solid rgba(0, 0, 0, 0.3);
 }
@@ -162,8 +186,7 @@ blockquote:where(:before, :after) {
 }
 
 blockquote {
-    font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia,
-        "Nimbus Roman No9 L", "Liberation Serif", FreeSerif, serif;
+    font-family: var(--blockquote-font);
     font-style: italic;
 }
 
@@ -179,9 +202,7 @@ code,
 kbd,
 pre,
 samp {
-    font-family: "Courier New", Courier, "Lucida Sans Typewriter",
-        "Lucida Typewriter", "Nimbus Mono L", "Liberation Mono", FreeMono,
-        monospace;
+    font-family: var(--code-font);
 }
 
 pre {
@@ -199,7 +220,7 @@ ul {
 }
 
 [data-list="ol"] > li:first-child > [data-list="ol"] {
-    list-style-type: hebrew;
+    list-style-type: lower-alpha;
 }
 
 [data-list="ul"] {
@@ -213,7 +234,7 @@ ul {
 [data-list="ol"],
 [data-list="ul"],
 :where([data-list="dl"]) dd {
-    padding-left: 1.375rem;
+    padding-left: var(--leading);
     list-style-position: outside;
 }
 
@@ -233,7 +254,7 @@ table {
 td,
 th {
     display: table-cell;
-    padding: 0.5rem 0.75rem 0.5rem 0.75rem;
+    padding: var(--space-y) var(--space-x);
 }
 
 select,
@@ -252,7 +273,7 @@ input[type="url"],
 input[type="week"] {
     display: block;
     width: 100%;
-    padding: 0.5rem 0.75rem 0.5rem 0.75rem;
+    padding: var(--space-y) var(--space-x);
     border: 0.0625rem solid rgba(0, 0, 0, 0.3);
     background-color: transparent;
 }
@@ -298,7 +319,7 @@ select,
 
 [data-button] {
     display: inline-block;
-    padding: 0.5rem 0.75rem 0.5rem 0.75rem;
+    padding: var(--space-y) var(--space-x);
     border: 0.0625rem solid transparent;
     background-color: transparent;
     cursor: pointer;
@@ -339,17 +360,17 @@ a:where(:focus),
 }
 
 body > [data-container]:first-child {
-    margin-top: 4.125rem;
+    margin-top: calc(var(--leading) * 3);
 }
 
 body > [data-container]:last-child {
-    margin-bottom: 5.5rem;
+    margin-bottom: calc(var(--leading) * 4);
 }
 
 [data-container] {
     margin: 0 auto;
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
+    padding-left: var(--gap);
+    padding-right: var(--gap);
     min-width: 20rem;
 }
 
@@ -359,13 +380,13 @@ body > [data-container]:last-child {
 
 [data-grid] {
     display: grid;
-    column-gap: 1.25rem;
+    column-gap: var(--gap);
 }
 
 [data-box] {
     display: block;
     width: 100%;
-    padding: 0.5rem 0.75rem 0.5rem 0.75rem;
+    padding: var(--space-y) var(--space-x);
 }
 
 [data-box~="border"] {
@@ -418,7 +439,7 @@ body > [data-container]:last-child {
     bottom: 100%;
     left: 0;
     min-width: 10rem;
-    padding: 0.5rem 0.75rem 0.5rem 0.75rem;
+    padding: var(--space-y) var(--space-x);
     background-color: #2a2a2a;
     color: #ffffff;
     opacity: 0;
@@ -437,7 +458,7 @@ body > [data-container]:last-child {
 
 [data-link] {
     display: block;
-    padding: 0.5rem 0.75rem 0.5rem 0.75rem;
+    padding: var(--space-y) var(--space-x);
 }
 
 [data-link]:where([data-state="active"], :hover, :active) {
@@ -450,7 +471,7 @@ body > [data-container]:last-child {
 
 [data-nav="breadcrumb"] li::before {
     content: "/";
-    margin-right: 0.3125rem;
+    margin-right: 0.3125em;
 }
 
 [data-nav="breadcrumb"] li:first-child::before {
@@ -644,12 +665,11 @@ body > [data-container]:last-child {
 [data-icon]:before {
     content: attr(data-icon);
     display: inline-block;
-    font-size: 1em;
     font-family: "icons";
     font-style: normal;
     font-weight: normal;
     font-variant: normal;
-    line-height: 0.625;
+    line-height: var(--sm);
     vertical-align: middle;
     text-transform: none;
 }
@@ -701,15 +721,15 @@ body > [data-container]:last-child {
 }
 
 [data-flex~="gap"] {
-    gap: 1.25rem;
+    gap: var(--gap);
 }
 
 [data-flex~="row-gap"] {
-    row-gap: 1.25rem;
+    row-gap: var(--gap);
 }
 
 [data-flex~="column-gap"] {
-    column-gap: 1.25rem;
+    column-gap: var(--gap);
 }
 
 [data-flex~="end"] {
@@ -767,27 +787,27 @@ body > [data-container]:last-child {
 @media screen and (min-width: 61.25em) {
     h1,
     [data-text~="h1"] {
-        font-size: 4.16157959rem;
+        font-size: calc(var(--h1) * var(--type-scale-lg));
     }
 
     h2,
     [data-text~="h2"] {
-        font-size: 3.12900721rem;
+        font-size: calc(var(--h2) * var(--type-scale-lg));
     }
 
     h3,
     [data-text~="h3"] {
-        font-size: 2.352637rem;
+        font-size: calc(var(--h3) * var(--type-scale-lg));
     }
 
     h4,
     [data-text~="h4"] {
-        font-size: 1.7689rem;
+        font-size: calc(var(--h4) * var(--type-scale-lg));
     }
 
     h5,
     [data-text~="h5"] {
-        font-size: 1.33rem;
+        font-size: calc(var(--h5) * var(--type-scale-lg));
     }
 
     [data-display~="large-none"],
@@ -800,27 +820,27 @@ body > [data-container]:last-child {
 @media screen and (min-width: 42.5625em) and (max-width: 61.1875em) {
     h1,
     [data-text~="h1"] {
-        font-size: 3.43597384rem;
+        font-size: calc(var(--h1) * var(--type-scale-md));
     }
 
     h2,
     [data-text~="h2"] {
-        font-size: 2.68435456rem;
+        font-size: calc(var(--h2) * var(--type-scale-md));
     }
 
     h3,
     [data-text~="h3"] {
-        font-size: 2.097152rem;
+        font-size: calc(var(--h3) * var(--type-scale-md));
     }
 
     h4,
     [data-text~="h4"] {
-        font-size: 1.6384rem;
+        font-size: calc(var(--h4) * var(--type-scale-md));
     }
 
     h5,
     [data-text~="h5"] {
-        font-size: 1.28rem;
+        font-size: calc(var(--font-size) * var(--type-scale-md));
     }
 
     [data-grid="main"] div,

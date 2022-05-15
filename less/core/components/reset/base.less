@@ -14,20 +14,18 @@
     outline: 0;
 }
 
+.variables();
+
 html {
-    .font-size(@font-size; 16px; percent);
-    font-family: @font-family;
+    font-size: var(--font-size);
+    font-family: var(--base-font);
     font-weight: 400;
-    .line-height(@line-height);
+    line-height: var(--line-height);
     text-align: left;
     color: @font-color;
     background-color: @background-color;
     overflow-wrap: break-word;
     scroll-behavior: smooth;
-
-    & when not (@font-scale = false) {
-        font-size: @font-scale;
-    }
 }
 
 img,

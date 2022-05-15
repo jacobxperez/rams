@@ -1,5 +1,28 @@
 // Default Variables
 // ============================================================================/
+.variables() {
+    :root {
+        --font-size: 100%;
+        --line-height: 1.5;
+        --leading: 1.5rem;
+        --base-font: @font-sans;
+        --code-font: @font-mono;
+        --blockquote-font: @font-serif;
+        --h1: 200%;
+        --h2: 150%;
+        --h3: 125%;
+        --h4: 110%;
+        --h5: 105%;
+        --sm: 75%;
+        --type-scale-sm: 1.2;
+        --type-scale-md: 1.5;
+        --type-scale-lg: 2;
+        --gap: 1.25rem;
+        --space-y: 0.5rem;
+        --space-x: 0.75rem;
+    }
+}
+
 
 // Main Colors
 // ----------------------------------------------------------------------------/
@@ -18,48 +41,10 @@
 
 // Typography
 // ----------------------------------------------------------------------------/
-@font-family: @font-sans;
-@font-size: 16px;
-@font-scale: false; // clamp(1rem, 1vw, 1.25rem);
-@line-height: 22px;
-
-// type scale
-@type-scale-small: 1.2;
-@type-scale-medium: 1.28;
-@type-scale-large: 1.33;
-
 // headings
 @headings-font-family: false;
 @headings-font-color: false;
 @headings-font-weight: 400;
-
-// heading 1
-@h1-font-size-small: @h2-font-size-small * @type-scale-small;
-@h1-font-size-medium: @h2-font-size-medium * @type-scale-medium;
-@h1-font-size-large: @h2-font-size-large * @type-scale-large;
-
-// heading 2
-@h2-font-size-small: @h3-font-size-small * @type-scale-small;
-@h2-font-size-medium: @h3-font-size-medium * @type-scale-medium;
-@h2-font-size-large: @h3-font-size-large * @type-scale-large;
-
-// heading 3
-@h3-font-size-small: @h4-font-size-small * @type-scale-small;
-@h3-font-size-medium: @h4-font-size-medium * @type-scale-medium;
-@h3-font-size-large: @h4-font-size-large * @type-scale-large;
-
-// heading 4
-@h4-font-size-small: @h5-font-size-small * @type-scale-small;
-@h4-font-size-medium: @h5-font-size-medium * @type-scale-medium;
-@h4-font-size-large: @h5-font-size-large * @type-scale-large;
-
-// heading 5
-@h5-font-size-small: @font-size * @type-scale-small;
-@h5-font-size-medium: @font-size * @type-scale-medium;
-@h5-font-size-large: @font-size * @type-scale-large;
-
-// small
-@small-font-size: 12px;
 
 // mark
 @mark-background: #fc0;
@@ -72,11 +57,11 @@
 
 // Container
 // ----------------------------------------------------------------------------/
-@container-margin-top: @line-height * 3;
-@container-margin-bottom: @line-height * 4;
+@container-margin-top: calc(var(--leading) * 3);
+@container-margin-bottom: calc(var(--leading) * 4);
 @container-min-width: 320px;
 @container-max-width: 1000px;
-@container-gap: 20px;
+@container-gap: var(--gap);
 
 
 // Breakpoints
@@ -92,17 +77,8 @@
 @screen-large-min-width: unit((980px / 16px), em);
 
 
-// Box Model
+// Borders
 // ----------------------------------------------------------------------------/
-// margins
-@margin-y: 20px;
-@margin-x: 20px;
-
-// paddings
-@padding-y: 8px;
-@padding-x: 12px;
-
-// borders
 @border-width: 1px;
 @border-color: rgba(0, 0, 0, 0.3);
 @border-radius: 4px;
@@ -112,33 +88,17 @@
 // ----------------------------------------------------------------------------/
 // order list
 @ol-list-style-type: decimal;
-@ol-list-style-type-sub: hebrew;
+@ol-list-style-type-sub: lower-alpha;
 
 // unorder list
 @ul-list-style-type: disc;
 @ul-list-style-type-sub: circle;
 
 
-// Code
-// ----------------------------------------------------------------------------/
-@code-font-family: @font-mono;
-
-
-// Pre
-// ----------------------------------------------------------------------------/
-@pre-white-space: pre-wrap;
-
-
-// Blockquote
-// ----------------------------------------------------------------------------/
-@blockquote-font-family: @font-serif;
-@blockquote-font-style: italic;
-
-
 // Table
 // ----------------------------------------------------------------------------/
-@table-cell-padding-y: @padding-y;
-@table-cell-padding-x: @padding-x;
+@table-cell-padding-y: var(--space-y);
+@table-cell-padding-x: var(--space-x);
 
 
 // Form
@@ -147,8 +107,8 @@
 @form-background-active: #fff9ef;
 @form-color: false;
 @form-color-active: contrast(@form-background-active);
-@form-padding-y: @padding-y;
-@form-padding-x: @padding-x;
+@form-padding-y: var(--space-y);
+@form-padding-x: var(--space-x);
 @form-border-width: @border-width;
 @form-border-color: @border-color;
 @form-border-active: rgba(0, 0, 0, 0.5);
@@ -158,9 +118,9 @@
 // Button
 // ----------------------------------------------------------------------------/
 @button-background: transparent;
-@button-background-active: rgba(0,0,0,0.1);
-@button-padding-y: @padding-y;
-@button-padding-x: @padding-x;
+@button-background-active: rgba(0, 0, 0, 0.1);
+@button-padding-y: var(--space-y);
+@button-padding-x: var(--space-x);
 @button-border-width: @border-width;
 @button-border-color: transparent;
 @button-border-radius: false;
@@ -175,8 +135,8 @@
 @navbar-link-active: lighten(@navbar-background, 60%);
 
 // link (data-link)
-@link-padding-y: @padding-y;
-@link-padding-x: @padding-x;
+@link-padding-y: var(--space-y);
+@link-padding-x: var(--space-x);
 @link-active: @font-color;
 
 // line tabs
@@ -213,7 +173,7 @@
 @warning-text: contrast(@warning);
 @warning-active: darken(@warning, 5%);
 
-@danger: #da1e28 ;
+@danger: #da1e28;
 @danger-text: contrast(@danger);
 @danger-active: darken(@danger, 5%);
 
@@ -231,8 +191,6 @@
 // ----------------------------------------------------------------------------/
 @icon-font-name: "icons";
 @icon-font-path: "../fonts/icons/";
-@icon-font-size: @font-size;
-@icon-line-height: 10px;
 
 
 // Font Stack
@@ -241,4 +199,3 @@
 @font-system: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 @font-serif: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, "Nimbus Roman No9 L", "Liberation Serif", FreeSerif, serif;
 @font-mono: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", "Nimbus Mono L", "Liberation Mono", FreeMono, monospace;
-

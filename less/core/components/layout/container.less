@@ -1,17 +1,17 @@
 // Containers
 // ----------------------------------------------------------------------------/
 body > [data-container]:first-child {
-    .margin-top(@container-margin-top);
+    margin-top: @container-margin-top;
 }
 
 body > [data-container]:last-child {
-    .margin-bottom(@container-margin-bottom);
+    margin-bottom: @container-margin-bottom;
 }
 
 [data-container] {
     margin: 0 auto;
-    .padding-left(@container-gap);
-    .padding-right(@container-gap);
+    padding-left: @container-gap;
+    padding-right: @container-gap;
     .min-width(@container-min-width);
 }
 

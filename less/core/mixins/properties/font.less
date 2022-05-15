@@ -1,12 +1,3 @@
-// Font Family
-// ----------------------------------------------------------------------------/
-.font-family(@font-family) {
-    & when not (@font-family = false) {
-        font-family: @font-family;
-    }
-}
-
-
 // Font Face
 // ----------------------------------------------------------------------------/
 .font-face(@name; @path) {
@@ -24,7 +15,7 @@
 
 // Font Size
 // ----------------------------------------------------------------------------/
-.font-size(@size; @base: @font-size; @unit: rem) {
+.font-size(@size; @base: 16px; @unit: rem) {
 
     & when not (@size = false) {
 
@@ -51,7 +42,7 @@
 
 // Line Height
 // ----------------------------------------------------------------------------/
-.line-height(@height: @line-height; @base: @font-size; @unit: none) {
+.line-height(@height: @line-height; @base: 16px; @unit: none) {
 
     & when not (@height = false) {
 
@@ -74,21 +65,10 @@
 
 // Text Indent
 // ----------------------------------------------------------------------------/
-.text-indent (@text-indent: @indent; @base: @font-size; @unit: rem) {
+.text-indent (@text-indent: @indent; @base: 16px; @unit: rem) {
 
     & when (@unit = em), (@unit = rem) {
         text-indent: unit((@text-indent / @base), @unit);
-    }
-
-}
-
-
-// Font Color
-// ----------------------------------------------------------------------------/
-.color (@color: @font-color) {
-
-    & when not (@color = false) {
-        color: @color;
     }
 
 }

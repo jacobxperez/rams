@@ -6,12 +6,11 @@
     font-family: "icons";
     content: attr(data-icon);
     display: inline-block;
-    .font-size(@icon-font-size; @unit: em);
     font-family: @icon-font-name;
     font-style: normal;
     font-weight: normal;
     font-variant: normal;
-    .line-height(@icon-line-height, @base: @icon-font-size);
+    line-height: var(--sm);
     vertical-align: middle;
     text-transform: none;
 }

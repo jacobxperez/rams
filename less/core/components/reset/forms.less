@@ -16,11 +16,13 @@ input[type="url"],
 input[type="week"] {
     display: block;
     width: 100%;
-    .padding(@form-padding-y; @form-padding-x);
+    padding: @form-padding-y @form-padding-x;
     .border(@form-border-width; solid; @form-border-color);
     .border-radius(@form-border-radius);
-    .background-color(@form-background);
-    .color(@form-color);
+    background-color: @form-background;
+    & when not (@form-color = false) {
+        color: @form-color;
+    }
 }
 
 select:focus,
@@ -38,8 +40,10 @@ input[type="text"]:focus,
 input[type="time"]:focus,
 input[type="url"]:focus,
 input[type="week"]:focus {
-    .background-color(@form-background-active);
-    .color(@form-color-active);
+    background-color: @form-background-active;
+    & when not (@form-color-active = false) {
+        color: @form-color-active;
+    }
     border-color: @form-border-active;
 }
 

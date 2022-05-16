@@ -3,20 +3,6 @@
  * Licensed under the Apache License, Version 2.0
  * http://www.apache.org/licenses/LICENSE-2.0
 ==============================================================================*/
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    border: 0 none;
-    font-size: inherit;
-    font-family: inherit;
-    line-height: inherit;
-    text-align: inherit;
-    vertical-align: baseline;
-    color: inherit;
-    outline: 0;
-}
-
 :root {
     --font-size: 100%;
     --line-height: 1.5;
@@ -41,6 +27,20 @@
     --gap: 1.25rem;
     --space-y: 0.5rem;
     --space-x: 0.75rem;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0 none;
+    font-size: inherit;
+    font-family: inherit;
+    line-height: inherit;
+    text-align: inherit;
+    vertical-align: baseline;
+    color: inherit;
+    outline: 0;
 }
 
 html {

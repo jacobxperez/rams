@@ -466,7 +466,7 @@ body > [data-container]:last-child {
 }
 
 [data-nav="breadcrumb"] {
-    column-gap: 0.3125rem;
+    column-gap: 0.3125em;
 }
 
 [data-nav="breadcrumb"] li::before {

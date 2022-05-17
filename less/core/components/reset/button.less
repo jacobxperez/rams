@@ -3,7 +3,7 @@
 [data-button] {
     display: inline-block;
     padding: @button-padding-y @button-padding-x;
-    .border(@button-border-width; @color: @button-border-color);
+    border: @button-border-width solid @button-border-color;
     & when not (@button-border-radius = false) {
         border-radius: @button-border-radius;
     }

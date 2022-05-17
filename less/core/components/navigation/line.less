@@ -1,7 +1,7 @@
 // Line
 // ----------------------------------------------------------------------------/
 [data-nav="line"] {
-    .border-bottom(@line-border-width);
+    border-bottom: @line-border-width solid @line-border-color;
 }
 
 [data-link="line"] {
@@ -16,8 +16,8 @@
 }
 
 [data-link="line"] {
-    .top(@line-border-width);
-    .border-bottom(@line-border-width; @color: transparent);
+    top: @line-border-width;
+    border-bottom: @line-border-width solid transparent;
 }
 
 [data-link="line"]:where([data-state="active"], :hover, :active) {

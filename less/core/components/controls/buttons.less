@@ -1,7 +1,7 @@
 // Button Colors
 // ----------------------------------------------------------------------------/
 [data-button~="outline"] {
-    border-color: @border-color;
+    border-color: var(--border-color);
 }
 
 [data-button~="secondary"] {
@@ -10,7 +10,7 @@
 }
 
 [data-button~="secondary"]:is([data-state="active"], :hover, :active) {
-    border-color: @border-color;
+    border-color: var(--border-color);
     background-color: @secondary-active;
     color: @secondary-text;
 }
@@ -26,7 +26,7 @@
 }
 
 [data-button~="primary"]:is([data-state="active"], :hover, :active) {
-    border-color: @border-color;
+    border-color: var(--border-color);
     background-color: @primary-active;
     color: @primary-text;
 }
@@ -42,7 +42,7 @@
 }
 
 [data-button~="success"]:is([data-state="active"], :hover, :active) {
-    border-color: @border-color;
+    border-color: var(--border-color);
     background-color: @success-active;
     color: @success-text;
 }
@@ -58,7 +58,7 @@
 }
 
 [data-button~="warning"]:is([data-state="active"], :hover, :active) {
-    border-color: @border-color;
+    border-color: var(--border-color);
     background-color: @warning-active;
     color: @warning-text;
 }
@@ -74,7 +74,7 @@
 }
 
 [data-button~="danger"]:is([data-state="active"], :hover, :active) {
-    border-color: @border-color;
+    border-color: var(--border-color);
     background-color: @danger-active;
     color: @danger-text;
 }

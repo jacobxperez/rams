@@ -19,6 +19,8 @@
     --gap: 1.25rem;
     --space-y: 0.5rem;
     --space-x: 0.75rem;
+    --border-width: 0.0625em;
+    --border-color: rgba(0, 0, 0, 0.3);
 }
 
 * {
@@ -166,7 +168,7 @@ hr {
     display: block;
     margin: var(--leading) 0;
     min-height: 0.0625rem;
-    border-top: 0.0625rem solid rgba(0, 0, 0, 0.3);
+    border-top: var(--border-width) solid var(--border-color);
 }
 
 blockquote,
@@ -271,7 +273,7 @@ input[type="week"] {
     display: block;
     width: 100%;
     padding: var(--space-y) var(--space-x);
-    border: 0.0625rem solid rgba(0, 0, 0, 0.3);
+    border: var(--border-width) solid var(--border-color);
     background-color: transparent;
 }
 
@@ -317,7 +319,7 @@ select,
 [data-button] {
     display: inline-block;
     padding: var(--space-y) var(--space-x);
-    border: 0.0625rem solid transparent;
+    border: var(--border-width) solid transparent;
     background-color: transparent;
     cursor: pointer;
 }
@@ -387,15 +389,15 @@ body > [data-container]:last-child {
 }
 
 [data-box~="border"] {
-    border: 0.0625rem solid rgba(0, 0, 0, 0.3);
+    border: var(--border-width) solid var(--border-color);
 }
 
 [data-list="border"] {
-    border: 0.0625rem solid rgba(0, 0, 0, 0.3);
+    border: var(--border-width) solid var(--border-color);
 }
 
 [data-list="border"] > li {
-    border-bottom: 0.0625rem solid rgba(0, 0, 0, 0.3);
+    border-bottom: var(--border-width) solid var(--border-color);
 }
 
 [data-list="border"] > li:last-child {
@@ -477,7 +479,7 @@ body > [data-container]:last-child {
 }
 
 [data-nav="line"] {
-    border-bottom: 0.125rem solid rgba(0, 0, 0, 0.3);
+    border-bottom: 0.125em solid var(--border-color);
 }
 
 [data-link="line"] {
@@ -492,8 +494,8 @@ body > [data-container]:last-child {
 }
 
 [data-link="line"] {
-    top: 0.125rem;
-    border-bottom: 0.125rem solid transparent;
+    top: 0.125em;
+    border-bottom: 0.125em solid transparent;
 }
 
 [data-link="line"]:where([data-state="active"], :hover, :active) {
@@ -538,7 +540,7 @@ body > [data-container]:last-child {
 }
 
 [data-button~="outline"] {
-    border-color: rgba(0, 0, 0, 0.3);
+    border-color: var(--border-color);
 }
 
 [data-button~="secondary"] {
@@ -547,7 +549,7 @@ body > [data-container]:last-child {
 }
 
 [data-button~="secondary"]:is([data-state="active"], :hover, :active) {
-    border-color: rgba(0, 0, 0, 0.3);
+    border-color: var(--border-color);
     background-color: #262626;
     color: #ffffff;
 }
@@ -563,7 +565,7 @@ body > [data-container]:last-child {
 }
 
 [data-button~="primary"]:is([data-state="active"], :hover, :active) {
-    border-color: rgba(0, 0, 0, 0.3);
+    border-color: var(--border-color);
     background-color: #004de6;
     color: #ffffff;
 }
@@ -579,7 +581,7 @@ body > [data-container]:last-child {
 }
 
 [data-button~="success"]:is([data-state="active"], :hover, :active) {
-    border-color: rgba(0, 0, 0, 0.3);
+    border-color: var(--border-color);
     background-color: #156b2f;
     color: #ffffff;
 }
@@ -595,7 +597,7 @@ body > [data-container]:last-child {
 }
 
 [data-button~="warning"]:is([data-state="active"], :hover, :active) {
-    border-color: rgba(0, 0, 0, 0.3);
+    border-color: var(--border-color);
     background-color: #ff7412;
     color: #ffffff;
 }
@@ -611,7 +613,7 @@ body > [data-container]:last-child {
 }
 
 [data-button~="danger"]:is([data-state="active"], :hover, :active) {
-    border-color: rgba(0, 0, 0, 0.3);
+    border-color: var(--border-color);
     background-color: #c41b24;
     color: #ffffff;
 }

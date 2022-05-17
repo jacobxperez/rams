@@ -16,6 +16,8 @@
     --gap: 1.25rem;
     --space-y: 0.5rem;
     --space-x: 0.75rem;
+    --border-width: 0.0625em;
+    --border-color: rgba(0, 0, 0, 0.3);
 }
 
 
@@ -48,8 +50,8 @@
 @mark-text: contrast(@mark-background);
 
 // hr
-@hr-border-width: @border-width;
-@hr-border-color: @border-color;
+@hr-border-width: var(--border-width);
+@hr-border-color: var(--border-color);
 
 
 // Container
@@ -72,12 +74,6 @@
 
 // large screens
 @screen-large-min-width: unit((980px / 16px), em);
-
-
-// Borders
-// ----------------------------------------------------------------------------/
-@border-width: 1px;
-@border-color: rgba(0, 0, 0, 0.3);
 
 
 // Lists
@@ -116,8 +112,8 @@
 @form-color-active: contrast(@form-background-active);
 @form-padding-y: var(--space-y);
 @form-padding-x: var(--space-x);
-@form-border-width: @border-width;
-@form-border-color: @border-color;
+@form-border-width: var(--border-width);
+@form-border-color: var(--border-color);
 @form-border-active: rgba(0, 0, 0, 0.5);
 @form-border-radius: false;
 
@@ -128,7 +124,7 @@
 @button-background-active: rgba(0, 0, 0, 0.1);
 @button-padding-y: var(--space-y);
 @button-padding-x: var(--space-x);
-@button-border-width: @border-width;
+@button-border-width: var(--border-width);
 @button-border-color: transparent;
 @button-border-radius: false;
 
@@ -149,7 +145,8 @@
 // line tabs
 @line-link-color: #777;
 @line-link-active: @font-color;
-@line-border-width: 2px;
+@line-border-width: 0.125em;
+@line-border-color: var(--border-color);
 @line-border-active: @primary;
 
 // breadcrumb

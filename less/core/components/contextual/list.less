@@ -1,10 +1,10 @@
 // List
 // ----------------------------------------------------------------------------/
 [data-list="border"] {
-    .border();
+    border: var(--border-width) solid var(--border-color);
 
     > li {
-        .border-bottom();
+        border-bottom: var(--border-width) solid var(--border-color);
     }
 
     > li:last-child {

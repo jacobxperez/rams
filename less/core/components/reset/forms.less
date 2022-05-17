@@ -18,7 +18,9 @@ input[type="week"] {
     width: 100%;
     padding: @form-padding-y @form-padding-x;
     .border(@form-border-width; solid; @form-border-color);
-    .border-radius(@form-border-radius);
+    & when not (@form-border-radius = false) {
+        border-radius: @form-border-radius;
+    }
     background-color: @form-background;
     & when not (@form-color = false) {
         color: @form-color;

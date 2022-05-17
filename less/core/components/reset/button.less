@@ -4,7 +4,9 @@
     display: inline-block;
     padding: @button-padding-y @button-padding-x;
     .border(@button-border-width; @color: @button-border-color);
-    .border-radius(@button-border-radius);
+    & when not (@button-border-radius = false) {
+        border-radius: @button-border-radius;
+    }
     background-color: transparent;
     cursor: pointer;
 }

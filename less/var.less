@@ -4,18 +4,15 @@
     --font-size: 100%;
     --line-height: 1.5;
     --leading: 1.5rem;
-    --base-font: @font-sans;
-    --code-font: @font-mono;
-    --blockquote-font: @font-serif;
+    --type-scale-sm: 1.2;
+    --type-scale-md: 1.5;
+    --type-scale-lg: 2;
     --h1: 200%;
     --h2: 150%;
     --h3: 125%;
     --h4: 100%;
     --h5: 80%;
     --sm: 75%;
-    --type-scale-sm: 1.2;
-    --type-scale-md: 1.5;
-    --type-scale-lg: 2;
     --gap: 1.25rem;
     --space-y: 0.5rem;
     --space-x: 0.75rem;
@@ -39,11 +36,7 @@
 
 // Typography
 // ----------------------------------------------------------------------------/
-// font stack
-@font-sans: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Nimbus Sans L", "Liberation Sans", FreeSans, sans-serif;
-@font-system: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-@font-serif: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, "Nimbus Roman No9 L", "Liberation Serif", FreeSerif, serif;
-@font-mono: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", "Nimbus Mono L", "Liberation Mono", FreeMono, monospace;
+@base-font-family: @font-sans;
 
 // headings
 @headings-font-family: false;
@@ -85,7 +78,6 @@
 // ----------------------------------------------------------------------------/
 @border-width: 1px;
 @border-color: rgba(0, 0, 0, 0.3);
-@border-radius: 4px;
 
 
 // Lists
@@ -97,6 +89,17 @@
 // unorder list
 @ul-list-style-type: disc;
 @ul-list-style-type-sub: circle;
+
+
+// Code
+// ----------------------------------------------------------------------------/
+@code-font-family: @font-mono;
+
+
+// Blockquote
+// ----------------------------------------------------------------------------/
+@blockquote-font-family: @font-serif;
+@blockquote-font-style: italic;
 
 
 // Table
@@ -138,7 +141,7 @@
 @navbar-link-color: contrast(@navbar-background);
 @navbar-link-active: lighten(@navbar-background, 60%);
 
-// link (data-link)
+// data-link
 @link-padding-y: var(--space-y);
 @link-padding-x: var(--space-x);
 @link-active: @font-color;
@@ -195,3 +198,11 @@
 // ----------------------------------------------------------------------------/
 @selection-background: #d8e5ff;
 @selection-text: contrast(@selection-background);
+
+
+// Font Stack
+// ----------------------------------------------------------------------------/
+@font-sans: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Nimbus Sans L", "Liberation Sans", FreeSans, sans-serif;
+@font-system: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+@font-serif: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, "Nimbus Roman No9 L", "Liberation Serif", FreeSerif, serif;
+@font-mono: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", "Nimbus Mono L", "Liberation Mono", FreeMono, monospace;

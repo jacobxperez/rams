@@ -7,11 +7,12 @@
     --type-scale-sm: 1.2;
     --type-scale-md: 1.5;
     --type-scale-lg: 2;
-    --h1: 200%;
-    --h2: 150%;
-    --h3: 125%;
-    --h4: 100%;
-    --h5: 80%;
+    --h1: clamp(2rem, 6vw, 4rem);
+    --h2: clamp(1.8rem, 5vw, 3rem);
+    --h3: clamp(1.4rem, 4vw, 2.4rem);
+    --h4: clamp(1.2rem, 3vw, 2rem);
+    --h5: clamp(1rem, 3vw, 1.8rem);
+    --h6: clamp(1rem, 3vw, 1.4rem);
     --sm: 75%;
     --gap: 1.25rem;
     --space-y: 0.5rem;
@@ -44,6 +45,15 @@
 @headings-font-family: false;
 @headings-font-color: false;
 @headings-font-weight: 400;
+@h1-font-size: var(--h1);
+@h2-font-size: var(--h2);
+@h3-font-size: var(--h3);
+@h4-font-size: var(--h4);
+@h5-font-size: var(--h5);
+@h6-font-size: var(--h6);
+
+// small
+@small-font-size: var(--sm);
 
 // mark
 @mark-background: #fc0;

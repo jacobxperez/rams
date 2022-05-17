@@ -13,56 +13,6 @@
 }
 
 
-// Font Size
-// ----------------------------------------------------------------------------/
-.font-size(@size; @base: 16px; @unit: rem) {
-
-    & when not (@size = false) {
-
-        & when (@unit = percent) {
-            font-size: percentage((@size / @base));
-        }
-
-        & when (@unit = vw), (@unit = vh) {
-            font-size: unit(((@size / @base) * 100), @unit);
-        }
-
-        & when (@unit = em), (@unit = rem) {
-            font-size: unit((@size / @base), @unit);
-        }
-
-        & when (@unit = none) {
-            font-size: unit((@size / @base));
-        }
-
-    }
-
-}
-
-
-// Line Height
-// ----------------------------------------------------------------------------/
-.line-height(@height: @line-height; @base: 16px; @unit: none) {
-
-    & when not (@height = false) {
-
-        & when (@unit = em), (@unit = rem) {
-            line-height: unit((@height / @base), @unit);
-        }
-
-        & when (@unit = percent) {
-            line-height: percentage(@height / @base);
-        }
-
-        & when (@unit = none) {
-            line-height: unit((@height / @base));
-        }
-
-    }
-
-}
-
-
 // Text Indent
 // ----------------------------------------------------------------------------/
 .text-indent (@text-indent: @indent; @base: 16px; @unit: rem) {

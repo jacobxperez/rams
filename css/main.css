@@ -787,10 +787,14 @@
     right: 0;
 }
 
-@media screen and (min-width: 61.25em) {
-    [data-display~="large-none"],
-    [data-display~="small"],
-    [data-display~="medium"] {
+@media screen and (max-width: 42.5em) {
+    [data-grid="main"] {
+        display: block;
+    }
+
+    [data-display~="small-none"],
+    [data-display~="medium"],
+    [data-display~="large"] {
         display: none;
     }
 }
@@ -808,14 +812,10 @@
     }
 }
 
-@media screen and (max-width: 42.5em) {
-    [data-grid="main"] {
-        display: block;
-    }
-
-    [data-display~="small-none"],
-    [data-display~="medium"],
-    [data-display~="large"] {
+@media screen and (min-width: 61.25em) {
+    [data-display~="large-none"],
+    [data-display~="small"],
+    [data-display~="medium"] {
         display: none;
     }
 }

@@ -49,9 +49,9 @@ file into your project folder and then linking to it in HTML.
 
 ### Custom Build
 
-Edit the [variables](https://github.com/jacobxperez/rams/blob/master/less/main/var.less),
+Edit the [variables](https://github.com/jacobxperez/rams/blob/master/less/var.less),
 add custom [modules](https://github.com/jacobxperez/rams/tree/master/less/modules),
-then compile [main.less](https://github.com/jacobxperez/rams/blob/master/less/main/main.less)
+then compile [main.less](https://github.com/jacobxperez/rams/blob/master/less/main.less)
 to produce the final [CSS](https://github.com/jacobxperez/rams/blob/master/css/main.css).
 Check out [Editors and Plugins](http://lesscss.org/tools/#editors-and-plugins)
 for compiling [LESS](http://lesscss.org/).
@@ -60,9 +60,9 @@ for compiling [LESS](http://lesscss.org/).
     * [core](https://github.com/jacobxperez/rams/tree/master/less/core) (important files for compiling)
     * [modules](https://github.com/jacobxperez/rams/tree/master/less/modules)
     (add custom modules here)
-    * [main.less](https://github.com/jacobxperez/rams/blob/master/less/main/main.less)
+    * [main.less](https://github.com/jacobxperez/rams/blob/master/less/main.less)
     (compile to produce the final [CSS](https://github.com/jacobxperez/rams/blob/master/css/main.css))
-    * [var.less](https://github.com/jacobxperez/rams/blob/master/less/main/var.less)
+    * [var.less](https://github.com/jacobxperez/rams/blob/master/less/var.less)
     (variables for font, colors, and more)
 
 ### [Contributing](https://github.com/jacobxperez/rams/blob/master/.github/CONTRIBUTING.md)

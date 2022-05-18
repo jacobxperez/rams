@@ -2,7 +2,8 @@
 // ----------------------------------------------------------------------------/
 [data-tooltip] {
     position: relative;
-    &:extend([title]:where(abbr, dfn));
+    text-decoration: underline dotted;
+    cursor: help;
 
     &::before {
         content: attr(data-tooltip);
@@ -10,7 +11,7 @@
         z-index: -10;
         bottom: 100%;
         left: 0;
-        .min-width(@tooltip-min-width);
+        min-width: @tooltip-min-width;
         padding: var(--space-y) var(--space-x);
         background-color: @tooltip-background;
         color: @tooltip-text-color;

@@ -136,7 +136,6 @@
     }
 
     [title]:where(abbr, dfn) {
-        text-decoration: underline;
         text-decoration: underline dotted;
         cursor: help;
     }
@@ -434,6 +433,8 @@
 
     [data-tooltip] {
         position: relative;
+        text-decoration: underline dotted;
+        cursor: help;
     }
 
     [data-tooltip]::before {

@@ -2,8 +2,7 @@
 // ----------------------------------------------------------------------------/
 [data-tooltip] {
     position: relative;
-    text-decoration: underline dotted;
-    cursor: help;
+    &:extend([title]:where(abbr, dfn));
 
     &::before {
         content: attr(data-tooltip);

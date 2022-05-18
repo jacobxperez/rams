@@ -6,50 +6,62 @@
  * http://www.apache.org/licenses/LICENSE-2.0
 ==============================================================================*/
 
+
 // Global Imports
+// ----------------------------------------------------------------------------/
 @import "var.less";
 @import "core/mixins/import.less";
 
-@layer base {
-    @import "core/components/reset/base.less";
-    @import "core/components/reset/typography.less";
-    @import "core/components/reset/blockquote.less";
-    @import "core/components/reset/code.less";
-    @import "core/components/reset/list.less";
-    @import "core/components/reset/tables.less";
-    @import "core/components/reset/forms.less";
-    @import "core/components/reset/button.less";
-    @import "core/components/reset/link.less";
-}
 
-@layer components {
-    @import "core/components/layout/container.less";
-    @import "core/components/layout/grid.less";
-    @import "core/components/contextual/box.less";
-    @import "core/components/contextual/list.less";
-    @import "core/components/dropdown/dropdown.less";
-    @import "core/components/dropdown/tooltip.less";
-    @import "core/components/navigation/nav.less";
-    @import "core/components/navigation/breadcrumb.less";
-    @import "core/components/navigation/line.less";
-    @import "core/components/navigation/navbar.less";
-    @import "core/components/controls/buttons.less";
-    @import "core/components/controls/disabled.less";
-}
+// Reset
+// ----------------------------------------------------------------------------/
+@import "core/components/reset/base.less";
+@import "core/components/reset/typography.less";
+@import "core/components/reset/blockquote.less";
+@import "core/components/reset/code.less";
+@import "core/components/reset/list.less";
+@import "core/components/reset/tables.less";
+@import "core/components/reset/forms.less";
+@import "core/components/reset/button.less";
+@import "core/components/reset/link.less";
+
+
+// Components
+// ----------------------------------------------------------------------------/
+@import "core/components/layout/container.less";
+@import "core/components/layout/grid.less";
+@import "core/components/contextual/box.less";
+@import "core/components/contextual/list.less";
+@import "core/components/dropdown/dropdown.less";
+@import "core/components/dropdown/tooltip.less";
+@import "core/components/navigation/nav.less";
+@import "core/components/navigation/breadcrumb.less";
+@import "core/components/navigation/line.less";
+@import "core/components/navigation/navbar.less";
+@import "core/components/controls/buttons.less";
+@import "core/components/controls/disabled.less";
+
 
 // Custom Modules
+// ----------------------------------------------------------------------------/
 @import "modules/import.less";
 
+
 // Fonts
+// ----------------------------------------------------------------------------/
 @import "core/components/fonts/icons.less";
 
+
 // Utilities
+// ----------------------------------------------------------------------------/
 @import "core/components/utilities/text.less";
 @import "core/components/utilities/flex-box.less";
 @import "core/components/utilities/position.less";
 @import "core/components/utilities/display.less";
 
+
 // Final
+// ----------------------------------------------------------------------------/
 @import "core/components/breakpoints/small.less";
 @import "core/components/breakpoints/medium.less";
 @import "core/components/breakpoints/large.less";

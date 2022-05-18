@@ -29,11 +29,11 @@
 @font-color: var(--font-color);
 
 @primary: #05f;
-@primary-text: contrast(@primary);
+@primary-contrast: contrast(@primary);
 @primary-active: darken(@primary, 5%);
 
 @secondary: #333;
-@secondary-text: contrast(@secondary);
+@secondary-contrast: contrast(@secondary);
 @secondary-active: darken(@secondary, 5%);
 
 
@@ -59,7 +59,7 @@
 
 // mark
 @mark-background: #fc0;
-@mark-text: contrast(@mark-background);
+@mark-contrast: contrast(@mark-background);
 
 // hr
 @hr-border-style: solid;
@@ -177,26 +177,26 @@
 // ----------------------------------------------------------------------------/
 @tooltip-min-width: @dropbox-min-width;
 @tooltip-background: @navbar-sub-background;
-@tooltip-text-color: contrast(@tooltip-background);
+@tooltip-contrast: contrast(@tooltip-background);
 @tooltip-transition: opacity 0.4s ease-out;
 
 
 // Call to Action Colors
 // ----------------------------------------------------------------------------/
 @success: #198038;
-@success-text: contrast(@success);
+@success-contrast: contrast(@success);
 @success-active: darken(@success, 5%);
 
 @warning: #ff832b;
-@warning-text: contrast(@warning);
+@warning-contrast: contrast(@warning);
 @warning-active: darken(@warning, 5%);
 
 @danger: #da1e28;
-@danger-text: contrast(@danger);
+@danger-contrast: contrast(@danger);
 @danger-active: darken(@danger, 5%);
 
 @disabled: #e6e6e6;
-@disabled-text: lighten(contrast(@disabled), 60%);
+@disabled-contrast: lighten(contrast(@disabled), 60%);
 
 
 // Iconography
@@ -207,8 +207,8 @@
 
 // Selection
 // ----------------------------------------------------------------------------/
-@selection-background: #d8e5ff;
-@selection-text: contrast(@selection-background);
+@selection: #d8e5ff;
+@selection-contrast: contrast(@selection);
 
 
 // Font Stack

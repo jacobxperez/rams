@@ -1,6 +1,8 @@
 // Variables
 // ============================================================================/
 :root {
+    --bg-color: #fff;
+    --font-color: #333;
     --font-size: 100%;
     --line-height: 1.5;
     --leading: 1.5rem;
@@ -26,15 +28,15 @@
 
 // Main Colors
 // ----------------------------------------------------------------------------/
-@background-color: #fff;
-@font-color: #333;
+@background-color: var(--bg-color);
+@font-color: var(--font-color);
 @link-color: #05f;
 
 @primary: @link-color;
 @primary-text: contrast(@primary);
 @primary-active: darken(@primary, 5%);
 
-@secondary: @font-color;
+@secondary: #333;
 @secondary-text: contrast(@secondary);
 @secondary-active: darken(@secondary, 5%);
 

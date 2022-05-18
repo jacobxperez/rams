@@ -4,6 +4,8 @@
  * http://www.apache.org/licenses/LICENSE-2.0
 ==============================================================================*/
 :root {
+    --bg-color: #fff;
+    --font-color: #333;
     --font-size: 100%;
     --line-height: 1.5;
     --leading: 1.5rem;
@@ -49,8 +51,8 @@
         font-weight: 400;
         line-height: var(--line-height);
         text-align: left;
-        color: #333;
-        background-color: #fff;
+        color: var(--font-color);
+        background-color: var(--bg-color);
         overflow-wrap: break-word;
         scroll-behavior: smooth;
     }
@@ -414,7 +416,7 @@
         visibility: hidden;
         min-width: 10rem;
         background-color: transparent;
-        color: #333;
+        color: var(--font-color);
     }
 
     [data-dropbox="menu"] {
@@ -467,7 +469,7 @@
     }
 
     [data-link]:where([data-state="active"], :hover, :active) {
-        color: #333;
+        color: var(--font-color);
     }
 
     [data-nav="breadcrumb"] {
@@ -496,7 +498,7 @@
 
     [data-link="line"]:where([data-state="active"], :hover, :active) {
         z-index: 5;
-        color: #333;
+        color: var(--font-color);
     }
 
     [data-link="line"] {

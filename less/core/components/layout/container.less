@@ -12,9 +12,9 @@ body > [data-container]:last-child {
     margin: 0 auto;
     padding-left: @container-gap;
     padding-right: @container-gap;
-    .min-width(@container-min-width);
+    min-width: @container-min-width;
 }
 
 [data-container="fit"] {
-    .max-width(@container-max-width);
+    max-width: @container-max-width;
 }

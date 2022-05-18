@@ -14,6 +14,8 @@
     --h5: clamp(1rem, 3vw, 1.8rem);
     --h6: clamp(1rem, 3vw, 1.4rem);
     --sm: 75%;
+    --container-min: 20rem;
+    --container-max: 62.5rem;
     --gap: 1.25rem;
     --space-y: 0.5rem;
     --space-x: 0.75rem;
@@ -39,6 +41,7 @@
 
 // Typography
 // ----------------------------------------------------------------------------/
+@base-font-size: var(--font-size);
 @base-font-family: @font-sans;
 
 // headings
@@ -60,6 +63,7 @@
 @mark-text: contrast(@mark-background);
 
 // hr
+@hr-border-style: solid;
 @hr-border-width: var(--border-width);
 @hr-border-color: var(--border-color);
 
@@ -68,8 +72,8 @@
 // ----------------------------------------------------------------------------/
 @container-margin-top: calc(var(--leading) * 3);
 @container-margin-bottom: calc(var(--leading) * 4);
-@container-min-width: 320px;
-@container-max-width: 1000px;
+@container-min-width: var(--container-min);
+@container-max-width: var(--container-max);
 @container-gap: var(--gap);
 
 

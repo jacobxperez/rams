@@ -17,6 +17,8 @@
     --h5: clamp(1rem, 3vw, 1.8rem);
     --h6: clamp(1rem, 3vw, 1.4rem);
     --sm: 75%;
+    --container-min: 20rem;
+    --container-max: 62.5rem;
     --gap: 1.25rem;
     --space-y: 0.5rem;
     --space-x: 0.75rem;
@@ -373,11 +375,11 @@
         margin: 0 auto;
         padding-left: var(--gap);
         padding-right: var(--gap);
-        min-width: 20rem;
+        min-width: var(--container-min);
     }
 
     [data-container="fit"] {
-        max-width: 62.5rem;
+        max-width: var(--container-max);
     }
 
     [data-grid] {

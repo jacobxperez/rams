@@ -4,7 +4,7 @@
  * http://www.apache.org/licenses/LICENSE-2.0
 ==============================================================================*/
 :root {
-    --bg-color: #fff;
+    --background: #fff;
     --font-color: #333;
     --font-size: 100%;
     --line-height: 1.5;
@@ -49,7 +49,7 @@
         line-height: var(--line-height);
         text-align: left;
         color: var(--font-color);
-        background-color: var(--bg-color);
+        background-color: var(--background);
         overflow-wrap: break-word;
         scroll-behavior: smooth;
     }

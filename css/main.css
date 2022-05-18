@@ -6,7 +6,6 @@
 :root {
     --bg-color: #fff;
     --font-color: #333;
-    --accent-color: #05f;
     --font-size: 100%;
     --line-height: 1.5;
     --leading: 1.5rem;
@@ -347,7 +346,7 @@
     [data-button="link"] {
         text-decoration: none;
         background-color: transparent;
-        color: var(--accent-color);
+        color: #05f;
         cursor: pointer;
     }
 

@@ -1,0 +1,24 @@
+{
+  "name": "rams",
+  "version": "1.0.0",
+  "description": "Zero-Class Framework built with [less](http://lesscss.org/), but better.",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jacobxperez/rams.git"
+  },
+  "author": "Jacob Perez",
+  "license": "Apache License Version 2.0",
+  "bugs": {
+    "url": "https://github.com/jacobxperez/rams/issues"
+  },
+  "homepage": "https://github.com/jacobxperez/rams",
+  "devDependencies": {
+    "@parcel/transformer-less": "^2.5.0",
+    "parcel": "^2.5.0"
+  }
+}

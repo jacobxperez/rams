@@ -217,4 +217,9 @@ pip-log.txt
 #Mr Developer
 .mr.developer.cfg
 
+#node
+node_modules
+
+#parcel
+.parcel-cache
 

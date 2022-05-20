@@ -12,7 +12,7 @@
     "url": "git+https://github.com/jacobxperez/rams.git"
   },
   "author": "Jacob Perez",
-  "license": "Apache License Version 2.0",
+  "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/jacobxperez/rams/issues"
   },
@@ -20,5 +20,6 @@
   "devDependencies": {
     "@parcel/transformer-less": "^2.5.0",
     "parcel": "^2.5.0"
-  }
+  },
+  "main": "index.js"
 }

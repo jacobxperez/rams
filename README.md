@@ -9,6 +9,7 @@ Zero-Class Framework built with [less](http://lesscss.org/), but better.
 * [About](#about)
     * [Features](#features)
 * [Getting Started](#getting-started)
+    * [Default Build](#default-build)
     * [Custom Build](#custom-build)
     * [Contributing](#contributing)
 * [LICENSE](#license)
@@ -35,6 +36,16 @@ Start by **[downloading](https://github.com/jacobxperez/rams/archive/master.zip)
 [repository](https://github.com/jacobxperez/rams) or by cloning the project
 
     git clone https://github.com/jacobxperez/rams.git
+
+### Default Build
+
+Copy the pre-compiled [CSS](https://github.com/jacobxperez/rams/blob/master/css/main.css)
+file into your project folder and then linking to it in HTML.
+
+    <link rel="stylesheet" href="css/main.css">
+
+* [/css](https://github.com/jacobxperez/rams/tree/master/css/)
+    * [main.css](https://github.com/jacobxperez/rams/blob/master/css/main.css)
 
 ### Custom Build
 

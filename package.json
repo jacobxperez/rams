@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "parcel src/index.html",
-    "build": "parcel src/index.html"
+    "build": "parcel build src/index.html"
   },
   "repository": {
     "type": "git",

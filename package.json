@@ -2,6 +2,7 @@
   "name": "rams",
   "version": "1.0.0",
   "description": "Zero-Class Framework built with [less](http://lesscss.org/), but better.",
+  "source": "src/index.html",
   "main": "index.js",
   "scripts": {
     "dev": "parcel src/index.html",
@@ -19,6 +20,7 @@
   },
   "homepage": "https://github.com/jacobxperez/rams#readme",
   "devDependencies": {
-    "parcel": "^2.5.0"
+    "parcel": "^2.5.0",
+    "parcel-bundler": "^1.12.5"
   }
 }

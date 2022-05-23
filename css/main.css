@@ -550,8 +550,8 @@ body > [data-container]:last-child {
 
 @font-face {
   font-family: icons;
-  src: url("icons.d593e944.eot");
-  src: url("icons.d593e944.eot#iefix") format("embedded-opentype"), url("icons.6e053f17.woff2") format("woff2"), url("icons.5b0edbc1.woff") format("woff"), url("icons.0deb84d5.ttf") format("truetype"), url("icons.2f48f5a5.svg#icons") format("svg");
+  src: url("icons.12985a7d.eot");
+  src: url("icons.12985a7d.eot#iefix") format("embedded-opentype"), url("icons.d8ecf772.woff2") format("woff2"), url("icons.384cbf28.woff") format("woff"), url("icons.0a9f4612.ttf") format("truetype"), url("icons.c4f2651f.svg#icons") format("svg");
 }
 
 [data-icon]:before {
@@ -737,4 +737,3 @@ body > [data-container]:last-child {
   background-color: #d8e5ff;
 }
 
-/*# sourceMappingURL=main.css.map */

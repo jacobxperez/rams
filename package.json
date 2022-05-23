@@ -5,7 +5,8 @@
   "source": "src/index.js",
   "scripts": {
     "js": "parcel build src/js/script.js --dist-dir js",
-    "css": "parcel src/less/main.less --dist-dir css",
+    "css": "parcel build src/less/main.less --dist-dir css --no-optimize --no-source-maps",
+    "css-min": "parcel build src/less/main.less --dist-dir css",
     "serve": "parcel src/*index.html",
     "watch": "parcel watch src/*index.html",
     "build": "parcel build src/*index.html",

@@ -19,7 +19,8 @@
     "css",
     "less",
     "front-end",
-    "framework"
+    "framework",
+    "Zero-Class"
   ],
   "author": "Jacob Perez",
   "license": "Apache-2.0",

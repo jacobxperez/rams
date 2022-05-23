@@ -4,7 +4,9 @@
   "description": "Zero-Class Framework built with [less](http://lesscss.org/), but better.",
   "source": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "css": "parcel watch less/main.less --no-source-maps --dist-dir css",
+    "watch": "parcel watch less/main.less",
+    "build": "parcel build less/main.less"
   },
   "repository": {
     "type": "git",
@@ -21,5 +23,9 @@
   "bugs": {
     "url": "https://github.com/jacobxperez/rams/issues"
   },
-  "homepage": "https://github.com/jacobxperez/rams"
+  "homepage": "https://github.com/jacobxperez/rams",
+  "devDependencies": {
+    "@parcel/transformer-less": "^2.5.0",
+    "parcel": "^2.5.0"
+  }
 }

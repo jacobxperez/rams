@@ -1,0 +1,25 @@
+{
+  "name": "rams",
+  "version": "1.0.0",
+  "description": "Zero-Class Framework built with [less](http://lesscss.org/), but better.",
+  "source": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jacobxperez/rams.git"
+  },
+  "keywords": [
+    "css",
+    "less",
+    "front-end",
+    "framework"
+  ],
+  "author": "Jacob Perez",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/jacobxperez/rams/issues"
+  },
+  "homepage": "https://github.com/jacobxperez/rams"
+}

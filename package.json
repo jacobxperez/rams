@@ -1,7 +1,7 @@
 {
   "name": "rams",
   "version": "1.0.0",
-  "description": "Zero-Class Framework built with [less](http://lesscss.org/), but better.",
+  "description": "Zero-Class Framework built with less, but better.",
   "source": "src/index.js",
   "scripts": {
     "js": "parcel build src/js/script.js --dist-dir js --no-source-maps",

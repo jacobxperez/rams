@@ -39,7 +39,7 @@
 }
 html {
   font-size: var(--font-size);
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Nimbus Sans L", "Liberation Sans", FreeSans, sans-serif;
+  font-family: HelveticaNeue-Light, "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Nimbus Sans L", "Liberation Sans", FreeSans, sans-serif;
   font-weight: 400;
   line-height: var(--line-height);
   text-align: left;
@@ -544,8 +544,8 @@ body > [data-container]:last-child {
 }
 @font-face {
   font-family: 'icons';
-  src: url('../../../fonts/icons/icons.eot');
-  src: url('../../../fonts/icons/icons.eot?#iefix') format('embedded-opentype'), url('../../../fonts/icons/icons.woff2') format('woff2'), url('../../../fonts/icons/icons.woff') format('woff'), url('../../../fonts/icons/icons.ttf') format('truetype'), url('../../../fonts/icons/icons.svg#icons') format('svg');
+  src: url('../fonts/icons/icons.eot');
+  src: url('../fonts/icons/icons.eot?#iefix') format('embedded-opentype'), url('../fonts/icons/icons.woff2') format('woff2'), url('../fonts/icons/icons.woff') format('woff'), url('../fonts/icons/icons.ttf') format('truetype'), url('../fonts/icons/icons.svg#icons') format('svg');
 }
 [data-icon]:before {
   content: attr(data-icon);

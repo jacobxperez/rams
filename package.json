@@ -4,7 +4,7 @@
   "description": "Zero-Class Framework built with [less](http://lesscss.org/), but better.",
   "source": "src/index.js",
   "scripts": {
-    "js": "parcel build src/js/script.js --dist-dir js",
+    "js": "parcel build src/js/script.js --dist-dir js --no-source-maps",
     "css": "parcel build src/less/main.less --dist-dir css --no-optimize --no-source-maps",
     "css-min": "parcel build src/less/main.less --dist-dir css",
     "serve": "parcel src/*index.html",

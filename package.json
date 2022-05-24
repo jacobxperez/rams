@@ -9,7 +9,7 @@
     "serve": "parcel src/*.html --open",
     "watch": "parcel watch src/*.html",
     "build": "parcel build src/*.html",
-    "public": "parcel build src/*.html --public-url /rams"
+    "public": "parcel build src/*.html --public-url /"
   },
   "repository": {
     "type": "git",
@@ -27,7 +27,7 @@
   "bugs": {
     "url": "https://github.com/jacobxperez/rams/issues"
   },
-  "homepage": "https://github.com/jacobxperez/rams",
+  "homepage": "https://github.com/jacobxperez/rams/",
   "devDependencies": {
     "@parcel/transformer-less": "^2.5.0",
     "parcel": "^2.5.0"

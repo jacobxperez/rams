@@ -2,7 +2,11 @@
   "name": "rams",
   "version": "1.0.0",
   "description": "Zero-Class Framework built with less, but better.",
-  "source": ["src/index.html", "src/less/main.less", "src/js/script.js"],
+  "source":[
+    "src/index.html",
+    "src/less/main.less", 
+    "src/js/script.js"
+  ],
   "scripts": {
     "js": "parcel build src/js/script.js --dist-dir js --no-content-hash --no-source-maps",
     "css": "parcel build src/less/main.less --dist-dir css --no-optimize --no-content-hash --no-source-maps",

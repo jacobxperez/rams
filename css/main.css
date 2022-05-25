@@ -550,8 +550,8 @@ body > [data-container]:last-child {
 
 @font-face {
   font-family: icons;
-  src: url("icons.12985a7d.eot");
-  src: url("icons.12985a7d.eot#iefix") format("embedded-opentype"), url("icons.d8ecf772.woff2") format("woff2"), url("icons.384cbf28.woff") format("woff"), url("icons.0a9f4612.ttf") format("truetype"), url("icons.c4f2651f.svg#icons") format("svg");
+  src: url("icons.1feea73f.eot");
+  src: url("icons.1feea73f.eot#iefix") format("embedded-opentype"), url("icons.a7ffbae9.woff2") format("woff2"), url("icons.7ac59a5b.woff") format("woff"), url("icons.94ebe545.ttf") format("truetype"), url("icons.66359bb3.svg#icons") format("svg");
 }
 
 [data-icon]:before {

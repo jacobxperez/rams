@@ -1,7 +1,6 @@
 node_modules/
 /target/
 .DS_Store
-package-lock.json
 coverage/
 .nyc_output/
 .cache/

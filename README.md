@@ -37,6 +37,10 @@ Start by **[downloading](https://github.com/jacobxperez/rams/archive/master.zip)
 
     git clone https://github.com/jacobxperez/rams.git
 
+Install devDependencies on your machine
+
+    npm install
+
 ### Default Build
 
 Copy the pre-compiled [CSS](https://github.com/jacobxperez/rams/blob/master/css/main.css)

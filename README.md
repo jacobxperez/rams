@@ -33,11 +33,11 @@ less cluttered easy to read, and more scalable.
 ## Getting Started
 
 Start by **[downloading](https://github.com/jacobxperez/rams/archive/master.zip)** the
-[repository](https://github.com/jacobxperez/rams) or by cloning the project
+[repository](https://github.com/jacobxperez/rams) or by cloning RAMs
 
     git clone https://github.com/jacobxperez/rams.git
 
-Install devDependencies on your machine
+Install devDependencies on your machine with [npm](https://www.npmjs.com/)
 
     npm install
 
@@ -57,8 +57,6 @@ Edit the [variables](https://github.com/jacobxperez/rams/blob/master/src/less/va
 add custom [modules](https://github.com/jacobxperez/rams/tree/master/src/less/modules),
 then compile [main.less](https://github.com/jacobxperez/rams/blob/master/src/less/main.less)
 to produce the final [CSS](https://github.com/jacobxperez/rams/blob/master/css/main.css).
-Check out [Editors and Plugins](http://lesscss.org/tools/#editors-and-plugins)
-for compiling [LESS](http://lesscss.org/).
 
 * [/less](https://github.com/jacobxperez/rams/tree/master/src/less/)
     * [core](https://github.com/jacobxperez/rams/tree/master/src/less/core) (important files for compiling)

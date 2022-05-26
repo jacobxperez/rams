@@ -550,8 +550,7 @@ body > [data-container]:last-child {
 
 @font-face {
   font-family: icons;
-  src: url("icons.eot");
-  src: url("icons.eot#iefix") format("embedded-opentype"), url("icons.woff2") format("woff2"), url("icons.woff") format("woff"), url("icons.ttf") format("truetype"), url("icons.svg#icons") format("svg");
+  src: url("icons.eot"), url("icons.woff2") format("woff2"), url("icons.woff") format("woff"), url("icons.ttf") format("truetype"), url("icons.svg#icons") format("svg");
 }
 
 [data-icon]:before {

@@ -3,22 +3,10 @@
 .font-face(@name; @path) {
     @font-face {
         font-family: '@{name}';
-        src: url('@{path}@{name}.eot');
-        src: url('@{path}@{name}.eot?#iefix') format('embedded-opentype'),
+        src: url('@{path}@{name}.eot'),
         url('@{path}@{name}.woff2') format('woff2'),
         url('@{path}@{name}.woff') format('woff'),
         url('@{path}@{name}.ttf') format('truetype'),
         url('@{path}@{name}.svg#@{name}') format('svg');
     }
-}
-
-
-// Text Indent
-// ----------------------------------------------------------------------------/
-.text-indent (@text-indent: @indent; @base: 16px; @unit: rem) {
-
-    & when (@unit = em), (@unit = rem) {
-        text-indent: unit((@text-indent / @base), @unit);
-    }
-
 }

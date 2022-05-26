@@ -5,10 +5,11 @@
   "source": [
     "src/index.html",
     "src/less/main.less",
-    "src/js/script.js"
+    "src/js/main.js"
   ],
   "scripts": {
-    "js": "parcel build src/js/script.js --dist-dir js --no-content-hash --no-source-maps",
+    "js": "parcel build src/js/main.js --dist-dir js --no-optimize --no-content-hash --no-source-maps",
+    "js-min": "parcel build src/js/main.js --dist-dir js --no-content-hash --no-source-maps",
     "css": "parcel build src/less/main.less --dist-dir css --no-optimize --no-content-hash --no-source-maps",
     "css-min": "parcel build src/less/main.less --dist-dir css --no-content-hash --no-source-maps",
     "serve": "parcel src/*.html --open",

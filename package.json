@@ -10,6 +10,7 @@
   "scripts": {
     "js": "parcel build src/js/script.js --dist-dir js --no-content-hash --no-source-maps",
     "css": "parcel build src/less/main.less --dist-dir css --no-optimize --no-content-hash --no-source-maps",
+    "css-min": "parcel build src/less/main.less --dist-dir css --no-content-hash --no-source-maps",
     "serve": "parcel src/*.html --open",
     "watch": "parcel watch src/*.html",
     "build": "parcel build src/*.html --no-source-maps",

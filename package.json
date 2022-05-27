@@ -5,7 +5,8 @@
   "source": [
     "src/index.html",
     "src/less/main.less",
-    "src/js/main.js"
+    "src/js/main.js",
+    "src/docs/index.html"
   ],
   "scripts": {
     "js": "parcel build src/js/main.js --dist-dir js --no-optimize --no-content-hash --no-source-maps",

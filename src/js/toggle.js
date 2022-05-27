@@ -1,4 +1,4 @@
-export const toggle = () => {
+export function toggle() {
     const getToggle = document.querySelectorAll("[data-toggle]");
     const getToolTip = document.querySelectorAll("[data-tooltip]");
 

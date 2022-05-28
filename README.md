@@ -85,7 +85,6 @@ On your computer terminal run these scripts to compile RAMs
 * `npm run js-min` to compile and minify js
 * `npm run css-min` to compile and minify css
 
-
 ### [Contributing](https://github.com/jacobxperez/rams/blob/master/.github/CONTRIBUTING.md)
 
 If you are interested in contributing to this project, please read our

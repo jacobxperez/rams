@@ -11,7 +11,9 @@ Zero-Class Framework built with [less](http://lesscss.org/), but better.
 * [Getting Started](#getting-started)
     * [Default Build](#default-build)
     * [Custom Build](#custom-build)
-    * [Contributing](#contributing)
+    * [Custom Build](#custom-build)
+    * [Run Scripts](#run-scripts)
+    * [Other Scripts](#other-scripts)
 * [LICENSE](#license)
     * [Content](#content)
     * [Code](#code)
@@ -67,7 +69,7 @@ to produce the final [CSS](https://github.com/jacobxperez/rams/blob/master/css/m
     * [var.less](https://github.com/jacobxperez/rams/blob/master/src/less/var.less)
     (variables for font, colors, and more)
 
-### Run scripts to compile
+### Run Scripts
 
 On your computer terminal run these scripts to compile RAMs
 
@@ -75,6 +77,13 @@ On your computer terminal run these scripts to compile RAMs
 * `npm run build` to make current build
 * `npm run public` defult public url is set to "/" on [package.json](https://github.com/jacobxperez/rams/blob/master/package.json)
 * `npm run docs` locally runs documentation on your default browser
+
+### Other Scripts
+
+* `npm run js` to compile js files
+* `npm run css` to compile less files
+* `npm run js-min` to compile and minify js
+* `npm run css-min` to compile and minify css
 
 
 ### [Contributing](https://github.com/jacobxperez/rams/blob/master/.github/CONTRIBUTING.md)

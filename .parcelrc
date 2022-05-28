@@ -1,5 +1,5 @@
 {
   "extends": ["@parcel/config-default"],
-  "reporters":  ["...", "parcel-reporter-clean-dist"],
-  "namers": ["parcel-namer-hashless"]
+  "reporters": ["...", "parcel-reporter-clean-dist"],
+  "namers": ["parcel-namer-hashless", "..."]
 }

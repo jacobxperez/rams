@@ -71,7 +71,7 @@ to produce the final [CSS](https://github.com/jacobxperez/rams/blob/master/css/m
 
 ### Run Scripts
 
-On your computer terminal run these scripts to compile RAMs
+On your terminal run these scripts to compile
 
 * `npm run serve` to serve current build on your default browser
 * `npm run build` to make current build

@@ -579,6 +579,7 @@ body > [data-container]:last-child {
 
 [data-text~="justify"] {
   text-align: justify;
+  -webkit-hyphens: auto;
   hyphens: auto;
 }
 

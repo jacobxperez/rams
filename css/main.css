@@ -48,10 +48,10 @@ html {
   font-weight: 400;
   line-height: var(--line-height);
   text-align: left;
-  color: #333;
+  color: var(--color-02);
+  background-color: var(--color-01);
   overflow-wrap: break-word;
   scroll-behavior: smooth;
-  background-color: #fff;
 }
 
 img, svg, picture, video, canvas, audio, iframe, embed, object {
@@ -318,7 +318,7 @@ body > [data-wrapper]:last-child {
   z-index: -10;
   visibility: hidden;
   min-width: 10rem;
-  color: #333;
+  color: var(--color-02);
   background-color: #0000;
   display: none;
 }
@@ -369,7 +369,7 @@ body > [data-wrapper]:last-child {
 }
 
 [data-link]:where([data-state="active"], :hover, :active) {
-  color: #333;
+  color: var(--color-02);
 }
 
 [data-nav="breadcrumb"] {
@@ -398,7 +398,7 @@ body > [data-wrapper]:last-child {
 
 [data-link="line"]:where([data-state="active"], :hover, :active) {
   z-index: 5;
-  color: #333;
+  color: var(--color-02);
 }
 
 [data-link="line"] {

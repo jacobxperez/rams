@@ -1,8 +1,8 @@
 // Variables
 // ============================================================================/
 :root {
-    --color-01: @root-background-color;
-    --color-02: @root-font-color;
+    --color-01: #fff;
+    --color-02: #333;
     --color-03: @primary;
     --color-04: @secondary;
     --color-05: @success;
@@ -33,8 +33,8 @@
 
 // Theme Colors
 // ----------------------------------------------------------------------------/
-@root-background-color: #fff;
-@root-font-color: #333;
+@root-background-color: var(--color-01);
+@root-font-color: var(--color-02);
 
 @primary: #05f;
 @primary-contrast: contrast(@primary);

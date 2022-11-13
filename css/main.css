@@ -17,8 +17,8 @@
   --h5: clamp(1rem, 3vw, 1.8rem);
   --h6: clamp(1rem, 3vw, 1.4rem);
   --sm: 75%;
-  --container-min: 20rem;
-  --container-max: 62.5rem;
+  --wrapper-min: 20rem;
+  --wrapper-max: 62.5rem;
   --gap: 1.25rem;
   --space-y: .5rem;
   --space-x: .75rem;
@@ -270,23 +270,23 @@ a:where(:focus), [data-button="link"]:focus {
   outline: thin dotted;
 }
 
-body > [data-container]:first-child {
+body > [data-wrapper]:first-child {
   margin-top: calc(var(--leading) * 3);
 }
 
-body > [data-container]:last-child {
+body > [data-wrapper]:last-child {
   margin-bottom: calc(var(--leading) * 4);
 }
 
-[data-container] {
+[data-wrapper] {
   padding-left: var(--gap);
   padding-right: var(--gap);
-  min-width: var(--container-min);
+  min-width: var(--wrapper-min);
   margin: 0 auto;
 }
 
-[data-container="fit"] {
-  max-width: var(--container-max);
+[data-wrapper="fit"] {
+  max-width: var(--wrapper-max);
 }
 
 [data-grid] {
@@ -725,7 +725,7 @@ body > [data-container]:last-child {
     display: none;
   }
 
-  [data-container] {
+  [data-wrapper] {
     max-width: 100%;
     margin: 0;
     padding: 0;

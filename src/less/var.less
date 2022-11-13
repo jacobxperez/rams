@@ -19,8 +19,8 @@
     --h5: clamp(1rem, 3vw, 1.8rem);
     --h6: clamp(1rem, 3vw, 1.4rem);
     --sm: 75%;
-    --container-min: 20rem;
-    --container-max: 62.5rem;
+    --wrapper-min: 20rem;
+    --wrapper-max: 62.5rem;
     --gap: 1.25rem;
     --space-y: .5rem;
     --space-x: .75rem;
@@ -31,8 +31,8 @@
 
 // Theme Colors
 // ----------------------------------------------------------------------------/
-@background-color: var(--bg-color);
-@font-color: var(--font-color);
+@root-background-color: var(--bg-color);
+@root-font-color: var(--font-color);
 
 @primary: #05f;
 @primary-contrast: contrast(@primary);
@@ -83,11 +83,11 @@
 
 // Container
 // ----------------------------------------------------------------------------/
-@container-margin-top: calc(var(--leading) * 3);
-@container-margin-bottom: calc(var(--leading) * 4);
-@container-min-width: var(--container-min);
-@container-max-width: var(--container-max);
-@container-gap: var(--gap);
+@wrapper-margin-top: calc(var(--leading) * 3);
+@wrapper-margin-bottom: calc(var(--leading) * 4);
+@wrapper-min-width: var(--wrapper-min);
+@wrapper-max-width: var(--wrapper-max);
+@wrapper-gap: var(--gap);
 
 
 // Breakpoints
@@ -168,11 +168,11 @@
 // data-link
 @link-padding-y: var(--space-y);
 @link-padding-x: var(--space-x);
-@link-active: @font-color;
+@link-active: @root-font-color;
 
 // line tabs
 @line-link-color: #777;
-@line-link-active: @font-color;
+@line-link-active: @root-font-color;
 @line-border-width: 0.125em;
 @line-border-color: var(--border-color);
 @line-border-active: var(--primary-color);

@@ -1,0 +1,20 @@
+// Containers
+// ----------------------------------------------------------------------------/
+body > [data-wrapper]:first-child {
+    margin-top: @wrapper-margin-top;
+}
+
+body > [data-wrapper]:last-child {
+    margin-bottom: @wrapper-margin-bottom;
+}
+
+[data-wrapper] {
+    margin: 0 auto;
+    padding-left: @wrapper-gap;
+    padding-right: @wrapper-gap;
+    min-width: @wrapper-min-width;
+}
+
+[data-wrapper="fit"] {
+    max-width: @wrapper-max-width;
+}

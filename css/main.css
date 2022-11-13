@@ -3,6 +3,10 @@
   --font-color: #333;
   --primary-color: #05f;
   --secondary-color: #333;
+  --navbar-bg: #222;
+  --primary-font: HelveticaNeue-Light, "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Nimbus Sans L", "Liberation Sans", FreeSans, sans-serif;
+  --secondary-font: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, "Nimbus Roman No9 L", "Liberation Serif", FreeSerif, serif;
+  --tertiary-font: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", "Nimbus Mono L", "Liberation Mono", FreeMono, monospace;
   --font-size: 100%;
   --line-height: 1.5;
   --leading: 1.5rem;
@@ -37,8 +41,8 @@
 }
 
 html {
-  font-size: var(--font-size);
-  font-family: HelveticaNeue-Light, Helvetica Neue Light, Helvetica Neue, Helvetica, Arial, Nimbus Sans L, Liberation Sans, FreeSans, sans-serif;
+  font-size: var(--primary-font);
+  font-family: var(--primary-font);
   font-weight: 400;
   line-height: var(--line-height);
   text-align: left;
@@ -137,7 +141,7 @@ blockquote:where() {
 }
 
 blockquote {
-  font-family: TimesNewRoman, Times New Roman, Times, Baskerville, Georgia, Nimbus Roman No9 L, Liberation Serif, FreeSerif, serif;
+  font-family: var(--secondary-font);
   font-style: italic;
 }
 
@@ -150,7 +154,7 @@ blockquote {
 }
 
 code, kbd, pre, samp {
-  font-family: Courier New, Courier, Lucida Sans Typewriter, Lucida Typewriter, Nimbus Mono L, Liberation Mono, FreeMono, monospace;
+  font-family: var(--tertiary-font);
 }
 
 pre {

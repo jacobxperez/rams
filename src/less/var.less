@@ -5,6 +5,10 @@
     --font-color: #333;
     --primary-color: @primary;
     --secondary-color: @secondary;
+    --navbar-bg: @navbar-background;
+    --primary-font: @font-sans;
+    --secondary-font: @font-serif;
+    --tertiary-font: @font-mono;
     --font-size: 100%;
     --line-height: 1.5;
     --leading: 1.5rem;
@@ -49,8 +53,8 @@
 
 // Typography
 // ----------------------------------------------------------------------------/
-@base-font-size: var(--font-size);
-@base-font-family: @font-sans;
+@root-font-family: var(--font-size);
+@root-font-family: var(--primary-font);
 @link-color: var(--primary-color);
 
 // headings
@@ -112,12 +116,12 @@
 
 // Code
 // ----------------------------------------------------------------------------/
-@code-font-family: @font-mono;
+@code-font-family: var(--tertiary-font);
 
 
 // Blockquote
 // ----------------------------------------------------------------------------/
-@blockquote-font-family: @font-serif;
+@blockquote-font-family: var(--secondary-font);
 @blockquote-font-style: italic;
 
 

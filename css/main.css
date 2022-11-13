@@ -1,6 +1,8 @@
 :root {
-  --background: #fff;
+  --bg-color: #fff;
   --font-color: #333;
+  --primary-color: #05f;
+  --secondary-color: #333;
   --font-size: 100%;
   --line-height: 1.5;
   --leading: 1.5rem;
@@ -41,7 +43,7 @@ html {
   line-height: var(--line-height);
   text-align: left;
   color: var(--font-color);
-  background-color: var(--background);
+  background-color: var(--bg-color);
   overflow-wrap: break-word;
   scroll-behavior: smooth;
 }
@@ -249,7 +251,7 @@ button, select, [type="button"], [type="reset"], [type="submit"] {
 }
 
 :where(a), [data-button="link"] {
-  color: #05f;
+  color: var(--primary-color);
   cursor: pointer;
   background-color: #0000;
   text-decoration: none;
@@ -399,7 +401,7 @@ body > [data-container]:last-child {
 }
 
 [data-link="line"]:where([data-state="active"], :hover, :active) {
-  border-color: #05f;
+  border-color: var(--primary-color);
 }
 
 [data-navbar] {
@@ -444,8 +446,8 @@ body > [data-container]:last-child {
 }
 
 [data-button~="secondary"] {
+  background-color: var(--secondary-color);
   color: #fff;
-  background-color: #333;
 }
 
 [data-button~="secondary"]:is([data-state="active"], :hover, :active) {
@@ -455,13 +457,13 @@ body > [data-container]:last-child {
 }
 
 [data-button="secondary outline"] {
-  color: #333;
-  border-color: #333;
+  border-color: var(--secondary-color);
+  color: var(--secondary-color);
 }
 
 [data-button~="primary"] {
+  background-color: var(--primary-color);
   color: #fff;
-  background-color: #05f;
 }
 
 [data-button~="primary"]:is([data-state="active"], :hover, :active) {
@@ -471,8 +473,8 @@ body > [data-container]:last-child {
 }
 
 [data-button="primary outline"] {
-  color: #05f;
-  border-color: #05f;
+  border-color: var(--primary-color);
+  color: var(--primary-color);
 }
 
 [data-button~="success"] {

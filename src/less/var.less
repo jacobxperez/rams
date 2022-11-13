@@ -1,8 +1,10 @@
 // Variables
 // ============================================================================/
 :root {
-    --background: #fff;
+    --bg-color: #fff;
     --font-color: #333;
+    --primary-color: @primary;
+    --secondary-color: @secondary;
     --font-size: 100%;
     --line-height: 1.5;
     --leading: 1.5rem;
@@ -25,7 +27,7 @@
 
 // Theme Colors
 // ----------------------------------------------------------------------------/
-@background-color: var(--background);
+@background-color: var(--bg-color);
 @font-color: var(--font-color);
 
 @primary: #05f;
@@ -49,7 +51,7 @@
 // ----------------------------------------------------------------------------/
 @base-font-size: var(--font-size);
 @base-font-family: @font-sans;
-@link-color: @primary;
+@link-color: var(--primary-color);
 
 // headings
 @headings-font-family: false;
@@ -169,7 +171,7 @@
 @line-link-active: @font-color;
 @line-border-width: 0.125em;
 @line-border-color: var(--border-color);
-@line-border-active: @primary;
+@line-border-active: var(--primary-color);
 
 // breadcrumb
 @breadcrumb-separator: "/";

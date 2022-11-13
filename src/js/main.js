@@ -5,7 +5,7 @@
  * http://www.apache.org/licenses/LICENSE-2.0
  */
 document.addEventListener("DOMContentLoaded", () => {
-    function toggle() {
+    const toggle = () => {
         const getToggle = document.querySelectorAll("[data-toggle]");
         const getToolTip = document.querySelectorAll("[data-tooltip]");
 

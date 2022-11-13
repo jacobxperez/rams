@@ -1,16 +1,16 @@
 // Variables
 // ============================================================================/
 :root {
-    --color-01: #fff;
-    --color-02: #333;
-    --color-03: @primary;
-    --color-04: @secondary;
-    --color-05: @success;
-    --color-06: @warning;
-    --color-07: @danger;
-    --font-01: HelveticaNeue-Light, "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Nimbus Sans L", "Liberation Sans", FreeSans, sans-serif;
-    --font-02: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, "Nimbus Roman No9 L", "Liberation Serif", FreeSerif, serif;
-    --font-03: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", "Nimbus Mono L", "Liberation Mono", FreeMono, monospace;
+    --bg-color: #fff;
+    --font-color: #333;
+    --primary-color: @primary;
+    --secondary-color: @secondary;
+    --success-color: @success;
+    --warning-color: @warning;
+    --danger-color: @danger;
+    --font-sans: HelveticaNeue-Light, "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Nimbus Sans L", "Liberation Sans", FreeSans, sans-serif;
+    --font-serif: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, "Nimbus Roman No9 L", "Liberation Serif", FreeSerif, serif;
+    --font-mono: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", "Nimbus Mono L", "Liberation Mono", FreeMono, monospace;
     --font-size: 100%;
     --line-height: 1.5;
     --leading: 1.5rem;
@@ -21,20 +21,20 @@
     --h5: clamp(1rem, 3vw, 1.8rem);
     --h6: clamp(1rem, 3vw, 1.4rem);
     --sm: 75%;
-    --wrapper-min: 20rem;
-    --wrapper-max: 62.5rem;
     --gap: 1.25rem;
     --space-y: .5rem;
     --space-x: .75rem;
     --border-width: .0625em;
     --border-color: rgba(0, 0, 0, .3);
+    --wrapper-width: 62.5rem;
+    --dropbox-width: 10rem;
 }
 
 
 // Theme Colors
 // ----------------------------------------------------------------------------/
-@root-background-color: var(--color-01);
-@root-font-color: var(--color-02);
+@root-background-color: var(--bg-color);
+@root-font-color: var(--font-color);
 
 @primary: #05f;
 @primary-contrast: contrast(@primary);
@@ -48,8 +48,8 @@
 // Typography
 // ----------------------------------------------------------------------------/
 @root-font-size: var(--font-size);
-@root-font-family: var(--font-01);
-@link-color: var(--color-03);
+@root-font-family: var(--font-sans);
+@link-color: var(--primary-color);
 
 // headings
 @headings-font-family: false;
@@ -75,26 +75,13 @@
 @hr-border-color: var(--border-color);
 
 
-// Container
+// Wrapper
 // ----------------------------------------------------------------------------/
 @wrapper-margin-top: calc(var(--leading) * 3);
 @wrapper-margin-bottom: calc(var(--leading) * 4);
-@wrapper-min-width: var(--wrapper-min);
-@wrapper-max-width: var(--wrapper-max);
+@wrapper-min-width: 20rem;
+@wrapper-max-width: var(--wrapper-width);
 @wrapper-gap: var(--gap);
-
-
-// Breakpoints
-// ----------------------------------------------------------------------------/
-// small screen 680px
-@screen-small-max-width: 42.5em;
-
-// medium screen 681px - 979px
-@screen-medium-min-width: 42.5625em;
-@screen-medium-max-width: 61.1875em;
-
-// large screens 980px
-@screen-large-min-width: 61.25em;
 
 
 // Lists
@@ -110,12 +97,12 @@
 
 // Code
 // ----------------------------------------------------------------------------/
-@code-font-family: var(--font-03);
+@code-font-family: var(--font-mono);
 
 
 // Blockquote
 // ----------------------------------------------------------------------------/
-@blockquote-font-family: var(--font-02);
+@blockquote-font-family: var(--font-serif);
 @blockquote-font-style: italic;
 
 
@@ -177,7 +164,7 @@
 
 // Dropdown
 // ----------------------------------------------------------------------------/
-@dropbox-min-width: 10rem;
+@dropbox-min-width: var(--dropbox-width);
 @dropbox-transition: opacity 0.2s ease-out;
 
 
@@ -217,3 +204,16 @@
 // ----------------------------------------------------------------------------/
 @selection: #d8e5ff;
 @selection-contrast: contrast(@selection);
+
+
+// Breakpoints
+// ----------------------------------------------------------------------------/
+// small screen 680px
+@screen-small-max-width: 42.5em;
+
+// medium screen 681px - 979px
+@screen-medium-min-width: 42.5625em;
+@screen-medium-max-width: 61.1875em;
+
+// large screens 980px
+@screen-large-min-width: 61.25em;

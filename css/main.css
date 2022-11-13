@@ -1,14 +1,14 @@
 :root {
-  --color-01: #fff;
-  --color-02: #333;
-  --color-03: #05f;
-  --color-04: #333;
-  --color-05: #198038;
-  --color-06: #ff832b;
-  --color-07: #da1e28;
-  --font-01: HelveticaNeue-Light, "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Nimbus Sans L", "Liberation Sans", FreeSans, sans-serif;
-  --font-02: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, "Nimbus Roman No9 L", "Liberation Serif", FreeSerif, serif;
-  --font-03: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", "Nimbus Mono L", "Liberation Mono", FreeMono, monospace;
+  --bg-color: #fff;
+  --font-color: #333;
+  --primary-color: #05f;
+  --secondary-color: #333;
+  --success-color: #198038;
+  --warning-color: #ff832b;
+  --danger-color: #da1e28;
+  --font-sans: HelveticaNeue-Light, "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Nimbus Sans L", "Liberation Sans", FreeSans, sans-serif;
+  --font-serif: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, "Nimbus Roman No9 L", "Liberation Serif", FreeSerif, serif;
+  --font-mono: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", "Nimbus Mono L", "Liberation Mono", FreeMono, monospace;
   --font-size: 100%;
   --line-height: 1.5;
   --leading: 1.5rem;
@@ -19,13 +19,13 @@
   --h5: clamp(1rem, 3vw, 1.8rem);
   --h6: clamp(1rem, 3vw, 1.4rem);
   --sm: 75%;
-  --wrapper-min: 20rem;
-  --wrapper-max: 62.5rem;
   --gap: 1.25rem;
   --space-y: .5rem;
   --space-x: .75rem;
   --border-width: .0625em;
   --border-color: #0000004d;
+  --wrapper-width: 62.5rem;
+  --dropbox-width: 10rem;
 }
 
 * {
@@ -44,12 +44,12 @@
 
 html {
   font-size: var(--font-size);
-  font-family: var(--font-01);
+  font-family: var(--font-sans);
   font-weight: 400;
   line-height: var(--line-height);
   text-align: left;
-  color: var(--color-02);
-  background-color: var(--color-01);
+  color: var(--font-color);
+  background-color: var(--bg-color);
   overflow-wrap: break-word;
   scroll-behavior: smooth;
 }
@@ -143,7 +143,7 @@ blockquote:where() {
 }
 
 blockquote {
-  font-family: var(--font-02);
+  font-family: var(--font-serif);
   font-style: italic;
 }
 
@@ -156,7 +156,7 @@ blockquote {
 }
 
 code, kbd, pre, samp {
-  font-family: var(--font-03);
+  font-family: var(--font-mono);
 }
 
 pre {
@@ -257,7 +257,7 @@ button, select, [type="button"], [type="reset"], [type="submit"] {
 }
 
 :where(a), [data-button="link"] {
-  color: var(--color-03);
+  color: var(--primary-color);
   cursor: pointer;
   background-color: #0000;
   text-decoration: none;
@@ -283,12 +283,12 @@ body > [data-wrapper]:last-child {
 [data-wrapper] {
   padding-left: var(--gap);
   padding-right: var(--gap);
-  min-width: var(--wrapper-min);
+  min-width: 20rem;
   margin: 0 auto;
 }
 
 [data-wrapper="fit"] {
-  max-width: var(--wrapper-max);
+  max-width: var(--wrapper-width);
 }
 
 [data-grid] {
@@ -317,8 +317,8 @@ body > [data-wrapper]:last-child {
 [data-dropbox] {
   z-index: -10;
   visibility: hidden;
-  min-width: 10rem;
-  color: var(--color-02);
+  min-width: var(--dropbox-width);
+  color: var(--font-color);
   background-color: #0000;
   display: none;
 }
@@ -343,7 +343,7 @@ body > [data-wrapper]:last-child {
 [data-tooltip]:before {
   content: attr(data-tooltip);
   z-index: -10;
-  min-width: 10rem;
+  min-width: var(--dropbox-width);
   padding: var(--space-y) var(--space-x);
   color: #fff;
   opacity: 0;
@@ -369,7 +369,7 @@ body > [data-wrapper]:last-child {
 }
 
 [data-link]:where([data-state="active"], :hover, :active) {
-  color: var(--color-02);
+  color: var(--font-color);
 }
 
 [data-nav="breadcrumb"] {
@@ -398,7 +398,7 @@ body > [data-wrapper]:last-child {
 
 [data-link="line"]:where([data-state="active"], :hover, :active) {
   z-index: 5;
-  color: var(--color-02);
+  color: var(--font-color);
 }
 
 [data-link="line"] {

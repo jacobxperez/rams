@@ -1,14 +1,16 @@
 // Variables
 // ============================================================================/
 :root {
-    --bg-color: #fff;
-    --font-color: #333;
-    --primary-color: @primary;
-    --secondary-color: @secondary;
-    --navbar-bg: @navbar-background;
-    --primary-font: @font-sans;
-    --secondary-font: @font-serif;
-    --tertiary-font: @font-mono;
+    --color-01: @root-background-color;
+    --color-02: @root-font-color;
+    --color-03: @primary;
+    --color-04: @secondary;
+    --color-05: @success;
+    --color-06: @warning;
+    --color-07: @danger;
+    --font-01: HelveticaNeue-Light, "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Nimbus Sans L", "Liberation Sans", FreeSans, sans-serif;
+    --font-02: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, "Nimbus Roman No9 L", "Liberation Serif", FreeSerif, serif;
+    --font-03: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", "Nimbus Mono L", "Liberation Mono", FreeMono, monospace;
     --font-size: 100%;
     --line-height: 1.5;
     --leading: 1.5rem;
@@ -31,8 +33,8 @@
 
 // Theme Colors
 // ----------------------------------------------------------------------------/
-@root-background-color: var(--bg-color);
-@root-font-color: var(--font-color);
+@root-background-color: #fff;
+@root-font-color: #333;
 
 @primary: #05f;
 @primary-contrast: contrast(@primary);
@@ -43,19 +45,11 @@
 @secondary-active: darken(@secondary, 5%);
 
 
-// Font Stack
-// ----------------------------------------------------------------------------/
-@font-sans: HelveticaNeue-Light, "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Nimbus Sans L", "Liberation Sans", FreeSans, sans-serif;
-@font-system: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-@font-serif: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, "Nimbus Roman No9 L", "Liberation Serif", FreeSerif, serif;
-@font-mono: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", "Nimbus Mono L", "Liberation Mono", FreeMono, monospace;
-
-
 // Typography
 // ----------------------------------------------------------------------------/
-@root-font-family: var(--font-size);
-@root-font-family: var(--primary-font);
-@link-color: var(--primary-color);
+@root-font-size: var(--font-size);
+@root-font-family: var(--font-01);
+@link-color: var(--color-03);
 
 // headings
 @headings-font-family: false;
@@ -116,12 +110,12 @@
 
 // Code
 // ----------------------------------------------------------------------------/
-@code-font-family: var(--tertiary-font);
+@code-font-family: var(--font-03);
 
 
 // Blockquote
 // ----------------------------------------------------------------------------/
-@blockquote-font-family: var(--secondary-font);
+@blockquote-font-family: var(--font-02);
 @blockquote-font-style: italic;
 
 
@@ -175,7 +169,7 @@
 @line-link-active: @root-font-color;
 @line-border-width: 0.125em;
 @line-border-color: var(--border-color);
-@line-border-active: var(--primary-color);
+@line-border-active: @primary;
 
 // breadcrumb
 @breadcrumb-separator: "/";

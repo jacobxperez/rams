@@ -1,11 +1,6 @@
 :root {
   --bg-color: #fff;
   --font-color: #333;
-  --primary-color: #05f;
-  --secondary-color: #333;
-  --success-color: #198038;
-  --warning-color: #ff832b;
-  --danger-color: #da1e28;
   --font-sans: HelveticaNeue-Light, "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Nimbus Sans L", "Liberation Sans", FreeSans, sans-serif;
   --font-serif: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, "Nimbus Roman No9 L", "Liberation Serif", FreeSerif, serif;
   --font-mono: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", "Nimbus Mono L", "Liberation Mono", FreeMono, monospace;
@@ -257,7 +252,7 @@ button, select, [type="button"], [type="reset"], [type="submit"] {
 }
 
 :where(a), [data-button="link"] {
-  color: var(--primary-color);
+  color: #05f;
   cursor: pointer;
   background-color: #0000;
   text-decoration: none;

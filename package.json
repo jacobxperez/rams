@@ -42,6 +42,7 @@
     "parcel": "^2.8.0",
     "parcel-namer-hashless": "^1.0.3",
     "parcel-optimizer-friendly-urls": "^0.2.0",
-    "parcel-reporter-clean-dist": "^1.0.4"
+    "parcel-reporter-clean-dist": "^1.0.4",
+    "prettier": "^2.7.1"
   }
 }

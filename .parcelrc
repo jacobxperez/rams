@@ -1,6 +1,5 @@
 {
   "extends": ["@parcel/config-default"],
-  "reporters": ["...", "parcel-reporter-clean-dist"],
   "namers": ["parcel-namer-hashless", "..."],
   "optimizers": {
     "*.html": ["parcel-optimizer-friendly-urls", "..."]

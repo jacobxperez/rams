@@ -12,3 +12,7 @@
 [data-link]:where([data-state="active"], :hover, :active) {
     color: @link-active;
 }
+
+[data-link]:focus {
+    &:extend(a:where(:focus));
+}

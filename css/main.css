@@ -19,7 +19,8 @@
   --space-x: .75rem;
   --border-width: .0625em;
   --border-color: #0000004d;
-  --wrapper-width: 62.5rem;
+  --wrapper-min-width: 20rem;
+  --wrapper-max-width: 62.5rem;
   --dropbox-width: 10rem;
 }
 
@@ -241,11 +242,6 @@ button, select, [type="button"], [type="reset"], [type="submit"] {
   background-color: #0000001a;
 }
 
-[data-button]:is(:focus) {
-  outline-offset: -.125rem;
-  outline: thin dotted;
-}
-
 [data-button="link"]:is([data-state="active"], :hover, :active) {
   background-color: #0000;
   border-color: #0000;
@@ -262,7 +258,7 @@ a:where(:hover, :active):not([data-link], [data-button]), [data-button="link"]:h
   text-decoration: underline;
 }
 
-a:where(:focus), [data-button="link"]:focus {
+a:where(:focus), [data-button]:focus, [data-link]:focus {
   outline-offset: -.125rem;
   outline: thin dotted;
 }
@@ -278,12 +274,12 @@ body > [data-wrapper]:last-child {
 [data-wrapper] {
   padding-left: var(--gap);
   padding-right: var(--gap);
-  min-width: 20rem;
+  min-width: var(--wrapper-min-width);
   margin: 0 auto;
 }
 
 [data-wrapper="fit"] {
-  max-width: var(--wrapper-width);
+  max-width: var(--wrapper-max-width);
 }
 
 [data-grid] {

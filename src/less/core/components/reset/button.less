@@ -15,9 +15,8 @@
     background-color: @button-background-active;
 }
 
-[data-button]:is(:focus) {
-    outline: thin dotted;
-    outline-offset: -0.125rem;
+[data-button]:focus {
+    &:extend(a:where(:focus));
 }
 
 [data-button="link"] {
@@ -27,10 +26,6 @@
 [data-button="link"]:hover,
 [data-button="link"]:active {
     &:extend(a:where(:hover, :active):not([data-link], [data-button]));
-}
-
-[data-button="link"]:focus {
-    &:extend(a:where(:focus));
 }
 
 [data-button="link"]:is([data-state="active"], :hover, :active) {

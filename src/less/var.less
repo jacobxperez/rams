@@ -21,7 +21,8 @@
     --space-x: .75rem;
     --border-width: .0625em;
     --border-color: rgba(0, 0, 0, .3);
-    --wrapper-width: 62.5rem;
+    --wrapper-min-width: 20rem;
+    --wrapper-max-width: 62.5rem;
     --dropbox-width: 10rem;
 }
 
@@ -74,8 +75,8 @@
 // ----------------------------------------------------------------------------/
 @wrapper-margin-top: calc(var(--leading) * 3);
 @wrapper-margin-bottom: calc(var(--leading) * 4);
-@wrapper-min-width: 20rem;
-@wrapper-max-width: var(--wrapper-width);
+@wrapper-min-width: var(--wrapper-min-width);
+@wrapper-max-width: var(--wrapper-max-width);
 @wrapper-gap: var(--gap);
 
 

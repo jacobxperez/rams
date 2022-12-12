@@ -1,21 +1,21 @@
 // Variables
 // ============================================================================/
 :root {
-    --bg-color: #fff;
-    --font-color: #333;
+    --root-bg-color: #fff;
+    --root-font-color: #333;
+    --root-font-size: 100%;
+    --root-line-height: 1.5;
     --font-sans: HelveticaNeue-Light, "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Nimbus Sans L", sans-serif;
     --font-serif: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, "Nimbus Roman No9 L", serif;
     --font-mono: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", "Nimbus Mono L", monospace;
-    --font-size: 100%;
-    --line-height: 1.5;
+    --h1-font-size: clamp(2rem, 6vw, 4rem);
+    --h2-font-size: clamp(1.8rem, 5vw, 3rem);
+    --h3-font-size: clamp(1.4rem, 4vw, 2.4rem);
+    --h4-font-size: clamp(1.2rem, 3vw, 2rem);
+    --h5-font-size: clamp(1rem, 3vw, 1.8rem);
+    --h6-font-size: clamp(1rem, 3vw, 1.4rem);
+    --sm-font-size: 75%;
     --leading: 1.5rem;
-    --h1: clamp(2rem, 6vw, 4rem);
-    --h2: clamp(1.8rem, 5vw, 3rem);
-    --h3: clamp(1.4rem, 4vw, 2.4rem);
-    --h4: clamp(1.2rem, 3vw, 2rem);
-    --h5: clamp(1rem, 3vw, 1.8rem);
-    --h6: clamp(1rem, 3vw, 1.4rem);
-    --sm: 75%;
     --gap: 1.25rem;
     --space-y: .5rem;
     --space-x: .75rem;
@@ -23,14 +23,14 @@
     --border-color: rgba(0, 0, 0, .3);
     --wrapper-min-width: 20rem;
     --wrapper-max-width: 62.5rem;
-    --dropbox-width: 10rem;
+    --dropbox-min-width: 10rem;
 }
 
 
 // Theme Colors
 // ----------------------------------------------------------------------------/
-@root-background-color: var(--bg-color);
-@root-font-color: var(--font-color);
+@root-background-color: var(--root-bg-color);
+@root-font-color: var(--root-font-color);
 
 @primary: #05f;
 @primary-contrast: contrast(@primary);
@@ -43,7 +43,7 @@
 
 // Typography
 // ----------------------------------------------------------------------------/
-@root-font-size: var(--font-size);
+@root-font-size: var(--root-font-size);
 @root-font-family: var(--font-sans);
 @link-color: @primary;
 
@@ -51,15 +51,15 @@
 @headings-font-family: false;
 @headings-font-color: false;
 @headings-font-weight: 400;
-@h1-font-size: var(--h1);
-@h2-font-size: var(--h2);
-@h3-font-size: var(--h3);
-@h4-font-size: var(--h4);
-@h5-font-size: var(--h5);
-@h6-font-size: var(--h6);
+@h1-font-size: var(--h1-font-size);
+@h2-font-size: var(--h2-font-size);
+@h3-font-size: var(--h3-font-size);
+@h4-font-size: var(--h4-font-size);
+@h5-font-size: var(--h5-font-size);
+@h6-font-size: var(--h6-font-size);
 
 // small
-@small-font-size: var(--sm);
+@small-font-size: var(--sm-font-size);
 
 // mark
 @mark-background: #fc0;
@@ -160,7 +160,7 @@
 
 // Dropdown
 // ----------------------------------------------------------------------------/
-@dropbox-min-width: var(--dropbox-width);
+@dropbox-min-width: var(--dropbox-min-width);
 @dropbox-transition: opacity 0.2s ease-out;
 
 

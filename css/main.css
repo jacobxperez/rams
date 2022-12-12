@@ -1,19 +1,19 @@
 :root {
-  --bg-color: #fff;
-  --font-color: #333;
+  --root-bg-color: #fff;
+  --root-font-color: #333;
+  --root-font-size: 100%;
+  --root-line-height: 1.5;
   --font-sans: HelveticaNeue-Light, "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Nimbus Sans L", sans-serif;
   --font-serif: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, "Nimbus Roman No9 L", serif;
   --font-mono: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", "Nimbus Mono L", monospace;
-  --font-size: 100%;
-  --line-height: 1.5;
+  --h1-font-size: clamp(2rem, 6vw, 4rem);
+  --h2-font-size: clamp(1.8rem, 5vw, 3rem);
+  --h3-font-size: clamp(1.4rem, 4vw, 2.4rem);
+  --h4-font-size: clamp(1.2rem, 3vw, 2rem);
+  --h5-font-size: clamp(1rem, 3vw, 1.8rem);
+  --h6-font-size: clamp(1rem, 3vw, 1.4rem);
+  --sm-font-size: 75%;
   --leading: 1.5rem;
-  --h1: clamp(2rem, 6vw, 4rem);
-  --h2: clamp(1.8rem, 5vw, 3rem);
-  --h3: clamp(1.4rem, 4vw, 2.4rem);
-  --h4: clamp(1.2rem, 3vw, 2rem);
-  --h5: clamp(1rem, 3vw, 1.8rem);
-  --h6: clamp(1rem, 3vw, 1.4rem);
-  --sm: 75%;
   --gap: 1.25rem;
   --space-y: .5rem;
   --space-x: .75rem;
@@ -21,7 +21,7 @@
   --border-color: #0000004d;
   --wrapper-min-width: 20rem;
   --wrapper-max-width: 62.5rem;
-  --dropbox-width: 10rem;
+  --dropbox-min-width: 10rem;
 }
 
 * {
@@ -39,13 +39,13 @@
 }
 
 html {
-  font-size: var(--font-size);
+  font-size: var(--root-font-size);
   font-family: var(--font-sans);
   font-weight: 400;
-  line-height: var(--line-height);
+  line-height: var(--root-line-height);
   text-align: left;
-  color: var(--font-color);
-  background-color: var(--bg-color);
+  color: var(--root-font-color);
+  background-color: var(--root-bg-color);
   overflow-wrap: break-word;
   scroll-behavior: smooth;
 }
@@ -64,27 +64,27 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1, [data-text~="h1"] {
-  font-size: var(--h1);
+  font-size: var(--h1-font-size);
 }
 
 h2, [data-text~="h2"] {
-  font-size: var(--h2);
+  font-size: var(--h2-font-size);
 }
 
 h3, [data-text~="h3"] {
-  font-size: var(--h3);
+  font-size: var(--h3-font-size);
 }
 
 h4, [data-text~="h4"] {
-  font-size: var(--h4);
+  font-size: var(--h4-font-size);
 }
 
 h5, [data-text~="h5"] {
-  font-size: var(--h5);
+  font-size: var(--h5-font-size);
 }
 
 h6, [data-text~="h6"] {
-  font-size: var(--h6);
+  font-size: var(--h6-font-size);
 }
 
 b, strong {
@@ -106,7 +106,7 @@ mark {
 }
 
 small, sub, sup, [data-text~="small"] {
-  font-size: var(--sm);
+  font-size: var(--sm-font-size);
 }
 
 sub, sup {
@@ -308,8 +308,8 @@ body > [data-wrapper]:last-child {
 [data-dropbox] {
   z-index: -10;
   visibility: hidden;
-  min-width: var(--dropbox-width);
-  color: var(--font-color);
+  min-width: var(--dropbox-min-width);
+  color: var(--root-font-color);
   background-color: #0000;
   display: none;
 }
@@ -334,7 +334,7 @@ body > [data-wrapper]:last-child {
 [data-tooltip]:before {
   content: attr(data-tooltip);
   z-index: -10;
-  min-width: var(--dropbox-width);
+  min-width: var(--dropbox-min-width);
   padding: var(--space-y) var(--space-x);
   color: #fff;
   opacity: 0;
@@ -360,7 +360,7 @@ body > [data-wrapper]:last-child {
 }
 
 [data-link]:where([data-state="active"], :hover, :active) {
-  color: var(--font-color);
+  color: var(--root-font-color);
 }
 
 [data-nav="breadcrumb"] {
@@ -389,7 +389,7 @@ body > [data-wrapper]:last-child {
 
 [data-link="line"]:where([data-state="active"], :hover, :active) {
   z-index: 5;
-  color: var(--font-color);
+  color: var(--root-font-color);
 }
 
 [data-link="line"] {
@@ -555,12 +555,12 @@ body > [data-wrapper]:last-child {
 [data-icon]:before {
   content: attr(data-icon);
   font-variant: normal;
+  vertical-align: middle;
+  text-transform: none;
   font-family: icons;
   font-style: normal;
   font-weight: normal;
-  line-height: var(--sm);
-  vertical-align: middle;
-  text-transform: none;
+  line-height: 1;
   display: inline-block;
 }
 

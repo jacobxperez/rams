@@ -75,7 +75,7 @@ On your terminal run these scripts to compile
 
 * `npm run serve` serve current build on your default browser
 * `npm run watch` watch for changes but does not start server
-* `npm run build` make current build  and exits
+* `npm run build` make current build and exits
 * `npm run public` makes build and sets url to "/" can be changed on [package.json](https://github.com/jacobxperez/rams/blob/master/package.json)
 * `npm run docs` locally runs documentation on your default browser
 

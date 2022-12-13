@@ -4,6 +4,22 @@
     border-color: var(--border-color);
 }
 
+[data-button~="tertiary"] {
+    background-color:  @tertiary;
+    color: @tertiary-contrast;
+}
+
+[data-button~="tertiary"]:is([data-state="active"], :hover, :active) {
+    border-color: var(--border-color);
+    background-color: @tertiary-active;
+    color: @tertiary-contrast;
+}
+
+[data-button="tertiary outline"] {
+    border-color:  @tertiary;
+    color: @tertiary;
+}
+
 [data-button~="secondary"] {
     background-color:  @secondary;
     color: @secondary-contrast;
@@ -16,8 +32,8 @@
 }
 
 [data-button="secondary outline"] {
-    border-color:  @secondary;
-    color:  @secondary;
+    border-color: @secondary;
+    color: @secondary;
 }
 
 [data-button~="primary"] {

@@ -442,6 +442,22 @@ body > [data-wrapper]:last-child {
   border-color: var(--border-color);
 }
 
+[data-button~="tertiary"] {
+  color: #fff;
+  background-color: #1a4499;
+}
+
+[data-button~="tertiary"]:is([data-state="active"], :hover, :active) {
+  border-color: var(--border-color);
+  color: #fff;
+  background-color: #163a83;
+}
+
+[data-button="tertiary outline"] {
+  color: #1a4499;
+  border-color: #1a4499;
+}
+
 [data-button~="secondary"] {
   color: #fff;
   background-color: #333;

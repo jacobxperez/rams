@@ -5,9 +5,9 @@
     --root-font-color: #333;
     --root-font-size: 100%;
     --root-line-height: 1.5;
-    --font-sans: HelveticaNeue-Light, "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Nimbus Sans L", sans-serif;
-    --font-serif: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, "Nimbus Roman No9 L", serif;
-    --font-mono: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", "Nimbus Mono L", monospace;
+    --root-font-family: HelveticaNeue-Light, "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Nimbus Sans L", sans-serif;
+    --blockquote-font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, "Nimbus Roman No9 L", serif;
+    --code-font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", "Nimbus Mono L", monospace;
     --h1-font-size: clamp(2rem, 6vw, 4rem);
     --h2-font-size: clamp(1.8rem, 5vw, 3rem);
     --h3-font-size: clamp(1.4rem, 4vw, 2.4rem);
@@ -44,7 +44,7 @@
 // Typography
 // ----------------------------------------------------------------------------/
 @root-font-size: var(--root-font-size);
-@root-font-family: var(--font-sans);
+@root-font-family: var(--root-font-family);
 @link-color: @primary;
 
 // headings
@@ -93,12 +93,12 @@
 
 // Code
 // ----------------------------------------------------------------------------/
-@code-font-family: var(--font-mono);
+@code-font-family: var(--code-font-family);
 
 
 // Blockquote
 // ----------------------------------------------------------------------------/
-@blockquote-font-family: var(--font-serif);
+@blockquote-font-family: var(--blockquote-font-family);
 @blockquote-font-style: italic;
 
 

@@ -3,9 +3,9 @@
   --root-font-color: #333;
   --root-font-size: 100%;
   --root-line-height: 1.5;
-  --font-sans: HelveticaNeue-Light, "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Nimbus Sans L", sans-serif;
-  --font-serif: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, "Nimbus Roman No9 L", serif;
-  --font-mono: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", "Nimbus Mono L", monospace;
+  --root-font-family: HelveticaNeue-Light, "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Nimbus Sans L", sans-serif;
+  --blockquote-font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, "Nimbus Roman No9 L", serif;
+  --code-font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", "Nimbus Mono L", monospace;
   --h1-font-size: clamp(2rem, 6vw, 4rem);
   --h2-font-size: clamp(1.8rem, 5vw, 3rem);
   --h3-font-size: clamp(1.4rem, 4vw, 2.4rem);
@@ -40,7 +40,7 @@
 
 html {
   font-size: var(--root-font-size);
-  font-family: var(--font-sans);
+  font-family: var(--root-font-family);
   font-weight: 400;
   line-height: var(--root-line-height);
   text-align: left;
@@ -139,7 +139,7 @@ blockquote:where() {
 }
 
 blockquote {
-  font-family: var(--font-serif);
+  font-family: var(--blockquote-font-family);
   font-style: italic;
 }
 
@@ -152,7 +152,7 @@ blockquote {
 }
 
 code, kbd, pre, samp {
-  font-family: var(--font-mono);
+  font-family: var(--code-font-family);
 }
 
 pre {

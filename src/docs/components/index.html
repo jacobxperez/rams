@@ -1,217 +1,209 @@
 <!DOCTYPE html>
 <html lang="en" id="top">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="robots" content="INDEX, FOLLOW" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Components - RAMs</title>
+        <link rel="stylesheet" href="../../scss/main.scss" />
+        <script src="../../js/main.js"></script>
+    </head>
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="robots" content="INDEX, FOLLOW" />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
-    <title>Components - RAMs</title>
-    <link rel="stylesheet" href="../../scss/main.scss" />
-    <script src="../../js/main.js"></script>
-</head>
+    <body>
+        <header id="components" data-wrapper="fit">
+            <h1>Components</h1>
 
-<body>
-    <header id="components" data-wrapper="fit">
-        <h1>Components</h1>
+            <p data-flex="wrap">
+                <span data-item="grow">
+                    With <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes" target="_blank">data-attributes</a> components become more
+                    composable.</span
+                >
+                <a href="https://github.com/jacobxperez/rams/blob/master/src/docs/components/index.html" target="_blank" data-icon="&#xe08e;"> Edit Page</a>
+            </p>
 
-        <p data-flex="wrap">
-            <span data-item="grow">
-                With <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes"
-                    target="_blank">data-attributes</a> components become more
-                composable.</span>
-            <a href="https://github.com/jacobxperez/rams/blob/master/src/docs/components/index.html" target="_blank"
-                data-icon="&#xe08e;"> Edit Page</a>
-        </p>
+            <hr />
+        </header>
 
-        <hr />
-    </header>
+        <!-- Navbar -->
+        <nav data-navbar="top">
+            <ul data-nav>
+                <li><a data-anchor="navbar" href="../index.html">RAMs</a></li>
 
-    <!-- Navbar -->
-    <nav data-navbar="top">
-        <ul data-nav>
-            <li><a data-anchor="navbar" href="../index.html">RAMs</a></li>
+                <li data-item="grow"></li>
 
-            <li data-item="grow"></li>
+                <li data-display="small-none"><a data-anchor="navbar" href="../index.html">Read Me</a></li>
+                <li data-display="small-none"><a data-anchor="navbar" href="index.html">Components</a></li>
+                <li data-display="small-none"><a data-anchor="navbar" href="../icons/index.html">Icons</a></li>
+                <li data-display="small-none"><a data-anchor="navbar" data-icon="&#xe053;" href="https://github.com/jacobxperez/rams"> Fork</a></li>
 
-            <li data-display="small-none"><a data-anchor="navbar" href="../index.html">Read Me</a></li>
-            <li data-display="small-none"><a data-anchor="navbar" href="index.html">Components</a></li>
-            <li data-display="small-none"><a data-anchor="navbar" href="../icons/index.html">Icons</a></li>
-            <li data-display="small-none"><a data-anchor="navbar" data-icon="&#xe053;"
-                    href="https://github.com/jacobxperez/rams"> Fork</a></li>
+                <!-- Dropdown Menu: show on small screens -->
+                <li data-display="small">
+                    <a data-anchor="navbar" data-icon="&#xe081;" data-toggle="pop"></a>
 
-            <!-- Dropdown Menu: show on small screens -->
-            <li data-display="small">
-                <a data-anchor="navbar" data-icon="&#xe081;" data-toggle="pop"></a>
-
-                <ul data-navbar="child" data-dropbox="menu" data-position="absolute left right">
-                    <li><a data-anchor="navbar" href="../index.html">Read Me</a></li>
-                    <li><a data-anchor="navbar" href="index.html">Components</a></li>
-                    <li><a data-anchor="navbar" href="../icons/index.html">Icons</a></li>
-                    <li><a data-anchor="navbar" data-icon="&#xe053;" href="https://github.com/jacobxperez/rams">
-                            Fork</a></li>
-                </ul>
-            </li>
-            <!-- end Dropdown Menu -->
-        </ul>
-    </nav>
-    <!-- end Navbar -->
-
-    <main data-wrapper="fit" data-grid="main">
-        <!-- Secondary Nav -->
-        <nav></nav>
-        <!-- end Secondary Nav -->
-
-        <!-- Content -->
-        <article>
-            <h2>Buttons</h2>
-
-            <section>
-                <p>
-                    <button data-button>default</button>
-                    <button data-button="outline">outline</button>
-                    <button data-button="link">link</button>
-                    <button data-button data-state="disabled">disabled</button>
-                </p>
-
-                <p>
-                    <button data-button="primary">button</button>
-                    <button data-button="secondary">button</button>
-                    <button data-button="tertiary">button</button>
-                </p>
-                
-                <p>
-                    <button data-button="primary outline">button</button>
-                    <button data-button="secondary outline">button</button>
-                    <button data-button="tertiary outline">button</button>
-                </p>
-
-                <h3>Feedback Buttons</h3>
-
-                <p>
-                    <button data-button="success">button</button>
-                    <button data-button="warning">button</button>
-                    <button data-button="danger">button</button>
-                </p>
-                
-                <p>
-                    <button data-button="success outline">button</button>
-                    <button data-button="warning outline">button</button>
-                    <button data-button="danger outline">button</button>
-                </p>
-            </section>
-
-            <section>
-                <h2>Navigation</h2>
-
-                <nav>
-                    <ul data-nav>
-                        <li><a data-anchor data-state="active">Active</a></li>
-                        <li><a data-anchor>Link</a></li>
-                        <li><a data-anchor>Link</a></li>
-                        <li><a data-anchor>Link</a></li>
+                    <ul data-navbar="child" data-dropbox="menu" data-position="absolute left right">
+                        <li><a data-anchor="navbar" href="../index.html">Read Me</a></li>
+                        <li><a data-anchor="navbar" href="index.html">Components</a></li>
+                        <li><a data-anchor="navbar" href="../icons/index.html">Icons</a></li>
+                        <li><a data-anchor="navbar" data-icon="&#xe053;" href="https://github.com/jacobxperez/rams"> Fork</a></li>
                     </ul>
-                </nav>
+                </li>
+                <!-- end Dropdown Menu -->
+            </ul>
+        </nav>
+        <!-- end Navbar -->
 
-                <h3>Breadcrumb</h3>
+        <main data-wrapper="fit" data-grid="main">
+            <!-- Secondary Nav -->
+            <nav></nav>
+            <!-- end Secondary Nav -->
 
-                <nav>
-                    <ul data-nav="breadcrumb">
-                        <li><span>Active</span></li>
-                        <li><a>Link</a></li>
-                        <li><a>Link</a></li>
-                        <li><a>Link</a></li>
+            <!-- Content -->
+            <article>
+                <h2>Buttons</h2>
+
+                <section>
+                    <p>
+                        <button data-button>default</button>
+                        <button data-button="outline">outline</button>
+                        <button data-button="link">link</button>
+                        <button data-button data-state="disabled">disabled</button>
+                    </p>
+
+                    <p>
+                        <button data-button="primary">button</button>
+                        <button data-button="secondary">button</button>
+                        <button data-button="tertiary">button</button>
+                    </p>
+
+                    <p>
+                        <button data-button="primary outline">button</button>
+                        <button data-button="secondary outline">button</button>
+                        <button data-button="tertiary outline">button</button>
+                    </p>
+
+                    <h3>Feedback Buttons</h3>
+
+                    <p>
+                        <button data-button="success">button</button>
+                        <button data-button="warning">button</button>
+                        <button data-button="danger">button</button>
+                    </p>
+
+                    <p>
+                        <button data-button="success outline">button</button>
+                        <button data-button="warning outline">button</button>
+                        <button data-button="danger outline">button</button>
+                    </p>
+                </section>
+
+                <section>
+                    <h2>Navigation</h2>
+
+                    <nav>
+                        <ul data-nav>
+                            <li><a data-anchor data-state="active">Active</a></li>
+                            <li><a data-anchor>Link</a></li>
+                            <li><a data-anchor>Link</a></li>
+                            <li><a data-anchor>Link</a></li>
+                        </ul>
+                    </nav>
+
+                    <h3>Breadcrumb</h3>
+
+                    <nav>
+                        <ul data-nav="breadcrumb">
+                            <li><span>Active</span></li>
+                            <li><a>Link</a></li>
+                            <li><a>Link</a></li>
+                            <li><a>Link</a></li>
+                        </ul>
+                    </nav>
+
+                    <h3>Tabs</h3>
+
+                    <nav>
+                        <ul data-nav="line">
+                            <li><a data-anchor="line" data-state="active">Active</a></li>
+                            <li><a data-anchor="line">Tab</a></li>
+                            <li><a data-anchor="line">Tab</a></li>
+                            <li><a data-anchor="line">Tab</a></li>
+                        </ul>
+                    </nav>
+
+                    <h3>Navbar</h3>
+
+                    <nav data-navbar>
+                        <ul data-nav>
+                            <li><a data-anchor="navbar" data-state="active">Active</a></li>
+                            <li><a data-anchor="navbar">Link</a></li>
+                            <li><a data-anchor="navbar">Link</a></li>
+                            <li><a data-anchor="navbar">Link</a></li>
+                        </ul>
+                    </nav>
+                </section>
+
+                <section>
+                    <h2>Dropdowns</h2>
+
+                    <p>Dropdowns are multifunctional they can create simple tooltips or complex dropdown content.</p>
+
+                    <h3>Tooltip</h3>
+
+                    <p>
+                        Display additional
+                        <span data-tooltip="Lorem ipsum dolor sit amet.">context</span>
+                        on hover or on click with tooltip.
+                    </p>
+
+                    <h3>Accordion</h3>
+
+                    <p>Reveal extra page content with accordions</p>
+
+                    <ul data-list="border">
+                        <li>
+                            <a data-toggle data-anchor data-flex>
+                                <strong data-item="grow">Content</strong>
+                                <span data-icon="&#xe043;"></span>
+                            </a>
+
+                            <div data-dropbox data-box>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, aut.</div>
+                        </li>
+
+                        <li>
+                            <a data-toggle data-anchor data-flex>
+                                <strong data-item="grow">Content</strong>
+                                <span data-icon="&#xe043;"></span>
+                            </a>
+
+                            <div data-dropbox data-box>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, aut.</div>
+                        </li>
+
+                        <li>
+                            <a data-toggle data-anchor data-flex>
+                                <strong data-item="grow">Content</strong>
+                                <span data-icon="&#xe043;"></span>
+                            </a>
+
+                            <div data-dropbox data-box>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, aut.</div>
+                        </li>
                     </ul>
-                </nav>
+                </section>
+            </article>
+            <!-- end Content -->
+        </main>
 
-                <h3>Tabs</h3>
+        <footer data-wrapper="fit">
+            <hr />
 
-                <nav>
-                    <ul data-nav="line">
-                        <li><a data-anchor="line" data-state="active">Active</a></li>
-                        <li><a data-anchor="line">Tab</a></li>
-                        <li><a data-anchor="line">Tab</a></li>
-                        <li><a data-anchor="line">Tab</a></li>
-                    </ul>
-                </nav>
-
-                <h3>Navbar</h3>
-
-                <nav data-navbar>
-                    <ul data-nav>
-                        <li><a data-anchor="navbar" data-state="active">Active</a></li>
-                        <li><a data-anchor="navbar">Link</a></li>
-                        <li><a data-anchor="navbar">Link</a></li>
-                        <li><a data-anchor="navbar">Link</a></li>
-                    </ul>
-                </nav>
-            </section>
-
-            <section>
-                <h2>Dropdowns</h2>
-
-                <p>Dropdowns are multifunctional they can create simple tooltips or complex dropdown content.</p>
-
-                <h3>Tooltip</h3>
-
-                <p>
-                    Display additional
-                    <span data-tooltip="Lorem ipsum dolor sit amet.">context</span>
-                    on hover or on click with tooltip.
-                </p>
-
-                <h3>Accordion</h3>
-
-                <p>Reveal extra page content with accordions</p>
-
-                <ul data-list="border">
-                    <li>
-                        <a data-toggle data-anchor data-flex>
-                            <strong data-item="grow">Content</strong>
-                            <span data-icon="&#xe043;"></span>
-                        </a>
-
-                        <div data-dropbox data-box>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, aut.
-                        </div>
-                    </li>
-
-                    <li>
-                        <a data-toggle data-anchor data-flex>
-                            <strong data-item="grow">Content</strong>
-                            <span data-icon="&#xe043;"></span>
-                        </a>
-
-                        <div data-dropbox data-box>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, aut.
-                        </div>
-                    </li>
-
-                    <li>
-                        <a data-toggle data-anchor data-flex>
-                            <strong data-item="grow">Content</strong>
-                            <span data-icon="&#xe043;"></span>
-                        </a>
-
-                        <div data-dropbox data-box>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, aut.
-                        </div>
-                    </li>
-                </ul>
-            </section>
-        </article>
-        <!-- end Content -->
-    </main>
-
-    <footer data-wrapper="fit">
-        <hr />
-
-        <p>
-            <small>&copy; 2023 <a href="https://github.com/jacobxperez/rams" target="_blank">RAMs</a> by
-                <a href="https://github.com/jacobxperez" rel="author" target="_blank">Jacob Perez</a> and licensed under
-                the
-                <a href="http://www.apache.org/licenses/LICENSE-2.0" rel="license" target="_blank">Apache License
-                    v2.0</a>.</small>
-        </p>
-    </footer>
-</body>
-
+            <p>
+                <small
+                    >&copy; 2023 <a href="https://github.com/jacobxperez/rams" target="_blank">RAMs</a> by
+                    <a href="https://github.com/jacobxperez" rel="author" target="_blank">Jacob Perez</a> and licensed under the
+                    <a href="http://www.apache.org/licenses/LICENSE-2.0" rel="license" target="_blank">Apache License v2.0</a>.</small
+                >
+            </p>
+        </footer>
+    </body>
 </html>

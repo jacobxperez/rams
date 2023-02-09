@@ -1,0 +1,18 @@
+body > [data-wrapper]:first-child {
+    margin-top: var(--wrapper-margin-top);
+}
+
+body > [data-wrapper]:last-child {
+    margin-bottom: var(--wrapper-margin-bottom);
+}
+
+[data-wrapper] {
+    margin: 0 auto;
+    padding-left: var(--wrapper-gap);
+    padding-right: var(--wrapper-gap);
+    min-width: var(--wrapper-min-width);
+}
+
+[data-wrapper="fit"] {
+    max-width: var(--wrapper-max-width);
+}

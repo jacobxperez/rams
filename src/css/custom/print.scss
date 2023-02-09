@@ -1,0 +1,29 @@
+/* Print: modify print styles to your project specifications
+----------------------------------------------------------------------------- */
+@media print {
+    :root {
+        --background-color: white;
+        --font-color: black;
+        --font-size: 100%;
+        --font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, "Nimbus Roman No9 L", serif;;
+    }
+
+    html,
+    body {
+        height: auto;
+    }
+
+    nav {
+        display: none;
+    }
+
+    [data-wrapper] {
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    [data-grid] {
+        display: block;
+    }
+}

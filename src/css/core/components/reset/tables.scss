@@ -1,0 +1,13 @@
+table {
+    display: table;
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    @extend [data-leading];
+}
+
+td,
+th {
+    display: table-cell;
+    padding: $table-cell-padding-y $table-cell-padding-x;
+}

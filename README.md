@@ -1,6 +1,6 @@
 # [RAMs](https://jacobxperez.github.io/rams/)
 
-Zero-Class CSS Framework - Built with SCSS.
+Zero-Class CSS Framework
 
 ---
 
@@ -49,12 +49,12 @@ file into your project folder and then linking to it in HTML.
 
 Edit the [variables](https://github.com/jacobxperez/rams/blob/master/src/scss/var.scss),add
 [custom](https://github.com/jacobxperez/rams/tree/master/src/scss/custom) modules and linked
-them to [main.scss](https://github.com/jacobxperez/rams/blob/master/src/scss/main.scss) for compiling.
+them to [main.scss](https://github.com/jacobxperez/rams/blob/master/src/css/main.scss) for compiling.
 
 -   [/scss](https://github.com/jacobxperez/rams/tree/master/src/scss/)
     -   [core](https://github.com/jacobxperez/rams/tree/master/src/scss/core) (important files for compiling)
     -   [custom](https://github.com/jacobxperez/rams/tree/master/src/scss/custom) (add custom modules here)
-    -   [main.scss](https://github.com/jacobxperez/rams/blob/master/src/scss/main.scss) (compile to produce the final
+    -   [main.scss](https://github.com/jacobxperez/rams/blob/master/src/css/main.scss) (compile to produce the final
         [CSS](https://github.com/jacobxperez/rams/blob/master/css/main.css))
     -   [var.scss](https://github.com/jacobxperez/rams/blob/master/src/scss/var.scss) (variables for font, colors, and more)
 

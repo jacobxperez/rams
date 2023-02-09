@@ -1,0 +1,36 @@
+[data-button] {
+    display: inline-block;
+    padding: $button-padding-y $button-padding-x;
+    border: $button-border-width solid $button-border-color;
+    @if $button-border-radius != false {
+        border-radius: $button-border-radius;
+    }
+    background-color: transparent;
+    cursor: pointer;
+}
+
+[data-button]:is([data-state="active"], :hover, :active) {
+    background-color: $button-background-active;
+    text-decoration: none;
+}
+
+[data-button]:focus {
+    outline: thin dotted;
+    outline-offset: -0.125rem;
+}
+
+[data-button="link"] {
+    text-decoration: none;
+    background-color: transparent;
+    color: var(--link-color);
+    cursor: pointer;
+}
+
+[data-button="link"]:is([data-state="active"], :hover, :active) {
+    text-decoration: underline;
+}
+
+[data-button="link"]:is([data-state="active"], :hover, :active) {
+    background-color: transparent;
+    border-color: transparent;
+}

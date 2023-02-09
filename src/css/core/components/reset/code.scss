@@ -1,0 +1,12 @@
+code,
+kbd,
+pre,
+samp {
+    font-family: var(--code-font-family);
+}
+
+pre {
+    overflow: auto;
+    white-space: pre-wrap;
+    @extend [data-leading];
+}

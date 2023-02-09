@@ -1,18 +1,18 @@
 {
   "name": "rams",
   "version": "1.0.0",
-  "description": "Zero-Class CSS Framework - Built with SCSS",
+  "description": "Zero-Class CSS Framework",
   "source": [
     "src/index.html",
-    "src/scss/main.scss",
+    "src/css/main.scss",
     "src/js/main.js",
     "src/docs/index.html"
   ],
   "scripts": {
     "js": "parcel build src/js/main.js --dist-dir js --no-optimize --no-content-hash --no-source-maps",
     "js-min": "parcel build src/js/main.js --dist-dir js --no-content-hash --no-source-maps",
-    "css": "parcel build src/scss/main.scss --dist-dir css --no-optimize --no-content-hash --no-source-maps",
-    "css-min": "parcel build src/scss/main.scss --dist-dir css --no-content-hash --no-source-maps",
+    "css": "parcel build src/css/main.scss --dist-dir css --no-optimize --no-content-hash --no-source-maps",
+    "css-min": "parcel build src/css/main.scss --dist-dir css --no-content-hash --no-source-maps",
     "docs": "parcel src/docs/index.html --open",
     "serve": "parcel src/index.html --open",
     "watch": "parcel watch src/index.html",

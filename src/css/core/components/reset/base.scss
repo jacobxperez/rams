@@ -1,0 +1,38 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0 none;
+    font-size: inherit;
+    font-family: inherit;
+    line-height: inherit;
+    text-align: inherit;
+    vertical-align: baseline;
+    color: inherit;
+    outline: 0;
+}
+
+html {
+    font-size: var(--font-size);
+    font-family: var(--font-family);
+    font-weight: 400;
+    line-height: var(--line-height);
+    text-align: left;
+    color: var(--font-color);
+    background-color: var(--background-color);
+    overflow-wrap: break-word;
+    scroll-behavior: smooth;
+}
+
+img,
+svg,
+picture,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+    display: block;
+    max-width: 100%;
+  }

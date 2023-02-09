@@ -1,0 +1,36 @@
+[data-navbar] {
+    z-index: 1000;
+    width: 100%;
+    background-color: $navbar-background;
+    color: $navbar-text-active;
+}
+
+[data-navbar="top"] {
+    position: fixed;
+    top: 0;
+    
+    [data-dropbox] {
+        top: 100%;
+    }
+}
+
+[data-navbar="bottom"] {
+    position: fixed;
+    bottom: 0;
+    
+    [data-dropbox] {
+        bottom: 100%;
+    }
+}
+
+[data-navbar="child"] {
+    background-color: $navbar-child-background;
+}
+
+[data-anchor="navbar"] {
+    color: $navbar-text;
+}
+
+[data-anchor="navbar"]:where([data-state="active"], :hover, :active) {
+    color: $navbar-text-active;
+}

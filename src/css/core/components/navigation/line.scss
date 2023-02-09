@@ -1,0 +1,23 @@
+[data-nav="line"] {
+    border-bottom: $line-border-width solid $line-border-color;
+}
+
+[data-anchor="line"] {
+    position: relative;
+    z-index: 1;
+    color: $line-text;
+}
+
+[data-anchor="line"]:where([data-state="active"], :hover, :active) {
+    z-index: 5;
+    color: $line-text-active;
+}
+
+[data-anchor="line"] {
+    top: $line-border-width;
+    border-bottom: $line-border-width solid transparent;
+}
+
+[data-anchor="line"]:where([data-state="active"], :hover, :active) {
+    border-color: $line-border-active;
+}

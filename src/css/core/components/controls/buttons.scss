@@ -1,0 +1,97 @@
+[data-button~="outline"] {
+    border-color: var(--border-color);
+}
+
+[data-button~="tertiary"] {
+    background-color:  var(--tertiary);
+    color: var(--tertiary-text);
+}
+
+[data-button~="tertiary"]:is([data-state="active"], :hover, :active) {
+    background-color: var(--tertiary-active);
+    color: var(--tertiary-text);
+}
+
+[data-button="tertiary outline"] {
+    border-color:  var(--tertiary);
+    color: var(--tertiary);
+}
+
+[data-button~="secondary"] {
+    background-color:  var(--secondary);
+    color: var(--secondary-text);
+}
+
+[data-button~="secondary"]:is([data-state="active"], :hover, :active) {
+    background-color: var(--secondary-active);
+    color: var(--secondary-text);
+}
+
+[data-button="secondary outline"] {
+    border-color: var(--secondary);
+    color: var(--secondary);
+}
+
+[data-button~="primary"] {
+    background-color: var(--primary);
+    color: var(--primary-text);
+}
+
+[data-button~="primary"]:is([data-state="active"], :hover, :active) {
+    background-color: var(--primary-active);
+    color: var(--primary-text);
+}
+
+[data-button="primary outline"] {
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+[data-button~="success"] {
+    background-color: $success;
+    color: $success-text;
+}
+
+[data-button~="success"]:is([data-state="active"], :hover, :active) {
+    background-color: $success-active;
+    color: $success-text;
+}
+
+[data-button="success outline"] {
+    border-color: $success;
+    color: $success;
+}
+
+[data-button~="warning"] {
+    background-color: $warning;
+    color: $warning-text;
+}
+
+[data-button~="warning"]:is([data-state="active"], :hover, :active) {
+    background-color: $warning-active;
+    color: $warning-text;
+}
+
+[data-button="warning outline"] {
+    border-color: $warning;
+    color: $warning;
+}
+
+[data-button~="danger"] {
+    background-color: $danger;
+    color: $danger-text;
+}
+
+[data-button~="danger"]:is([data-state="active"], :hover, :active) {
+    background-color: $danger-active;
+    color: $danger-text;
+}
+
+[data-button="danger outline"] {
+    border-color: $danger;
+    color: $danger;
+}
+
+[data-button~="outline"] {
+    background-color: transparent;
+}

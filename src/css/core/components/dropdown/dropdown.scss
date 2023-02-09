@@ -1,0 +1,22 @@
+[data-dropbox] {
+    z-index: -10;
+    display: none;
+    visibility: hidden;
+    min-width: var(--dropbox-min-width);
+    background-color: transparent;
+    color: var(--font-color);
+}
+
+[data-dropbox="menu"] {
+    display: block;
+    opacity: 0;
+    transition: $dropbox-transition;
+}
+
+[data-state="active"] > [data-dropbox],
+[data-state="active"] + [data-dropbox] {
+    z-index: 100;
+    display: block;
+    visibility: visible;
+    opacity: 1;
+}

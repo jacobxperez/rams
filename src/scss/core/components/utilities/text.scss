@@ -1,0 +1,18 @@
+// Text
+// ----------------------------------------------------------------------------/
+[data-text~="left"] {
+    text-align: left;
+}
+
+[data-text~="right"] {
+    text-align: right;
+}
+
+[data-text~="center"] {
+    text-align: center;
+}
+
+[data-text~="justify"] {
+    text-align: justify;
+    hyphens: auto;
+}

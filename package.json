@@ -1,0 +1,44 @@
+{
+  "name": "rams",
+  "version": "1.0.0",
+  "description": "Zero-Class CSS Framework - Built with SCSS",
+  "source": [
+    "src/index.html",
+    "src/scss/main.scss",
+    "src/js/main.js",
+    "src/docs/index.html"
+  ],
+  "scripts": {
+    "js": "parcel build src/js/main.js --dist-dir js --no-optimize --no-content-hash --no-source-maps",
+    "js-min": "parcel build src/js/main.js --dist-dir js --no-content-hash --no-source-maps",
+    "css": "parcel build src/scss/main.scss --dist-dir css --no-optimize --no-content-hash --no-source-maps",
+    "css-min": "parcel build src/scss/main.scss --dist-dir css --no-content-hash --no-source-maps",
+    "docs": "parcel src/docs/index.html --open",
+    "serve": "parcel src/index.html --open",
+    "watch": "parcel watch src/index.html",
+    "build": "parcel build src/index.html --no-source-maps",
+    "public": "parcel build src/index.html --no-source-maps --public-url /"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jacobxperez/rams.git"
+  },
+  "keywords": [
+    "css",
+    "scss",
+    "front-end",
+    "framework",
+    "zero-class"
+  ],
+  "author": "Jacob Perez",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/jacobxperez/rams/issues"
+  },
+  "homepage": "https://github.com/jacobxperez/rams/",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.8.3",
+    "parcel": "^2.8.3",
+    "parcel-optimizer-friendly-urls": "^0.2.0"
+  }
+}

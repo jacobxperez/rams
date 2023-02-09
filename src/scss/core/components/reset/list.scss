@@ -1,0 +1,39 @@
+// List Items
+// ----------------------------------------------------------------------------/
+ol,
+ul {
+    list-style-type: none;
+}
+
+[data-list="ol"] {
+    list-style-type: $ol-list-style-type;
+
+    > li:first-child > [data-list="ol"] {
+        list-style-type: $ol-list-style-type-sub;
+    }
+}
+
+[data-list="ul"] {
+    list-style-type: $ul-list-style-type;
+
+    > li:first-child > [data-list="ul"] {
+        list-style-type: $ul-list-style-type-sub;
+    }
+}
+
+[data-list="ol"],
+[data-list="ul"],
+:where([data-list="dl"]) dd {
+    padding-left: var(--leading);
+    list-style-position: outside;
+}
+
+[data-list="ol"],
+[data-list="ul"],
+[data-list="dl"] {
+    @extend [data-leading];
+
+    [data-list] {
+        margin: 0;
+    }
+}

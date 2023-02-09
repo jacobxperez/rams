@@ -1,0 +1,37 @@
+// Display
+// ----------------------------------------------------------------------------/
+
+// Small Screen
+// ----------------------------------------------------------------------------/
+@mixin small-display(){
+
+    [data-display~="small-none"],
+    [data-display~="medium"],
+    [data-display~="large"] {
+        display: none;
+    }
+}
+
+
+// Medium Screen
+// ----------------------------------------------------------------------------/
+@mixin medium-display(){
+
+    [data-display~="medium-none"],
+    [data-display~="small"],
+    [data-display~="large"] {
+        display: none;
+    }
+}
+
+
+// Large Screen
+// ----------------------------------------------------------------------------/
+@mixin large-display(){
+
+    [data-display~="large-none"],
+    [data-display~="small"],
+    [data-display~="medium"] {
+        display: none;
+    }
+}

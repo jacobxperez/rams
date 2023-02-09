@@ -1,0 +1,198 @@
+// Colors
+// ----------------------------------------------------------------------------/
+$primary: #05f;
+$primary-text: #fff;
+$primary-active: darken($primary, 5%);
+
+$secondary: #333;
+$secondary-text: #fff;
+$secondary-active: darken($secondary, 5%);
+
+$tertiary: #1A4499;
+$tertiary-text: #fff;
+$tertiary-active: darken($tertiary, 5%);
+
+$success: #198038;
+$success-text: #fff;
+$success-active: darken($success, 5%);
+
+$warning: #ff832b;
+$warning-text: #fff;
+$warning-active: darken($warning, 5%);
+
+$danger: #da1e28;
+$danger-text: #fff;
+$danger-active: darken($danger, 5%);
+
+
+// Typography
+// ----------------------------------------------------------------------------/
+$headings-font-family: false;
+$headings-font-weight: 400;
+
+$blockquote-font-style: italic;
+
+$mark-text: #000;
+$mark-background: #fc0;
+
+$hr-border-style: solid;
+$hr-border-width: var(--border-width);
+$hr-border-color: var(--border-color);
+
+
+// Lists
+// ----------------------------------------------------------------------------/
+$ol-list-style-type: decimal;
+$ol-list-style-type-sub: lower-alpha;
+$ul-list-style-type: disc;
+$ul-list-style-type-sub: circle;
+
+
+// Table
+// ----------------------------------------------------------------------------/
+$table-cell-padding-y: var(--space-y);
+$table-cell-padding-x: var(--space-x);
+
+
+// Form
+// ----------------------------------------------------------------------------/
+$form-background: transparent;
+$form-background-active: #fff9ef;
+$form-text: false;
+$form-text-active: #000;
+$form-padding-y: var(--space-y);
+$form-padding-x: var(--space-x);
+$form-border-width: var(--border-width);
+$form-border-color: var(--border-color);
+$form-border-active: rgba(0, 0, 0, 0.5);
+$form-border-radius: false;
+$text-area-min-height: 6.25rem;
+
+
+// Button
+// ----------------------------------------------------------------------------/
+$button-background: transparent;
+$button-background-active: rgba(0, 0, 0, .1);
+$button-padding-y: var(--space-y);
+$button-padding-x: var(--space-x);
+$button-border-width: var(--border-width);
+$button-border-color: transparent;
+$button-border-radius: false;
+
+
+// Navigation
+// ----------------------------------------------------------------------------/
+$navbar-background: #222;
+$navbar-text: #fff;
+$navbar-text-active: lighten($navbar-background, 60%);
+$navbar-child-background: lighten($navbar-background, 3%);
+
+$anchor-padding-y: var(--space-y);
+$anchor-padding-x: var(--space-x);
+$anchor-text-active: var(--font-color);
+
+$line-text: #777;
+$line-text-active: var(--font-color);
+$line-border-width: 0.125em;
+$line-border-color: var(--border-color);
+$line-border-active: var(--primary);
+
+$breadcrumb-separator: "/";
+
+
+// Dropdown
+// ----------------------------------------------------------------------------/
+$dropbox-transition: opacity 0.2s ease-out;
+
+
+// Tooltip
+// ----------------------------------------------------------------------------/
+$tooltip-text: #fff;
+$tooltip-background: $navbar-child-background;
+$tooltip-transition: opacity 0.4s ease-out;
+
+
+// Iconography
+// ----------------------------------------------------------------------------/
+$icon-font-name: "icons";
+$icon-font-path: "../fonts/icons/";
+
+
+// CSS Variables
+// ----------------------------------------------------------------------------/
+:root {
+    --primary: #{$primary};
+    --primary-text: #{$primary-text};
+    --primary-active: #{$primary-active};
+
+    --secondary: #{$secondary};
+    --secondary-text: #{$secondary-text};
+    --secondary-active: #{$secondary-active};
+
+    --tertiary: #{$tertiary};
+    --tertiary-text: #{$tertiary-text};
+    --tertiary-active: #{$tertiary-active};
+
+    --success: #{$success};
+    --success-text: #{$success-text};
+    --success-active: #{$success-active};
+
+    --warning: #{$warning};
+    --warning-text: #{$warning-text};
+    --warning-active: #{$warning-text};
+
+    --danger: #{$danger};
+    --danger-text: #{$danger-text};
+    --danger-active: #{$danger-active};
+
+    --background-color: #fff;
+    --font-color: #333;
+    --link-color: var(--primary);
+    --font-size: 100%;
+    --line-height: 1.5;
+    --font-family: HelveticaNeue-Light, "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Nimbus Sans L", sans-serif;
+    --blockquote-font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, "Nimbus Roman No9 L", serif;
+    --code-font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", "Nimbus Mono L", monospace;
+    --h1-font-size: clamp(2rem, 6vw, 4rem);
+    --h2-font-size: clamp(1.8rem, 5vw, 3rem);
+    --h3-font-size: clamp(1.4rem, 4vw, 2.4rem);
+    --h4-font-size: clamp(1.2rem, 3vw, 2rem);
+    --h5-font-size: clamp(1rem, 3vw, 1.8rem);
+    --h6-font-size: clamp(1rem, 3vw, 1.4rem);
+    --small-font-size: .75rem;
+    --leading: 1.5rem;
+
+    --space-y: .5rem;
+    --space-x: .75rem;
+    --border-width: .0625em;
+    --border-color: rgba(0, 0, 0, .3);
+
+    --grid-gap: 1.25rem;
+    --wrapper-min-width: 20rem;
+    --wrapper-max-width: 62.5rem;
+    --wrapper-gap: var(--grid-gap);
+    --wrapper-margin-top: calc(var(--leading) * 3);
+    --wrapper-margin-bottom: calc(var(--leading) * 4);
+
+    --dropbox-min-width: 10rem;
+    --tooltip-min-width: var(--dropbox-min-width);
+
+    --disabled: #e6e6e6;
+    --disabled-text: #999;
+
+    --selection: #d8e5ff;
+    --selection-text: #000;
+}
+
+
+// Breakpoints
+// ----------------------------------------------------------------------------/
+// small screen 680px
+$screen-small-max-width: 42.5em;
+
+// medium screen 681px - 979px
+$screen-medium-min-width: 42.5625em;
+$screen-medium-max-width: 61.1875em;
+
+// large screens 980px
+$screen-large-min-width: 61.25em;

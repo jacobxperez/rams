@@ -37,6 +37,7 @@
   },
   "homepage": "https://github.com/jacobxperez/rams/",
   "devDependencies": {
+    "@mischnic/parcel-namer-preserve-structure": "^0.2.0",
     "@parcel/transformer-sass": "^2.8.3",
     "parcel": "^2.8.3",
     "parcel-optimizer-friendly-urls": "^0.2.0"

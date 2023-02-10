@@ -8,7 +8,7 @@ Zero-Class CSS Framework
 
 -   [About](#about)
 -   [Getting Started](#getting-started)
-    -   [Custom Build](#custom-build)
+    -   [Build](#build)
     -   [Run Scripts](#run-scripts)
     -   [Other Scripts](#other-scripts)
     -   [Contributing](#contributing)
@@ -34,7 +34,7 @@ Install devDependencies on your machine with [npm](https://www.npmjs.com/)
 
     npm install
 
-### Custom Build
+### Build
 
 Edit the [variables](https://github.com/jacobxperez/rams/blob/master/src/css/var.scss), add
 [custom](https://github.com/jacobxperez/rams/tree/master/src/css/custom) modules and linked
@@ -46,18 +46,15 @@ them to [main.scss](https://github.com/jacobxperez/rams/blob/master/src/css/main
     -   [main.scss](https://github.com/jacobxperez/rams/blob/master/src/css/main.scss) (compile to produce the final CSS)
     -   [var.scss](https://github.com/jacobxperez/rams/blob/master/src/css/var.scss) (variables for font, colors, and more)
 
-### Run Scripts
+### Compile
 
-On your terminal run these scripts to compile
+On your terminal run these scripts to compile build
 
 -   `npm run serve` serve current build on your default browser
 -   `npm run watch` watch for changes but does not start server
 -   `npm run build` make current build and exits
 -   `npm run public` makes build and sets url to "/" can be changed on [package.json](https://github.com/jacobxperez/rams/blob/master/package.json)
 -   `npm run docs` locally runs documentation on your default browser
-
-### Other Scripts
-
 -   `npm run js` to compile js files
 -   `npm run css` to compile scss files
 -   `npm run js-min` to compile and minify js

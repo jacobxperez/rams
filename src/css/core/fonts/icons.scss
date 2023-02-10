@@ -1,7 +1,6 @@
 @include font-face($icon-font-name, $icon-font-path);
 
 [data-icon]:before {
-    font-family: "icons";
     content: attr(data-icon);
     display: inline-block;
     font-family: $icon-font-name;

@@ -10,6 +10,7 @@ Zero-Class CSS Framework
 -   [Getting Started](#getting-started)
     -   [Build](#build)
     -   [Compile](#compile)
+    -   [Examples](#examples)
     -   [Contributing](#contributing)
 -   [LICENSE](#license)
     -   [Content](#content)
@@ -58,6 +59,12 @@ On your terminal run these scripts to compile build
 -   `npm run css` to compile scss files
 -   `npm run js-min` to compile and minify js
 -   `npm run css-min` to compile and minify css
+
+### Examples
+
+These examples incorporate the framework with custom modules
+
+-   [Jacob Perez](https://github.com/jacobxperez/blog)
 
 ### [Contributing](https://github.com/jacobxperez/rams/blob/master/.github/CONTRIBUTING.md)
 

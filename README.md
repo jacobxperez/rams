@@ -64,7 +64,8 @@ On your terminal run these scripts to compile build
 
 These examples incorporate the framework with custom modules
 
--   [Jacob Perez](https://github.com/jacobxperez/blog)
+-   [Jacob Perez](https://github.com/jacobxperez/blog): My personal blog
+-   [Company](https://github.com/jacobxperez/company): A single page website template for your business marketing
 
 ### [Contributing](https://github.com/jacobxperez/rams/blob/master/.github/CONTRIBUTING.md)
 

@@ -32,7 +32,7 @@ limitations to discover new designs.
 
 ## Design Philosophy
 
-Perhaps the most famous quote from Dieter Rams "**Good design is as little design
+Perhaps the most famous quote from Dieter Rams is "**Good design is as little design
 as possible**" meaning that by removing the unnecessary the essential comes to the
 forefront. The product becomes useful, understandable, easy to use, and long-lasting.
 

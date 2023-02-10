@@ -52,18 +52,12 @@
 
 // Utilities
 // ----------------------------------------------------------------------------/
-@import "core/components/utilities/text.scss";
-@import "core/components/utilities/flex-box.scss";
-@import "core/components/utilities/position.scss";
-@import "core/components/utilities/display.scss";
+@import "core/components/utilities/import.scss";
 
 
 // Breakpoints
 // ----------------------------------------------------------------------------/
-@import "custom/breakpoint.scss";
-@import "core/components/breakpoints/small.scss";
-@import "core/components/breakpoints/medium.scss";
-@import "core/components/breakpoints/large.scss";
+@import "core/components/breakpoints/import.scss";
 
 
 // Print

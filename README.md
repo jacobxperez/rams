@@ -8,7 +8,6 @@ Zero-Class CSS Framework
 
 -   [About](#about)
 -   [Getting Started](#getting-started)
-    -   [Default Build](#default-build)
     -   [Custom Build](#custom-build)
     -   [Run Scripts](#run-scripts)
     -   [Other Scripts](#other-scripts)
@@ -35,28 +34,17 @@ Install devDependencies on your machine with [npm](https://www.npmjs.com/)
 
     npm install
 
-### Default Build
-
-Copy the pre-compiled [CSS](https://github.com/jacobxperez/rams/blob/master/css/main.css)
-file into your project folder and then linking to it in HTML.
-
-    <link rel="stylesheet" href="css/main.css">
-
--   [/css](https://github.com/jacobxperez/rams/tree/master/css/)
-    -   [main.css](https://github.com/jacobxperez/rams/blob/master/css/main.css)
-
 ### Custom Build
 
-Edit the [variables](https://github.com/jacobxperez/rams/blob/master/src/scss/var.scss),add
-[custom](https://github.com/jacobxperez/rams/tree/master/src/scss/custom) modules and linked
+Edit the [variables](https://github.com/jacobxperez/rams/blob/master/src/css/var.scss), add
+[custom](https://github.com/jacobxperez/rams/tree/master/src/css/custom) modules and linked
 them to [main.scss](https://github.com/jacobxperez/rams/blob/master/src/css/main.scss) for compiling.
 
--   [/scss](https://github.com/jacobxperez/rams/tree/master/src/scss/)
-    -   [core](https://github.com/jacobxperez/rams/tree/master/src/scss/core) (important files for compiling)
-    -   [custom](https://github.com/jacobxperez/rams/tree/master/src/scss/custom) (add custom modules here)
-    -   [main.scss](https://github.com/jacobxperez/rams/blob/master/src/css/main.scss) (compile to produce the final
-        [CSS](https://github.com/jacobxperez/rams/blob/master/css/main.css))
-    -   [var.scss](https://github.com/jacobxperez/rams/blob/master/src/scss/var.scss) (variables for font, colors, and more)
+-   [/css](https://github.com/jacobxperez/rams/tree/master/src/css/)
+    -   [core](https://github.com/jacobxperez/rams/tree/master/src/css/core) (important files for compiling)
+    -   [custom](https://github.com/jacobxperez/rams/tree/master/src/css/custom) (add custom modules here)
+    -   [main.scss](https://github.com/jacobxperez/rams/blob/master/src/css/main.scss) (compile to produce the final CSS)
+    -   [var.scss](https://github.com/jacobxperez/rams/blob/master/src/css/var.scss) (variables for font, colors, and more)
 
 ### Run Scripts
 

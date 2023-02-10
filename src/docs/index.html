@@ -66,7 +66,6 @@
                     <li data-display="small-none">
                         <p><strong>Contents</strong></p>
                     </li>
-                    <li data-display="small-none"><a href="#default-build">Default Build</a></li>
                     <li data-display="small-none"><a href="#custom-build">Custom Build</a></li>
                     <li data-display="small-none"><a href="#run-scripts">Run Scripts</a></li>
                     <li data-display="small-none"><a href="#other-scripts">Other Scripts</a></li>
@@ -78,7 +77,6 @@
                         <a data-anchor data-flex data-toggle><strong data-item="grow">Contents</strong> <span data-icon="&#xe043;"></span></a>
 
                         <ul data-dropbox>
-                            <li><a data-anchor href="#default-build">Default Build</a></li>
                             <li><a data-anchor href="#custom-build">Custom Build</a></li>
                             <li><a data-anchor href="#run-scripts">Run Scripts</a></li>
                             <li><a data-anchor href="#other-scripts">Other Scripts</a></li>
@@ -108,46 +106,25 @@
 
                 <pre data-box="border"><code>npm install</code></pre>
 
-                <h3 id="default-build">Default Build</h3>
-
-                <p>
-                    Copy the pre-compiled <a href="https://github.com/jacobxperez/rams/blob/master/css/main.css">CSS</a>
-                    file into your project folder and then linking to it in HTML.
-                </p>
-
-                <pre data-box="border"><code>&lt;link rel="stylesheet" href="css/main.css"&gt;</code></pre>
-
-                <ul data-list="ul">
-                    <li>
-                        <a href="https://github.com/jacobxperez/rams/tree/master/css" target="_blank">/css</a>
-                        <ul data-list="ul">
-                            <li>
-                                <a href="https://github.com/jacobxperez/rams/blob/master/css/main.css" target="_blank">main.css</a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-
                 <h3 id="custom-build">Custom Build</h3>
 
                 <p>
-                    Edit the <a href="https://github.com/jacobxperez/rams/blob/master/src/scss/var.scss">variables</a>, add
-                    <a href="https://github.com/jacobxperez/rams/tree/master/src/scss/custom">custom</a> modules and linked them to
+                    Edit the <a href="https://github.com/jacobxperez/rams/blob/master/src/css/var.scss">variables</a>, add
+                    <a href="https://github.com/jacobxperez/rams/tree/master/src/css/custom">custom</a> modules and linked them to
                     <a href="https://github.com/jacobxperez/rams/blob/master/src/css/main.scss">main.scss</a> for compiling.
                 </p>
 
                 <ul data-list="ul">
                     <li>
-                        <a href="https://github.com/jacobxperez/rams/tree/master/src/scss/">/scss</a>
+                        <a href="https://github.com/jacobxperez/rams/tree/master/src/css/">/css</a>
                         <ul data-list="ul">
-                            <li><a href="https://github.com/jacobxperez/rams/tree/master/src/scss/core">core</a> (important files for compiling)</li>
-                            <li><a href="https://github.com/jacobxperez/rams/tree/master/src/scss/custom">custom</a> (add custom modules here)</li>
+                            <li><a href="https://github.com/jacobxperez/rams/tree/master/src/css/core">core</a> (important files for compiling)</li>
+                            <li><a href="https://github.com/jacobxperez/rams/tree/master/src/css/custom">custom</a> (add custom modules here)</li>
                             <li>
                                 <a href="https://github.com/jacobxperez/rams/blob/master/src/css/main.scss">main.scss</a>
-                                (compile to produce the final
-                                <a href="https://github.com/jacobxperez/rams/blob/master/css/main.css">CSS</a>)
+                                (compile to produce the final CSS)
                             </li>
-                            <li><a href="https://github.com/jacobxperez/rams/blob/master/src/scss/var.scss">var.scss</a> (variables for font, colors, and more)</li>
+                            <li><a href="https://github.com/jacobxperez/rams/blob/master/src/css/var.scss">var.scss</a> (variables for font, colors, and more)</li>
                         </ul>
                     </li>
                 </ul>

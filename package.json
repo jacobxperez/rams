@@ -1,7 +1,7 @@
 {
   "name": "rams",
   "version": "1.0.0",
-  "description": "Design System Framework",
+  "description": "Design System Framework with Zero-Class Architecture",
   "source": [
     "src/index.html",
     "src/css/main.scss",

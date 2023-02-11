@@ -18,10 +18,9 @@ Design System Framework
 
 ## About
 
-[RAMs](https://jacobxperez.github.io/rams/) is a design system framework with
-[zero-class architecture](https://jacobxperez.github.io/blog/post/css/zero-class/architecture/)
-that utilizes the power of [data-attributes](https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes)
+[RAMs](https://jacobxperez.github.io/rams/) is the first [zero-class architecture](https://jacobxperez.github.io/blog/post/css/zero-class/architecture/) framework that utilizes the power of [data-attributes](https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes)
 for styling components.
+
 
 ## Getting Started
 

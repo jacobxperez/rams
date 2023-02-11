@@ -1,7 +1,4 @@
 @media screen and (min-width: $screen-large-min-width) {
-    // Custom Modules
     @include large-screen();
-
-    // Utillities
     @include large-display();
 }

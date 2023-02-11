@@ -59,9 +59,6 @@ $button-border-radius: false;
 
 /* Navigation */
 $navbar-background: #222;
-$navbar-text: #fff;
-$navbar-text-active: lighten($navbar-background, 60%);
-$navbar-child-background: lighten($navbar-background, 3%);
 
 $anchor-padding-y: var(--space-y);
 $anchor-padding-x: var(--space-x);
@@ -82,7 +79,7 @@ $dropbox-transition: opacity 0.2s ease-out;
 
 /* Tooltip */
 $tooltip-text: #fff;
-$tooltip-background: $navbar-child-background;
+$tooltip-background: var(--navbar-child-background);
 $tooltip-transition: opacity 0.4s ease-out;
 
 
@@ -152,6 +149,11 @@ $screen-large-min-width: 61.25em; /* large screens 980px */
     --wrapper-gap: var(--grid-gap);
     --wrapper-margin-top: calc(var(--leading) * 3);
     --wrapper-margin-bottom: calc(var(--leading) * 4);
+
+    --navbar-background: #{$navbar-background};
+    --navbar-text: contrast(var(--navbar-background));
+    --navbar-text-active: #{lighten($navbar-background, 60%)};
+    --navbar-child-background: #{lighten($navbar-background, 3%)};
 
     --dropbox-min-width: 10rem;
     --tooltip-min-width: var(--dropbox-min-width);

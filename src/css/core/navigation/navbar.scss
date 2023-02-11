@@ -1,8 +1,8 @@
 [data-navbar] {
     z-index: 1000;
     width: 100%;
-    background-color: $navbar-background;
-    color: $navbar-text-active;
+    background-color: var(--navbar-background);
+    color: var(--navbar-text-active);
 }
 
 [data-navbar="top"] {
@@ -24,13 +24,13 @@
 }
 
 [data-navbar="child"] {
-    background-color: $navbar-child-background;
+    background-color: var(--navbar-child-background);
 }
 
 [data-anchor="navbar"] {
-    color: $navbar-text;
+    color: var(--navbar-text);
 }
 
 [data-anchor="navbar"]:where([data-state="active"], :hover, :active) {
-    color: $navbar-text-active;
+    color: var(--navbar-text-active);
 }

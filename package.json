@@ -43,6 +43,7 @@
     "parcel": "^2.8.3",
     "parcel-optimizer-friendly-urls": "^0.2.0",
     "postcss": "^8.4.21",
+    "postcss-contrast": "^0.0.4",
     "postcss-variable-compress": "^2.0.1"
   }
 }

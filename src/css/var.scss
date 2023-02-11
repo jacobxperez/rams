@@ -1,26 +1,20 @@
 /* Colors */
 $primary: #05f;
-$primary-text: #fff;
 $primary-active: darken($primary, 5%);
 
 $secondary: #333;
-$secondary-text: #fff;
 $secondary-active: darken($secondary, 5%);
 
 $tertiary: #1A4499;
-$tertiary-text: #fff;
 $tertiary-active: darken($tertiary, 5%);
 
 $success: #198038;
-$success-text: #fff;
 $success-active: darken($success, 5%);
 
 $warning: #ff832b;
-$warning-text: #fff;
 $warning-active: darken($warning, 5%);
 
 $danger: #da1e28;
-$danger-text: #fff;
 $danger-active: darken($danger, 5%);
 
 
@@ -121,27 +115,27 @@ $screen-large-min-width: 61.25em;
 /* CSS Variables */
 :root {
     --primary: #{$primary};
-    --primary-text: #{$primary-text};
+    --primary-text: contrast(var(--primary));
     --primary-active: #{$primary-active};
 
     --secondary: #{$secondary};
-    --secondary-text: #{$secondary-text};
+    --secondary-text: contrast(var(--secondary));
     --secondary-active: #{$secondary-active};
 
     --tertiary: #{$tertiary};
-    --tertiary-text: #{$tertiary-text};
+    --tertiary-text: contrast(var(--tertiary));
     --tertiary-active: #{$tertiary-active};
 
     --success: #{$success};
-    --success-text: #{$success-text};
+    --success-text: contrast(var(--secondary));
     --success-active: #{$success-active};
 
     --warning: #{$warning};
-    --warning-text: #{$warning-text};
-    --warning-active: #{$warning-text};
+    --warning-text: contrast(var(--warning));
+    --warning-active: #{$warning-active};
 
     --danger: #{$danger};
-    --danger-text: #{$danger-text};
+    --danger-text: contrast(var(--danger));
     --danger-active: #{$danger-active};
 
     --background-color: #fff;
@@ -180,5 +174,5 @@ $screen-large-min-width: 61.25em;
     --disabled-text: #999;
 
     --selection: #d8e5ff;
-    --selection-text: #000;
+    --selection-text: contrast(var(--selection));
 }

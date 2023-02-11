@@ -49,12 +49,12 @@
 
 [data-button~="success"] {
     background-color: $success;
-    color: $success-text;
+    color: var(--success-text);
 }
 
 [data-button~="success"]:is([data-state="active"], :hover, :active) {
     background-color: $success-active;
-    color: $success-text;
+    color: var(--success-text);
 }
 
 [data-button="success outline"] {
@@ -64,12 +64,12 @@
 
 [data-button~="warning"] {
     background-color: $warning;
-    color: $warning-text;
+    color: var(--warning-text);
 }
 
 [data-button~="warning"]:is([data-state="active"], :hover, :active) {
     background-color: $warning-active;
-    color: $warning-text;
+    color: var(--warning-text);
 }
 
 [data-button="warning outline"] {
@@ -79,12 +79,12 @@
 
 [data-button~="danger"] {
     background-color: $danger;
-    color: $danger-text;
+    color: var(--danger-text);
 }
 
 [data-button~="danger"]:is([data-state="active"], :hover, :active) {
     background-color: $danger-active;
-    color: $danger-text;
+    color: var(--danger-text);
 }
 
 [data-button="danger outline"] {

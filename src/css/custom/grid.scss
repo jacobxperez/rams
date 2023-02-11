@@ -1,5 +1,4 @@
-// Grid: modify the grid to your project specifications
-// ----------------------------------------------------------------------------/
+/* Modify the grid to your project specifications */
 [data-grid] {
     display: grid;
     column-gap: var(--wrapper-gap);
@@ -19,36 +18,24 @@
     }
 }
 
-
-// Small Screen Breakpoint
-// ----------------------------------------------------------------------------/
+/* Small Screen Breakpoint */
 @mixin small-grid(){
-
     [data-grid="main"] {
         display: block;
     }
-
 }
 
-
-// Medium Screen Breakpoint
-// ----------------------------------------------------------------------------/
+/* Medium Screen Breakpoint */
 @mixin medium-grid(){
-
     [data-grid="main"] {
         div,
         li {
             grid-column: span 2;
         }
     }
-
 }
 
-
-// Large Screen Breakpoint
-// ----------------------------------------------------------------------------/
+/* Large Screen Breakpoint */
 @mixin large-grid(){
-
-    // Add code
-
+    /* Add code for breakpoint */
 }

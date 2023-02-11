@@ -1,6 +1,6 @@
 # [RAMs](https://jacobxperez.github.io/rams/)
 
-Zero-Class CSS Framework
+Design System Framework
 
 ---
 
@@ -18,10 +18,10 @@ Zero-Class CSS Framework
 
 ## About
 
-[RAMs](https://jacobxperez.github.io/rams/) is a CSS framework with
-[Zero-Class Architecture](https://jacobxperez.github.io/blog/post/css/zero-class/architecture/)
+[RAMs](https://jacobxperez.github.io/rams/) is a design system framework with
+[zero-class architecture](https://jacobxperez.github.io/blog/post/css/zero-class/architecture/)
 that utilizes the power of [data-attributes](https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes)
-for styling components. By removing class names from CSS, your HTML becomes less cluttered easy to read, and more scalable.
+for styling components.
 
 ## Getting Started
 

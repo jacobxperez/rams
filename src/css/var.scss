@@ -13,8 +13,8 @@ $headings-font-weight: 400;
 
 $blockquote-font-style: italic;
 
-$mark-text: #000;
 $mark-background: #fc0;
+$mark-text: #000;
 
 $hr-border-style: solid;
 $hr-border-width: var(--border-width);
@@ -75,11 +75,6 @@ $breadcrumb-separator: "/";
 
 /* Dropdown */
 $dropbox-transition: opacity 0.2s ease-out;
-
-
-/* Tooltip */
-$tooltip-text: #fff;
-$tooltip-background: var(--navbar-child-background);
 $tooltip-transition: opacity 0.4s ease-out;
 
 
@@ -156,6 +151,8 @@ $screen-large-min-width: 61.25em; /* large screens 980px */
     --navbar-child-background: #{lighten($navbar-background, 3%)};
 
     --dropbox-min-width: 10rem;
+    --tooltip-background: var(--navbar-child-background);
+    --tooltip-text: contrast(var(--tooltip-background));
     --tooltip-min-width: var(--dropbox-min-width);
 
     --disabled: #e6e6e6;

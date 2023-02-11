@@ -1,21 +1,10 @@
 /* Colors */
 $primary: #05f;
-$primary-active: darken($primary, 5%);
-
 $secondary: #333;
-$secondary-active: darken($secondary, 5%);
-
 $tertiary: #1A4499;
-$tertiary-active: darken($tertiary, 5%);
-
 $success: #198038;
-$success-active: darken($success, 5%);
-
 $warning: #ff832b;
-$warning-active: darken($warning, 5%);
-
 $danger: #da1e28;
-$danger-active: darken($danger, 5%);
 
 
 /* Typography */
@@ -116,27 +105,27 @@ $screen-large-min-width: 61.25em;
 :root {
     --primary: #{$primary};
     --primary-text: contrast(var(--primary));
-    --primary-active: #{$primary-active};
+    --primary-active: #{darken($primary, 5%)};
 
     --secondary: #{$secondary};
     --secondary-text: contrast(var(--secondary));
-    --secondary-active: #{$secondary-active};
+    --secondary-active: #{darken($secondary, 5%)};
 
     --tertiary: #{$tertiary};
     --tertiary-text: contrast(var(--tertiary));
-    --tertiary-active: #{$tertiary-active};
+    --tertiary-active: #{darken($tertiary, 5%)};
 
     --success: #{$success};
     --success-text: contrast(var(--secondary));
-    --success-active: #{$success-active};
+    --success-active: #{darken($success, 5%)};
 
     --warning: #{$warning};
     --warning-text: contrast(var(--warning));
-    --warning-active: #{$warning-active};
+    --warning-active: #{darken($warning, 5%)};
 
     --danger: #{$danger};
     --danger-text: contrast(var(--danger));
-    --danger-active: #{$danger-active};
+    --danger-active: #{darken($danger, 5%)};
 
     --background-color: #fff;
     --font-color: #333;

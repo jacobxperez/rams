@@ -63,5 +63,5 @@ select,
 }
 
 :not([type="submit"]):invalid {
-    border-color: $danger;
+    border-color: var(--danger);
 }

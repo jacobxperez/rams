@@ -7,7 +7,7 @@ ul {
     list-style-type: $ol-list-style-type;
 
     > li:first-child > [data-list="ol"] {
-        list-style-type: $ol-list-style-type-sub;
+        list-style-type: $ol-list-style-type-child;
     }
 }
 
@@ -15,7 +15,7 @@ ul {
     list-style-type: $ul-list-style-type;
 
     > li:first-child > [data-list="ul"] {
-        list-style-type: $ul-list-style-type-sub;
+        list-style-type: $ul-list-style-type-child;
     }
 }
 

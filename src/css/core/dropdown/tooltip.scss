@@ -18,6 +18,7 @@
     }
 }
 
+/* uncss:ignore */
 [data-tooltip][data-state="active"]::before,
 [data-tooltip]:hover::before {
     z-index: 10;

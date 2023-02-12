@@ -13,6 +13,7 @@
     transition: $dropbox-transition;
 }
 
+/* uncss:ignore */
 [data-state="active"] > [data-dropbox],
 [data-state="active"] + [data-dropbox] {
     z-index: 100;

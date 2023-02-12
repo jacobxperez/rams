@@ -1,7 +1,7 @@
 /* Modify the grid to your project specifications */
 [data-grid] {
     display: grid;
-    column-gap: var(--wrapper-gap);
+    column-gap: $wrapper-gap;
 }
 
 [data-grid="main"] {

@@ -22,7 +22,7 @@ ul {
 [data-list="ol"],
 [data-list="ul"],
 :where([data-list="dl"]) dd {
-    padding-left: var(--leading);
+    padding-left: $leading;
     list-style-position: outside;
 }
 

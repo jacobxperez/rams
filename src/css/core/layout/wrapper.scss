@@ -1,18 +1,18 @@
 body > [data-wrapper]:first-child {
-    margin-top: var(--wrapper-margin-top);
+    margin-top: $wrapper-margin-top;
 }
 
 body > [data-wrapper]:last-child {
-    margin-bottom: var(--wrapper-margin-bottom);
+    margin-bottom: $wrapper-margin-bottom;
 }
 
 [data-wrapper] {
     margin: 0 auto;
-    padding-left: var(--wrapper-gap);
-    padding-right: var(--wrapper-gap);
-    min-width: var(--wrapper-min-width);
+    padding-left: $wrapper-gap;
+    padding-right: $wrapper-gap;
+    min-width: $wrapper-min-width;
 }
 
 [data-wrapper="fit"] {
-    max-width: var(--wrapper-max-width);
+    max-width: $wrapper-max-width;
 }

@@ -4,7 +4,7 @@
 
 [data-anchor] {
     display: block;
-    padding: var(--space-y) var(--space-x);
+    padding: $space-y $space-x;
 }
 
 [data-anchor]:where([data-state="active"], :hover, :active) {

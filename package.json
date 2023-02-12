@@ -1,7 +1,7 @@
 {
   "name": "rams",
   "version": "1.0.0",
-  "description": "Design System Framework with Zero-Class Architecture",
+  "description": "Design System Framework with Class Less Architecture",
   "source": [
     "src/*.html"
   ],
@@ -21,8 +21,8 @@
     "scss",
     "front-end",
     "framework",
-    "zero-class",
-    "design system"
+    "design system",
+    "class less Architecture"
   ],
   "author": "Jacob Perez",
   "license": "Apache-2.0",

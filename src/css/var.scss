@@ -1,7 +1,7 @@
 /* Theme Colors */
 $primary: #05f;
-$secondary: #333;
-$tertiary: #1A4499;
+$secondary: #1A4499;
+$tertiary: #333;
 $success: #198038;
 $warning: #ff832b;
 $danger: #da1e28;
@@ -177,6 +177,6 @@ $screen-large-min-width: 61.25em; /* large screens 980px */
     --disabled: #e6e6e6;
     --disabled-text: #999;
 
-    --selection: #d8e5ff;
+    --selection: #3d87ff;
     --selection-text: contrast(var(--selection));
 }

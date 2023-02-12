@@ -8,14 +8,24 @@ $danger: #da1e28;
 
 
 /* Typography */
+$font-family: HelveticaNeue-Light, "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Nimbus Sans L", sans-serif;
+
+/* headings */
 $headings-font-family: false;
 $headings-font-weight: 400;
 
+/* blockquote */
+$blockquote-font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, "Nimbus Roman No9 L", serif;
 $blockquote-font-style: italic;
 
+/* pre & code */
+$mono-font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", "Nimbus Mono L", monospace;
+
+/* mark */
 $mark-background: #fc0;
 $mark-text: #000;
 
+/* hr */
 $hr-border-style: solid;
 $hr-border-width: var(--border-width);
 $hr-border-color: var(--border-color);
@@ -60,21 +70,29 @@ $button-border-radius: false;
 /* Navigation */
 $navbar-background: #222;
 
+/* anchor */
 $anchor-padding-y: var(--space-y);
 $anchor-padding-x: var(--space-x);
 $anchor-text-active: var(--font-color);
 
-$line-text: #777;
-$line-text-active: var(--font-color);
+/* line */
 $line-border-width: 0.125em;
 $line-border-color: var(--border-color);
-$line-border-active: var(--primary);
+$anchor-line-text: #777;
+$anchor-line-text-active: var(--font-color);
+$anchor-line-border-active: var(--primary);
 
+/* breadcrumb */
 $breadcrumb-separator: "/";
 
 
 /* Dropdown */
+$dropbox-min-width: 10rem;
 $dropbox-transition: opacity 0.2s ease-out;
+
+
+/* Tooltip */
+$tooltip-min-width: $dropbox-min-width;
 $tooltip-transition: opacity 0.4s ease-out;
 
 
@@ -121,9 +139,8 @@ $screen-large-min-width: 61.25em; /* large screens 980px */
     --link-color: var(--primary);
     --font-size: 100%;
     --line-height: 1.5;
-    --font-family: HelveticaNeue-Light, "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Nimbus Sans L", sans-serif;
-    --blockquote-font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, "Nimbus Roman No9 L", serif;
-    --code-font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", "Nimbus Mono L", monospace;
+    --leading: 1.5rem;
+    
     --h1-font-size: clamp(2rem, 6vw, 4rem);
     --h2-font-size: clamp(1.8rem, 5vw, 3rem);
     --h3-font-size: clamp(1.4rem, 4vw, 2.4rem);
@@ -131,7 +148,6 @@ $screen-large-min-width: 61.25em; /* large screens 980px */
     --h5-font-size: clamp(1rem, 3vw, 1.8rem);
     --h6-font-size: clamp(1rem, 3vw, 1.4rem);
     --small-font-size: .75rem;
-    --leading: 1.5rem;
 
     --space-y: .5rem;
     --space-x: .75rem;
@@ -150,10 +166,8 @@ $screen-large-min-width: 61.25em; /* large screens 980px */
     --navbar-text-active: #{lighten($navbar-background, 60%)};
     --navbar-child-background: #{lighten($navbar-background, 3%)};
 
-    --dropbox-min-width: 10rem;
     --tooltip-background: var(--navbar-child-background);
     --tooltip-text: contrast(var(--tooltip-background));
-    --tooltip-min-width: var(--dropbox-min-width);
 
     --disabled: #e6e6e6;
     --disabled-text: #999;

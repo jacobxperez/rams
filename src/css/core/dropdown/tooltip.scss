@@ -9,7 +9,7 @@
         z-index: -10;
         bottom: 100%;
         left: 0;
-        min-width: var(--tooltip-min-width);
+        min-width: $tooltip-min-width;
         padding: var(--space-y) var(--space-x);
         background-color: var(--tooltip-background);
         color: var(--tooltip-text);

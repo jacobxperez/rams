@@ -10,7 +10,7 @@ blockquote:after {
 }
 
 blockquote {
-    font-family: var(--blockquote-font-family);
+    font-family: $blockquote-font-family;
     font-style: $blockquote-font-style;
     @extend [data-leading];
 }

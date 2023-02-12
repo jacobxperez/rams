@@ -2,7 +2,7 @@
     z-index: -10;
     display: none;
     visibility: hidden;
-    min-width: var(--dropbox-min-width);
+    min-width: $dropbox-min-width;
     background-color: transparent;
     color: var(--font-color);
 }

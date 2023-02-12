@@ -5,12 +5,12 @@
 [data-anchor="line"] {
     position: relative;
     z-index: 1;
-    color: $line-text;
+    color: $anchor-line-text;
 }
 
 [data-anchor="line"]:where([data-state="active"], :hover, :active) {
     z-index: 5;
-    color: $line-text-active;
+    color: $anchor-line-text-active;
 }
 
 [data-anchor="line"] {
@@ -19,5 +19,5 @@
 }
 
 [data-anchor="line"]:where([data-state="active"], :hover, :active) {
-    border-color: $line-border-active;
+    border-color: $anchor-line-border-active;
 }

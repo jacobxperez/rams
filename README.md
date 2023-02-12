@@ -18,7 +18,7 @@ Design System Framework with [Class Less Architecture](https://jacobxperez.githu
 
 ## About
 
-[RAMs](https://jacobxperez.github.io/rams/) is the first [class less architecture](https://jacobxperez.github.io/blog/post/css/class-less-architecture/) framework that utilizes the power of [data-attributes](https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes)
+[RAMs](https://jacobxperez.github.io/rams/) is a [class less](https://jacobxperez.github.io/blog/post/css/class-less-architecture/) framework that utilizes the power of [data-attributes](https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes)
 for styling components.
 
 ## Getting Started

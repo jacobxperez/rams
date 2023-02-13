@@ -1,6 +1,6 @@
 # [RAMs](https://jacobxperez.github.io/rams/)
 
-Design System Framework with [Class Less Architecture](https://jacobxperez.github.io/blog/post/css/class-less-architecture/)
+[Class Less](https://jacobxperez.github.io/blog/post/css/class-less-architecture/) CSS Framework
 
 ---
 
@@ -18,7 +18,8 @@ Design System Framework with [Class Less Architecture](https://jacobxperez.githu
 
 ## About
 
-[RAMs](https://jacobxperez.github.io/rams/) is a [class less](https://jacobxperez.github.io/blog/post/css/class-less-architecture/) framework that utilizes the power of [data-attributes](https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes)
+[RAMs](https://jacobxperez.github.io/rams/) is a [class less](https://jacobxperez.github.io/blog/post/css/class-less-architecture/)
+css framework that utilizes the power of [data-attributes](https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes)
 for styling components.
 
 ## Getting Started
@@ -46,13 +47,13 @@ them to [main.scss](https://github.com/jacobxperez/rams/blob/master/src/css/main
 
 ### Compile
 
-On your terminal run these scripts to compile build
+On your terminal run these scripts to compile
 
--   `npm run docs` locally runs documentation on your default browser
--   `npm run dev` serve current build on your default browser
+-   `npm run docs` locally runs documentation 
+-   `npm run dev` serve current development build
 -   `npm run watch` watch for changes but does not start server
--   `npm run build` make current build and exits
--   `npm run public` makes build and sets url to "/" can be changed on [package.json](https://github.com/jacobxperez/rams/blob/master/package.json)
+-   `npm run build` make current build but does not start server
+-   `npm run public` makes public build and sets url to "/" can be changed on [package.json](https://github.com/jacobxperez/rams/blob/master/package.json)
 
 ### Examples
 

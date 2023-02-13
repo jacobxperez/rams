@@ -1,11 +1,11 @@
 [data-list="border"] {
     border: $border-width solid $border-color;
+}
 
-    > li {
-        border-bottom: $border-width solid $border-color;
-    }
+[data-list="border"] > li {
+    border-bottom: $border-width solid $border-color;
+}
 
-    > li:last-child {
-        border: 0;
-    }
+[data-list="border"] > li:last-child {
+    border: 0;
 }

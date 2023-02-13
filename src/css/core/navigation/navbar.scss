@@ -8,19 +8,19 @@
 [data-navbar="top"] {
     position: fixed;
     top: 0;
+}
 
-    [data-dropbox] {
-        top: 100%;
-    }
+:where([data-navbar="top"]) [data-dropbox] {
+    top: 100%;
 }
 
 [data-navbar="bottom"] {
     position: fixed;
     bottom: 0;
+}
 
-    [data-dropbox] {
-        bottom: 100%;
-    }
+:where([data-navbar="bottom"]) [data-dropbox] {
+    bottom: 100%;
 }
 
 [data-navbar="child"] {

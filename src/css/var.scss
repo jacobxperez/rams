@@ -87,7 +87,7 @@ $button-border-radius: false;
 
 
 /* Navigation */
-$navbar-background: #222;
+$navbar-background: $tertiary;
 
 /* anchor */
 $anchor-padding-y: $space-y;
@@ -97,7 +97,7 @@ $anchor-text-active: var(--font-color);
 /* line */
 $line-border-width: 0.125em;
 $line-border-color: $border-color;
-$anchor-line-text: #777;
+$anchor-line-text: rgba(0, 0, 0, 0.5);
 $anchor-line-text-active: var(--font-color);
 $anchor-line-border-active: var(--primary);
 

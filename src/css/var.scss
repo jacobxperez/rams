@@ -17,6 +17,7 @@ $border-color: rgba(0, 0, 0, .3);
 /* Typography */
 $font-family: HelveticaNeue-Light, "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Nimbus Sans L", sans-serif;
 $font-size: 100%;
+$font-weight: 400;
 $line-height: 1.5;
 $leading: 1.5rem; /* margin bottom */
 
@@ -64,14 +65,13 @@ $table-cell-padding-x: $space-x;
 
 /* Form */
 $form-background: transparent;
-$form-background-active: #fff9ef;
-$form-text: false;
-$form-text-active: #000;
+$form-text: rgba(0, 0, 0, 0.5);
+$form-text-active: var(--font-color);
 $form-padding-y: $space-y;
 $form-padding-x: $space-x;
 $form-border-width: $border-width;
 $form-border-color: $border-color;
-$form-border-active: rgba(0, 0, 0, 0.5);
+$form-border-active: rgba(0, 0, 0, 0.8);
 $form-border-radius: false;
 $text-area-min-height: 6.25rem;
 

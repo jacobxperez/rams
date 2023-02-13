@@ -2,10 +2,10 @@
     display: inline-block;
     padding: $button-padding-y $button-padding-x;
     border: $button-border-width solid $button-border-color;
+    background-color: transparent;
     @if $button-border-radius != false {
         border-radius: $button-border-radius;
     }
-    background-color: transparent;
     cursor: pointer;
 }
 
@@ -23,7 +23,6 @@
     text-decoration: none;
     background-color: transparent;
     color: var(--link-color);
-    cursor: pointer;
 }
 
 [data-button="link"]:is([data-state="active"], :hover, :active) {

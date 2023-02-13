@@ -17,11 +17,9 @@ input[type="week"] {
     padding: $form-padding-y $form-padding-x;
     border: $form-border-width solid $form-border-color;
     background-color: $form-background;
+    color: $form-text;
     @if $form-border-radius != false {
         border-radius: $form-border-radius;
-    }
-    @if $form-text != false {
-        color: $form-text;
     }
 }
 
@@ -40,10 +38,7 @@ input[type="text"]:focus,
 input[type="time"]:focus,
 input[type="url"]:focus,
 input[type="week"]:focus {
-    background-color: $form-background-active;
-    @if $form-text-active != false {
-        color: $form-text-active;
-    }
+    color: $form-text-active;
     border-color: $form-border-active;
 }
 

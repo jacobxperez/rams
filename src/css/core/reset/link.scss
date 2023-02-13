@@ -5,11 +5,11 @@
     cursor: pointer;
 }
 
-a:where(:hover, :active) {
+:where(a:hover, a:active) {
     text-decoration: underline;
 }
 
-a:where(:focus) {
+:where(a:focus) {
     outline: thin dotted;
     outline-offset: -0.125rem;
 }

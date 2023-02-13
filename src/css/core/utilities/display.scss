@@ -1,5 +1,4 @@
-/* Small Screen
-*****************************************************************************/
+/* Small Screen */
 @mixin small-display(){
 
     [data-display~="small-none"],
@@ -10,8 +9,7 @@
 }
 
 
-/* Medium Screen
-*****************************************************************************/
+/* Medium Screen */
 @mixin medium-display(){
 
     [data-display~="medium-none"],
@@ -22,8 +20,7 @@
 }
 
 
-/* Large Screen
-*****************************************************************************/
+/* Large Screen */
 @mixin large-display(){
 
     [data-display~="large-none"],

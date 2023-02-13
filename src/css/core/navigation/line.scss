@@ -1,4 +1,8 @@
-[data-nav="line"] {
+[data-nav="line-top"] {
+    border-top: $line-border-width solid $line-border-color;
+}
+
+[data-nav="line-bottom"] {
     border-bottom: $line-border-width solid $line-border-color;
 }
 
@@ -13,7 +17,12 @@
     color: $anchor-line-text-active;
 }
 
-[data-anchor="line"] {
+:where([data-nav="line-top"]) [data-anchor="line"] {
+    bottom: $line-border-width;
+    border-top: $line-border-width solid transparent;
+}
+
+:where([data-nav="line-bottom"]) [data-anchor="line"] {
     top: $line-border-width;
     border-bottom: $line-border-width solid transparent;
 }

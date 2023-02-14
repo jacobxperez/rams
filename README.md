@@ -1,6 +1,6 @@
 # [RAMs](https://jacobxperez.github.io/rams/)
 
-A [Class Less](https://jacobxperez.github.io/blog/post/css/class-less-architecture/) CSS Framework
+A [Class Less](https://jacobxperez.github.io/blog/post/css/class-less-architecture/) CSS Design Framework
 
 ---
 

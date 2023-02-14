@@ -6,16 +6,14 @@
 
 [data-grid="main"] {
     grid-template-columns: repeat(4, 1fr);
+}
 
-    header,
-    footer {
-        grid-column: 1 #{"/"} -1;
-    }
+:where([data-grid="main"]) header, footer {
+    grid-column: 1 #{"/"} -1;
+}
 
-    article,
-    section {
-        grid-column: span 3;
-    }
+:where([data-grid="main"]) article, section {
+    grid-column: span 3;
 }
 
 /* Small Screen Breakpoint */
@@ -27,11 +25,8 @@
 
 /* Medium Screen Breakpoint */
 @mixin medium-grid(){
-    [data-grid="main"] {
-        div,
-        li {
-            grid-column: span 2;
-        }
+    :where([data-grid="main"]) div, li {
+        grid-column: span 2;
     }
 }
 

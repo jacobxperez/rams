@@ -1,6 +1,5 @@
 /* Small Screen */
-@mixin small-display(){
-
+@mixin small-display() {
     [data-display~="small-none"],
     [data-display~="medium"],
     [data-display~="large"] {
@@ -8,10 +7,8 @@
     }
 }
 
-
 /* Medium Screen */
-@mixin medium-display(){
-
+@mixin medium-display() {
     [data-display~="medium-none"],
     [data-display~="small"],
     [data-display~="large"] {
@@ -19,10 +16,8 @@
     }
 }
 
-
 /* Large Screen */
-@mixin large-display(){
-
+@mixin large-display() {
     [data-display~="large-none"],
     [data-display~="small"],
     [data-display~="medium"] {

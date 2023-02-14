@@ -62,6 +62,8 @@ These examples incorporate the framework with custom modules
 -   [Jacob Perez](https://github.com/jacobxperez/blog): I am a front-end web developer and designer.
 -   [Company](https://github.com/jacobxperez/company): A single page website template for your business marketing
 
+**note:** these examples may contain an older version of RAMs 
+
 ### [Contributing](https://github.com/jacobxperez/rams/blob/master/.github/CONTRIBUTING.md)
 
 If you are interested in contributing to this project, please read our

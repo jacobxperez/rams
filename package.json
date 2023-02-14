@@ -1,7 +1,7 @@
 {
   "name": "rams",
   "version": "1.0.0",
-  "description": "Design System Framework with Class Less Architecture",
+  "description": "A Class Less CSS Framework",
   "source": [
     "src/index.html"
   ],

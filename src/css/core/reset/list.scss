@@ -32,9 +32,8 @@ ul {
     list-style-position: outside;
 }
 
-[data-list="ol"] [data-list] ,
-[data-list="ul"] [data-list] ,
+[data-list="ol"] [data-list],
+[data-list="ul"] [data-list],
 [data-list="dl"] [data-list] {
-     margin: 0;
-
+    margin: 0;
 }

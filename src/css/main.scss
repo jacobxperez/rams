@@ -9,7 +9,6 @@
 @import "var.scss";
 @import "core/mixins/import.scss";
 
-
 /* Reset */
 @import "core/reset/base.scss";
 @import "core/reset/typography.scss";
@@ -21,7 +20,6 @@
 @import "core/reset/forms.scss";
 @import "core/reset/button.scss";
 @import "core/reset/selection.scss";
-
 
 /* Components */
 @import "core/layout/wrapper.scss";
@@ -36,22 +34,17 @@
 @import "core/controls/buttons.scss";
 @import "core/controls/disabled.scss";
 
-
 /* Custom Modules */
 @import "custom/grid.scss";
-
 
 /* Fonts */
 @import "core/fonts/icons.scss";
 
-
 /* Utilities */
 @import "core/utilities/import.scss";
 
-
 /* Breakpoints */
 @import "core/breakpoints/import.scss";
-
 
 /* Print */
 @import "custom/print.scss";

@@ -1,19 +1,17 @@
 /* Small Screen Breakpoint */
-@mixin small-screen(){
+@mixin small-screen() {
     /* Add code for breakpoint */
     @include small-grid();
 }
 
-
 /* Medium Screen Breakpoint */
-@mixin medium-screen(){
+@mixin medium-screen() {
     /* Add code for breakpoint */
     @include medium-grid();
 }
 
-
 /* Large Screen Breakpoint */
-@mixin large-screen(){
+@mixin large-screen() {
     /* Add code for breakpoint */
     @include large-grid();
 }

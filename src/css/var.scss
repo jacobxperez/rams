@@ -79,6 +79,10 @@ $button-border-width: $border-width;
 $button-border-color: transparent;
 $button-border-radius: false;
 
+/* disabled */
+$disabled: rgba(0, 0, 0, 0.1);
+$disabled-text: rgba(0, 0, 0, 0.3);
+
 /* Navigation */
 $navbar-background: $tertiary;
 
@@ -126,6 +130,10 @@ $screen-large-min-width: 61.25em; /* large screens 980px */
 /* Print */
 $print-font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, "Nimbus Roman No9 L", serif;
 
+/* Selection */
+$selection: #4784ff;
+$selection-text: contrast(#{$selection});
+
 /* CSS Variables */
 :root {
     --background-color: #fff;
@@ -163,10 +171,4 @@ $print-font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgi
 
     --tooltip-background: var(--navbar-child-background);
     --tooltip-text: contrast(var(--tooltip-background));
-
-    --disabled: #e6e6e6;
-    --disabled-text: #999;
-
-    --selection: #4784ff;
-    --selection-text: contrast(var(--selection));
 }

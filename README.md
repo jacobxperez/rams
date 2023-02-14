@@ -49,7 +49,7 @@ them to [main.scss](https://github.com/jacobxperez/rams/blob/master/src/css/main
 
 On your terminal run these scripts to compile
 
--   `npm run docs` locally runs documentation 
+-   `npm run docs` locally runs documentation
 -   `npm run dev` serve current development build
 -   `npm run watch` watch for changes but does not start server
 -   `npm run build` make current build but does not start server

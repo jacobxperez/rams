@@ -6,7 +6,13 @@ ul {
 [data-list="ol"],
 [data-list="ul"],
 [data-list="dl"] {
+    padding-left: $leading;
     @extend [data-leading];
+}
+
+[data-list="ol"],
+[data-list="ul"] {
+    list-style-position: outside;
 }
 
 [data-list="ol"] {
@@ -25,15 +31,8 @@ ul {
     list-style-type: $ul-list-style-type-child;
 }
 
-[data-list="ol"],
-[data-list="ul"],
-:where([data-list="dl"]) dd {
-    padding-left: $leading;
-    list-style-position: outside;
-}
-
-[data-list="ol"] [data-list],
-[data-list="ul"] [data-list],
-[data-list="dl"] [data-list] {
+:where([data-list="ol"]) [data-list],
+:where([data-list="ul"]) [data-list],
+:where([data-list="dl"]) [data-list] {
     margin: 0;
 }

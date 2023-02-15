@@ -5,8 +5,12 @@
     color: var(--navbar-text-active);
 }
 
-[data-navbar="top"] {
+[data-navbar="top"],
+[data-navbar="bottom"] {
     position: fixed;
+}
+
+[data-navbar="top"] {
     top: 0;
 }
 
@@ -15,7 +19,6 @@
 }
 
 [data-navbar="bottom"] {
-    position: fixed;
     bottom: 0;
 }
 

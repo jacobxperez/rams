@@ -1,5 +1,5 @@
 ::selection {
-    background-color: $selection;
-    color: $selection-text;
+    background-color: var(--selection);
+    color: var(--selection-text);
     text-shadow: none;
 }

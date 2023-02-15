@@ -1,11 +1,3 @@
-/* Theme Colors */
-$primary: #05f;
-$secondary: #1a4499;
-$tertiary: #333;
-$success: #198038;
-$warning: #ff832b;
-$danger: #da1e28;
-
 /* Box Model */
 $space-y: 0.5rem;
 $space-x: 0.75rem;
@@ -40,7 +32,7 @@ $mono-font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typ
 $small-font-size: 0.75rem;
 
 /* mark */
-$mark-background: #fc0;
+$mark-background: hsl(50, 100%, 50%);
 $mark-text: #000;
 
 /* hr */
@@ -78,13 +70,6 @@ $button-padding-x: $space-x;
 $button-border-width: $border-width;
 $button-border-color: transparent;
 $button-border-radius: false;
-
-/* disabled */
-$disabled: rgba(0, 0, 0, 0.1);
-$disabled-text: rgba(0, 0, 0, 0.3);
-
-/* Navigation */
-$navbar-background: $tertiary;
 
 /* anchor */
 $anchor-padding-y: $space-y;
@@ -130,45 +115,54 @@ $screen-large-min-width: 61.25em; /* large screens 980px */
 /* Print */
 $print-font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, "Nimbus Roman No9 L", serif;
 
-/* Selection */
-$selection: #4784ff;
-$selection-text: contrast(#{$selection});
-
 /* CSS Variables */
 :root {
     --background-color: #fff;
-    --font-color: #333;
+    --font-color: hsl(0, 0%, 15%);
     --link-color: var(--primary);
 
-    --primary: #{$primary};
+    --primary: hsl(220, 100%, 50%);
     --primary-text: contrast(var(--primary));
-    --primary-active: #{darken($primary, 5%)};
+    --primary-active: hsl(220, 100%, 45%);
 
-    --secondary: #{$secondary};
+    --secondary: hsl(220, 80%, 30%);
     --secondary-text: contrast(var(--secondary));
-    --secondary-active: #{darken($secondary, 5%)};
+    --secondary-active: hsl(220, 80%, 35%);
 
-    --tertiary: #{$tertiary};
+    --tertiary: hsl(0, 0%, 15%);
     --tertiary-text: contrast(var(--tertiary));
-    --tertiary-active: #{darken($tertiary, 5%)};
+    --tertiary-active: hsl(0, 0%, 20%);
 
-    --success: #{$success};
+    --success: hsl(138, 67%, 30%);
     --success-text: contrast(var(--secondary));
-    --success-active: #{darken($success, 5%)};
+    --success-active: hsl(138, 67%, 25%);
 
-    --warning: #{$warning};
+    --warning: hsl(25, 100%, 60%);
     --warning-text: contrast(var(--warning));
-    --warning-active: #{darken($warning, 5%)};
+    --warning-active: hsl(25, 100%, 55%);
 
-    --danger: #{$danger};
+    --danger: hsl(357, 76%, 50%);
     --danger-text: contrast(var(--danger));
-    --danger-active: #{darken($danger, 5%)};
+    --danger-active: hsl(357, 76%, 45%);
 
-    --navbar-background: #{$navbar-background};
+    --navbar-background: hsl(0, 0%, 15%);
     --navbar-text: contrast(var(--navbar-background));
-    --navbar-text-active: #{lighten($navbar-background, 60%)};
-    --navbar-child-background: #{lighten($navbar-background, 3%)};
+    --navbar-text-active: hsl(0, 0%, 70%);
+    --navbar-child-background: hsl(0, 0%, 20%);
 
     --tooltip-background: var(--navbar-child-background);
     --tooltip-text: contrast(var(--tooltip-background));
+
+    --disabled: rgba(0, 0, 0, 0.1);
+    --disabled-text: rgba(0, 0, 0, 0.3);
+
+    --selection: #4784ff;
+    --selection-text: contrast(var(--secondary-text));
 }
+
+// @media (prefers-color-scheme: dark) {
+//     :root {
+//         --background-color: hsl(0, 0%, 15%);
+//         --font-color: #fff;
+//     }
+// }

@@ -12,7 +12,7 @@
     --secondary-text: contrast(var(--secondary));
     --secondary-active: hsl(220, 80%, 35%);
 
-    --tertiary: hsl(0, 0%, 15%);
+    --tertiary: var(--font-color);
     --tertiary-text: contrast(var(--tertiary));
     --tertiary-active: hsl(0, 0%, 20%);
 
@@ -30,7 +30,7 @@
 
     --navbar-background: hsl(0, 0%, 15%);
     --navbar-child-background: hsl(0, 0%, 20%);
-    --anchor-navbar-text: contrast(var(--navbar-background));
+    --anchor-navbar-text: #fff;
     --anchor-navbar-text-active: hsl(0, 0%, 70%);
 
     --tooltip-background: var(--navbar-child-background);
@@ -46,7 +46,7 @@
 // @media (prefers-color-scheme: dark) {
 //     :root {
 //         --background-color: hsl(0, 0%, 10%);
-//         --font-color: hsl(0, 0%, 80%);
+//         --font-color: hsl(0, 0%, 70%);
 //     }
 // }
 

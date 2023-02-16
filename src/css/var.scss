@@ -1,3 +1,54 @@
+:root {
+    --background-color: #fff;
+    --font-color: hsl(0, 0%, 15%);
+    --link-color: var(--primary);
+
+    --primary: hsl(220, 100%, 50%);
+    --primary-text: contrast(var(--primary));
+    --primary-active: hsl(220, 100%, 45%);
+
+    --secondary: hsl(220, 80%, 30%);
+    --secondary-text: contrast(var(--secondary));
+    --secondary-active: hsl(220, 80%, 35%);
+
+    --tertiary: hsl(0, 0%, 15%);
+    --tertiary-text: contrast(var(--tertiary));
+    --tertiary-active: hsl(0, 0%, 20%);
+
+    --success: hsl(140, 70%, 30%);
+    --success-text: contrast(var(--secondary));
+    --success-active: hsl(140, 70%, 25%);
+
+    --warning: hsl(25, 100%, 60%);
+    --warning-text: contrast(var(--warning));
+    --warning-active: hsl(25, 100%, 55%);
+
+    --danger: hsl(0, 70%, 50%);
+    --danger-text: contrast(var(--danger));
+    --danger-active: hsl(0, 70%, 45%);
+
+    --navbar-background: hsl(0, 0%, 15%);
+    --navbar-text: contrast(var(--navbar-background));
+    --navbar-text-active: hsl(0, 0%, 70%);
+    --navbar-child-background: hsl(0, 0%, 20%);
+
+    --tooltip-background: var(--navbar-child-background);
+    --tooltip-text: contrast(var(--tooltip-background));
+
+    --disabled: rgba(0, 0, 0, 0.1);
+    --disabled-text: rgba(0, 0, 0, 0.3);
+
+    --selection: #4784ff;
+    --selection-text: contrast(var(--secondary-text));
+}
+
+// @media (prefers-color-scheme: dark) {
+//     :root {
+//         --background-color: hsl(0, 0%, 15%);
+//         --font-color: #fff;
+//     }
+// }
+
 /* Box Model */
 $space-y: 0.5rem;
 $space-x: 0.75rem;
@@ -114,55 +165,3 @@ $screen-large-min-width: 61.25em; /* large screens 980px */
 
 /* Print */
 $print-font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, "Nimbus Roman No9 L", serif;
-
-/* CSS Variables */
-:root {
-    --background-color: #fff;
-    --font-color: hsl(0, 0%, 15%);
-    --link-color: var(--primary);
-
-    --primary: hsl(220, 100%, 50%);
-    --primary-text: contrast(var(--primary));
-    --primary-active: hsl(220, 100%, 45%);
-
-    --secondary: hsl(220, 80%, 30%);
-    --secondary-text: contrast(var(--secondary));
-    --secondary-active: hsl(220, 80%, 35%);
-
-    --tertiary: hsl(0, 0%, 15%);
-    --tertiary-text: contrast(var(--tertiary));
-    --tertiary-active: hsl(0, 0%, 20%);
-
-    --success: hsl(138, 67%, 30%);
-    --success-text: contrast(var(--secondary));
-    --success-active: hsl(138, 67%, 25%);
-
-    --warning: hsl(25, 100%, 60%);
-    --warning-text: contrast(var(--warning));
-    --warning-active: hsl(25, 100%, 55%);
-
-    --danger: hsl(357, 76%, 50%);
-    --danger-text: contrast(var(--danger));
-    --danger-active: hsl(357, 76%, 45%);
-
-    --navbar-background: hsl(0, 0%, 15%);
-    --navbar-text: contrast(var(--navbar-background));
-    --navbar-text-active: hsl(0, 0%, 70%);
-    --navbar-child-background: hsl(0, 0%, 20%);
-
-    --tooltip-background: var(--navbar-child-background);
-    --tooltip-text: contrast(var(--tooltip-background));
-
-    --disabled: rgba(0, 0, 0, 0.1);
-    --disabled-text: rgba(0, 0, 0, 0.3);
-
-    --selection: #4784ff;
-    --selection-text: contrast(var(--secondary-text));
-}
-
-// @media (prefers-color-scheme: dark) {
-//     :root {
-//         --background-color: hsl(0, 0%, 15%);
-//         --font-color: #fff;
-//     }
-// }

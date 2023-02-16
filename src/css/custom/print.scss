@@ -15,6 +15,12 @@
         display: none;
     }
 
+    :--heading {
+        @if $headings-font-family != false {
+            font-family: $print-font-family;
+        }
+    }
+
     [data-wrapper] {
         max-width: 100%;
         margin: 0;

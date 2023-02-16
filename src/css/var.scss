@@ -53,7 +53,7 @@
 $space-y: 0.5rem;
 $space-x: 0.75rem;
 $border-width: 0.0625em;
-$border-color: rgba(0, 0, 0, 0.3);
+$border-color: hsla(0, 0%, 0%, 0.3);
 
 /* Typography */
 $font-family: HelveticaNeue-Light, "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Nimbus Sans L", sans-serif;
@@ -89,7 +89,7 @@ $mark-text: contrast(#{$mark-background});
 /* hr */
 $hr-border-style: solid;
 $hr-border-width: $border-width;
-$hr-border-color: $border-color;
+$hr-border-color: var(--font-color);
 
 /* Lists */
 $ol-list-style-type: decimal;
@@ -103,19 +103,19 @@ $table-cell-padding-x: $space-x;
 
 /* Form */
 $form-background: transparent;
-$form-text: rgba(0, 0, 0, 0.5);
+$form-text: hsla(0, 0%, 0%, 0.5);
 $form-text-active: var(--font-color);
 $form-padding-y: $space-y;
 $form-padding-x: $space-x;
 $form-border-width: $border-width;
 $form-border-color: $border-color;
-$form-border-active: rgba(0, 0, 0, 0.8);
+$form-border-active: hsla(0, 0%, 0%, 0.8);
 $form-border-radius: false;
 $text-area-min-height: 6.25rem;
 
 /* Button */
-$button-background: transparent;
-$button-background-active: rgba(0, 0, 0, 0.1);
+$button-background: hsla(0, 0%, 0%, 0.1);
+$button-background-active: hsla(0, 0%, 0%, 0.2);
 $button-padding-y: $space-y;
 $button-padding-x: $space-x;
 $button-border-width: $border-width;
@@ -130,7 +130,7 @@ $anchor-text-active: var(--font-color);
 /* line */
 $nav-line-border-width: 0.125em;
 $nav-line-border-color: $border-color;
-$anchor-line-text: rgba(0, 0, 0, 0.5);
+$anchor-line-text: hsla(0, 0%, 0%, 0.5);
 $anchor-line-text-active: var(--font-color);
 $anchor-line-border-active: var(--primary);
 
@@ -149,8 +149,10 @@ $tooltip-transition: opacity 0.4s ease-out;
 $icon-font-name: "icons";
 $icon-font-path: "../fonts/icons/";
 
-/* Wrapper */
+/* Grid */
 $grid-gap: 1.25rem;
+
+/* Wrapper */
 $wrapper-min-width: 20rem;
 $wrapper-max-width: 62.5rem;
 $wrapper-gap: $grid-gap;

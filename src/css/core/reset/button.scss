@@ -2,7 +2,7 @@
     display: inline-block;
     padding: $button-padding-y $button-padding-x;
     border: $button-border-width solid $button-border-color;
-    background-color: transparent;
+    background-color: $button-background;
     @if $button-border-radius != false {
         border-radius: $button-border-radius;
     }

@@ -5,5 +5,5 @@
 }
 
 [data-box~="border"] {
-    border: $border-width solid $border-color;
+    border: $border-width solid var(--border-color);
 }

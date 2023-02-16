@@ -2,6 +2,7 @@
     --background-color: #fff;
     --font-color: hsl(0, 0%, 15%);
     --link-color: var(--primary);
+    --border-color: hsl(0, 0%, 50%);
 
     --primary: hsl(220, 100%, 50%);
     --primary-text: contrast(var(--primary));
@@ -35,8 +36,8 @@
     --tooltip-background: var(--navbar-child-background);
     --tooltip-text: contrast(var(--tooltip-background));
 
-    --disabled: rgba(0, 0, 0, 0.1);
-    --disabled-text: rgba(0, 0, 0, 0.3);
+    --disabled: hsl(0, 0%, 90%);
+    --disabled-text: hsl(0, 0%, 50%);
 
     --selection: hsl(220, 100%, 60%);
     --selection-text: contrast(var(--secondary-text));
@@ -44,8 +45,8 @@
 
 // @media (prefers-color-scheme: dark) {
 //     :root {
-//         --background-color: hsl(0, 0%, 15%);
-//         --font-color: #fff;
+//         --background-color: hsl(0, 0%, 10%);
+//         --font-color: hsl(0, 0%, 80%);
 //     }
 // }
 
@@ -53,7 +54,6 @@
 $space-y: 0.5rem;
 $space-x: 0.75rem;
 $border-width: 0.0625em;
-$border-color: hsla(0, 0%, 0%, 0.3);
 
 /* Typography */
 $font-family: HelveticaNeue-Light, "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Nimbus Sans L", sans-serif;
@@ -103,19 +103,20 @@ $table-cell-padding-x: $space-x;
 
 /* Form */
 $form-background: transparent;
-$form-text: hsla(0, 0%, 0%, 0.5);
+$form-text: hsl(0, 0%, 50%);
 $form-text-active: var(--font-color);
 $form-padding-y: $space-y;
 $form-padding-x: $space-x;
 $form-border-width: $border-width;
-$form-border-color: $border-color;
-$form-border-active: hsla(0, 0%, 0%, 0.8);
+$form-border-color: var(--font-color);
+$form-border-active: var(--primary);
 $form-border-radius: false;
 $text-area-min-height: 6.25rem;
 
 /* Button */
 $button-background: hsla(0, 0%, 0%, 0.1);
 $button-background-active: hsla(0, 0%, 0%, 0.2);
+$button-text-color: var(--font-color);
 $button-padding-y: $space-y;
 $button-padding-x: $space-x;
 $button-border-width: $border-width;
@@ -129,8 +130,8 @@ $anchor-text-active: var(--font-color);
 
 /* line */
 $nav-line-border-width: 0.125em;
-$nav-line-border-color: $border-color;
-$anchor-line-text: hsla(0, 0%, 0%, 0.5);
+$nav-line-border-color: var(--border-color);
+$anchor-line-text: hsl(0, 0%, 50%);
 $anchor-line-text-active: var(--font-color);
 $anchor-line-border-active: var(--primary);
 

@@ -2,7 +2,7 @@
     z-index: 1000;
     width: 100%;
     background-color: var(--navbar-background);
-    color: var(--navbar-text-active);
+    color: var(--anchor-navbar-text-active);
 }
 
 [data-navbar="top"],
@@ -31,9 +31,9 @@
 }
 
 [data-anchor="navbar"] {
-    color: var(--navbar-text);
+    color: var(--anchor-navbar-text);
 }
 
 [data-anchor="navbar"]:where([data-state="active"], :hover, :active) {
-    color: var(--navbar-text-active);
+    color: var(--anchor-navbar-text-active);
 }

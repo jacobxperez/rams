@@ -28,9 +28,9 @@
     --danger-active: hsl(0, 70%, 45%);
 
     --navbar-background: hsl(0, 0%, 15%);
-    --navbar-text: contrast(var(--navbar-background));
-    --navbar-text-active: hsl(0, 0%, 70%);
     --navbar-child-background: hsl(0, 0%, 20%);
+    --anchor-navbar-text: contrast(var(--navbar-background));
+    --anchor-navbar-text-active: hsl(0, 0%, 70%);
 
     --tooltip-background: var(--navbar-child-background);
     --tooltip-text: contrast(var(--tooltip-background));
@@ -59,7 +59,7 @@ $border-color: rgba(0, 0, 0, 0.3);
 $font-family: HelveticaNeue-Light, "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Nimbus Sans L", sans-serif;
 $font-size: 100%;
 $font-weight: 400;
-$line-height: 1.5;
+$nav-line-height: 1.5;
 $leading: 1.5rem; /* margin bottom */
 
 /* headings */
@@ -84,7 +84,7 @@ $small-font-size: 0.75rem;
 
 /* mark */
 $mark-background: hsl(50, 100%, 50%);
-$mark-text: #000;
+$mark-text: contrast(#{$mark-background});
 
 /* hr */
 $hr-border-style: solid;
@@ -122,14 +122,14 @@ $button-border-width: $border-width;
 $button-border-color: transparent;
 $button-border-radius: false;
 
-/* anchor */
+/* Navigation Anchor */
 $anchor-padding-y: $space-y;
 $anchor-padding-x: $space-x;
 $anchor-text-active: var(--font-color);
 
 /* line */
-$line-border-width: 0.125em;
-$line-border-color: $border-color;
+$nav-line-border-width: 0.125em;
+$nav-line-border-color: $border-color;
 $anchor-line-text: rgba(0, 0, 0, 0.5);
 $anchor-line-text-active: var(--font-color);
 $anchor-line-border-active: var(--primary);

@@ -27,8 +27,7 @@ JavaScript however, without the fundamental principles of design, their use
 becomes arbitrary. The developer is trained to dominate his technology while the
 designer is forced to work within its limits. By limiting or restricting the
 choices, the designer is forced to choose the essential and because he has not
-been trained as a developer he can use his limitations with technology to
-discover new designs.
+been trained as a developer he can use his limitations to discover new designs.
 
 ## Design Philosophy
 

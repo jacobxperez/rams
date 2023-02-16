@@ -19,33 +19,35 @@ following sections to better understand the vision of the project. Use the [issu
 
 ## Design Essence
 
-The modern web designer faces few limitations in his approach to design and will
-often choose the wrong combination. Without limits, a designer may be overwhelmed
-by the array of components at his disposal. Houdini, polyfill, and other similar
-technologies are all attempts to bypass the limitations of CSS and JavaScript
-however, without the fundamental knowledge of design, their use becomes arbitrary.
-The developer is trained to dominate his technology while the designer is forced
-to work within its limits. By limiting or restricting the choices, the designer
-is forced to choose the essential and because he has not been trained as a
-developer he can use his limitations with technology to discover new designs.
+The modern web designer faces a few limitations in his approach to design and
+will often choose the wrong combination. Without limits, a designer may be
+overwhelmed by the array of components at his disposal. Houdini, polyfill, and
+other similar technologies are all attempts to bypass the limitations of CSS and
+JavaScript however, without the fundamental knowledge of design, their use
+becomes arbitrary. The developer is trained to dominate his technology while the
+designer is forced to work within its limits. By limiting or restricting the
+choices, the designer is forced to choose the essential and because he has not
+been trained as a developer he can use his limitations with technology to
+discover new designs.
 
 ## Design Philosophy
 
-Perhaps the most famous quote from Dieter Rams is "**Good design is as little design
-as possible**" meaning that by removing the unnecessary the essential comes to the
-forefront. The product becomes useful, understandable, easy to use, and long-lasting.
+**"Good design is as little design as possible"** is perhaps the most famous
+quote from Dieter Rams meaning that by removing the unnecessary the essential
+comes to the forefront. The product becomes useful, understandable, easy to use,
+and long-lasting.
 
 ## Design Principles
 
-In the book, The Power of Less, [Leo Babauta](https://leobabauta.com/) explains how to
-streamline your life by identifying the essential and eliminating the unnecessary.
-By focusing on the essentials and allowing everything else to fade away, you can
-become less stressed and more productive.
+In the book, The Power of Less, [Leo Babauta](https://leobabauta.com/) explains
+how to streamline your life by identifying the essentials and eliminating the
+unnecessary. By focusing on the essentials and allowing everything else to fade
+away, you can become less stressed and more productive.
 
 1. Identify the essential
 2. Eliminate the rest
 
-These two principles of identifying the essential and eliminating the rest form
+These two principles of identifying the essentials and eliminating the rest form
 the foundation of this project.
 
 > Perfection is achieved, not when there is nothing more to add, but when there is nothing left to take away.
@@ -54,7 +56,7 @@ the foundation of this project.
 ## Design Requirements
 
 * Identify the minimum amount of components that can satisfy most designs.
-* Must be unobtrusive as to prevent the designer from fighting the framework.
+* Must be unobtrusive to prevent the designer from fighting the framework.
 * Must be easy to update, maintain, modify, adapt, customize, and change with minimum effort.
 * Must follow the [80/20 principle](https://jacobxperez.github.io/blog/post/heuristic/the-80-20-principle/),
 which indicates that 80 percent of the effects come from 20 percent of the variables.

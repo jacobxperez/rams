@@ -27,7 +27,7 @@ however, without the fundamental knowledge of design, their use becomes arbitrar
 The developer is trained to dominate his technology while the designer is forced
 to work within its limits. By limiting or restricting the choices, the designer
 is forced to choose the essential and because he has not been trained as a
-developer he can use his limitations to discover new designs.
+developer he can use his limitations with technology to discover new designs.
 
 ## Design Philosophy
 

@@ -23,7 +23,7 @@ The modern web designer faces a few limitations in his approach to design and
 will often choose the wrong combination. Without limits, a designer may be
 overwhelmed by the array of components at his disposal. Houdini, polyfill, and
 other similar technologies are all attempts to bypass the limitations of CSS and
-JavaScript however, without the fundamental knowledge of design, their use
+JavaScript however, without the fundamental principles of design, their use
 becomes arbitrary. The developer is trained to dominate his technology while the
 designer is forced to work within its limits. By limiting or restricting the
 choices, the designer is forced to choose the essential and because he has not
@@ -32,10 +32,10 @@ discover new designs.
 
 ## Design Philosophy
 
-**"Good design is as little design as possible"** is perhaps the most famous
-quote from Dieter Rams meaning that by removing the unnecessary the essential
-comes to the forefront. The product becomes useful, understandable, easy to use,
-and long-lasting.
+**"Good design is as little design as possible"** is perhaps Dieter Ram's most
+famous quote, meaning that by removing what is unnecessary the essential comes
+to the forefront, making a product more useful, understandable, easy to use, and
+long-lasting.
 
 ## Design Principles
 
@@ -47,10 +47,8 @@ away, you can become less stressed and more productive.
 1. Identify the essential
 2. Eliminate the rest
 
-These two principles of identifying the essentials and eliminating the rest form
-the foundation of this project.
-
-> Perfection is achieved, not when there is nothing more to add, but when there is nothing left to take away.
+> Perfection is achieved, not when there is nothing more to add, but when there
+> is nothing left to take away.
 > — Antoine de Saint-Exupery
 
 ## Design Requirements

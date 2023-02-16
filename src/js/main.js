@@ -13,9 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // toggles attribute
         function toggleAttr(item) {
             item.addEventListener("click", (e) => {
-                !item.hasAttribute("data-state", "active")
-                    ? item.setAttribute("data-state", "active")
-                    : item.removeAttribute("data-state")
+                !item.hasAttribute("data-state", "active") ? item.setAttribute("data-state", "active") : item.removeAttribute("data-state")
                 e.stopPropagation()
             })
         }
@@ -30,9 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         document.addEventListener("click", (e) => {
-            getToggle.forEach((item) =>
-                removeAtt(item, '[data-toggle="pop"]', e)
-            )
+            getToggle.forEach((item) => removeAtt(item, '[data-toggle="pop"]', e))
             getToolTip.forEach((item) => removeAtt(item, "[data-tooltip]", e))
         })
     }

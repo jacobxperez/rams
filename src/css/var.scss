@@ -2,8 +2,6 @@
     --background: hsl(0, 0%, 100%);
     --font-color: hsl(0, 0%, 15%);
     --font-color-secondary: hsl(0, 0%, 50%);
-    --link-color: var(--primary);
-    --border-color: hsl(0, 0%, 50%);
 
     --primary: hsl(220, 100%, 50%);
     --primary-text: contrast(var(--primary));
@@ -34,13 +32,17 @@
 $space-y: 0.5rem;
 $space-x: 0.75rem;
 $border-width: 0.0625em;
+$border-color: hsl(0, 0%, 50%);
 
 /* Typography */
 $font-family: HelveticaNeue-Light, "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Nimbus Sans L", sans-serif;
 $font-size: 100%;
 $font-weight: 400;
-$nav-line-height: 1.5;
+$line-height: 1.5;
 $leading: 1.5rem;
+
+/* link */
+$link-color: var(--primary);
 
 /* headings */
 $headings-font-family: false;
@@ -120,19 +122,24 @@ $danger-active: hsl(0, 70%, 45%);
 $disabled: hsl(0, 0%, 90%);
 $disabled-text: hsl(0, 0%, 50%);
 
-/* Navigation */
+$navbar-background: var(--navbar-background);
+$navbar-child-background: var(--navbar-child-background);
+$navbar-anchor-text: var(--navbar-anchor-text);
+$navbar-anchor-text-active: var(--navbar-anchor-text-active);
+
+/* Anchor */
 $anchor-padding-y: $space-y;
 $anchor-padding-x: $space-x;
 $anchor-text-active: var(--font-color);
 
-/* line */
+/* Nav Line */
 $nav-line-border-width: 0.125em;
-$nav-line-border-color: var(--border-color);
+$nav-line-border-color: $border-color;
 $nav-line-anchor-text: var(--font-color-secondary);
 $nav-line-anchor-text-active: var(--font-color);
 $nav-line-anchor-border-active: var(--primary);
 
-/* breadcrumb */
+/* Breadcrumb */
 $breadcrumb-separator: "/";
 
 /* Dropdown */

@@ -1,9 +1,9 @@
 [data-list="border"] {
-    border: $border-width solid var(--border-color);
+    border: $border-width solid $border-color;
 }
 
 [data-list="border"] > li {
-    border-bottom: $border-width solid var(--border-color);
+    border-bottom: $border-width solid $border-color;
 }
 
 [data-list="border"] > li:last-child {

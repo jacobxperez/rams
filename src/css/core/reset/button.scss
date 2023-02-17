@@ -23,7 +23,7 @@
 [data-button="link"] {
     text-decoration: none;
     background-color: transparent;
-    color: var(--link-color);
+    color: $link-color;
 }
 
 [data-button="link"]:is([data-state="active"], :hover, :active) {

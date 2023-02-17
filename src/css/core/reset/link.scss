@@ -1,7 +1,7 @@
 :where(a) {
     text-decoration: none;
     background-color: transparent;
-    color: var(--link-color);
+    color: $link-color;
     cursor: pointer;
 }
 

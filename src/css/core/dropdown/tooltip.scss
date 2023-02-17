@@ -12,8 +12,8 @@
     left: 0;
     min-width: $tooltip-min-width;
     padding: $space-y $space-x;
-    background-color: var(--tooltip-background);
-    color: var(--tooltip-text);
+    background-color: $tooltip-background;
+    color: $tooltip-text;
     opacity: 0;
     transition: $tooltip-transition;
 }

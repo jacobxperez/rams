@@ -33,9 +33,6 @@
     --navbar-child-background: hsl(0, 0%, 20%);
     --navbar-anchor-text: hsl(0, 0%, 100%);
     --navbar-anchor-text-active: hsl(0, 0%, 70%);
-
-    --tooltip-background: var(--navbar-child-background);
-    --tooltip-text: contrast(var(--tooltip-background));
 }
 
 // @media (prefers-color-scheme: dark) {
@@ -97,26 +94,26 @@ $table-cell-padding-y: $space-y;
 $table-cell-padding-x: $space-x;
 
 /* Form */
-$form-background: transparent;
-$form-text: var(--font-color-secondary);
-$form-text-active: var(--font-color);
 $form-padding-y: $space-y;
 $form-padding-x: $space-x;
 $form-border-width: $border-width;
 $form-border-color: var(--font-color);
 $form-border-active: var(--primary);
 $form-border-radius: false;
+$form-background: transparent;
+$form-text: var(--font-color-secondary);
+$form-text-active: var(--font-color);
 $text-area-min-height: 6.25rem;
 
 /* Button */
-$button-background: hsla(0, 0%, 50%, 0.1);
-$button-background-active: hsla(0, 0%, 50%, 0.2);
-$button-text-color: var(--font-color);
 $button-padding-y: $space-y;
 $button-padding-x: $space-x;
 $button-border-width: $border-width;
 $button-border-color: transparent;
 $button-border-radius: false;
+$button-background: hsla(0, 0%, 50%, 0.1);
+$button-background-active: hsla(0, 0%, 50%, 0.2);
+$button-text-color: var(--font-color);
 
 /* Disabled */
 $disabled: hsl(0, 0%, 90%);
@@ -143,6 +140,8 @@ $dropbox-transition: opacity 0.2s ease-out;
 
 /* Tooltip */
 $tooltip-min-width: $dropbox-min-width;
+$tooltip-background: var(--navbar-child-background);
+$tooltip-text: contrast(var(--navbar-child-background));
 $tooltip-transition: opacity 0.4s ease-out;
 
 /* Iconography */
@@ -155,9 +154,9 @@ $grid-gap: 1.25rem;
 /* Wrapper */
 $wrapper-min-width: 20rem;
 $wrapper-max-width: 62.5rem;
-$wrapper-gap: $grid-gap;
 $wrapper-margin-top: calc($leading * 3);
 $wrapper-margin-bottom: calc($leading * 4);
+$wrapper-gap: $grid-gap;
 
 /* Breakpoints */
 $screen-small-max-width: 42.5em; /* small screen 680px */

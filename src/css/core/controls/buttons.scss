@@ -3,48 +3,48 @@
 }
 
 [data-button~="tertiary"] {
-    background-color: var(--tertiary);
-    color: var(--tertiary-text);
+    background-color: $tertiary;
+    color: $tertiary-text;
 }
 
 [data-button~="tertiary"]:is([data-state="active"], :hover, :active) {
-    background-color: var(--tertiary-active);
-    color: var(--tertiary-text);
+    background-color: $tertiary-active;
+    color: $tertiary-text;
 }
 
 [data-button="tertiary outline"] {
-    border-color: var(--tertiary);
-    color: var(--tertiary);
+    border-color: $tertiary;
+    color: $tertiary;
 }
 
 [data-button~="secondary"] {
-    background-color: var(--secondary);
-    color: var(--secondary-text);
+    background-color: $secondary;
+    color: $secondary-text;
 }
 
 [data-button~="secondary"]:is([data-state="active"], :hover, :active) {
-    background-color: var(--secondary-active);
-    color: var(--secondary-text);
+    background-color: $secondary-active;
+    color: $secondary-text;
 }
 
 [data-button="secondary outline"] {
-    border-color: var(--secondary);
-    color: var(--secondary);
+    border-color: $secondary;
+    color: $secondary;
 }
 
 [data-button~="primary"] {
-    background-color: var(--primary);
-    color: var(--primary-text);
+    background-color: $primary;
+    color: $primary-text;
 }
 
 [data-button~="primary"]:is([data-state="active"], :hover, :active) {
-    background-color: var(--primary-active);
-    color: var(--primary-text);
+    background-color: $primary-active;
+    color: $primary-text;
 }
 
 [data-button="primary outline"] {
-    border-color: var(--primary);
-    color: var(--primary);
+    border-color: $primary;
+    color: $primary;
 }
 
 [data-button~="success"] {

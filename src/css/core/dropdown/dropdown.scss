@@ -4,7 +4,7 @@
     visibility: hidden;
     min-width: $dropbox-min-width;
     background-color: transparent;
-    color: var(--font-color);
+    color: $font-color;
 }
 
 [data-dropbox="menu"] {

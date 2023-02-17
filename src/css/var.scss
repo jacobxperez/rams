@@ -1,24 +1,6 @@
 :root {
     --background: hsl(0, 0%, 100%);
     --font-color: hsl(0, 0%, 15%);
-    --font-color-secondary: hsl(0, 0%, 50%);
-
-    --primary: hsl(220, 100%, 50%);
-    --primary-text: contrast(var(--primary));
-    --primary-active: hsl(220, 100%, 45%);
-
-    --secondary: hsl(250, 50%, 50%);
-    --secondary-text: contrast(var(--secondary));
-    --secondary-active: hsl(250, 50%, 45%);
-
-    --tertiary: var(--font-color);
-    --tertiary-text: contrast(var(--tertiary));
-    --tertiary-active: hsl(0, 0%, 20%);
-
-    --navbar-background: hsl(0, 0%, 15%);
-    --navbar-child-background: hsl(0, 0%, 20%);
-    --navbar-anchor-text: hsl(0, 0%, 100%);
-    --navbar-anchor-text-active: hsl(0, 0%, 70%);
 }
 
 // @media (prefers-color-scheme: dark) {
@@ -27,6 +9,28 @@
 //         --font-color: hsl(0, 0%, 70%);
 //     }
 // }
+
+/* Colors */
+$background: var(--background);
+$font-color: var(--font-color);
+$font-color-secondary: hsl(0, 0%, 50%);
+
+$primary: hsl(220, 100%, 50%);
+$primary-text: hsl(0, 0%, 100%);
+$primary-active: hsl(220, 100%, 45%);
+
+$secondary: hsl(250, 50%, 50%);
+$secondary-text: hsl(0, 0%, 100%);
+$secondary-active: hsl(250, 50%, 45%);
+
+$tertiary: var(--font-color);
+$tertiary-text: hsl(0, 0%, 100%);
+$tertiary-active: hsl(0, 0%, 20%);
+
+$navbar-background: hsl(0, 0%, 15%);
+$navbar-child-background: hsl(0, 0%, 20%);
+$navbar-anchor-text: hsl(0, 0%, 100%);
+$navbar-anchor-text-active: hsl(0, 0%, 70%);
 
 /* Box Model */
 $space-y: 0.5rem;
@@ -42,7 +46,7 @@ $line-height: 1.5;
 $leading: 1.5rem;
 
 /* link */
-$link-color: var(--primary);
+$link-color: $primary;
 
 /* headings */
 $headings-font-family: false;
@@ -66,12 +70,12 @@ $small-font-size: 0.75rem;
 
 /* mark */
 $mark-background: hsl(50, 100%, 50%);
-$mark-text: contrast(#{$mark-background});
+$mark-text: hsl(0, 0%, 0%);
 
 /* hr */
 $hr-border-style: solid;
 $hr-border-width: $border-width;
-$hr-border-color: var(--font-color);
+$hr-border-color: $font-color;
 
 /* Lists */
 $ol-list-style-type: decimal;
@@ -87,12 +91,12 @@ $table-cell-padding-x: $space-x;
 $form-padding-y: $space-y;
 $form-padding-x: $space-x;
 $form-border-width: $border-width;
-$form-border-color: var(--font-color);
-$form-border-active: var(--primary);
+$form-border-color: $font-color;
+$form-border-active: $primary;
 $form-border-radius: false;
 $form-background: transparent;
-$form-text: var(--font-color-secondary);
-$form-text-active: var(--font-color);
+$form-text: $font-color-secondary;
+$form-text-active: $font-color;
 $text-area-min-height: 6.25rem;
 
 /* Button */
@@ -103,41 +107,41 @@ $button-border-color: transparent;
 $button-border-radius: false;
 $button-background: hsla(0, 0%, 50%, 0.1);
 $button-background-active: hsla(0, 0%, 50%, 0.2);
-$button-text-color: var(--font-color);
+$button-text-color: $font-color;
 
 /* Feedback */
 $success: hsl(150, 100%, 25%);
-$success-text: contrast(#{$success});
+$success-text: hsl(0, 0%, 100%);
 $success-active: hsl(150, 100%, 20%);
 
 $warning: hsl(25, 100%, 60%);
-$warning-text: contrast(#{$warning});
+$warning-text: hsl(0, 0%, 100%);
 $warning-active: hsl(25, 100%, 55%);
 
 $danger: hsl(0, 70%, 50%);
-$danger-text: contrast(#{$danger});
+$danger-text: hsl(0, 0%, 100%);
 $danger-active: hsl(0, 70%, 45%);
 
 /* Disabled */
 $disabled: hsl(0, 0%, 90%);
 $disabled-text: hsl(0, 0%, 50%);
 
-$navbar-background: var(--navbar-background);
-$navbar-child-background: var(--navbar-child-background);
-$navbar-anchor-text: var(--navbar-anchor-text);
-$navbar-anchor-text-active: var(--navbar-anchor-text-active);
+$navbar-background: hsl(0, 0%, 15%);
+$navbar-child-background: hsl(0, 0%, 20%);
+$navbar-anchor-text: hsl(0, 0%, 100%);
+$navbar-anchor-text-active: hsl(0, 0%, 60%);
 
 /* Anchor */
 $anchor-padding-y: $space-y;
 $anchor-padding-x: $space-x;
-$anchor-text-active: var(--font-color);
+$anchor-text-active: $font-color;
 
 /* Nav Line */
 $nav-line-border-width: 0.125em;
 $nav-line-border-color: $border-color;
-$nav-line-anchor-text: var(--font-color-secondary);
-$nav-line-anchor-text-active: var(--font-color);
-$nav-line-anchor-border-active: var(--primary);
+$nav-line-anchor-text: $font-color-secondary;
+$nav-line-anchor-text-active: $font-color;
+$nav-line-anchor-border-active: $primary;
 
 /* Breadcrumb */
 $breadcrumb-separator: "/";
@@ -148,8 +152,8 @@ $dropbox-transition: opacity 0.2s ease-out;
 
 /* Tooltip */
 $tooltip-min-width: $dropbox-min-width;
-$tooltip-background: var(--navbar-child-background);
-$tooltip-text: contrast(var(--navbar-child-background));
+$tooltip-background: $navbar-child-background;
+$tooltip-text: hsl(0, 0%, 100%);
 $tooltip-transition: opacity 0.4s ease-out;
 
 /* Iconography */
@@ -177,4 +181,4 @@ $print-font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgi
 
 /* Selection */
 $selection: hsl(220, 100%, 60%);
-$selection-text: contrast(var(--secondary-text));
+$selection-text: hsl(0, 0%, 100%);

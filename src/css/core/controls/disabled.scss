@@ -1,8 +1,8 @@
 [data-state="disabled"],
 [data-state="disabled"]:is(:hover, :active, :focus) {
     border-color: transparent;
-    background-color: var(--disabled);
-    color: var(--disabled-text);
+    background-color: $disabled;
+    color: $disabled-text;
     text-decoration: none;
     outline: 0;
     cursor: not-allowed;

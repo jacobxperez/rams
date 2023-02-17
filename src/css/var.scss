@@ -9,17 +9,17 @@
     --primary-text: contrast(var(--primary));
     --primary-active: hsl(220, 100%, 45%);
 
-    --secondary: hsl(220, 100%, 60%);
+    --secondary: hsl(250, 50%, 50%);
     --secondary-text: contrast(var(--secondary));
-    --secondary-active: hsl(220, 100%, 55%);
+    --secondary-active: hsl(250, 50%, 45%);
 
     --tertiary: var(--font-color);
     --tertiary-text: contrast(var(--tertiary));
     --tertiary-active: hsl(0, 0%, 20%);
 
-    --success: hsl(140, 70%, 30%);
+    --success: hsl(150, 100%, 25%);
     --success-text: contrast(var(--secondary));
-    --success-active: hsl(140, 70%, 25%);
+    --success-active: hsl(150, 100%, 20%);
 
     --warning: hsl(25, 100%, 60%);
     --warning-text: contrast(var(--warning));
@@ -36,12 +36,6 @@
 
     --tooltip-background: var(--navbar-child-background);
     --tooltip-text: contrast(var(--tooltip-background));
-
-    --disabled: hsl(0, 0%, 90%);
-    --disabled-text: hsl(0, 0%, 50%);
-
-    --selection: hsl(220, 100%, 60%);
-    --selection-text: contrast(var(--secondary-text));
 }
 
 // @media (prefers-color-scheme: dark) {
@@ -124,6 +118,10 @@ $button-border-width: $border-width;
 $button-border-color: transparent;
 $button-border-radius: false;
 
+/* Disabled */
+$disabled: hsl(0, 0%, 90%);
+$disabled-text: hsl(0, 0%, 50%);
+
 /* Navigation Anchor */
 $anchor-padding-y: $space-y;
 $anchor-padding-x: $space-x;
@@ -169,3 +167,7 @@ $screen-large-min-width: 61.25em; /* large screens 980px */
 
 /* Print */
 $print-font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, "Nimbus Roman No9 L", serif;
+
+/* Selection */
+$selection: hsl(220, 100%, 60%);
+$selection-text: contrast(var(--secondary-text));

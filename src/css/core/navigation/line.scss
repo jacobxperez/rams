@@ -9,12 +9,12 @@
 [data-anchor="line"] {
     position: relative;
     z-index: 1;
-    color: $anchor-line-text;
+    color: $nav-line-anchor-text;
 }
 
 [data-anchor="line"]:where([data-state="active"], :hover, :active) {
     z-index: 5;
-    color: $anchor-line-text-active;
+    color: $nav-line-anchor-text-active;
 }
 
 :where([data-nav="line-top"]) [data-anchor="line"] {
@@ -28,5 +28,5 @@
 }
 
 [data-anchor="line"]:where([data-state="active"], :hover, :active) {
-    border-color: $anchor-line-border-active;
+    border-color: $nav-line-anchor-border-active;
 }

@@ -1,6 +1,7 @@
 :root {
-    --background-color: #fff;
+    --background: hsl(0, 0%, 100%);
     --font-color: hsl(0, 0%, 15%);
+    --font-color-secondary: hsl(0, 0%, 50%);
     --link-color: var(--primary);
     --border-color: hsl(0, 0%, 50%);
 
@@ -8,9 +9,9 @@
     --primary-text: contrast(var(--primary));
     --primary-active: hsl(220, 100%, 45%);
 
-    --secondary: hsl(220, 80%, 30%);
+    --secondary: hsl(220, 100%, 60%);
     --secondary-text: contrast(var(--secondary));
-    --secondary-active: hsl(220, 80%, 35%);
+    --secondary-active: hsl(220, 100%, 55%);
 
     --tertiary: var(--font-color);
     --tertiary-text: contrast(var(--tertiary));
@@ -30,8 +31,8 @@
 
     --navbar-background: hsl(0, 0%, 15%);
     --navbar-child-background: hsl(0, 0%, 20%);
-    --anchor-navbar-text: #fff;
-    --anchor-navbar-text-active: hsl(0, 0%, 70%);
+    --navbar-anchor-text: hsl(0, 0%, 100%);
+    --navbar-anchor-text-active: hsl(0, 0%, 70%);
 
     --tooltip-background: var(--navbar-child-background);
     --tooltip-text: contrast(var(--tooltip-background));
@@ -45,7 +46,7 @@
 
 // @media (prefers-color-scheme: dark) {
 //     :root {
-//         --background-color: hsl(0, 0%, 10%);
+//         --background: hsl(0, 0%, 10%);
 //         --font-color: hsl(0, 0%, 70%);
 //     }
 // }
@@ -103,7 +104,7 @@ $table-cell-padding-x: $space-x;
 
 /* Form */
 $form-background: transparent;
-$form-text: hsl(0, 0%, 50%);
+$form-text: var(--font-color-secondary);
 $form-text-active: var(--font-color);
 $form-padding-y: $space-y;
 $form-padding-x: $space-x;
@@ -114,8 +115,8 @@ $form-border-radius: false;
 $text-area-min-height: 6.25rem;
 
 /* Button */
-$button-background: hsla(0, 0%, 0%, 0.1);
-$button-background-active: hsla(0, 0%, 0%, 0.2);
+$button-background: hsla(0, 0%, 50%, 0.1);
+$button-background-active: hsla(0, 0%, 50%, 0.2);
 $button-text-color: var(--font-color);
 $button-padding-y: $space-y;
 $button-padding-x: $space-x;
@@ -131,9 +132,9 @@ $anchor-text-active: var(--font-color);
 /* line */
 $nav-line-border-width: 0.125em;
 $nav-line-border-color: var(--border-color);
-$anchor-line-text: hsl(0, 0%, 50%);
-$anchor-line-text-active: var(--font-color);
-$anchor-line-border-active: var(--primary);
+$nav-line-anchor-text: var(--font-color-secondary);
+$nav-line-anchor-text-active: var(--font-color);
+$nav-line-anchor-border-active: var(--primary);
 
 /* breadcrumb */
 $breadcrumb-separator: "/";

@@ -17,18 +17,6 @@
     --tertiary-text: contrast(var(--tertiary));
     --tertiary-active: hsl(0, 0%, 20%);
 
-    --success: hsl(150, 100%, 25%);
-    --success-text: contrast(var(--secondary));
-    --success-active: hsl(150, 100%, 20%);
-
-    --warning: hsl(25, 100%, 60%);
-    --warning-text: contrast(var(--warning));
-    --warning-active: hsl(25, 100%, 55%);
-
-    --danger: hsl(0, 70%, 50%);
-    --danger-text: contrast(var(--danger));
-    --danger-active: hsl(0, 70%, 45%);
-
     --navbar-background: hsl(0, 0%, 15%);
     --navbar-child-background: hsl(0, 0%, 20%);
     --navbar-anchor-text: hsl(0, 0%, 100%);
@@ -115,11 +103,24 @@ $button-background: hsla(0, 0%, 50%, 0.1);
 $button-background-active: hsla(0, 0%, 50%, 0.2);
 $button-text-color: var(--font-color);
 
+/* Feedback */
+$success: hsl(150, 100%, 25%);
+$success-text: contrast(#{$success});
+$success-active: hsl(150, 100%, 20%);
+
+$warning: hsl(25, 100%, 60%);
+$warning-text: contrast(#{$warning});
+$warning-active: hsl(25, 100%, 55%);
+
+$danger: hsl(0, 70%, 50%);
+$danger-text: contrast(#{$danger});
+$danger-active: hsl(0, 70%, 45%);
+
 /* Disabled */
 $disabled: hsl(0, 0%, 90%);
 $disabled-text: hsl(0, 0%, 50%);
 
-/* Navigation Anchor */
+/* Navigation */
 $anchor-padding-y: $space-y;
 $anchor-padding-x: $space-x;
 $anchor-text-active: var(--font-color);

@@ -48,48 +48,48 @@
 }
 
 [data-button~="success"] {
-    background-color: var(--success);
-    color: var(--success-text);
+    background-color: $success;
+    color: $success-text;
 }
 
 [data-button~="success"]:is([data-state="active"], :hover, :active) {
-    background-color: var(--success-active);
-    color: var(--success-text);
+    background-color: $success-active;
+    color: $success-text;
 }
 
 [data-button="success outline"] {
-    border-color: var(--success);
-    color: var(--success);
+    border-color: $success;
+    color: $success;
 }
 
 [data-button~="warning"] {
-    background-color: var(--warning);
-    color: var(--warning-text);
+    background-color: $warning;
+    color: $warning-text;
 }
 
 [data-button~="warning"]:is([data-state="active"], :hover, :active) {
-    background-color: var(--warning-active);
-    color: var(--warning-text);
+    background-color: $warning-active;
+    color: $warning-text;
 }
 
 [data-button="warning outline"] {
-    border-color: var(--warning);
-    color: var(--warning);
+    border-color: $warning;
+    color: $warning;
 }
 
 [data-button~="danger"] {
-    background-color: var(--danger);
-    color: var(--danger-text);
+    background-color: $danger;
+    color: $danger-text;
 }
 
 [data-button~="danger"]:is([data-state="active"], :hover, :active) {
-    background-color: var(--danger-active);
-    color: var(--danger-text);
+    background-color: $danger-active;
+    color: $danger-text;
 }
 
 [data-button="danger outline"] {
-    border-color: var(--danger);
-    color: var(--danger);
+    border-color: $danger;
+    color: $danger;
 }
 
 [data-button~="outline"] {

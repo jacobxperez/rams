@@ -21,13 +21,14 @@ following sections to better understand the vision of the project. Use the [issu
 
 The modern web designer faces a few limitations in his approach to design and
 will often choose the wrong combination. Without limits, a designer may be
-overwhelmed by the array of components at his disposal. Houdini, polyfills, and
-other similar technologies are all attempts to bypass the limitations of CSS and
-JavaScript. However, without the fundamental principles of design, their use
-becomes arbitrary. The developer is trained to dominate his technology while the
-designer is forced to work within its limits. By limiting or restricting the
-choices, the designer is forced to choose the essential and because he has not
-been trained as a developer he can use his limitations to discover new designs.
+overwhelmed by the array of components at his disposal. Houdini, polyfills,
+and other similar technologies are all attempts to bypass the limitations of
+CSS and JavaScript. However, without the fundamental principles of design,
+their use becomes arbitrary. The developer is trained to dominate his
+technology while the designer is forced to work within its limits. By limiting
+or restricting the choices, the designer is forced to choose the essential and
+because he has not been trained as a developer, he can use his limitations to
+discover new designs.
 
 ## Design Philosophy
 

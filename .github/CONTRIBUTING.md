@@ -23,7 +23,7 @@ The modern web designer faces a few limitations in his approach to design and
 will often choose the wrong combination. Without limits, a designer may be
 overwhelmed by the array of components at his disposal. Houdini, polyfills, and
 other similar technologies are all attempts to bypass the limitations of CSS and
-JavaScript however, without the fundamental principles of design, their use
+JavaScript. However, without the fundamental principles of design, their use
 becomes arbitrary. The developer is trained to dominate his technology while the
 designer is forced to work within its limits. By limiting or restricting the
 choices, the designer is forced to choose the essential and because he has not
@@ -39,12 +39,12 @@ long-lasting.
 ## Design Principles
 
 In the book, The Power of Less, [Leo Babauta](https://leobabauta.com/) explains
-how to streamline your life by identifying the essentials and eliminating the
-unnecessary. By focusing on the essentials and allowing everything else to fade
-away, you can become less stressed and more productive.
+how to simplify your life by setting clear limits, identifying the essentials,
+and eliminating the unnecessary to maximize performance with minimum effort.
 
-1. Identify the essential
-2. Eliminate the rest
+1. Set clear limits
+2. Identify the essential
+3. Eliminate the rest
 
 > Perfection is achieved, not when there is nothing more to add, but when there
 > is nothing left to take away.
@@ -56,7 +56,7 @@ away, you can become less stressed and more productive.
 * Must be unobtrusive to prevent the designer from fighting the framework.
 * Must be easy to update, maintain, modify, adapt, customize, and change with minimum effort.
 * Must follow the [80/20 principle](https://jacobxperez.github.io/blog/post/heuristic/the-80-20-principle/),
-which indicates that 80 percent of the effects come from 20 percent of the variables.
+which indicates that 80 percent of the effects come from 20 percent of the causes.
 
 ## Bug Reports
 

@@ -40,10 +40,9 @@ long-lasting.
 ## Design Principles
 
 In the book, The Power of Less, [Leo Babauta](https://leobabauta.com/) explains
-how to improve performance with clever reductionism by starting with small
-proactive actions, setting clear limits, identifying the essentials,
-simplifying your work, eliminating the unnecessary, and staying focused on the
-vision.
+how to improve performance by starting with small proactive actions, setting
+clear limits, identifying the essentials, simplifying your work, eliminating the
+unnecessary, and staying focused on the vision.
 
 1. Start small
 2. Set clear limits

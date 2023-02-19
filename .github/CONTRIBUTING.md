@@ -33,15 +33,17 @@ technology to discover new designs.
 ## Design Philosophy
 
 **"Good design is as little design as possible"** is perhaps Dieter Ram's most
-famous quote, meaning that by removing what is unnecessary the essential comes
-to the forefront, making a product more useful, understandable, easy to use, and
+famous quote, meaning that by removing the unnecessary, the essential comes to
+the forefront, making a product more useful, understandable, easy to use, and
 long-lasting.
 
 ## Design Principles
 
 In the book, The Power of Less, [Leo Babauta](https://leobabauta.com/) explains
-how to simplify your life by setting clear limits, identifying the essentials,
-and eliminating the unnecessary to maximize performance with minimum effort.
+how to improve performance with clever reductionism by starting with small
+proactive actions, setting clear limits, identifying the essentials,
+simplifying your work, eliminating the unnecessary, and staying focused on the
+vision.
 
 1. Start small
 2. Set clear limits

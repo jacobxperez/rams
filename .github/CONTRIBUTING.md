@@ -43,9 +43,12 @@ In the book, The Power of Less, [Leo Babauta](https://leobabauta.com/) explains
 how to simplify your life by setting clear limits, identifying the essentials,
 and eliminating the unnecessary to maximize performance with minimum effort.
 
-1. Set clear limits
-2. Identify the essential
-3. Eliminate the rest
+1. Start small
+2. Set clear limits
+3. Identify the essential
+4. Simplify
+5. Eliminate the nonessential
+6. Stay focused
 
 > Perfection is achieved, not when there is nothing more to add, but when there
 > is nothing left to take away.
@@ -53,6 +56,7 @@ and eliminating the unnecessary to maximize performance with minimum effort.
 
 ## Design Requirements
 
+* Identify areas of volatility and encapsulate their effects
 * Identify the minimum amount of components that can satisfy most designs.
 * Must be unobtrusive to prevent the designer from fighting the framework.
 * Must be easy to update, maintain, modify, adapt, customize, and change with minimum effort.

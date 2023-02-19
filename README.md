@@ -1,4 +1,4 @@
-# [RAMs](https://jacobxperez.github.io/rams/)
+# [Rams](https://jacobxperez.github.io/rams/)
 
 A [Class Less](https://jacobxperez.github.io/blog/post/css/class-less-architecture/) CSS Design Framework
 
@@ -18,7 +18,7 @@ A [Class Less](https://jacobxperez.github.io/blog/post/css/class-less-architectu
 
 ## About
 
-[RAMs](https://jacobxperez.github.io/rams/) is a [class less](https://jacobxperez.github.io/blog/post/css/class-less-architecture/)
+[Rams](https://jacobxperez.github.io/rams/) is a [class less](https://jacobxperez.github.io/blog/post/css/class-less-architecture/)
 css framework that utilizes the power of [data-attributes](https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes)
 for styling components.
 
@@ -62,7 +62,7 @@ These examples incorporate the framework with custom modules
 -   [Jacob Perez](https://github.com/jacobxperez/blog): I am a front-end web developer and designer.
 -   [Company](https://github.com/jacobxperez/company): A single page website template for your business marketing
 
-**note:** these examples may contain an older version of RAMs 
+**note:** these examples may contain an older version of RAMs
 
 ### [Contributing](https://github.com/jacobxperez/rams/blob/master/.github/CONTRIBUTING.md)
 

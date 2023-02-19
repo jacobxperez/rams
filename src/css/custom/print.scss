@@ -15,8 +15,8 @@
         display: none;
     }
 
-    :--heading {
-        @if $headings-font-family != false {
+    @if $headings-font-family != false {
+        :--headings {
             font-family: $print-font-family;
         }
     }

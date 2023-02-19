@@ -25,7 +25,7 @@ for styling components.
 ## Getting Started
 
 Start by **[downloading](https://github.com/jacobxperez/rams/archive/master.zip)** the
-[repository](https://github.com/jacobxperez/rams) or by cloning RAMs
+[repository](https://github.com/jacobxperez/rams) or by cloning Rams
 
     git clone https://github.com/jacobxperez/rams.git
 
@@ -62,7 +62,7 @@ These examples incorporate the framework with custom modules
 -   [Jacob Perez](https://github.com/jacobxperez/blog): I am a front-end web developer and designer.
 -   [Company](https://github.com/jacobxperez/company): A single page website template for your business marketing
 
-**note:** these examples may contain an older version of RAMs
+**note:** these examples may contain an older version of Rams
 
 ### [Contributing](https://github.com/jacobxperez/rams/blob/master/.github/CONTRIBUTING.md)
 

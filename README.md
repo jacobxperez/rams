@@ -57,7 +57,7 @@ On your terminal run these scripts to compile
 
 ### Examples
 
-These examples incorporate the framework with custom modules
+These examples incorporate Rams with custom modules
 
 -   [Jacob Perez](https://github.com/jacobxperez/blog): I am a front-end web developer and designer.
 -   [Company](https://github.com/jacobxperez/company): A single page website template for your business marketing

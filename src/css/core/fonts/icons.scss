@@ -1,4 +1,4 @@
-@include font-face($icon-font-name, $icon-font-path);
+@include _font-face($icon-font-name, $icon-font-path);
 
 [data-icon]:before {
     content: attr(data-icon);

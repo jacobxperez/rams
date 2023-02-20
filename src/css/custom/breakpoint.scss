@@ -1,14 +1,14 @@
-@mixin small-screen() {
+@mixin _small-screen() {
     /* Add code for small screen */
-    @include small-grid();
+    @include _small-grid();
 }
 
-@mixin medium-screen() {
+@mixin _medium-screen() {
     /* Add code for medium screen */
-    @include medium-grid();
+    @include _medium-grid();
 }
 
-@mixin large-screen() {
+@mixin _large-screen() {
     /* Add code for large screen */
-    @include large-grid();
+    @include _large-grid();
 }

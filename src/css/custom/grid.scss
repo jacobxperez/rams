@@ -16,20 +16,20 @@
     grid-column: span 3;
 }
 
-@mixin small-grid() {
+@mixin _small-grid() {
     /* Add code for small screen  */
     [data-grid="main"] {
         display: block;
     }
 }
 
-@mixin medium-grid() {
+@mixin _medium-grid() {
     /* Add code for medium screen  */
     :where([data-grid="main"]) div, li {
         grid-column: span 2;
     }
 }
 
-@mixin large-grid() {
+@mixin _large-grid() {
     /* Add code for large screen  */
 }

@@ -1,4 +1,4 @@
 @media screen and (max-width: $screen-small-max-width) {
-    @include small-screen();
-    @include small-display();
+    @include _small-screen();
+    @include _small-display();
 }

@@ -3,15 +3,8 @@ ul {
     list-style-type: none;
 }
 
-[data-list="ol"],
-[data-list="ul"],
-[data-list="dl"] {
+:--lists {
     padding-left: $leading;
-    @extend [data-leading];
-}
-
-[data-list="ol"],
-[data-list="ul"] {
     list-style-position: outside;
 }
 
@@ -31,8 +24,6 @@ ul {
     list-style-type: $ul-list-style-type-child;
 }
 
-:where([data-list="ol"]) [data-list],
-:where([data-list="ul"]) [data-list],
-:where([data-list="dl"]) [data-list] {
+:--lists [data-list] {
     margin: 0;
 }

@@ -1,26 +1,14 @@
-[data-tooltip] {
+[data-toggle="tooltip"] {
     position: relative;
     text-decoration: underline dotted;
     cursor: help;
 }
 
-[data-tooltip]::before {
-    content: attr(data-tooltip);
+[data-dropbox="tooltip"] {
     position: absolute;
-    z-index: -10;
     bottom: 100%;
     left: 0;
-    min-width: $tooltip-min-width;
     padding: $space-y $space-x;
     background-color: $tooltip-background;
     color: $tooltip-text;
-    opacity: 0;
-    transition: $tooltip-transition;
-}
-
-/* uncss:ignore */
-[data-tooltip][data-state="active"]::before,
-[data-tooltip]:hover::before {
-    z-index: 10;
-    opacity: 1;
 }

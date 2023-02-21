@@ -28,7 +28,7 @@ $tertiary-text: hsl(0, 0%, 100%);
 $tertiary-active: hsl(0, 0%, 20%);
 
 $navbar-background: hsl(0, 0%, 15%);
-$navbar-child-background: hsl(0, 0%, 20%);
+$navbar-dropbox-background: hsl(0, 0%, 20%);
 $navbar-anchor-text: hsl(0, 0%, 100%);
 $navbar-anchor-text-active: hsl(0, 0%, 70%);
 
@@ -128,7 +128,7 @@ $disabled-text: hsl(0, 0%, 50%);
 
 /* Navbar */
 $navbar-background: hsl(0, 0%, 15%);
-$navbar-child-background: hsl(0, 0%, 20%);
+$navbar-dropbox-background: hsl(0, 0%, 20%);
 $navbar-anchor-text: hsl(0, 0%, 100%);
 $navbar-anchor-text-active: hsl(0, 0%, 70%);
 
@@ -153,7 +153,7 @@ $dropbox-transition: opacity 0.2s ease-out;
 
 /* Tooltip */
 $tooltip-min-width: $dropbox-min-width;
-$tooltip-background: $navbar-child-background;
+$tooltip-background: $navbar-dropbox-background;
 $tooltip-text: hsl(0, 0%, 100%);
 $tooltip-transition: opacity 0.4s ease-out;
 

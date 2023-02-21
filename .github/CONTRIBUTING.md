@@ -32,13 +32,6 @@ technology to discover new designs.
 
 ## Design Philosophy
 
-**"Good design is as little design as possible"** is perhaps Dieter Ram's most
-famous quote, meaning that by removing the unnecessary, the essential comes to
-the forefront, making a product more useful, understandable, easy to use, and
-long-lasting.
-
-## Design Principles
-
 In the book, The Power of Less, [Leo Babauta](https://leobabauta.com/) explains
 how to improve performance by starting with small proactive actions, setting
 clear limits, identifying the essentials, simplifying your work, eliminating the
@@ -50,6 +43,26 @@ unnecessary, and staying focused on the vision.
 4. Simplify
 5. Eliminate the nonessential
 6. Stay focused
+
+## Design Principles
+
+Back in the late 1970s, Dieter Rams was becoming increasingly concerned by the
+state of the world around him: “An impenetrable confusion of forms, colors and
+noises.” Aware that he was a significant contributor to that world, he asked
+himself an important question: is my design good design?
+
+His answer is expressed in his **ten principles for good design**.
+
+1. Good design is innovative
+2. Good design makes a product useful
+3. Good design is aesthetic
+4. Good design makes a product understandable
+5. Good design is unobtrusive
+6. Good design is honest
+7. Good design is long-lasting
+8. Good design is thorough down to the last detail
+9. Good design is environmentally-friendly
+10. Good design is as little design as possible
 
 > Perfection is achieved, not when there is nothing more to add, but when there
 > is nothing left to take away.

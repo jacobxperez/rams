@@ -13,7 +13,7 @@
 }
 
 html {
-    background-color: $background;
+    background: $background;
     color: $font-color;
     font-size: $font-size;
     font-family: $font-family;
@@ -35,4 +35,18 @@ embed,
 object {
     display: block;
     max-width: 100%;
+}
+
+@custom-selector :--headings h1, h2, h3, h4, h5, h6;
+
+@custom-selector :--lists [data-list="ol"], [data-list="ul"], [data-list="dl"];
+
+p,
+pre,
+table,
+blockquote,
+[data-leading],
+:--headings,
+:--lists {
+    margin: calc($leading / 2) 0;
 }

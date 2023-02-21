@@ -5,12 +5,8 @@
     min-width: $dropbox-min-width;
     background-color: transparent;
     color: $font-color;
-}
-
-[data-dropbox="menu"] {
-    display: block;
-    opacity: 0;
     transition: $dropbox-transition;
+    opacity: 0;
 }
 
 /* uncss:ignore */

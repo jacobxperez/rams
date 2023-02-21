@@ -1,10 +1,14 @@
 [data-dropbox] {
     z-index: -10;
-    display: none;
     visibility: hidden;
     min-width: $dropbox-min-width;
     background-color: transparent;
     color: $font-color;
     transition: $dropbox-transition;
     opacity: 0;
+}
+
+[data-dropbox="content"] {
+    display: none;
+    padding: 0 $space-x $space-y $space-x;
 }

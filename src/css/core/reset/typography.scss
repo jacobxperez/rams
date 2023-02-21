@@ -1,15 +1,8 @@
-[data-leading] {
-    margin: calc($leading / 2) 0;
-}
-
-@custom-selector :--headings h1, h2, h3, h4, h5, h6;
-
 :--headings {
     @if $headings-font-family != false {
         font-family: $headings-font-family;
     }
     font-weight: $headings-font-weight;
-    @extend [data-leading];
 }
 
 h1,
@@ -40,10 +33,6 @@ h5,
 h6,
 [data-text~="h6"] {
     font-size: $h6-font-size;
-}
-
-p {
-    @extend [data-leading];
 }
 
 b,

@@ -152,7 +152,7 @@ $dropbox-min-width: 10rem;
 $dropbox-transition: all 0.2s ease-out;
 
 /* tooltip */
-$tooltip-min-width: $dropbox-min-width;
+$tooltip-min-width: 26ch;
 $tooltip-background: $navbar-dropbox-background;
 $tooltip-text: hsl(0, 0%, 100%);
 

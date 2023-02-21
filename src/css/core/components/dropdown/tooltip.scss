@@ -8,6 +8,7 @@
     position: absolute;
     bottom: 100%;
     left: 0;
+    min-width: $tooltip-min-width;
     padding: $space-y $space-x;
     background-color: $tooltip-background;
     color: $tooltip-text;

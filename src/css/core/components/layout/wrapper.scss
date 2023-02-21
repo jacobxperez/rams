@@ -13,6 +13,6 @@ body > [data-wrapper]:last-child {
     min-width: $wrapper-min-width;
 }
 
-[data-wrapper="fit"] {
+[data-wrapper~="fit"] {
     max-width: $wrapper-max-width;
 }

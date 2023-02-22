@@ -61,6 +61,7 @@ These examples incorporate Rams with custom modules
 
 -   [Jacob Perez](https://github.com/jacobxperez/blog): I am a front-end web developer and designer.
 -   [Company](https://github.com/jacobxperez/company): A single page website template for your business marketing
+-   [Vaporwave Aesthetics](https://github.com/jacobxperez/vaporwave-aesthetic): A template with Vaporwave Aesthetics
 
 **note:** these examples may contain an older version of Rams
 

@@ -1,3 +1,7 @@
+[data-box~="leading"] {
+    margin: calc($leading / 2) 0;
+}
+
 [data-box~="padding"] {
     padding: $space-y $space-x;
 }

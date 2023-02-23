@@ -46,7 +46,6 @@ p,
 pre,
 table,
 blockquote,
-[data-leading],
 :--headings,
 :--lists {
     margin: calc($leading / 2) 0;

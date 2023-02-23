@@ -1,9 +1,0 @@
-[data-box] {
-    display: block;
-    width: 100%;
-    padding: $space-y $space-x;
-}
-
-[data-box~="border"] {
-    border: $border-width solid $border-color;
-}

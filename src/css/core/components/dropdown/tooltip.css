@@ -1,5 +1,4 @@
 [data-toggle="tooltip"] {
-    position: relative;
     text-decoration: underline dotted;
     cursor: help;
 }

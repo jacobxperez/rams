@@ -1,5 +1,11 @@
+[data-toggle~="dropdown"],
+[data-toggle~="tooltip"] {
+    position: relative;
+}
+
 :where([data-toggle~="dropdown"], [data-toggle~="tooltip"]) > [data-dropbox],
 :where([data-toggle~="dropdown"], [data-toggle~="tooltip"]) + [data-dropbox] {
+    position: absolute;
     display: block;
 }
 

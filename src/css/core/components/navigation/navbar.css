@@ -30,10 +30,10 @@
     background-color: $navbar-dropbox-background;
 }
 
-[data-anchor="navbar"] {
+[data-anchor~="navbar"] {
     color: $navbar-anchor-text;
 }
 
-[data-anchor="navbar"]:where([data-state="active"], :hover, :active) {
+[data-anchor~="navbar"]:where([data-state="active"], :hover, :active) {
     color: $navbar-anchor-text-active;
 }

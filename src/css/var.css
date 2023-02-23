@@ -144,12 +144,12 @@ $breadcrumb-separator: "/";
 
 /* Dropdown */
 $dropbox-min-width: 10rem;
-$dropbox-transition: all 0.2s ease-out;
+$dropbox-transition: opacity 0.2s ease-out;
 
 /* tooltip */
 $tooltip-min-width: 26ch;
-$tooltip-background: $navbar-dropbox-background;
-$tooltip-text: hsl(0, 0%, 100%);
+$tooltip-background: var(--font-color);
+$tooltip-text: var(--background);
 
 /* Grid */
 $grid-gap: 1.25rem;
@@ -171,5 +171,5 @@ $screen-large-min-width: 61.25em; /* large screens 980px */
 $print-font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, "Nimbus Roman No9 L", serif;
 
 /* Selection */
-$selection: $secondary;
-$selection-text: hsl(0, 0%, 100%);
+$selection: var(--font-color);
+$selection-text: var(--background);

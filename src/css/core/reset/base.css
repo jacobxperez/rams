@@ -1,16 +1,20 @@
-* {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     border: 0 none;
     color: inherit;
-    font-size: inherit;
-    font-family: inherit;
-    line-height: inherit;
+    font: inherit;
     text-align: inherit;
     vertical-align: baseline;
     outline: 0;
 }
+
+@custom-selector :--headings h1, h2, h3, h4, h5, h6;
+
+@custom-selector :--lists [data-list="ol"], [data-list="ul"], [data-list="dl"];
 
 html {
     background: $background;
@@ -37,9 +41,6 @@ object {
     max-width: 100%;
 }
 
-@custom-selector :--headings h1, h2, h3, h4, h5, h6;
-
-@custom-selector :--lists [data-list="ol"], [data-list="ul"], [data-list="dl"];
 
 p,
 pre,

@@ -1,10 +1,9 @@
-[data-toggle="tooltip"] {
+[data-toggle~="tooltip"] {
     text-decoration: underline dotted;
     cursor: help;
 }
 
-[data-dropbox="tooltip"] {
-    position: absolute;
+[data-dropbox~="tooltip"] {
     bottom: 100%;
     left: 0;
     min-width: $tooltip-min-width;

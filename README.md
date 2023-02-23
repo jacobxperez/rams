@@ -35,15 +35,15 @@ Install devDependencies on your machine with [npm](https://www.npmjs.com/)
 
 ### Build
 
-Edit the [variables](https://github.com/jacobxperez/rams/blob/master/src/css/var.scss), add
+Edit the [variables](https://github.com/jacobxperez/rams/blob/master/src/css/var.css), add
 [custom](https://github.com/jacobxperez/rams/tree/master/src/css/custom) modules and linked
-them to [main.scss](https://github.com/jacobxperez/rams/blob/master/src/css/main.scss) for compiling.
+them to [main.css](https://github.com/jacobxperez/rams/blob/master/src/css/main.css) for compiling.
 
 -   [/css](https://github.com/jacobxperez/rams/tree/master/src/css/)
     -   [core](https://github.com/jacobxperez/rams/tree/master/src/css/core) (important files for compiling)
     -   [custom](https://github.com/jacobxperez/rams/tree/master/src/css/custom) (add custom modules here)
-    -   [main.scss](https://github.com/jacobxperez/rams/blob/master/src/css/main.scss) (compile to produce the final CSS)
-    -   [var.scss](https://github.com/jacobxperez/rams/blob/master/src/css/var.scss) (variables for font, colors, and more)
+    -   [main.css](https://github.com/jacobxperez/rams/blob/master/src/css/main.css) (compile to produce the final CSS)
+    -   [var.css](https://github.com/jacobxperez/rams/blob/master/src/css/var.css) (variables for font, colors, and more)
 
 ### Compile
 

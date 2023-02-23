@@ -3,12 +3,12 @@
     --font-color: hsl(0, 0%, 15%);
 }
 
-// @media (prefers-color-scheme: dark) {
-//     :root {
-//         --background: hsl(0, 0%, 10%);
-//         --font-color: hsl(0, 0%, 70%);
-//     }
-// }
+/* @media (prefers-color-scheme: dark) {
+    :root {
+        --background: hsl(0, 0%, 10%);
+        --font-color: hsl(0, 0%, 70%);
+    }
+} */
 
 /* Colors */
 $background: var(--background);
@@ -150,10 +150,6 @@ $dropbox-transition: all 0.2s ease-out;
 $tooltip-min-width: 26ch;
 $tooltip-background: $navbar-dropbox-background;
 $tooltip-text: hsl(0, 0%, 100%);
-
-/* Iconography */
-$icon-font-name: "icons";
-$icon-font-path: "../fonts/icons/";
 
 /* Grid */
 $grid-gap: 1.25rem;

@@ -9,7 +9,7 @@
 }
 
 :where([data-grid="main"]) header, footer {
-    grid-column: 1 #{"/"} -1;
+    grid-column: 1 / -1;
 }
 
 :where([data-grid="main"]) article, section {

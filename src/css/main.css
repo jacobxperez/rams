@@ -6,28 +6,28 @@
  */
 
 /* Variables */
-@import "var.scss";
+@import "var.css";
 
 /* Mixins */
-@import "core/mixins/import.scss";
+@import "core/mixins/import.css";
 
 /* Reset */
-@import "core/reset/import.scss";
+@import "core/reset/import.css";
 
 /* Components */
-@import "core/components/import.scss";
+@import "core/components/import.css";
 
 /* Custom Modules */
-@import "custom/grid.scss";
+@import "custom/grid.css";
 
 /* Fonts */
-@import "core/fonts/icons.scss";
+@import "core/fonts/icons.css";
 
 /* Utilities */
-@import "core/utilities/import.scss";
+@import "core/utilities/import.css";
 
 /* Breakpoints */
-@import "core/breakpoints/import.scss";
+@import "core/breakpoints/import.css";
 
 /* Print */
-@import "custom/print.scss";
+@import "custom/print.css";

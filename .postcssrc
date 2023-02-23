@@ -1,5 +1,8 @@
 {
   "plugins": {
+    "postcss-mixins": true,
+    "postcss-import": true,
+    "postcss-advanced-variables": true,
     "postcss-custom-selectors": true,
     "postcss-variable-compress": true
   }

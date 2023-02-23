@@ -57,7 +57,7 @@ expressed in his ten principles for good design.
 The possibilities for innovation are not, by any means, exhausted.
 Technological development is always offering new opportunities for
 innovative design. But innovative design always develops in tandem
-with innovative technology, and can never be an end in itself
+with innovative technology, and can never be an end in itself.
 
 #### 2. Good design makes a product useful
 A product is bought to be used. It has to satisfy certain criteria, not

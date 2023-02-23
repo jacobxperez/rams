@@ -175,5 +175,5 @@ $screen-large-min-width: 61.25em; /* large screens 980px */
 $print-font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, "Nimbus Roman No9 L", serif;
 
 /* Selection */
-$selection: hsl(220, 100%, 60%);
+$selection: $secondary;
 $selection-text: hsl(0, 0%, 100%);

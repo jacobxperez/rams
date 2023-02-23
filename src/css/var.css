@@ -1,12 +1,12 @@
 :root {
     --background: hsl(0, 0%, 100%);
-    --font-color: hsl(0, 0%, 15%);
+    --font-color: hsl(0, 0%, 0%);
 }
 
 /* @media (prefers-color-scheme: dark) {
     :root {
         --background: hsl(0, 0%, 10%);
-        --font-color: hsl(0, 0%, 70%);
+        --font-color: hsl(0, 0%, 60%);
     }
 } */
 
@@ -122,8 +122,8 @@ $disabled: hsl(0, 0%, 90%);
 $disabled-text: hsl(0, 0%, 50%);
 
 /* Navbar */
-$navbar-background: hsl(0, 0%, 15%);
-$navbar-dropbox-background: hsl(0, 0%, 20%);
+$navbar-background: hsl(0, 0%, 0%);
+$navbar-dropbox-background: hsl(0, 0%, 10%);
 $navbar-anchor-text: hsl(0, 0%, 100%);
 $navbar-anchor-text-active: hsl(0, 0%, 70%);
 

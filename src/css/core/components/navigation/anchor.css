@@ -1,7 +1,3 @@
-[data-nav] {
-    display: flex;
-}
-
 [data-anchor] {
     display: block;
     padding: $space-y $space-x;

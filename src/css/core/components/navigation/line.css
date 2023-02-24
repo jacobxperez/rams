@@ -1,8 +1,8 @@
-[data-nav~="line-top"] {
+[data-flex~="line-top"] {
     border-top: $nav-line-border-width solid $nav-line-border-color;
 }
 
-[data-nav~="line-bottom"] {
+[data-flex~="line-bottom"] {
     border-bottom: $nav-line-border-width solid $nav-line-border-color;
 }
 
@@ -17,12 +17,12 @@
     color: $nav-line-anchor-text-active;
 }
 
-:where([data-nav~="line-top"]) [data-anchor~="line"] {
+:where([data-flex~="line-top"]) [data-anchor~="line"] {
     bottom: $nav-line-border-width;
     border-top: $nav-line-border-width solid transparent;
 }
 
-:where([data-nav~="line-bottom"]) [data-anchor~="line"] {
+:where([data-flex~="line-bottom"]) [data-anchor~="line"] {
     top: $nav-line-border-width;
     border-bottom: $nav-line-border-width solid transparent;
 }

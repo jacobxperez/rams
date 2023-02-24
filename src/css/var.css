@@ -142,11 +142,11 @@ $nav-line-anchor-border-active: $primary;
 /* Breadcrumb */
 $breadcrumb-separator: "/";
 
-/* Dropdown */
+/* Dropbox */
 $dropbox-min-width: 10rem;
 $dropbox-transition: opacity 0.2s ease-out;
 
-/* tooltip */
+/* Tooltip */
 $tooltip-min-width: 26ch;
 $tooltip-background: var(--font-color);
 $tooltip-text: var(--background);

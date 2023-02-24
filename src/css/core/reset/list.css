@@ -8,19 +8,19 @@ ul {
     list-style-position: outside;
 }
 
-[data-list="ol"] {
+[data-list~="ol"] {
     list-style-type: $ol-list-style-type;
 }
 
-[data-list="ol"] > li:first-child > [data-list="ol"] {
+[data-list~="ol"] > li:first-child > [data-list~="ol"] {
     list-style-type: $ol-list-style-type-child;
 }
 
-[data-list="ul"] {
+[data-list~="ul"] {
     list-style-type: $ul-list-style-type;
 }
 
-[data-list="ul"] > li:first-child > [data-list="ul"] {
+[data-list~="ul"] > li:first-child > [data-list~="ul"] {
     list-style-type: $ul-list-style-type-child;
 }
 

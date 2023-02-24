@@ -2,8 +2,8 @@
     position: relative;
 }
 
-:where([data-toggle~="dropdown"]) > [data-dropbox],
-:where([data-toggle~="dropdown"]) + [data-dropbox] {
+[data-toggle~="dropdown"] > [data-dropbox],
+[data-toggle~="dropdown"] + [data-dropbox] {
     position: absolute;
     display: block;
 }

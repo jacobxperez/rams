@@ -14,7 +14,7 @@
 
 @custom-selector :--headings h1, h2, h3, h4, h5, h6;
 
-@custom-selector :--lists [data-list="ol"], [data-list="ul"], [data-list="dl"];
+@custom-selector :--lists [data-list~="ol"], [data-list~="ul"], [data-list~="dl"];
 
 html {
     background: $background;
@@ -40,7 +40,6 @@ object {
     display: block;
     max-width: 100%;
 }
-
 
 p,
 pre,

@@ -19,9 +19,9 @@ $primary: hsl(220, 100%, 50%);
 $primary-text: hsl(0, 0%, 100%);
 $primary-active: hsl(220, 100%, 45%);
 
-$secondary: hsl(250, 50%, 50%);
+$secondary: hsl(30, 50%, 30%);
 $secondary-text: hsl(0, 0%, 100%);
-$secondary-active: hsl(250, 50%, 45%);
+$secondary-active: hsl(30, 50%, 35%);
 
 $tertiary: var(--font-color);
 $tertiary-text: hsl(0, 0%, 100%);

@@ -28,6 +28,24 @@
     border: $border-width solid $border-color;
 }
 
+[data-box~="border-top"] {
+    border-top: $border-width solid $border-color;
+}
+
+[data-box~="border-left"],
+[data-box~="border-x"] {
+    border-left: $border-width solid $border-color;
+}
+
+[data-box~="border-right"],
+[data-box~="border-x"] {
+    border-right: $border-width solid $border-color;
+}
+
+[data-box~="border-bottom"] {
+    border-bottom: $border-width solid $border-color;
+}
+
 [data-box~="full-width"] {
     width: 100%;
 }

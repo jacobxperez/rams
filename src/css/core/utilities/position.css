@@ -1,7 +1,3 @@
-[data-position~="static"] {
-    position: static;
-}
-
 [data-position~="relative"] {
     position: relative;
 }

@@ -52,8 +52,7 @@ On your terminal run these scripts to compile
 -   `npm run docs` locally runs documentation
 -   `npm run dev` serve current development build
 -   `npm run watch` watch for changes but does not start server
--   `npm run build` make current build but does not start server
--   `npm run public` makes public build and sets url to "/" can be changed on [package.json](https://github.com/jacobxperez/rams/blob/master/package.json)
+-   `npm run build` makes current build and sets url to "/" can be changed on [package.json](https://github.com/jacobxperez/rams/blob/master/package.json)
 
 ### Examples
 

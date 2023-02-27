@@ -38,7 +38,9 @@
     "postcss-custom-selectors": "^7.1.2",
     "postcss-import": "^15.1.0",
     "postcss-mixins": "^9.0.4",
+    "postcss-uncss": "^0.17.0",
     "postcss-variable-compress": "^2.0.1",
-    "prettier": "2.8.4"
+    "prettier": "2.8.4",
+    "uncss": "^0.17.3"
   }
 }

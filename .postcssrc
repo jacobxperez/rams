@@ -1,9 +1,15 @@
 {
-  "plugins": {
-    "postcss-mixins": true,
-    "postcss-import": true,
-    "postcss-advanced-variables": true,
-    "postcss-custom-selectors": true,
-    "postcss-variable-compress": true
-  }
+    "plugins": {
+        "postcss-mixins": true,
+        "postcss-import": true,
+        "postcss-advanced-variables": true,
+        "postcss-custom-selectors": true,
+        "postcss-variable-compress": true,
+        "postcss-uncss": {
+            "html": [
+                "docs/**/*.html",
+                "src/**/*.html"
+            ]
+        }
+    }
 }

@@ -1,7 +1,15 @@
 {
-  "extends": ["@parcel/config-default"],
-  "namers": ["@mischnic/parcel-namer-preserve-structure", "..."],
-  "optimizers": {
-    "*.html": ["parcel-optimizer-friendly-urls", "..."]
-  }
+    "extends": [
+        "@parcel/config-default"
+    ],
+    "namers": [
+        "@mischnic/parcel-namer-preserve-structure",
+        "..."
+    ],
+    "optimizers": {
+        "*.html": [
+            "parcel-optimizer-friendly-urls",
+            "..."
+        ]
+    }
 }

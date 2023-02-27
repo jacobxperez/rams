@@ -9,7 +9,6 @@ following sections to better understand the vision of the project. Use the [issu
 ## Table of Contents
 
 * [Design Essence](#design-essence)
-* [Design Philosophy](#design-philosophy)
 * [Design Principles](#design-principles)
 * [Design Requirements](#design-requirements)
 * [Bug Reports](#bug-reports)
@@ -28,20 +27,6 @@ arbitrary. The developer is trained to dominate his technology while the designe
 is forced to work within its limits. By limiting or restricting the choices, the
 designer is forced to choose the essential and because he has not been trained as
 a developer, he can use his limitation with technology to discover new designs.
-
-## Design Philosophy
-
-In the book, The Power of Less, [Leo Babauta](https://leobabauta.com/) explains
-how to improve performance by starting with small proactive actions, setting
-clear limits, identifying the essentials, simplifying your work, eliminating the
-unnecessary, and staying focused on the vision.
-
-1. Start small
-2. Set clear limits
-3. Identify the essential
-4. Simplify
-5. Eliminate the nonessential
-6. Stay focused
 
 ## Design Principles
 

@@ -96,7 +96,7 @@ Back to purity, back to simplicity.
 
 * Identify areas of volatility and encapsulate their effects
 * Identify the minimum amount of components that can satisfy most designs.
-* Must be unobtrusive, to leave room for the designer self-expression.
+* Must be unobtrusive to leave room for the designer's self-expression.
 * Must be easy to update, maintain, modify, adapt, customize, and change with minimum effort.
 * Must follow the [80/20 principle](https://jacobxperez.github.io/blog/post/heuristic/the-80-20-principle/),
 which indicates that 80 percent of the effects come from 20 percent of the causes.

@@ -46,12 +46,24 @@ $link-color: $primary;
 /* headings */
 $headings-font-family: false;
 $headings-font-weight: 400;
+
 $h1-font-size: clamp(2rem, 6vw, 4rem);
+$h1-line-height: .9;
+
 $h2-font-size: clamp(1.8rem, 5vw, 3rem);
+$h2-line-height: 1;
+
 $h3-font-size: clamp(1.4rem, 4vw, 2.4rem);
+$h3-line-height: 1.1;
+
 $h4-font-size: clamp(1.2rem, 3vw, 2rem);
+$h4-line-height: 1.3;
+
 $h5-font-size: clamp(1rem, 3vw, 1.8rem);
+$h5-line-height: 1.4;
+
 $h6-font-size: clamp(1rem, 3vw, 1.4rem);
+$h6-line-height: $line-height;
 
 /* blockquote */
 $blockquote-font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, "Nimbus Roman No9 L", serif;
@@ -157,7 +169,7 @@ $grid-gap: 1.25rem;
 /* Wrapper */
 $wrapper-min-width: 20rem;
 $wrapper-max-width: 62.5rem;
-$wrapper-margin-top: calc($leading * 2);
+$wrapper-margin-top: calc($leading * 3);
 $wrapper-margin-bottom: calc($leading * 4);
 $wrapper-gap: $grid-gap;
 

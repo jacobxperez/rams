@@ -2,24 +2,20 @@
     display: flex;
 }
 
-[data-flex~="row-reverse"] {
+[data-flex~="reverse"] {
     flex-direction: row-reverse;
 }
 
-[data-flex~="column"] {
+[data-flex~="list"] {
     flex-direction: column;
 }
 
-[data-flex~="column-reverse"] {
+[data-flex*="list reverse"] {
     flex-direction: column-reverse;
 }
 
 [data-flex~="wrap"] {
     flex-wrap: wrap;
-}
-
-[data-flex~="wrap-reverse"] {
-    flex-wrap: wrap-reverse;
 }
 
 [data-flex~="grow-children"] > *,
@@ -28,15 +24,7 @@
 }
 
 [data-flex~="gap"] {
-    gap: $wrapper-gap;
-}
-
-[data-flex~="row-gap"] {
-    row-gap: $wrapper-gap;
-}
-
-[data-flex~="column-gap"] {
-    column-gap: $wrapper-gap;
+    gap: $grid-gap;
 }
 
 [data-flex~="end"] {

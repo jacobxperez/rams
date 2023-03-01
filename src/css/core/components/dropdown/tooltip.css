@@ -3,7 +3,7 @@
     cursor: help;
 }
 
-[data-dropbox~="tooltip"] {
+:where([data-toggle~="tooltip"]) [data-dropbox] {
     bottom: 100%;
     min-width: $tooltip-min-width;
     padding: $space-y $space-x;

@@ -14,12 +14,12 @@
     top: 0;
 }
 
-:where([data-navbar="top"]) [data-dropbox] {
-    top: 100%;
-}
-
 [data-navbar="bottom"] {
     bottom: 0;
+}
+
+:where([data-navbar="top"]) [data-dropbox] {
+    top: 100%;
 }
 
 :where([data-navbar="bottom"]) [data-dropbox] {

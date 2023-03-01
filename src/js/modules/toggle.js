@@ -4,7 +4,7 @@ const toggle = () => {
     // toggles attribute
     function toggleAttr(item) {
         item.addEventListener("click", (e) => {
-            !item.hasAttribute("data-state", "active") ? item.setAttribute("data-state", "active") : item.removeAttribute("data-state")
+            item.hasAttribute("data-state", "active") ?  item.removeAttribute("data-state") : item.setAttribute("data-state", "active")
             e.stopPropagation()
         })
     }
@@ -18,7 +18,8 @@ const toggle = () => {
     }
 
     document.addEventListener("click", (e) => {
-        getToggle.forEach((item) => removeAtt(item, '[data-toggle~="dropdown"]', e))
+        getToggle.forEach((item) => removeAtt(item, '[data-toggle~="pop"]', e))
+        getToggle.forEach((item) => removeAtt(item, '[data-toggle~="tooltip"]', e))
     })
 }
 

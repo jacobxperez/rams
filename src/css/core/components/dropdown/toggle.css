@@ -1,9 +1,11 @@
-[data-toggle~="dropdown"] {
+[data-toggle] {
     position: relative;
 }
 
-[data-toggle~="dropdown"] > [data-dropbox],
-[data-toggle~="dropdown"] + [data-dropbox] {
+[data-toggle~="pop"] > [data-dropbox],
+[data-toggle~="pop"] + [data-dropbox],
+[data-toggle~="tooltip"] > [data-dropbox],
+[data-toggle~="tooltip"] + [data-dropbox] {
     position: absolute;
     display: block;
 }
@@ -11,7 +13,7 @@
 /* uncss:ignore */
 [data-state="active"] > [data-dropbox],
 [data-state="active"] + [data-dropbox],
-[data-toggle~="tooltip"]:hover > [data-dropbox~="tooltip"] {
+[data-toggle~="tooltip"]:hover > [data-dropbox] {
     z-index: 100;
     display: block;
     visibility: visible;

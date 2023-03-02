@@ -17,7 +17,12 @@
 @custom-selector :--lists [data-list~="ol"], [data-list~="ul"], [data-list~="dl"];
 
 html {
-    background: $background;
+    @if $background-gradient == false {
+        background: $background;
+    } @else {
+        background: $background;
+        background-image: $background-gradient;
+    }
     color: $font-color;
     font-size: $font-size;
     font-family: $font-family;

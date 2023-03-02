@@ -1,10 +1,7 @@
 @font-face {
     font-family: icons;
-    src: url("../fonts/icons/icons.eot") format("eot"),
-         url("../fonts/icons/icons.woff2") format("woff2"),
-         url("../fonts/icons/icons.woff") format("woff"),
-         url("../fonts/icons/icons.ttf") format("truetype"),
-         url("../fonts/icons/icons.svg#icon") format("svg");
+    src: url("/src/fonts/icons/icons.woff2") format("woff2"),
+         url("/src/fonts/icons/icons.woff") format("woff"),
 }
 
 [data-icon]:before {

@@ -35,7 +35,8 @@ $border-width: 0.0625em;
 $border-color: hsl(0, 0%, 50%);
 
 /* Typography */
-$font-family: HelveticaNeue-Light, "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Nimbus Sans L", sans-serif;
+$font-family: HelveticaNeue-Light, "Helvetica Neue Light", "Helvetica Neue",
+    Helvetica, Arial, "Nimbus Sans L", sans-serif;
 $font-size: 100%;
 $font-weight: 400;
 $line-height: 1.5;
@@ -67,11 +68,13 @@ $h6-font-size: $font-size;
 $h6-line-height: $line-height;
 
 /* blockquote */
-$blockquote-font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, "Nimbus Roman No9 L", serif;
+$blockquote-font-family: TimesNewRoman, "Times New Roman", Times, Baskerville,
+    Georgia, "Nimbus Roman No9 L", serif;
 $blockquote-font-style: italic;
 
 /* pre & code */
-$mono-font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", "Nimbus Mono L", monospace;
+$mono-font-family: "Courier New", Courier, "Lucida Sans Typewriter",
+    "Lucida Typewriter", "Nimbus Mono L", monospace;
 
 /* small */
 $small-font-size: 0.75rem;
@@ -181,7 +184,8 @@ $screen-medium-max-width: 61.1875em; /* medium screen 979px */
 $screen-large-min-width: 61.25em; /* large screens 980px */
 
 /* Print */
-$print-font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, "Nimbus Roman No9 L", serif;
+$print-font-family: TimesNewRoman, "Times New Roman", Times, Baskerville,
+    Georgia, "Nimbus Roman No9 L", serif;
 
 /* Selection */
 $selection: var(--font-color);

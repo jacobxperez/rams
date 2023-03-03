@@ -8,11 +8,13 @@
     grid-template-columns: repeat(4, 1fr);
 }
 
-:where([data-grid="main"]) header, footer {
+:where([data-grid="main"]) header,
+footer {
     grid-column: 1 / -1;
 }
 
-:where([data-grid="main"]) article, section {
+:where([data-grid="main"]) article,
+section {
     grid-column: span 3;
 }
 
@@ -25,7 +27,8 @@
 
 @mixin _medium-grid() {
     /* Add code for medium screen  */
-    :where([data-grid="main"]) div, li {
+    :where([data-grid="main"]) div,
+    li {
         grid-column: span 2;
     }
 }

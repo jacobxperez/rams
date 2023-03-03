@@ -1,9 +1,9 @@
-body > [data-wrapper]:first-child {
+:where(body) > [data-wrapper]:first-child {
     margin-top: $wrapper-margin-top;
 }
 
-body > [data-wrapper]:last-child {
-    margin-bottom: $wrapper-margin-bottom;
+:where(body) > [data-wrapper]:last-child {
+    margin-bottom: $wrapper-margin-top;
 }
 
 [data-wrapper] {

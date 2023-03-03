@@ -1,0 +1,14 @@
+[data-button="link"] {
+    text-decoration: none;
+    background-color: transparent;
+    color: $link-color;
+}
+
+[data-button="link"]:is([data-state="active"], :hover, :active) {
+    text-decoration: underline;
+}
+
+[data-button="link"]:is([data-state="active"], :hover, :active) {
+    background-color: transparent;
+    border-color: transparent;
+}

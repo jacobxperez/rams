@@ -1,44 +1,44 @@
 {
-  "name": "rams",
-  "version": "1.0.0",
-  "description": "A Class Less CSS Design System Framework",
-  "source": [
-    "src/index.html"
-  ],
-  "scripts": {
-    "docs": "parcel docs/index.html --no-source-maps",
-    "dev": "parcel --no-source-maps",
-    "watch": "parcel watch --no-source-maps",
-    "build": "parcel build --no-source-maps --public-url /"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jacobxperez/rams.git"
-  },
-  "keywords": [
-    "css",
-    "scss",
-    "front-end",
-    "framework",
-    "design system",
-    "class less architecture"
-  ],
-  "author": "Jacob Perez",
-  "license": "Apache-2.0",
-  "bugs": {
-    "url": "https://github.com/jacobxperez/rams/issues"
-  },
-  "homepage": "https://github.com/jacobxperez/rams/",
-  "devDependencies": {
-    "@mischnic/parcel-namer-preserve-structure": "^0.2.0",
-    "parcel": "^2.8.3",
-    "parcel-optimizer-friendly-urls": "^0.2.0",
-    "postcss": "^8.4.21",
-    "postcss-advanced-variables": "^3.0.1",
-    "postcss-custom-selectors": "^7.1.2",
-    "postcss-import": "^15.1.0",
-    "postcss-mixins": "^9.0.4",
-    "postcss-variable-compress": "^2.0.1",
-    "prettier": "2.8.4"
-  }
+    "name": "rams",
+    "version": "1.0.0",
+    "description": "A Class Less CSS Design System Framework",
+    "source": [
+        "src/index.html"
+    ],
+    "scripts": {
+        "docs": "parcel docs/index.html --no-source-maps",
+        "dev": "parcel --no-source-maps",
+        "watch": "parcel watch --no-source-maps",
+        "build": "parcel build --no-source-maps --public-url /"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/jacobxperez/rams.git"
+    },
+    "keywords": [
+        "css",
+        "scss",
+        "front-end",
+        "framework",
+        "design system",
+        "class less architecture"
+    ],
+    "author": "Jacob Perez",
+    "license": "Apache-2.0",
+    "bugs": {
+        "url": "https://github.com/jacobxperez/rams/issues"
+    },
+    "homepage": "https://github.com/jacobxperez/rams/",
+    "devDependencies": {
+        "@mischnic/parcel-namer-preserve-structure": "^0.2.0",
+        "parcel": "^2.8.3",
+        "parcel-optimizer-friendly-urls": "^0.2.0",
+        "postcss": "^8.4.21",
+        "postcss-advanced-variables": "^3.0.1",
+        "postcss-custom-selectors": "^7.1.2",
+        "postcss-import": "^15.1.0",
+        "postcss-mixins": "^9.0.4",
+        "postcss-variable-compress": "^2.0.1",
+        "prettier": "2.8.4"
+    }
 }

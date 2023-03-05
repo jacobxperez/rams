@@ -12,8 +12,8 @@
         grid-column: 1 / -1;
     }
 
-    :where(&) article,
-    section {
+    :where(&) section,
+    article {
         grid-column: span 3;
     }
 }

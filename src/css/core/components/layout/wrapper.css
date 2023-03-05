@@ -1,16 +1,16 @@
-:where(body) > [data-wrapper]:first-child {
-    margin-top: $wrapper-margin-top;
-}
-
-:where(body) > [data-wrapper]:last-child {
-    margin-bottom: $wrapper-margin-top;
-}
-
 [data-wrapper] {
     margin: 0 auto;
     padding-left: $wrapper-gap;
     padding-right: $wrapper-gap;
     min-width: $wrapper-min-width;
+
+    :where(body) > &:first-child {
+        margin-top: $wrapper-margin-top;
+    }
+    
+    :where(body) > &:last-child {
+        margin-bottom: $wrapper-margin-top;
+    }
 }
 
 [data-wrapper~="fit"] {

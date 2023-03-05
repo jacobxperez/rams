@@ -8,14 +8,14 @@
         border-radius: $button-border-radius;
     }
     cursor: pointer;
-}
 
-[data-button]:is([data-state="active"], :hover, :active) {
-    background-color: $button-background-active;
-    text-decoration: none;
-}
-
-[data-button]:focus {
-    outline: thin dotted;
-    outline-offset: -0.125rem;
+    &:is([data-state="active"], :hover, :active) {
+        background-color: $button-background-active;
+        text-decoration: none;
+    }
+    
+    &:focus {
+        outline: thin dotted;
+        outline-offset: -0.125rem;
+    }
 }

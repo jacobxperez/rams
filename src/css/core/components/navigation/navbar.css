@@ -12,28 +12,28 @@
 
 [data-navbar="top"] {
     top: 0;
+
+    :where(&) [data-dropbox] {
+        top: 100%;
+    }
 }
 
 [data-navbar="bottom"] {
     bottom: 0;
-}
 
-:where([data-navbar="top"]) [data-dropbox] {
-    top: 100%;
-}
-
-:where([data-navbar="bottom"]) [data-dropbox] {
-    bottom: 100%;
-}
-
-[data-dropbox~="navbar"] {
-    background-color: $navbar-dropbox-background;
+    :where(&) [data-dropbox] {
+        bottom: 100%;
+    }
 }
 
 [data-anchor~="navbar"] {
     color: $navbar-anchor-text;
+
+    &:where([data-state="active"], :hover, :active) {
+        color: $navbar-anchor-text-active;
+    }
 }
 
-[data-anchor~="navbar"]:where([data-state="active"], :hover, :active) {
-    color: $navbar-anchor-text-active;
+[data-dropbox~="navbar"] {
+    background-color: $navbar-dropbox-background;
 }

@@ -1,12 +1,12 @@
 [data-toggle~="tooltip"] {
     text-decoration: underline dotted;
     cursor: help;
-}
 
-:where([data-toggle~="tooltip"]) [data-dropbox] {
-    bottom: 100%;
-    min-width: $tooltip-min-width;
-    padding: $space-y $space-x;
-    background-color: $tooltip-background;
-    color: $tooltip-text;
+    :where(&) [data-dropbox] {
+        bottom: 100%;
+        min-width: $tooltip-min-width;
+        padding: $space-y $space-x;
+        background-color: $tooltip-background;
+        color: $tooltip-text;
+    }
 }

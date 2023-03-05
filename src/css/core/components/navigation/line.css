@@ -1,32 +1,29 @@
 [data-flex~="line-top"] {
     border-top: $nav-line-border-width solid $nav-line-border-color;
+
+    :where(&) [data-anchor~="line"] {
+        bottom: $nav-line-border-width;
+        border-top: $nav-line-border-width solid transparent;
+    }
 }
 
 [data-flex~="line-bottom"] {
     border-bottom: $nav-line-border-width solid $nav-line-border-color;
+
+    :where(&) [data-anchor~="line"] {
+        top: $nav-line-border-width;
+        border-bottom: $nav-line-border-width solid transparent;
+    }
 }
 
 [data-anchor~="line"] {
     position: relative;
     z-index: 1;
     color: $nav-line-anchor-text;
-}
 
-[data-anchor~="line"]:where([data-state="active"], :hover, :active) {
-    z-index: 5;
-    color: $nav-line-anchor-text-active;
-}
-
-:where([data-flex~="line-top"]) [data-anchor~="line"] {
-    bottom: $nav-line-border-width;
-    border-top: $nav-line-border-width solid transparent;
-}
-
-:where([data-flex~="line-bottom"]) [data-anchor~="line"] {
-    top: $nav-line-border-width;
-    border-bottom: $nav-line-border-width solid transparent;
-}
-
-[data-anchor~="line"]:where([data-state="active"], :hover, :active) {
-    border-color: $nav-line-anchor-border-active;
+    &:where([data-state="active"], :hover, :active) {
+        z-index: 5;
+        border-color: $nav-line-anchor-border-active;
+        color: $nav-line-anchor-text-active;
+    }
 }

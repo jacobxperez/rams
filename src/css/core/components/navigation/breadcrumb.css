@@ -1,13 +1,13 @@
 [data-flex~="breadcrumb"] {
     column-gap: 0.375em;
-}
 
-:where([data-flex~="breadcrumb"]) li::before {
-    content: $breadcrumb-separator;
-    margin-right: 0.375em;
-}
+    :where(&) li::before {
+        content: $breadcrumb-separator;
+        margin-right: 0.375em;
+    }
 
-:where([data-flex~="breadcrumb"]) li:first-child::before {
-    content: "";
-    margin-right: 0;
+    :where(&) li:first-child::before {
+        content: "";
+        margin-right: 0;
+    }
 }

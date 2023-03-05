@@ -1,14 +1,14 @@
 [data-anchor] {
     display: block;
     padding: $space-y $space-x;
-}
 
-[data-anchor]:where([data-state="active"], :hover, :active) {
-    color: $anchor-text-active;
-    text-decoration: none;
-}
+    &:where([data-state="active"], :hover, :active) {
+        color: $anchor-text-active;
+        text-decoration: none;
+    }
 
-[data-anchor]:focus {
-    outline: thin dotted;
-    outline-offset: -0.125rem;
+    &:focus {
+        outline: thin dotted;
+        outline-offset: -0.125rem;
+    }
 }

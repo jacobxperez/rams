@@ -6,16 +6,16 @@
 
 [data-grid="main"] {
     grid-template-columns: repeat(4, 1fr);
-}
 
-:where([data-grid="main"]) header,
-footer {
-    grid-column: 1 / -1;
-}
+    :where(&) header,
+    footer {
+        grid-column: 1 / -1;
+    }
 
-:where([data-grid="main"]) article,
-section {
-    grid-column: span 3;
+    :where(&) article,
+    section {
+        grid-column: span 3;
+    }
 }
 
 @mixin _small-grid() {

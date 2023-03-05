@@ -3,21 +3,21 @@ q {
     quotes: none;
 }
 
-blockquote:before,
-blockquote:after {
-    content: "";
-    content: none;
-}
-
 blockquote {
     font-family: $blockquote-font-family;
     font-style: $blockquote-font-style;
-}
 
-:where(blockquote) small {
-    display: block;
-}
+    &:before,
+    &:after {
+        content: "";
+        content: none;
+    }
 
-:where(blockquote) small:before {
-    content: "— ";
+    :where(&) small {
+        display: block;
+    }
+
+    :where(&) small:before {
+        content: "— ";
+    }
 }

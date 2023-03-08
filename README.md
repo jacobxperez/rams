@@ -6,15 +6,15 @@ A [Class Less](https://jacobxperez.github.io/blog/post/css/class-less-architectu
 
 ## Table of Contents
 
--   [About](#about)
--   [Getting Started](#getting-started)
-    -   [Build](#build)
-    -   [Compile](#compile)
-    -   [Examples](#examples)
-    -   [Contributing](#contributing)
--   [LICENSE](#license)
-    -   [Content](#content)
-    -   [Code](#code)
+- [About](#about)
+- [Getting Started](#getting-started)
+  - [Build](#build)
+  - [Compile](#compile)
+  - [Examples](#examples)
+  - [Contributing](#contributing)
+- [LICENSE](#license)
+  - [Content](#content)
+  - [Code](#code)
 
 ## About
 
@@ -39,28 +39,28 @@ Edit the [variables](https://github.com/jacobxperez/rams/blob/master/src/css/var
 [custom](https://github.com/jacobxperez/rams/tree/master/src/css/custom) modules and linked
 them to [main.css](https://github.com/jacobxperez/rams/blob/master/src/css/main.css) for compiling.
 
--   [/css](https://github.com/jacobxperez/rams/tree/master/src/css/)
-    -   [core](https://github.com/jacobxperez/rams/tree/master/src/css/core) (important files for compiling)
-    -   [custom](https://github.com/jacobxperez/rams/tree/master/src/css/custom) (add custom modules here)
-    -   [main.css](https://github.com/jacobxperez/rams/blob/master/src/css/main.css) (compile to produce the final CSS)
-    -   [var.css](https://github.com/jacobxperez/rams/blob/master/src/css/var.css) (variables for font, colors, and more)
+- [/css](https://github.com/jacobxperez/rams/tree/master/src/css/)
+  - [core](https://github.com/jacobxperez/rams/tree/master/src/css/core) (important files for compiling)
+  - [custom](https://github.com/jacobxperez/rams/tree/master/src/css/custom) (add custom modules here)
+  - [main.css](https://github.com/jacobxperez/rams/blob/master/src/css/main.css) (compile to produce the final CSS)
+  - [var.css](https://github.com/jacobxperez/rams/blob/master/src/css/var.css) (variables for font, colors, and more)
 
 ### Compile
 
 On your terminal run these scripts to compile
 
--   `npm run docs` locally runs documentation
--   `npm run dev` serve current development build
--   `npm run watch` watch for changes but does not start server
--   `npm run build` makes current build and sets url to "/" can be changed on [package.json](https://github.com/jacobxperez/rams/blob/master/package.json)
+- `npm run docs` locally runs documentation
+- `npm run dev` serve current development build
+- `npm run watch` watch for changes but does not start server
+- `npm run build` makes current build and sets url to "/" can be changed on [package.json](https://github.com/jacobxperez/rams/blob/master/package.json)
 
 ### Examples
 
 These examples incorporate Rams with custom modules
 
--   [Jacob Perez](https://github.com/jacobxperez/blog): I am a front-end web developer and designer.
--   [Company](https://github.com/jacobxperez/company): A single page website template for your business marketing
--   [Vaporwave Aesthetics](https://github.com/jacobxperez/vaporwave-aesthetic): A template with Vaporwave Aesthetics
+- [Jacob Perez](https://github.com/jacobxperez/blog): I am a front-end web developer and designer.
+- [Company](https://github.com/jacobxperez/company): A single page website template for your business marketing
+- [Vaporwave Aesthetics](https://github.com/jacobxperez/vaporwave-aesthetic): A template with Vaporwave Aesthetics
 
 **note:** these examples may contain an older version of Rams
 
@@ -83,7 +83,7 @@ Licensed under the [Apache License, Version 2.0](http://www.apache.org/licenses/
 you may not use this file except in compliance with the License.
 You may obtain a copy of the License at
 
-http://www.apache.org/licenses/LICENSE-2.0
+<http://www.apache.org/licenses/LICENSE-2.0>
 
 Unless required by applicable law or agreed to in writing, software
 distributed under the License is distributed on an "AS IS" BASIS,

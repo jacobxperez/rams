@@ -13,7 +13,7 @@ const toggle = () => {
 
     getToggle.forEach(toggleAttr)
 
-    // remove data-state active
+    // remove active state
     function removeAtt(item, e) {
         if (
             (e.target !== item && item.matches('[data-toggle~="pop"]')) ||

@@ -30,11 +30,11 @@ a developer, he can use his limitation with technology to discover new designs.
 
 ## Design Principles
 
-Back in the late 1970s, Dieter Rams was becoming increasingly concerned by the
-state of the world around him: “An impenetrable confusion of forms, colors and
-noises.” Aware that he was a significant contributor to that world, he asked
-himself an important question: is my design good design? His answer is
-expressed in his ten principles for good design.
+In the late 1970s, Dieter Rams grew increasingly concerned by the state of the world
+around him, which he described as an impenetrable confusion of forms, colors, and
+noises. Aware that he was a significant contributor to that world, he asked himself
+an important question: is my design; good design? His answer is expressed in his ten
+principles for good design.
 
 ### Ten Principles for Good Design
 

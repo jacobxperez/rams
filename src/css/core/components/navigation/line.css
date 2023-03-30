@@ -21,7 +21,7 @@
     z-index: 1;
     color: $nav-line-anchor-text;
 
-    &:where([data-state="active"], :hover, :active) {
+    &:where([data-state="active"], :hover, :active, :focus) {
         z-index: 5;
         border-color: $nav-line-anchor-border-active;
         color: $nav-line-anchor-text-active;

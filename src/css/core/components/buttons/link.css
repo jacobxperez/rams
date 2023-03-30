@@ -3,7 +3,7 @@
     background-color: transparent;
     color: $link-color;
 
-    &:is([data-state="active"], :hover, :active) {
+    &:is([data-state="active"], :hover, :active, :focus) {
         background-color: transparent;
         border-color: transparent;
         text-decoration: underline;

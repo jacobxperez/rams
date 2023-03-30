@@ -8,12 +8,13 @@
         border-radius: $button-border-radius;
     }
     cursor: pointer;
+    transition: $button-transition;
 
-    &:is([data-state="active"], :hover, :active) {
+    &:is([data-state="active"], :hover, :active, :focus) {
         background-color: $button-background-active;
         text-decoration: none;
     }
-    
+
     &:focus {
         outline: thin dotted;
         outline-offset: -0.125rem;

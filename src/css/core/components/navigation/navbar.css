@@ -29,7 +29,7 @@
 [data-anchor~="navbar"] {
     color: $navbar-anchor-text;
 
-    &:where([data-state="active"], :hover, :active) {
+    &:where([data-state="active"], :hover, :active, :focus) {
         color: $navbar-anchor-text-active;
     }
 }

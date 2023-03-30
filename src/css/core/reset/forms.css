@@ -1,6 +1,6 @@
 select,
 textarea,
-input:not([type="button"], [type="reset"], [type="submit"]) {
+input:not([type="button"], [type="reset"], [type="submit"], [type="file"]) {
     display: block;
     width: 100%;
     padding: $form-padding-y $form-padding-x;
@@ -14,7 +14,7 @@ input:not([type="button"], [type="reset"], [type="submit"]) {
 
 select:focus,
 textarea:focus,
-input:focus:not([type="button"], [type="reset"], [type="submit"]) {
+input:focus:not([type="button"], [type="reset"], [type="submit"], [type="file"]) {
     color: $form-text-active;
     border-color: $form-border-active;
 }
@@ -34,6 +34,6 @@ select,
     text-transform: none;
 }
 
-:not([type="submit"]):invalid {
+:not([type="submit"], [type="file"]):invalid {
     border-color: $danger;
 }

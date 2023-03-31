@@ -1,7 +1,7 @@
-:where(form) select,
-textarea,
-input {
-    margin: $space-y 0;
+form {
+    :where(&) select, textarea, input {
+        margin: $space-y 0;
+    }
 }
 
 select,
@@ -16,6 +16,7 @@ input:not([type="button"], [type="reset"], [type="submit"]) {
     @if $form-border-radius != false {
         border-radius: $form-border-radius;
     }
+    transition: $form-transition;
 }
 
 select:focus,
@@ -31,7 +32,7 @@ input:focus:not(
 }
 
 textarea {
-    min-height: $text-area-min-height;
+    min-height: $form-text-area-min-height;
     overflow: auto;
     resize: vertical;
 }

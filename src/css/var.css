@@ -108,7 +108,8 @@ $form-border-radius: false;
 $form-background: transparent;
 $form-text: $font-color-secondary;
 $form-text-active: $font-color;
-$text-area-min-height: 6.25rem;
+$form-text-area-min-height: 6.25rem;
+$form-transition: all 0.2s ease-in-out 0s;
 
 /* Button */
 $button-padding-y: $space-y;
@@ -148,6 +149,7 @@ $navbar-anchor-text-active: hsl(0, 0%, 70%);
 $anchor-padding-y: $space-y;
 $anchor-padding-x: $space-x;
 $anchor-text-active: $font-color;
+$anchor-transition: all 0.2s ease-in-out 0s;
 
 /* Nav Line */
 $nav-line-border-width: 0.125em;

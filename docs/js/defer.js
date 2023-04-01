@@ -36,7 +36,7 @@ location.hostname === 'localhost' || location.hostname === '127.0.0.1'
     ? (template.fetchURL =
           window.location.origin + '/templates/a.be13ff7e.html')
     : (template.fetchURL =
-          window.location.origin + '/rams/templates/a.7b1ee141.html');
+          window.location.origin + '/rams/templates/a.e67a1128.html');
 
 // create main layout
 template.layout = `

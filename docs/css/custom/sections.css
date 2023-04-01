@@ -1,0 +1,16 @@
+[data-section="header"] {
+    margin-bottom: $leading;
+    padding-top: calc($leading * 4);
+    padding-bottom: calc($leading * 2);
+    border-bottom: $border-width solid $border-color;
+    background-color: $navbar-dropbox-background;
+    color: var(--background);
+}
+
+:where([data-section="header"]) a {
+    color: $navbar-anchor-text-active;
+}
+
+[data-section="footer"] {
+    padding-bottom: calc($leading * 2);
+}

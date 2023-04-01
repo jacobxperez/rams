@@ -109,7 +109,7 @@ $form-background: transparent;
 $form-text: $font-color-secondary;
 $form-text-active: $font-color;
 $form-text-area-min-height: 6.25rem;
-$form-transition: all 0.2s ease-in-out 0s;
+$form-transition: all 0.2s ease;
 
 /* Button */
 $button-padding-y: $space-y;
@@ -120,7 +120,7 @@ $button-border-radius: false;
 $button-background: hsla(0, 0%, 50%, 0.1);
 $button-background-active: hsla(0, 0%, 50%, 0.2);
 $button-text-color: $font-color;
-$button-transition: all 0.2s ease-in-out 0s;
+$button-transition: all 0.2s ease;
 
 /* Feedback */
 $success: hsl(150, 100%, 25%);
@@ -149,7 +149,7 @@ $navbar-anchor-text-active: hsl(0, 0%, 70%);
 $anchor-padding-y: $space-y;
 $anchor-padding-x: $space-x;
 $anchor-text-active: $font-color;
-$anchor-transition: all 0.2s ease-in-out 0s;
+$anchor-transition: all 0.2s ease;
 
 /* Nav Line */
 $nav-line-border-width: 0.125em;
@@ -163,7 +163,7 @@ $breadcrumb-separator: "/";
 
 /* Dropbox */
 $dropbox-min-width: 10rem;
-$dropbox-transition: opacity 0.2s ease-out;
+$dropbox-transition: opacity 0.3s ease;
 
 /* Tooltip */
 $tooltip-min-width: 26ch;

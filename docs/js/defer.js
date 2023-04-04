@@ -7,28 +7,29 @@
 import {sidebar} from './modules/sidebar.js';
 import {toggle} from '../../src/js/modules/toggle.js';
 
-if (template.meta.title === '') {
-    template.meta.title = `<h1>Rams</h1>`;
+if (meta.title === '') {
+    meta.title = `<h1>Rams</h1>`;
 } else {
-    template.meta.title = `<h1>${template.meta.title}</h1>`;
+    meta.title = `<h1>${meta.title}</h1>`;
 }
 
-// template header
 template.header = `
     <div id="header" data-wrapper="fit">
-        ${template.meta.title}
-    </div>`;
+        ${meta.title}
+    </div>
+    `;
 
-// check for layout type
 template.main = `
     <div data-wrapper="fit" data-grid="main">
         <aside id="aside"></aside>
         <article id="content"></article>
-    </div>`;
-if (template.type === 'full') {
+    </div>
+    `;
+if (template.type === 'fullPage') {
     template.main = `
     <div id="content" data-wrapper="fit" data-grid="main">
-    </div>`;
+    </div>
+    `;
 }
 
 // check and set template url for localhost or for public url
@@ -39,7 +40,7 @@ location.hostname === 'localhost' || location.hostname === '127.0.0.1'
           window.location.origin + '/rams/templates/a.e67a1128.html');
 
 // create main layout
-template.layout = `
+template.body = `
     <nav data-navbar="top">
         <div id="nav"></div>
     </nav>
@@ -56,7 +57,7 @@ template.layout = `
 
 // parse everything together
 template
-    .fromString(template.layout, 'body')
+    .fromString(template.body, 'body')
     .getAndSetTemplate('#headerTemplate', '#header')
     .getAndSetTemplate('#contentTemplate', '#content', sidebar)
     .fetchTemplate(template.fetchURL, '#nav', toggle)

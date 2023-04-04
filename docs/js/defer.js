@@ -13,42 +13,42 @@ if (meta.title === '') {
     meta.title = `<h1>${meta.title}</h1>`;
 }
 
-template.header = `
+let header = `
     <div id="header" data-wrapper="fit">
         ${meta.title}
     </div>
     `;
 
-template.main = `
+let main = `
     <div data-wrapper="fit" data-grid="main">
         <aside id="aside"></aside>
         <article id="content"></article>
     </div>
     `;
 if (template.type === 'fullPage') {
-    template.main = `
+    main = `
     <div id="content" data-wrapper="fit" data-grid="main">
     </div>
     `;
 }
 
 // check and set template url for localhost or for public url
+let templateURL;
 location.hostname === 'localhost' || location.hostname === '127.0.0.1'
-    ? (template.fetchURL =
-          window.location.origin + '/templates/a.be13ff7e.html')
-    : (template.fetchURL =
+    ? (templateURL = window.location.origin + '/templates/a.be13ff7e.html')
+    : (templateURL =
           window.location.origin + '/rams/templates/a.e67a1128.html');
 
 // create main layout
-template.body = `
+let layout = `
     <nav data-navbar="top">
         <div id="nav"></div>
     </nav>
     <header data-section="header">
-        ${template.header}
+        ${header}
     </header>
     <main data-section="main">
-        ${template.main}
+        ${main}
     </main>
     <footer data-section="footer">
         <div id="footer" data-wrapper="fit">
@@ -57,8 +57,8 @@ template.body = `
 
 // parse everything together
 template
-    .fromString(template.body, 'body')
+    .fromString(layout, 'body')
     .getAndSetTemplate('#headerTemplate', '#header')
     .getAndSetTemplate('#contentTemplate', '#content', sidebar)
-    .fetchTemplate(template.fetchURL, '#nav', toggle)
-    .fetchTemplate(template.fetchURL, '#footer');
+    .fetchTemplate(templateURL, '#nav', toggle)
+    .fetchTemplate(templateURL, '#footer');

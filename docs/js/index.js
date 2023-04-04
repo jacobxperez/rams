@@ -43,15 +43,6 @@ const meta = {
 
 const template = {
     type: '',
-    body: '',
-    header: '',
-    nav: '',
-    main: '',
-    article: '',
-    section: '',
-    aside: '',
-    footer: '',
-    fetchURL: '',
     appendString(string, targetSelector) {
         const targetElement = document.querySelector(targetSelector);
         targetElement.insertAdjacentHTML('beforeend', string);

@@ -5,7 +5,7 @@
  * http://www.apache.org/licenses/LICENSE-2.0
 -----------------------------------------------------------------------------*/
 import {sidebar} from './modules/sidebar.js';
-import {toggle} from './modules/toggle';
+import {toggle} from '../../src/js/modules/toggle.js';
 
 if (template.meta.title === '') {
     template.meta.title = `<h1>Rams</h1>`;

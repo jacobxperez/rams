@@ -95,8 +95,8 @@ const template = {
         (async () => {
             try {
                 let response = await fetch(url);
-                let okay = await response.text();
-                this.parseTemplate(okay, targetSelector, targetSelector);
+                let fetchURL = await response.text();
+                this.parseTemplate(fetchURL, targetSelector, targetSelector);
                 if (typeof callback === 'function') {
                     callback();
                 }

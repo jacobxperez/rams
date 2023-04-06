@@ -169,11 +169,11 @@ $tooltip-text: var(--background);
 $grid-gap: 1.25rem;
 
 /* Wrapper */
-$wrapper-min-width: 20rem;
-$wrapper-max-width: 62.5rem;
-$wrapper-margin-top: calc($leading * 3);
-$wrapper-margin-bottom: calc($leading * 4);
-$wrapper-gap: $grid-gap;
+$container-min-width: 20rem;
+$container-max-width: 62.5rem;
+$container-margin-top: calc($leading * 3);
+$container-margin-bottom: calc($leading * 4);
+$container-gap: $grid-gap;
 
 /* Breakpoints */
 $screen-small-max-width: 42.5em; /* small screen 680px */

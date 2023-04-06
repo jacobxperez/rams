@@ -14,20 +14,20 @@ if (meta.title === '') {
 }
 
 let header = `
-    <div id="header" data-wrapper="fit">
+    <div id="header" data-container="fit">
         ${meta.title}
     </div>
     `;
 
 let main = `
-    <div data-wrapper="fit" data-grid="main">
+    <div data-container="fit" data-grid="main">
         <aside id="aside"></aside>
         <article id="content"></article>
     </div>
     `;
 if (template.type === 'fullPage') {
     main = `
-    <div id="content" data-wrapper="fit" data-grid="main">
+    <div id="content" data-container="fit" data-grid="main">
     </div>
     `;
 }
@@ -51,7 +51,7 @@ let layout = `
         ${main}
     </main>
     <footer data-section="footer">
-        <div id="footer" data-wrapper="fit">
+        <div id="footer" data-container="fit">
         </div>
     </footer>`;
 

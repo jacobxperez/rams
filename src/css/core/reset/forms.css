@@ -1,12 +1,27 @@
 form {
-    :where(&) select, textarea, input {
+    :where(&) select,
+    textarea,
+    input {
         margin: $space-y 0;
     }
 }
 
 select,
 textarea,
-input:not([type="button"], [type="reset"], [type="submit"]) {
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="time"],
+input[type="date"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="week"],
+input[type="number"],
+input[type="range"],
+input[type="search"],
+input[type="tel"],
+input[type="file"],
+input[type="url"] {
     display: block;
     width: 100%;
     padding: $form-padding-y $form-padding-x;
@@ -24,8 +39,7 @@ textarea:focus,
 input:focus:not(
         [type="button"],
         [type="reset"],
-        [type="submit"],
-        [type="file"]
+        [type="submit"]
     ) {
     color: $form-text-active;
     border-color: $form-border-active;

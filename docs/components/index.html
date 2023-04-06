@@ -205,13 +205,19 @@
                     <label for="message">Message:</label>
                     <textarea id="message" name="message" rows="5" cols="50" placeholder="Enter your message"></textarea>
 
-                    <label for="checkbox">Checkbox:</label>
-                    <input type="checkbox" id="checkbox" name="checkbox" />
+                    <div data-flex="gap">
+                        <label for="checkbox">Checkbox:</label>
+                        <input type="checkbox" id="checkbox" name="checkbox" />
+                    </div>
                     <label for="radio">Radio:</label>
-                    <input type="radio" id="radio1" name="radio" value="option1" />
-                    <label for="radio1">Option 1</label>
-                    <input type="radio" id="radio2" name="radio" value="option2" />
-                    <label for="radio2">Option 2</label>
+                    <div data-flex="gap">
+                        <label for="radio1">Option 1</label>
+                        <input type="radio" id="radio1" name="radio" value="option1" />
+                    </div>
+                    <div data-flex="gap">
+                        <label for="radio2">Option 2</label>
+                        <input type="radio" id="radio2" name="radio" value="option2" />
+                    </div>
 
                     <label for="file">File:</label>
                     <input type="file" id="file" name="file" accept=".jpg, .jpeg, .png" data-button="" />

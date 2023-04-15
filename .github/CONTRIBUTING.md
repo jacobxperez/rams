@@ -107,7 +107,7 @@ cohesive and unified user experience.
 This will create a sense of simplicity and elegance.
 * Typography will be a key element of the design, focused on legibility
 and readability, with a limited number of font weights and sizes.
-* The components will be designed to be visually unobtrusive, with a focus
+* Components must be designed to be visually unobtrusive, with a focus
 on their functionality rather than their visual appearance.
 * All of this requirements must be done with as little code as possible.
 

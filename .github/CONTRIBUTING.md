@@ -104,21 +104,16 @@ which indicates that 80 percent of the effects come from 20 percent of the cause
 * The design would have a minimalist layout with a focus on simplicity and
 clarity. The layout would be clean, uncluttered, and easy to navigate.
 * The color palette would be limited to a few colors, with a focus on neutral
-colors such as white, gray, and black. This would help to create a sense of
-simplicity and elegance.
+colors such as white, gray, and black.
 * Typography would be a key element of the design, with a focus on legibility
-and readability. Sans-serif fonts would be used, with a limited number of font
-weights and sizes.
-* The UI would incorporate functional elements such as buttons, forms, and menus
-in a way that is intuitive and easy to use. These elements would be designed to
-be visually unobtrusive, with a focus on their functionality rather than their
+and readability, with a limited number of font weights and sizes.
+* The UI would incorporate functional elements designed to be visually
+unobtrusive, with a focus on their functionality rather than their
 visual appearance.
 * The design would be consistent across all pages and elements of the website,
-creating a cohesive and unified user experience. This would be achieved through
-the use of consistent typography, layout, and color scheme.
-* The overall design would be focused on the user experience, with an emphasis
-on making the website easy and enjoyable to use. This would be achieved through
-the use of intuitive navigation, clear calls-to-action, and a focus on user needs.
+creating a cohesive and unified user experience.
+* The overall design would be focused on the user experience, with the use of
+intuitive navigation, clear calls-to-action, and a focus on user needs.
 * All of this requirements must be done with as little code as possible.
 
 ## Bug Reports

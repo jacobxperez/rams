@@ -101,16 +101,14 @@ incorporate these principles in the following ways:
 * Must follow the [80/20 principle](https://jacobxperez.github.io/blog/post/heuristic/the-80-20-principle/),
 which indicates that 80 percent of the effects come from 20 percent of the causes.
 * The layout must be clean, uncluttered, and easy to navigate.
+* The design must be consistent across all pages and elements creating a
+cohesive and unified user experience.
 * The color palette must be limited to few colors such as white, gray, and black.
 This will create a sense of simplicity and elegance.
 * Typography will be a key element of the design, focused on legibility
 and readability, with a limited number of font weights and sizes.
-* The UI will incorporate functional elements such as buttons, forms, and menus
-in a way that is intuitive and easy to use. These elements would be designed to
-be visually unobtrusive, with a focus on their functionality rather than their
-visual appearance.
-* The design must be consistent across all pages and elements of the website,
-creating a cohesive and unified user experience.
+* The components will be designed to be visually unobtrusive, with a focus
+on their functionality rather than their visual appearance.
 * The overall design must be focused on the user experience, with an emphasis
 on making the website easy and enjoyable to use. This would be achieved through
 the use of intuitive navigation, clear calls-to-action, and a focus on user needs.

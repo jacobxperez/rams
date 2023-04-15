@@ -100,8 +100,7 @@ incorporate these principles in the following ways:
 * Must be easy to update, maintain, modify, adapt, customize, and change with minimum effort.
 * Must follow the [80/20 principle](https://jacobxperez.github.io/blog/post/heuristic/the-80-20-principle/),
 which indicates that 80 percent of the effects come from 20 percent of the causes.
-* The design would have a minimalist layout with a focus on simplicity and
-clarity. The layout would be clean, uncluttered, and easy to navigate.
+* The layout must be clean, uncluttered, and easy to navigate.
 * The color palette would be limited to a few colors, with a focus on neutral
 colors such as white, gray, and black. This would help to create a sense of
 simplicity and elegance.

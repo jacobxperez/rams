@@ -94,7 +94,6 @@ Dieter Rams is known for his minimalist and functional design philosophy, which
 emphasizes simplicity, usability, and clarity. UI components would likely
 incorporate these principles in the following ways:
 
-* Must be easy to install to get started.
 * Must be unobtrusive to leave room for the designer's self-expression.
 * Must be easy to update, maintain, modify, adapt, customize, and change with minimum effort.
 * Must follow the [80/20 principle](https://jacobxperez.github.io/blog/post/heuristic/the-80-20-principle/),

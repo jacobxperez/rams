@@ -119,6 +119,7 @@ the use of consistent typography, layout, and color scheme.
 * The overall design would be focused on the user experience, with an emphasis
 on making the website easy and enjoyable to use. This would be achieved through
 the use of intuitive navigation, clear calls-to-action, and a focus on user needs.
+* All of this requirements must be done with as little code as possible.
 
 ## Bug Reports
 

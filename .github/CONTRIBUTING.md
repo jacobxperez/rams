@@ -38,78 +38,86 @@ principles for good design.
 
 ### Ten Principles for Good Design
 
-#### 1. Good design is innovative
+1. **Good design is innovative**  
+    The possibilities for innovation are not, by any means, exhausted.
+    Technological development is always offering new opportunities for
+    innovative design. But innovative design always develops in tandem
+    with innovative technology, and can never be an end in itself.
 
-The possibilities for innovation are not, by any means, exhausted.
-Technological development is always offering new opportunities for
-innovative design. But innovative design always develops in tandem
-with innovative technology, and can never be an end in itself.
+2. **Good design makes a product useful**  
+    A product is bought to be used. It has to satisfy certain criteria, not
+    only functional, but also psychological and aesthetic. Good design
+    emphasizes the usefulness of a product whilst disregarding anything
+    that could possibly detract from it.
 
-#### 2. Good design makes a product useful
+3. **Good design is aesthetic**  
+    The aesthetic quality of a product is integral to its usefulness
+    because products we use every day affect our person and our
+    well-being. But only well-executed objects can be beautiful.
 
-A product is bought to be used. It has to satisfy certain criteria, not
-only functional, but also psychological and aesthetic. Good design
-emphasizes the usefulness of a product whilst disregarding anything
-that could possibly detract from it.
+4. **Good design makes a product understandable**  
+    It clarifies the product’s structure. Better still, it can make the prod-
+    uct talk. At best, it is self-explanatory.
 
-#### 3. Good design is aesthetic
+5. **Good design is unobtrusive**  
+    Products fulfilling a purpose are like tools. They are neither decorative
+    objects nor works of art. Their design should therefore be both
+    neutral and restrained, to leave room for the user’s self-expression.
 
-The aesthetic quality of a product is integral to its usefulness
-because products we use every day affect our person and our
-well-being. But only well-executed objects can be beautiful.
+6. **Good design is honest**  
+    It does not make a product more innovative, powerful or valuable
+    than it really is. It does not attempt to manipulate the consumer with
+    promises that cannot be kept.
 
-#### 4. Good design makes a product understandable
+7. **Good design is long-lasting**  
+    It avoids being fashionable and therefore never appears antiquated.
+    Unlike fashionable design, it lasts many years – even in today’s
+    throwaway society.
 
-It clarifies the product’s structure. Better still, it can make the prod-
-uct talk. At best, it is self-explanatory.
+8. **Good design is thorough down to the last detail**  
+    Nothing must be arbitrary or left to chance. Care and accuracy in
+    the design process show respect towards the user.
 
-#### 5. Good design is unobtrusive
+9. **Good design is environmentally-friendly**  
+    Design makes an important contribution to the preservation of the
+    environment. It conserves resources and minimizes physical and
+    visual pollution throughout the lifecycle of the product.
 
-Products fulfilling a purpose are like tools. They are neither decorative
-objects nor works of art. Their design should therefore be both
-neutral and restrained, to leave room for the user’s self-expression.
-
-#### 6. Good design is honest
-
-It does not make a product more innovative, powerful or valuable
-than it really is. It does not attempt to manipulate the consumer with
-promises that cannot be kept.
-
-#### 7. Good design is long-lasting
-
-It avoids being fashionable and therefore never appears antiquated.
-Unlike fashionable design, it lasts many years – even in today’s
-throwaway society.
-
-#### 8. Good design is thorough down to the last detail
-
-Nothing must be arbitrary or left to chance. Care and accuracy in
-the design process show respect towards the user.
-
-#### 9. Good design is environmentally-friendly
-
-Design makes an important contribution to the preservation of the
-environment. It conserves resources and minimizes physical and
-visual pollution throughout the lifecycle of the product.
-
-#### 10. Good design is as little design as possible
-
-Less, but better – because it concentrates on the essential aspects,
-and the products are not burdened with non-essentials.
-Back to purity, back to simplicity.
-
-> Perfection is achieved, not when there is nothing more to add, but when there
-> is nothing left to take away.
-> — Antoine de Saint-Exupery
+10. **Good design is as little design as possible**  
+    Less, but better – because it concentrates on the essential aspects,
+    and the products are not burdened with non-essentials.
+    Back to purity, back to simplicity.
 
 ## Design Requirements
 
-* Identify areas of volatility and encapsulate their effects
+Dieter Rams is known for his minimalist and functional design philosophy, which
+emphasizes simplicity, usability, and clarity. A UI for the web would likely
+incorporate these principles in the following ways:
+
+* Identify areas of volatility and encapsulate their effects.
 * Identify the minimum amount of components that can satisfy most designs.
 * Must be unobtrusive to leave room for the designer's self-expression.
 * Must be easy to update, maintain, modify, adapt, customize, and change with minimum effort.
 * Must follow the [80/20 principle](https://jacobxperez.github.io/blog/post/heuristic/the-80-20-principle/),
 which indicates that 80 percent of the effects come from 20 percent of the causes.
+* The design would have a minimalist layout with a focus on simplicity and
+clarity. The layout would be clean, uncluttered, and easy to navigate.
+* The color palette would be limited to a few colors, with a focus on neutral
+colors such as white, gray, and black. This would help to create a sense of
+simplicity and elegance.
+* Typography would be a key element of the design, with a focus on legibility
+and readability. Sans-serif fonts would be used, with a limited number of font
+weights and sizes.
+* The UI would incorporate functional elements such as buttons, forms, and menus
+in a way that is intuitive and easy to use. These elements would be designed to
+be visually unobtrusive, with a focus on their functionality rather than their
+visual appearance.
+* The design would be consistent across all pages and elements of the website,
+creating a cohesive and unified user experience. This would be achieved through
+the use of consistent typography, layout, and color scheme.
+* The overall design would be focused on the user experience, with an emphasis
+on making the website easy and enjoyable to use. This would be achieved through
+the use of intuitive navigation, clear calls-to-action, and a focus on user needs.
 
 ## Bug Reports
 

@@ -110,8 +110,7 @@ in a way that is intuitive and easy to use. These elements would be designed to
 be visually unobtrusive, with a focus on their functionality rather than their
 visual appearance.
 * The design must be consistent across all pages and elements of the website,
-creating a cohesive and unified user experience. This would be achieved through
-the use of consistent typography, layout, and color scheme.
+creating a cohesive and unified user experience.
 * The overall design must be focused on the user experience, with an emphasis
 on making the website easy and enjoyable to use. This would be achieved through
 the use of intuitive navigation, clear calls-to-action, and a focus on user needs.

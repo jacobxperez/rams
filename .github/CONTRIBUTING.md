@@ -91,7 +91,7 @@ principles for good design.
 ## Design Requirements
 
 Dieter Rams is known for his minimalist and functional design philosophy, which
-emphasizes simplicity, usability, and clarity. A UI for the web would likely
+emphasizes simplicity, usability, and clarity. UI components would likely
 incorporate these principles in the following ways:
 
 * Must be easy to install to get started.

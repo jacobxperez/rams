@@ -103,9 +103,8 @@ which indicates that 80 percent of the effects come from 20 percent of the cause
 * The layout must be clean, uncluttered, and easy to navigate.
 * The color palette must be limited to few colors such as white, gray, and black.
 This will create a sense of simplicity and elegance.
-* Typography will be a key element of the design, with a focus on legibility
-and readability. Sans-serif fonts would be used, with a limited number of font
-weights and sizes.
+* Typography will be a key element of the design, focused on legibility
+and readability, with a limited number of font weights and sizes.
 * The UI will incorporate functional elements such as buttons, forms, and menus
 in a way that is intuitive and easy to use. These elements would be designed to
 be visually unobtrusive, with a focus on their functionality rather than their

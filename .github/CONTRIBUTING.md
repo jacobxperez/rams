@@ -56,8 +56,8 @@ principles for good design.
     well-being. But only well-executed objects can be beautiful.
 
 4. **Good design makes a product understandable**  
-    It clarifies the product’s structure. Better still, it can make the prod-
-    uct talk. At best, it is self-explanatory.
+    It clarifies the product’s structure. Better still, it can make the product
+    talk. At best, it is self-explanatory.
 
 5. **Good design is unobtrusive**  
     Products fulfilling a purpose are like tools. They are neither decorative

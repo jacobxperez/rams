@@ -109,9 +109,6 @@ This will create a sense of simplicity and elegance.
 and readability, with a limited number of font weights and sizes.
 * The components will be designed to be visually unobtrusive, with a focus
 on their functionality rather than their visual appearance.
-* The overall design must be focused on the user experience, with an emphasis
-on making the website easy and enjoyable to use. This would be achieved through
-the use of intuitive navigation, clear calls-to-action, and a focus on user needs.
 * All of this requirements must be done with as little code as possible.
 
 ## Bug Reports

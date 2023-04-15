@@ -94,12 +94,13 @@ Dieter Rams is known for his minimalist and functional design philosophy, which
 emphasizes simplicity, usability, and clarity. A UI for the web would likely
 incorporate these principles in the following ways:
 
-* Identify areas of volatility and encapsulate their effects.
-* Identify the minimum amount of components that can satisfy most designs.
+* Must be easy to install to get started.
 * Must be unobtrusive to leave room for the designer's self-expression.
 * Must be easy to update, maintain, modify, adapt, customize, and change with minimum effort.
 * Must follow the [80/20 principle](https://jacobxperez.github.io/blog/post/heuristic/the-80-20-principle/),
 which indicates that 80 percent of the effects come from 20 percent of the causes.
+* Identify areas of volatility and encapsulate their effects.
+* Identify the minimum amount of components that can satisfy most designs.
 * The design would have a minimalist layout with a focus on simplicity and
 clarity. The layout would be clean, uncluttered, and easy to navigate.
 * The color palette would be limited to a few colors, with a focus on neutral

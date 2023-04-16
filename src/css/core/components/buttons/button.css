@@ -11,7 +11,7 @@
     transition: $button-transition;
     cursor: pointer;
 
-    &:is([data-state="active"], :hover, :active, :focus) {
+    &:is([data-state="active"], :hover, :active) {
         background-color: $button-background-active;
         text-decoration: none;
     }

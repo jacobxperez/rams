@@ -4,7 +4,7 @@
     color: $link-color;
     text-decoration: $link-text-decoration;
 
-    &:is([data-state="active"], :hover, :active, :focus) {
+    &:is([data-state="active"], :hover, :active) {
         background-color: transparent;
         border-color: transparent;
         text-decoration: $link-text-decoration-hover;

@@ -2,12 +2,17 @@
     margin-bottom: $leading;
     padding-top: calc($leading * 4);
     padding-bottom: calc($leading * 2);
-    background-color: $navbar-dropbox-background;
-    color: var(--background);
+    background-color: hsl(0, 0%, 10%);
+    color: hsl(0, 0%, 100%);
 }
 
 :where([data-section="header"]) a {
-    color: $navbar-anchor-text-active;
+    color: hsl(0, 0%, 60%);
+    text-decoration: underline solid .125rem hsl(0, 0%, 25%);
+}
+
+:where([data-section="header"]) a:hover {
+    text-decoration: underline solid .125rem hsl(0, 0%, 50%);
 }
 
 [data-section="footer"] {

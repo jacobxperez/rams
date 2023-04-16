@@ -2,6 +2,7 @@
     display: block;
     padding: $space-y $space-x;
     transition: $anchor-transition;
+    text-decoration: none;
 
     &:where([data-state="active"], :hover, :active, :focus) {
         color: $anchor-text-active;

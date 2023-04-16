@@ -1,6 +1,6 @@
 :root {
     --background: hsl(0, 0%, 100%);
-    --font-color: hsl(0, 0%, 0%);
+    --font-color: hsl(0, 0%, 30%);
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -16,23 +16,23 @@ $background-gradient: false;
 $font-color: var(--font-color);
 $font-color-secondary: hsl(0, 0%, 50%);
 
-$primary: hsl(220, 100%, 50%);
+$primary: hsl(0, 0%, 0%);
 $primary-text: hsl(0, 0%, 100%);
-$primary-active: hsl(220, 100%, 45%);
+$primary-active: hsl(0, 0%, 20%);
 
-$secondary: hsl(30, 50%, 30%);
+$secondary: hsl(0, 0%, 30%);
 $secondary-text: hsl(0, 0%, 100%);
-$secondary-active: hsl(30, 50%, 35%);
+$secondary-active: hsl(0, 0%, 40%);
 
-$tertiary: var(--font-color);
+$tertiary: hsl(0, 0%, 50%);
 $tertiary-text: hsl(0, 0%, 100%);
-$tertiary-active: hsl(0, 0%, 20%);
+$tertiary-active: hsl(0, 0%, 60%);
 
 /* Box Model */
 $space-y: 0.5rem;
 $space-x: 0.75rem;
 $border-width: 0.0625em;
-$border-color: hsl(0, 0%, 50%);
+$border-color: hsl(0, 0%, 80%);
 
 /* Typography */
 $font-family: HelveticaNeue-Light, "Helvetica Neue Light", "Helvetica Neue",
@@ -44,6 +44,8 @@ $leading: 1.5rem;
 
 /* link */
 $link-color: $primary;
+$link-decoration: underline hsl(0, 0%, 80%);
+$link-decoration-hover: underline;
 
 /* headings */
 $headings-font-family: false;
@@ -75,7 +77,7 @@ $mark-text: hsl(0, 0%, 0%);
 /* hr */
 $hr-border-style: solid;
 $hr-border-width: $border-width;
-$hr-border-color: $font-color;
+$hr-border-color: #000;
 
 /* Lists */
 $ol-list-style-type: decimal;
@@ -91,7 +93,7 @@ $table-cell-padding-x: $space-x;
 $form-padding-y: $space-y;
 $form-padding-x: $space-x;
 $form-border-width: $border-width;
-$form-border-color: $font-color;
+$form-border-color: $border-color;
 $form-border-active: $primary;
 $form-border-radius: false;
 $form-background: transparent;
@@ -156,8 +158,8 @@ $dropbox-transition: opacity 0.3s ease, visibility 0.3s ease;
 
 /* Tooltip */
 $tooltip-min-width: 26ch;
-$tooltip-background: var(--font-color);
-$tooltip-text: var(--background);
+$tooltip-background: hsl(0, 0%, 0%);
+$tooltip-text: hsl(0, 0%, 100%);
 
 /* Grid */
 $grid-gap: 1.25rem;
@@ -180,5 +182,5 @@ $print-font-family: TimesNewRoman, "Times New Roman", Times, Baskerville,
     Georgia, "Nimbus Roman No9 L", serif;
 
 /* Selection */
-$selection: var(--font-color);
-$selection-text: var(--background);
+$selection: $primary;
+$selection-text: $primary-text;

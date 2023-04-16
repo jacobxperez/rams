@@ -78,7 +78,7 @@ $mark-text: hsl(0, 0%, 0%);
 /* hr */
 $hr-border-style: solid;
 $hr-border-width: $border-width;
-$hr-border-color: #000;
+$hr-border-color: hsl(0, 0%, 0%);
 
 /* Lists */
 $ol-list-style-type: decimal;

@@ -117,17 +117,17 @@ $button-transition: color 0.2s ease, border-color 0.2s ease,
     background-color 0.2s ease;
 
 /* Feedback */
-$success: hsl(150, 100%, 25%);
+$success: hsl(145, 54%, 30%);
 $success-text: hsl(0, 0%, 100%);
-$success-active: hsl(150, 100%, 20%);
+$success-active: hsl(145, 54%, 25%);
 
 $warning: hsl(25, 100%, 60%);
 $warning-text: hsl(0, 0%, 100%);
 $warning-active: hsl(25, 100%, 55%);
 
-$danger: hsl(0, 70%, 50%);
+$danger: hsl(5, 72%, 50%);
 $danger-text: hsl(0, 0%, 100%);
-$danger-active: hsl(0, 70%, 45%);
+$danger-active: hsl(5, 72%, 45%);
 
 /* Disabled */
 $disabled: hsl(0, 0%, 90%);

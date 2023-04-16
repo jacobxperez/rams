@@ -2,12 +2,12 @@
     text-decoration: none;
     background-color: transparent;
     color: $link-color;
-    text-decoration: $link-decoration;
+    text-decoration: $link-text-decoration;
     cursor: pointer;
 }
 
 :where(a:hover, a:active) {
-    text-decoration: $link-decoration-hover;
+    text-decoration: $link-text-decoration-hover;
 }
 
 :where(a:focus) {

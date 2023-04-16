@@ -44,8 +44,8 @@ $leading: 1.5rem;
 
 /* link */
 $link-color: $primary;
-$link-decoration: underline hsl(0, 0%, 80%);
-$link-decoration-hover: underline;
+$link-text-decoration: underline solid 0.125rem hsl(0, 0%, 80%);
+$link-text-decoration-hover: underline solid 0.125rem;
 
 /* headings */
 $headings-font-family: false;
@@ -100,7 +100,8 @@ $form-background: transparent;
 $form-text: $font-color-secondary;
 $form-text-active: $font-color;
 $form-text-area-min-height: 6.25rem;
-$form-transition: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+$form-transition: color 0.2s ease, border-color 0.2s ease,
+    background-color 0.2s ease;
 
 /* Button */
 $button-padding-y: $space-y;
@@ -111,7 +112,8 @@ $button-border-radius: false;
 $button-background: hsla(0, 0%, 50%, 0.1);
 $button-background-active: hsla(0, 0%, 50%, 0.2);
 $button-text-color: $font-color;
-$button-transition: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+$button-transition: color 0.2s ease, border-color 0.2s ease,
+    background-color 0.2s ease;
 
 /* Feedback */
 $success: hsl(150, 100%, 25%);
@@ -140,7 +142,8 @@ $navbar-anchor-text-active: hsl(0, 0%, 70%);
 $anchor-padding-y: $space-y;
 $anchor-padding-x: $space-x;
 $anchor-text-active: $font-color;
-$anchor-transition: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+$anchor-transition: color 0.2s ease, border-color 0.2s ease,
+    background-color 0.2s ease;
 
 /* Nav Line */
 $nav-line-border-width: 0.125em;
@@ -160,6 +163,7 @@ $dropbox-transition: opacity 0.3s ease, visibility 0.3s ease;
 $tooltip-min-width: 26ch;
 $tooltip-background: hsl(0, 0%, 0%);
 $tooltip-text: hsl(0, 0%, 100%);
+$tooltip-text-decoration: underline dotted 0.125rem;
 
 /* Grid */
 $grid-gap: 1.25rem;

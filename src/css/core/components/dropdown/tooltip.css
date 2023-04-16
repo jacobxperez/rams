@@ -1,5 +1,5 @@
 [data-toggle~="tooltip"] {
-    text-decoration: underline dotted;
+    text-decoration: $tooltip-text-decoration;
     cursor: help;
 
     :where(&) [data-dropbox] {

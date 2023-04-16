@@ -48,7 +48,7 @@ dfn {
 }
 
 [title]:where(abbr, dfn) {
-    text-decoration: underline dotted;
+    text-decoration: $tooltip-text-decoration;
     cursor: help;
 }
 

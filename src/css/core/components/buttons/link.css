@@ -2,11 +2,11 @@
     text-decoration: none;
     background-color: transparent;
     color: $link-color;
-    text-decoration: $link-decoration;
+    text-decoration: $link-text-decoration;
 
     &:is([data-state="active"], :hover, :active, :focus) {
         background-color: transparent;
         border-color: transparent;
-        text-decoration: $link-decoration-hover;
+        text-decoration: $link-text-decoration-hover;
     }
 }

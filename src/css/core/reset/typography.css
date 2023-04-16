@@ -4,6 +4,7 @@
     }
     font-weight: $headings-font-weight;
     line-height: $headings-line-height;
+    color: $headings-color;
 }
 
 h1,

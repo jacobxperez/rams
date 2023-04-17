@@ -146,15 +146,16 @@ $anchor-text-active: $font-color;
 $anchor-transition: color 0.2s ease, border-color 0.2s ease,
     background-color 0.2s ease;
 
-/* Nav Line */
-$nav-line-border-width: 0.125em;
-$nav-line-border-color: $border-color;
-$nav-line-anchor-text: $font-color-secondary;
-$nav-line-anchor-text-active: $font-color;
-$nav-line-anchor-border-active: $primary;
+/* Line Tab */
+$anchor-line-border-width: 0.125em;
+$anchor-line-border-color: $border-color;
+$anchor-line-text: $font-color-secondary;
+$anchor-line-text-active: $font-color;
+$anchor-line-border-active: $primary;
 
 /* Breadcrumb */
 $breadcrumb-separator: "/";
+$breadcrumb-gap: 0.375em;
 
 /* Dropbox */
 $dropbox-min-width: 10rem;
@@ -174,7 +175,7 @@ $container-min-width: 20rem;
 $container-max-width: 62.5rem;
 $container-margin-top: calc($leading * 3);
 $container-margin-bottom: calc($leading * 4);
-$container-gap: $grid-gap;
+$container-gap: 1.25rem;
 
 /* Breakpoints */
 $screen-small-max-width: 42.5em; /* small screen 680px */

@@ -186,13 +186,13 @@
 
                 <form>
                     <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" placeholder="Enter your name" />
+                    <input type="text" id="name" name="name" placeholder="Your Name" />
 
                     <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" placeholder="Enter your email" />
+                    <input type="email" id="email" name="email" placeholder="Your email" />
 
                     <label for="password">Password:</label>
-                    <input type="password" id="password" name="password" placeholder="Enter your password" />
+                    <input type="password" id="password" name="password" placeholder="Your Password" />
 
                     <label for="gender">Gender:</label>
                     <select id="gender" name="gender">
@@ -203,13 +203,12 @@
                     </select>
 
                     <label for="message">Message:</label>
-                    <textarea id="message" name="message" rows="5" cols="50" placeholder="Enter your message"></textarea>
+                    <textarea id="message" name="message" rows="5" cols="50" placeholder="Enter Message"></textarea>
 
                     <div data-flex="gap">
                         <label for="checkbox">Checkbox:</label>
                         <input type="checkbox" id="checkbox" name="checkbox" />
                     </div>
-                    <label for="radio">Radio:</label>
                     <div data-flex="gap">
                         <label for="radio1">Option 1</label>
                         <input type="radio" id="radio1" name="radio" value="option1" />
@@ -219,10 +218,12 @@
                         <input type="radio" id="radio2" name="radio" value="option2" />
                     </div>
 
-                    <label for="file">File:</label>
+                    <label for="file" data-button="outline">File <span data-icon="&#xe006;"></span></label>
                     <input type="file" id="file" name="file" accept=".jpg, .jpeg, .png" data-button="" />
 
-                    <input type="submit" value="Submit" data-button />
+                    <div>
+                        <input type="submit" value="Submit" data-button />
+                    </div>
                 </form>
             </section>
         </template>

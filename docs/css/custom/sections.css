@@ -1,21 +1,21 @@
-[data-section="header"] {
+[data-section~="header"] {
     margin-bottom: $leading;
     padding-top: calc($leading * 4);
     padding-bottom: calc($leading * 2);
     background-color: hsl(0, 0%, 10%);
     color: hsl(0, 0%, 100%);
 
-    & h1 {
+    & :--headings {
         color: hsl(0, 0%, 100%);
     }
 }
 
-:where([data-section="header"]) a {
+:where([data-section~="header"]) a {
     color: hsl(0, 0%, 60%);
     text-decoration: underline solid 0.125rem hsl(0, 0%, 25%);
 }
 
-:where([data-section="header"]) a:hover {
+:where([data-section~="header"]) a:hover {
     text-decoration: underline solid 0.125rem hsl(0, 0%, 50%);
 }
 

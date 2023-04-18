@@ -25,10 +25,10 @@ let main = `
         <article id="content"></article>
     </div>
     `;
+
 if (template.type === 'fullPage') {
     main = `
-    <div id="content" data-container="fit" data-grid="main">
-    </div>
+    <div id="content" data-container="fit" data-grid="main"></div>
     `;
 }
 
@@ -41,9 +41,7 @@ location.hostname === 'localhost' || location.hostname === '127.0.0.1'
 
 // create main layout
 let layout = `
-    <nav data-navbar="top">
-        <div id="nav"></div>
-    </nav>
+    <nav id="nav" data-navbar="top"></nav>
     <header data-section="header">
         ${header}
     </header>

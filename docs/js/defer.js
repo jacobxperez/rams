@@ -13,6 +13,10 @@ if (meta.title === '') {
     meta.title = `<h1>${meta.title}</h1>`;
 }
 
+let nav = `
+<nav id="nav" data-navbar="top"></nav>
+`;
+
 let header = `
     <div id="header" data-container="fit">
         ${meta.title}
@@ -32,6 +36,13 @@ if (template.type === 'fullPage') {
     `;
 }
 
+let footer = `
+<footer data-section="footer">
+    <div id="footer" data-container="fit">
+    </div>
+</footer>
+`;
+
 // check and set template url for localhost or for public url
 let templateURL;
 location.hostname === 'localhost' || location.hostname === '127.0.0.1'
@@ -41,17 +52,15 @@ location.hostname === 'localhost' || location.hostname === '127.0.0.1'
 
 // create main layout
 let layout = `
-    <nav id="nav" data-navbar="top"></nav>
+    ${nav}
     <header data-section="header">
         ${header}
     </header>
     <main data-section="main">
         ${main}
     </main>
-    <footer data-section="footer">
-        <div id="footer" data-container="fit">
-        </div>
-    </footer>`;
+    ${footer}
+    `;
 
 // parse everything together
 template

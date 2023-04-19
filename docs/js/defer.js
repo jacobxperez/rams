@@ -23,7 +23,7 @@ let header = `
     </div>
     `;
 
-let content = `
+let main = `
     <div data-container="fit" data-grid="main">
         <aside id="aside"></aside>
         <article id="content"></article>
@@ -31,7 +31,7 @@ let content = `
     `;
 
 if (template.type === 'fullPage') {
-    content = `
+    main = `
     <div id="content" data-container="fit" data-grid="main"></div>
     `;
 }
@@ -57,7 +57,7 @@ let layout = `
         ${header}
     </header>
     <main data-section="main">
-        ${content}
+        ${main}
     </main>
     ${footer}
     `;

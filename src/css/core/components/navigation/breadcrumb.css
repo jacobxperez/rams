@@ -1,4 +1,4 @@
-[data-flex~="breadcrumb"] {
+[data-nav~="breadcrumb"] {
     column-gap: $breadcrumb-gap;
 
     :where(&) li::after {

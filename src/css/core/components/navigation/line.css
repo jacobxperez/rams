@@ -1,4 +1,4 @@
-[data-flex~="line-top"] {
+[data-nav~="line-top"] {
     border-top: $anchor-line-border-width solid $anchor-line-border-color;
 
     :where(&) [data-anchor~="line"] {
@@ -7,7 +7,7 @@
     }
 }
 
-[data-flex~="line-bottom"] {
+[data-nav~="line-bottom"] {
     border-bottom: $anchor-line-border-width solid $anchor-line-border-color;
 
     :where(&) [data-anchor~="line"] {

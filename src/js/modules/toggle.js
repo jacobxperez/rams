@@ -1,4 +1,19 @@
 const toggle = () => {
+    const removeAttribute = () => {
+        const toggleElements = document.querySelectorAll('[data-toggle]');
+
+        toggleElements.forEach((toggleElement) => {
+            const isPopToggle = toggleElement.matches('[data-toggle~="pop"]');
+            const isTooltipToggle = toggleElement.matches(
+                '[data-toggle~="tooltip"]'
+            );
+
+            if (isPopToggle || isTooltipToggle) {
+                toggleElement.removeAttribute('data-state');
+            }
+        });
+    };
+
     document.addEventListener('click', (e) => {
         const targetToggle = e.target.closest('[data-toggle]');
 
@@ -7,28 +22,13 @@ const toggle = () => {
             if (dataState === 'active') {
                 targetToggle.removeAttribute('data-state');
             } else {
+                removeAttribute();
                 targetToggle.setAttribute('data-state', 'active');
             }
 
             e.stopPropagation();
         } else {
-            const toggleElements = document.querySelectorAll('[data-toggle]');
-
-            toggleElements.forEach((toggleElement) => {
-                const isPopToggle = toggleElement.matches(
-                    '[data-toggle~="pop"]'
-                );
-                const isTooltipToggle = toggleElement.matches(
-                    '[data-toggle~="tooltip"]'
-                );
-
-                if (
-                    e.target !== toggleElement &&
-                    (isPopToggle || isTooltipToggle)
-                ) {
-                    toggleElement.removeAttribute('data-state');
-                }
-            });
+            removeAttribute();
         }
     });
 };

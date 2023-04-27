@@ -1,7 +1,7 @@
 const toggle = () => {
-    const removeAttribute = () => {
-        const toggleElements = document.querySelectorAll('[data-toggle]');
+    const toggleElements = document.querySelectorAll('[data-toggle]');
 
+    const resetToggles = () => {
         toggleElements.forEach((toggleElement) => {
             const isPopToggle = toggleElement.matches('[data-toggle~="pop"]');
             const isTooltipToggle = toggleElement.matches(
@@ -19,16 +19,14 @@ const toggle = () => {
 
         if (targetToggle) {
             const dataState = targetToggle.getAttribute('data-state');
-            if (dataState === 'active') {
-                targetToggle.removeAttribute('data-state');
-            } else {
-                removeAttribute();
-                targetToggle.setAttribute('data-state', 'active');
-            }
+            dataState === 'active'
+                ? targetToggle.removeAttribute('data-state')
+                : (resetToggles(),
+                  targetToggle.setAttribute('data-state', 'active'));
 
             e.stopPropagation();
         } else {
-            removeAttribute();
+            resetToggles();
         }
     });
 };

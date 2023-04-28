@@ -25,6 +25,7 @@
 /* Components */
 @import "core/components/layout/container.css";
 @import "core/components/dropdown/dropbox.css";
+@import "core/components/dropdown/menu.css";
 @import "core/components/dropdown/tooltip.css";
 @import "core/components/dropdown/toggle.css";
 @import "core/components/dropdown/state.css";

@@ -161,6 +161,10 @@ $breadcrumb-gap: 0.375em;
 $dropbox-min-width: 10rem;
 $dropbox-transition: opacity 0.3s ease, visibility 0.3s ease;
 
+/* Dropbox Menu */
+$dropbox-menu-background-color: #fff;
+$dropbox-menu-border: 1px solid #333;
+
 /* Tooltip */
 $tooltip-min-width: 26ch;
 $tooltip-background: hsl(0, 0%, 0%);

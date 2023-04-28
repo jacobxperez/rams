@@ -77,6 +77,20 @@
 
                 <p>Dropdowns are multifunctional they can create simple tooltips or complex dropdown content.</p>
 
+                <ul data-flex="group">
+                    <li>
+                        <button data-button="primary outline">button</button>
+                    </li>
+                    <li data-position="relative">
+                        <button data-toggle="pop" data-button="primary outline" data-icon="&#xe043;"></button>
+                        <ul data-dropbox="menu" data-position="right">
+                            <li><a data-anchor="menu">Anchor</a></li>
+                            <li><a data-anchor="menu">Anchor</a></li>
+                            <li><a data-anchor="menu">Anchor</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
                 <h3>Tooltip</h3>
 
                 <p>Display additional context on hover or on click with tooltip.</p>
@@ -132,21 +146,21 @@
                 <h2>Navigation</h2>
 
                 <nav>
-                    <ul data-nav>
+                    <ul data-flex>
                         <li><a data-anchor data-state="active">Active</a></li>
                         <li><a data-anchor>Anchor</a></li>
                         <li><a data-anchor>Anchor</a></li>
                         <li><a data-anchor>Anchor</a></li>
                     </ul>
 
-                    <ul data-nav data-flex="center">
+                    <ul data-flex="center">
                         <li><a data-anchor data-state="active">Active</a></li>
                         <li><a data-anchor>Anchor</a></li>
                         <li><a data-anchor>Anchor</a></li>
                         <li><a data-anchor>Anchor</a></li>
                     </ul>
 
-                    <ul data-nav data-flex="end">
+                    <ul data-flex="end">
                         <li><a data-anchor data-state="active">Active</a></li>
                         <li><a data-anchor>Anchor</a></li>
                         <li><a data-anchor>Anchor</a></li>
@@ -157,7 +171,7 @@
                 <h3>Breadcrumb</h3>
 
                 <nav>
-                    <ul data-nav="breadcrumb">
+                    <ul data-flex="breadcrumb">
                         <li>Active</li>
                         <li><a>Link</a></li>
                         <li><a>Link</a></li>
@@ -168,35 +182,35 @@
                 <h3>Tabs</h3>
 
                 <nav>
-                    <ul data-nav="line-bottom">
+                    <ul data-flex="line-bottom">
                         <li><a data-anchor="line" data-state="active">Active</a></li>
                         <li><a data-anchor="line">Anchor</a></li>
                         <li><a data-anchor="line">Anchor</a></li>
                         <li><a data-anchor="line">Anchor</a></li>
                     </ul>
 
-                    <ul data-nav="line-bottom" data-flex="center">
+                    <ul data-flex="line-bottom center">
                         <li><a data-anchor="line" data-state="active">Active</a></li>
                         <li><a data-anchor="line">Anchor</a></li>
                         <li><a data-anchor="line">Anchor</a></li>
                         <li><a data-anchor="line">Anchor</a></li>
                     </ul>
 
-                    <ul data-nav="line-bottom" data-flex="end">
+                    <ul data-flex="line-bottom end">
                         <li><a data-anchor="line" data-state="active">Active</a></li>
                         <li><a data-anchor="line">Anchor</a></li>
                         <li><a data-anchor="line">Anchor</a></li>
                         <li><a data-anchor="line">Anchor</a></li>
                     </ul>
 
-                    <ul data-nav="line-bottom" data-flex="between grow">
+                    <ul data-flex="line-bottom between grow">
                         <li><a data-anchor="line" data-state="active">Active</a></li>
                         <li><a data-anchor="line">Anchor</a></li>
                         <li><a data-anchor="line">Anchor</a></li>
                         <li><a data-anchor="line">Anchor</a></li>
                     </ul>
 
-                    <ul data-nav="line-bottom" data-flex="between grow" data-text="center">
+                    <ul data-flex="line-bottom between grow" data-text="center">
                         <li><a data-anchor="line" data-state="active">Active</a></li>
                         <li><a data-anchor="line">Anchor</a></li>
                         <li><a data-anchor="line">Anchor</a></li>
@@ -205,7 +219,7 @@
 
                     <br />
 
-                    <ul data-nav="line-top">
+                    <ul data-flex="line-top">
                         <li><a data-anchor="line" data-state="active">Active</a></li>
                         <li><a data-anchor="line">Anchor</a></li>
                         <li><a data-anchor="line">Anchor</a></li>
@@ -216,7 +230,7 @@
                 <h3>Navbar</h3>
 
                 <nav data-navbar>
-                    <ul data-nav>
+                    <ul data-flex>
                         <li><a data-anchor="navbar" data-state="active">Active</a></li>
                         <li><a data-anchor="navbar">Anchor</a></li>
                         <li><a data-anchor="navbar">Anchor</a></li>
@@ -227,7 +241,7 @@
                 <br />
 
                 <nav data-navbar>
-                    <ul data-nav data-flex="between grow" data-text="center">
+                    <ul data-flex="between grow" data-text="center">
                         <li><a data-anchor="navbar" data-state="active">Active</a></li>
                         <li><a data-anchor="navbar">Anchor</a></li>
                         <li><a data-anchor="navbar">Anchor</a></li>
@@ -238,7 +252,7 @@
                 <br />
 
                 <nav data-navbar>
-                    <ul data-nav>
+                    <ul data-flex>
                         <li><a data-anchor="navbar">Anchor</a></li>
                         <li data-item="grow"></li>
                         <li><a data-anchor="navbar" data-state="active">Active</a></li>
@@ -250,7 +264,7 @@
                 <br />
 
                 <nav data-navbar>
-                    <ul data-nav>
+                    <ul data-flex>
                         <li><a data-anchor="navbar">Anchor</a></li>
                         <li data-item="grow"></li>
                         <li><a data-anchor="navbar">Anchor</a></li>

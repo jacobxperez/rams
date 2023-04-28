@@ -3,9 +3,9 @@ const toggle = () => {
 
     const resetToggles = () => {
         toggleElements.forEach((toggleElement) => {
-            const isPopToggle = toggleElement.matches('[data-toggle~="pop"]');
+            const isPopToggle = toggleElement.matches('[data-toggle="pop"]');
             const isTooltipToggle = toggleElement.matches(
-                '[data-toggle~="tooltip"]'
+                '[data-toggle="tooltip"]'
             );
 
             if (isPopToggle || isTooltipToggle) {

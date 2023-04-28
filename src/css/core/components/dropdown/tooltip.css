@@ -1,12 +1,12 @@
 [data-toggle~="tooltip"] {
     text-decoration: $tooltip-text-decoration;
     cursor: help;
+}
 
-    :where(&) [data-dropbox] {
-        bottom: 100%;
-        min-width: $tooltip-min-width;
-        padding: $space-y $space-x;
-        background-color: $tooltip-background;
-        color: $tooltip-text;
-    }
+[data-dropbox="tooltip"] {
+    bottom: 100%;
+    min-width: $tooltip-min-width;
+    padding: $space-y $space-x;
+    background-color: $tooltip-background;
+    color: $tooltip-text;
 }

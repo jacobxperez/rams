@@ -41,7 +41,7 @@ const sidebar = () => {
             getContents.insertAdjacentHTML('beforeend', links);
 
             // generates navigation for small screens
-            const dropdownLinks = `<li><a href="#${i}" data-anchor>${headingInnerText}</a></li>`;
+            const dropdownLinks = `<li><a href="#${i}" data-anchor="menu">${headingInnerText}</a></li>`;
             const getContentsDropdown =
                 document.getElementById('contentsDropdown');
             getContentsDropdown.insertAdjacentHTML('beforeend', dropdownLinks);

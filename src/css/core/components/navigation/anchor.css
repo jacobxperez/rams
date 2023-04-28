@@ -14,3 +14,7 @@
         outline-offset: -0.125rem;
     }
 }
+
+@if $rams-menu == true {
+    @include _anchor-menu();
+}

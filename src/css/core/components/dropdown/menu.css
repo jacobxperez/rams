@@ -1,0 +1,4 @@
+[data-dropbox~="menu"] {
+    background-color: $dropbox-menu-background-color;
+    border: $dropbox-menu-border;
+}

@@ -1,36 +1,37 @@
-const resetToggles = (toggleElements) => {
-    toggleElements.forEach((toggleElement) => {
-        const isPopToggle = toggleElement.matches('[data-toggle="pop"]');
-        const isTooltipToggle = toggleElement.matches(
-            '[data-toggle="tooltip"]'
-        );
-        if (isPopToggle || isTooltipToggle) {
-            toggleElement.removeAttribute('data-state');
+const toggle = () => {
+    const toggleElements = document.querySelectorAll('[data-toggle]');
+
+    const resetToggles = () => {
+        toggleElements.forEach((toggleElement) => {
+            if (
+                ['pop', 'tooltip'].some(
+                    (type) => toggleElement.dataset.toggle === type
+                )
+            ) {
+                toggleElement.removeAttribute('data-state');
+            }
+        });
+    };
+
+    document.addEventListener('click', (e) => {
+        const targetToggle = e.target.closest('[data-toggle]');
+
+        if (targetToggle) {
+            const dataState = targetToggle.getAttribute('data-state');
+
+            if (dataState === 'active') {
+                resetToggles();
+                targetToggle.removeAttribute('data-state');
+            } else {
+                resetToggles();
+                targetToggle.setAttribute('data-state', 'active');
+            }
+
+            e.stopPropagation();
+        } else {
+            resetToggles();
         }
     });
 };
 
-const toggle = () => {
-    const toggleElements = document.querySelectorAll('[data-toggle]');
-
-    const handleToggleClick = (e) => {
-        const targetToggle = e.target.closest('[data-toggle]');
-        if (targetToggle) {
-            const dataState = targetToggle.getAttribute('data-state');
-            if (dataState === 'active') {
-                resetToggles(toggleElements);
-                targetToggle.removeAttribute('data-state');
-            } else {
-                resetToggles(toggleElements);
-                targetToggle.setAttribute('data-state', 'active');
-            }
-            e.stopPropagation();
-        } else {
-            resetToggles(toggleElements);
-        }
-    };
-
-    document.addEventListener('click', handleToggleClick);
-};
-
-export {resetToggles, toggle};
+export {toggle};

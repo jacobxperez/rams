@@ -2,7 +2,7 @@ const sidebar = () => {
     const getAside = document.getElementById('aside');
     const getContent = document.getElementById('content');
 
-    if (template.type === 'post') {
+    if (meta.type === 'post') {
         // gets all the headings of the post
         const getHeadings = getContent.querySelectorAll(
             'h1, h2, h3, h4, h5, h6'

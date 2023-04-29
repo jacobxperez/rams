@@ -5,6 +5,7 @@
  * http://www.apache.org/licenses/LICENSE-2.0
 -----------------------------------------------------------------------------*/
 const meta = {
+    type: '',
     title: document.title,
     subtitle: '',
     author: {
@@ -42,7 +43,6 @@ const meta = {
 };
 
 const template = {
-    type: '',
     appendString(string, targetSelector) {
         const targetElement = document.querySelector(targetSelector);
         targetElement.insertAdjacentHTML('beforeend', string);

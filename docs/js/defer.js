@@ -30,7 +30,7 @@ let main = `
     </div>
     `;
 
-if (template.type === 'fullPage') {
+if (meta.type === 'fullPage') {
     main = `
     <div id="content" data-container="fit" data-grid="main"></div>
     `;

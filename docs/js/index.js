@@ -59,7 +59,7 @@ const template = {
         const parsedSource = parser.parseFromString(string, 'text/html');
         this.appendTemplate(parsedSource, templateSelector, targetSelector);
     },
-    getAndSetTemplate(templateSelector, targetSelector, callback = null) {
+    setTemplate(templateSelector, targetSelector, callback = null) {
         new Promise((resolve, reject) => {
             templateSelector ? resolve() : reject();
         })

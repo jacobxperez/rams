@@ -1,5 +1,5 @@
 const toggle = () => {
-    const toggleCache = [];
+    const toggleCache = new Set();
 
     const resetToggles = () => {
         toggleCache.forEach((toggleElement) => {
@@ -13,12 +13,12 @@ const toggle = () => {
         const targetToolTip = e.target.closest('[data-toggle~="tooltip"]');
 
         if (targetToggle) {
-            if (targetPop && !toggleCache.includes(targetPop)) {
-                toggleCache.push(targetPop);
+            if (targetPop && !toggleCache.has(targetPop)) {
+                toggleCache.add(targetPop);
             }
 
-            if (targetToolTip && !toggleCache.includes(targetToolTip)) {
-                toggleCache.push(targetToolTip);
+            if (targetToolTip && !toggleCache.has(targetToolTip)) {
+                toggleCache.add(targetToolTip);
             }
 
             const dataState = targetToggle.getAttribute('data-state');

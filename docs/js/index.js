@@ -59,17 +59,19 @@ const template = {
         const parsedSource = parser.parseFromString(string, 'text/html');
         this.appendTemplate(parsedSource, templateSelector, targetSelector);
     },
-    setTemplate(templateSelector, targetSelector, callback = null) {
-        if (!templateSelector) {
-            console.error('Error: Template not found');
-            return this;
-        }
-
-        this.appendTemplate(document, templateSelector, targetSelector);
-
-        if (typeof callback === 'function') {
-            callback();
-        }
+    getAndSetTemplate(templateSelector, targetSelector, callback = null) {
+        new Promise((resolve, reject) => {
+            templateSelector ? resolve() : reject();
+        })
+            .then(() =>
+                this.appendTemplate(document, templateSelector, targetSelector)
+            )
+            .then(() => {
+                if (typeof callback === 'function') {
+                    callback();
+                }
+            })
+            .catch((err) => console.error(err, 'Error: Template not found'));
 
         return this;
     },

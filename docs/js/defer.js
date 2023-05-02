@@ -66,6 +66,6 @@ let layout = `
 template
     .fromString(layout, 'body')
     .setTemplate('#headerTemplate', '#header')
-    .setTemplate('#contentTemplate', '#content')
-    .fetchTemplate(templateURL, '#nav')
+    .setTemplate('#contentTemplate', '#content', sidebar)
+    .fetchTemplate(templateURL, '#nav', toggle)
     .fetchTemplate(templateURL, '#footer');

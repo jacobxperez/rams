@@ -59,7 +59,7 @@ const template = {
         const parsedSource = parser.parseFromString(string, 'text/html');
         this.appendTemplate(parsedSource, templateSelector, targetSelector);
     },
-    getAndSetTemplate(templateSelector, targetSelector, callback = null) {
+    setTemplate(templateSelector, targetSelector, callback = null) {
         new Promise((resolve, reject) => {
             templateSelector ? resolve() : reject();
         })
@@ -76,16 +76,18 @@ const template = {
         return this;
     },
     fromString(string, targetSelector, callback = null) {
-        if (typeof string !== 'string') {
-            console.error('Error: Source is not a string');
-            return this;
-        }
-
-        this.appendString(string, targetSelector);
-
-        if (typeof callback === 'function') {
-            callback();
-        }
+        new Promise((resolve, reject) => {
+            typeof string === 'string'
+                ? resolve()
+                : reject((err = 'Error: Source is not a String'));
+        })
+            .then(() => this.appendString(string, targetSelector))
+            .then(() => {
+                if (typeof callback === 'function') {
+                    callback();
+                }
+            })
+            .catch((err) => console.error(err));
 
         return this;
     },

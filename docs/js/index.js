@@ -60,34 +60,30 @@ const template = {
         this.appendTemplate(parsedSource, templateSelector, targetSelector);
     },
     setTemplate(templateSelector, targetSelector, callback = null) {
-        new Promise((resolve, reject) => {
-            templateSelector ? resolve() : reject();
-        })
-            .then(() =>
-                this.appendTemplate(document, templateSelector, targetSelector)
-            )
-            .then(() => {
-                if (typeof callback === 'function') {
-                    callback();
-                }
-            })
-            .catch((err) => console.error(err, 'Error: Template not found'));
+        if (!templateSelector) {
+            console.error('Error: Template not found');
+            return this;
+        }
+
+        this.appendTemplate(document, templateSelector, targetSelector);
+
+        if (typeof callback === 'function') {
+            callback();
+        }
 
         return this;
     },
     fromString(string, targetSelector, callback = null) {
-        new Promise((resolve, reject) => {
-            typeof string === 'string'
-                ? resolve()
-                : reject((err = 'Error: Source is not a String'));
-        })
-            .then(() => this.appendString(string, targetSelector))
-            .then(() => {
-                if (typeof callback === 'function') {
-                    callback();
-                }
-            })
-            .catch((err) => console.error(err));
+        if (typeof string !== 'string') {
+            console.error('Error: Source is not a string');
+            return this;
+        }
+
+        this.appendString(string, targetSelector);
+
+        if (typeof callback === 'function') {
+            callback();
+        }
 
         return this;
     },

@@ -13,12 +13,11 @@ const toggle = () => {
         const targetToolTip = e.target.closest('[data-toggle~="tooltip"]');
 
         if (targetToggle) {
-            if (targetPop && !toggleCache.has(targetPop)) {
-                toggleCache.add(targetPop);
-            }
-
-            if (targetToolTip && !toggleCache.has(targetToolTip)) {
-                toggleCache.add(targetToolTip);
+            if (
+                (targetPop || targetToolTip) &&
+                !(toggleCache.has(targetPop) || toggleCache.has(targetToolTip))
+            ) {
+                toggleCache.add(targetPop || targetToolTip);
             }
 
             const dataState = targetToggle.getAttribute('data-state');

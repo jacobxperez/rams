@@ -3,13 +3,7 @@ const toggle = {
 
     reset: function (toggles) {
         toggles.forEach((toggleElement) => {
-            if (
-                ['pop', 'tooltip'].some(
-                    (type) => toggleElement.dataset.toggle === type
-                )
-            ) {
-                toggleElement.removeAttribute('data-state');
-            }
+            toggleElement.removeAttribute('data-state');
         });
     },
 
@@ -17,8 +11,14 @@ const toggle = {
         const targetToggle = e.target.closest('[data-toggle]');
 
         if (targetToggle) {
-            if (targetToggle && !this.toggleCache.has(targetToggle)) {
-                this.toggleCache.add(targetToggle);
+            if (!this.toggleCache.has(targetToggle)) {
+                if (
+                    ['pop', 'tooltip'].includes(
+                        targetToggle.getAttribute('data-toggle')
+                    )
+                ) {
+                    this.toggleCache.add(targetToggle);
+                }
             }
 
             const dataState = targetToggle.getAttribute('data-state');

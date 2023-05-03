@@ -3,21 +3,22 @@ const toggle = () => {
 
     const resetToggles = () => {
         toggleCache.forEach((toggleElement) => {
-            toggleElement.removeAttribute('data-state');
+            if (
+                ['pop', 'tooltip'].some(
+                    (type) => toggleElement.dataset.toggle === type
+                )
+            ) {
+                toggleElement.removeAttribute('data-state');
+            }
         });
     };
 
     document.addEventListener('click', (e) => {
         const targetToggle = e.target.closest('[data-toggle]');
-        const targetPop = e.target.closest('[data-toggle~="pop"]');
-        const targetToolTip = e.target.closest('[data-toggle~="tooltip"]');
 
         if (targetToggle) {
-            if (
-                (targetPop || targetToolTip) &&
-                !(toggleCache.has(targetPop) || toggleCache.has(targetToolTip))
-            ) {
-                toggleCache.add(targetPop || targetToolTip);
+            if (targetToggle && !toggleCache.has(targetToggle)) {
+                toggleCache.add(targetToggle);
             }
 
             const dataState = targetToggle.getAttribute('data-state');

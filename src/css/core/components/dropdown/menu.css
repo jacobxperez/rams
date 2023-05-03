@@ -7,7 +7,7 @@ $rams-menu: true;
 
 @mixin _anchor-menu {
     [data-anchor~="menu"]:where([data-state="active"], :hover, :active) {
-        background-color: #333;
-        color: #fff;
+        background-color: $anchor-menu-background-color;
+        color: $anchor-menu-color;
     }
 }

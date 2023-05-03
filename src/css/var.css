@@ -163,7 +163,9 @@ $dropbox-transition: opacity 0.3s ease, visibility 0.3s ease;
 
 /* Dropbox Menu */
 $dropbox-menu-background-color: #fff;
-$dropbox-menu-border: 1px solid #333;
+$dropbox-menu-border: $border-width solid #333;
+$anchor-menu-background-color: #333;
+$anchor-menu-color: #fff;
 
 /* Tooltip */
 $tooltip-min-width: 26ch;

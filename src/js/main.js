@@ -6,4 +6,4 @@
  */
 import {toggle} from './modules/toggle';
 
-toggle();
+toggle.init();

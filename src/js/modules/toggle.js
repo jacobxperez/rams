@@ -1,8 +1,8 @@
-const toggle = () => {
-    const toggleCache = new Set();
+const toggle = {
+    toggleCache: new Set(),
 
-    const resetToggles = () => {
-        toggleCache.forEach((toggleElement) => {
+    reset: function (toggles) {
+        toggles.forEach((toggleElement) => {
             if (
                 ['pop', 'tooltip'].some(
                     (type) => toggleElement.dataset.toggle === type
@@ -11,31 +11,39 @@ const toggle = () => {
                 toggleElement.removeAttribute('data-state');
             }
         });
-    };
+    },
 
-    document.addEventListener('click', (e) => {
+    handleClick: function (e) {
         const targetToggle = e.target.closest('[data-toggle]');
 
         if (targetToggle) {
-            if (targetToggle && !toggleCache.has(targetToggle)) {
-                toggleCache.add(targetToggle);
+            if (targetToggle && !this.toggleCache.has(targetToggle)) {
+                this.toggleCache.add(targetToggle);
             }
 
             const dataState = targetToggle.getAttribute('data-state');
 
             if (dataState === 'active') {
-                resetToggles();
+                this.reset(this.toggleCache);
                 targetToggle.removeAttribute('data-state');
             } else {
-                resetToggles();
+                this.reset(this.toggleCache);
                 targetToggle.setAttribute('data-state', 'active');
             }
 
             e.stopPropagation();
         } else {
-            resetToggles();
+            this.reset(this.toggleCache);
         }
-    });
+
+        return this;
+    },
+
+    init: function () {
+        document.addEventListener('click', this.handleClick.bind(this));
+
+        return this;
+    },
 };
 
 export {toggle};

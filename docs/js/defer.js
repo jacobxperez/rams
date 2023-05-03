@@ -67,5 +67,7 @@ template
     .fromString(layout, 'body')
     .setTemplate('#headerTemplate', '#header')
     .setTemplate('#contentTemplate', '#content', sidebar)
-    .fetchTemplate(templateURL, '#nav', toggle)
+    .fetchTemplate(templateURL, '#nav')
     .fetchTemplate(templateURL, '#footer');
+
+toggle.init();

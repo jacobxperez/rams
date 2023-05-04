@@ -1,14 +1,16 @@
 const toggle = {
+    resetSet: [],
     toggleSet: new Set(),
 
     reset() {
         this.toggleSet.forEach((item) => {
             if (
-                ['pop', 'tooltip'].some((type) => item.dataset.toggle === type)
+                ['pop', 'tooltip', ...this.resetSet].some((type) => item.dataset.toggle === type)
             ) {
                 item.removeAttribute('data-state');
             }
         });
+
     },
 
     handleClick(e) {

@@ -1,10 +1,10 @@
 const toggle = {
     clickedSet: new Set(),
-    resetTypes: ['pop', 'tooltip'],
+    resetSet: new Set(['pop', 'tooltip']),
 
     reset() {
         this.clickedSet.forEach((item) => {
-            if (this.resetTypes.some((type) => item.dataset.toggle === type)) {
+            if (this.resetSet.has(item.dataset.toggle)) {
                 item.removeAttribute('data-state');
             }
         });
@@ -28,7 +28,7 @@ const toggle = {
                 targetToggle.setAttribute('data-state', 'active');
             }
 
-            e.preventDefault();
+            e.stopPropagation();
         } else {
             this.reset();
         }

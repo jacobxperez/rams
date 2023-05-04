@@ -19,9 +19,9 @@ const toggle = {
                 this.toggleSet.add(targetToggle);
             }
 
-            const dataState = targetToggle.getAttribute('data-state');
+            const toggleState = targetToggle.getAttribute('data-state');
 
-            if (dataState === 'active') {
+            if (toggleState === 'active') {
                 this.reset();
                 targetToggle.removeAttribute('data-state');
             } else {

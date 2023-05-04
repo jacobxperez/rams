@@ -1,9 +1,13 @@
 const toggle = {
-    resetSet: new Set(),
+    toggleSet: new Set(),
 
     reset() {
-        this.resetSet.forEach((item) => {
-            item.removeAttribute('data-state');
+        this.toggleSet.forEach((item) => {
+            if (
+                ['pop', 'tooltip'].some((type) => item.dataset.toggle === type)
+            ) {
+                item.removeAttribute('data-state');
+            }
         });
     },
 
@@ -11,14 +15,8 @@ const toggle = {
         const targetToggle = e.target.closest('[data-toggle]');
 
         if (targetToggle) {
-            if (!this.resetSet.has(targetToggle)) {
-                if (
-                    targetToggle.getAttribute('data-toggle') === 'pop' ||
-                    targetToggle.getAttribute('data-toggle') === 'tooltip'
-                ) {
-                    // adds toggle pop and tooltip to reset set
-                    this.resetSet.add(targetToggle);
-                }
+            if (!this.toggleSet.has(targetToggle)) {
+                this.toggleSet.add(targetToggle);
             }
 
             const dataState = targetToggle.getAttribute('data-state');

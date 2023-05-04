@@ -1,48 +1,44 @@
 const toggle = {
-    toggleCache: new Set(),
+    resetSet: new Set(),
 
-    reset: function (toggles) {
-        toggles.forEach((toggleElement) => {
-            toggleElement.removeAttribute('data-state');
+    reset() {
+        this.resetSet.forEach((item) => {
+            item.removeAttribute('data-state');
         });
     },
 
-    handleClick: function (e) {
+    handleClick(e) {
         const targetToggle = e.target.closest('[data-toggle]');
 
         if (targetToggle) {
-            if (!this.toggleCache.has(targetToggle)) {
+            if (!this.resetSet.has(targetToggle)) {
                 if (
-                    ['pop', 'tooltip'].includes(
-                        targetToggle.getAttribute('data-toggle')
-                    )
+                    targetToggle.getAttribute('data-toggle') === 'pop' ||
+                    targetToggle.getAttribute('data-toggle') === 'tooltip'
                 ) {
-                    this.toggleCache.add(targetToggle);
+                    // adds toggle pop and tooltip to reset set
+                    this.resetSet.add(targetToggle);
                 }
             }
 
             const dataState = targetToggle.getAttribute('data-state');
 
             if (dataState === 'active') {
-                this.reset(this.toggleCache);
+                this.reset();
                 targetToggle.removeAttribute('data-state');
             } else {
-                this.reset(this.toggleCache);
+                this.reset();
                 targetToggle.setAttribute('data-state', 'active');
             }
 
             e.stopPropagation();
         } else {
-            this.reset(this.toggleCache);
+            this.reset();
         }
-
-        return this;
     },
 
-    init: function () {
+    init() {
         document.addEventListener('click', this.handleClick.bind(this));
-
-        return this;
     },
 };
 

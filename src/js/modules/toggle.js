@@ -14,11 +14,11 @@ const toggle = {
         const targetToggle = e.target.closest('[data-toggle]');
 
         if (targetToggle) {
+            const toggleState = targetToggle.getAttribute('data-state');
+
             if (!this.clickedSet.has(targetToggle)) {
                 this.clickedSet.add(targetToggle);
             }
-
-            const toggleState = targetToggle.getAttribute('data-state');
 
             if (toggleState === 'active') {
                 this.reset();

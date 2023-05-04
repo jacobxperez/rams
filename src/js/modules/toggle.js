@@ -1,24 +1,21 @@
 const toggle = {
-    resetSet: [],
-    toggleSet: new Set(),
+    clickedSet: new Set(),
+    resetTypes: ['pop', 'tooltip'],
 
     reset() {
-        this.toggleSet.forEach((item) => {
-            if (
-                ['pop', 'tooltip', ...this.resetSet].some((type) => item.dataset.toggle === type)
-            ) {
+        this.clickedSet.forEach((item) => {
+            if (this.resetTypes.some((type) => item.dataset.toggle === type)) {
                 item.removeAttribute('data-state');
             }
         });
-
     },
 
     handleClick(e) {
         const targetToggle = e.target.closest('[data-toggle]');
 
         if (targetToggle) {
-            if (!this.toggleSet.has(targetToggle)) {
-                this.toggleSet.add(targetToggle);
+            if (!this.clickedSet.has(targetToggle)) {
+                this.clickedSet.add(targetToggle);
             }
 
             const toggleState = targetToggle.getAttribute('data-state');
@@ -31,7 +28,7 @@ const toggle = {
                 targetToggle.setAttribute('data-state', 'active');
             }
 
-            e.stopPropagation();
+            e.preventDefault();
         } else {
             this.reset();
         }

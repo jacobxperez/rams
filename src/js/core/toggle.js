@@ -1,4 +1,6 @@
-const toggle = {
+import {print} from './print';
+
+export const toggle = {
     clickedSet: new Set(),
     resetSet: new Set(['pop', 'tooltip']),
 
@@ -38,5 +40,3 @@ const toggle = {
         document.addEventListener('click', this.handleClick.bind(this));
     },
 };
-
-export {toggle};

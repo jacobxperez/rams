@@ -5,7 +5,7 @@
  * http://www.apache.org/licenses/LICENSE-2.0
 -----------------------------------------------------------------------------*/
 import {sidebar} from './modules/sidebar.js';
-import {toggle} from '../../src/js/modules/toggle.js';
+import {rams} from '../../src/js/core/rams.js';
 
 if (meta.title === '') {
     meta.title = `<h1>Rams</h1>`;
@@ -70,4 +70,4 @@ template
     .fetchTemplate(templateURL, '#nav')
     .fetchTemplate(templateURL, '#footer');
 
-toggle.init();
+rams.toggle.init();

@@ -1,4 +1,5 @@
 import {getData, setData, removeData, closestData} from './element.js';
+import {addEvent} from './events.js';
 import {toggle} from './toggle.js';
 
 export const rams = {
@@ -6,5 +7,6 @@ export const rams = {
     setData,
     removeData,
     closestData,
+    addEvent,
     toggle,
 };

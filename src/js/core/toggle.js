@@ -25,7 +25,7 @@ export const toggle = {
         }
     },
 
-    addToggleEvent(targetToggle) {
+    addEvent(targetToggle) {
         targetToggle.addEventListener('click', (e) => {
             this.toggleState(targetToggle);
             e.stopPropagation();
@@ -40,7 +40,7 @@ export const toggle = {
                 return;
             } else {
                 this.clickedSet.add(targetToggle);
-                this.addToggleEvent(targetToggle);
+                this.addEvent(targetToggle);
             }
 
             this.toggleState(targetToggle);

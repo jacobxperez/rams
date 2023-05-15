@@ -51,6 +51,5 @@ export const toggle = {
 
     init() {
         rams.addEvent(document, 'click', this.setUp.bind(this));
-        // document.addEventListener('click', this.setUp.bind(this));
     },
 };

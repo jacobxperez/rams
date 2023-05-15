@@ -3,11 +3,11 @@ function getData(element, attributeName) {
 }
 
 function setData(element, attributeName, value) {
-    element.setAttribute('data-' + attributeName, value);
+    return element.setAttribute('data-' + attributeName, value);
 }
 
 function removeData(element, attributeName) {
-    element.removeAttribute('data-' + attributeName);
+    return element.removeAttribute('data-' + attributeName);
 }
 
 function closestData(element, attributeName) {

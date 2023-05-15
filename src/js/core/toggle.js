@@ -18,20 +18,13 @@ export const toggle = {
         const toggleState = rams.getData(targetToggle, 'state');
         const getDropBox = rams.closestData(targetToggle, 'dropbox');
 
+        this.reset(getDropBox);
+
         if (toggleState === 'active') {
-            this.reset(getDropBox);
             rams.removeData(targetToggle, 'state');
         } else {
-            this.reset(getDropBox);
             rams.setData(targetToggle, 'state', 'active');
         }
-    },
-
-    addEvent(targetToggle) {
-        targetToggle.addEventListener('click', (e) => {
-            this.toggleState(targetToggle);
-            e.stopPropagation();
-        });
     },
 
     setUp(e) {
@@ -42,7 +35,10 @@ export const toggle = {
                 return;
             } else {
                 this.clickedSet.add(targetToggle);
-                this.addEvent(targetToggle);
+                rams.addEvent(targetToggle, 'click', (e) => {
+                    this.toggleState(targetToggle);
+                    e.stopPropagation();
+                });
             }
 
             this.toggleState(targetToggle);
@@ -54,6 +50,7 @@ export const toggle = {
     },
 
     init() {
-        document.addEventListener('click', this.setUp.bind(this));
+        rams.addEvent(document, 'click', this.setUp.bind(this));
+        // document.addEventListener('click', this.setUp.bind(this));
     },
 };

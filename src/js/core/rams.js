@@ -1,4 +1,4 @@
-import {getData, setData, removeData, closestData} from './element.js';
+import {getData, setData, removeData, closestData} from './dataAttributes.js';
 import {addEvent} from './events.js';
 import {toggle} from './toggle.js';
 

@@ -1,55 +1,54 @@
 import {rams} from './rams.js';
 
-export const toggle = {
-    clickedSet: new Set(),
-    resetSet: new Set(['pop', 'tooltip']),
+export function toggle(...args) {
+    const clickedSet = new Set();
+    const resetSet = new Set(['pop', 'tooltip', ...args]);
 
-    reset(getDropBox) {
+    function reset(getDropBox) {
         if (!getDropBox) {
-            this.clickedSet.forEach((item) => {
-                if (this.resetSet.has(item.dataset.toggle)) {
+            clickedSet.forEach((item) => {
+                if (resetSet.has(item.dataset.toggle)) {
                     rams.removeData(item, 'state');
                 }
             });
         }
-    },
+    }
 
-    toggleState(targetToggle) {
+    function toggleState(targetToggle) {
         const toggleState = rams.getData(targetToggle, 'state');
         const getDropBox = rams.closestData(targetToggle, 'dropbox');
 
-        this.reset(getDropBox);
+        reset(getDropBox);
 
         if (toggleState === 'active') {
             rams.removeData(targetToggle, 'state');
         } else {
             rams.setData(targetToggle, 'state', 'active');
         }
-    },
+    }
 
-    setUp(e) {
+    rams.addEvent(document, 'click', (e) => {
         const targetToggle = rams.closestData(e.target, 'toggle');
 
         if (targetToggle) {
-            if (this.clickedSet.has(targetToggle)) {
+            if (clickedSet.has(targetToggle)) {
                 return;
             } else {
-                this.clickedSet.add(targetToggle);
+                clickedSet.add(targetToggle);
+
                 rams.addEvent(targetToggle, 'click', (e) => {
-                    this.toggleState(targetToggle);
+                    toggleState(targetToggle);
                     e.stopPropagation();
                 });
             }
 
-            this.toggleState(targetToggle);
+            toggleState(targetToggle);
 
             e.stopPropagation();
         } else {
-            this.reset();
+            reset();
         }
-    },
 
-    init() {
-        rams.addEvent(document, 'click', this.setUp.bind(this));
-    },
-};
+        e.stopPropagation();
+    });
+}

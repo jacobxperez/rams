@@ -70,4 +70,4 @@ template
     .fetchTemplate(templateURL, '#nav')
     .fetchTemplate(templateURL, '#footer');
 
-rams.toggle.init();
+rams.toggle();

@@ -51,4 +51,6 @@ export function toggle(...args) {
 
         e.stopPropagation();
     });
+
+    return this;
 }

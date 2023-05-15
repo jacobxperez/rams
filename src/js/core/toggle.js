@@ -1,3 +1,5 @@
+import {getData, setData, removeData, closestData} from './element';
+
 export const toggle = {
     clickedSet: new Set(),
     resetSet: new Set(['pop', 'tooltip']),
@@ -6,22 +8,22 @@ export const toggle = {
         if (!getDropBox) {
             this.clickedSet.forEach((item) => {
                 if (this.resetSet.has(item.dataset.toggle)) {
-                    item.removeAttribute('data-state');
+                    removeData(item, 'state');
                 }
             });
         }
     },
 
     toggleState(targetToggle) {
-        const toggleState = targetToggle.getAttribute('data-state');
-        const getDropBox = targetToggle.closest('[data-dropbox]');
+        const toggleState = getData(targetToggle, 'state');
+        const getDropBox = closestData(targetToggle, 'dropbox');
 
         if (toggleState === 'active') {
             this.reset(getDropBox);
-            targetToggle.removeAttribute('data-state');
+            removeData(targetToggle, 'state');
         } else {
             this.reset(getDropBox);
-            targetToggle.setAttribute('data-state', 'active');
+            setData(targetToggle, 'state', 'active');
         }
     },
 
@@ -33,7 +35,7 @@ export const toggle = {
     },
 
     setUp(e) {
-        const targetToggle = e.target.closest('[data-toggle]');
+        const targetToggle = closestData(e.target, 'toggle');
 
         if (targetToggle) {
             if (this.clickedSet.has(targetToggle)) {

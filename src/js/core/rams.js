@@ -1,7 +1,5 @@
 import {toggle} from './toggle.js';
 
-const rams = {
+export const rams = {
     toggle,
 };
-
-export {rams};

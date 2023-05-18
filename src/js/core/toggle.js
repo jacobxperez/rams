@@ -34,15 +34,17 @@ export function toggle(...args) {
             } else {
                 clickedSet.add(targetToggle);
 
-                rams(targetToggle).addEvent('click', (e) => {
-                    toggleState(targetToggle);
-                    e.stopPropagation();
-                });
+                rams(targetToggle).addEvent(
+                    'click',
+                    (e) => {
+                        toggleState(targetToggle);
+                        e.stopPropagation();
+                    },
+                    true
+                );
             }
 
             toggleState(targetToggle);
-
-            e.stopPropagation();
         } else {
             reset();
         }

@@ -1,4 +1,4 @@
-const sidebar = () => {
+export const sidebar = () => {
     const getAside = document.getElementById('aside');
     const getContent = document.getElementById('content');
 
@@ -48,5 +48,3 @@ const sidebar = () => {
         });
     }
 };
-
-export {sidebar};

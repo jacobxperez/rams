@@ -1,12 +1,15 @@
-import {getData, setData, removeData, closestData} from './dataAttributes.js';
+import {hasData, setData, removeData, closestData} from './dataAttributes.js';
 import {addEvent} from './events.js';
 import {toggle} from './toggle.js';
 
-export const rams = {
-    getData,
-    setData,
-    removeData,
-    closestData,
-    addEvent,
-    toggle,
-};
+export function rams(element) {
+    return {
+        element,
+        addEvent,
+        hasData,
+        setData,
+        removeData,
+        closestData,
+        toggle,
+    };
+}

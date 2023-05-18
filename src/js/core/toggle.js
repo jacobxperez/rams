@@ -8,27 +8,25 @@ export function toggle(...args) {
         if (!getDropBox) {
             clickedSet.forEach((item) => {
                 if (resetSet.has(item.dataset.toggle)) {
-                    rams.removeData(item, 'state');
+                    rams(item).removeData('state');
                 }
             });
         }
     }
 
     function toggleState(targetToggle) {
-        const toggleState = rams.getData(targetToggle, 'state');
-        const getDropBox = rams.closestData(targetToggle, 'dropbox');
+        const toggleState = rams(targetToggle).hasData('state', 'active');
+        const getDropBox = rams(targetToggle).closestData('dropbox');
 
         reset(getDropBox);
 
-        if (toggleState === 'active') {
-            rams.removeData(targetToggle, 'state');
-        } else {
-            rams.setData(targetToggle, 'state', 'active');
-        }
+        toggleState
+            ? rams(targetToggle).removeData('state')
+            : rams(targetToggle).setData('state', 'active');
     }
 
-    rams.addEvent(document, 'click', (e) => {
-        const targetToggle = rams.closestData(e.target, 'toggle');
+    rams(document).addEvent('click', (e) => {
+        const targetToggle = rams(e.target).closestData('toggle');
 
         if (targetToggle) {
             if (clickedSet.has(targetToggle)) {
@@ -36,7 +34,7 @@ export function toggle(...args) {
             } else {
                 clickedSet.add(targetToggle);
 
-                rams.addEvent(targetToggle, 'click', (e) => {
+                rams(targetToggle).addEvent('click', (e) => {
                     toggleState(targetToggle);
                     e.stopPropagation();
                 });

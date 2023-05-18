@@ -1,17 +1,22 @@
-function getData(element, attributeName) {
-    return element.getAttribute(`data-${attributeName}`);
+function getData(attributeName) {
+    return this.element.getAttribute(`data-${attributeName}`);
 }
 
-function setData(element, attributeName, value) {
-    return element.setAttribute(`data-${attributeName}`, value);
+function hasData(attributeName, value) {
+    return this.element.getAttribute(`data-${attributeName}`) === value;
 }
 
-function removeData(element, attributeName) {
-    return element.removeAttribute(`data-${attributeName}`);
+function setData(attributeName, value) {
+    return this.element.setAttribute(`data-${attributeName}`, value);
 }
 
-function closestData(element, attributeName) {
-    return element.closest(`[data-${attributeName}]`);
+function removeData(attributeName) {
+    return this.element.removeAttribute(`data-${attributeName}`);
 }
 
-export {getData, setData, removeData, closestData};
+function closestData(attributeName) {
+    return this.element.closest(`[data-${attributeName}]`);
+}
+
+
+export {getData, hasData, setData, removeData, closestData};

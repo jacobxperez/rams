@@ -38,6 +38,7 @@ function carousel(
             .slice(0, lazyLoadThreshold)
             .map((slide) => {
                 const image = slide.querySelector('img');
+
                 if (!image) return;
                 return new Promise((resolve, reject) => {
                     const img = new Image();
@@ -55,6 +56,7 @@ function carousel(
             `[data-index="${currentIndex}"]`
         );
         const prevTab = controls.querySelector(`[data-state="active"]`);
+        
         el(currentTab).setData('state', 'active');
         prevTab?.removeAttribute('data-state');
         requestAnimationFrame(() => {
@@ -66,7 +68,8 @@ function carousel(
 
     function cycleSlides() {
         const currentSlide = slides[currentIndex];
-        currentSlide.setAttribute('data-state', 'current');
+        
+        el(currentSlide).setData('state', 'current');
         requestAnimationFrame(() => {
             Array.from(slides)
                 .filter((slide) => slide !== currentSlide)
@@ -80,11 +83,13 @@ function carousel(
     function changeSlide(direction) {
         if (direction === 'next') {
             currentIndex++;
+
             if (currentIndex > slides.length - 1) {
                 currentIndex = 0;
             }
         } else if (direction === 'prev') {
             currentIndex--;
+
             if (currentIndex < 0) {
                 currentIndex = slides.length - 1;
             }
@@ -95,7 +100,7 @@ function carousel(
     // Control and indicator methods
     function handleControls(e) {
         const target = e.target;
-        
+
         if (target.matches('[data-button="next-slide"]')) {
             changeSlide('next');
             resume();
@@ -112,6 +117,7 @@ function carousel(
     function addControls() {
         const prev = button.cloneNode(true);
         const next = button.cloneNode(true);
+
         el(prev).setData('button', 'prev-slide');
         el(next).setData('button', 'next-slide');
         controls.appendChild(prev);
@@ -126,6 +132,7 @@ function carousel(
 
         for (let i = 0; i < slides.length; i++) {
             const indicatorButton = button.cloneNode(true);
+
             el(indicatorButton).setData('index', i);
             el(indicatorButton).setData('tab', 'indicator');
             indicator.appendChild(indicatorButton);

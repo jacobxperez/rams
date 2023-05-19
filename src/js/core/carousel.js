@@ -146,9 +146,9 @@ function carousel(
 
     // Touch control methods
     function addTouchControls() {
-        function handleTouchplay(e) {
-            touchplayX = e.touches[0].clientX;
-            touchEndX = touchplayX;
+        function handleTouchStart(e) {
+            touchstartX = e.touches[0].clientX;
+            touchEndX = touchstartX;
         }
 
         function handleTouchMove(e) {
@@ -157,10 +157,10 @@ function carousel(
 
         function handleTouchEnd() {
             if (
-                typeof touchplayX !== 'undefined' &&
+                typeof touchstartX !== 'undefined' &&
                 typeof touchEndX !== 'undefined'
             ) {
-                const touchDistance = touchEndX - touchplayX;
+                const touchDistance = touchEndX - touchstartX;
 
                 if (touchDistance > 0) {
                     changeSlide('prev');
@@ -172,7 +172,7 @@ function carousel(
             }
         }
 
-        el(carousel).addEvent('touchplay', handleTouchplay(e));
+        el(carousel).addEvent('touchstart', handleTouchStart(e));
         el(carousel).addEvent('touchmove', handleTouchMove(e));
         el(carousel).addEvent('touchend', handleTouchEnd);
 

@@ -1,11 +1,11 @@
-import {rams} from './rams.js';
+import {el} from './rams.js';
 
 function getData(attributeName) {
     return this.element.getAttribute(`data-${attributeName}`);
 }
 
 function hasData(attributeName, value) {
-    return rams(this.element).getData(attributeName) === value;
+    return el(this.element).getData(attributeName) === value;
 }
 
 function setData(attributeName, value) {

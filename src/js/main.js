@@ -7,4 +7,4 @@
 import {rams} from './core/rams.js';
 
 // start the toggles
-rams().toggle();
+rams.toggle();

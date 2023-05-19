@@ -1,4 +1,4 @@
-import {rams} from './rams.js';
+import {el} from './rams.js';
 
 export function toggle(...args) {
     const clickedSet = new Set();
@@ -8,25 +8,25 @@ export function toggle(...args) {
         if (!getDropBox) {
             clickedSet.forEach((item) => {
                 if (resetSet.has(item.dataset.toggle)) {
-                    rams(item).removeData('state');
+                    el(item).removeData('state');
                 }
             });
         }
     }
 
     function toggleState(targetToggle) {
-        const toggleState = rams(targetToggle).hasData('state', 'active');
-        const getDropBox = rams(targetToggle).closestData('dropbox');
+        const toggleState = el(targetToggle).hasData('state', 'active');
+        const getDropBox = el(targetToggle).closestData('dropbox');
 
         reset(getDropBox);
 
         toggleState
-            ? rams(targetToggle).removeData('state')
-            : rams(targetToggle).setData('state', 'active');
+            ? el(targetToggle).removeData('state')
+            : el(targetToggle).setData('state', 'active');
     }
 
-    rams(document).addEvent('click', (e) => {
-        const targetToggle = rams(e.target).closestData('toggle');
+    el(document).addEvent('click', (e) => {
+        const targetToggle = el(e.target).closestData('toggle');
 
         if (targetToggle) {
             if (clickedSet.has(targetToggle)) {
@@ -34,7 +34,7 @@ export function toggle(...args) {
             } else {
                 clickedSet.add(targetToggle);
 
-                rams(targetToggle).addEvent(
+                el(targetToggle).addEvent(
                     'click',
                     (e) => {
                         toggleState(targetToggle);

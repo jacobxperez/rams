@@ -1,8 +1,15 @@
-import {getData, hasData, setData, removeData, closestData} from './dataAttributes.js';
+import {
+    getData,
+    hasData,
+    setData,
+    removeData,
+    closestData,
+} from './dataAttributes.js';
 import {addEvent} from './events.js';
 import {toggle} from './toggle.js';
+import {carousel} from './carousel.js';
 
-export function rams(element) {
+function el(element) {
     return {
         element,
         addEvent,
@@ -11,6 +18,12 @@ export function rams(element) {
         setData,
         removeData,
         closestData,
-        toggle,
     };
 }
+
+const rams = {
+    toggle,
+    carousel,
+};
+
+export {rams, el};

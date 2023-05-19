@@ -56,7 +56,7 @@ function carousel(
             `[data-index="${currentIndex}"]`
         );
         const prevTab = controls.querySelector(`[data-state="active"]`);
-        
+
         el(currentTab).setData('state', 'active');
         prevTab?.removeAttribute('data-state');
         requestAnimationFrame(() => {
@@ -68,7 +68,7 @@ function carousel(
 
     function cycleSlides() {
         const currentSlide = slides[currentIndex];
-        
+
         el(currentSlide).setData('state', 'current');
         requestAnimationFrame(() => {
             Array.from(slides)
@@ -101,13 +101,13 @@ function carousel(
     function handleControls(e) {
         const target = e.target;
 
-        if (target.matches('[data-button="next-slide"]')) {
+        if (el(target).matchData('button', 'next-slide')) {
             changeSlide('next');
             resume();
-        } else if (target.matches('[data-button="prev-slide"]')) {
+        } else if (el(target).matchData('button', 'prev-slide')) {
             changeSlide('prev');
             resume();
-        } else if (target.matches('[data-index]')) {
+        } else if (el(target).matchData('index', '')) {
             pause();
             currentIndex = Number(el(target).getData('index'));
             cycleSlides();
@@ -146,9 +146,9 @@ function carousel(
 
     // Touch control methods
     function addTouchControls() {
-        function handleTouchStart(e) {
-            touchStartX = e.touches[0].clientX;
-            touchEndX = touchStartX;
+        function handleTouchplay(e) {
+            touchplayX = e.touches[0].clientX;
+            touchEndX = touchplayX;
         }
 
         function handleTouchMove(e) {
@@ -157,10 +157,10 @@ function carousel(
 
         function handleTouchEnd() {
             if (
-                typeof touchStartX !== 'undefined' &&
+                typeof touchplayX !== 'undefined' &&
                 typeof touchEndX !== 'undefined'
             ) {
-                const touchDistance = touchEndX - touchStartX;
+                const touchDistance = touchEndX - touchplayX;
 
                 if (touchDistance > 0) {
                     changeSlide('prev');
@@ -172,7 +172,7 @@ function carousel(
             }
         }
 
-        el(carousel).addEvent('touchstart', handleTouchStart(e));
+        el(carousel).addEvent('touchplay', handleTouchplay(e));
         el(carousel).addEvent('touchmove', handleTouchMove(e));
         el(carousel).addEvent('touchend', handleTouchEnd);
 
@@ -201,8 +201,8 @@ function carousel(
         return this;
     }
 
-    // Start/pause/stop methods
-    function start(time = intervalTime) {
+    // Play/pause/stop methods
+    function play(time = intervalTime) {
         interval = setInterval(() => {
             changeSlide('next');
         }, time);
@@ -218,14 +218,15 @@ function carousel(
 
     function resume() {
         pause();
-        start();
+        play();
 
         return this;
     }
 
     initialize();
-    start();
+    play();
     addControls();
+    addIndicators();
 
     return this;
 }

@@ -4,6 +4,7 @@ import {
     setData,
     removeData,
     closestData,
+    matchData,
 } from './dataAttributes.js';
 import {addEvent} from './events.js';
 import {toggle} from './toggle.js';
@@ -18,6 +19,7 @@ function el(element) {
         setData,
         removeData,
         closestData,
+        matchData,
     };
 }
 

@@ -1,24 +1,27 @@
 import {el} from './rams.js';
 
-function getData(attributeName) {
-    return this.element.getAttribute(`data-${attributeName}`);
+function getData(dataName) {
+    return this.element.getAttribute(`data-${dataName}`);
 }
 
-function hasData(attributeName, value) {
-    return el(this.element).getData(attributeName) === value;
+function hasData(dataName, value) {
+    return el(this.element).getData(dataName) === value;
 }
 
-function setData(attributeName, value) {
-    return this.element.setAttribute(`data-${attributeName}`, value);
+function setData(dataName, value) {
+    return this.element.setAttribute(`data-${dataName}`, value);
 }
 
-function removeData(attributeName) {
-    return this.element.removeAttribute(`data-${attributeName}`);
+function removeData(dataName) {
+    return this.element.removeAttribute(`data-${dataName}`);
 }
 
-function closestData(attributeName) {
-    return this.element.closest(`[data-${attributeName}]`);
+function closestData(dataName) {
+    return this.element.closest(`[data-${dataName}]`);
 }
 
+function matchData(dataName, value) {
+    return this.element.matches(`[data-${dataName}="${value}"]`);
+}
 
-export {getData, hasData, setData, removeData, closestData};
+export {getData, hasData, setData, removeData, closestData, matchData};

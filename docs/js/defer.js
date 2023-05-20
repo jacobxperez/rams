@@ -70,4 +70,7 @@ template
     .fetchTemplate(templateURL, '#nav')
     .fetchTemplate(templateURL, '#footer');
 
-    rams.toggle().carousel().addControls().addIndicators();
+    rams.toggle()
+
+    // debugging
+    // rams.carousel().addControls().addIndicators();

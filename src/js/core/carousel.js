@@ -17,6 +17,7 @@ class Carousel {
         this.currentIndex = 0;
         this.indicators = false;
         this.initialize();
+        this.play();
     }
 
     // Initialization methods
@@ -225,6 +226,14 @@ class Carousel {
     resume() {
         this.pause();
         this.play();
+
+        return this;
+    }
+
+    stop() {
+        this.pause();
+        this.currentIndex = 0;
+        this.cycleSlides();
 
         return this;
     }

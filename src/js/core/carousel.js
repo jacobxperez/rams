@@ -1,41 +1,42 @@
 import {el} from './rams.js';
 
-function carousel(
-    carouselSelector = '[data-carousel]',
-    intervalTime = 5000,
-    lazyLoadThreshold = 2
-) {
-    const carousel = document.querySelector(carouselSelector);
-    if (!carousel) {
-        throw new Error('Carousel element not found in the DOM');
+class Carousel {
+    constructor({carouselSelector, intervalTime, lazyLoadThreshold} = {}) {
+        this.carousel = document.querySelector(carouselSelector);
+        if (!this.carousel) {
+            throw new Error('Carousel element not found in the DOM');
+        }
+        this.slides = this.carousel.querySelectorAll('[data-slide]');
+        this.controls =
+            this.carousel.querySelector('[data-controls]') ||
+            this.createControls();
+        this.tabs = Array.from(this.controls.querySelectorAll('[data-tab]'));
+        this.button = document.createElement('button');
+        this.intervalTime = intervalTime;
+        this.lazyLoadThreshold = lazyLoadThreshold;
+        this.currentIndex = 0;
+        this.indicators = false;
+        this.initialize();
     }
-    const slides = carousel.querySelectorAll('[data-slide]');
-    const controls =
-        carousel.querySelector('[data-controls]') ?? createControls();
-    const tabs = Array.from(controls.querySelectorAll('[data-tab]'));
-    const button = document.createElement('button');
-    let time = intervalTime;
-    let currentIndex = 0;
-    let indicators = false;
 
     // Initialization methods
-    async function initialize() {
-        await preloadImages();
-        cycleSlides();
-        controls.addEventListener('click', handleControls.bind(this));
-        tabs.forEach((tab, index) => el(tab).setData('index', index));
+    async initialize() {
+        await this.preloadImages();
+        this.cycleSlides();
+        el(this.controls).addEvent('click', this.handleControls.bind(this));
+        this.tabs.forEach((tab, index) => el(tab).setData('index', index));
     }
 
-    function createControls() {
+    createControls() {
         const controls = document.createElement('nav');
         el(controls).setData('controls', '');
-        carousel.appendChild(controls);
+        this.carousel.appendChild(controls);
         return controls;
     }
 
-    async function preloadImages() {
-        const promises = Array.from(slides)
-            .slice(0, lazyLoadThreshold)
+    async preloadImages() {
+        const promises = Array.from(this.slides)
+            .slice(0, this.lazyLoadThreshold)
             .map((slide) => {
                 const image = slide.querySelector('img');
 
@@ -51,111 +52,116 @@ function carousel(
     }
 
     // Slide cycling methods
-    function cycleTabs() {
-        const currentTab = controls.querySelector(
-            `[data-index="${currentIndex}"]`
+    cycleTabs() {
+        const currentTab = this.controls.querySelector(
+            `[data-index="${this.currentIndex}"]`
         );
-        const prevTab = controls.querySelector(`[data-state="active"]`);
+        const prevTab = this.controls.querySelector(`[data-state="active"]`);
 
         el(currentTab).setData('state', 'active');
-        prevTab?.removeAttribute('data-state');
+        if (prevTab) {
+            el(prevTab).removeData('state');
+        }
         requestAnimationFrame(() => {
-            tabs.filter((tab) => ![currentTab, prevTab].includes(tab)).forEach(
-                (tab) => el(tab).removeData('state')
-            );
+            this.tabs
+                .filter((tab) => ![currentTab, prevTab].includes(tab))
+                .forEach((tab) => el(tab).removeData('state'));
         });
     }
 
-    function cycleSlides() {
-        const currentSlide = slides[currentIndex];
+    cycleSlides() {
+        const currentSlide = this.slides[this.currentIndex];
 
         el(currentSlide).setData('state', 'current');
         requestAnimationFrame(() => {
-            Array.from(slides)
+            Array.from(this.slides)
                 .filter((slide) => slide !== currentSlide)
                 .forEach((slide) => el(slide).removeData('state'));
         });
-        if (indicators) {
-            cycleTabs();
+        if (this.indicators) {
+            this.cycleTabs();
         }
     }
 
-    function changeSlide(direction) {
+    changeSlide(direction) {
         if (direction === 'next') {
-            currentIndex++;
+            this.currentIndex++;
 
-            if (currentIndex > slides.length - 1) {
-                currentIndex = 0;
+            if (this.currentIndex > this.slides.length - 1) {
+                this.currentIndex = 0;
             }
         } else if (direction === 'prev') {
-            currentIndex--;
+            this.currentIndex--;
 
-            if (currentIndex < 0) {
-                currentIndex = slides.length - 1;
+            if (this.currentIndex < 0) {
+                this.currentIndex = this.slides.length - 1;
             }
         }
-        cycleSlides();
+        this.cycleSlides();
     }
 
     // Control and indicator methods
-    function handleControls(e) {
+    handleControls(e) {
         const target = e.target;
 
         if (el(target).matchData('button', 'next-slide')) {
-            changeSlide('next');
-            resume();
+            this.changeSlide('next');
+            this.resume();
         } else if (el(target).matchData('button', 'prev-slide')) {
-            changeSlide('prev');
-            resume();
-        } else if (el(target).matchData('index', '')) {
-            pause();
-            currentIndex = Number(el(target).getData('index'));
-            cycleSlides();
+            this.changeSlide('prev');
+            this.resume();
+        } else if (el(target).matchData('index')) {
+            this.pause();
+            this.currentIndex = Number(el(target).getData('index'));
+            this.cycleSlides();
         }
     }
 
-    function addControls() {
-        const prev = button.cloneNode(true);
-        const next = button.cloneNode(true);
+    addControls() {
+        const prev = this.button.cloneNode(true);
+        const next = this.button.cloneNode(true);
 
         el(prev).setData('button', 'prev-slide');
         el(next).setData('button', 'next-slide');
-        controls.appendChild(prev);
-        controls.appendChild(next);
+        this.controls.appendChild(prev);
+        this.controls.appendChild(next);
 
         return this;
     }
 
-    function addIndicators() {
+    addIndicators() {
         const indicator = document.createElement('div');
         el(indicator).setData('indicator', 'tabs');
 
-        for (let i = 0; i < slides.length; i++) {
-            const indicatorButton = button.cloneNode(true);
+        for (let i = 0; i < this.slides.length; i++) {
+            const indicatorButton = this.button.cloneNode(true);
 
             el(indicatorButton).setData('index', i);
             el(indicatorButton).setData('tab', 'indicator');
             indicator.appendChild(indicatorButton);
         }
 
-        controls.appendChild(indicator);
-        indicators = true;
+        this.controls.appendChild(indicator);
+        this.indicators = true;
 
         return this;
     }
 
     // Touch control methods
-    function addTouchControls() {
-        function handleTouchStart(e) {
+    addTouchControls() {
+        let touchstartX;
+        let touchEndX;
+
+        const handleTouchStart = (e) => {
             touchstartX = e.touches[0].clientX;
             touchEndX = touchstartX;
-        }
+        };
 
-        function handleTouchMove(e) {
+        const handleTouchMove = (e) => {
             touchEndX = e.touches[0].clientX;
-        }
+        };
 
-        function handleTouchEnd() {
+        const handleTouchEnd = () => {
             if (
                 typeof touchstartX !== 'undefined' &&
                 typeof touchEndX !== 'undefined'
@@ -163,72 +169,77 @@ function carousel(
                 const touchDistance = touchEndX - touchstartX;
 
                 if (touchDistance > 0) {
-                    changeSlide('prev');
-                    resume();
+                    this.changeSlide('prev');
+                    this.resume();
                 } else if (touchDistance < 0) {
-                    changeSlide('next');
-                    resume();
+                    this.changeSlide('next');
+                    this.resume();
                 }
             }
-        }
+        };
 
-        el(carousel).addEvent('touchstart', handleTouchStart(e));
-        el(carousel).addEvent('touchmove', handleTouchMove(e));
-        el(carousel).addEvent('touchend', handleTouchEnd);
+        el(this.carousel).addEvent('touchstart', handleTouchStart);
+        el(this.carousel).addEvent('touchmove', handleTouchMove);
+        el(this.carousel).addEvent('touchend', handleTouchEnd);
 
         return this;
     }
 
     // Keyboard control methods
-    function addKeyboardControls() {
-        function handleKeyDown(e) {
+    addKeyboardControls() {
+        const handleKeyDown = (e) => {
             switch (e.key) {
                 case 'ArrowLeft':
-                    changeSlide('prev');
-                    resume();
+                    this.changeSlide('prev');
+                    this.resume();
                     break;
                 case 'ArrowRight':
-                    changeSlide('next');
-                    resume();
+                    this.changeSlide('next');
+                    this.resume();
                     break;
                 default:
                     break;
             }
-        }
+        };
 
-        el(document).addEvent('keydown', handleKeyDown(e));
+        el(document).addEvent('keydown', handleKeyDown);
 
         return this;
     }
 
     // Play/pause/stop methods
-    function play(time = intervalTime) {
-        interval = setInterval(() => {
-            changeSlide('next');
-        }, time);
+    play(intervalTime = this.intervalTime) {
+        this.interval = setInterval(() => {
+            this.changeSlide('next');
+        }, intervalTime);
 
         return this;
     }
 
-    function pause() {
-        clearInterval(interval);
+    pause() {
+        clearInterval(this.interval);
 
         return this;
     }
 
-    function resume() {
-        pause();
-        play();
+    resume() {
+        this.pause();
+        this.play();
 
         return this;
     }
-
-    initialize();
-    play();
-    addControls();
-    addIndicators();
-
-    return this;
 }
 
-export {carousel};
+function carousel(
+    carouselSelector = '[data-carousel]',
+    intervalTime = 5000,
+    lazyLoadThreshold = 2
+) {
+    return new Carousel({
+        carouselSelector,
+        intervalTime,
+        lazyLoadThreshold,
+    });
+}
+
+export {Carousel, carousel};

@@ -3,6 +3,7 @@
     padding: $space-y $space-x;
     transition: $anchor-transition;
     text-decoration: none;
+    cursor: pointer;
 
     &:where([data-state="active"], :hover, :active) {
         color: $anchor-text-active;

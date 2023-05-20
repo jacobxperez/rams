@@ -1,4 +1,4 @@
-import {e} from './elements.js';
+import {e} from './element.js';
 import {toggle} from './toggle.js';
 import {carousel} from './carousel.js';
 

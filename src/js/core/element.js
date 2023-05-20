@@ -32,12 +32,13 @@ class Element {
     }
 
     each(callback) {
-        if (callback && typeof(callback) == 'function') {
-            for (let i = 0; i < this.length; i++) {
-                callback(this[i], i);
+        if (callback && typeof callback == 'function') {
+            for (const element of this.element) {
+                callback(element);
             }
+
             return this;
-        } 
+        }
     }
 
     addEvent(eventName, handler, options = false) {

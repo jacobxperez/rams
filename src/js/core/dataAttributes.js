@@ -21,7 +21,11 @@ function closestData(dataName) {
 }
 
 function matchData(dataName, value) {
-    return this.element.matches(`[data-${dataName}="${value}"]`);
+    if (value) {
+        return this.element.matches(`[data-${dataName}="${value}"]`);
+    } else {
+        return this.element.matches(`[data-${dataName}`);
+    }
 }
 
 export {getData, hasData, setData, removeData, closestData, matchData};

@@ -1,31 +1,12 @@
-import {
-    getData,
-    hasData,
-    setData,
-    removeData,
-    closestData,
-    matchData,
-} from './dataAttributes.js';
-import {addEvent} from './events.js';
+import {e} from './elements.js';
 import {toggle} from './toggle.js';
 import {carousel} from './carousel.js';
 
-function el(element) {
-    return {
-        element,
-        addEvent,
-        getData,
-        hasData,
-        setData,
-        removeData,
-        closestData,
-        matchData,
-    };
-}
 
 const rams = {
+    e,
     toggle,
     carousel,
 };
 
-export {rams, el};
+export {rams};

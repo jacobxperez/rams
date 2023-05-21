@@ -33,9 +33,18 @@ class Element {
 
     each(callback) {
         if (callback && typeof callback == 'function') {
-            for (const element of this.element) {
-                callback(element);
+            var arr = this.element;
+
+            if (!Array.isArray(this.element))
+                var arr = Array.from(this.element);
+
+            for (let i = 0; i < arr.length; i++) {
+                callback(arr[i], i);
             }
+
+            // for (const element of this.element) {
+            //     callback(element);
+            // }
 
             return this;
         }

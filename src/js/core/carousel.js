@@ -17,7 +17,6 @@ class Carousel {
         this.currentIndex = 0;
         this.indicators = false;
         this.initialize();
-        this.play();
     }
 
     // Initialization methods
@@ -25,7 +24,9 @@ class Carousel {
         await this.preloadImages();
         this.cycleSlides();
         rams.e(this.controls).addEvent('click', this.handleControls.bind(this));
-        this.tabs.forEach((tab, index) => rams.e(tab).setData('index', index));
+        rams.e(this.tabs).each((tab, index) =>
+            rams.e(tab).setData('index', index)
+        );
     }
 
     createControls() {

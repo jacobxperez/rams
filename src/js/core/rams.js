@@ -1,13 +1,12 @@
-import {select, selectAll} from './master.js';
-import {toggle} from './toggle.js';
-import {carousel} from './carousel.js';
-
+import {select, selectAll} from './classes/selectors.js';
+import {toggle} from './components/toggle.js';
+// import {carousel} from './components/carousel.js';
 
 const rams = {
     select,
     selectAll,
     toggle,
-    carousel,
+    // carousel,
 };
 
 export {rams};

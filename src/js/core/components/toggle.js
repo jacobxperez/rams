@@ -1,4 +1,4 @@
-import {rams} from './rams.js';
+import {rams} from '../rams.js';
 
 export function toggle(...args) {
     const clickedSet = new Set();

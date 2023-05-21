@@ -1,12 +1,13 @@
-import {e} from './element.js';
+import {select, selectAll} from './master.js';
 import {toggle} from './toggle.js';
-// import {carousel} from './carousel.js';
+import {carousel} from './carousel.js';
 
 
 const rams = {
-    e,
+    select,
+    selectAll,
     toggle,
-    // carousel,
+    carousel,
 };
 
 export {rams};

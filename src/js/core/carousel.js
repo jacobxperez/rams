@@ -23,13 +23,18 @@ class Carousel {
     async initialize() {
         await this.preloadImages();
         this.cycleSlides();
-        rams.e(this.controls).addEvent('click', this.handleControls.bind(this));
-        this.tabs.forEach((tab, index) => rams.e(tab).setData('index', index));
+        rams.select(this.controls).addEvent(
+            'click',
+            this.handleControls.bind(this)
+        );
+        this.tabs.forEach((tab, index) =>
+            rams.select(tab).setData('index', index)
+        );
     }
 
     createControls() {
         const controls = document.createElement('nav');
-        rams.e(controls).setData('controls', '');
+        rams.select(controls).setData('controls', '');
         this.carousel.appendChild(controls);
         return controls;
     }
@@ -58,25 +63,25 @@ class Carousel {
         );
         const prevTab = this.controls.querySelector(`[data-state="active"]`);
 
-        rams.e(currentTab).setData('state', 'active');
+        rams.select(currentTab).setData('state', 'active');
         if (prevTab) {
-            rams.e(prevTab).removeData('state');
+            rams.select(prevTab).removeData('state');
         }
         requestAnimationFrame(() => {
             this.tabs
                 .filter((tab) => ![currentTab, prevTab].includes(tab))
-                .forEach((tab) => rams.e(tab).removeData('state'));
+                .forEach((tab) => rams.select(tab).removeData('state'));
         });
     }
 
     cycleSlides() {
         const currentSlide = this.slides[this.currentIndex];
 
-        rams.e(currentSlide).setData('state', 'current');
+        rams.select(currentSlide).setData('state', 'current');
         requestAnimationFrame(() => {
             this.slides
                 .filter((slide) => slide !== currentSlide)
-                .forEach((slide) => rams.e(slide).removeData('state'));
+                .forEach((slide) => rams.select(slide).removeData('state'));
         });
         if (this.indicators) {
             this.cycleTabs();
@@ -104,15 +109,15 @@ class Carousel {
     handleControls(e) {
         const target = e.target;
 
-        if (rams.e(target).matchData('button', 'next-slide')) {
+        if (rams.select(target).matchData('button', 'next-slide')) {
             this.changeSlide('next');
             this.resume();
-        } else if (rams.e(target).matchData('button', 'prev-slide')) {
+        } else if (rams.select(target).matchData('button', 'prev-slide')) {
             this.changeSlide('prev');
             this.resume();
-        } else if (rams.e(target).matchData('index')) {
+        } else if (rams.select(target).matchData('index')) {
             this.pause();
-            this.currentIndex = Number(rams.e(target).getData('index'));
+            this.currentIndex = Number(rams.select(target).getData('index'));
             this.cycleSlides();
         }
     }
@@ -121,8 +126,8 @@ class Carousel {
         const prev = this.button.cloneNode(true);
         const next = this.button.cloneNode(true);
 
-        rams.e(prev).setData('button', 'prev-slide');
-        rams.e(next).setData('button', 'next-slide');
+        rams.select(prev).setData('button', 'prev-slide');
+        rams.select(next).setData('button', 'next-slide');
         this.controls.appendChild(prev);
         this.controls.appendChild(next);
 
@@ -131,13 +136,13 @@ class Carousel {
 
     addIndicators() {
         const indicator = document.createElement('div');
-        rams.e(indicator).setData('indicator', 'tabs');
+        rams.select(indicator).setData('indicator', 'tabs');
 
         for (let i = 0; i < this.slides.length; i++) {
             const indicatorButton = this.button.cloneNode(true);
 
-            rams.e(indicatorButton).setData('index', i);
-            rams.e(indicatorButton).setData('tab', 'indicator');
+            rams.select(indicatorButton).setData('index', i);
+            rams.select(indicatorButton).setData('tab', 'indicator');
             indicator.appendChild(indicatorButton);
         }
 
@@ -178,9 +183,9 @@ class Carousel {
             }
         };
 
-        rams.e(this.carousel).addEvent('touchstart', handleTouchStart);
-        rams.e(this.carousel).addEvent('touchmove', handleTouchMove);
-        rams.e(this.carousel).addEvent('touchend', handleTouchEnd);
+        rams.select(this.carousel).addEvent('touchstart', handleTouchStart);
+        rams.select(this.carousel).addEvent('touchmove', handleTouchMove);
+        rams.select(this.carousel).addEvent('touchend', handleTouchEnd);
 
         return this;
     }
@@ -202,7 +207,7 @@ class Carousel {
             }
         };
 
-        rams.e(document).addEvent('keydown', handleKeyDown);
+        rams.select(document).addEvent('keydown', handleKeyDown);
 
         return this;
     }
@@ -243,17 +248,16 @@ function carousel(
     intervalTime = 5000,
     lazyLoadThreshold = 2
 ) {
-
     if (carouselSelector) {
         const arr = Array.from(document.querySelectorAll(carouselSelector));
 
-        rams.e(arr).each((item) => {
+        rams.select(arr).each((item) => {
             item = new Carousel({
                 carouselSelector,
                 intervalTime,
                 lazyLoadThreshold,
-            });
-        })
+            }).addControls();
+        });
     }
 
     return this;

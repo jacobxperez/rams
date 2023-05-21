@@ -1,6 +1,14 @@
-class Element {
+class Rams {
     constructor(element) {
         this.element = element;
+    }
+
+    select(element) {
+        return document.querySelector(element);
+    }
+
+    selectAll(element) {
+        return document.querySelectorAll(element);
     }
 
     getData(dataName) {
@@ -8,7 +16,7 @@ class Element {
     }
 
     hasData(dataName, value) {
-        return e(this.element).getData(dataName) === value;
+        return this.element.getAttribute(`data-${dataName}`) === value;
     }
 
     setData(dataName, value) {
@@ -59,8 +67,24 @@ class Element {
     }
 }
 
-function e(element) {
-    return new Element(element);
+class Select extends Rams {
+    select(element) {
+        return document.querySelector(element);
+    }
 }
 
-export {Element, e};
+class SelectAll extends Rams {
+    selectAll(element) {
+        return document.querySelectorAll(element);
+    }
+}
+
+function select(element) {
+    return new Select(element);
+}
+
+function selectAll(element) {
+    return new SelectAll(element);
+}
+
+export {select, selectAll};

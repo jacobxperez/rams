@@ -6,7 +6,9 @@ class Carousel {
         if (!this.carousel) {
             throw new Error('Carousel element not found in the DOM');
         }
-        this.slides = this.carousel.querySelectorAll('[data-slide]');
+        this.slides = Array.from(
+            this.carousel.querySelectorAll('[data-slide]')
+        );
         this.controls =
             this.carousel.querySelector('[data-controls]') ||
             this.createControls();
@@ -17,6 +19,7 @@ class Carousel {
         this.currentIndex = 0;
         this.indicators = false;
         this.initialize();
+        this.play();
     }
 
     // Initialization methods
@@ -24,9 +27,7 @@ class Carousel {
         await this.preloadImages();
         this.cycleSlides();
         rams.e(this.controls).addEvent('click', this.handleControls.bind(this));
-        rams.e(this.tabs).each((tab, index) =>
-            rams.e(tab).setData('index', index)
-        );
+        this.tabs.forEach((tab, index) => rams.e(tab).setData('index', index));
     }
 
     createControls() {
@@ -37,7 +38,7 @@ class Carousel {
     }
 
     async preloadImages() {
-        const promises = Array.from(this.slides)
+        const promises = this.slides
             .slice(0, this.lazyLoadThreshold)
             .map((slide) => {
                 const image = slide.querySelector('img');
@@ -76,7 +77,7 @@ class Carousel {
 
         rams.e(currentSlide).setData('state', 'current');
         requestAnimationFrame(() => {
-            Array.from(this.slides)
+            this.slides
                 .filter((slide) => slide !== currentSlide)
                 .forEach((slide) => rams.e(slide).removeData('state'));
         });

@@ -3,9 +3,6 @@ import {rams} from './rams.js';
 class Carousel {
     constructor({carouselSelector, intervalTime, lazyLoadThreshold} = {}) {
         this.carousel = document.querySelector(carouselSelector);
-        if (!this.carousel) {
-            throw new Error('Carousel element not found in the DOM');
-        }
         this.slides = Array.from(
             this.carousel.querySelectorAll('[data-slide]')
         );
@@ -246,11 +243,20 @@ function carousel(
     intervalTime = 5000,
     lazyLoadThreshold = 2
 ) {
-    return new Carousel({
-        carouselSelector,
-        intervalTime,
-        lazyLoadThreshold,
-    });
+
+    if (carouselSelector) {
+        const arr = Array.from(document.querySelectorAll(carouselSelector));
+
+        rams.e(arr).each((item) => {
+            item = new Carousel({
+                carouselSelector,
+                intervalTime,
+                lazyLoadThreshold,
+            });
+        })
+    }
+
+    return this;
 }
 
 export {Carousel, carousel};

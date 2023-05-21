@@ -24,11 +24,9 @@ class Element {
     }
 
     matchData(dataName, value) {
-        if (value) {
-            return this.element.matches(`[data-${dataName}="${value}"]`);
-        } else {
-            return this.element.matches(`[data-${dataName}`);
-        }
+        return value
+            ? this.element.matches(`[data-${dataName}="${value}"]`)
+            : this.element.matches(`[data-${dataName}`);
     }
 
     each(callback) {

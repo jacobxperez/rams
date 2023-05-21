@@ -19,8 +19,10 @@ class Element {
         return this.element.removeAttribute(`data-${dataName}`);
     }
 
-    closestData(dataName) {
-        return this.element.closest(`[data-${dataName}]`);
+    closestData(dataName, value) {
+        return value
+            ? this.element.closest(`[data-${dataName}="${value}"]`)
+            : this.element.closest(`[data-${dataName}`);
     }
 
     matchData(dataName, value) {

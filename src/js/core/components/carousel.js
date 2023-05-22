@@ -1,8 +1,8 @@
 import {rams} from '../rams.js';
 
 class Carousel {
-    constructor({carouselSelector, intervalTime, lazyLoadThreshold} = {}) {
-        this.carousel = document.querySelector(carouselSelector);
+    constructor({carousel, intervalTime, lazyLoadThreshold} = {}) {
+        this.carousel = document.querySelector(carousel);
         this.slides = Array.from(
             this.carousel.querySelectorAll('[data-slide]')
         );
@@ -10,7 +10,7 @@ class Carousel {
             this.carousel.querySelector('[data-controls]') ||
             this.createControls();
         this.tabs = Array.from(this.controls.querySelectorAll('[data-tab]'));
-        this.button = document.createElement('button');
+        this.button = rams.select(document).create('button');
         this.intervalTime = intervalTime;
         this.lazyLoadThreshold = lazyLoadThreshold;
         this.currentIndex = 0;
@@ -244,19 +244,23 @@ class Carousel {
 }
 
 function carousel(
-    carouselSelector = '[data-carousel]',
+    carousel = '[data-carousel]',
     intervalTime = 5000,
     lazyLoadThreshold = 2
 ) {
-    if (carouselSelector) {
-        const arr = Array.from(document.querySelectorAll(carouselSelector));
+    if (carousel) {
+        const arr = Array.from(document.querySelectorAll(carousel));
 
         rams.select(arr).each((item) => {
             item = new Carousel({
-                carouselSelector,
+                carousel,
                 intervalTime,
                 lazyLoadThreshold,
-            }).addControls();
+            })
+                .addControls()
+                .addIndicators()
+                .addKeyboardControls()
+                .addTouchControls();
         });
     }
 

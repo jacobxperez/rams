@@ -8,10 +8,10 @@ import {
     removeData,
     closestData,
     matchData,
-} from './functions/dom.js';
-import {addEvent, removeEvent, click} from './functions/events.js';
-import {each, eachOf} from './functions/loops.js';
-import {callback} from './functions/callbacks.js';
+} from './methods/dom.js';
+import {addEvent, removeEvent, click} from './methods/events.js';
+import {each, eachOf} from './methods/loops.js';
+import {callback} from './methods/callbacks.js';
 
 class Rams {
     constructor(selector) {

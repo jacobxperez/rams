@@ -9,8 +9,9 @@ import {
     closestData,
     matchData,
 } from './functions/dom.js';
-import {addEvent, removeEvent} from './functions/events.js';
+import {addEvent, removeEvent, click} from './functions/events.js';
 import {each, eachOf} from './functions/loops.js';
+import {callback} from './functions/callbacks.js';
 
 class Rams {
     constructor(selector) {
@@ -26,8 +27,10 @@ class Rams {
         this.matchData = matchData;
         this.addEvent = addEvent;
         this.removeEvent = removeEvent;
+        this.click = click;
         this.each = each;
         this.eachOf = eachOf;
+        this.callback = callback;
     }
 
     select;
@@ -41,8 +44,10 @@ class Rams {
     matchData;
     addEvent;
     removeEvent;
+    click;
     each;
     eachOf;
+    callback;
 }
 
 export {Rams};

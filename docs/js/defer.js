@@ -73,4 +73,6 @@ template
     rams.toggle()
 
     // debugging
-    // rams.carousel().addControls().addIndicators();
+    // rams.carousel();
+    // const newElement = rams.select(document).create('div');
+    // console.log(newElement);

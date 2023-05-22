@@ -6,4 +6,8 @@ function removeEvent(eventName, handler, options = false) {
     return this.selector.removeEventListener(eventName, handler, options);
 }
 
-export {addEvent, removeEvent};
+function click(handler, options = false) {
+    return this.selector.addEventListener('click', handler, options);
+}
+
+export {addEvent, removeEvent, click};

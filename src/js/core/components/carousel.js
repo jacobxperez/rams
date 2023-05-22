@@ -23,10 +23,7 @@ class Carousel {
     async initialize() {
         await this.preloadImages();
         this.cycleSlides();
-        rams.select(this.controls).addEvent(
-            'click',
-            this.handleControls.bind(this)
-        );
+        rams.select(this.controls).click(this.handleControls.bind(this));
         this.tabs.forEach((tab, index) =>
             rams.select(tab).setData('index', index)
         );

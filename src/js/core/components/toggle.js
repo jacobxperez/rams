@@ -27,7 +27,7 @@ export function toggle(...args) {
             : rams.select(targetToggle).setData('state', 'active');
     }
 
-    rams.select(document).addEvent('click', (e) => {
+    rams.select(document).click((e) => {
         const targetToggle = rams.select(e.target).closestData('toggle');
 
         if (targetToggle) {
@@ -36,14 +36,10 @@ export function toggle(...args) {
             } else {
                 clickedSet.add(targetToggle);
 
-                rams.select(targetToggle).addEvent(
-                    'click',
-                    (e) => {
-                        toggleState(targetToggle);
-                        e.stopPropagation();
-                    },
-                    true
-                );
+                rams.select(targetToggle).click((e) => {
+                    toggleState(targetToggle);
+                    e.stopPropagation();
+                }, true);
             }
 
             toggleState(targetToggle);

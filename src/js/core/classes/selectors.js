@@ -1,14 +1,14 @@
 import {Rams} from '../master.js';
 
 class Select extends Rams {
-    select(selector) {
-        return document.querySelector(selector);
+    select() {
+        super.select();
     }
 }
 
 class SelectAll extends Rams {
-    selectAll(selector) {
-        return document.querySelectorAll(selector);
+    selectAll() {
+        super.selectAll();
     }
 }
 

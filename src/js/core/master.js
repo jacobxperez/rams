@@ -10,7 +10,7 @@ import {
     matchData,
 } from './functions/dom.js';
 import {addEvent, removeEvent} from './functions/events.js';
-import {each} from './functions/loops.js';
+import {each, eachOf} from './functions/loops.js';
 
 class Rams {
     constructor(selector) {
@@ -27,6 +27,7 @@ class Rams {
         this.addEvent = addEvent;
         this.removeEvent = removeEvent;
         this.each = each;
+        this.eachOf = eachOf;
     }
 
     select;
@@ -41,6 +42,7 @@ class Rams {
     addEvent;
     removeEvent;
     each;
+    eachOf;
 }
 
 export {Rams};

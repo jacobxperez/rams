@@ -6,7 +6,7 @@ export function toggle(...args) {
 
     function reset(getDropBox) {
         if (!getDropBox) {
-            rams.select(clickedSet).each((item) => {
+            rams.select(clickedSet).eachOf((item) => {
                 if (resetSet.has(item.dataset.toggle)) {
                     rams.select(item).removeData('state');
                 }

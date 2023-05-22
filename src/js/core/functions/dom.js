@@ -6,6 +6,10 @@ function selectAll(selector) {
     return document.querySelectorAll(selector);
 }
 
+function create(element) {
+    return this.selector.createElement(element);
+}
+
 function getData(dataName) {
     return this.selector.getAttribute(`data-${dataName}`);
 }
@@ -37,6 +41,7 @@ function matchData(dataName, value) {
 export {
     select,
     selectAll,
+    create,
     getData,
     hasData,
     setData,

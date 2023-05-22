@@ -1,6 +1,7 @@
 import {
     select,
     selectAll,
+    create,
     getData,
     hasData,
     setData,
@@ -16,6 +17,7 @@ class Rams {
         this.selector = selector;
         this.select = select;
         this.selectAll = selectAll;
+        this.create = create;
         this.getData = getData;
         this.hasData = hasData;
         this.setData = setData;
@@ -29,6 +31,7 @@ class Rams {
 
     select;
     selectAll;
+    create;
     getData;
     hasData;
     setData;

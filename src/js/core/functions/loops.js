@@ -1,11 +1,7 @@
 function each(callback) {
     if (callback && typeof callback == 'function') {
-        var arr = this.selector;
-
-        if (!Array.isArray(this.selector)) var arr = Array.from(this.selector);
-
-        for (let i = 0; i < arr.length; i++) {
-            callback(arr[i], i);
+        for (let i = 0; i < this.selector.length; i++) {
+            callback(this.selector[i], i);
         }
 
         return this;

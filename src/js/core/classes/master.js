@@ -8,12 +8,12 @@ import {
     removeData,
     closestData,
     matchData,
-} from './methods/dom.js';
-import {onload, addEvent, removeEvent, click} from './methods/events.js';
-import {each, eachOf} from './methods/loops.js';
-import {callback} from './methods/callbacks.js';
-import {toggle} from './components/toggle.js';
-import {carousel} from './components/carousel.js';
+} from '../methods/dom.js';
+import {onload, addEvent, removeEvent, click} from '../methods/events.js';
+import {each, eachOf} from '../methods/loops.js';
+import {callback} from '../methods/callbacks.js';
+import {toggle} from '../components/toggle.js';
+import {carousel} from '../components/carousel.js';
 
 class Rams {
     constructor(selector, handler, boolean = false) {

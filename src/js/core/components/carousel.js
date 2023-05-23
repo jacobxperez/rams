@@ -1,4 +1,4 @@
-import {Rams} from '../master.js';
+import {Rams} from '../classes/master.js';
 import {rams} from '../rams.js';
 
 class Carousel {

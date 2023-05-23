@@ -1,4 +1,4 @@
-import {Rams} from '../master.js';
+import {Rams} from '../classes/master.js';
 
 function select(selector) {
     return new Rams(selector);

@@ -7,72 +7,72 @@
 import {sidebar} from './modules/sidebar.js';
 import {rams} from '../../src/js/core/rams.js';
 
-if (meta.title === '') {
-    meta.title = `<h1>Rams</h1>`;
-} else {
-    meta.title = `<h1>${meta.title}</h1>`;
-}
+rams.select(window)
+    .onload(() => {
+        if (meta.title === '') {
+            meta.title = `<h1>Rams</h1>`;
+        } else {
+            meta.title = `<h1>${meta.title}</h1>`;
+        }
 
-let nav = `
-<nav id="nav" data-navbar="top"></nav>
-`;
-
-let header = `
-    <div id="header" data-container="fit">
-        ${meta.title}
-    </div>
+        let nav = `
+    <nav id="nav" data-navbar="top"></nav>
     `;
 
-let main = `
-    <div data-container="fit" data-grid="main">
-        <aside id="aside"></aside>
-        <article id="content"></article>
-    </div>
+        let header = `
+        <div id="header" data-container="fit">
+            ${meta.title}
+        </div>
+        `;
+
+        let main = `
+        <div data-container="fit" data-grid="main">
+            <aside id="aside"></aside>
+            <article id="content"></article>
+        </div>
+        `;
+
+        if (meta.type === 'fullPage') {
+            main = `
+        <div id="content" data-container="fit" data-grid="main"></div>
+        `;
+        }
+
+        let footer = `
+    <footer data-section="footer">
+        <div id="footer" data-container="fit">
+        </div>
+    </footer>
     `;
 
-if (meta.type === 'fullPage') {
-    main = `
-    <div id="content" data-container="fit" data-grid="main"></div>
-    `;
-}
+        // check and set template url for localhost or for public url
+        let templateURL;
+        location.hostname === 'localhost' || location.hostname === '127.0.0.1'
+            ? (templateURL =
+                  window.location.origin + '/templates/a.be13ff7e.html')
+            : (templateURL =
+                  window.location.origin + '/rams/templates/a.e67a1128.html');
 
-let footer = `
-<footer data-section="footer">
-    <div id="footer" data-container="fit">
-    </div>
-</footer>
-`;
+        // create main layout
+        let layout = `
+        ${nav}
+        <header data-section="header">
+            ${header}
+        </header>
+        <main data-section="main">
+            ${main}
+        </main>
+        ${footer}
+        `;
 
-// check and set template url for localhost or for public url
-let templateURL;
-location.hostname === 'localhost' || location.hostname === '127.0.0.1'
-    ? (templateURL = window.location.origin + '/templates/a.be13ff7e.html')
-    : (templateURL =
-          window.location.origin + '/rams/templates/a.e67a1128.html');
+        // parse everything together
+        template
+            .fromString(layout, 'body')
+            .setTemplate('#headerTemplate', '#header')
+            .setTemplate('#contentTemplate', '#content', sidebar)
+            .fetchTemplate(templateURL, '#nav')
+            .fetchTemplate(templateURL, '#footer');
+    })
+    .toggle();
 
-// create main layout
-let layout = `
-    ${nav}
-    <header data-section="header">
-        ${header}
-    </header>
-    <main data-section="main">
-        ${main}
-    </main>
-    ${footer}
-    `;
-
-// parse everything together
-template
-    .fromString(layout, 'body')
-    .setTemplate('#headerTemplate', '#header')
-    .setTemplate('#contentTemplate', '#content', sidebar)
-    .fetchTemplate(templateURL, '#nav')
-    .fetchTemplate(templateURL, '#footer');
-
-    rams.toggle()
-
-    // debugging
-    // rams.carousel();
-    // const newElement = rams.select(document).create('div');
-    // console.log(newElement);
+// rams.carousel();

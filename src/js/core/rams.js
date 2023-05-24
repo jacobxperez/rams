@@ -1,4 +1,4 @@
-import {onload, select, selectAll} from './classes/selectors.js';
+import {onload, select, selectAll} from './classes/entry.js';
 import {toggle} from './components/toggle.js';
 import {carousel} from './components/carousel.js';
 

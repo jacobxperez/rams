@@ -38,10 +38,26 @@ function matchData(dataName, value) {
         : this.selector.matches(`[data-${dataName}`);
 }
 
+function create(element) {
+    return document.createElement(element);
+}
+
+function clone(options = this.options) {
+    this.selector.cloneNode(options);
+    return this;
+}
+
+function append(...args) {
+    this.selector.append(args);
+    return this;
+}
+
 export {
     select,
     selectAll,
     create,
+    clone,
+    append,
     getData,
     hasData,
     setData,

@@ -8,6 +8,9 @@ import {
     removeData,
     closestData,
     matchData,
+    create,
+    clone,
+    append,
 } from '../methods/dom.js';
 import {onload, addEvent, removeEvent, click} from '../methods/events.js';
 import {each, eachOf} from '../methods/loops.js';
@@ -23,6 +26,8 @@ class Rams {
         this.select = select;
         this.selectAll = selectAll;
         this.create = create;
+        this.clone = clone;
+        this.append = append;
         this.getData = getData;
         this.hasData = hasData;
         this.setData = setData;
@@ -44,6 +49,8 @@ class Rams {
     select;
     selectAll;
     create;
+    clone;
+    append;
     getData;
     hasData;
     setData;

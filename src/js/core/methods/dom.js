@@ -1,8 +1,10 @@
 function select(selector) {
+    if (selector === window || selector === document) return selector;
     return document.querySelector(selector);
 }
 
 function selectAll(selector) {
+    if (selector === window || selector === document) return console.error(`${selector} is not supported`);
     return document.querySelectorAll(selector);
 }
 
@@ -43,13 +45,11 @@ function create(element) {
 }
 
 function clone(options = this.options) {
-    this.selector.cloneNode(options);
-    return this;
+    return this.selector.cloneNode(options);
 }
 
 function append(...args) {
-    this.selector.append(args);
-    return this;
+    return this.selector.append(args);
 }
 
 export {

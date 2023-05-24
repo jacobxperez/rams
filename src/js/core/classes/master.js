@@ -16,7 +16,7 @@ import {toggle} from '../components/toggle.js';
 import {carousel} from '../components/carousel.js';
 
 class Rams {
-    constructor(selector, handler, boolean = false) {
+    constructor(selector = window, handler, boolean = false) {
         this.selector = selector;
         this.handler = handler;
         this.boolean = boolean;

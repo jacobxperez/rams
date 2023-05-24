@@ -4,7 +4,8 @@ function select(selector) {
 }
 
 function selectAll(selector) {
-    if (selector === window || selector === document) return console.error(`${selector} is not supported`);
+    if (selector === window || selector === document)
+        return console.error(`${selector} is not supported`);
     return document.querySelectorAll(selector);
 }
 

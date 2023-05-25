@@ -11,7 +11,7 @@ class Carousel {
             this.carousel.querySelector('[data-controls]') ||
             this.createControls();
         this.tabs = Array.from(this.controls.querySelectorAll('[data-tab]'));
-        this.button = rams.select(document).create('button');
+        this.button = rams.create('button');
         this.intervalTime = intervalTime;
         this.lazyLoadThreshold = lazyLoadThreshold;
         this.currentIndex = 0;
@@ -31,9 +31,8 @@ class Carousel {
     }
 
     createControls() {
-        const controls = document.createElement('nav');
-        rams.select(controls).setData('controls', '');
-        this.carousel.appendChild(controls);
+        const controls = rams.create('nav').setData('controls');
+        rams.select(this.carousel).append(controls);
         return controls;
     }
 
@@ -60,8 +59,8 @@ class Carousel {
             `[data-index="${this.currentIndex}"]`
         );
         const prevTab = this.controls.querySelector(`[data-state="active"]`);
-
         rams.select(currentTab).setData('state', 'active');
+        
         if (prevTab) {
             rams.select(prevTab).removeData('state');
         }
@@ -121,30 +120,26 @@ class Carousel {
     }
 
     addControls() {
-        const prev = this.button.cloneNode(true);
-        const next = this.button.cloneNode(true);
-
-        rams.select(prev).setData('button', 'prev-slide');
-        rams.select(next).setData('button', 'next-slide');
-        this.controls.appendChild(prev);
-        this.controls.appendChild(next);
+        const prev = this.button.clone(true).setData('button', 'prev-slide');
+        const next = this.button.clone(true).setData('button', 'next-slide');
+        this.controls.append(prev);
+        this.controls.append(next);
 
         return this;
     }
 
     addIndicators() {
-        const indicator = document.createElement('div');
-        rams.select(indicator).setData('indicator', 'tabs');
+        const indicator = rams.create('div').setData('indicator', 'tabs');
 
         for (let i = 0; i < this.slides.length; i++) {
-            const indicatorButton = this.button.cloneNode(true);
-
-            rams.select(indicatorButton).setData('index', i);
-            rams.select(indicatorButton).setData('tab', 'indicator');
-            indicator.appendChild(indicatorButton);
+            const indicatorButton = this.button
+                .clone(true)
+                .setData('index', i)
+                .setData('tab', 'indicator');
+            indicator.append(indicatorButton);
         }
 
-        this.controls.appendChild(indicator);
+        rams.select(this.controls).append(indicator);
         this.indicators = true;
 
         return this;

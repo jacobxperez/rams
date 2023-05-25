@@ -1,56 +1,73 @@
 function select(selector) {
-    if (selector === window || selector === document) return selector;
-    return document.querySelector(selector);
+    if (selector === window || selector === document) {
+        this.selector = selector;
+        return this;
+    }
+    document.querySelector(selector);
+    return this;
 }
 
 function selectAll(selector) {
-    if (selector === window || selector === document)
-        return console.error(`${selector} is not supported`);
-    return document.querySelectorAll(selector);
+    if (selector === window || selector === document) {
+        console.error(`${selector} is not supported`);
+        return this;
+    }
+    document.querySelectorAll(selector);
+    return this;
 }
 
 function create(element) {
-    return this.selector.createElement(element);
+    this.selector.createElement(element);
+    return this;
 }
 
 function getData(dataName) {
-    return this.selector.getAttribute(`data-${dataName}`);
+    this.selector.getAttribute(`data-${dataName}`);
+    return this;
 }
 
 function hasData(dataName, value) {
-    return this.selector.getAttribute(`data-${dataName}`) === value;
+    this.selector.getAttribute(`data-${dataName}`) === value;
+    return this;
 }
 
 function setData(dataName, value) {
-    return this.selector.setAttribute(`data-${dataName}`, value);
+    this.selector.setAttribute(`data-${dataName}`, value);
+    return this;
 }
 
 function removeData(dataName) {
-    return this.selector.removeAttribute(`data-${dataName}`);
+    this.selector.removeAttribute(`data-${dataName}`);
+    return this;
 }
 
 function closestData(dataName, value) {
-    return value
+    value
         ? this.selector.closest(`[data-${dataName}="${value}"]`)
         : this.selector.closest(`[data-${dataName}`);
+    return this;
 }
 
 function matchData(dataName, value) {
-    return value
+    value
         ? this.selector.matches(`[data-${dataName}="${value}"]`)
         : this.selector.matches(`[data-${dataName}`);
+    return this;
 }
 
 function create(element) {
-    return document.createElement(element);
+    this.selector = document.createElement(element);
+    return this;
 }
 
-function clone(options = this.options) {
-    return this.selector.cloneNode(options);
+function clone(boolean = false) {
+    this.selector.cloneNode(boolean);
+    return this;
 }
 
 function append(...args) {
-    return this.selector.append(args);
+    this.selector.append(args);
+    return this;
 }
 
 export {

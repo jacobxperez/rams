@@ -1,21 +1,21 @@
 import {Rams} from '../classes/rams.js';
 
-function onload(handler, boolean = this.boolean) {
+function onload(handler, boolean = false) {
     this.selector.addEventListener('load', handler, boolean);
     return new Rams(this.selector);
 }
 
-function addEvent(eventName, handler, boolean = this.boolean) {
+function addEvent(eventName, handler, boolean = false) {
     this.selector.addEventListener(eventName, handler, boolean);
     return new Rams(this.selector);
 }
 
-function removeEvent(eventName, handler, boolean = this.boolean) {
+function removeEvent(eventName, handler, boolean = false) {
     this.selector.removeEventListener(eventName, handler, boolean);
     return new Rams(this.selector);
 }
 
-function click(handler, boolean = this.boolean) {
+function click(handler, boolean = false) {
     this.selector.addEventListener('click', handler, boolean);
     return new Rams(this.selector);
 }

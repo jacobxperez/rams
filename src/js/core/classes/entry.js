@@ -6,11 +6,11 @@ function onload(handler, boolean = this.options) {
 }
 
 function select(selector) {
-    return new Rams(selector);
+    return new Rams(selector).select();
 }
 
 function selectAll(selector) {
-    return new Rams(selector);
+    return new Rams(selector).selectAll();
 }
 
 function create(element) {

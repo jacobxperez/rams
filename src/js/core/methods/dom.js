@@ -1,22 +1,38 @@
 function select(selector = this.selector) {
-    if (selector instanceof Object) {
+    if (selector === 'String') {
+        this.selector = document.querySelector(selector);
+        return this;
+    } else if (
+        selector === window ||
+        selector === document ||
+        selector instanceof Element ||
+        selector instanceof Array ||
+        selector instanceof Map ||
+        selector instanceof Set
+    ) {
         this.selector = selector;
         return this;
+    } else {
+        console.error(`${this.selector} is not a valid selector`);
+        return this;
     }
-    this.selector = document.querySelector(selector);
-    return this;
 }
 
 function selectAll(selector = this.selector) {
-    if (selector === window || selector === document) {
-        console.error(`${selector} is not supported`);
+    if (selector === 'String') {
+        this.selector = document.querySelectorAll(selector);
         return this;
-    } else if (selector instanceof Array) {
+    } else if (
+        selector instanceof Array ||
+        selector instanceof Map ||
+        selector instanceof Set
+    ) {
         this.selector = selector;
         return this;
+    } else {
+        console.error(`${this.selector} is not a valid selector`);
+        return this;
     }
-    this.selector = document.querySelectorAll(selector);
-    return this;
 }
 
 function create(element) {

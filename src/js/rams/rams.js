@@ -20,9 +20,11 @@ import {toggle} from './core/components/toggle.js';
 import {carousel} from './core/components/carousel.js';
 
 class Rams extends Array {
-    constructor(selector = null) {
+    constructor(selector = null, newElement = null, cloneElement = null) {
         super();
         this.selector = selector;
+        this.newElement = newElement;
+        this.cloneElement = cloneElement;
         this.select = select;
         this.selectAll = selectAll;
         this.create = create;

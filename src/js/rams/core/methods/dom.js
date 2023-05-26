@@ -1,5 +1,3 @@
-import {Rams} from '../../rams.js';
-
 function create(element) {
     this.selector = document.createElement(element);
     return this;

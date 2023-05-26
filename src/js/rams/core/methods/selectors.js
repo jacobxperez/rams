@@ -1,6 +1,8 @@
 function select(selector = this.selector) {
-    if (selector === 'String') {
+    if (Object.prototype.toString.call(selector) == '[object String]') {
         this.selector = document.querySelector(selector);
+        this.push(this.selector);
+
         return this;
     } else if (
         selector === window ||
@@ -19,8 +21,10 @@ function select(selector = this.selector) {
 }
 
 function selectAll(selector = this.selector) {
-    if (selector === 'String') {
+    if (Object.prototype.toString.call(selector) == '[object String]') {
         this.selector = document.querySelectorAll(selector);
+        this.selector.forEach((item) => this.push(item));
+
         return this;
     } else if (
         selector instanceof Array ||

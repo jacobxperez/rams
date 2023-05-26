@@ -1,18 +1,18 @@
-function select(selector) {
-    if (selector === window || selector === document) {
+function select(selector = this.selector) {
+    if (selector === window || selector === document || selector instanceof Array || selector instanceof Element) {
         this.selector = selector;
         return this;
     }
-    document.querySelector(selector);
+    this.selector = document.querySelector(selector);
     return this;
 }
 
-function selectAll(selector) {
-    if (selector === window || selector === document) {
+function selectAll(selector = this.selector) {
+    if (selector === window || selector === document || selector instanceof Array) {
         console.error(`${selector} is not supported`);
         return this;
     }
-    document.querySelectorAll(selector);
+    this.selector = document.querySelectorAll(selector);
     return this;
 }
 
@@ -64,7 +64,6 @@ function matchData(dataName, value) {
         : this.selector.matches(`[data-${dataName}`);
     return this;
 }
-
 
 export {
     select,

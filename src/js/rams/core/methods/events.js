@@ -1,4 +1,4 @@
-import {Rams} from '../classes/rams.js';
+import {Rams} from '../../rams.js';
 
 function onload(handler, boolean = false) {
     this.selector.addEventListener('load', handler, boolean);

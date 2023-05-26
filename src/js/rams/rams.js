@@ -11,15 +11,15 @@ import {
     create,
     clone,
     append,
-} from '../methods/dom.js';
-import {onload, addEvent, removeEvent, click} from '../methods/events.js';
-import {each, eachOf} from '../methods/loops.js';
-import {callback} from '../methods/callbacks.js';
-import {toggle} from '../components/toggle.js';
-import {carousel} from '../components/carousel.js';
+} from './core/methods/dom.js';
+import {onload, addEvent, removeEvent, click} from './core/methods/events.js';
+import {each, eachOf} from './core/methods/loops.js';
+import {callback} from './core/methods/callbacks.js';
+import {toggle} from './core/components/toggle.js';
+import {carousel} from './core/components/carousel.js';
 
 class Rams {
-    constructor(selector) {
+    constructor(selector = null) {
         this.selector = selector;
         this.select = select;
         this.selectAll = selectAll;
@@ -65,4 +65,6 @@ class Rams {
     carousel;
 }
 
-export {Rams};
+const rams = new Rams();
+
+export {Rams, rams};

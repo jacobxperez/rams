@@ -1,4 +1,4 @@
-import {rams} from '../rams.js';
+import {rams} from '../../rams.js';
 
 export function toggle(...args) {
     const clickedSet = new Set();
@@ -15,16 +15,14 @@ export function toggle(...args) {
     }
 
     function toggleState(targetToggle) {
-        const toggleState = rams
-            .select(targetToggle)
-            .hasData('state', 'active');
-        const getDropBox = rams.select(targetToggle).closestData('dropbox');
+        const toggleState = targetToggle.hasData('state', 'active');
+        const getDropBox = targetToggle.closestData('dropbox');
 
-        reset(getDropBox);
-
+        reset(getDropBox.selector);
+        
         toggleState
-            ? rams.select(targetToggle).removeData('state')
-            : rams.select(targetToggle).setData('state', 'active');
+        ? targetToggle.removeData('state')
+        : targetToggle.setData('state', 'active');
     }
 
     rams.select(document).click((e) => {
@@ -35,8 +33,7 @@ export function toggle(...args) {
                 return;
             } else {
                 clickedSet.add(targetToggle);
-
-                rams.select(targetToggle).click((e) => {
+                targetToggle.click((e) => {
                     toggleState(targetToggle);
                     e.stopPropagation();
                 }, true);

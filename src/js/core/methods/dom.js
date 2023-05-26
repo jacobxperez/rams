@@ -50,16 +50,19 @@ function append(...args) {
     return this;
 }
 
-function getData(dataName) {
-    this.selector.getAttribute(`data-${dataName}`);
+function getData(dataName, value) {
+    value
+        ? this.selector.getAttribute(`data-${dataName}="${value}"`)
+        : this.selector.getAttribute(`data-${dataName}`);
     return this;
 }
 
 function hasData(dataName, value) {
-    value
-        ? this.selector.getAttribute(`[data-${dataName}="${value}"]`)
-        : this.selector.getAttribute(`[data-${dataName}`);
-    return this;
+    if (value) {
+        return this.selector.hasAttribute(`data-${dataName}="${value}"`)
+    } else {
+        return this.selector.hasAttribute(`[data-${dataName}]`);
+    }
 }
 
 function setData(dataName, value) {
@@ -75,15 +78,16 @@ function removeData(dataName) {
 function closestData(dataName, value) {
     value
         ? this.selector.closest(`[data-${dataName}="${value}"]`)
-        : this.selector.closest(`[data-${dataName}`);
+        : this.selector.closest(`[data-${dataName}]`);
     return this;
 }
 
 function matchData(dataName, value) {
-    value
-        ? this.selector.matches(`[data-${dataName}="${value}"]`)
-        : this.selector.matches(`[data-${dataName}`);
-    return this;
+    if (value) {
+        return this.selector.matches(`data-${dataName}="${value}"`)
+    } else {
+        return this.selector.matches(`[data-${dataName}]`);
+    }
 }
 
 export {

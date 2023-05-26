@@ -1,5 +1,5 @@
 function select(selector = this.selector) {
-    if (selector === window || selector === document || selector instanceof Array || selector instanceof Element) {
+    if (selector instanceof Object) {
         this.selector = selector;
         return this;
     }
@@ -8,8 +8,11 @@ function select(selector = this.selector) {
 }
 
 function selectAll(selector = this.selector) {
-    if (selector === window || selector === document || selector instanceof Array) {
+    if (selector === window || selector === document) {
         console.error(`${selector} is not supported`);
+        return this;
+    } else if (selector instanceof Array) {
+        this.selector = selector;
         return this;
     }
     this.selector = document.querySelectorAll(selector);
@@ -37,7 +40,9 @@ function getData(dataName) {
 }
 
 function hasData(dataName, value) {
-    this.selector.getAttribute(`data-${dataName}`) === value;
+    value
+        ? this.selector.getAttribute(`[data-${dataName}="${value}"]`)
+        : this.selector.getAttribute(`[data-${dataName}`);
     return this;
 }
 

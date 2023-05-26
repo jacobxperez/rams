@@ -60,7 +60,7 @@ class Carousel {
         );
         const prevTab = this.controls.querySelector(`[data-state="active"]`);
         rams.select(currentTab).setData('state', 'active');
-        
+
         if (prevTab) {
             rams.select(prevTab).removeData('state');
         }
@@ -241,9 +241,9 @@ function carousel(
     intervalTime = 5000,
     lazyLoadThreshold = 2
 ) {
-    if (carousel) {
-        const arr = Array.from(document.querySelectorAll(carousel));
+    const arr = Array.from(document.querySelectorAll(carousel));
 
+    if (arr) {
         rams.select(arr).each((item) => {
             item = new Carousel({
                 carousel,

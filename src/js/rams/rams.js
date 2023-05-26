@@ -1,7 +1,9 @@
+// methods
 import {
     select,
     selectAll,
-    create,
+    clone,
+    append,
     getData,
     hasData,
     setData,
@@ -9,17 +11,18 @@ import {
     closestData,
     matchData,
     create,
-    clone,
-    append,
 } from './core/methods/dom.js';
 import {onload, addEvent, removeEvent, click} from './core/methods/events.js';
 import {each, eachOf} from './core/methods/loops.js';
 import {callback} from './core/methods/callbacks.js';
+
+// components
 import {toggle} from './core/components/toggle.js';
 import {carousel} from './core/components/carousel.js';
 
-class Rams {
+class Rams extends Array {
     constructor(selector = null) {
+        super();
         this.selector = selector;
         this.select = select;
         this.selectAll = selectAll;

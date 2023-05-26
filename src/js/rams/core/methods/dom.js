@@ -1,3 +1,5 @@
+import {Rams} from '../../rams.js';
+
 function select(selector = this.selector) {
     if (selector === 'String') {
         this.selector = document.querySelector(selector);

@@ -1,7 +1,6 @@
 // methods
+import {select, selectAll} from './core/methods/selectors.js';
 import {
-    select,
-    selectAll,
     clone,
     append,
     getData,

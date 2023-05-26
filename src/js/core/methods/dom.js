@@ -17,7 +17,17 @@ function selectAll(selector) {
 }
 
 function create(element) {
-    this.selector.createElement(element);
+    this.selector = document.createElement(element);
+    return this;
+}
+
+function clone(boolean = false) {
+    this.selector = this.selector.cloneNode(boolean);
+    return this;
+}
+
+function append(...args) {
+    this.selector.append(args);
     return this;
 }
 
@@ -55,20 +65,6 @@ function matchData(dataName, value) {
     return this;
 }
 
-function create(element) {
-    this.selector = document.createElement(element);
-    return this;
-}
-
-function clone(boolean = false) {
-    this.selector.cloneNode(boolean);
-    return this;
-}
-
-function append(...args) {
-    this.selector.append(args);
-    return this;
-}
 
 export {
     select,

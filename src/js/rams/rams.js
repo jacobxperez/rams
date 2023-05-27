@@ -9,8 +9,8 @@ import {
 } from './core/methods/dom.js';
 import {
     getData,
-    hasData,
     setData,
+    hasData,
     removeData,
     closestData,
     matchData,
@@ -37,8 +37,8 @@ class Rams extends Array {
         this.appendCreated = appendCreated;
         this.appendCloned = appendCloned;
         this.getData = getData;
-        this.hasData = hasData;
         this.setData = setData;
+        this.hasData = hasData;
         this.removeData = removeData;
         this.closestData = closestData;
         this.matchData = matchData;
@@ -62,8 +62,8 @@ class Rams extends Array {
     appendCreated;
     appendCloned;
     getData;
-    hasData;
     setData;
+    hasData;
     removeData;
     closestData;
     matchData;

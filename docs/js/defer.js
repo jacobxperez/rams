@@ -5,56 +5,54 @@
  * http://www.apache.org/licenses/LICENSE-2.0
 -----------------------------------------------------------------------------*/
 import {sidebar} from './modules/sidebar.js';
-import {rams} from '../../src/js/core/rams.js';
+import {rams} from '../../src/js/rams/rams.js';
 
-rams.select(window)
-    .onload(() => {
-        if (meta.title === '') {
-            meta.title = `<h1>Rams</h1>`;
-        } else {
-            meta.title = `<h1>${meta.title}</h1>`;
-        }
+rams.onload(() => {
+    if (meta.title === '') {
+        meta.title = `<h1>Rams</h1>`;
+    } else {
+        meta.title = `<h1>${meta.title}</h1>`;
+    }
 
-        let nav = `
+    let nav = `
     <nav id="nav" data-navbar="top"></nav>
     `;
 
-        let header = `
+    let header = `
         <div id="header" data-container="fit">
             ${meta.title}
         </div>
         `;
 
-        let main = `
+    let main = `
         <div data-container="fit" data-grid="main">
             <aside id="aside"></aside>
             <article id="content"></article>
         </div>
         `;
 
-        if (meta.type === 'fullPage') {
-            main = `
+    if (meta.type === 'fullPage') {
+        main = `
         <div id="content" data-container="fit" data-grid="main"></div>
         `;
-        }
+    }
 
-        let footer = `
+    let footer = `
     <footer data-section="footer">
         <div id="footer" data-container="fit">
         </div>
     </footer>
     `;
 
-        // check and set template url for localhost or for public url
-        let templateURL;
-        location.hostname === 'localhost' || location.hostname === '127.0.0.1'
-            ? (templateURL =
-                  window.location.origin + '/templates/a.be13ff7e.html')
-            : (templateURL =
-                  window.location.origin + '/rams/templates/a.e67a1128.html');
+    // check and set template url for localhost or for public url
+    let templateURL;
+    location.hostname === 'localhost' || location.hostname === '127.0.0.1'
+        ? (templateURL = window.location.origin + '/templates/a.be13ff7e.html')
+        : (templateURL =
+              window.location.origin + '/rams/templates/a.e67a1128.html');
 
-        // create main layout
-        let layout = `
+    // create main layout
+    let layout = `
         ${nav}
         <header data-section="header">
             ${header}
@@ -65,14 +63,23 @@ rams.select(window)
         ${footer}
         `;
 
-        // parse everything together
-        template
-            .fromString(layout, 'body')
-            .setTemplate('#headerTemplate', '#header')
-            .setTemplate('#contentTemplate', '#content', sidebar)
-            .fetchTemplate(templateURL, '#nav')
-            .fetchTemplate(templateURL, '#footer');
-    })
+    // parse everything together
+    template
+        .fromString(layout, 'body')
+        .setTemplate('#headerTemplate', '#header')
+        .setTemplate('#contentTemplate', '#content', sidebar)
+        .fetchTemplate(templateURL, '#nav')
+        .fetchTemplate(templateURL, '#footer');
+})
     .toggle();
 
-// rams.carousel();
+// const elements = rams
+//     .create('ul')
+//     .create('li')
+//     .select('body')
+//     .appendCreated(0)
+//     .select('ul')
+//     .appendCreated(1, 5)
+//     .clone('ul')
+//     .appendCloned(0);
+// console.log(elements);

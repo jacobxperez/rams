@@ -1,7 +1,7 @@
 function each(callback) {
     if (callback && typeof callback == 'function') {
-        for (let i = 0; i < this.selector.length; i++) {
-            callback(this.selector[i], i);
+        for (let i = 0; i < this.length; i++) {
+            callback(this[i], i);
         }
 
         return this;
@@ -10,7 +10,7 @@ function each(callback) {
 
 function eachOf(callback) {
     if (callback && typeof callback == 'function') {
-        for (const item of this.selector) {
+        for (const item of this) {
             callback(item);
         }
 

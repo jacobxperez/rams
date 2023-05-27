@@ -1,6 +1,7 @@
 function select(selector = this.selector) {
     if (Object.prototype.toString.call(selector) == '[object String]') {
         this.selector = document.querySelector(selector);
+        this.push(this.selector);
 
         return this;
     } else if (

@@ -1,90 +1,41 @@
 function create(element) {
-    this.newElement = document.createElement(element);
+    this.createdSet.push(document.createElement(element));
     return this;
 }
 
-function clone(boolean = false) {
-    this.cloneElement = this.newElement.cloneNode(boolean);
+function clone(boolean = true) {
+    this.clonedSet.push(this.selector.cloneNode(boolean));
     return this;
 }
 
-function append(...args) {
-    // this.forEach((selector) => {
-    //     selector.append(args);
-    // });
-    this.selector.append(this.cloneElement || args);
+function append(...elements) {
+    this.selector.append(elements);
     return this;
 }
 
-function getData(dataName, value) {
-    value
-        ? this.forEach((selector) => {
-              selector.getAttribute(`data-${dataName}="${value}"`);
-          })
-        : this.forEach((selector) => {
-              selector.getAttribute(`data-${dataName}`);
-          });
-
-    return this;
-}
-
-function hasData(dataName, value) {
-    return value
-        ? this.forEach((selector) => {
-              selector.hasAttribute(`data-${dataName}="${value}"`);
-          })
-        : this.forEach((selector) => {
-              selector.hasAttribute(`[data-${dataName}]`);
-          });
-
-    // if (value) {
-    //     return this.selector.hasAttribute(`data-${dataName}="${value}"`);
-    // } else {
-    //     return this.selector.hasAttribute(`[data-${dataName}]`);
-    // }
-}
-
-function setData(dataName, value) {
-    // this.forEach((selector) => {
-    //     selector.setAttribute(`data-${dataName}`, value);
-    // });
-    
-    this.selector.setAttribute(`data-${dataName}`, value);
-    return this;
-}
-
-function removeData(dataName) {
-    // this.forEach((selector) => {
-    //     selector.removeAttribute(`data-${dataName}`);
-    // });
-
-    this.selector.removeAttribute(`data-${dataName}`);
-    return this;
-}
-
-function closestData(dataName, value) {
-    value
-        ? this.selector.closest(`[data-${dataName}="${value}"]`)
-        : this.selector.closest(`[data-${dataName}]`);
-    return this;
-}
-
-function matchData(dataName, value) {
-    if (value) {
-        return this.selector.matches(`data-${dataName}="${value}"`);
+function appendCreated(index = 0, count) {
+    if (count) {
+        for (var i = 0; i < count; i++) {
+            const clone = this.createdSet[index].cloneNode(true);
+            this.selector.append(clone);
+        }
     } else {
-        return this.selector.matches(`[data-${dataName}]`);
+        const clone = this.createdSet[index].cloneNode(true);
+        this.selector.append(clone);
+    }
+    return this;
+}
+
+function appendCloned(index = 0, count) {
+    if (count) {
+        for (var i = 0; i < count; i++) {
+            const clone = this.clonedSet[index].cloneNode(true);
+            this.selector.append(clone);
+        }
+    } else {
+        const clone = this.clonedSet[index].cloneNode(true);
+        this.selector.append(clone);
     }
 }
 
-export {
-    create,
-    clone,
-    append,
-    getData,
-    hasData,
-    setData,
-    removeData,
-    closestData,
-    matchData,
-};
+export {create, clone, append, appendCreated, appendCloned};

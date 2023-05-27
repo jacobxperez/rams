@@ -1,16 +1,20 @@
 // methods
 import {select, selectAll} from './core/methods/selectors.js';
 import {
+    create,
     clone,
     append,
+    appendCreated,
+    appendCloned,
+} from './core/methods/dom.js';
+import {
     getData,
     hasData,
     setData,
     removeData,
     closestData,
     matchData,
-    create,
-} from './core/methods/dom.js';
+} from './core/methods/data.js';
 import {onload, addEvent, removeEvent, click} from './core/methods/events.js';
 import {each, eachOf} from './core/methods/loops.js';
 import {callback} from './core/methods/callbacks.js';
@@ -20,16 +24,18 @@ import {toggle} from './core/components/toggle.js';
 import {carousel} from './core/components/carousel.js';
 
 class Rams extends Array {
-    constructor(selector = null, newElement = null, cloneElement = null) {
+    constructor(selector = null) {
         super();
         this.selector = selector;
-        this.newElement = newElement;
-        this.cloneElement = cloneElement;
+        this.createdSet = [];
+        this.clonedSet = [];
         this.select = select;
         this.selectAll = selectAll;
         this.create = create;
         this.clone = clone;
         this.append = append;
+        this.appendCreated = appendCreated;
+        this.appendCloned = appendCloned;
         this.getData = getData;
         this.hasData = hasData;
         this.setData = setData;
@@ -53,6 +59,8 @@ class Rams extends Array {
     create;
     clone;
     append;
+    appendCreated;
+    appendCloned;
     getData;
     hasData;
     setData;

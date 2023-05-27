@@ -1,7 +1,6 @@
 function select(selector = this.selector) {
     if (Object.prototype.toString.call(selector) == '[object String]') {
         this.selector = document.querySelector(selector);
-        this.push(this.selector);
 
         return this;
     } else if (
@@ -22,8 +21,8 @@ function select(selector = this.selector) {
 
 function selectAll(selector = this.selector) {
     if (Object.prototype.toString.call(selector) == '[object String]') {
-        this.selector = document.querySelectorAll(selector);
-        this.selector.forEach((item) => this.push(item));
+        const selected = document.querySelectorAll(selector);
+        selected.forEach((item) => this.push(item));
 
         return this;
     } else if (

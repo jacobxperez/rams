@@ -73,13 +73,14 @@ rams.onload(() => {
 })
     .toggle();
 
-// const elements = rams
+// rams
 //     .create('ul')
 //     .create('li')
 //     .select('body')
 //     .appendCreated(0)
 //     .select('ul')
 //     .appendCreated(1, 5)
-//     .clone('ul')
-//     .appendCloned(0);
-// console.log(elements);
+//     .each((item) => {
+//         console.log(item)
+//     })
+

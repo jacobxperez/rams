@@ -54,6 +54,18 @@ class Rams extends Array {
         this.carousel = carousel;
     }
 
+    get selected() {
+        if (this.selector === null) {
+            console.error(
+                'You need to select() a selector or by using the index() method to select an item from the array'
+            );
+        } else {
+            return this.selector;
+        }
+    }
+    set selected(val) {
+        this.selector = val;
+    }
     onload;
     select;
     selectAll;

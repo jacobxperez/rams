@@ -1,4 +1,4 @@
-function select(selector = this.selector) {
+function select(selector = this.selected) {
     if (
         selector === window ||
         selector === document ||
@@ -8,20 +8,20 @@ function select(selector = this.selector) {
         selector instanceof Map ||
         selector instanceof Set
     ) {
-        this.selector = selector;
+        this.selected = selector;
         return this;
     }
 
     if (Object.prototype.toString.call(selector) === '[object String]') {
-        this.selector = document.querySelector(selector);
+        this.selected = document.querySelector(selector);
 
         return this;
     } else {
-        return console.error(`${this.selector} is not a valid selector`);
+        return console.error(`${this.selected} is not a valid selector`);
     }
 }
 
-function selectAll(selector = this.selector) {
+function selectAll(selector = this.selected) {
     if (selector instanceof Array || selector instanceof NodeList) {
         selector.forEach((item) => {
             if (item instanceof Element) {
@@ -37,13 +37,13 @@ function selectAll(selector = this.selector) {
 
         return this;
     } else {
-        return console.error(`${this.selector} is not a valid selector`);
+        return console.error(`${this.selected} is not a valid selector`);
     }
 }
 
 function index(i = 0) {
     if (typeof(i) === 'number') {
-        this.selector = this[i];
+        this.selected = this[i];
     } else {
         return console.error(`${i} is not a valid index number`);
     }

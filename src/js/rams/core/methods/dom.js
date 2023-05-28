@@ -5,13 +5,13 @@ function create(element) {
 }
 
 function clone(boolean = true) {
-    this.clonedSet.push(this.selector.cloneNode(boolean));
+    this.clonedSet.push(this.selected.cloneNode(boolean));
 
     return this;
 }
 
 function append(...elements) {
-    this.selector.append(elements);
+    this.selected.append(elements);
 
     return this;
 }
@@ -20,11 +20,11 @@ function appendCreated(index = 0, count) {
     if (count) {
         for (var i = 0; i < count; i++) {
             const clone = this.createdSet[index].cloneNode(true);
-            this.selector.append(clone);
+            this.selected.append(clone);
         }
     } else {
         const clone = this.createdSet[index].cloneNode(true);
-        this.selector.append(clone);
+        this.selected.append(clone);
     }
 
     return this;
@@ -34,11 +34,11 @@ function appendCloned(index = 0, count) {
     if (count) {
         for (var i = 0; i < count; i++) {
             const clone = this.clonedSet[index].cloneNode(true);
-            this.selector.append(clone);
+            this.selected.append(clone);
         }
     } else {
         const clone = this.clonedSet[index].cloneNode(true);
-        this.selector.append(clone);
+        this.selected.append(clone);
     }
 
     return this;

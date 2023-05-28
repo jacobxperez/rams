@@ -1,5 +1,5 @@
 // methods
-import {select, selectAll} from './core/methods/selectors.js';
+import {select, selectAll, index} from './core/methods/selectors.js';
 import {
     create,
     clone,
@@ -31,6 +31,7 @@ class Rams extends Array {
         this.clonedSet = [];
         this.select = select;
         this.selectAll = selectAll;
+        this.index = index;
         this.create = create;
         this.clone = clone;
         this.append = append;
@@ -56,6 +57,7 @@ class Rams extends Array {
     onload;
     select;
     selectAll;
+    index;
     create;
     clone;
     append;

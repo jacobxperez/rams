@@ -41,4 +41,14 @@ function selectAll(selector = this.selector) {
     }
 }
 
-export {select, selectAll};
+function index(i = 0) {
+    if (typeof(i) === 'number') {
+        this.selector = this[i];
+    } else {
+        return console.error(`${i} is not a valid index number`);
+    }
+
+    return this;
+}
+
+export {select, selectAll, index};

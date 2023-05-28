@@ -1,10 +1,5 @@
 function select(selector = this.selected) {
-    if (
-        selector === window ||
-        selector === document ||
-        selector instanceof Map ||
-        selector instanceof Set
-    ) {
+    if (selector === window || selector === document) {
         this.selected = selector;
         return this;
     }

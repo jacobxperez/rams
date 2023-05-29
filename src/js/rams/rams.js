@@ -1,10 +1,6 @@
 // methods
 import {select, selectAll, index} from './core/methods/selectors.js';
-import {
-    create,
-    clone,
-    append,
-} from './core/methods/dom.js';
+import {create, clone, append} from './core/methods/dom.js';
 import {
     getData,
     setData,
@@ -24,7 +20,7 @@ import {carousel} from './core/components/carousel.js';
 class Rams extends Array {
     constructor(selector = null) {
         super();
-        this.selector = selector;
+        this._selector = selector;
         this.select = select;
         this.selectAll = selectAll;
         this.index = index;
@@ -48,17 +44,15 @@ class Rams extends Array {
         this.carousel = carousel;
     }
 
-    get selected() {
-        if (this.selector === null) {
-            console.error(
-                'You need to select a valid Element'
-            );
+    get selector() {
+        if (this._selector === null) {
+            console.error('You need to select a valid Element');
         } else {
-            return this.selector;
+            return this._selector;
         }
     }
-    set selected(val) {
-        this.selector = val;
+    set selector(val) {
+        this._selector = val;
     }
     onload;
     select;

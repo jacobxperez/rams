@@ -1,21 +1,21 @@
-function select(selector = this.selected) {
+function select(selector = this.selector) {
     if (
         selector === window ||
         selector === document ||
         selector instanceof Object
     ) {
-        this.selected = selector;
+        this.selector = selector;
         return this;
     }
 
     if (selector instanceof Element) {
-        this.selected = selector;
+        this.selector = selector;
 
         return this;
     }
 
     if (Object.prototype.toString.call(selector) === '[object String]') {
-        this.selected = document.querySelector(selector);
+        this.selector = document.querySelector(selector);
 
         return this;
     } else {
@@ -23,7 +23,7 @@ function select(selector = this.selected) {
     }
 }
 
-function selectAll(selector = this.selected) {
+function selectAll(selector = this.selector) {
     if (selector instanceof Array || selector instanceof NodeList) {
         selector.forEach((item) => {
             if (item instanceof Element) {
@@ -31,7 +31,7 @@ function selectAll(selector = this.selected) {
             }
         });
 
-        this.selected = this[0];
+        this.selector = this[0];
 
         return this;
     }
@@ -42,7 +42,7 @@ function selectAll(selector = this.selected) {
     ) {
         const selected = document.querySelectorAll(selector);
         selected.forEach((item) => this.push(item));
-        this.selected = this[0];
+        this.selector = this[0];
 
         return this;
     } else {
@@ -52,7 +52,7 @@ function selectAll(selector = this.selected) {
 
 function index(i = 0) {
     if (typeof i === 'number') {
-        this.selected = this[i];
+        this.selector = this[i];
     } else {
         return console.error(`${i} is not a valid index number`);
     }

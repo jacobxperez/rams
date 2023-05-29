@@ -10,7 +10,7 @@ class Carousel {
         lazyLoadThreshold = 2,
     } = {}) {
         this.carousel = document.querySelector(carouselSelector);
-        this.slides = this.carousel.querySelectorAll(slideSelector);
+        this.slides = Array.from(this.carousel.querySelectorAll(slideSelector));
         this.controls =
             this.carousel.querySelector(controlsSelector) ??
             this.createControls();
@@ -28,10 +28,7 @@ class Carousel {
     async initialize() {
         await this.preloadImages();
         this.cycleSlides();
-        this.controls.addEventListener(
-            'click',
-            this.handleControls.bind(this)
-        );
+        this.controls.addEventListener('click', this.handleControls.bind(this));
         this.tabs.forEach((tab, index) =>
             tab.setAttribute('data-index', index)
         );
@@ -45,7 +42,7 @@ class Carousel {
     }
 
     async preloadImages() {
-        const promises = Array.from(this.slides)
+        const promises = this.slides
             .slice(0, this.lazyLoadThreshold)
             .map((slide) => {
                 const image = slide.querySelector('img');
@@ -79,7 +76,7 @@ class Carousel {
         const currentSlide = this.slides[this.currentIndex];
         currentSlide.setAttribute('data-state', 'current');
         requestAnimationFrame(() => {
-            Array.from(this.slides)
+            this.slides
                 .filter((slide) => slide !== currentSlide)
                 .forEach((slide) => slide.removeAttribute('data-state'));
         });

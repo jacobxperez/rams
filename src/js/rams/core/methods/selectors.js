@@ -1,28 +1,21 @@
 function select(selector = this.selected) {
-    if (selector === window || selector === document) {
+    if (
+        selector === window ||
+        selector === document ||
+        selector instanceof Object
+    ) {
         this.selected = selector;
-        return this;
-    }
-
-    if (selector instanceof Array || selector instanceof NodeList) {
-        selector.forEach((item) => {
-            if (item instanceof Element) {
-                this.push(item);
-            }
-        });
         return this;
     }
 
     if (selector instanceof Element) {
         this.selected = selector;
-        this.push(selector);
 
         return this;
     }
 
     if (Object.prototype.toString.call(selector) === '[object String]') {
         this.selected = document.querySelector(selector);
-        this.push(this.selected);
 
         return this;
     } else {

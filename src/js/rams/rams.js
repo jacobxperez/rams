@@ -4,8 +4,6 @@ import {
     create,
     clone,
     append,
-    appendCreated,
-    appendCloned,
 } from './core/methods/dom.js';
 import {
     getData,
@@ -27,16 +25,12 @@ class Rams extends Array {
     constructor(selector = null) {
         super();
         this.selector = selector;
-        this.createdSet = [];
-        this.clonedSet = [];
         this.select = select;
         this.selectAll = selectAll;
         this.index = index;
         this.create = create;
         this.clone = clone;
         this.append = append;
-        this.appendCreated = appendCreated;
-        this.appendCloned = appendCloned;
         this.getData = getData;
         this.setData = setData;
         this.hasData = hasData;
@@ -57,7 +51,7 @@ class Rams extends Array {
     get selected() {
         if (this.selector === null) {
             console.error(
-                'You need to select() a selector or by using the index() method to select an item from the array'
+                'You need to select a valid Element'
             );
         } else {
             return this.selector;
@@ -73,8 +67,6 @@ class Rams extends Array {
     create;
     clone;
     append;
-    appendCreated;
-    appendCloned;
     getData;
     setData;
     hasData;

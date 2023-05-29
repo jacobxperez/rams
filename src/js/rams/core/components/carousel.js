@@ -64,7 +64,7 @@ class Carousel {
         );
         const prevTab = this.controls.querySelector(`[data-state="active"]`);
         currentTab.setAttribute('data-state', 'active');
-        prevTab?.removeAttribute('data-state');
+        if (prevTab) prevTab.removeAttribute('data-state');
         requestAnimationFrame(() => {
             this.tabs
                 .filter((tab) => ![currentTab, prevTab].includes(tab))

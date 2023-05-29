@@ -1,15 +1,21 @@
-function getData(dataName, value) {
-    value
-        ? this.selector.getAttribute(`data-${dataName}="${value}"`)
-        : this.selector.getAttribute(`data-${dataName}`);
-
-    return this;
-}
-
 function setData(dataName, value) {
     this.selector.setAttribute(`data-${dataName}`, value);
 
     return this;
+}
+
+function removeData(dataName) {
+    this.selector.removeAttribute(`data-${dataName}`);
+
+    return this;
+}
+
+function getData(dataName, value) {
+    if (value) {
+        return this.selector.getAttribute(`data-${dataName}="${value}"`);
+    } else {
+        return this.selector.getAttribute(`data-${dataName}`);
+    }
 }
 
 function hasData(dataName, value) {
@@ -18,12 +24,6 @@ function hasData(dataName, value) {
     } else {
         return this.selector.hasAttribute(`[data-${dataName}]`);
     }
-}
-
-function removeData(dataName) {
-    this.selector.removeAttribute(`data-${dataName}`);
-
-    return this;
 }
 
 function closestData(dataName, value) {
@@ -42,4 +42,4 @@ function matchData(dataName, value) {
     }
 }
 
-export {getData, setData, hasData, removeData, closestData, matchData};
+export {setData, removeData, getData, hasData, closestData, matchData};

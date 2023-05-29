@@ -2,19 +2,18 @@ import {rams} from '../../rams.js';
 
 class Carousel {
     constructor({
-        carouselSelector = '[data-carousel]',
-        slideSelector = '[data-slide]',
-        controlsSelector = '[data-controls]',
-        tabSelector = '[data-tab]',
-        intervalTime = 5000,
-        lazyLoadThreshold = 2,
+        carouselSelector,
+        intervalTime,
+        lazyLoadThreshold,
     } = {}) {
         this.carousel = document.querySelector(carouselSelector);
-        this.slides = Array.from(this.carousel.querySelectorAll(slideSelector));
+        this.slides = Array.from(
+            this.carousel.querySelectorAll('[data-slide]')
+        );
         this.controls =
-            this.carousel.querySelector(controlsSelector) ??
+            this.carousel.querySelector('[data-controls]') ??
             this.createControls();
-        this.tabs = Array.from(this.controls.querySelectorAll(tabSelector));
+        this.tabs = Array.from(this.controls.querySelectorAll('[data-tab]'));
         this.button = document.createElement('button');
         this.intervalTime = intervalTime;
         this.lazyLoadThreshold = lazyLoadThreshold;
@@ -22,6 +21,7 @@ class Carousel {
         this.indicators = false;
         this.paused = true;
         this.initialize();
+        this.play();
     }
 
     // Initialization methods
@@ -244,9 +244,6 @@ class Carousel {
 
 function carousel(
     carouselSelector = '[data-carousel]',
-    slideSelector = '[data-slide]',
-    controlsSelector = '[data-controls]',
-    tabSelector = '[data-tab]',
     intervalTime = 5000,
     lazyLoadThreshold = 2
 ) {
@@ -255,12 +252,9 @@ function carousel(
     if (arr) {
         arr.each((item) => {
             item = new Carousel({
-                carouselSelector,
-                slideSelector,
-                controlsSelector,
-                tabSelector,
-                intervalTime,
-                lazyLoadThreshold,
+                carouselSelector: carouselSelector,
+                intervalTime: intervalTime,
+                lazyLoadThreshold: lazyLoadThreshold,
             })
                 .addControls()
                 .addIndicators()

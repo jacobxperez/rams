@@ -1,11 +1,14 @@
 function create(element) {
-    this.createdSet.push(document.createElement(element));
+    const newElement = document.createElement(element)
+    this.selected = newElement;
+    this.push(newElement);
 
     return this;
 }
 
 function clone(boolean = true) {
-    this.clonedSet.push(this.selected.cloneNode(boolean));
+    const cloned = this.selected.cloneNode(boolean)
+    this.selected = cloned;
 
     return this;
 }
@@ -16,32 +19,4 @@ function append(...elements) {
     return this;
 }
 
-function appendCreated(index = 0, count) {
-    if (count) {
-        for (var i = 0; i < count; i++) {
-            const clone = this.createdSet[index].cloneNode(true);
-            this.selected.append(clone);
-        }
-    } else {
-        const clone = this.createdSet[index].cloneNode(true);
-        this.selected.append(clone);
-    }
-
-    return this;
-}
-
-function appendCloned(index = 0, count) {
-    if (count) {
-        for (var i = 0; i < count; i++) {
-            const clone = this.clonedSet[index].cloneNode(true);
-            this.selected.append(clone);
-        }
-    } else {
-        const clone = this.clonedSet[index].cloneNode(true);
-        this.selected.append(clone);
-    }
-
-    return this;
-}
-
-export {create, clone, append, appendCreated, appendCloned};
+export {create, clone, append};

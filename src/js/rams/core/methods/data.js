@@ -20,9 +20,9 @@ function getData(dataName, value) {
 
 function hasData(dataName, value) {
     if (value) {
-        return this.selector.hasAttribute(`[data-${dataName}="${value}"]`);
+        return this.selector.hasAttribute(`data-${dataName}="${value}"`);
     } else {
-        return this.selector.hasAttribute(`[data-${dataName}]`);
+        return this.selector.hasAttribute(`data-${dataName}`);
     }
 }
 

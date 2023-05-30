@@ -15,7 +15,7 @@ import {callback} from './core/methods/callbacks.js';
 
 // components
 import {toggle} from './core/components/toggle.js';
-import {carousel} from './core/components/carousel.js';
+// import {carousel} from './core/components/carousel.js';
 
 class Rams extends Array {
     constructor(selector = null) {
@@ -41,7 +41,7 @@ class Rams extends Array {
         this.eachOf = eachOf;
         this.callback = callback;
         this.toggle = toggle;
-        this.carousel = carousel;
+        // this.carousel = carousel;
     }
 
     get selector() {

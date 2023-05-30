@@ -72,15 +72,3 @@ rams.onload(() => {
         .fetchTemplate(templateURL, '#footer');
 })
     .toggle();
-
-// rams
-//     .create('ul')
-//     .create('li')
-//     .select('body')
-//     .appendCreated(0)
-//     .select('ul')
-//     .appendCreated(1, 5)
-//     .each((item) => {
-//         console.log(item)
-//     })
-

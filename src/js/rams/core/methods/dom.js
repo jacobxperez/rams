@@ -1,14 +1,12 @@
 function create(element) {
-    const newElement = document.createElement(element);
-    this.selector = newElement;
-    this.push(newElement);
+    this.selector = document.createElement(element);
+    this.push(this.selector);
 
     return this;
 }
 
-function clone(boolean = true) {
-    const cloned = this.selector.cloneNode(boolean);
-    this.selector = cloned;
+function clone(boolean = false) {
+    this.selector = this.selector.cloneNode(boolean);
 
     return this;
 }

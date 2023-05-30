@@ -5,11 +5,13 @@ function select(selector = this.selector) {
         selector instanceof Object
     ) {
         this.selector = selector;
+
         return this;
     }
 
     if (Object.prototype.toString.call(selector) === '[object String]') {
         this.selector = document.querySelector(selector);
+        this.push(this.selector);
 
         return this;
     } else {
@@ -20,9 +22,7 @@ function select(selector = this.selector) {
 function selectAll(selector = this.selector) {
     if (selector instanceof Array || selector instanceof NodeList) {
         selector.forEach((item) => {
-            if (item instanceof Element) {
-                this.push(item);
-            }
+            if (item instanceof Element) this.push(item);
         });
 
         this.selector = this[0];
@@ -34,8 +34,8 @@ function selectAll(selector = this.selector) {
         Object.prototype.toString.call(selector) === '[object String]' ||
         selector instanceof Element
     ) {
-        const selected = document.querySelectorAll(selector);
-        selected.forEach((item) => this.push(item));
+        this.selector = document.querySelectorAll(selector);
+        this.selector.forEach((item) => this.push(item));
         this.selector = this[0];
 
         return this;

@@ -8,12 +8,6 @@ function select(selector = this.selector) {
         return this;
     }
 
-    if (selector instanceof Element) {
-        this.selector = selector;
-
-        return this;
-    }
-
     if (Object.prototype.toString.call(selector) === '[object String]') {
         this.selector = document.querySelector(selector);
 

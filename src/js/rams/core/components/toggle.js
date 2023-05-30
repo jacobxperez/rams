@@ -4,8 +4,8 @@ export function toggle(...args) {
     const clickedSet = new Set();
     const resetSet = new Set(['pop', 'tooltip', ...args]);
 
-    function reset(getDropBox) {
-        if (!getDropBox) {
+    function reset(dropBox) {
+        if (!dropBox) {
             clickedSet.forEach((item) => {
                 if (resetSet.has(item.dataset.toggle)) {
                     item.removeAttribute('data-state');
@@ -15,32 +15,28 @@ export function toggle(...args) {
     }
 
     function toggleState(targetToggle) {
-        const state = targetToggle.hasAttribute('data-state');
-        const getDropBox = targetToggle.closest('[data-dropbox]');
+        const toggle = rams.select(targetToggle);
+        const state = toggle.hasData('state');
+        const dropBox = toggle.closestData('dropbox');
 
-        reset(getDropBox);
+        reset(dropBox);
 
-        state
-            ? targetToggle.removeAttribute('data-state')
-            : targetToggle.setAttribute('data-state', 'active');
+        state ? toggle.removeData('state') : toggle.setData('state', 'active');
     }
 
-    document.addEventListener('click', (e) => {
-        const targetToggle = e.target.closest('[data-toggle]');
+    rams.click((e) => {
+        const target = rams.select(e.target);
+        const targetToggle = target.closestData('toggle');
 
         if (targetToggle) {
             if (clickedSet.has(targetToggle)) {
                 return;
             } else {
                 clickedSet.add(targetToggle);
-                targetToggle.addEventListener(
-                    'click',
-                    (e) => {
-                        toggleState(targetToggle);
-                        e.stopPropagation();
-                    },
-                    true
-                );
+                rams.select(targetToggle).click((e) => {
+                    toggleState(targetToggle);
+                    e.stopPropagation();
+                }, true);
             }
 
             toggleState(targetToggle);

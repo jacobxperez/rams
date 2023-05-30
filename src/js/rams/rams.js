@@ -74,7 +74,7 @@ class Rams extends Array {
     eachOf;
     callback;
     toggle;
-    carousel;
+    // carousel;
 }
 
 const rams = new Rams();

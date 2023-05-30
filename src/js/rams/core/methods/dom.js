@@ -1,5 +1,5 @@
-function create(...element) {
-    element.forEach((element) => {
+function create(...elements) {
+    elements.forEach((element) => {
         this.selector = document.createElement(element);
         this.push(this.selector);
     })

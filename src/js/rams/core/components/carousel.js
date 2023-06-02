@@ -1,32 +1,28 @@
 import {rams} from '../../rams.js';
 
 class Carousel {
-    constructor({
-        carouselSelector,
-        intervalTime,
-        lazyLoadThreshold,
-    } = {}) {
-        this.carousel = document.querySelector(carouselSelector);
+    constructor({carousel, intervalTime, lazyLoadThreshold} = {}) {
+        this.carousel = document.querySelector(carousel);
         this.slides = Array.from(
             this.carousel.querySelectorAll('[data-slide]')
         );
         this.controls =
             this.carousel.querySelector('[data-controls]') ??
-            this.createControls();
-        this.tabs = Array.from(this.controls.querySelectorAll('[data-tab]'));
+            this.#createControls();
+        this.tabs = Array.from(this.carousel.querySelectorAll('[data-tab]'));
         this.button = document.createElement('button');
         this.intervalTime = intervalTime;
         this.lazyLoadThreshold = lazyLoadThreshold;
         this.currentIndex = 0;
         this.indicators = false;
         this.paused = true;
-        this.initialize();
+        this.init();
         this.play();
     }
 
     // Initialization methods
-    async initialize() {
-        await this.preloadImages();
+    async init() {
+        await this.#preloadImages();
         this.cycleSlides();
         this.controls.addEventListener('click', this.handleControls.bind(this));
         this.tabs.forEach((tab, index) =>
@@ -34,14 +30,14 @@ class Carousel {
         );
     }
 
-    createControls() {
+    #createControls() {
         const controls = document.createElement('nav');
         controls.setAttribute('data-controls', '');
         this.carousel.appendChild(controls);
         return controls;
     }
 
-    async preloadImages() {
+    async #preloadImages() {
         const promises = this.slides
             .slice(0, this.lazyLoadThreshold)
             .map((slide) => {
@@ -243,27 +239,15 @@ class Carousel {
 }
 
 function carousel(
-    carouselSelector = '[data-carousel]',
+    carousel = '[data-carousel]',
     intervalTime = 5000,
     lazyLoadThreshold = 2
 ) {
-    const arr = rams.selectAll(carouselSelector);
-
-    if (arr) {
-        arr.each((item) => {
-            item = new Carousel({
-                carouselSelector: carouselSelector,
-                intervalTime: intervalTime,
-                lazyLoadThreshold: lazyLoadThreshold,
-            })
-                .addControls()
-                .addIndicators()
-                .addKeyboardControls()
-                .addTouchControls();
-        });
-    }
-
-    return this;
+    return new Carousel({
+        carousel: carousel,
+        intervalTime: intervalTime,
+        lazyLoadThreshold: lazyLoadThreshold,
+    });
 }
 
 export {Carousel, carousel};

@@ -8,9 +8,7 @@ function create(...elements) {
 }
 
 function clone(boolean = false) {
-    this.selector = this.selector.cloneNode(boolean);
-
-    return this;
+    return this.selector.cloneNode(boolean);
 }
 
 function append(...elements) {

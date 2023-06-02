@@ -8,7 +8,7 @@ class Carousel {
         );
         this.controls =
             this.carousel.querySelector('[data-controls]') ??
-            this.#createControls();
+            this.createControls();
         this.tabs = Array.from(this.carousel.querySelectorAll('[data-tab]'));
         this.button = document.createElement('button');
         this.intervalTime = intervalTime;
@@ -22,22 +22,22 @@ class Carousel {
 
     // Initialization methods
     async init() {
-        await this.#preloadImages();
+        await this.preloadImages();
         this.cycleSlides();
         this.controls.addEventListener('click', this.handleControls.bind(this));
-        this.tabs.forEach((tab, index) =>
-            tab.setAttribute('data-index', index)
+        this.tabs.forEach((tab, i) =>
+            tab.setAttribute('data-index', i)
         );
     }
 
-    #createControls() {
+    createControls() {
         const controls = document.createElement('nav');
         controls.setAttribute('data-controls', '');
         this.carousel.appendChild(controls);
         return controls;
     }
 
-    async #preloadImages() {
+    async preloadImages() {
         const promises = this.slides
             .slice(0, this.lazyLoadThreshold)
             .map((slide) => {

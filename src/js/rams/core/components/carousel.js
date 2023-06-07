@@ -1,5 +1,3 @@
-import {rams} from '../../rams.js';
-
 class Carousel {
     constructor({carousel, intervalTime, lazyLoadThreshold} = {}) {
         this.carousel = document.querySelector(carousel);

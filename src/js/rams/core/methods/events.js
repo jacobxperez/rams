@@ -1,37 +1,29 @@
-function onload(handler, boolean = false) {
-    if (this._selector === null) {
-        window.addEventListener('load', handler, boolean);
+function addEvent() {
+    EventTarget.prototype.addEvent = function (
+        eventName,
+        handler,
+        boolean = false
+    ) {
+        this.addEventListener(eventName, handler, boolean);
 
         return this;
-    } else {
-        this.selector.addEventListener('load', handler, boolean);
-
-        return this;
-    }
-}
-
-function addEvent(eventName, handler, boolean = false) {
-    this.selector.addEventListener(eventName, handler, boolean);
+    };
 
     return this;
 }
 
-function removeEvent(eventName, handler, boolean = false) {
-    this.selector.removeEventListener(eventName, handler, boolean);
+function removeEvent() {
+    EventTarget.prototype.removeEvent = function (
+        eventName,
+        handler,
+        boolean = false
+    ) {
+        this.removeEventListener(eventName, handler, boolean);
+
+        return this;
+    };
 
     return this;
 }
 
-function click(handler, boolean = false) {
-    if (this._selector === null) {
-        document.addEventListener('click', handler, boolean);
-
-        return this;
-    } else {
-        this.selector.addEventListener('click', handler, boolean);
-
-        return this;
-    }
-}
-
-export {onload, addEvent, removeEvent, click};
+export {addEvent, removeEvent};

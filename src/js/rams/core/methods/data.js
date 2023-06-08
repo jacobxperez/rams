@@ -1,45 +1,76 @@
-function setData(dataName, value) {
-    this.selector.setAttribute(`data-${dataName}`, value);
+function setDataAttr() {
+    Element.prototype.setDataAttr = function (dataName, value) {
+        this.setAttribute(`data-${dataName}`, value);
+
+        return this;
+    };
 
     return this;
 }
 
-function removeData(dataName) {
-    this.selector.removeAttribute(`data-${dataName}`);
+function removeDataAttr() {
+    Element.prototype.removeDataAttr = function (dataName) {
+        this.removeAttribute(`data-${dataName}`);
+
+        return this;
+    };
 
     return this;
 }
 
-function getData(dataName, value) {
-    if (value) {
-        return this.selector.getAttribute(`data-${dataName}="${value}"`);
-    } else {
-        return this.selector.getAttribute(`data-${dataName}`);
-    }
+function getDataAttr() {
+    Element.prototype.getDataAttr = function (dataName, value) {
+        if (value) {
+            return this.getAttribute(`data-${dataName}="${value}"`);
+        } else {
+            return this.getAttribute(`data-${dataName}`);
+        }
+    };
+
+    return this;
 }
 
-function hasData(dataName, value) {
-    if (value) {
-        return this.selector.hasAttribute(`data-${dataName}="${value}"`);
-    } else {
-        return this.selector.hasAttribute(`data-${dataName}`);
-    }
+function hasDataAttr() {
+    Element.prototype.hasDataAttr = function (dataName, value) {
+        if (value) {
+            return this.hasAttribute(`data-${dataName}="${value}"`);
+        } else {
+            return this.hasAttribute(`data-${dataName}`);
+        }
+    };
+
+    return this;
 }
 
-function closestData(dataName, value) {
-    if (value) {
-        return this.selector.closest(`[data-${dataName}="${value}"]`);
-    } else {
-        return this.selector.closest(`[data-${dataName}]`);
-    }
+function closestDataAttr() {
+    Element.prototype.closestDataAttr = function (dataName, value) {
+        if (value) {
+            return this.closest(`[data-${dataName}="${value}"]`);
+        } else {
+            return this.closest(`[data-${dataName}]`);
+        }
+    };
+
+    return this;
 }
 
-function matchData(dataName, value) {
-    if (value) {
-        return this.selector.matches(`[data-${dataName}="${value}"]`);
-    } else {
-        return this.selector.matches(`[data-${dataName}]`);
-    }
+function matchDataAttr() {
+    Element.prototype.matchDataAttr = function (dataName, value) {
+        if (value) {
+            return this.matches(`[data-${dataName}="${value}"]`);
+        } else {
+            return this.matches(`[data-${dataName}]`);
+        }
+    };
+
+    return this;
 }
 
-export {setData, removeData, getData, hasData, closestData, matchData};
+export {
+    setDataAttr,
+    removeDataAttr,
+    getDataAttr,
+    hasDataAttr,
+    closestDataAttr,
+    matchDataAttr,
+};

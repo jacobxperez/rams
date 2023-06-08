@@ -4,7 +4,7 @@ export const sidebar = () => {
 
     if (meta.type === 'post') {
         // gets all the headings of the post
-        const getHeadings = getContent.querySelectorAll(
+        const getHeadings = getContent.selectorAll(
             'h1, h2, h3, h4, h5, h6'
         );
 

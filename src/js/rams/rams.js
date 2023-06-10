@@ -7,38 +7,39 @@ import {
     hasDataAttr,
     closestDataAttr,
     matchDataAttr,
+    toggleDataAttr,
 } from './core/methods/data.js';
 import {toggle} from './core/components/toggle.js';
 import {carousel} from './core/components/carousel.js';
 
-const rams = {
-    // Events
-    events() {
+class Rams {
+    constructor() {
+        this.#extensions();
+        this.toggle = toggle;
+        this.carousel = carousel;
+    }
+
+    #extensions() {
+        // Events
         addEvent();
         removeEvent();
-        return this;
-    },
-    // Selectors
-    selectors() {
+        // Selectors
         selector();
         selectorAll();
-        return this;
-    },
-    // Elements
-    elements() {
+        // Elements
         setDataAttr();
         removeDataAttr();
         getDataAttr();
         hasDataAttr();
         closestDataAttr();
         matchDataAttr();
-        return this;
-    },
+        toggleDataAttr();
+    }
     // Components
-    toggle,
-    carousel,
-};
+    toggle;
+    carousel;
+}
+
+const rams = new Rams();
 
 export {rams};
-
-rams.events().selectors().elements();

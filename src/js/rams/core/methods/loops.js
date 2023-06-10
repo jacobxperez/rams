@@ -18,4 +18,12 @@ function eachOf(callback) {
     }
 }
 
-export {each, eachOf};
+function eachIn(callback) {
+    if (callback && typeof callback == 'function') {
+        for (const property in object) {
+            callback(property);
+          }
+    }
+}
+
+export {each, eachOf, eachIn};

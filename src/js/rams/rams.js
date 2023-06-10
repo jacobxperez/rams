@@ -14,12 +14,12 @@ import {carousel} from './core/components/carousel.js';
 
 class Rams {
     constructor() {
-        this.#extensions();
+        Rams.#extensions();
         this.toggle = toggle;
         this.carousel = carousel;
     }
 
-    #extensions() {
+    static #extensions() {
         // Events
         addEvent();
         removeEvent();

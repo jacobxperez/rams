@@ -4,12 +4,8 @@ function addEvent() {
         handler,
         boolean = false
     ) {
-        this.addEventListener(eventName, handler, boolean);
-
-        return this;
+        return this.addEventListener(eventName, handler, boolean);
     };
-
-    return this;
 }
 
 function removeEvent() {
@@ -18,12 +14,8 @@ function removeEvent() {
         handler,
         boolean = false
     ) {
-        this.removeEventListener(eventName, handler, boolean);
-
-        return this;
+        return this.removeEventListener(eventName, handler, boolean);
     };
-
-    return this;
 }
 
 export {addEvent, removeEvent};

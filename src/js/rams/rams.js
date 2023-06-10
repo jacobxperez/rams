@@ -13,28 +13,18 @@ import {carousel} from './core/components/carousel.js';
 
 const rams = {
     // Events
-    addEvent,
-    removeEvent,
     events() {
         addEvent();
         removeEvent();
         return this;
     },
     // Selectors
-    selector,
-    selectorAll,
     selectors() {
         selector();
         selectorAll();
         return this;
     },
     // Elements
-    setDataAttr,
-    removeDataAttr,
-    getDataAttr,
-    hasDataAttr,
-    closestDataAttr,
-    matchDataAttr,
     elements() {
         setDataAttr();
         removeDataAttr();

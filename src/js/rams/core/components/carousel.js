@@ -234,4 +234,4 @@ function carousel(
     });
 }
 
-export {Carousel, carousel};
+export {carousel};

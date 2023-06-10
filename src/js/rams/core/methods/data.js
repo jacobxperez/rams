@@ -1,21 +1,13 @@
 function setDataAttr() {
     Element.prototype.setDataAttr = function (dataName, value) {
-        this.setAttribute(`data-${dataName}`, value);
-
-        return this;
+        return this.setAttribute(`data-${dataName}`, value);
     };
-
-    return this;
 }
 
 function removeDataAttr() {
     Element.prototype.removeDataAttr = function (dataName) {
-        this.removeAttribute(`data-${dataName}`);
-
-        return this;
+        return this.removeAttribute(`data-${dataName}`);
     };
-
-    return this;
 }
 
 function getDataAttr() {
@@ -26,8 +18,6 @@ function getDataAttr() {
             return this.getAttribute(`data-${dataName}`);
         }
     };
-
-    return this;
 }
 
 function hasDataAttr() {
@@ -38,8 +28,6 @@ function hasDataAttr() {
             return this.hasAttribute(`data-${dataName}`);
         }
     };
-
-    return this;
 }
 
 function closestDataAttr() {
@@ -50,8 +38,6 @@ function closestDataAttr() {
             return this.closest(`[data-${dataName}]`);
         }
     };
-
-    return this;
 }
 
 function matchDataAttr() {
@@ -62,8 +48,14 @@ function matchDataAttr() {
             return this.matches(`[data-${dataName}]`);
         }
     };
+}
 
-    return this;
+function toggleDataAttr() {
+    Element.prototype.toggleDataAttr = function (dataName, value) {
+        return this.hasDataAttr(dataName)
+            ? this.removeDataAttr(dataName)
+            : this.setDataAttr(dataName, value);
+    };
 }
 
 export {
@@ -73,4 +65,5 @@ export {
     hasDataAttr,
     closestDataAttr,
     matchDataAttr,
+    toggleDataAttr,
 };

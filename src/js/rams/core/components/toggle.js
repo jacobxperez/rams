@@ -13,14 +13,9 @@ export function toggle(...args) {
     }
 
     function toggleState(targetToggle) {
-        const state = targetToggle.hasDataAttr('state');
         const dropBox = targetToggle.closestDataAttr('dropbox');
-
         reset(dropBox);
-
-        state
-            ? targetToggle.removeDataAttr('state')
-            : targetToggle.setDataAttr('state', 'active');
+        targetToggle.toggleDataAttr('state', 'active');
     }
 
     document.addEvent('click', (e) => {

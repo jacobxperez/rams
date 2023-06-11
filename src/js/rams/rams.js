@@ -1,5 +1,4 @@
 import {addEvent, removeEvent} from './core/methods/events.js';
-import {selector, selectorAll} from './core/methods/selectors.js';
 import {
     setDataAttr,
     removeDataAttr,
@@ -23,9 +22,6 @@ class Rams {
         // Events
         addEvent();
         removeEvent();
-        // Selectors
-        selector();
-        selectorAll();
         // Elements
         setDataAttr();
         removeDataAttr();

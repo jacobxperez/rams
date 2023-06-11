@@ -14,7 +14,6 @@ class Carousel extends Array {
         this.lazyLoadThreshold = lazyLoadThreshold;
         this.currentIndex = 0;
         this.indicators = false;
-        this.paused = true;
         this.#init();
         this.play();
     }
@@ -211,7 +210,6 @@ class Carousel extends Array {
 
     // Play/pause/stop methods
     play(intervalTime = this.intervalTime) {
-        this.paused = false;
         this.interval = setInterval(() => {
             this.changeSlide('next');
         }, intervalTime);
@@ -220,7 +218,6 @@ class Carousel extends Array {
     }
 
     pause() {
-        this.paused = true;
         clearInterval(this.interval);
 
         return this;

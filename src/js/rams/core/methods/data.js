@@ -1,5 +1,5 @@
 function setDataAttr() {
-    Element.prototype.setDataAttr = function (dataName, value) {
+    Element.prototype.setDataAttr = function (dataName, value = '') {
         return this.setAttribute(`data-${dataName}`, value);
     };
 }

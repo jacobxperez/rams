@@ -7,19 +7,18 @@
     /* background-color: #333; */
 }
 
-[data-carousel="fullscreen"] {
-    width: 100%;
-    height: 100vh;
-}
-
 [data-carousel] img {
     width: 100%;
     height: 100%;
     cursor: default;
 }
 
-[data-carousel="fullscreen"] img {
+[data-carousel="fullscreen"] {
+    width: 100%;
     height: 100vh;
+}
+
+[data-carousel="fullscreen"] img {
     object-fit: cover;
     object-position: center;
     backface-visibility: hidden;

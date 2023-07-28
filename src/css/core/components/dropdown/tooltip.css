@@ -1,5 +1,6 @@
 [data-toggle~="tooltip"] {
     text-decoration: $tooltip-text-decoration;
+    text-underline-offset: $tooltip-underline-offset;
     cursor: help;
 }
 

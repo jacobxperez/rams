@@ -46,6 +46,7 @@ $leading: 1.5rem;
 $link-color: $primary;
 $link-text-decoration: underline solid 0.125rem hsl(0, 0%, 80%);
 $link-text-decoration-hover: underline solid 0.125rem;
+$link-underline-offset: .25rem;
 
 /* headings */
 $headings-color: hsl(0, 0%, 0%);
@@ -172,6 +173,7 @@ $tooltip-min-width: 26ch;
 $tooltip-background: hsl(0, 0%, 0%);
 $tooltip-text: hsl(0, 0%, 100%);
 $tooltip-text-decoration: underline dotted 0.125rem;
+$tooltip-underline-offset: .25rem;
 
 /* Grid */
 $grid-gap: 1.25rem;

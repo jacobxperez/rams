@@ -3,6 +3,7 @@
     background-color: transparent;
     color: $link-color;
     text-decoration: $link-text-decoration;
+    text-underline-offset: $link-underline-offset;
     cursor: pointer;
 }
 

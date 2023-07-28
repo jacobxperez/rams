@@ -4,101 +4,107 @@ class Carousel extends Array {
         this.carousel = document.querySelectorAll(carousel);
         this.carousel.forEach((item) => {
             this.push(item);
-            this.slides = Array.from(item.querySelectorAll('[data-slide]'));
-            this.controls =
-                item.querySelector('[data-controls]') ?? this.createControls();
-            this.tabs = Array.from(item.querySelectorAll('[data-tab]'));
+            item.addEvent('click', this.handleControls.bind(this));
+            if (!item.querySelector('[data-controls]')) {
+                const controls = document.createElement('nav');
+                controls.setDataAttr('controls');
+                this.forEach((item) => item.appendChild(controls));
+            }
+            const tabs = Array.from(item.querySelectorAll('[data-tab]'));
+            if (tabs) {
+                tabs.forEach((tab, i) => tab.setDataAttr('index', i));
+            }
         });
         this.createButton = document.createElement('button');
         this.intervalTime = intervalTime;
         this.lazyLoadThreshold = lazyLoadThreshold;
         this.currentIndex = 0;
         this.indicators = false;
-        this.#init();
+        this.preloadImages();
+        this.cycleSlides();
         this.play();
     }
 
-    // Initialization methods
-    async #init() {
-        await this.preloadImages();
-        this.cycleSlides();
-        this.forEach((item) =>
-            item.addEvent('click', this.handleControls.bind(this))
-        );
-        if (this.tabs) {
-            this.tabs.forEach((tab, i) => tab.setDataAttr('index', i));
-        }
-    }
-
-    createControls() {
-        const controls = document.createElement('nav');
-        controls.setDataAttr('controls');
-        this.forEach((item) => item.appendChild(controls));
-        return controls;
-    }
-
     async preloadImages() {
-        if (this.slides) {
-            const promises = this.slides
-                .slice(0, this.lazyLoadThreshold)
-                .map((slide) => {
-                    const image = slide.querySelector('img');
-                    if (!image) return;
-                    return new Promise((resolve, reject) => {
-                        const img = new Image();
-                        img.src = image.src;
-                        img.onload = resolve;
-                        img.onerror = reject;
+        this.forEach(async (item) => {
+            const slides = Array.from(item.querySelectorAll('[data-slide]'));
+
+            if (slides) {
+                const promises = slides
+                    .slice(0, this.lazyLoadThreshold)
+                    .map((slide) => {
+                        const image = slide.querySelector('img');
+                        if (!image) return;
+                        return new Promise((resolve, reject) => {
+                            const img = new Image();
+                            img.src = image.src;
+                            img.onload = resolve;
+                            img.onerror = reject;
+                        });
                     });
-                });
-            await Promise.all(promises);
-        }
+                await Promise.all(promises);
+            }
+        });
     }
 
     // Slide cycling methods
     cycleTabs() {
-        const currentTab = this.controls.querySelector(
-            `[data-index="${this.currentIndex}"]`
-        );
-        const prevTab = this.controls.querySelector(`[data-state="active"]`);
-        currentTab.setDataAttr('state', 'active');
-        if (prevTab) prevTab.removeDataAttr('state');
-        requestAnimationFrame(() => {
-            this.tabs
-                .filter((tab) => ![currentTab, prevTab].includes(tab))
-                .forEach((tab) => tab.removeDataAttr('state'));
+        this.forEach((item) => {
+            const controls = item.querySelector('[data-controls]');
+
+            const currentTab = controls.querySelector(
+                `[data-index="${this.currentIndex}"]`
+            );
+            const prevTab = controls.querySelector(`[data-state="active"]`);
+            currentTab.setDataAttr('state', 'active');
+            if (prevTab) prevTab.removeDataAttr('state');
+            const tabs = Array.from(item.querySelectorAll('[data-tab]'));
+            requestAnimationFrame(() => {
+                tabs.filter(
+                    (tab) => ![currentTab, prevTab].includes(tab)
+                ).forEach((tab) => tab.removeDataAttr('state'));
+            });
         });
     }
 
     cycleSlides() {
-        if (this.slides) {
-            const currentSlide = this.slides[this.currentIndex];
-            currentSlide.setDataAttr('state', 'current');
-            requestAnimationFrame(() => {
-                this.slides
-                    .filter((slide) => slide !== currentSlide)
-                    .forEach((slide) => slide.removeDataAttr('state'));
-            });
-        }
-        if (this.indicators) {
-            this.cycleTabs();
-        }
+        this.forEach((item) => {
+            const slides = Array.from(item.querySelectorAll('[data-slide]'));
+
+            if (slides) {
+                const currentSlide = slides[this.currentIndex];
+                currentSlide.setDataAttr('state', 'current');
+                requestAnimationFrame(() => {
+                    slides
+                        .filter((slide) => slide !== currentSlide)
+                        .forEach((slide) => slide.removeDataAttr('state'));
+                });
+            }
+            if (this.indicators) {
+                this.cycleTabs();
+            }
+        });
     }
 
     changeSlide(direction) {
-        if (this.slides) {
-            if (direction === 'next') {
-                this.currentIndex++;
-                if (this.currentIndex > this.slides.length - 1) {
-                    this.currentIndex = 0;
-                }
-            } else if (direction === 'prev') {
-                this.currentIndex--;
-                if (this.currentIndex < 0) {
-                    this.currentIndex = this.slides.length - 1;
+        this.forEach((item) => {
+            const slides = Array.from(item.querySelectorAll('[data-slide]'));
+
+            if (slides) {
+                if (direction === 'next') {
+                    this.currentIndex++;
+                    if (this.currentIndex > slides.length - 1) {
+                        this.currentIndex = 0;
+                    }
+                } else if (direction === 'prev') {
+                    this.currentIndex--;
+                    if (this.currentIndex < 0) {
+                        this.currentIndex = slides.length - 1;
+                    }
                 }
             }
-        }
+        });
+
         this.cycleSlides();
     }
 
@@ -119,33 +125,39 @@ class Carousel extends Array {
     }
 
     addControls() {
-        if (this.controls) {
+        this.forEach((item) => {
+            const controls = item.querySelector('[data-controls]');
             const prev = this.createButton.cloneNode(true);
             const next = this.createButton.cloneNode(true);
             prev.setDataAttr('button', 'prev-slide');
             next.setDataAttr('button', 'next-slide');
-            this.controls.appendChild(prev);
-            this.controls.appendChild(next);
-        }
+            controls.appendChild(prev);
+            controls.appendChild(next);
+        });
 
         return this;
     }
 
     addIndicators() {
-        if (this.slides) {
-            const indicator = document.createElement('div');
-            indicator.setDataAttr('indicator', 'tabs');
+        this.forEach((item) => {
+            const slides = Array.from(item.querySelectorAll('[data-slide]'));
 
-            for (let i = 0; i < this.slides.length; i++) {
-                const indicatorButton = this.createButton.cloneNode(true);
-                indicatorButton.setDataAttr('index', i);
-                indicatorButton.setDataAttr('tab', 'indicator');
-                indicator.appendChild(indicatorButton);
+            if (slides) {
+                const indicator = document.createElement('div');
+                indicator.setDataAttr('indicator', 'tabs');
+
+                for (let i = 0; i < slides.length; i++) {
+                    const indicatorButton = this.createButton.cloneNode(true);
+                    indicatorButton.setDataAttr('index', i);
+                    indicatorButton.setDataAttr('tab', 'indicator');
+                    indicator.appendChild(indicatorButton);
+                }
+
+                const controls = item.querySelector('[data-controls]');
+                controls.appendChild(indicator);
+                this.indicators = true;
             }
-
-            this.controls.appendChild(indicator);
-            this.indicators = true;
-        }
+        });
 
         return this;
     }

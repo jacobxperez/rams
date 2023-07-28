@@ -2,19 +2,19 @@ export function toggle(...args) {
     const clickedSet = new Set();
     const resetSet = new Set(['pop', 'tooltip', ...args]);
 
-    function reset(dropBox) {
-        if (!dropBox) {
-            clickedSet.forEach((item) => {
-                if (resetSet.has(item.dataset.toggle)) {
-                    item.removeDataAttr('state');
-                }
-            });
-        }
+    function reset() {
+        clickedSet.forEach((item) => {
+            if (resetSet.has(item.dataset.toggle)) {
+                item.removeDataAttr('state');
+            }
+        });
     }
 
     function toggleState(targetToggle) {
         const dropBox = targetToggle.closestDataAttr('dropbox');
-        reset(dropBox);
+        if (!dropBox && !targetToggle.hasDataAttr('state')) {
+            reset();
+        }
         targetToggle.toggleDataAttr('state', 'active');
     }
 
@@ -34,9 +34,8 @@ export function toggle(...args) {
                     },
                     true
                 );
+                toggleState(targetToggle);
             }
-
-            toggleState(targetToggle);
         } else {
             reset();
         }

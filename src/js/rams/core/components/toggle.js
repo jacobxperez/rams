@@ -12,9 +12,12 @@ export function toggle(...args) {
 
     function toggleState(targetToggle) {
         const dropBox = targetToggle.closestDataAttr('dropbox');
-        if (!dropBox && !targetToggle.hasDataAttr('state')) {
+        const checkState = targetToggle.hasDataAttr('state');
+
+        if (!dropBox && !checkState) {
             reset();
         }
+
         targetToggle.toggleDataAttr('state', 'active');
     }
 

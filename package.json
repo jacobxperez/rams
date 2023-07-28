@@ -1,7 +1,7 @@
 {
     "name": "rams",
     "version": "1.0.0",
-    "description": "A Class Less CSS Design System Framework",
+    "description": "A Class-Less CSS Design System Framework",
     "source": [
         "src/index.html"
     ],
@@ -22,7 +22,7 @@
         "front-end",
         "framework",
         "design system",
-        "class less architecture"
+        "class-less architecture"
     ],
     "author": "Jacob Perez",
     "license": "Apache-2.0",

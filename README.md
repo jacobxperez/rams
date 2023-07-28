@@ -1,6 +1,6 @@
 # [Rams](https://jacobxperez.github.io/rams/)
 
-A [Class Less](https://jacobxperez.github.io/blog/post/css/class-less-architecture/) CSS Design System Framework
+A [Class-Less](https://jacobxperez.github.io/blog/post/css/class-less-architecture/) CSS Design System Framework
 
 ---
 
@@ -18,7 +18,7 @@ A [Class Less](https://jacobxperez.github.io/blog/post/css/class-less-architectu
 
 ## About
 
-[Rams](https://jacobxperez.github.io/rams/) is a [class less](https://jacobxperez.github.io/blog/post/css/class-less-architecture/)
+[Rams](https://jacobxperez.github.io/rams/) is a [class-less](https://jacobxperez.github.io/blog/post/css/class-less-architecture/)
 css design system framework that utilizes the power of [data-attributes](https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes)
 for styling components.
 

@@ -71,8 +71,8 @@ template
     .fetchTemplate(templateURL, '#footer');
 
 rams.toggle();
-    // .carousel()
-    // .addControls()
-    // .addIndicators()
-    // .addTouchControls()
-    // .addKeyboardControls();
+// .carousel()
+// .addControls()
+// .addIndicators()
+// .addTouchControls()
+// .addKeyboardControls();

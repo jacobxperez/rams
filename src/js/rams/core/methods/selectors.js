@@ -5,7 +5,7 @@ function selector() {
 }
 
 function selectorAll() {
-    Node.prototype.selectorAll= function (selector) {
+    Node.prototype.selectorAll = function (selector) {
         return this.querySelectorAll(selector);
     };
 }

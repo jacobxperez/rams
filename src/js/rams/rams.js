@@ -9,13 +9,13 @@ import {
     toggleDataAttr,
 } from './core/methods/data.js';
 import {toggle} from './core/components/toggle.js';
-import {carousel} from './core/components/carousel.js';
+// import {carousel} from './core/components/carousel.js';
 
 class Rams {
     constructor() {
         Rams.#init();
         this.toggle = toggle;
-        this.carousel = carousel;
+        // this.carousel = carousel;
     }
 
     static #init() {
@@ -33,7 +33,7 @@ class Rams {
     }
     // Components
     toggle;
-    carousel;
+    // carousel;
 }
 
 const rams = new Rams();

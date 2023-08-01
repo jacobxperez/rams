@@ -10,6 +10,9 @@
         "*.html": [
             "parcel-optimizer-friendly-urls",
             "..."
+        ],
+        "*.js": [
+            "@parcel/optimizer-terser"
         ]
     }
 }

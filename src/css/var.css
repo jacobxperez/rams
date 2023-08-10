@@ -36,9 +36,9 @@ $border-color: hsl(0, 0%, 80%);
 
 /* Typography */
 $font-family: HelveticaNeue-Light, "Helvetica Neue Light", "Helvetica Neue",
-    Helvetica, Arial, "Nimbus Sans L", sans-serif;
+    Helvetica, "Nimbus Sans L", Arial, sans-serif;
 $font-size: 100%;
-$font-weight: 400;
+$font-weight: normal;
 $line-height: 1.5;
 $leading: 1.5rem;
 
@@ -51,7 +51,7 @@ $link-underline-offset: .25rem;
 /* headings */
 $headings-color: hsl(0, 0%, 0%);
 $headings-font-family: false;
-$headings-font-weight: 400;
+$headings-font-weight: normal;
 $headings-line-height: 1.2;
 $h1-font-size: clamp(2.488rem, 3vw, 4.209rem);
 $h2-font-size: clamp(2.074rem, 3vw, 3.157rem);

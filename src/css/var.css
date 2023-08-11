@@ -35,8 +35,8 @@ $border-width: 0.0625em;
 $border-color: hsl(0, 0%, 80%);
 
 /* Typography */
-$font-family: HelveticaNeue-Light, "Helvetica Neue Light", "Helvetica Neue",
-    Helvetica, "Nimbus Sans L", Arial, sans-serif;
+$font-family: "Helvetica Now Text", HelveticaNeue-Light, "Helvetica Neue Light",
+    "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, sans-serif;
 $font-size: 100%;
 $font-weight: normal;
 $line-height: 1.5;
@@ -46,13 +46,13 @@ $leading: 1.5rem;
 $link-color: $primary;
 $link-text-decoration: underline solid 0.125rem hsl(0, 0%, 80%);
 $link-text-decoration-hover: underline solid 0.125rem;
-$link-underline-offset: .25rem;
+$link-underline-offset: 0.25rem;
 
 /* headings */
-$headings-color: hsl(0, 0%, 0%);
 $headings-font-family: false;
 $headings-font-weight: normal;
 $headings-line-height: 1.2;
+$headings-color: hsl(0, 0%, 0%);
 $h1-font-size: clamp(2.488rem, 3vw, 4.209rem);
 $h2-font-size: clamp(2.074rem, 3vw, 3.157rem);
 $h3-font-size: clamp(1.728rem, 3vw, 2.369rem);
@@ -68,6 +68,10 @@ $blockquote-font-style: italic;
 /* pre & code */
 $mono-font-family: "Courier New", Courier, "Lucida Sans Typewriter",
     "Lucida Typewriter", "Nimbus Mono L", monospace;
+
+/* Print */
+$print-font-family: TimesNewRoman, "Times New Roman", Times, Baskerville,
+Georgia, "Nimbus Roman No9 L", serif;
 
 /* small */
 $small-font-size: 0.75rem;
@@ -102,7 +106,9 @@ $form-background: transparent;
 $form-text: $font-color-secondary;
 $form-text-active: $font-color;
 $form-text-area-min-height: 6.25rem;
-$form-transition: color 0.2s ease, border-color 0.2s ease,
+$form-transition:
+    color 0.2s ease,
+    border-color 0.2s ease,
     background-color 0.2s ease;
 
 /* Button */
@@ -114,7 +120,9 @@ $button-border-radius: false;
 $button-background: hsla(0, 0%, 50%, 0.1);
 $button-background-active: hsla(0, 0%, 50%, 0.2);
 $button-text-color: $font-color;
-$button-transition: color 0.2s ease, border-color 0.2s ease,
+$button-transition:
+    color 0.2s ease,
+    border-color 0.2s ease,
     background-color 0.2s ease;
 
 /* Feedback */
@@ -144,7 +152,9 @@ $navbar-anchor-text-active: hsl(0, 0%, 70%);
 $anchor-padding-y: $space-y;
 $anchor-padding-x: $space-x;
 $anchor-text-active: $font-color;
-$anchor-transition: color 0.2s ease, border-color 0.2s ease,
+$anchor-transition:
+    color 0.2s ease,
+    border-color 0.2s ease,
     background-color 0.2s ease;
 
 /* Line Tab */
@@ -160,7 +170,9 @@ $breadcrumb-gap: 0.375em;
 
 /* Dropbox */
 $dropbox-min-width: 10rem;
-$dropbox-transition: opacity 0.3s ease, visibility 0.3s ease;
+$dropbox-transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
 
 /* Dropbox Menu */
 $dropbox-menu-background-color: #fff;
@@ -173,7 +185,7 @@ $tooltip-min-width: 26ch;
 $tooltip-background: hsl(0, 0%, 0%);
 $tooltip-text: hsl(0, 0%, 100%);
 $tooltip-text-decoration: underline dotted 0.125rem;
-$tooltip-underline-offset: .25rem;
+$tooltip-underline-offset: 0.25rem;
 
 /* Grid */
 $grid-gap: 1.25rem;
@@ -190,10 +202,6 @@ $screen-small-max-width: 42.5em; /* small screen 680px */
 $screen-medium-min-width: 42.5625em; /* medium screen 681px*/
 $screen-medium-max-width: 61.1875em; /* medium screen 979px */
 $screen-large-min-width: 61.25em; /* large screens 980px */
-
-/* Print */
-$print-font-family: TimesNewRoman, "Times New Roman", Times, Baskerville,
-    Georgia, "Nimbus Roman No9 L", serif;
 
 /* Selection */
 $selection: $primary;

@@ -4,7 +4,7 @@ class Carousel extends Array {
         this.carousel = document.querySelectorAll(carousel);
         this.carousel.forEach((item) => {
             this.push(item);
-            item.addEvent('click', this.handleControls.bind(this));
+            item.addEventListener('click', this.handleControls.bind(this));
             if (!item.querySelector('[data-controls]')) {
                 const controls = document.createElement('nav');
                 controls.setDataAttr('controls');
@@ -165,9 +165,12 @@ class Carousel extends Array {
     // Touch control methods
     addTouchControls() {
         this.forEach((item) => {
-            item.addEvent('touchstart', this.handleTouchStart.bind(this));
-            item.addEvent('touchmove', this.handleTouchMove.bind(this));
-            item.addEvent('touchend', this.handleTouchEnd.bind(this));
+            item.addEventListener(
+                'touchstart',
+                this.handleTouchStart.bind(this)
+            );
+            item.addEventListener('touchmove', this.handleTouchMove.bind(this));
+            item.addEventListener('touchend', this.handleTouchEnd.bind(this));
         });
 
         return this;
@@ -201,7 +204,7 @@ class Carousel extends Array {
 
     // Keyboard control methods
     addKeyboardControls() {
-        document.addEvent('keydown', this.handleKeyDown.bind(this));
+        document.addEventListener('keydown', this.handleKeyDown.bind(this));
         return this;
     }
 

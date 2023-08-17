@@ -21,7 +21,7 @@ export function toggle(...args) {
         targetToggle.toggleDataAttr('state', 'active');
     }
 
-    document.addEvent('click', (e) => {
+    document.addEventListener('click', (e) => {
         const targetToggle = e.target.closestDataAttr('toggle');
 
         if (targetToggle) {
@@ -29,7 +29,7 @@ export function toggle(...args) {
                 return;
             } else {
                 clickedSet.add(targetToggle);
-                targetToggle.addEvent(
+                targetToggle.addEventListener(
                     'click',
                     (e) => {
                         toggleState(targetToggle);

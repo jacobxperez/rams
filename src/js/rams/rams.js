@@ -1,4 +1,3 @@
-import {addEvent, removeEvent} from './core/methods/events.js';
 import {
     setDataAttr,
     removeDataAttr,
@@ -19,10 +18,7 @@ class Rams {
     }
 
     static #init() {
-        // Events
-        addEvent();
-        removeEvent();
-        // Elements
+        // Data Attributes
         setDataAttr();
         removeDataAttr();
         getDataAttr();

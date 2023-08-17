@@ -2,8 +2,8 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="200"
-   height="200"
+   width="512"
+   height="512"
    viewBox="0 0 52.916668 52.916664"
    version="1.1"
    id="svg1"
@@ -14,21 +14,22 @@
   <g
      id="layer10"
      style="display:inline"
-     transform="translate(-324.15054,63.500001)">
+     transform="translate(-320.71876,63.500001)">
     <rect
        style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.264583;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
        id="rect59"
        width="52.916664"
        height="52.916664"
-       x="324.15054"
+       x="320.71872"
        y="-63.5" />
   </g>
   <g
      id="layer1"
-     transform="translate(-324.15054,63.500001)">
+     transform="translate(-320.71876,63.500001)">
     <g
        id="g13"
-       transform="translate(0,0.99108399)">
+       transform="translate(-3.4317947,0.99108399)"
+       style="display:inline">
       <rect
          style="font-variation-settings:normal;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.264583;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000"
          id="rect5"

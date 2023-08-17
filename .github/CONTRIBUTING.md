@@ -1,8 +1,10 @@
 # Contributing
 
-Welcome designers and developers, before you contribute to this project is important to read the
-following sections to better understand the vision of the project. Use the [issue tracker](https://github.com/jacobxperez/rams/issues) for
-[bug reports](#bug-reports), [feature requests](#feature-requests), and submitting [pull requests](#pull-requests).
+Welcome designers and developers, before you contribute to this project is
+important to read the following sections to better understand the vision of the
+project. Use the [issue tracker](https://github.com/jacobxperez/rams/issues) for
+[bug reports](#bug-reports), [feature requests](#feature-requests), and
+submitting [pull requests](#pull-requests).
 
 ---
 

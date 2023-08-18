@@ -70,7 +70,7 @@ If you are interested in contributing to this project, please read our
 
 ## LICENSE
 
-Copyright (C) 2023 [Jacob Perez](https://github.com/jacobxperez)
+Copyright (C) 2023 [Jacob Perez](https://jacobxperez.github.io/blog/)
 
 ### Content
 

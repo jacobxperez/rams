@@ -25,8 +25,8 @@ let header = `
 
 let main = `
         <div data-container="fit" data-grid="main">
-            <aside id="aside"></aside>
-            <article id="content"></article>
+            <aside id="aside" data-column="3 small-4"></aside>
+            <article id="content" data-column="9 small-4"></article>
         </div>
         `;
 

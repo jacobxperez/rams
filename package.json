@@ -16,14 +16,6 @@
         "type": "git",
         "url": "git+https://github.com/jacobxperez/rams.git"
     },
-    "keywords": [
-        "css",
-        "scss",
-        "front-end",
-        "framework",
-        "design system",
-        "class-less architecture"
-    ],
     "author": "Jacob Perez",
     "license": "Apache-2.0",
     "bugs": {

@@ -7,7 +7,7 @@
     ],
     "scripts": {
         "docs": "parcel docs/index.html --no-source-maps",
-        "dev": "parcel --no-source-maps",
+        "dev": "parcel serve --no-source-maps",
         "watch": "parcel watch --no-source-maps",
         "build": "parcel build --no-source-maps --no-content-hash --public-url /",
         "rams": "parcel build docs/index.html --no-content-hash --no-source-maps --public-url /rams"

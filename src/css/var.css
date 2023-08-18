@@ -34,9 +34,16 @@ $space-x: 0.75rem;
 $border-width: 0.0625em;
 $border-color: hsl(0, 0%, 80%);
 
+/* Fonts */
+$font-sans: "Helvetica Now Text", HelveticaNeue-Light, "Helvetica Neue Light",
+"Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, sans-serif;
+$font-serif: TimesNewRoman, "Times New Roman", Times, Baskerville,
+Georgia, "Nimbus Roman No9 L", serif;
+$font-mono: "Courier New", Courier, "Lucida Sans Typewriter",
+"Lucida Typewriter", "Nimbus Mono L", monospace;
+
 /* Typography */
-$font-family: "Helvetica Now Text", HelveticaNeue-Light, "Helvetica Neue Light",
-    "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, sans-serif;
+$font-family: $font-sans;
 $font-size: 100%;
 $font-weight: normal;
 $line-height: 1.5;
@@ -61,17 +68,14 @@ $h5-font-size: clamp(1.2rem, 3vw, 1.333rem);
 $h6-font-size: $font-size;
 
 /* blockquote */
-$blockquote-font-family: TimesNewRoman, "Times New Roman", Times, Baskerville,
-    Georgia, "Nimbus Roman No9 L", serif;
+$blockquote-font-family: $font-serif;
 $blockquote-font-style: italic;
 
-/* pre & code */
-$mono-font-family: "Courier New", Courier, "Lucida Sans Typewriter",
-    "Lucida Typewriter", "Nimbus Mono L", monospace;
+/* pre/code/kdb/samp */
+$pre-font-family: $font-mono;
 
-/* Print */
-$print-font-family: TimesNewRoman, "Times New Roman", Times, Baskerville,
-Georgia, "Nimbus Roman No9 L", serif;
+/* print */
+$print-font-family: $font-sans;
 
 /* small */
 $small-font-size: 0.75rem;
@@ -198,10 +202,10 @@ $container-margin-bottom: calc($leading * 4);
 $container-gap: 1.25rem;
 
 /* Breakpoints */
-$screen-small-max-width: 42.5em; /* small screen 680px */
-$screen-medium-min-width: 42.5625em; /* medium screen 681px*/
-$screen-medium-max-width: 61.1875em; /* medium screen 979px */
-$screen-large-min-width: 61.25em; /* large screens 980px */
+$screen-small-max-width: 42.5em; /* 680px */
+$screen-medium-min-width: 42.5625em; /* 681px*/
+$screen-medium-max-width: 61.1875em; /* 979px */
+$screen-large-min-width: 61.25em; /* 980px */
 
 /* Selection */
 $selection: $primary;

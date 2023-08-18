@@ -26,7 +26,7 @@ not, a designer may be overwhelmed by the array of components at his disposal.
 Polyfills, Houdini, and other similar technologies are all attempts to bypass
 the limitations of JavaScript and CSS. However, without the fundamental principles
 of design, their use becomes arbitrary. The developer; is trained to dominate his
-technology, while the designer; is forced to work within his limitations.By limiting
+technology, while the designer; is forced to work within his limitations. By limiting
 or restricting the choices, the designer; is forced to prioritize the essentials,
 and because he has not; been trained as a developer, he uses his limitation with
 technology to discover new designs.

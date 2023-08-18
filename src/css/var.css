@@ -34,7 +34,7 @@ $space-x: 0.75rem;
 $border-width: 0.0625em;
 $border-color: hsl(0, 0%, 80%);
 
-/* Fonts */
+/* Font Stack */
 $font-sans: "Helvetica Now Text", HelveticaNeue-Light, "Helvetica Neue Light",
 "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, sans-serif;
 $font-serif: TimesNewRoman, "Times New Roman", Times, Baskerville,

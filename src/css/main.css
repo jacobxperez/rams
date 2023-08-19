@@ -44,6 +44,7 @@
 
 /* Fonts */
 @import "core/fonts/icons.css";
+@import "core/fonts/atkinson-hyperlegible.css";
 
 /* Utilities */
 @import "core/utilities/position.css";

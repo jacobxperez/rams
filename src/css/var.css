@@ -1,6 +1,6 @@
 :root {
     --background: hsl(0, 0%, 100%);
-    --font-color: hsl(0, 0%, 30%);
+    --font-color: hsl(0, 0%, 25%);
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -32,10 +32,10 @@ $tertiary-active: hsl(0, 0%, 60%);
 $space-y: 0.5rem;
 $space-x: 0.75rem;
 $border-width: 0.0625em;
-$border-color: hsl(0, 0%, 80%);
+$border-color: hsl(0, 0%, 70%);
 
 /* Font Stack */
-$font-sans: "Helvetica Now Text", HelveticaNeue-Light, "Helvetica Neue Light",
+$font-sans: "Atkinson Hyperlegible", HelveticaNeue-Light, "Helvetica Neue Light",
     "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, sans-serif;
 $font-serif: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia,
     "Nimbus Roman No9 L", serif;
@@ -51,8 +51,8 @@ $leading: 1.5rem;
 
 /* link */
 $link-color: $primary;
-$link-text-decoration: underline solid 0.125rem hsl(0, 0%, 80%);
-$link-text-decoration-hover: underline solid 0.125rem;
+$link-text-decoration: underline solid 0.125rem $border-color;
+$link-text-decoration-hover: underline solid 0.125rem $link-color;
 $link-underline-offset: 0.25rem;
 
 /* headings */

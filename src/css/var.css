@@ -35,7 +35,8 @@ $border-width: 0.0625em;
 $border-color: hsl(0, 0%, 70%);
 
 /* Font Stack */
-$font-sans: "Atkinson Hyperlegible", sans-serif;
+$font-sans: "Atkinson Hyperlegible", HelveticaNeue-Light, "Helvetica Neue Light",
+    "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, sans-serif;
 $font-serif: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia,
     "Nimbus Roman No9 L", serif;
 $font-mono: "Courier New", Courier, "Lucida Sans Typewriter",

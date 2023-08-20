@@ -43,8 +43,9 @@
 @import "custom/grid.css";
 
 /* Fonts */
-@import "core/fonts/icons.css";
 @import "core/fonts/atkinson-hyperlegible.css";
+@import "core/fonts/fira-code.css";
+@import "core/fonts/icons.css";
 
 /* Utilities */
 @import "core/utilities/position.css";

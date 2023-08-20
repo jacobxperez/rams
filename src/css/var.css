@@ -39,7 +39,7 @@ $font-sans: "Atkinson Hyperlegible", HelveticaNeue-Light, "Helvetica Neue Light"
     "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, sans-serif;
 $font-serif: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia,
     "Nimbus Roman No9 L", serif;
-$font-mono: "Courier New", Courier, "Lucida Sans Typewriter",
+$font-mono: "Fira Code", "Courier New", Courier, "Lucida Sans Typewriter",
     "Lucida Typewriter", "Nimbus Mono L", monospace;
 
 /* Typography */
@@ -92,7 +92,7 @@ $print-font-family: $font-sans;
 $small-font-size: 0.75rem;
 
 /* mark */
-$mark-background: hsl(50, 100%, 50%);
+$mark-background: hsl(50, 100%, 70%);
 $mark-text: hsl(0, 0%, 0%);
 
 /* hr */
@@ -219,5 +219,5 @@ $screen-medium-max-width: 61.1875em; /* 979px */
 $screen-large-min-width: 61.25em; /* 980px */
 
 /* Selection */
-$selection: $primary;
-$selection-text: $primary-text;
+$selection: hsl(132, 50%, 80%);
+$selection-text: hsl(0, 0%, 0%);

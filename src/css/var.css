@@ -5,8 +5,8 @@
 
 /* @media (prefers-color-scheme: dark) {
     :root {
-        --background: hsl(0, 0%, 20%);
-        --font-color: hsl(0, 0%, 80%);
+        --background: hsl(0, 0%, 15%);
+        --font-color: hsl(0, 0%, 90%);
     }
 } */
 
@@ -50,7 +50,7 @@ $line-height: 1.5;
 $leading: 1.5rem;
 
 /* link */
-$link-color: $primary;
+$link-color: inherit;
 $link-text-decoration: underline solid 0.125rem;
 $link-text-decoration-hover: none;
 $link-underline-offset: 0.25rem;
@@ -115,7 +115,7 @@ $form-padding-y: $space-y;
 $form-padding-x: $space-x;
 $form-border-width: $border-width;
 $form-border-color: $border-color;
-$form-border-active: $primary;
+$form-border-active: $font-color;
 $form-border-radius: false;
 $form-background: transparent;
 $form-text: $font-color-secondary;

@@ -1,9 +1,11 @@
 :--headings {
+    @if $headings-color != false {
+        color: $headings-color;
+    }
     @if $headings-font-family != false {
         font-family: $headings-font-family;
     }
     font-weight: $headings-font-weight;
-    color: $headings-color;
 }
 
 h1,

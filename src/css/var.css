@@ -1,11 +1,11 @@
 :root {
     --background: hsl(0, 0%, 100%);
-    --font-color: hsl(0, 0%, 25%);
+    --font-color: hsl(0, 0%, 20%);
 }
 
 /* @media (prefers-color-scheme: dark) {
     :root {
-        --background: hsl(0, 0%, 10%);
+        --background: hsl(0, 0%, 20%);
         --font-color: hsl(0, 0%, 60%);
     }
 } */
@@ -32,7 +32,7 @@ $tertiary-active: hsl(0, 0%, 60%);
 $space-y: 0.5rem;
 $space-x: 0.75rem;
 $border-width: 0.0625em;
-$border-color: hsl(0, 0%, 70%);
+$border-color: hsl(0, 0%, 60%);
 
 /* Font Stack */
 $font-sans: "Atkinson Hyperlegible", HelveticaNeue-Light, "Helvetica Neue Light",
@@ -51,8 +51,8 @@ $leading: 1.5rem;
 
 /* link */
 $link-color: $primary;
-$link-text-decoration: underline solid 0.125rem $border-color;
-$link-text-decoration-hover: underline solid 0.125rem $link-color;
+$link-text-decoration: underline solid 0.125rem;
+$link-text-decoration-hover: none;
 $link-underline-offset: 0.25rem;
 
 /* headings */
@@ -97,8 +97,8 @@ $mark-text: hsl(0, 0%, 0%);
 
 /* hr */
 $hr-border-style: solid;
-$hr-border-width: $border-width;
-$hr-border-color: hsl(0, 0%, 0%);
+$hr-border-width: 0.125rem;
+$hr-border-color: var(--font-color);
 
 /* Lists */
 $ol-list-style-type: decimal;
@@ -132,8 +132,8 @@ $button-padding-x: $space-x;
 $button-border-width: $border-width;
 $button-border-color: transparent;
 $button-border-radius: false;
-$button-background: hsla(0, 0%, 50%, 0.1);
-$button-background-active: hsla(0, 0%, 50%, 0.2);
+$button-background: hsla(0, 0%, 40%, 0.1);
+$button-background-active: hsla(0, 0%, 40%, 0.2);
 $button-text-color: $font-color;
 $button-transition:
     color 0.2s ease,
@@ -166,7 +166,8 @@ $navbar-anchor-text-active: hsl(0, 0%, 70%);
 /* Anchor */
 $anchor-padding-y: $space-y;
 $anchor-padding-x: $space-x;
-$anchor-text-active: $font-color;
+$anchor-color: $primary;
+$anchor-active-color: $font-color-secondary;
 $anchor-transition:
     color 0.2s ease,
     border-color 0.2s ease,

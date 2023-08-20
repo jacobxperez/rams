@@ -10,7 +10,7 @@
         "dev": "parcel serve --no-source-maps",
         "watch": "parcel watch --no-source-maps",
         "build": "parcel build --no-source-maps --no-content-hash --public-url /",
-        "rams": "parcel build docs/index.html --no-content-hash --no-source-maps --public-url /rams"
+        "rams": "parcel build docs/index.html --no-content-hash --no-source-maps --public-url /rams --dist-dir ramsLive/"
     },
     "repository": {
         "type": "git",

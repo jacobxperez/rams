@@ -1,12 +1,12 @@
 :root {
     --background: hsl(0, 0%, 100%);
-    --font-color: hsl(0, 0%, 20%);
+    --font-color: hsl(0, 0%, 0%);
 }
 
 /* @media (prefers-color-scheme: dark) {
     :root {
         --background: hsl(0, 0%, 20%);
-        --font-color: hsl(0, 0%, 60%);
+        --font-color: hsl(0, 0%, 80%);
     }
 } */
 
@@ -32,7 +32,7 @@ $tertiary-active: hsl(0, 0%, 60%);
 $space-y: 0.5rem;
 $space-x: 0.75rem;
 $border-width: 0.0625em;
-$border-color: hsl(0, 0%, 60%);
+$border-color: $font-color-secondary;
 
 /* Font Stack */
 $font-sans: "Atkinson Hyperlegible", HelveticaNeue-Light, "Helvetica Neue Light",
@@ -58,7 +58,7 @@ $link-underline-offset: 0.25rem;
 /* headings */
 $headings-font-family: false;
 $headings-font-weight: normal;
-$headings-color: hsl(0, 0%, 0%);
+$headings-color: false;
 
 $h1-font-size: clamp(2.488rem, 3vw, 4.209rem);
 $h1-line-height: 1.2;
@@ -89,7 +89,7 @@ $pre-font-family: $font-mono;
 $print-font-family: $font-sans;
 
 /* small */
-$small-font-size: 0.75rem;
+$small-font-size: 0.875rem;
 
 /* mark */
 $mark-background: hsl(50, 100%, 70%);
@@ -141,17 +141,17 @@ $button-transition:
     background-color 0.2s ease;
 
 /* Feedback */
-$success: hsl(145, 54%, 30%);
+$success: hsl(145, 80%, 25%);
 $success-text: hsl(0, 0%, 100%);
-$success-active: hsl(145, 54%, 25%);
+$success-active: hsl(145, 80%, 30%);
 
-$warning: hsl(25, 100%, 60%);
-$warning-text: hsl(0, 0%, 100%);
-$warning-active: hsl(25, 100%, 55%);
+$warning: hsl(40, 100%, 60%);
+$warning-text: hsl(0, 0%, 0%);
+$warning-active: hsl(45, 100%, 60%);
 
-$danger: hsl(5, 72%, 50%);
+$danger: hsl(0, 75%, 50%);
 $danger-text: hsl(0, 0%, 100%);
-$danger-active: hsl(5, 72%, 45%);
+$danger-active: hsl(0, 88%, 50%);
 
 /* Disabled */
 $disabled: hsl(0, 0%, 90%);
@@ -191,15 +191,15 @@ $dropbox-transition:
     visibility 0.3s ease;
 
 /* Dropbox Menu */
-$dropbox-menu-background-color: #fff;
-$dropbox-menu-border: $border-width solid #333;
-$anchor-menu-background-color: #333;
-$anchor-menu-color: #fff;
+$dropbox-menu-background-color: var(--background);
+$dropbox-menu-border: $border-width solid var(--font-color);
+$anchor-menu-background-color: var(--font-color);
+$anchor-menu-color: var(--background);
 
 /* Tooltip */
-$tooltip-min-width: 26ch;
-$tooltip-background: hsl(0, 0%, 0%);
-$tooltip-text: hsl(0, 0%, 100%);
+$tooltip-min-width: 25ch;
+$tooltip-background: var(--font-color);
+$tooltip-text: var(--background);
 $tooltip-text-decoration: underline dotted 0.125rem;
 $tooltip-underline-offset: 0.25rem;
 

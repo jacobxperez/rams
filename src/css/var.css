@@ -39,8 +39,8 @@ $font-sans: "Atkinson Hyperlegible", HelveticaNeue-Light, "Helvetica Neue Light"
     "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, sans-serif;
 $font-serif: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia,
     "Nimbus Roman No9 L", serif;
-$font-mono: "Fira Code", "Courier New", Courier, "Lucida Sans Typewriter",
-    "Lucida Typewriter", "Nimbus Mono L", monospace;
+$font-mono: "Fira Code", "Lucida Console", "Lucida Sans Typewriter", monaco,
+    "Bitstream Vera Sans Mono", monospace;
 
 /* Typography */
 $font-family: $font-sans;

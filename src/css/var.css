@@ -50,7 +50,7 @@ $line-height: 1.5;
 $leading: 1.5rem;
 
 /* link */
-$link-color: inherit;
+$link-color: false;
 $link-text-decoration: underline solid 0.125rem;
 $link-text-decoration-hover: none;
 $link-underline-offset: 0.25rem;

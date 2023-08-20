@@ -1,7 +1,9 @@
 :where(a) {
     text-decoration: none;
     background-color: transparent;
-    color: $link-color;
+    @if $link-color != false {
+        color: $link-color;
+    }
     text-decoration: $link-text-decoration;
     text-underline-offset: $link-underline-offset;
     cursor: pointer;

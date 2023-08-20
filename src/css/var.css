@@ -46,16 +46,16 @@ $background-gradient: false;
 $font-color: var(--neutral-000);
 
 $primary: var(--neutral-000);
-$primary-text: var(--neutral-100);
 $primary-active: var(--neutral-020);
+$primary-text: var(--neutral-100);
 
 $secondary: var(--neutral-020);
-$secondary-text: var(--neutral-100);
 $secondary-active: var(--neutral-030);
+$secondary-text: var(--neutral-100);
 
 $tertiary: var(--neutral-040);
-$tertiary-text: var(--neutral-100);
 $tertiary-active: var(--neutral-050);
+$tertiary-text: var(--neutral-100);
 
 /* Box Model */
 $space-y: 0.5rem;
@@ -171,16 +171,16 @@ $button-transition:
 
 /* Feedback */
 $success: var(--success-050);
-$success-text: var(--neutral-100);
 $success-active: var(--success-000);
+$success-text: var(--neutral-100);
 
 $warning: var(--warning-050);
-$warning-text: var(--neutral-000);
 $warning-active: var(--warning-100);
+$warning-text: var(--neutral-000);
 
 $danger: var(--danger-050);
-$danger-text: var(--neutral-100);
 $danger-active: var(--danger-000);
+$danger-text: var(--neutral-100);
 
 /* Disabled */
 $disabled: var(--neutral-090);

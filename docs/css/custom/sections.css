@@ -2,11 +2,11 @@
     margin-bottom: $leading;
     padding-top: calc($leading * 3);
     padding-bottom: calc($leading * 2);
-    background-color: var(--font-color);
-    color: var(--background);
+    background-color: var(--neutral-000);
+    color: var(--neutral-100);
 
     & :--headings {
-        color: var(--background);
+        color: var(--neutral-100);
     }
 }
 

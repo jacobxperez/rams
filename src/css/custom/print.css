@@ -1,8 +1,8 @@
 /* Modify print styles to your project specifications */
 @media print {
     :root {
-        --background: white;
-        --font-color: black;
+        --neutral-100: white;
+        --neutral-000: black;
     }
 
     html,

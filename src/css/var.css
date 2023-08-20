@@ -1,38 +1,67 @@
 :root {
-    --background: hsl(0, 0%, 100%);
-    --font-color: hsl(0, 0%, 0%);
+    --neutral-100: hsl(0, 0%, 100%);
+    --neutral-090: hsl(0, 0%, 90%);
+    --neutral-080: hsl(0, 0%, 80%);
+    --neutral-070: hsl(0, 0%, 70%);
+    --neutral-060: hsl(0, 0%, 60%);
+    --neutral-050: hsl(0, 0%, 50%);
+    --neutral-040: hsl(0, 0%, 40%);
+    --neutral-030: hsl(0, 0%, 30%);
+    --neutral-020: hsl(0, 0%, 20%);
+    --neutral-010: hsl(0, 0%, 10%);
+    --neutral-000: hsl(0, 0%, 0%);
+
+    --success-100: hsl(145, 80%, 30%);
+    --success-050: hsl(145, 80%, 25%);
+    --success-000: hsl(145, 80%, 20%);
+
+    --warning-100: hsl(40, 100%, 60%);
+    --warning-050: hsl(40, 100%, 55%);
+    --warning-000: hsl(40, 100%, 45%);
+
+    --danger-100: hsl(0, 75%, 55%);
+    --danger-050: hsl(0, 75%, 50%);
+    --danger-000: hsl(0, 75%, 45%);
 }
 
 /* @media (prefers-color-scheme: dark) {
     :root {
-        --background: hsl(0, 0%, 15%);
-        --font-color: hsl(0, 0%, 90%);
+        --neutral-000: hsl(0, 0%, 100%);
+        --neutral-010: hsl(0, 0%, 90%);
+        --neutral-020: hsl(0, 0%, 80%);
+        --neutral-030: hsl(0, 0%, 70%);
+        --neutral-040: hsl(0, 0%, 60%);
+        --neutral-050: hsl(0, 0%, 50%);
+        --neutral-060: hsl(0, 0%, 40%);
+        --neutral-070: hsl(0, 0%, 30%);
+        --neutral-080: hsl(0, 0%, 20%);
+        --neutral-090: hsl(0, 0%, 10%);
+        --neutral-100: hsl(0, 0%, 0%);
     }
 } */
 
 /* Colors */
-$background: var(--background);
+$background: var(--neutral-100);
 $background-gradient: false;
-$font-color: var(--font-color);
-$font-color-secondary: hsl(0, 0%, 50%);
+$font-color: var(--neutral-000);
 
-$primary: hsl(0, 0%, 0%);
-$primary-text: hsl(0, 0%, 100%);
-$primary-active: hsl(0, 0%, 20%);
+$primary: var(--neutral-000);
+$primary-text: var(--neutral-100);
+$primary-active: var(--neutral-020);
 
-$secondary: hsl(0, 0%, 30%);
-$secondary-text: hsl(0, 0%, 100%);
-$secondary-active: hsl(0, 0%, 40%);
+$secondary: var(--neutral-020);
+$secondary-text: var(--neutral-100);
+$secondary-active: var(--neutral-030);
 
-$tertiary: hsl(0, 0%, 50%);
-$tertiary-text: hsl(0, 0%, 100%);
-$tertiary-active: hsl(0, 0%, 60%);
+$tertiary: var(--neutral-040);
+$tertiary-text: var(--neutral-100);
+$tertiary-active: var(--neutral-050);
 
 /* Box Model */
 $space-y: 0.5rem;
 $space-x: 0.75rem;
 $border-width: 0.0625em;
-$border-color: $font-color-secondary;
+$border-color: var(--neutral-050);
 
 /* Font Stack */
 $font-sans: "Atkinson Hyperlegible", HelveticaNeue-Light, "Helvetica Neue Light",
@@ -92,13 +121,13 @@ $print-font-family: $font-sans;
 $small-font-size: 0.875rem;
 
 /* mark */
-$mark-background: hsl(50, 100%, 70%);
-$mark-text: hsl(0, 0%, 0%);
+$mark-background: var(--warning-050);
+$mark-text: var(--neutral-000);
 
 /* hr */
 $hr-border-style: solid;
 $hr-border-width: 0.125rem;
-$hr-border-color: var(--font-color);
+$hr-border-color: var(--neutral-000);
 
 /* Lists */
 $ol-list-style-type: decimal;
@@ -118,7 +147,7 @@ $form-border-color: $border-color;
 $form-border-active: $font-color;
 $form-border-radius: false;
 $form-background: transparent;
-$form-text: $font-color-secondary;
+$form-text: var(--neutral-050);
 $form-text-active: $font-color;
 $form-text-area-min-height: 6.25rem;
 $form-transition:
@@ -132,8 +161,8 @@ $button-padding-x: $space-x;
 $button-border-width: $border-width;
 $button-border-color: transparent;
 $button-border-radius: false;
-$button-background: hsla(0, 0%, 40%, 0.1);
-$button-background-active: hsla(0, 0%, 40%, 0.2);
+$button-background: var(--neutral-090);
+$button-background-active: var(--neutral-080);
 $button-text-color: $font-color;
 $button-transition:
     color 0.2s ease,
@@ -141,33 +170,33 @@ $button-transition:
     background-color 0.2s ease;
 
 /* Feedback */
-$success: hsl(145, 80%, 25%);
-$success-text: hsl(0, 0%, 100%);
-$success-active: hsl(145, 80%, 30%);
+$success: var(--success-050);
+$success-text: var(--neutral-100);
+$success-active: var(--success-000);
 
-$warning: hsl(40, 100%, 60%);
-$warning-text: hsl(0, 0%, 0%);
-$warning-active: hsl(45, 100%, 60%);
+$warning: var(--warning-050);
+$warning-text: var(--neutral-000);
+$warning-active: var(--warning-100);
 
-$danger: hsl(0, 75%, 50%);
-$danger-text: hsl(0, 0%, 100%);
-$danger-active: hsl(0, 88%, 50%);
+$danger: var(--danger-050);
+$danger-text: var(--neutral-100);
+$danger-active: var(--danger-000);
 
 /* Disabled */
-$disabled: hsl(0, 0%, 90%);
-$disabled-text: hsl(0, 0%, 50%);
+$disabled: var(--neutral-090);
+$disabled-text: var(--neutral-050);
 
 /* Navbar */
-$navbar-background: hsl(0, 0%, 0%);
-$navbar-dropbox-background: hsl(0, 0%, 10%);
-$navbar-anchor-text: hsl(0, 0%, 100%);
-$navbar-anchor-text-active: hsl(0, 0%, 70%);
+$navbar-background: var(--neutral-000);
+$navbar-dropbox-background: var(--neutral-010);
+$navbar-anchor-text: var(--neutral-100);
+$navbar-anchor-text-active: var(--neutral-070);
 
 /* Anchor */
 $anchor-padding-y: $space-y;
 $anchor-padding-x: $space-x;
 $anchor-color: $primary;
-$anchor-active-color: $font-color-secondary;
+$anchor-active-color: var(--neutral-050);
 $anchor-transition:
     color 0.2s ease,
     border-color 0.2s ease,
@@ -176,7 +205,7 @@ $anchor-transition:
 /* Line Tab */
 $anchor-line-border-width: 0.125em;
 $anchor-line-border-color: $border-color;
-$anchor-line-text: $font-color-secondary;
+$anchor-line-text: var(--neutral-050);
 $anchor-line-text-active: $font-color;
 $anchor-line-border-active: $primary;
 
@@ -191,15 +220,15 @@ $dropbox-transition:
     visibility 0.3s ease;
 
 /* Dropbox Menu */
-$dropbox-menu-background-color: var(--background);
-$dropbox-menu-border: $border-width solid var(--font-color);
-$anchor-menu-background-color: var(--font-color);
-$anchor-menu-color: var(--background);
+$dropbox-menu-background-color: var(--neutral-100);
+$dropbox-menu-border: $border-width solid var(--neutral-000);
+$anchor-menu-background-color: var(--neutral-000);
+$anchor-menu-color: var(--neutral-100);
 
 /* Tooltip */
 $tooltip-min-width: 25ch;
-$tooltip-background: var(--font-color);
-$tooltip-text: var(--background);
+$tooltip-background: var(--neutral-000);
+$tooltip-text: var(--neutral-100);
 $tooltip-text-decoration: underline dotted 0.125rem;
 $tooltip-underline-offset: 0.25rem;
 
@@ -220,5 +249,5 @@ $screen-medium-max-width: 61.1875em; /* 979px */
 $screen-large-min-width: 61.25em; /* 980px */
 
 /* Selection */
-$selection: hsl(132, 50%, 80%);
-$selection-text: hsl(0, 0%, 0%);
+$selection: var(--neutral-080);
+$selection-text: var(--neutral-000);

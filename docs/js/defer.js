@@ -48,7 +48,7 @@ let templateURL;
 location.hostname === 'localhost' || location.hostname === '127.0.0.1'
     ? (templateURL = window.location.origin + '/templates/a.be13ff7e.html')
     : (templateURL =
-          window.location.origin + '/rams/templates/a.e67a1128.html');
+          window.location.origin + '/rams/templates/a.d97ff952.html');
 
 // create main layout
 let layout = `

@@ -3,16 +3,6 @@
     column-gap: $grid-gap;
 }
 
-[data-grid="$(grid-name)"] {
-    grid-template-columns: repeat($(grid-large-columns), 1fr);
-
-    @for $i from 1 to $grid-large-columns {
-        [data-column~="$(i)"] {
-            grid-column: span $(i);
-        }
-    }
-}
-
 @mixin _small-grid() {
     [data-grid="$(grid-name)"] {
         grid-template-columns: repeat($(grid-small-columns), 1fr);

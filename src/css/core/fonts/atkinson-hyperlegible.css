@@ -4,7 +4,7 @@
         local("Atkinson Hyperlegible"),
         url("/src/fonts/atkinson-hyperlegible/AtkinsonHyperlegible-Regular.woff2")
             format("woff2");
-    font-weight: normal;
+    font-weight: 400;
     font-style: normal;
 }
 
@@ -14,7 +14,7 @@
         local("Atkinson Hyperlegible"),
         url("/src/fonts/atkinson-hyperlegible/AtkinsonHyperlegible-Italic.woff2")
             format("woff2");
-    font-weight: normal;
+    font-weight: 400;
     font-style: italic;
 }
 
@@ -24,7 +24,7 @@
         local("Atkinson Hyperlegible"),
         url("/src/fonts/atkinson-hyperlegible/AtkinsonHyperlegible-Bold.woff2")
             format("woff2");
-    font-weight: bold;
+    font-weight: 700;
     font-style: normal;
 }
 
@@ -34,6 +34,6 @@
         local("Atkinson Hyperlegible"),
         url("/src/fonts/atkinson-hyperlegible/AtkinsonHyperlegible-BoldItalic.woff2")
             format("woff2");
-    font-weight: bold;
+    font-weight: 700;
     font-style: italic;
 }

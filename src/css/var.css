@@ -243,7 +243,7 @@ $grid-large-columns: 12;
 $container-min-width: 20rem;
 $container-max-width: 62.5rem;
 $container-margin-top: calc($leading * 3);
-$container-margin-bottom: calc($leading * 4);
+$container-margin-bottom: calc($leading * 2);
 $container-gap: 1.25rem;
 
 /* Breakpoints */

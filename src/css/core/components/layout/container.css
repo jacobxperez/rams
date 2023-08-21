@@ -9,7 +9,7 @@
     }
 
     :where(body) > &:last-child {
-        margin-bottom: $container-margin-top;
+        margin-bottom: $container-margin-bottom;
     }
 }
 

@@ -10,6 +10,10 @@
     }
 }
 
+[data-section="footer"] {
+    margin-bottom: $container-margin-bottom;
+}
+
 /* :where([data-section~="header"]) a {
     color: inherit;
     text-decoration: underline solid 0.125rem;

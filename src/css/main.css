@@ -39,9 +39,6 @@
 @import "core/components/buttons/link.css";
 @import "core/components/buttons/disabled.css";
 
-/* Custom Modules */
-@import "custom/grid.css";
-
 /* Fonts */
 @import "core/fonts/atkinson-hyperlegible.css";
 @import "core/fonts/fira-code.css";

@@ -11,16 +11,16 @@
     --neutral-010: hsl(0, 0%, 10%);
     --neutral-000: hsl(0, 0%, 0%);
 
-    --success-100: hsl(145, 80%, 30%);
-    --success-050: hsl(145, 80%, 25%);
+    --success-020: hsl(145, 80%, 30%);
+    --success-010: hsl(145, 80%, 25%);
     --success-000: hsl(145, 80%, 20%);
 
-    --warning-100: hsl(40, 100%, 60%);
-    --warning-050: hsl(40, 100%, 55%);
+    --warning-020: hsl(40, 100%, 60%);
+    --warning-010: hsl(40, 100%, 55%);
     --warning-000: hsl(40, 100%, 45%);
 
-    --danger-100: hsl(0, 75%, 55%);
-    --danger-050: hsl(0, 75%, 50%);
+    --danger-020: hsl(0, 75%, 55%);
+    --danger-010: hsl(0, 75%, 50%);
     --danger-000: hsl(0, 75%, 45%);
 }
 
@@ -43,7 +43,6 @@
 /* Colors */
 $background: var(--neutral-100);
 $background-gradient: false;
-$font-color: var(--neutral-000);
 
 $primary: var(--neutral-000);
 $primary-active: var(--neutral-020);
@@ -65,17 +64,18 @@ $border-color: var(--neutral-050);
 
 /* Font Stack */
 $font-sans: "Atkinson Hyperlegible", HelveticaNeue-Light, "Helvetica Neue Light",
-    "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, sans-serif;
+    "Helvetica Neue", Helvetica, Arial, sans-serif;
 $font-serif: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia,
-    "Nimbus Roman No9 L", serif;
+    serif;
 $font-mono: "Fira Mono", "Lucida Console", "Lucida Sans Typewriter", monaco,
     "Bitstream Vera Sans Mono", monospace;
 
 /* Typography */
-$font-family: $font-sans;
-$font-size: 100%;
-$font-weight: normal;
-$line-height: 1.5;
+$body-font-color: var(--neutral-000);
+$body-font-family: $font-sans;
+$body-font-size: 100%;
+$body-font-weight: normal;
+$body-line-height: 1.5;
 $leading: 1.5rem;
 
 /* link */
@@ -104,8 +104,11 @@ $h4-line-height: 1.4;
 $h5-font-size: clamp(1.2rem, 3vw, 1.333rem);
 $h5-line-height: 1.5;
 
-$h6-font-size: $font-size;
+$h6-font-size: $body-font-size;
 $h6-line-height: 1.5;
+
+/* small */
+$small-font-size: 0.875rem;
 
 /* blockquote */
 $blockquote-font-family: $font-serif;
@@ -117,11 +120,8 @@ $pre-font-family: $font-mono;
 /* print */
 $print-font-family: $font-sans;
 
-/* small */
-$small-font-size: 0.875rem;
-
 /* mark */
-$mark-background: var(--warning-050);
+$mark-background: var(--warning-010);
 $mark-text: var(--neutral-000);
 
 /* hr */
@@ -136,19 +136,17 @@ $ul-list-style-type: disc;
 $ul-list-style-type-child: circle;
 
 /* Table */
-$table-cell-padding-y: $space-y;
-$table-cell-padding-x: $space-x;
+$table-cell-padding: $space-y $space-x;
 
 /* Form */
-$form-padding-y: $space-y;
-$form-padding-x: $space-x;
+$form-padding: $space-y $space-x;
 $form-border-width: $border-width;
 $form-border-color: $border-color;
-$form-border-active: $font-color;
+$form-border-active: $body-font-color;
 $form-border-radius: false;
 $form-background: transparent;
 $form-text: var(--neutral-050);
-$form-text-active: $font-color;
+$form-text-active: $body-font-color;
 $form-text-area-min-height: 6.25rem;
 $form-transition:
     color 0.2s ease,
@@ -156,29 +154,28 @@ $form-transition:
     background-color 0.2s ease;
 
 /* Button */
-$button-padding-y: $space-y;
-$button-padding-x: $space-x;
+$button-padding: $space-y $space-x;
 $button-border-width: $border-width;
 $button-border-color: transparent;
 $button-border-radius: false;
 $button-background: var(--neutral-090);
 $button-background-active: var(--neutral-080);
-$button-text-color: $font-color;
+$button-text-color: $body-font-color;
 $button-transition:
     color 0.2s ease,
     border-color 0.2s ease,
     background-color 0.2s ease;
 
 /* Feedback */
-$success: var(--success-050);
+$success: var(--success-010);
 $success-active: var(--success-000);
 $success-text: var(--neutral-100);
 
-$warning: var(--warning-050);
-$warning-active: var(--warning-100);
+$warning: var(--warning-010);
+$warning-active: var(--warning-020);
 $warning-text: var(--neutral-000);
 
-$danger: var(--danger-050);
+$danger: var(--danger-010);
 $danger-active: var(--danger-000);
 $danger-text: var(--neutral-100);
 
@@ -187,14 +184,14 @@ $disabled: var(--neutral-090);
 $disabled-text: var(--neutral-050);
 
 /* Navbar */
+$navbar-padding: 0.25rem 0;
 $navbar-background: var(--neutral-000);
 $navbar-dropbox-background: var(--neutral-010);
 $navbar-anchor-text: var(--neutral-100);
 $navbar-anchor-text-active: var(--neutral-070);
 
 /* Anchor */
-$anchor-padding-y: $space-y;
-$anchor-padding-x: $space-x;
+$anchor-padding: $space-y $space-x;
 $anchor-color: $primary;
 $anchor-active-color: var(--neutral-050);
 $anchor-transition:
@@ -206,7 +203,7 @@ $anchor-transition:
 $anchor-line-border-width: 0.125em;
 $anchor-line-border-color: $border-color;
 $anchor-line-text: var(--neutral-050);
-$anchor-line-text-active: $font-color;
+$anchor-line-text-active: $body-font-color;
 $anchor-line-border-active: $primary;
 
 /* Breadcrumb */

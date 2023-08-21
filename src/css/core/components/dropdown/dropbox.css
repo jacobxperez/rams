@@ -3,7 +3,7 @@
     display: none;
     visibility: hidden;
     min-width: $dropbox-min-width;
-    color: $font-color;
+    color: $body-font-color;
     transition: $dropbox-transition;
     opacity: 0;
 }

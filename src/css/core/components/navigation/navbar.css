@@ -1,5 +1,6 @@
 [data-navbar] {
     width: 100%;
+    padding: $navbar-padding;
     background-color: $navbar-background;
     color: $navbar-anchor-text-active;
 }
@@ -35,5 +36,6 @@
 }
 
 [data-dropbox~="navbar"] {
+    margin: $navbar-padding;
     background-color: $navbar-dropbox-background;
 }

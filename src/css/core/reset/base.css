@@ -23,14 +23,14 @@
 html {
     @if $background-gradient == false {
         background: $background;
-    } @else {
+    } @else  {
         background: $background-gradient;
     }
-    color: $font-color;
-    font-size: $font-size;
-    font-family: $font-family;
-    font-weight: $font-weight;
-    line-height: $line-height;
+    color: $body-font-color;
+    font-size: $body-font-size;
+    font-family: $body-font-family;
+    font-weight: $body-font-weight;
+    line-height: $body-line-height;
     text-align: left;
     overflow-wrap: break-word;
     scroll-behavior: smooth;

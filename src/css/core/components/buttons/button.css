@@ -1,6 +1,6 @@
 [data-button] {
     display: inline-block;
-    padding: $button-padding-y $button-padding-x;
+    padding: $button-padding;
     border: $button-border-width solid $button-border-color;
     background-color: $button-background;
     color: $button-text-color;

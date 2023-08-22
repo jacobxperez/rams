@@ -65,15 +65,15 @@ $border-color: var(--neutral-050);
 /* Font Stack */
 $font-sans: "Atkinson Hyperlegible", HelveticaNeue-Light, "Helvetica Neue Light",
     "Helvetica Neue", Helvetica, Arial, sans-serif;
-$font-serif: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia,
-    serif;
+$font-serif: Xcharter, Charter, Georgia, Times, "Times New Roman", serif;
 $font-mono: "Fira Mono", "Lucida Console", "Lucida Sans Typewriter", monaco,
     "Bitstream Vera Sans Mono", monospace;
 
 /* Typography */
+$root-font-size: 100%;
+$body-font-size: 1rem;
 $body-font-color: var(--neutral-000);
 $body-font-family: $font-sans;
-$body-font-size: 100%;
 $body-font-weight: normal;
 $body-line-height: 1.5;
 $leading: 1.5rem;
@@ -184,7 +184,6 @@ $disabled: var(--neutral-090);
 $disabled-text: var(--neutral-050);
 
 /* Navbar */
-$navbar-padding: 0.25rem 0;
 $navbar-background: var(--neutral-000);
 $navbar-dropbox-background: var(--neutral-010);
 $navbar-anchor-text: var(--neutral-100);

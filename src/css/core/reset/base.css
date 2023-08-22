@@ -26,14 +26,18 @@ html {
     } @else  {
         background: $background-gradient;
     }
+    font-size: $root-font-size;
+    text-align: left;
+    overflow-wrap: break-word;
+    scroll-behavior: smooth;
+}
+
+body {
     color: $body-font-color;
     font-size: $body-font-size;
     font-family: $body-font-family;
     font-weight: $body-font-weight;
     line-height: $body-line-height;
-    text-align: left;
-    overflow-wrap: break-word;
-    scroll-behavior: smooth;
 }
 
 img,

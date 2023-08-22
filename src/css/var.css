@@ -1,4 +1,12 @@
 :root {
+    --font-ui: "Atkinson Hyperlegible", system-ui, "Segoe UI", Roboto, Helvetica,
+        Arial, sans-serif;
+    --font-sans: "Atkinson Hyperlegible", HelveticaNeue-Light,
+        "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --font-serif: Xcharter, Charter, Georgia, Times, "Times New Roman", serif;
+    --font-mono: "Fira Mono", "Lucida Console", "Lucida Sans Typewriter", monaco,
+        "Bitstream Vera Sans Mono", monospace;
+
     --neutral-100: hsl(0, 0%, 100%);
     --neutral-090: hsl(0, 0%, 90%);
     --neutral-080: hsl(0, 0%, 80%);
@@ -62,18 +70,11 @@ $space-x: 0.75rem;
 $border-width: 0.0625em;
 $border-color: var(--neutral-050);
 
-/* Font Stack */
-$font-sans: "Atkinson Hyperlegible", HelveticaNeue-Light, "Helvetica Neue Light",
-    "Helvetica Neue", Helvetica, Arial, sans-serif;
-$font-serif: Xcharter, Charter, Georgia, Times, "Times New Roman", serif;
-$font-mono: "Fira Mono", "Lucida Console", "Lucida Sans Typewriter", monaco,
-    "Bitstream Vera Sans Mono", monospace;
-
 /* Typography */
 $root-font-size: 100%;
 $body-font-size: 1rem;
 $body-font-color: var(--neutral-000);
-$body-font-family: $font-sans;
+$body-font-family: var(--font-sans);
 $body-font-weight: normal;
 $body-line-height: 1.5;
 $leading: 1.5rem;
@@ -85,7 +86,7 @@ $link-text-decoration-hover: none;
 $link-underline-offset: 0.3125rem;
 
 /* headings */
-$headings-font-family: false;
+$headings-font-family: var(--font-sans);
 $headings-font-weight: normal;
 $headings-color: false;
 
@@ -111,14 +112,14 @@ $h6-line-height: 1.5;
 $small-font-size: 0.875rem;
 
 /* blockquote */
-$blockquote-font-family: $font-serif;
+$blockquote-font-family: var(--font-serif);
 $blockquote-font-style: italic;
 
 /* pre/code/kdb/samp */
-$pre-font-family: $font-mono;
+$pre-font-family: var(--font-mono);
 
 /* print */
-$print-font-family: $font-sans;
+$print-font-family: var(--font-sans);
 
 /* mark */
 $mark-background: var(--warning-010);
@@ -139,6 +140,7 @@ $ul-list-style-type-child: circle;
 $table-cell-padding: $space-y $space-x;
 
 /* Form */
+$form-font-family: var(--font-ui);
 $form-padding: $space-y $space-x;
 $form-border-width: $border-width;
 $form-border-color: $border-color;
@@ -154,6 +156,7 @@ $form-transition:
     background-color 0.2s ease;
 
 /* Button */
+$button-font-family: var(--font-ui);
 $button-padding: $space-y $space-x;
 $button-border-width: $border-width;
 $button-border-color: transparent;
@@ -190,6 +193,7 @@ $navbar-anchor-text: var(--neutral-100);
 $navbar-anchor-text-active: var(--neutral-070);
 
 /* Anchor */
+$anchor-font-family: var(--font-ui);
 $anchor-padding: $space-y $space-x;
 $anchor-color: $primary;
 $anchor-active-color: var(--neutral-050);

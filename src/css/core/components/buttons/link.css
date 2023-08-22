@@ -2,6 +2,7 @@
     text-decoration: none;
     background-color: transparent;
     color: $link-color;
+    font-family: $body-font-family;
     text-decoration: $link-text-decoration;
     text-underline-offset: $link-underline-offset;
 

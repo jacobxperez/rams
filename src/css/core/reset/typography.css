@@ -86,7 +86,7 @@ sub {
 
 hr {
     display: block;
-    margin: $leading 0;
+    margin: calc($leading / 2) 0;
     min-height: 0.0625rem;
     border-top: $hr-border-width $hr-border-style $hr-border-color;
 }

@@ -84,7 +84,7 @@ $leading: 1.5rem;
 $link-color: false;
 $link-text-decoration: underline solid 0.125rem;
 $link-text-decoration-hover: none;
-$link-underline-offset: 0.3125rem;
+$link-underline-offset: 0.3125em;
 
 /* headings */
 $headings-font-family: var(--font-sans);

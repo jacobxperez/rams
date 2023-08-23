@@ -3,6 +3,10 @@
     column-gap: $grid-gap;
 }
 
+[data-column="all"] {
+    grid-column: 1 / -1;
+}
+
 @mixin _small-grid() {
     [data-grid="$(grid-name)"] {
         grid-template-columns: repeat($(grid-small-columns), 1fr);

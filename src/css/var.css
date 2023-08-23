@@ -69,6 +69,7 @@ $space-y: 0.5rem;
 $space-x: 0.75rem;
 $border-width: 0.0625em;
 $border-color: var(--neutral-050);
+$border-radius: 0.25rem;
 
 /* Typography */
 $root-font-size: 100%;
@@ -145,7 +146,7 @@ $form-padding: $space-y $space-x;
 $form-border-width: $border-width;
 $form-border-color: $border-color;
 $form-border-active: $body-font-color;
-$form-border-radius: false;
+$form-border-radius: $border-radius;
 $form-background: transparent;
 $form-text: var(--neutral-050);
 $form-text-active: $body-font-color;
@@ -160,7 +161,7 @@ $button-font-family: var(--font-ui);
 $button-padding: $space-y $space-x;
 $button-border-width: $border-width;
 $button-border-color: transparent;
-$button-border-radius: false;
+$button-border-radius: $border-radius;
 $button-background: var(--neutral-090);
 $button-background-active: var(--neutral-080);
 $button-text-color: $body-font-color;

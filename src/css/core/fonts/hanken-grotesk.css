@@ -2,18 +2,18 @@
     font-family: "Hanken Grotesk";
     src:
         local("Hanken Grotesk"),
-        url("/src/fonts/hanken-grotesk/HankenGrotesk-Italic.woff2")
+        url("/src/fonts/hanken-grotesk/HankenGrotesk.woff2")
             format("woff2-variations");
     font-weight: 1 999;
-    font-style: oblique 0deg 20deg;
+    font-style: normal;
 }
 
 @font-face {
     font-family: "Hanken Grotesk";
     src:
         local("Hanken Grotesk"),
-        url("/src/fonts/hanken-grotesk/HankenGrotesk.woff2")
+        url("/src/fonts/hanken-grotesk/HankenGrotesk-Italic.woff2")
             format("woff2-variations");
     font-weight: 1 999;
-    font-style: normal;
+    font-style: italic;
 }

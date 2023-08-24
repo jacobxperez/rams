@@ -1,24 +1,12 @@
 /* Modify print styles to your project specifications */
 @media print {
-    :root {
-        --neutral-100: white;
-        --neutral-000: black;
-    }
-
     html,
     body {
-        font-family: $print-font-family;
         height: auto;
     }
 
     nav {
         display: none;
-    }
-
-    @if $headings-font-family != false {
-        :--headings {
-            font-family: $print-font-family;
-        }
     }
 
     [data-container] {

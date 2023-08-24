@@ -1,8 +1,8 @@
 :root {
     --font-ui: "Atkinson Hyperlegible", system-ui, "Segoe UI", Roboto, Helvetica,
         Arial, sans-serif;
-    --font-sans: "Atkinson Hyperlegible", HelveticaNeue-Light,
-        "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --font-sans: "Hanken Grotesk", HelveticaNeue-Light, "Helvetica Neue Light",
+        "Helvetica Neue", Helvetica, Arial, sans-serif;
     --font-serif: Xcharter, Charter, Georgia, Times, "Times New Roman", serif;
     --font-mono: "Fira Mono", "Lucida Console", "Lucida Sans Typewriter", monaco,
         "Bitstream Vera Sans Mono", monospace;
@@ -75,8 +75,8 @@ $border-radius: 0.25rem;
 $root-font-size: 100%;
 $body-font-size: 1rem;
 $body-font-color: var(--neutral-000);
-$body-font-family: var(--font-sans);
-$body-font-weight: normal;
+$body-font-family: var(--font-ui);
+$body-font-weight: 400;
 $body-line-height: 1.5;
 $leading: 1.5rem;
 
@@ -88,7 +88,7 @@ $link-underline-offset: 0.3125em;
 
 /* headings */
 $headings-font-family: var(--font-sans);
-$headings-font-weight: normal;
+$headings-font-weight: 400;
 $headings-color: false;
 
 $h1-font-size: clamp(2.488rem, 3vw, 4.209rem);
@@ -254,5 +254,5 @@ $screen-medium-max-width: 61.1875em; /* 979px */
 $screen-large-min-width: 61.25em; /* 980px */
 
 /* Selection */
-$selection: var(--neutral-080);
+$selection: hsl(40, 80%, 80%);
 $selection-text: var(--neutral-000);

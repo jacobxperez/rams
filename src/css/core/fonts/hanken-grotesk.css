@@ -5,7 +5,6 @@
         url("/src/fonts/hanken-grotesk/HankenGrotesk.woff2")
             format("woff2-variations");
     font-weight: 100 1000;
-    font-stretch: 75% 125%;
     font-style: normal;
 }
 
@@ -16,6 +15,5 @@
         url("/src/fonts/hanken-grotesk/HankenGrotesk-Italic.woff2")
             format("woff2-variations");
     font-weight: 100 1000;
-    font-stretch: 75% 125%;
     font-style: oblique 0deg 20deg;
 }

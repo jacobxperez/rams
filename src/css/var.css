@@ -91,19 +91,19 @@ $headings-font-family: var(--font-sans);
 $headings-font-weight: 400;
 $headings-color: false;
 
-$h1-font-size: clamp(2.488rem, 3vw, 4.209rem);
+$h1-font-size: clamp(2.488rem, 3vw + 1rem, 4.209rem);
 $h1-line-height: 1.2;
 
-$h2-font-size: clamp(2.074rem, 3vw, 3.157rem);
+$h2-font-size: clamp(2.074rem, 3vw + 1rem, 3.157rem);
 $h2-line-height: 1.2;
 
-$h3-font-size: clamp(1.728rem, 3vw, 2.369rem);
+$h3-font-size: clamp(1.728rem, 3vw + 1rem, 2.369rem);
 $h3-line-height: 1.3;
 
-$h4-font-size: clamp(1.44rem, 3vw, 1.777rem);
+$h4-font-size: clamp(1.44rem, 3vw + 1rem, 1.777rem);
 $h4-line-height: 1.4;
 
-$h5-font-size: clamp(1.2rem, 3vw, 1.333rem);
+$h5-font-size: clamp(1.2rem, 3vw + 1rem, 1.333rem);
 $h5-line-height: 1.5;
 
 $h6-font-size: $body-font-size;
@@ -240,7 +240,7 @@ $grid-small-columns: 4;
 $grid-medium-columns: 12;
 $grid-large-columns: 12;
 
-/* Wrapper */
+/* Container */
 $container-min-width: 20rem;
 $container-max-width: 62.5rem;
 $container-margin-top: calc($leading * 3);

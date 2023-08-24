@@ -119,9 +119,6 @@ $blockquote-font-style: italic;
 /* pre/code/kdb/samp */
 $pre-font-family: var(--font-mono);
 
-/* print */
-$print-font-family: var(--font-sans);
-
 /* mark */
 $mark-background: var(--warning-010);
 $mark-text: var(--neutral-000);

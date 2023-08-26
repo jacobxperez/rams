@@ -1,7 +1,7 @@
 [data-section~="header"] {
     margin-bottom: $leading;
-    padding-top: calc($leading * 3);
-    padding-bottom: calc($leading * 2);
+    padding-top: calc($leading * 4);
+    padding-bottom: calc($leading * 3);
     background-color: var(--neutral-000);
     color: var(--neutral-100);
 

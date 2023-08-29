@@ -1,6 +1,6 @@
 # [Rams](https://jacobxperez.github.io/rams/)
 
-A [Class-Less](https://jacobxperez.github.io/blog/post/css/class-less-architecture/) CSS Design System Framework
+[Class-Less](https://jacobxperez.github.io/blog/post/css/class-less-architecture/) CSS Design System Framework
 
 ---
 

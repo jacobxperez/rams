@@ -1,11 +1,11 @@
 :root {
-    --font-sans: "Atkinson Hyperlegible", HelveticaNeue-Light,
+    --font-sans: "Atkinson Hyperlegible Pro", HelveticaNeue-Light,
         "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
     --font-serif: Xcharter, Charter, Georgia, Times, "Times New Roman", serif;
     --font-mono: "Fira Mono", "Lucida Console", "Lucida Sans Typewriter", monaco,
         "Bitstream Vera Sans Mono", monospace;
-    --font-ui: "Atkinson Hyperlegible", system-ui, "Segoe UI", Roboto, Helvetica,
-        Arial, sans-serif;
+    --font-ui: "Atkinson Hyperlegible Pro", system-ui, "Segoe UI", Roboto,
+        Helvetica, Arial, sans-serif;
 
     --neutral-100: hsl(0, 0%, 100%);
     --neutral-090: hsl(0, 0%, 90%);
@@ -78,6 +78,7 @@ $body-font-color: var(--neutral-000);
 $body-font-family: var(--font-sans);
 $body-font-weight: 400;
 $body-line-height: 1.5;
+$body-font-variant-numeric: slashed-zero;
 $leading: 1.5rem;
 
 /* link */

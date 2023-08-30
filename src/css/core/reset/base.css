@@ -38,7 +38,9 @@ body {
     font-family: $body-font-family;
     font-weight: $body-font-weight;
     line-height: $body-line-height;
-    font-variant-numeric: $body-font-variant-numeric;
+    @if $body-font-variant-numeric != false {
+        font-variant-numeric: $body-font-variant-numeric;
+    }
 }
 
 img,

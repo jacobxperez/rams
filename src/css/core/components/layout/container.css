@@ -2,7 +2,7 @@
     margin: 0 auto;
     padding-left: $container-gap;
     padding-right: $container-gap;
-    min-width: $container-min-width;
+    width: $container-width;
 
     :where(body) > &:first-child {
         margin-top: $container-margin-top;
@@ -13,6 +13,6 @@
     }
 }
 
-[data-container~="fit"] {
-    max-width: $container-max-width;
+[data-container~="full"] {
+    width: 100%;
 }

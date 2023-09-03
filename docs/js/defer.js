@@ -18,13 +18,13 @@ let nav = `
     `;
 
 let header = `
-        <div id="header" data-container="fit">
+        <div id="header" data-container>
             ${meta.title}
         </div>
         `;
 
 let main = `
-        <div data-container="fit" data-grid="main">
+        <div data-container data-grid="main">
             <aside id="aside" data-column="large-3 medium-3 small-4"></aside>
             <article id="content" data-column="large-9 medium-9 small-4"></article>
         </div>
@@ -32,13 +32,13 @@ let main = `
 
 if (meta.type === 'fullPage') {
     main = `
-        <div id="content" data-container="fit" data-grid="main"></div>
+        <div id="content" data-container data-grid="main"></div>
         `;
 }
 
 let footer = `
     <footer data-section="footer">
-        <div id="footer" data-container="fit">
+        <div id="footer" data-container>
         </div>
     </footer>
     `;

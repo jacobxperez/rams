@@ -58,6 +58,7 @@ On your terminal run these scripts to compile
 These examples incorporate Rams with custom modules
 
 - [Jacob Perez](https://github.com/jacobxperez/blog): I am a front-end web developer and designer.
+- [Atkinson Hyperlegible Pro](https://jacobxperez.github.io/atkinson-hyperlegible-pro/): a font designed for low-vision readers.
 - [Company](https://github.com/jacobxperez/company): A single page website template for your business marketing
 - [Vaporwave Aesthetics](https://github.com/jacobxperez/vaporwave-aesthetic): A template with Vaporwave Aesthetics
 

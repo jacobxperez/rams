@@ -4,6 +4,8 @@
 
 ---
 
+![rams logo](docs/banner.jpg)
+
 ## Table of Contents
 
 - [About](#about)

@@ -24,17 +24,17 @@
 
 ## Getting Started
 
-Start by **[downloading](https://github.com/jacobxperez/rams/archive/master.zip)** the [repository](https://github.com/jacobxperez/rams) or by cloning Rams
+1) Start by **[downloading](https://github.com/jacobxperez/rams/archive/master.zip)** the [repository](https://github.com/jacobxperez/rams) or by cloning Rams
 
-```bash
-git clone https://github.com/jacobxperez/rams.git
-```
+    ```bash
+    git clone https://github.com/jacobxperez/rams.git
+    ```
 
-Install dependencies on your machine with [npm](https://www.npmjs.com/)
+2) Install dependencies on your machine with [npm](https://www.npmjs.com/)
 
-```bash
-npm install
-```
+    ```bash
+    npm install
+    ```
 
 ### Build
 

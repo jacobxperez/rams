@@ -30,7 +30,7 @@ Start by **[downloading](https://github.com/jacobxperez/rams/archive/master.zip)
 git clone https://github.com/jacobxperez/rams.git
 ```
 
-Install devDependencies on your machine with [npm](https://www.npmjs.com/)
+Install dependencies on your machine with [npm](https://www.npmjs.com/)
 
 ```bash
 npm install
@@ -42,11 +42,13 @@ Edit the [variables](https://github.com/jacobxperez/rams/blob/master/src/css/var
 [custom](https://github.com/jacobxperez/rams/tree/master/src/css/custom) modules and linked
 them to [main.css](https://github.com/jacobxperez/rams/blob/master/src/css/main.css) for compiling.
 
-- [/css](https://github.com/jacobxperez/rams/tree/master/src/css/)
+- [src/css](https://github.com/jacobxperez/rams/tree/master/src/css/)
   - [core](https://github.com/jacobxperez/rams/tree/master/src/css/core) (important files for compiling)
   - [custom](https://github.com/jacobxperez/rams/tree/master/src/css/custom) (add custom modules here)
   - [main.css](https://github.com/jacobxperez/rams/blob/master/src/css/main.css) (compile to produce the final CSS)
   - [var.css](https://github.com/jacobxperez/rams/blob/master/src/css/var.css) (variables for font, colors, and more)
+
+**Note**: When starting a project with Rams we recommend **not** to edit the [core](https://github.com/jacobxperez/rams/tree/master/src/css/core) files unless you are contributing code back to Rams. Any custom modules should go in the custom folder, this will help you separate your code from the Rams framework.
 
 ### Compile
 

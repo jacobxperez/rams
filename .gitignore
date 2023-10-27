@@ -7,7 +7,7 @@ coverage/
 .parcel-cache/
 dist/
 lib/
-ramsLive/
+ramsWeb/
 .vscode/
 .idea/
 *.min.js

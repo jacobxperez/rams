@@ -26,13 +26,13 @@
 
 Start by **[downloading](https://github.com/jacobxperez/rams/archive/master.zip)** the [repository](https://github.com/jacobxperez/rams) or by cloning Rams
 
-```
+```bash
 git clone https://github.com/jacobxperez/rams.git
 ```
 
 Install devDependencies on your machine with [npm](https://www.npmjs.com/)
 
-```
+```bash
 npm install
 ```
 

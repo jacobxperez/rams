@@ -1,6 +1,6 @@
 # Description
 
-Please include a summary of the changes you made by providing as much context as possible.
+Please include a summary of the changes you made by providing as much detail and context as possible.
 
 ## Type of change
 

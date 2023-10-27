@@ -48,7 +48,7 @@ them to [main.css](https://github.com/jacobxperez/rams/blob/master/src/css/main.
   - [main.css](https://github.com/jacobxperez/rams/blob/master/src/css/main.css) (compile to produce the final CSS)
   - [var.css](https://github.com/jacobxperez/rams/blob/master/src/css/var.css) (variables for font, colors, and more)
 
-**note**: When starting a project with Rams we recommend **not** to edit the [core](https://github.com/jacobxperez/rams/tree/master/src/css/core) files unless you are contributing code back to Rams. Any custom modules should go in the custom folder, this will help you separate your code from the Rams framework.
+**note**: When starting a project with Rams we recommend **not** to edit the [core](https://github.com/jacobxperez/rams/tree/master/src/css/core) files unless you are contributing code back to Rams. Any custom modules should go in the custom folder, this will help you separate your code from Rams.
 
 ### Compile
 

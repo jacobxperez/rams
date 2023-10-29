@@ -8,3 +8,8 @@
 - [ ] New feature (non-breaking change which adds functionality)
 - [ ] Update (non-breaking change that updates something)
 - [ ] Upgrade (This will brake something but it is worth it)
+
+<!--
+## Additional context
+Add any other context about the fix, feature or update. If this is an upgrade explain what has change.
+-->

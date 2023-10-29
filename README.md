@@ -50,7 +50,7 @@ them to [main.css](https://github.com/jacobxperez/rams/blob/master/src/css/main.
   - [main.css](https://github.com/jacobxperez/rams/blob/master/src/css/main.css) (compile to produce the final CSS)
   - [var.css](https://github.com/jacobxperez/rams/blob/master/src/css/var.css) (variables for font, colors, and more)
 
-**note**: When starting a project with Rams we recommend **not** to edit the [core](https://github.com/jacobxperez/rams/tree/master/src/css/core) files unless you are contributing code back to Rams. Any custom modules should go in the [custom](https://github.com/jacobxperez/rams/tree/master/src/css/custom) folder, this will help you separate your code from Rams.
+**note**: When starting a project with Rams we recommend **not** to edit the [core](https://github.com/jacobxperez/rams/tree/master/src/css/core) files unless you are [contributing](https://github.com/jacobxperez/rams/blob/master/.github/CONTRIBUTING.md) code back to Rams. Any custom modules should go in the [custom](https://github.com/jacobxperez/rams/tree/master/src/css/custom) folder, this will help you separate your code from Rams.
 
 ### Compile
 
@@ -70,7 +70,7 @@ These examples incorporate Rams with custom modules.
 - [Company](https://github.com/jacobxperez/company): A single page website template for your business marketing
 - [Vaporwave Aesthetics](https://github.com/jacobxperez/vaporwave-aesthetic): A template with Vaporwave Aesthetics
 
-**note:** these examples may contain an older version of Rams.
+**note:** These examples may contain an older version of Rams.
 
 ### [Contributing](https://github.com/jacobxperez/rams/blob/master/.github/CONTRIBUTING.md)
 

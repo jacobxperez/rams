@@ -6,7 +6,7 @@ labels: feature request
 assignees: ''
 ---
 
-# Feature request
+# Feature Request
 
 Suggest an idea for this project
 

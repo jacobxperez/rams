@@ -21,7 +21,7 @@
     "bugs": {
         "url": "https://github.com/jacobxperez/rams/issues"
     },
-    "homepage": "https://github.com/jacobxperez/rams/",
+    "homepage": "https://jacobxperez.github.io/rams/",
     "devDependencies": {
         "@mischnic/parcel-namer-preserve-structure": "^0.2.0",
         "@parcel/optimizer-terser": "^2.10.1",

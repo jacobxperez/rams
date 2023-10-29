@@ -8,5 +8,4 @@ assignees: ''
 ---
 
 # Proposal
-
 <!-- Write down with as much details as possible, the idea that you wish to implement for this project. -->

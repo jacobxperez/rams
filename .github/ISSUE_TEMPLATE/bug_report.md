@@ -1,3 +1,11 @@
+---
+name: 🐞 Bug
+about: File a bug/issue
+title: '[BUG] <title>'
+labels: Bug, Needs Triage
+assignees: ''
+---
+
 # Bug Report
 
 A clear and concise description of what the bug is.

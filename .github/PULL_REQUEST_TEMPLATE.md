@@ -8,7 +8,3 @@
 - [ ] New feature (non-breaking change which adds functionality)
 - [ ] Update (non-breaking change that updates something)
 - [ ] Upgrade (This will brake something but it is worth it)
-
-## How Has This Been Tested?
-
-<!-- Please provide any relevant details on how you tested this change. -->

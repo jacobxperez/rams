@@ -1,6 +1,6 @@
 # Description
 
-Please include a summary of the changes you made by providing as much detail and context as possible.
+<!-- Please include a summary of the changes you made by providing as much detail and context as possible. -->
 
 ## Type of Change
 
@@ -11,4 +11,4 @@ Please include a summary of the changes you made by providing as much detail and
 
 ## How Has This Been Tested?
 
-Please provide any relevant details on how you tested this change.
+<!-- Please provide any relevant details on how you tested this change. -->

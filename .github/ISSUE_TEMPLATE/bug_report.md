@@ -1,8 +1,8 @@
 ---
 name: Bug
 about: File a bug report
-title: ''
-labels: bug
+title: 'Bug: <title>'
+labels: bug, help wanted
 assignees: ''
 
 ---

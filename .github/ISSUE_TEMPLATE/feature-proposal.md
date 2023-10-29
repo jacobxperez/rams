@@ -1,9 +1,10 @@
 ---
 name: Feature Proposal
 about: A proposal for a feature that you want to be assigned to
-title: ''
+title: 'Proposal: <title>'
 labels: feature proposal
 assignees: ''
+
 ---
 
 # Proposal

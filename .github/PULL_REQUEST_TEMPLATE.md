@@ -1,7 +1,8 @@
 # Description
-<!-- Please include a summary of the changes you made by providing as much detail and context as possible. -->
+<!-- Required: Please include a summary of the changes you made by providing as much detail and context as possible. -->
 
 ## Type of change
+<!-- Required -->
 
 - [ ] Bug fix (non-breaking change which fixes an issue)
 - [ ] New feature (non-breaking change which adds functionality)

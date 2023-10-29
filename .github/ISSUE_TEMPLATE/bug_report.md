@@ -1,5 +1,5 @@
 ---
-name: Bug
+name: Bug Report
 about: File a bug report
 title: 'Bug: <title>'
 labels: bug, help wanted
@@ -8,7 +8,7 @@ assignees: ''
 ---
 
 # Bug Report
-<!-- A clear and concise description of what the bug is. -->
+<!-- Required: A clear and concise description of what the bug is. -->
 
 <!--
 ## Expected behavior

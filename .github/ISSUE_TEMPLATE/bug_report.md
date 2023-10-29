@@ -11,7 +11,7 @@ assignees: ''
 
 <!-- A clear and concise description of what the bug is. -->
 
-## To Reproduce
+## How To Reproduce This Bug
 
 <!-- Steps to reproduce the behavior: -->
 
@@ -22,7 +22,7 @@ assignees: ''
 4. See error
 -->
 
-## Expected behavior
+## Expected Behavior
 
 <!-- A clear and concise description of what you expected to happen. -->
 

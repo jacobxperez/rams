@@ -1,9 +1,10 @@
 ---
 name: Bug
-about: File a bug/issue
-title: '[BUG] <title>'
-labels: Bug, Needs Triage
+about: File a bug issue
+title: "[BUG] <title>"
+labels: bug
 assignees: ''
+
 ---
 
 # Bug Report

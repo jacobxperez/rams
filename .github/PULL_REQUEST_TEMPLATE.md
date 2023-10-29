@@ -2,7 +2,7 @@
 
 Please include a summary of the changes you made by providing as much detail and context as possible.
 
-## Type of change
+## Type of Change
 
 - [ ] Bug fix (non-breaking change which fixes an issue)
 - [ ] New feature (non-breaking change which adds functionality)
@@ -11,4 +11,4 @@ Please include a summary of the changes you made by providing as much detail and
 
 ## How Has This Been Tested?
 
-Please provide any relevant details on how you tested the code.
+Please provide any relevant details on how you tested this change.

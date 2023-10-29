@@ -8,7 +8,6 @@ assignees: ''
 ---
 
 # Bug Report
-
 <!-- A clear and concise description of what the bug is. -->
 
 <!--
@@ -17,14 +16,8 @@ A clear and concise description of what you expected to happen. If applicable, a
 -->
 
 <!--
-## How to reproduce the bug
-
-Steps to reproduce the behavior:
-
-1. Go to '...'
-2. Click on '....'
-3. Scroll down to '....'
-4. See error
+## How to reproduce this bug
+Describe to your best of your knowledge how to reproduce this bug.
 -->
 
 <!--

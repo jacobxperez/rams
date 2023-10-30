@@ -75,7 +75,7 @@ These examples incorporate Rams with custom modules.
 ### [Contributing](https://github.com/jacobxperez/rams/blob/master/.github/CONTRIBUTING.md)
 
 If you are interested in contributing to this project, please read our
-[contributing-guidelines](https://github.com/jacobxperez/rams/blob/master/.github/CONTRIBUTING.md).
+[contributing](https://github.com/jacobxperez/rams/blob/master/.github/CONTRIBUTING.md) guidelines.
 
 ## LICENSE
 

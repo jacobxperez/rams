@@ -8,19 +8,21 @@ assignees: ''
 ---
 
 # Bug Report
-<!-- Required: A clear and concise description of what the bug is. -->
+<!-- A clear description of what the bug is -->
 
-<!--
-## Expected behavior
-A clear and concise description of what you expected to happen. If applicable, add screenshots to help explain your problem.
--->
+<!-- The following sections are not required but recommended -->
 
-<!--
-## How to reproduce this bug
-Describe to your best of your knowledge how to reproduce this bug.
--->
+<!-- ## Expected behavior -->
+<!--- Tell us what should happen -->
 
-<!--
-## Additional context
-Add any other context about the problem here.
--->
+<!-- ## Current behavior -->
+<!--- Tell us what happens instead of the expected behavior -->
+
+<!-- ## How to reproduce this bug -->
+<!-- Describe to the best of your knowledge how to reproduce this bug -->
+
+<!-- ## Possible solution -->
+<!--- If you can suggest a fix for this bug -->
+
+<!-- ## Additional context -->
+<!-- Add any additional context about the bug -->

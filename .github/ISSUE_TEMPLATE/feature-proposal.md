@@ -7,5 +7,7 @@ assignees: ''
 
 ---
 
+<!-- If accepted we will assign this to you -->
+
 # Proposal
 <!-- Write down with as much details as possible, the idea that you wish to implement. -->

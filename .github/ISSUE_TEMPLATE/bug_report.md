@@ -1,11 +1,13 @@
 ---
 name: Bug Report
 about: File a bug report
-title: 'Bug: <title>'
+title: 'Bug: Title'
 labels: bug, help wanted
 assignees: ''
 
 ---
+
+<!-- We will work to fix this bug as soon as possible -->
 
 # Bug Report
 <!-- A clear description of what the bug is -->

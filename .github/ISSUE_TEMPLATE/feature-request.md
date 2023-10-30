@@ -8,4 +8,4 @@ assignees: ''
 ---
 
 # Feature Request
-<!-- Required: Suggest an idea for this project -->
+<!-- Suggest an idea for this project -->

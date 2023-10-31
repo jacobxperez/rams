@@ -36,8 +36,6 @@
     npm install
     ```
 
-- Optional: Rams is also available as a template to quickly get you started on a project.
-
 ### Build
 
 Edit the [variables](https://github.com/jacobxperez/rams/blob/master/src/css/var.css), add

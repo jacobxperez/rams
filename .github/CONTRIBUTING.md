@@ -3,8 +3,8 @@
 Welcome designers and developers, before you contribute to this project is
 important to read the following sections to better understand the vision of the
 project. Use the [issue tracker](https://github.com/jacobxperez/rams/issues) for
-[bug reports](#bug-reports), [feature requests](#feature-requests), and
-submitting [pull requests](#pull-requests).
+[bug reports](#bug-reports), [feature requests](#feature-requests), and for
+submitting a [proposal](#proposals).
 
 ---
 
@@ -15,6 +15,7 @@ submitting [pull requests](#pull-requests).
 * [Design Requirements](#design-requirements)
 * [Bug Reports](#bug-reports)
 * [Feature Requests](#feature-requests)
+* [Proposals](#proposals)
 * [Pull Requests](#pull-requests)
 * [Acknowledgment](#acknowledgment)
 
@@ -115,24 +116,28 @@ on their functionality rather than their visual appearance.
 
 ## Bug Reports
 
-Please try to be as detailed as possible in your report. What is your environment?
-What steps will reproduce the issue? What browser(s) and OS experience the problem?
-What would you expect to be the outcome? All these details will help us fix any
-potential bugs.
+Use the bug report template form the [issues](https://github.com/jacobxperez/rams/issues/new/choose)
+page to report any bug you have encounter. Please try to be as detailed as possible in your report.
 
 ## Feature Requests
 
-Before opening a feature request, please take a moment to find out whether your idea
-fits with the scope and aims of the project. It's up to you to convince the project's
-developers of the merits of this feature. Please provide as much detail and context
-as possible.
+If you have an idea that would benefit the community but not necessarily want to work
+on it your self, then use the feature request template from the [issues](https://github.com/jacobxperez/rams/issues/new/choose)
+page. If your idea is approved we will work on it as soon as we can.
+
+## Proposals
+
+If you have an idea for an update or a feature that you would like to implement, then
+using the proposal template from the [issues](https://github.com/jacobxperez/rams/issues/new/choose)
+page is a great way to suggest your particular solution. It's up to you to convince the project's
+maintainers to approve your implementation. If your proposal is approved we will assign it to you.
 
 ## Pull Requests
 
 Ask first before embarking on any significant pull request (e.g. implementing features,
 refactoring code, porting to a different language), otherwise you risk spending a lot of
-time working on something that the project's developers might not want to merge into the
-project. When contributing code to this project ask yourself these questions.
+time working on something that the project's maintainers might not want to merge into the
+project. When contributing to this project ask yourself these questions:
 
 * Is it essential?
 * Will it add value?

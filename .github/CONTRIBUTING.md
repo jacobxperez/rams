@@ -3,8 +3,8 @@
 Welcome designers and developers, before you contribute to this project is
 important to read the following sections to better understand the vision of the
 project. Use the [issue tracker](https://github.com/jacobxperez/rams/issues) for
-[bug reports](#bug-reports), [feature requests](#feature-requests), and for
-submitting a [proposal](#proposals).
+submitting [bug reports](#bug-reports), [feature requests](#feature-requests),
+or a [proposal](#proposals).
 
 ---
 
@@ -13,11 +13,11 @@ submitting a [proposal](#proposals).
 * [Design Essence](#design-essence)
 * [Design Principles](#design-principles)
 * [Design Requirements](#design-requirements)
+* [Pull Requests](#pull-requests)
 * [Issues](#issues)
   * [Bug Reports](#bug-reports)
   * [Feature Requests](#feature-requests)
   * [Proposals](#proposals)
-* [Pull Requests](#pull-requests)
 * [Projects](#projects)
 * [Acknowledgment](#acknowledgment)
 
@@ -116,6 +116,16 @@ and readability, with a limited number of font weights and sizes.
 * Components must be designed to be visually unobtrusive, with a focus
 on their functionality rather than their visual appearance.
 
+## Pull Requests
+
+Before embarking on any significant pull request, ask first. Otherwise, you may end up spending
+a lot of time working on something that we might not want to merge into the project. When
+contributing to this project, ask yourself these questions:
+
+* Is it essential?
+* Will it add value?
+* Is this change necessary?
+
 ## Issues
 
 When submitting an issue, it is crucial to provide us with as much detail as possible so
@@ -124,7 +134,7 @@ template that best describes your concern.
 
 ## Bug Reports
 
-Use the bug report template to report any bug you may have encounter.
+Use the bug template to report any bug that you may have encounter.
 
 ## Feature Requests
 
@@ -138,16 +148,6 @@ If you have an idea for an update or a feature that you would like to implement.
 the proposal template is a great way to suggest your respective solution. Please provide us
 with as much detail as possible because it is up to you to convince the project maintainers
 to approve your implementation. If your proposal is approved, we will assign it to you.
-
-## Pull Requests
-
-Before embarking on any significant pull request, ask first. Otherwise, you may end up spending
-a lot of time working on something that we might not want to merge into the project. When
-contributing to this project, ask yourself these questions:
-
-* Is it essential?
-* Will it add value?
-* Is this change necessary?
 
 ## Projects
 

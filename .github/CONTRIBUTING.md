@@ -13,10 +13,12 @@ submitting a [proposal](#proposals).
 * [Design Essence](#design-essence)
 * [Design Principles](#design-principles)
 * [Design Requirements](#design-requirements)
-* [Bug Reports](#bug-reports)
-* [Feature Requests](#feature-requests)
-* [Proposals](#proposals)
+* [Issues](#issues)
+  * [Bug Reports](#bug-reports)
+  * [Feature Requests](#feature-requests)
+  * [Proposals](#proposals)
 * [Pull Requests](#pull-requests)
+* [Projects](#projects)
 * [Acknowledgment](#acknowledgment)
 
 ## Design Essence
@@ -114,34 +116,44 @@ and readability, with a limited number of font weights and sizes.
 * Components must be designed to be visually unobtrusive, with a focus
 on their functionality rather than their visual appearance.
 
+## Issues
+
+When submitting an issue, it is crucial to provide us with as much detail as possible so
+that we can find the best solution to your problem. Please use the [issue](https://github.com/jacobxperez/rams/issues/new/choose)
+template that best describes your concern.
+
 ## Bug Reports
 
-Use the bug report template form the [issues](https://github.com/jacobxperez/rams/issues/new/choose)
-page to report any bug you have encounter. Please try to be as detailed as possible in your report.
+Use the bug report template to report any bug you may have encounter.
 
 ## Feature Requests
 
-If you have an idea that would benefit the community but not necessarily want to work
-on it your self, then use the feature request template from the [issues](https://github.com/jacobxperez/rams/issues/new/choose)
-page. If your idea is approved we will work on it as soon as we can.
+If you have an idea that you think will benefit the community but do not want to work on it
+yourself, then use the feature request template. If your idea is approved, we will work on
+it as soon as possible.
 
 ## Proposals
 
-If you have an idea for an update or a feature that you would like to implement, then
-using the proposal template from the [issues](https://github.com/jacobxperez/rams/issues/new/choose)
-page is a great way to suggest your particular solution. It's up to you to convince the project's
-maintainers to approve your implementation. If your proposal is approved we will assign it to you.
+If you have an idea for an update or a feature that you would like to implement. Then, using
+the proposal template is a great way to suggest your respective solution. Please provide us
+with as much detail as possible because it is up to you to convince the project maintainers
+to approve your implementation. If your proposal is approved, we will assign it to you.
 
 ## Pull Requests
 
-Ask first before embarking on any significant pull request (e.g. implementing features,
-refactoring code, porting to a different language), otherwise you risk spending a lot of
-time working on something that the project's maintainers might not want to merge into the
-project. When contributing to this project ask yourself these questions:
+Before embarking on any significant pull request, ask first. Otherwise, you may end up spending
+a lot of time working on something that we might not want to merge into the project. When
+contributing to this project, ask yourself these questions:
 
 * Is it essential?
 * Will it add value?
 * Is this change necessary?
+
+## Projects
+
+We might have a couple of [projects](https://github.com/jacobxperez/rams/projects?query=is%3Aopen)
+open that need your help. Let us know if you want to contribute to any of them by opening
+an [issue](https://github.com/jacobxperez/rams/issues/new/choose) or starting a [discussion](https://github.com/jacobxperez/rams/discussions).
 
 ## Acknowledgment
 

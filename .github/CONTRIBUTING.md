@@ -13,10 +13,12 @@ submitting a [proposal](#proposals).
 * [Design Essence](#design-essence)
 * [Design Principles](#design-principles)
 * [Design Requirements](#design-requirements)
-* [Bug Reports](#bug-reports)
-* [Feature Requests](#feature-requests)
-* [Proposals](#proposals)
+* [Issues](#issues)
+  * [Bug Reports](#bug-reports)
+  * [Feature Requests](#feature-requests)
+  * [Proposals](#proposals)
 * [Pull Requests](#pull-requests)
+* [Projects](#projects)
 * [Acknowledgment](#acknowledgment)
 
 ## Design Essence
@@ -146,6 +148,12 @@ contributing to this project, ask yourself these questions:
 * Is it essential?
 * Will it add value?
 * Is this change necessary?
+
+## Projects
+
+We might have a couple of [projects](https://github.com/jacobxperez/rams/projects?query=is%3Aopen)
+open that need your help. Let us know if you want to contribute to any of them by opening
+an [issue](https://github.com/jacobxperez/rams/issues/new/choose) or starting a [discussion](https://github.com/jacobxperez/rams/discussions).
 
 ## Acknowledgment
 

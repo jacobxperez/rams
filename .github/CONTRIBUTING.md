@@ -1,11 +1,6 @@
 # Contributing
 
-Welcome designers and developers, before you contribute to this project is
-important to read the following sections to better understand the vision of the
-project. Use the [issue tracker](https://github.com/jacobxperez/rams/issues) for
-submitting [bug reports](#bug-reports), [feature requests](#feature-requests),
-or a project [proposal](#proposals). [Discussions](https://github.com/jacobxperez/rams/discussions)
-are also a great way to engage with the community and project maintainers.
+Hello designers and developers! Before you start contributing to this project, it's important to read the following sections to better understand its vision. If you come across any [bugs](#bug-reports) or have any [feature requests](#feature-requests), please use the [issue tracker](https://github.com/jacobxperez/rams/issues). You can also submit a project [proposal](#proposals) and engage with the community and project maintainers through [discussions](https://github.com/jacobxperez/rams/discussions).
 
 ---
 
@@ -138,7 +133,7 @@ template that best describes your concern.
 
 ## Bug Reports
 
-Use the bug report template to report any bugs that you have encounter.
+Use the bug report template to report any bugs that you have encountered.
 
 ## Feature Requests
 
@@ -162,6 +157,6 @@ an [issue](https://github.com/jacobxperez/rams/issues/new/choose) or starting a 
 
 ## Acknowledgment
 
-I want to dedicate this project to all developers, architects, and designers who
-have fiddled with the limitations of CSS. I know your pain, your struggles, and
-your frustrations. May we all find peace and tranquility in our hearts and mind.
+I want to dedicate this project to all developers, architects, and designers who have
+fiddled with the limitations of CSS. I know your pain, your struggles, and your frustrations.
+May we all find peace and tranquility in our hearts and minds.

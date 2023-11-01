@@ -4,7 +4,8 @@ Welcome designers and developers, before you contribute to this project is
 important to read the following sections to better understand the vision of the
 project. Use the [issue tracker](https://github.com/jacobxperez/rams/issues) for
 submitting [bug reports](#bug-reports), [feature requests](#feature-requests),
-or a [proposal](#proposals).
+or a project [proposal](#proposals). [Discussions](https://github.com/jacobxperez/rams/discussions)
+are also a great way to engage with the community and project maintainers.
 
 ---
 
@@ -118,9 +119,12 @@ on their functionality rather than their visual appearance.
 
 ## Pull Requests
 
-Before embarking on any significant pull request, ask first. Otherwise, you may end up spending
-a lot of time working on something that we might not want to merge into the project. When
-contributing to this project, ask yourself these questions:
+Before embarking on any significant pull request, ask first by submitting an
+[issue](https://github.com/jacobxperez/rams/issues/new/choose) or starting a
+[discussion](https://github.com/jacobxperez/rams/discussions). Otherwise, you
+may end up spending a lot of time working on something that we might not want
+to merge into the project. When contributing to this project, ask yourself
+these questions:
 
 * Is it essential?
 * Will it add value?

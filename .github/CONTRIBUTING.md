@@ -1,6 +1,6 @@
 # Contributing
 
-Hello designers and developers! Before you start contributing to this project, it's important to read the following sections to better understand its vision. If you come across any [bugs](#bug-reports) or have any [feature requests](#feature-requests), please use the [issue tracker](https://github.com/jacobxperez/rams/issues). You can also submit a project [proposal](#proposals) and engage with the community and project maintainers through [discussions](https://github.com/jacobxperez/rams/discussions).
+Hello designers and developers! help us improve Rams for everyone. Before you start contributing to this project, it's important to read the following sections to better understand its vision. If you come across any [bugs](#bug-reports) or have any [feature requests](#feature-requests), please use the [issue tracker](https://github.com/jacobxperez/rams/issues). You can also submit a project [proposal](#proposals) and engage with the community by opening a [discussion](https://github.com/jacobxperez/rams/discussions). Any contribution or feedback is welcome.
 
 ---
 

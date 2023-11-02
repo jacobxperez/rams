@@ -142,8 +142,9 @@ Before embarking on any significant pull request, ask first by submitting an
 [discussion](https://github.com/jacobxperez/rams/discussions). Otherwise, you
 may end up spending a lot of time working on something that we might not want
 to merge into the project. Any contribution to this project will be subject to
-the same [license agreement](https://github.com/jacobxperez/rams#license).
-When contributing to this project, ask yourself these questions:
+the same terms and conditions of the [license agreement](https://github.com/jacobxperez/rams#license).
+Be clean on your pull request do **not** try to submit changes that were not
+agreed upon. When contributing to this project, ask yourself these questions:
 
 * Is it essential?
 * Will it add value?

@@ -1,6 +1,6 @@
 # Contributing
 
-Hello designers and developers! help us improve Rams for everyone. Before you start contributing to this project, it's important to read the following sections to better understand its vision. If you come across any [bugs](#bug-reports) or have any [feature requests](#feature-requests), please use the [issue tracker](https://github.com/jacobxperez/rams/issues). You can also submit a project [proposal](#proposals) and engage with the community by opening a [discussion](https://github.com/jacobxperez/rams/discussions). Any contribution or feedback is welcome.
+Welcome designers and developers! Help us improve Rams for everyone. Before you start contributing to this project, it's important to read the following sections to better understand it's vision. If you come across any [bugs](#bug-reports) or have any [feature requests](#feature-requests), please use the [issue tracker](https://github.com/jacobxperez/rams/issues). You can also submit a project [proposal](#proposals) and engage with the community by opening a [discussion](https://github.com/jacobxperez/rams/discussions). Any contribution or feedback is welcome.
 
 ---
 
@@ -9,8 +9,10 @@ Hello designers and developers! help us improve Rams for everyone. Before you st
 * [Design Essence](#design-essence)
 * [Design Principles](#design-principles)
 * [Design Requirements](#design-requirements)
+* [Updating The Documentation](#updating-the-documentation)
 * [Pull Requests](#pull-requests)
 * [Issues](#issues)
+  * [Help Us Fix An Issue](#help-us-fix-an-issue)
   * [Bug Reports](#bug-reports)
   * [Feature Requests](#feature-requests)
   * [Proposals](#proposals)
@@ -112,14 +114,36 @@ and readability, with a limited number of font weights and sizes.
 * Components must be designed to be visually unobtrusive, with a focus
 on their functionality rather than their visual appearance.
 
+## Updating The Documentation
+
+After installing all dependencies on your machine, run the command `npm run docs`
+to locally run the documentation. The source files for the documentation can be
+found under [src/docs](https://github.com/jacobxperez/rams/tree/master/src/docs)
+folder. Update the documentation then run `npm run rams` to update the root folder
+[docs](https://github.com/jacobxperez/rams/tree/master/docs), this will also update
+the website automatically on a pull request.
+
+Run the documentation locally:
+
+```bash
+npm run docs
+```
+
+Updating the website documentation:
+
+```bash
+npm run rams
+```
+
 ## Pull Requests
 
 Before embarking on any significant pull request, ask first by submitting an
 [issue](https://github.com/jacobxperez/rams/issues/new/choose) or starting a
 [discussion](https://github.com/jacobxperez/rams/discussions). Otherwise, you
 may end up spending a lot of time working on something that we might not want
-to merge into the project. When contributing to this project, ask yourself
-these questions:
+to merge into the project. Any contribution to this project will be subject to
+the same [license agreement](https://github.com/jacobxperez/rams#license).
+When contributing to this project, ask yourself these questions:
 
 * Is it essential?
 * Will it add value?
@@ -131,9 +155,16 @@ When submitting an issue, it is crucial to provide us with as much detail as pos
 that we can find the best solution to your problem. Please use the [issue](https://github.com/jacobxperez/rams/issues/new/choose)
 template that best describes your concern.
 
+## Help Us Fix An Issue
+
+There might be a couple of [issues](https://github.com/jacobxperez/rams/issues) that need
+your help. If no one is working on an issue, you can ask to get assigned one.
+
 ## Bug Reports
 
-Use the bug report template to report any bugs that you have encountered.
+Before submitting a bug report make sure your bug is not already reported on the
+[issue](https://github.com/jacobxperez/rams/issues) tracker. If not, use the bug report
+template to report any bugs that you have encountered.
 
 ## Feature Requests
 

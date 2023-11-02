@@ -122,14 +122,27 @@ folder. Update the documentation then run `npm run rams` to update the root fold
 [docs](https://github.com/jacobxperez/rams/tree/master/docs), this will also update
 the website automatically on a pull request.
 
+Run the documentation locally
+
+```bash
+npm run docs
+```
+
+Updating the website documentation 
+
+```bash
+npm run rams
+```
+
 ## Pull Requests
 
 Before embarking on any significant pull request, ask first by submitting an
 [issue](https://github.com/jacobxperez/rams/issues/new/choose) or starting a
 [discussion](https://github.com/jacobxperez/rams/discussions). Otherwise, you
 may end up spending a lot of time working on something that we might not want
-to merge into the project. When contributing to this project, ask yourself
-these questions:
+to merge into the project. Any contribution to this project will be subject to
+the same [license agreement](https://github.com/jacobxperez/rams#license).
+When contributing to this project, ask yourself these questions:
 
 * Is it essential?
 * Will it add value?
@@ -143,7 +156,9 @@ template that best describes your concern.
 
 ## Bug Reports
 
-Use the bug report template to report any bugs that you have encountered.
+Before submitting a bug report make sure your bug is not already reported on the
+[issue](https://github.com/jacobxperez/rams/issues) tracker. If not, use the bug report
+template to report any bugs that you have encountered.
 
 ## Feature Requests
 

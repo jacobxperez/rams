@@ -1,6 +1,6 @@
 # Contributing
 
-Welcome designers and developers! Help us improve Rams for everyone. Before you start contributing to this project, it's important to read the following sections to better understand its vision. If you come across any [bugs](#bug-reports) or have any [feature requests](#feature-requests), please use the [issue tracker](https://github.com/jacobxperez/rams/issues). You can also submit a project [proposal](#proposals) and engage with the community by opening a [discussion](https://github.com/jacobxperez/rams/discussions). Any contribution or feedback is welcome.
+Welcome designers and developers! Help us improve Rams for everyone. Before you start contributing to this project, it's important to read the following sections to better understand it's vision. If you come across any [bugs](#bug-reports) or have any [feature requests](#feature-requests), please use the [issue tracker](https://github.com/jacobxperez/rams/issues). You can also submit a project [proposal](#proposals) and engage with the community by opening a [discussion](https://github.com/jacobxperez/rams/discussions). Any contribution or feedback is welcome.
 
 ---
 
@@ -12,6 +12,7 @@ Welcome designers and developers! Help us improve Rams for everyone. Before you 
 * [Updating The Documentation](#updating-the-documentation)
 * [Pull Requests](#pull-requests)
 * [Issues](#issues)
+  * [Help Us Fix An Issue](#help-us-fix-an-issue)
   * [Bug Reports](#bug-reports)
   * [Feature Requests](#feature-requests)
   * [Proposals](#proposals)
@@ -122,13 +123,13 @@ folder. Update the documentation then run `npm run rams` to update the root fold
 [docs](https://github.com/jacobxperez/rams/tree/master/docs), this will also update
 the website automatically on a pull request.
 
-Run the documentation locally
+Run the documentation locally:
 
 ```bash
 npm run docs
 ```
 
-Updating the website documentation 
+Updating the website documentation:
 
 ```bash
 npm run rams
@@ -153,6 +154,11 @@ When contributing to this project, ask yourself these questions:
 When submitting an issue, it is crucial to provide us with as much detail as possible so
 that we can find the best solution to your problem. Please use the [issue](https://github.com/jacobxperez/rams/issues/new/choose)
 template that best describes your concern.
+
+## Help Us Fix An Issue
+
+There might be a couple of [issues](https://github.com/jacobxperez/rams/issues) that need
+your help. If no one is working on an issue, you can ask to get assigned one.
 
 ## Bug Reports
 

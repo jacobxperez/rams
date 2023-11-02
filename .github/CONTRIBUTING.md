@@ -1,6 +1,6 @@
 # Contributing
 
-Hello designers and developers! help us improve Rams for everyone. Before you start contributing to this project, it's important to read the following sections to better understand its vision. If you come across any [bugs](#bug-reports) or have any [feature requests](#feature-requests), please use the [issue tracker](https://github.com/jacobxperez/rams/issues). You can also submit a project [proposal](#proposals) and engage with the community by opening a [discussion](https://github.com/jacobxperez/rams/discussions). Any contribution or feedback is welcome.
+Welcome designers and developers! Help us improve Rams for everyone. Before you start contributing to this project, it's important to read the following sections to better understand its vision. If you come across any [bugs](#bug-reports) or have any [feature requests](#feature-requests), please use the [issue tracker](https://github.com/jacobxperez/rams/issues). You can also submit a project [proposal](#proposals) and engage with the community by opening a [discussion](https://github.com/jacobxperez/rams/discussions). Any contribution or feedback is welcome.
 
 ---
 
@@ -9,6 +9,7 @@ Hello designers and developers! help us improve Rams for everyone. Before you st
 * [Design Essence](#design-essence)
 * [Design Principles](#design-principles)
 * [Design Requirements](#design-requirements)
+* [Updating The Documentation](#updating-the-documentation)
 * [Pull Requests](#pull-requests)
 * [Issues](#issues)
   * [Bug Reports](#bug-reports)
@@ -111,6 +112,15 @@ This will create a sense of simplicity and elegance.
 and readability, with a limited number of font weights and sizes.
 * Components must be designed to be visually unobtrusive, with a focus
 on their functionality rather than their visual appearance.
+
+## Updating The Documentation
+
+After installing all dependencies on your machine, run the command `npm run docs`
+to locally run the documentation. The source files for the documentation can be
+found under [src/docs](https://github.com/jacobxperez/rams/tree/master/src/docs)
+folder. Update the documentation then run `npm run rams` to update the root folder
+[docs](https://github.com/jacobxperez/rams/tree/master/docs), this will also update
+the website automatically on a pull request.
 
 ## Pull Requests
 

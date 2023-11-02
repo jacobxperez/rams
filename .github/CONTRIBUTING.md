@@ -156,6 +156,8 @@ When submitting an issue, it is crucial to provide us with as much detail as pos
 that we can find the best solution to your problem. Please use the [issue](https://github.com/jacobxperez/rams/issues/new/choose)
 template that best describes your concern.
 
+**note**: submitting an issue does not guarantee that your issue will be solved.
+
 ## Help Us Fix An Issue
 
 There might be a couple of [issues](https://github.com/jacobxperez/rams/issues) that need

@@ -68,7 +68,7 @@ These examples incorporate Rams with custom modules.
 - [Company](https://github.com/jacobxperez/company): A single page website template for your business marketing
 - [Vaporwave Aesthetics](https://github.com/jacobxperez/vaporwave-aesthetic): A template with Vaporwave Aesthetics
 
-**note:** These examples may contain an older version of Rams.
+**note**: These examples may contain an older version of Rams.
 
 ### [Contributing](https://github.com/jacobxperez/rams/blob/master/.github/CONTRIBUTING.md)
 

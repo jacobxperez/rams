@@ -120,8 +120,8 @@ To update the documentation, install all dependencies on your machine and run th
 command `npm run docs`. You can find the source files for the documentation under the
 "[src/docs](https://github.com/jacobxperez/rams/tree/master/src/docs)" folder. After
 updating the documentation, run `npm run rams` to update the root folder
-[docs](https://github.com/jacobxperez/rams/tree/master/docs). This will
-automatically update the website on a pull request.
+[docs](https://github.com/jacobxperez/rams/tree/master/docs). This will automatically
+update the [website](https://jacobxperez.github.io/rams/) on a pull request.
 
 Run the documentation locally:
 

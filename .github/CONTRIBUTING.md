@@ -116,12 +116,12 @@ on their functionality rather than their visual appearance.
 
 ## Updating The Documentation
 
-After installing all dependencies on your machine, run the command `npm run docs`
-to locally run the documentation. The source files for the documentation can be
-found under [src/docs](https://github.com/jacobxperez/rams/tree/master/src/docs)
-folder. Update the documentation then run `npm run rams` to update the root folder
-[docs](https://github.com/jacobxperez/rams/tree/master/docs), this will also update
-the website automatically on a pull request.
+To update the documentation, install all dependencies on your machine and run the
+command `npm run docs`. You can find the source files for the documentation under the
+"[src/docs](https://github.com/jacobxperez/rams/tree/master/src/docs)" folder. After
+updating the documentation, run `npm run rams` to update the root folder
+[docs](https://github.com/jacobxperez/rams/tree/master/docs). This will
+automatically update the website on a pull request.
 
 Run the documentation locally:
 
@@ -143,8 +143,8 @@ Before embarking on any significant pull request, ask first by submitting an
 may end up spending a lot of time working on something that we might not want
 to merge into the project. Any contribution to this project will be subject to
 the same terms and conditions of the [license agreement](https://github.com/jacobxperez/rams#license).
-Be clean on your pull request do **not** try to submit changes that were not
-agreed upon. When contributing to this project, ask yourself these questions:
+Be precise on your pull request, and do **not** try to submit changes that were
+not agreed upon. When contributing to this project, ask yourself these questions:
 
 * Is it essential?
 * Will it add value?

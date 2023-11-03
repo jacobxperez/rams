@@ -15,8 +15,6 @@
   - [Examples](#examples)
   - [Contributing](#contributing)
 - [LICENSE](#license)
-  - [Content](#content)
-  - [Code](#code)
 
 ## About
 
@@ -70,20 +68,14 @@ These examples incorporate Rams with custom modules.
 
 **note**: These examples may contain an older version of Rams.
 
-### [Contributing](https://github.com/jacobxperez/rams/blob/master/.github/CONTRIBUTING.md)
+### Contributing
 
-If you are interested in contributing to this project, please read our
+If you are interested in contributing to this project, please start by reading our
 [contributing](https://github.com/jacobxperez/rams/blob/master/.github/CONTRIBUTING.md) guidelines.
 
 ## LICENSE
 
 Copyright (C) 2023 [Jacob Perez](https://jacobxperez.github.io/blog/)
-
-### Content
-
-Licensed under the [Attribution-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/) (CC BY-SA 4.0)
-
-### Code
 
 Licensed under the [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0) (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 

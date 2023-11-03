@@ -117,9 +117,8 @@ throwaway society.
 
 <summary>8. Good design is thorough down to the last detail</summary>
 
-It avoids being fashionable and therefore never appears antiquated.
-Unlike fashionable design, it lasts many years – even in today’s
-throwaway society.
+Nothing must be arbitrary or left to chance. Care and accuracy in
+the design process show respect towards the user.
 
 </details>
 

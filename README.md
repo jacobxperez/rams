@@ -1,6 +1,6 @@
 # [Rams](https://jacobxperez.github.io/rams/)
 
-[Class-Less](https://jacobxperez.github.io/blog/post/css/class-less-architecture/) CSS Design System Framework
+Class-Less CSS Design System Framework
 
 ---
 
@@ -22,11 +22,11 @@
 
 ## About
 
-[Rams](https://jacobxperez.github.io/rams/) is a [class-less](https://jacobxperez.github.io/blog/post/css/class-less-architecture/) css design system framework that utilizes the power of [data-attributes](https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes) for styling components.
+Rams is a class-less css design system framework that utilizes the power of data attributes for styling components.
 
 ## Getting Started
 
-1) Start by **[downloading](https://github.com/jacobxperez/rams/archive/master.zip)** the [repository](https://github.com/jacobxperez/rams) or by cloning Rams
+1) Start by **[downloading](https://github.com/jacobxperez/rams/archive/master.zip)** the repository or by cloning Rams
 
     ```bash
     git clone https://github.com/jacobxperez/rams.git
@@ -63,8 +63,7 @@ On your terminal run these scripts to compile
 
 ## Features
 
-Rams takes a different approach to CSS frameworks by completely dropping the use
-of class, and instead use data-attributes to style all components.
+Rams uses data attributes instead of class to style components.
 
 ### Grid System
 

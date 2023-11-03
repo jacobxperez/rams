@@ -64,11 +64,11 @@ On your terminal run these scripts to compile
 ## Features
 
 Rams takes a different approach to CSS frameworks by completely dropping the use
-of class. Instead, we use data-attributes to style our components.
+of class, and instead, we use data-attributes to style our components.
 
 ### Grid
 
-A two column grid with responsive columns.
+A two column grid with responsive columns:
 
 ```html
 <article data-grid="main">
@@ -83,7 +83,7 @@ A two column grid with responsive columns.
 
 ### Navigation
 
-A simple navigation with flex-box.
+A simple navigation with flex-box:
 
 ```html
 <ul data-flex>
@@ -96,7 +96,7 @@ A simple navigation with flex-box.
 
 ### Buttons
 
-Includes several button types.
+Includes several button types:
 
 ```html
  <button data-button="primary">button</button>

@@ -12,8 +12,12 @@
 - [Getting Started](#getting-started)
   - [Build](#build)
   - [Compile](#compile)
-  - [Examples](#examples)
-  - [Contributing](#contributing)
+- [Features](#features)
+  - [Grid](#grid)
+  - [Navigation](#navigation)
+  - [Buttons](#buttons)
+- [Examples](#examples)
+- [Contributing](#contributing)
 - [LICENSE](#license)
 
 ## About
@@ -56,6 +60,50 @@ On your terminal run these scripts to compile
 - `npm run dev` (serve current development build)
 - `npm run watch` (watch for changes but does not start server)
 - `npm run build` (makes current build and sets url to "/" can be changed on [package.json](https://github.com/jacobxperez/rams/blob/master/package.json))
+
+## Features
+
+Rams takes a different approach to CSS frameworks by completely dropping the use
+of class. Instead, we use data-attributes to style our components.
+
+### Grid
+
+A two column grid with responsive columns.
+
+```html
+<article data-grid="main">
+  <aside data-column="large-3 medium-3 small-4">
+    <!-- add content -->
+  </aside>
+  <section data-column="large-9 medium-9 small-4">
+    <!-- add content -->
+  </section>
+</article>
+```
+
+### Navigation
+
+A simple navigation with flex-box.
+
+```html
+<ul data-flex>
+  <li><a data-anchor="" data-state="active">Active</a></li>
+  <li><a data-anchor="">Anchor</a></li>
+  <li><a data-anchor="">Anchor</a></li>
+  <li><a data-anchor="">Anchor</a></li>
+</ul>
+```
+
+### Buttons
+
+Includes several button types.
+
+```html
+ <button data-button="primary">button</button>
+ <button data-button="outline">button</button>
+ <button data-button="primary outline">button</button>
+ <button data-button="link">button</button> 
+```
 
 ### Examples
 

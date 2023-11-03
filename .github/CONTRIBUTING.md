@@ -120,8 +120,8 @@ To update the documentation, install all dependencies on your machine and run th
 command `npm run docs`. You can find the source files for the documentation under the
 "[src/docs](https://github.com/jacobxperez/rams/tree/master/src/docs)" folder. After
 updating the documentation, run `npm run rams` to update the root folder
-[docs](https://github.com/jacobxperez/rams/tree/master/docs). This will
-automatically update the website on a pull request.
+[docs](https://github.com/jacobxperez/rams/tree/master/docs). This will automatically
+update the [website](https://jacobxperez.github.io/rams/) on a pull request.
 
 Run the documentation locally:
 
@@ -152,42 +152,45 @@ not agreed upon. When contributing to this project, ask yourself these questions
 
 ## Issues
 
-When submitting an issue, it is crucial to provide us with as much detail as possible so
-that we can find the best solution to your problem. Please use the [issue](https://github.com/jacobxperez/rams/issues/new/choose)
-template that best describes your concern.
+When submitting an issue, it is crucial to provide us with as much detail as
+possible so that we can find the best solution to your problem. Please use the
+[issue](https://github.com/jacobxperez/rams/issues/new/choose) template that best
+describes your concern.
 
-**note**: submitting an issue does **not** guarantee that your issue will be solved.
+**note**: Submitting an issue does **not** guarantee that your issue will be solved.
 
 ## Help Us Fix An Issue
 
-There might be a couple of [issues](https://github.com/jacobxperez/rams/issues) that need
-your help. If no one is working on an issue, you can ask to get assigned one.
+There might be a couple of [issues](https://github.com/jacobxperez/rams/issues)
+that need your help. If no one is working on an issue, you can ask to get
+assigned one.
 
 ## Bug Reports
 
 Before submitting a bug report make sure your bug is not already reported on the
-[issue](https://github.com/jacobxperez/rams/issues) tracker. If not, use the bug report
+[issue](https://github.com/rams/issues) tracker. If not, use the bug report
 template to report any bugs that you have encountered.
 
 ## Feature Requests
 
-If you have an idea that you think will benefit the community but do not want to work on it
-yourself, then use the feature request template. If your idea is approved, we will work on
-it as soon as possible.
+If you have an idea that you think will benefit the community but do not want to
+work on it yourself, then use the feature request template. If your idea is approved,
+we will work on it as soon as possible.
 
 ## Proposals
 
-If you have an idea for an update or a feature that you would like to implement. Then, using
-the proposal template is a great way to suggest your respective solution. Please provide us
-with as much detail as possible because it is up to you to convince the project maintainers
-to approve your implementation. Be ready to answer any questions the project maintainers
-might have. If your proposal is approved, we will assign it to you.
+If you have an idea for an update or a feature that you would like to implement.
+Then, using the proposal template is a great way to suggest your respective solution.
+Please provide us with as much detail as possible because it is up to you to convince
+the project maintainers to approve your implementation. Be ready to answer any questions
+the project maintainers might have. If your proposal is approved, we will assign it to you.
 
 ## Projects
 
 We might have a couple of [projects](https://github.com/jacobxperez/rams/projects?query=is%3Aopen)
 open that need your help. Let us know if you want to contribute to any of them by opening
-an [issue](https://github.com/jacobxperez/rams/issues/new/choose) or starting a [discussion](https://github.com/jacobxperez/rams/discussions).
+an [issue](https://github.com/jacobxperez/rams/issues/new/choose) or starting a
+[discussion](https://github.com/jacobxperez/rams/discussions).
 
 ## Acknowledgment
 

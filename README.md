@@ -13,7 +13,7 @@
   - [Build](#build)
   - [Compile](#compile)
 - [Features](#features)
-  - [Grid](#grid)
+  - [Grid System](#grid-system)
   - [Navigation](#navigation)
   - [Buttons](#buttons)
 - [Examples](#examples)
@@ -64,9 +64,9 @@ On your terminal run these scripts to compile
 ## Features
 
 Rams takes a different approach to CSS frameworks by completely dropping the use
-of class, and instead, we use data-attributes to style our components.
+of class, and instead use data-attributes to style all components.
 
-### Grid
+### Grid System
 
 A two column grid with responsive columns:
 
@@ -92,6 +92,20 @@ A simple navigation with flex-box:
   <li><a data-anchor="">Anchor</a></li>
   <li><a data-anchor="">Anchor</a></li>
 </ul>
+```
+
+A navbar with home link and three tabs:
+
+```html
+<nav data-navbar="top">
+  <ul data-flex>
+    <li><a data-anchor="navbar" href="">Home</a></li>
+    <li data-item="grow"></li>
+    <li><a data-anchor="navbar" href="">Anchor</a></li>
+    <li><a data-anchor="navbar" href="">Anchor</a></li>
+    <li><a data-anchor="navbar" href="">Anchor</a></li> 
+  </ul>
+</nav>
 ```
 
 ### Buttons

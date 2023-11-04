@@ -86,10 +86,10 @@ A simple navigation with flex-box:
 
 ```html
 <ul data-flex>
-  <li><a data-anchor="" data-state="active">Active</a></li>
-  <li><a data-anchor="">Anchor</a></li>
-  <li><a data-anchor="">Anchor</a></li>
-  <li><a data-anchor="">Anchor</a></li>
+  <li><a data-anchor data-state="active">Active</a></li>
+  <li><a data-anchor>Anchor</a></li>
+  <li><a data-anchor>Anchor</a></li>
+  <li><a data-anchor>Anchor</a></li>
 </ul>
 ```
 
@@ -107,9 +107,52 @@ A navbar with home link and three tabs:
 </nav>
 ```
 
+## Dropdown
+
+A dropdown navigation menu:
+
+```html
+<ul data-flex>
+  <li data-position="relative">
+    <a data-toggle="pop" data-anchor>Dropdown</a>
+    <ul data-dropbox="menu" data-position="left">
+      <li><a data-anchor="menu">Anchor</a></li>
+      <li><a data-anchor="menu">Anchor</a></li>
+      <li><a data-anchor="menu">Anchor</a></li>
+    </ul>
+  </li>
+</ul>
+```
+
+Tooltip for displaying additional context on hover or on click:
+
+```html
+<span data-toggle="tooltip">
+  Tooltip!
+  <span data-dropbox="tooltip">
+    <!-- add content -->
+  </span>
+</span>
+```
+
+Reveal extra page content like an accordion:
+
+```html
+<ul data-box="border leading">
+  <li data-box="border-bottom"> 
+    <a data-toggle data-anchor data-flex>
+      <strong data-item="grow">Content</strong> <span data-icon="&#xe045;"></span>
+    </a>
+    <div data-dropbox data-box="padding-x padding-bottom">
+      <!-- add content -->
+    </div>
+  </li>
+</ul>
+```
+
 ### Buttons
 
-Includes several button types:
+Includes several button styles:
 
 ```html
  <button data-button="primary">button</button>

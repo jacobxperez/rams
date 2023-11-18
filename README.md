@@ -87,10 +87,10 @@ A simple navigation with flex-box:
 
 ```html
 <ul data-flex>
-  <li><a data-anchor data-state="active">Active</a></li>
-  <li><a data-anchor>Anchor</a></li>
-  <li><a data-anchor>Anchor</a></li>
-  <li><a data-anchor>Anchor</a></li>
+  <li><a data-anchor data-state="active" href="">Active</a></li>
+  <li><a data-anchor href="">Anchor</a></li>
+  <li><a data-anchor href="">Anchor</a></li>
+  <li><a data-anchor href="">Anchor</a></li>
 </ul>
 ```
 
@@ -115,11 +115,14 @@ A dropdown navigation menu:
 ```html
 <ul data-flex>
   <li data-position="relative">
-    <a data-toggle="pop" data-anchor>Dropdown</a>
+    <a data-toggle="pop" data-anchor href="">
+      Dropdown 
+      <span data-icon="&#xe043;"></span>
+    </a>
     <ul data-dropbox="menu" data-position="left">
-      <li><a data-anchor="menu">Anchor</a></li>
-      <li><a data-anchor="menu">Anchor</a></li>
-      <li><a data-anchor="menu">Anchor</a></li>
+      <li><a data-anchor="menu" href="">Anchor</a></li>
+      <li><a data-anchor="menu" href="">Anchor</a></li>
+      <li><a data-anchor="menu" href="">Anchor</a></li>
     </ul>
   </li>
 </ul>

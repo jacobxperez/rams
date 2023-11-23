@@ -8,41 +8,9 @@ const meta = {
     type: '',
     title: document.title,
     subtitle: '',
-    author: {
-        name: '',
-        url: '',
-    },
-    date: {
-        published: '',
-        revised: '',
-    },
-    set authorName(name) {
-        this.author.name = name;
-    },
-    get authorName() {
-        return this.author.name;
-    },
-    set authorUrl(url) {
-        this.author.url = url;
-    },
-    get authorUrl() {
-        return this.author.url;
-    },
-    set datePublished(date) {
-        this.date.published = date;
-    },
-    get datePublished() {
-        return this.date.published;
-    },
-    set dateRevised(date) {
-        this.date.revised = date;
-    },
-    get dateRevised() {
-        return this.date.revised;
-    },
 };
 
-const template = {
+const templateGenerator = {
     appendString(string, targetSelector) {
         const targetElement = document.querySelector(targetSelector);
         targetElement.insertAdjacentHTML('beforeend', string);
@@ -58,6 +26,13 @@ const template = {
         const parser = new DOMParser();
         const parsedSource = parser.parseFromString(string, 'text/html');
         this.appendTemplate(parsedSource, templateSelector, targetSelector);
+    },
+    elementFromHtml(html) {
+        const newTemplate = document.createElement('template');
+        newTemplate.innerHTML = html.trim();
+        newTemplate.content.firstElementChild;
+        console.log(newTemplate);
+        return this;
     },
     setTemplate(templateSelector, targetSelector, callback = null) {
         new Promise((resolve, reject) => {
@@ -91,12 +66,12 @@ const template = {
 
         return this;
     },
-    fetchTemplate(url, targetSelector, callback = null) {
+    fetchTemplate(templateSelector, targetSelector, url, callback = null) {
         (async () => {
             try {
                 let response = await fetch(url);
                 let fetchURL = await response.text();
-                this.parseTemplate(fetchURL, targetSelector, targetSelector);
+                this.parseTemplate(fetchURL, templateSelector, targetSelector);
                 if (typeof callback === 'function') {
                     callback();
                 }

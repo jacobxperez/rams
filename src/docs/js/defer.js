@@ -13,10 +13,6 @@ if (meta.title === '') {
     meta.title = `<h1>${meta.title}</h1>`;
 }
 
-let nav = `
-    <nav id="nav" data-navbar="top"></nav>
-    `;
-
 let header = `
         <div id="header" data-container>
             ${meta.title}
@@ -36,43 +32,29 @@ if (meta.type === 'fullPage') {
         `;
 }
 
-let footer = `
-    <footer data-section="footer">
-        <div id="footer" data-container>
-        </div>
-    </footer>
-    `;
-
 // check and set template url for localhost or for public url
 let templateURL;
 location.hostname === 'localhost' || location.hostname === '127.0.0.1'
-    ? (templateURL = window.location.origin + '/templates/a.be13ff7e.html')
+    ? (templateURL = window.location.origin + '/templates/main.347099b8.html')
     : (templateURL =
-          window.location.origin + '/rams/templates/a.51d1dd9e.html');
+          window.location.origin + '/rams/templates/main.330b1356.html');
 
 // create main layout
 let layout = `
-        ${nav}
         <header data-section="header">
             ${header}
         </header>
         <main data-section="main">
             ${main}
         </main>
-        ${footer}
         `;
 
 // parse everything together
-template
-    .fromString(layout, 'body')
+templateGenerator
+    .fetchTemplate('#navTemplate', '#root', templateURL)
+    .fromString(layout, '#root')
     .setTemplate('#headerTemplate', '#header')
     .setTemplate('#contentTemplate', '#content', sidebar)
-    .fetchTemplate(templateURL, '#nav')
-    .fetchTemplate(templateURL, '#footer');
+    .fetchTemplate('#footerTemplate', '#root', templateURL);
 
 rams.toggle();
-// .carousel()
-// .addControls()
-// .addIndicators()
-// .addTouchControls()
-// .addKeyboardControls();

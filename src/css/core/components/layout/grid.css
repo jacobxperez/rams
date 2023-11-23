@@ -3,19 +3,13 @@
     column-gap: $grid-gap;
 }
 
-[data-column="all"] {
+[data-column] {
     grid-column: 1 / -1;
 }
 
 @mixin _small-grid() {
-    [data-grid="$(grid-name)"] {
+    [data-grid~="span-all"] {
         grid-template-columns: repeat($(grid-small-columns), 1fr);
-    }
-
-    @for $i from 1 to $grid-small-columns {
-        [data-grid~="small-$(i)"] {
-            grid-template-columns: repeat($(i), 1fr);
-        }
     }
 
     @for $i from 1 to $grid-small-columns {
@@ -26,14 +20,8 @@
 }
 
 @mixin _medium-grid() {
-    [data-grid="$(grid-name)"] {
+    [data-grid~="span-all"] {
         grid-template-columns: repeat($(grid-medium-columns), 1fr);
-    }
-
-    @for $i from 1 to $grid-medium-columns {
-        [data-grid~="medium-$(i)"] {
-            grid-template-columns: repeat($(i), 1fr);
-        }
     }
 
     @for $i from 1 to $grid-medium-columns {
@@ -44,14 +32,8 @@
 }
 
 @mixin _large-grid() {
-    [data-grid="$(grid-name)"] {
+    [data-grid~="span-all"] {
         grid-template-columns: repeat($(grid-large-columns), 1fr);
-    }
-
-    @for $i from 1 to $grid-large-columns {
-        [data-grid~="large-$(i)"] {
-            grid-template-columns: repeat($(i), 1fr);
-        }
     }
 
     @for $i from 1 to $grid-large-columns {

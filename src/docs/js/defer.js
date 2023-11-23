@@ -20,7 +20,7 @@ let header = `
         `;
 
 let main = `
-        <div data-container data-grid="main">
+        <div data-container data-grid="span-all">
             <aside id="aside" data-column="large-3 medium-3 small-4"></aside>
             <article id="content" data-column="large-9 medium-9 small-4"></article>
         </div>
@@ -28,7 +28,7 @@ let main = `
 
 if (meta.type === 'fullPage') {
     main = `
-        <div id="content" data-container data-grid="main"></div>
+        <div id="content" data-container data-grid="span-all"></div>
         `;
 }
 

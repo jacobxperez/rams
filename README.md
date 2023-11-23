@@ -71,7 +71,7 @@ Rams uses data attributes instead of class to style components.
 A two column grid with responsive columns:
 
 ```html
-<article data-grid="main">
+<article data-grid="span-all">
   <aside data-column="large-3 medium-3 small-4">
     <!-- add content -->
   </aside>

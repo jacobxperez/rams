@@ -20,12 +20,12 @@
             <li data-display="small-none">
                 <a
                     data-anchor="navbar"
-                    href="https://github.com/jacobxperez/rams/archive/master.zip">Download</a>
+                    href="https://github.com/jacobxperez/rams/archive/master.zip"
+                    >Download</a
+                >
             </li>
             <li data-display="small-none">
-                <a
-                    data-anchor="navbar"
-                    href="https://github.com/jacobxperez/rams">Contribute</a>
+                <a data-anchor="navbar" href="https://github.com/jacobxperez/rams">Contribute</a>
             </li>
 
             <!-- Dropdown Menu -->
@@ -45,16 +45,35 @@
                     <li>
                         <a
                             data-anchor="navbar"
-                            href="https://github.com/jacobxperez/rams/archive/master.zip">Download</a>
+                            href="https://github.com/jacobxperez/rams/archive/master.zip"
+                            >Download</a
+                        >
                     </li>
                     <li>
-                        <a data-anchor="navbar" href="https://github.com/jacobxperez/rams">Contribute</a>
+                        <a data-anchor="navbar" href="https://github.com/jacobxperez/rams"
+                            >Contribute</a
+                        >
                     </li>
                 </ul>
             </li>
             <!-- end Dropdown Menu -->
         </ul>
     </nav>
+</template>
+
+<template id="headerTemplate">
+    <header data-section="header">
+        <div id="header" data-container></div>
+    </header>
+</template>
+
+<template id="mainTemplate">
+    <main data-section="main">
+        <div data-container data-grid="main">
+            <aside id="aside" data-column="large-3 medium-3 small-4"></aside>
+            <article id="content" data-column="large-9 medium-9 small-4"></article>
+        </div>
+    </main>
 </template>
 
 <template id="footerTemplate">
@@ -72,4 +91,5 @@
                 >
             </p>
         </div>
+    </footer>
 </template>

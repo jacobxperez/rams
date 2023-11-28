@@ -8,7 +8,7 @@
 }
 
 @mixin _small-grid() {
-    [data-grid~="span-all"] {
+    [data-grid~="$(grid-name)"] {
         grid-template-columns: repeat($(grid-small-columns), 1fr);
     }
 
@@ -20,7 +20,7 @@
 }
 
 @mixin _medium-grid() {
-    [data-grid~="span-all"] {
+    [data-grid~="$(grid-name)"] {
         grid-template-columns: repeat($(grid-medium-columns), 1fr);
     }
 
@@ -32,7 +32,7 @@
 }
 
 @mixin _large-grid() {
-    [data-grid~="span-all"] {
+    [data-grid~="$(grid-name)"] {
         grid-template-columns: repeat($(grid-large-columns), 1fr);
     }
 

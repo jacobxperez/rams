@@ -27,12 +27,11 @@ const templateGenerator = {
         const parsedSource = parser.parseFromString(string, 'text/html');
         this.appendTemplate(parsedSource, templateSelector, targetSelector);
     },
-    elementFromHtml(html) {
+    fromHtml(html) {
         const newTemplate = document.createElement('template');
         newTemplate.innerHTML = html.trim();
         newTemplate.content.firstElementChild;
-        console.log(newTemplate);
-        return this;
+        return newTemplate;
     },
     setTemplate(templateSelector, targetSelector, callback = null) {
         new Promise((resolve, reject) => {

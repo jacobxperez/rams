@@ -20,7 +20,7 @@ let header = `
         `;
 
 let main = `
-        <div data-container data-grid="span-all">
+        <div data-container data-grid="main">
             <aside id="aside" data-column="large-3 medium-3 small-4"></aside>
             <article id="content" data-column="large-9 medium-9 small-4"></article>
         </div>
@@ -28,7 +28,7 @@ let main = `
 
 if (meta.type === 'fullPage') {
     main = `
-        <div id="content" data-container data-grid="span-all"></div>
+        <div id="content" data-container data-grid="main"></div>
         `;
 }
 
@@ -46,15 +46,14 @@ let layout = `
         </header>
         <main data-section="main">
             ${main}
-        </main>
-        `;
+        </main>`;
 
 // parse everything together
 templateGenerator
-    .fetchTemplate('#navTemplate', '#root', templateURL)
-    .fromString(layout, '#root')
+    .fetchTemplate('#navTemplate', 'body', templateURL)
+    .fromString(layout, 'body')
     .setTemplate('#headerTemplate', '#header')
     .setTemplate('#contentTemplate', '#content', sidebar)
-    .fetchTemplate('#footerTemplate', '#root', templateURL);
+    .fetchTemplate('#footerTemplate', 'body', templateURL);
 
 rams.toggle();

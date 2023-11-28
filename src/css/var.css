@@ -19,6 +19,18 @@
     --neutral-010: hsl(0, 0%, 10%);
     --neutral-000: hsl(0, 0%, 0%);
 
+    --primary-020: hsl(0, 0%, 40%);
+    --primary-010: hsl(0, 0%, 20%);
+    --primary-000: hsl(0, 0%, 0%);
+
+    --secondary-020: hsl(0, 0%, 40%);
+    --secondary-010: hsl(0, 0%, 30%);
+    --secondary-000: hsl(0, 0%, 20%);
+
+    --tertiary-020: hsl(0, 0%, 60%);
+    --tertiary-010: hsl(0, 0%, 50%);
+    --tertiary-000: hsl(0, 0%, 40%);
+
     --success-020: hsl(145, 80%, 30%);
     --success-010: hsl(145, 80%, 25%);
     --success-000: hsl(145, 80%, 20%);
@@ -52,16 +64,16 @@
 $background: var(--neutral-100);
 $background-gradient: false;
 
-$primary: var(--neutral-000);
-$primary-active: var(--neutral-020);
+$primary: var(--primary-000);
+$primary-active: var(--primary-010);
 $primary-text: var(--neutral-100);
 
-$secondary: var(--neutral-020);
-$secondary-active: var(--neutral-030);
+$secondary: var(--secondary-000);
+$secondary-active: var(--secondary-010);
 $secondary-text: var(--neutral-100);
 
-$tertiary: var(--neutral-040);
-$tertiary-active: var(--neutral-050);
+$tertiary: var(--tertiary-000);
+$tertiary-active: var(--tertiary-010);
 $tertiary-text: var(--neutral-100);
 
 /* Box Model */

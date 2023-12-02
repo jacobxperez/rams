@@ -20,7 +20,6 @@ const templateGenerator = {
         const clonedTemplate = sourceTemplate.content.cloneNode(true);
         const targetElement = document.querySelector(targetSelector);
         targetElement.appendChild(clonedTemplate);
-        // sourceTemplate.remove();
     },
     parseTemplate(string, templateSelector, targetSelector) {
         const parser = new DOMParser();

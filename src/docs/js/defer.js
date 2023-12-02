@@ -39,6 +39,14 @@ location.hostname === 'localhost' || location.hostname === '127.0.0.1'
     : (templateURL =
           window.location.origin + '/rams/templates/main.330b1356.html');
 
+// clears document by removing templates
+function removeTemplates() {
+    const allTemplates = document.querySelectorAll('template');
+    allTemplates.forEach((template) => {
+        template.remove();
+    });
+}
+
 // parse everything together
 templateGenerator
     .newTemplate(`
@@ -52,11 +60,18 @@ templateGenerator
     </main>
     <footer data-section="footer">
     </footer>
-    `, 'layoutTemplate')
+    `,
+        'layoutTemplate'
+    )
     .setTemplate('#layoutTemplate', 'body')
+    .fetchTemplate('#navTemplate', 'nav', templateURL)
     .setTemplate('#headerTemplate', '#header')
     .setTemplate('#contentTemplate', '#content', sidebar)
-    .fetchTemplate('#navTemplate', 'body > nav', templateURL)
-    .fetchTemplate('#footerTemplate', 'body > footer', templateURL);
+    .fetchTemplate(
+        '#footerTemplate',
+        'body > footer',
+        templateURL,
+        removeTemplates
+    );
 
 rams.toggle();

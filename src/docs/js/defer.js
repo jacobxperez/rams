@@ -39,21 +39,24 @@ location.hostname === 'localhost' || location.hostname === '127.0.0.1'
     : (templateURL =
           window.location.origin + '/rams/templates/main.330b1356.html');
 
-// create main layout
-let layout = `
-        <header data-section="header">
-            ${header}
-        </header>
-        <main data-section="main">
-            ${main}
-        </main>`;
-
 // parse everything together
 templateGenerator
-    .fetchTemplate('#navTemplate', 'body', templateURL)
-    .fromString(layout, 'body')
+    .newTemplate(`
+    <nav data-navbar="top">
+    </nav>
+    <header data-section="header">
+        ${header}
+    </header>
+    <main data-section="main">
+       ${main}
+    </main>
+    <footer data-section="footer">
+    </footer>
+    `, 'layoutTemplate')
+    .setTemplate('#layoutTemplate', 'body')
     .setTemplate('#headerTemplate', '#header')
     .setTemplate('#contentTemplate', '#content', sidebar)
-    .fetchTemplate('#footerTemplate', 'body', templateURL);
+    .fetchTemplate('#navTemplate', 'body > nav', templateURL)
+    .fetchTemplate('#footerTemplate', 'body > footer', templateURL);
 
 rams.toggle();

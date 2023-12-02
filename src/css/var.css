@@ -7,86 +7,98 @@
     --font-ui: "Atkinson Hyperlegible Pro", "Atkinson Hyperlegible", system-ui,
         "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 
-    --neutral-100: hsl(0, 0%, 100%);
-    --neutral-090: hsl(0, 0%, 90%);
-    --neutral-080: hsl(0, 0%, 80%);
-    --neutral-070: hsl(0, 0%, 70%);
-    --neutral-060: hsl(0, 0%, 60%);
-    --neutral-050: hsl(0, 0%, 50%);
-    --neutral-040: hsl(0, 0%, 40%);
-    --neutral-030: hsl(0, 0%, 30%);
-    --neutral-020: hsl(0, 0%, 20%);
-    --neutral-010: hsl(0, 0%, 10%);
-    --neutral-000: hsl(0, 0%, 0%);
+    --neutral-10: hsl(0, 0%, 100%);
+    --neutral-09: hsl(0, 0%, 90%);
+    --neutral-08: hsl(0, 0%, 80%);
+    --neutral-07: hsl(0, 0%, 70%);
+    --neutral-06: hsl(0, 0%, 60%);
+    --neutral-05: hsl(0, 0%, 50%);
+    --neutral-04: hsl(0, 0%, 40%);
+    --neutral-03: hsl(0, 0%, 30%);
+    --neutral-02: hsl(0, 0%, 20%);
+    --neutral-01: hsl(0, 0%, 10%);
+    --neutral-00: hsl(0, 0%, 0%);
 
-    --primary-020: hsl(0, 0%, 40%);
-    --primary-010: hsl(0, 0%, 20%);
-    --primary-000: hsl(0, 0%, 0%);
+    --primary-04: hsl(0, 0%, 50%);
+    --primary-03: hsl(0, 0%, 40%);
+    --primary-02: hsl(0, 0%, 30%);
+    --primary-01: hsl(0, 0%, 20%);
+    --primary-00: hsl(0, 0%, 0%);
 
-    --secondary-020: hsl(0, 0%, 40%);
-    --secondary-010: hsl(0, 0%, 30%);
-    --secondary-000: hsl(0, 0%, 20%);
+    --secondary-04: hsl(0, 0%, 60%);
+    --secondary-03: hsl(0, 0%, 50%);
+    --secondary-02: hsl(0, 0%, 40%);
+    --secondary-01: hsl(0, 0%, 30%);
+    --secondary-00: hsl(0, 0%, 20%);
 
-    --tertiary-020: hsl(0, 0%, 60%);
-    --tertiary-010: hsl(0, 0%, 50%);
-    --tertiary-000: hsl(0, 0%, 40%);
+    --tertiary-04: hsl(0, 0%, 80%);
+    --tertiary-03: hsl(0, 0%, 70%);
+    --tertiary-02: hsl(0, 0%, 60%);
+    --tertiary-01: hsl(0, 0%, 50%);
+    --tertiary-00: hsl(0, 0%, 40%);
 
-    --success-020: hsl(145, 80%, 30%);
-    --success-010: hsl(145, 80%, 25%);
-    --success-000: hsl(145, 80%, 20%);
+    --success-04: hsl(145, 80%, 40%);
+    --success-03: hsl(145, 80%, 35%);
+    --success-02: hsl(145, 80%, 30%);
+    --success-01: hsl(145, 80%, 25%);
+    --success-00: hsl(145, 80%, 20%);
 
-    --warning-020: hsl(40, 100%, 60%);
-    --warning-010: hsl(40, 100%, 55%);
-    --warning-000: hsl(40, 100%, 45%);
+    --warning-04: hsl(40, 100%, 70%);
+    --warning-03: hsl(40, 100%, 65%);
+    --warning-02: hsl(40, 100%, 60%);
+    --warning-01: hsl(40, 100%, 55%);
+    --warning-00: hsl(40, 100%, 45%);
 
-    --danger-020: hsl(0, 75%, 55%);
-    --danger-010: hsl(0, 75%, 50%);
-    --danger-000: hsl(0, 75%, 45%);
+    --danger-04: hsl(0, 75%, 65%);
+    --danger-03: hsl(0, 75%, 60%);
+    --danger-02: hsl(0, 75%, 55%);
+    --danger-01: hsl(0, 75%, 50%);
+    --danger-00: hsl(0, 75%, 45%);
 }
 
 /* @media (prefers-color-scheme: dark) {
     :root {
-        --neutral-000: hsl(0, 0%, 100%);
-        --neutral-010: hsl(0, 0%, 90%);
-        --neutral-020: hsl(0, 0%, 80%);
-        --neutral-030: hsl(0, 0%, 70%);
-        --neutral-040: hsl(0, 0%, 60%);
-        --neutral-050: hsl(0, 0%, 50%);
-        --neutral-060: hsl(0, 0%, 40%);
-        --neutral-070: hsl(0, 0%, 30%);
-        --neutral-080: hsl(0, 0%, 20%);
-        --neutral-090: hsl(0, 0%, 10%);
-        --neutral-100: hsl(0, 0%, 0%);
+        --neutral-00: hsl(0, 0%, 100%);
+        --neutral-01: hsl(0, 0%, 90%);
+        --neutral-02: hsl(0, 0%, 80%);
+        --neutral-03: hsl(0, 0%, 70%);
+        --neutral-04: hsl(0, 0%, 60%);
+        --neutral-05: hsl(0, 0%, 50%);
+        --neutral-06: hsl(0, 0%, 40%);
+        --neutral-07: hsl(0, 0%, 30%);
+        --neutral-08: hsl(0, 0%, 20%);
+        --neutral-09: hsl(0, 0%, 10%);
+        --neutral-10: hsl(0, 0%, 0%);
     }
 } */
 
 /* Colors */
-$background: var(--neutral-100);
+$background: var(--neutral-10);
 $background-gradient: false;
 
-$primary: var(--primary-000);
-$primary-active: var(--primary-010);
-$primary-text: var(--neutral-100);
+$primary: var(--primary-00);
+$primary-active: var(--primary-01);
+$primary-text: var(--neutral-10);
 
-$secondary: var(--secondary-000);
-$secondary-active: var(--secondary-010);
-$secondary-text: var(--neutral-100);
+$secondary: var(--secondary-00);
+$secondary-active: var(--secondary-01);
+$secondary-text: var(--neutral-10);
 
-$tertiary: var(--tertiary-000);
-$tertiary-active: var(--tertiary-010);
-$tertiary-text: var(--neutral-100);
+$tertiary: var(--tertiary-00);
+$tertiary-active: var(--tertiary-01);
+$tertiary-text: var(--neutral-10);
 
 /* Box Model */
 $space-y: 0.5rem;
 $space-x: 0.75rem;
 $border-width: 0.0625em;
-$border-color: var(--neutral-050);
+$border-color: var(--neutral-05);
 $border-radius: 0.25rem;
 
 /* Typography */
 $root-font-size: clamp(100%, 5vw + 1rem, 105%);
 $body-font-size: 1rem;
-$body-font-color: var(--neutral-000);
+$body-font-color: var(--neutral-00);
 $body-font-family: var(--font-sans);
 $body-font-weight: 400;
 $body-line-height: 1.5;
@@ -94,7 +106,7 @@ $body-font-variant-numeric: slashed-zero;
 $leading: 1.5rem;
 
 /* link */
-$link-color: false;
+$link-color: $primary;
 $link-text-decoration: underline solid 0.125rem;
 $link-text-decoration-hover: none;
 $link-underline-offset: 0.3125em;
@@ -134,13 +146,13 @@ $blockquote-font-style: italic;
 $pre-font-family: var(--font-mono);
 
 /* mark */
-$mark-background: var(--warning-010);
-$mark-text: var(--neutral-000);
+$mark-background: var(--warning-01);
+$mark-text: var(--neutral-00);
 
 /* hr */
 $hr-border-style: solid;
 $hr-border-width: 0.125rem;
-$hr-border-color: var(--neutral-000);
+$hr-border-color: var(--neutral-00);
 
 /* Lists */
 $ol-list-style-type: decimal;
@@ -159,7 +171,7 @@ $form-border-color: $border-color;
 $form-border-active: $body-font-color;
 $form-border-radius: $border-radius;
 $form-background: transparent;
-$form-text: var(--neutral-050);
+$form-text: var(--neutral-05);
 $form-text-active: $body-font-color;
 $form-text-area-min-height: 6.25rem;
 $form-transition:
@@ -173,8 +185,8 @@ $button-padding: $space-y $space-x;
 $button-border-width: $border-width;
 $button-border-color: transparent;
 $button-border-radius: $border-radius;
-$button-background: var(--neutral-090);
-$button-background-active: var(--neutral-080);
+$button-background: var(--neutral-09);
+$button-background-active: var(--neutral-08);
 $button-text-color: $body-font-color;
 $button-transition:
     color 0.2s ease,
@@ -182,33 +194,33 @@ $button-transition:
     background-color 0.2s ease;
 
 /* Feedback */
-$success: var(--success-010);
-$success-active: var(--success-000);
-$success-text: var(--neutral-100);
+$success: var(--success-01);
+$success-active: var(--success-00);
+$success-text: var(--neutral-10);
 
-$warning: var(--warning-010);
-$warning-active: var(--warning-020);
-$warning-text: var(--neutral-000);
+$warning: var(--warning-01);
+$warning-active: var(--warning-02);
+$warning-text: var(--neutral-00);
 
-$danger: var(--danger-010);
-$danger-active: var(--danger-000);
-$danger-text: var(--neutral-100);
+$danger: var(--danger-01);
+$danger-active: var(--danger-00);
+$danger-text: var(--neutral-10);
 
 /* Disabled */
-$disabled: var(--neutral-090);
-$disabled-text: var(--neutral-050);
+$disabled: var(--neutral-09);
+$disabled-text: var(--neutral-05);
 
 /* Navbar */
-$navbar-background: var(--neutral-000);
-$navbar-dropbox-background: var(--neutral-010);
-$navbar-anchor-text: var(--neutral-100);
-$navbar-anchor-text-active: var(--neutral-070);
+$navbar-background: var(--neutral-00);
+$navbar-dropbox-background: var(--neutral-01);
+$navbar-anchor-text: var(--neutral-10);
+$navbar-anchor-text-active: var(--neutral-07);
 
 /* Anchor */
 $anchor-font-family: var(--font-ui);
 $anchor-padding: $space-y $space-x;
 $anchor-color: $primary;
-$anchor-active-color: var(--neutral-050);
+$anchor-active-color: var(--neutral-05);
 $anchor-transition:
     color 0.2s ease,
     border-color 0.2s ease,
@@ -217,7 +229,7 @@ $anchor-transition:
 /* Line Tab */
 $anchor-line-border-width: 0.125em;
 $anchor-line-border-color: $border-color;
-$anchor-line-text: var(--neutral-050);
+$anchor-line-text: var(--neutral-05);
 $anchor-line-text-active: $body-font-color;
 $anchor-line-border-active: $primary;
 
@@ -232,15 +244,15 @@ $dropbox-transition:
     visibility 0.3s ease;
 
 /* Dropbox Menu */
-$dropbox-menu-background-color: var(--neutral-100);
-$dropbox-menu-border: $border-width solid var(--neutral-000);
-$anchor-menu-background-color: var(--neutral-000);
-$anchor-menu-color: var(--neutral-100);
+$dropbox-menu-background-color: var(--neutral-10);
+$dropbox-menu-border: $border-width solid var(--neutral-00);
+$anchor-menu-background-color: var(--neutral-00);
+$anchor-menu-color: var(--neutral-10);
 
 /* Tooltip */
 $tooltip-min-width: 25ch;
-$tooltip-background: var(--neutral-000);
-$tooltip-text: var(--neutral-100);
+$tooltip-background: var(--neutral-00);
+$tooltip-text: var(--neutral-10);
 $tooltip-text-decoration: underline dotted 0.125rem;
 $tooltip-underline-offset: $link-underline-offset;
 
@@ -265,4 +277,4 @@ $screen-large-min-width: 61.25em; /* 980px */
 
 /* Selection */
 $selection: hsl(40, 80%, 80%);
-$selection-text: var(--neutral-000);
+$selection-text: var(--neutral-00);

@@ -33,6 +33,7 @@ if (meta.type === 'fullPage') {
 }
 
 // check and set template url for localhost or for public url
+// if you cannot see the nav/footer then the url is wrong
 let templateURL;
 location.hostname === 'localhost' || location.hostname === '127.0.0.1'
     ? (templateURL = window.location.origin + '/templates/main.347099b8.html')

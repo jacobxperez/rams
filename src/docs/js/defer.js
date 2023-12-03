@@ -33,27 +33,46 @@ if (meta.type === 'fullPage') {
 }
 
 // check and set template url for localhost or for public url
+// if you cannot see the nav/footer then the url is wrong
 let templateURL;
 location.hostname === 'localhost' || location.hostname === '127.0.0.1'
     ? (templateURL = window.location.origin + '/templates/main.347099b8.html')
     : (templateURL =
           window.location.origin + '/rams/templates/main.330b1356.html');
 
-// create main layout
-let layout = `
-        <header data-section="header">
-            ${header}
-        </header>
-        <main data-section="main">
-            ${main}
-        </main>`;
+// clears document by removing templates
+function removeTemplates() {
+    const allTemplates = document.querySelectorAll('template');
+    allTemplates.forEach((template) => {
+        template.remove();
+    });
+}
 
 // parse everything together
 templateGenerator
-    .fetchTemplate('#navTemplate', 'body', templateURL)
-    .fromString(layout, 'body')
+    .newTemplate(`
+    <nav data-navbar="top">
+    </nav>
+    <header data-section="header">
+        ${header}
+    </header>
+    <main data-section="main">
+       ${main}
+    </main>
+    <footer data-section="footer">
+    </footer>
+    `,
+        'layoutTemplate'
+    )
+    .setTemplate('#layoutTemplate', 'body')
+    .fetchTemplate('#navTemplate', 'nav', templateURL)
     .setTemplate('#headerTemplate', '#header')
     .setTemplate('#contentTemplate', '#content', sidebar)
-    .fetchTemplate('#footerTemplate', 'body', templateURL);
+    .fetchTemplate(
+        '#footerTemplate',
+        'body > footer',
+        templateURL,
+        removeTemplates
+    );
 
 rams.toggle();

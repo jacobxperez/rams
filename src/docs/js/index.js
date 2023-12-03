@@ -20,18 +20,19 @@ const templateGenerator = {
         const clonedTemplate = sourceTemplate.content.cloneNode(true);
         const targetElement = document.querySelector(targetSelector);
         targetElement.appendChild(clonedTemplate);
-        sourceTemplate.remove();
     },
     parseTemplate(string, templateSelector, targetSelector) {
         const parser = new DOMParser();
         const parsedSource = parser.parseFromString(string, 'text/html');
         this.appendTemplate(parsedSource, templateSelector, targetSelector);
     },
-    fromHtml(html) {
+    newTemplate(html, id) {
         const newTemplate = document.createElement('template');
         newTemplate.innerHTML = html.trim();
         newTemplate.content.firstElementChild;
-        return newTemplate;
+        newTemplate.setAttribute('id', id)
+        document.body.appendChild(newTemplate);
+        return this;
     },
     setTemplate(templateSelector, targetSelector, callback = null) {
         new Promise((resolve, reject) => {

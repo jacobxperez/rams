@@ -31,11 +31,11 @@
     --secondary-01: hsl(0, 0%, 30%);
     --secondary-00: hsl(0, 0%, 20%);
 
-    --tertiary-04: hsl(0, 0%, 80%);
-    --tertiary-03: hsl(0, 0%, 70%);
-    --tertiary-02: hsl(0, 0%, 60%);
-    --tertiary-01: hsl(0, 0%, 50%);
-    --tertiary-00: hsl(0, 0%, 40%);
+    --tertiary-04: hsl(0, 0%, 70%);
+    --tertiary-03: hsl(0, 0%, 60%);
+    --tertiary-02: hsl(0, 0%, 50%);
+    --tertiary-01: hsl(0, 0%, 40%);
+    --tertiary-00: hsl(0, 0%, 30%);
 
     --success-04: hsl(145, 80%, 40%);
     --success-03: hsl(145, 80%, 35%);

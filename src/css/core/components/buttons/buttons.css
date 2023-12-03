@@ -15,6 +15,11 @@
 [data-button="tertiary outline"] {
     border-color: $tertiary;
     color: $tertiary;
+
+    &:is([data-state="active"], :hover, :active) {
+        background-color: $tertiary;
+        color: $tertiary-text;
+    }
 }
 
 [data-button~="secondary"] {
@@ -30,6 +35,11 @@
 [data-button="secondary outline"] {
     border-color: $secondary;
     color: $secondary;
+
+    &:is([data-state="active"], :hover, :active) {
+        background-color: $secondary;
+        color: $secondary-text;
+    }
 }
 
 [data-button~="primary"] {
@@ -45,6 +55,11 @@
 [data-button="primary outline"] {
     border-color: $primary;
     color: $primary;
+
+    &:is([data-state="active"], :hover, :active) {
+        background-color: $primary;
+        color: $primary-text;
+    }
 }
 
 [data-button~="success"] {
@@ -60,6 +75,11 @@
 [data-button="success outline"] {
     border-color: $success;
     color: $success;
+
+    &:is([data-state="active"], :hover, :active) {
+        background-color: $success;
+        color: $success-text;
+    }
 }
 
 [data-button~="warning"] {
@@ -75,6 +95,11 @@
 [data-button="warning outline"] {
     border-color: $warning;
     color: $warning;
+
+    &:is([data-state="active"], :hover, :active) {
+        background-color: $warning;
+        color: $warning-text;
+    }
 }
 
 [data-button~="danger"] {
@@ -90,6 +115,11 @@
 [data-button="danger outline"] {
     border-color: $danger;
     color: $danger;
+
+    &:is([data-state="active"], :hover, :active) {
+        background-color: $danger;
+        color: $danger-text;
+    }
 }
 
 [data-button~="outline"] {

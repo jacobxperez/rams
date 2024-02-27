@@ -1,6 +1,6 @@
 /* @license
  * Jacob Perez <https://jacobxperez.github.io/blog/>
- * Copyright (C) 2023 Jacob Perez <jacobxperez@gmx.com>
+ * Copyright (C) 2024 Jacob Perez <jacobxperez@gmx.com>
  * Licensed under the Apache License, Version 2.0
  * http://www.apache.org/licenses/LICENSE-2.0
 -----------------------------------------------------------------------------*/
@@ -50,7 +50,8 @@ function removeTemplates() {
 
 // parse everything together
 templateGenerator
-    .newTemplate(`
+    .newTemplate(
+        `
     <nav data-navbar="top">
     </nav>
     <header data-section="header">

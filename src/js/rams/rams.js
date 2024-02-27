@@ -4,7 +4,7 @@ import {
     getDataAttr,
     hasDataAttr,
     closestDataAttr,
-    matchDataAttr,
+    matchesDataAttr,
     toggleDataAttr,
 } from './core/methods/data.js';
 import {toggle} from './core/components/toggle.js';
@@ -22,7 +22,7 @@ class Rams {
         getDataAttr();
         hasDataAttr();
         closestDataAttr();
-        matchDataAttr();
+        matchesDataAttr();
         toggleDataAttr();
     }
     // Components

@@ -13,7 +13,6 @@
         }
       },
     "scripts": {
-        "watch": "parcel watch --no-source-maps",
         "docs": "parcel --target rams --no-source-maps",
         "dev": "parcel serve --target dev --no-source-maps",
         "build": "parcel build --target dev --no-source-maps --no-content-hash --public-url /",

@@ -1,21 +1,9 @@
-function addEvent() {
-    EventTarget.prototype.addEvent = function (
-        eventName,
-        handler,
-        boolean = false
-    ) {
-        return this.addEventListener(eventName, handler, boolean);
-    };
+function addEvent(element, eventName, handler, boolean = false) {
+    return element.addEventListener(eventName, handler, boolean);
 }
 
-function removeEvent() {
-    EventTarget.prototype.removeEvent = function (
-        eventName,
-        handler,
-        boolean = false
-    ) {
-        return this.removeEventListener(eventName, handler, boolean);
-    };
+function removeEvent(element, eventName, handler, boolean = false) {
+    return element.removeEventListener(eventName, handler, boolean);
 }
 
 export {addEvent, removeEvent};

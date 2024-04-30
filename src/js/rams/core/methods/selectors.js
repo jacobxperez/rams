@@ -1,13 +1,9 @@
-function selector() {
-    Node.prototype.selector = function (selector) {
-        return this.querySelector(selector);
-    };
+function selector(element, selector) {
+    return element.querySelector(selector);
 }
 
-function selectorAll() {
-    Node.prototype.selectorAll = function (selector) {
-        return this.querySelectorAll(selector);
-    };
+function selectorAll(element, selector) {
+    return element.querySelectorAll(selector);
 }
 
 export {selector, selectorAll};

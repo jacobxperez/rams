@@ -5,7 +5,7 @@
  * http://www.apache.org/licenses/LICENSE-2.0
 -----------------------------------------------------------------------------*/
 import {sidebar} from './modules/sidebar.js';
-import {rams} from '../../js/rams/rams.js';
+import {rams} from '../../js/rams/index.js';
 
 if (meta.title === '') {
     meta.title = `<h1>Rams</h1>`;
@@ -36,9 +36,9 @@ if (meta.type === 'fullPage') {
 // if you cannot see the nav/footer then the url is wrong
 let templateURL;
 location.hostname === 'localhost' || location.hostname === '127.0.0.1'
-    ? (templateURL = window.location.origin + '/templates/main.347099b8.html')
+    ? (templateURL = window.location.origin + '/templates/index.59811f9a.html')
     : (templateURL =
-          window.location.origin + '/rams/templates/main.330b1356.html');
+          window.location.origin + '/rams/templates/index.19081ad0.html');
 
 // clears document by removing templates
 function removeTemplates() {

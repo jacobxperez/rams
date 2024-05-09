@@ -11,7 +11,7 @@
             "source": "src/docs/index.html",
             "distDir": "./docs"
         }
-      },
+    },
     "scripts": {
         "docs": "parcel --target rams --no-source-maps",
         "dev": "parcel serve --target dev --no-source-maps",

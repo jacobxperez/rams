@@ -41,15 +41,15 @@ location.hostname === 'localhost' || location.hostname === '127.0.0.1'
           window.location.origin + '/rams/templates/index.19081ad0.html');
 
 // clears document by removing templates
-function removeTemplates() {
-    const allTemplates = document.querySelectorAll('template');
-    allTemplates.forEach((template) => {
-        template.remove();
-    });
-}
+// function removeTemplates() {
+//     const allTemplates = document.querySelectorAll('template');
+//     allTemplates.forEach((template) => {
+//         template.remove();
+//     });
+// }
 
 // parse everything together
-templateGenerator
+vannelli
     .newTemplate(
         `
     <nav data-navbar="top">
@@ -69,11 +69,6 @@ templateGenerator
     .fetchTemplate('#navTemplate', 'nav', templateURL)
     .setTemplate('#headerTemplate', '#header')
     .setTemplate('#contentTemplate', '#content', sidebar)
-    .fetchTemplate(
-        '#footerTemplate',
-        'body > footer',
-        templateURL,
-        removeTemplates
-    );
+    .fetchTemplate('#footerTemplate', 'body > footer', templateURL);
 
 rams.toggle();

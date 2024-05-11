@@ -41,7 +41,7 @@ Rams is a class-less css design system framework that utilizes the power of data
 
 ### Build
 
-Edit the [variables](https://github.com/jacobxperez/rams/blob/master/src/css/var.css), add
+Edit the [variables](https://github.com/jacobxperez/rams/blob/master/src/css/settings.css), add
 [custom](https://github.com/jacobxperez/rams/tree/master/src/css/custom) modules and linked
 them to [index.css](https://github.com/jacobxperez/rams/blob/master/src/css/index.css) for compiling.
 
@@ -49,7 +49,7 @@ them to [index.css](https://github.com/jacobxperez/rams/blob/master/src/css/inde
   - [core](https://github.com/jacobxperez/rams/tree/master/src/css/core) (important files for compiling)
   - [custom](https://github.com/jacobxperez/rams/tree/master/src/css/custom) (add custom modules here)
   - [index.css](https://github.com/jacobxperez/rams/blob/master/src/css/index.css) (compile to produce the final CSS)
-  - [var.css](https://github.com/jacobxperez/rams/blob/master/src/css/var.css) (variables for font, colors, and more)
+  - [settings.css](https://github.com/jacobxperez/rams/blob/master/src/css/settings.css) (theme settings for font, colors, and more)
 
 **note**: When starting a project with Rams we recommend **not** to edit the [core](https://github.com/jacobxperez/rams/tree/master/src/css/core) files unless you are [contributing](https://github.com/jacobxperez/rams/blob/master/.github/CONTRIBUTING.md) code back to Rams. Any custom modules should go in the [custom](https://github.com/jacobxperez/rams/tree/master/src/css/custom) folder, this will help you separate your code from Rams.
 

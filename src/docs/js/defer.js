@@ -50,8 +50,7 @@ location.hostname === 'localhost' || location.hostname === '127.0.0.1'
 
 // parse everything together
 vannelli
-    .newTemplate(
-        `
+    .newTemplate(`
     <nav data-navbar="top">
     </nav>
     <header data-section="header">

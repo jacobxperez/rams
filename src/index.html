@@ -28,6 +28,95 @@
             <hr />
         </header>
 
+        <nav data-navbar="top">
+            <!-- Navbar -->
+            <ul data-flex>
+                <li>
+                    <a data-anchor="navbar" href="https://github.com/jacobxperez/rams/index.html"
+                        >Rams</a
+                    >
+                </li>
+
+                <li data-item="grow"></li>
+
+                <li data-display="small-none">
+                    <a data-anchor="navbar" href="https://github.com/jacobxperez/rams/index.html"
+                        >Getting Started</a
+                    >
+                </li>
+                <li data-display="small-none">
+                    <a
+                        data-anchor="navbar"
+                        href="https://github.com/jacobxperez/rams/components/index.html"
+                        >Components</a
+                    >
+                </li>
+                <li data-display="small-none">
+                    <a
+                        data-anchor="navbar"
+                        href="https://github.com/jacobxperez/rams/icons/index.html"
+                        >Icons</a
+                    >
+                </li>
+                <!-- <li data-display="small-none"><a data-anchor="navbar" href="../carousel/index.html">Carousel</a></li> -->
+                <li data-display="small-none">
+                    <a
+                        data-anchor="navbar"
+                        href="https://github.com/jacobxperez/rams/archive/master.zip"
+                        >Download</a
+                    >
+                </li>
+                <li data-display="small-none">
+                    <a data-anchor="navbar" href="https://github.com/jacobxperez/rams"
+                        >Contribute</a
+                    >
+                </li>
+
+                <!-- Dropdown Menu -->
+                <li data-display="small">
+                    <button data-anchor="navbar" data-toggle="pop">Menu</button>
+
+                    <ul data-dropbox="navbar" data-position="left right">
+                        <li>
+                            <a
+                                data-anchor="navbar"
+                                href="https://github.com/jacobxperez/rams/index.html"
+                                >Getting Started</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                data-anchor="navbar"
+                                href="https://github.com/jacobxperez/rams/components/index.html"
+                                >Components</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                data-anchor="navbar"
+                                href="https://github.com/jacobxperez/rams/icons/index.html"
+                                >Icons</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                data-anchor="navbar"
+                                href="https://github.com/jacobxperez/rams/archive/master.zip"
+                                >Download</a
+                            >
+                        </li>
+                        <li>
+                            <a data-anchor="navbar" href="https://github.com/jacobxperez/rams"
+                                >Contribute</a
+                            >
+                        </li>
+                    </ul>
+                </li>
+                <!-- end Dropdown Menu -->
+            </ul>
+            <!-- end Navbar -->
+        </nav>
+
         <main data-container data-grid="main">
             <!-- Secondary Nav -->
             <nav data-column="large-3 medium-3 small-4">
@@ -73,101 +162,150 @@
 
                 <p>
                     Start by
-                    <strong><a href="https://github.com/jacobxperez/rams/archive/master.zip">downloading</a></strong>
+                    <strong
+                        ><a href="https://github.com/jacobxperez/rams/archive/master.zip"
+                            >downloading</a
+                        ></strong
+                    >
                     the
                     <a href="https://github.com/jacobxperez/rams">repository</a> or by cloning the
                     project:
                 </p>
-                
-                <pre data-box="padding border"><code>git clone https://github.com/jacobxperez/rams.git</code></pre>
-                
+
+                <pre
+                    data-box="padding border"
+                ><code>git clone https://github.com/jacobxperez/rams.git</code></pre>
+
                 <p>
                     Install dependencies on your machine with
                     <a href="https://www.npmjs.com/" rel="nofollow">npm</a>
                 </p>
-                
+
                 <pre data-box="padding border"><code>npm install</code></pre>
-                
+
                 <h3 id="build">Build</h3>
-                
+
                 <p>
                     Edit the
-                    <a href="https://github.com/jacobxperez/rams/blob/master/src/css/settings.css">settings</a>, add
-                    <a href="https://github.com/jacobxperez/rams/tree/master/src/css/custom">custom</a>
+                    <a href="https://github.com/jacobxperez/rams/blob/master/src/css/settings.css"
+                        >settings</a
+                    >, add
+                    <a href="https://github.com/jacobxperez/rams/tree/master/src/css/custom"
+                        >custom</a
+                    >
                     modules and linked them to
-                    <a href="https://github.com/jacobxperez/rams/blob/master/src/css/index.css">index.css</a>
+                    <a href="https://github.com/jacobxperez/rams/blob/master/src/css/index.css"
+                        >index.css</a
+                    >
                     for compiling.
                 </p>
-                
+
                 <ul data-list="ul">
                     <li>
                         <a href="https://github.com/jacobxperez/rams/tree/master/src/css/">/css</a>
                         <ul data-list="ul">
                             <li>
-                                <a href="https://github.com/jacobxperez/rams/tree/master/src/css/core">core</a>
+                                <a
+                                    href="https://github.com/jacobxperez/rams/tree/master/src/css/core"
+                                    >core</a
+                                >
                                 (important files for compiling)
                             </li>
                             <li>
-                                <a href="https://github.com/jacobxperez/rams/tree/master/src/css/custom">custom</a>
+                                <a
+                                    href="https://github.com/jacobxperez/rams/tree/master/src/css/custom"
+                                    >custom</a
+                                >
                                 (add custom modules here)
                             </li>
                             <li>
-                                <a href="https://github.com/jacobxperez/rams/blob/master/src/css/index.css">index.css</a>
+                                <a
+                                    href="https://github.com/jacobxperez/rams/blob/master/src/css/index.css"
+                                    >index.css</a
+                                >
                                 (compile to produce the final CSS)
                             </li>
                             <li>
-                                <a href="https://github.com/jacobxperez/rams/blob/master/src/css/settings.css">settings.css</a>
+                                <a
+                                    href="https://github.com/jacobxperez/rams/blob/master/src/css/settings.css"
+                                    >settings.css</a
+                                >
                                 (theme settings for fonts, colors, and more)
                             </li>
                         </ul>
                     </li>
                 </ul>
-                
+
                 <h3 id="compile">Compile</h3>
-                
+
                 <p>On your terminal run these scripts to compile build</p>
-                
+
                 <ul data-list="ul">
                     <li><code>npm run docs</code> (locally runs documentation)</li>
                     <li><code>npm run dev</code> (serve current development build)</li>
                     <li>
                         <code>npm run build</code> (makes current build and sets url to "/" can be
                         changed on
-                        <a href="https://github.com/jacobxperez/rams/blob/master/package.json">package.json</a>)
+                        <a href="https://github.com/jacobxperez/rams/blob/master/package.json"
+                            >package.json</a
+                        >)
                     </li>
                 </ul>
-                
+
                 <h3 id="contributing">Contributing</h3>
-                
+
                 <p>
                     If you are interested in contributing to this project, please read our
-                    <a href="https://github.com/jacobxperez/rams/blob/master/.github/CONTRIBUTING.md">contributing-guidelines</a>.
+                    <a
+                        href="https://github.com/jacobxperez/rams/blob/master/.github/CONTRIBUTING.md"
+                        >contributing-guidelines</a
+                    >.
                 </p>
-                
+
                 <h3 id="license">LICENSE</h3>
-                
+
                 <p>
                     Copyright (C) 2024
                     <a href="https://jacobxperez.github.io/blog/">Jacob Perez</a>
                 </p>
-                
+
                 <p>
                     Licensed under the
-                    <a href="http://www.apache.org/licenses/LICENSE-2.0" rel="nofollow">Apache License, Version 2.0</a>
-                    (the "License"); you may not use this file except in compliance with the License.
-                    You may obtain a copy of the License at
+                    <a href="http://www.apache.org/licenses/LICENSE-2.0" rel="nofollow"
+                        >Apache License, Version 2.0</a
+                    >
+                    (the "License"); you may not use this file except in compliance with the
+                    License. You may obtain a copy of the License at
                 </p>
-                
+
                 <p>
-                    <a href="http://www.apache.org/licenses/LICENSE-2.0" rel="nofollow">http://www.apache.org/licenses/LICENSE-2.0</a>
+                    <a href="http://www.apache.org/licenses/LICENSE-2.0" rel="nofollow"
+                        >http://www.apache.org/licenses/LICENSE-2.0</a
+                    >
                 </p>
-                
+
                 <p>
                     Unless required by applicable law or agreed to in writing, software distributed
                     under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
-                    CONDITIONS OF ANY KIND, either express or implied. See the License for the specific
-                    language governing permissions and limitations under the License.
+                    CONDITIONS OF ANY KIND, either express or implied. See the License for the
+                    specific language governing permissions and limitations under the License.
                 </p>
+            </article>
+            <!-- end Content -->
+        </main>
+
+        <footer data-container>
+            <hr />
+            <p>
+                <small
+                    >&copy; 2024 <a href="https://github.com/jacobxperez/rams">Rams</a> by
+                    <a href="https://jacobxperez.github.io/blog/" rel="author">Jacob Perez</a>
+                    and licensed under the
+                    <a href="http://www.apache.org/licenses/LICENSE-2.0" rel="license"
+                        >Apache License v2.0</a
+                    >.</small
+                >
+            </p>
         </footer>
     </body>
 </html>

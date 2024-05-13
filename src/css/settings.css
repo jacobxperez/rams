@@ -79,14 +79,17 @@ $background-gradient: false;
 $primary: var(--primary-00);
 $primary-active: var(--primary-01);
 $primary-text: var(--neutral-10);
+$primary-text-active: $primary-text;
 
 $secondary: var(--secondary-00);
 $secondary-active: var(--secondary-01);
 $secondary-text: var(--neutral-10);
+$secondary-text-active: $secondary-text;
 
 $tertiary: var(--tertiary-00);
 $tertiary-active: var(--tertiary-01);
 $tertiary-text: var(--neutral-10);
+$tertiary-text-active: var(--neutral-10);
 
 /* Box Model */
 $space-y: 0.5rem;
@@ -107,8 +110,9 @@ $leading: 1.5rem;
 
 /* link */
 $link-color: $primary;
+$link-color-active: $link-color;
 $link-text-decoration: underline solid 0.125rem;
-$link-text-decoration-hover: none;
+$link-text-decoration-active: none;
 $link-underline-offset: 0.3125em;
 
 /* headings */
@@ -193,6 +197,7 @@ $button-transition:
     border-color 0.2s ease,
     background-color 0.2s ease;
 
+/* outline */
 $button-outline-text-color: var(--neutral-00);
 $button-outline-text-color-ative: var(--neutral-10);
 $button-outline-background-active: var(--neutral-00);
@@ -202,14 +207,17 @@ $button-outline-border-color: var(--neutral-00);
 $success: var(--success-01);
 $success-active: var(--success-00);
 $success-text: var(--neutral-10);
+$success-text-active: var(--neutral-10);
 
 $warning: var(--warning-01);
 $warning-active: var(--warning-02);
 $warning-text: var(--neutral-00);
+$warning-text-active: var(--neutral-00);
 
 $danger: var(--danger-01);
 $danger-active: var(--danger-00);
 $danger-text: var(--neutral-10);
+$danger-text-active: var(--neutral-10);
 
 /* Disabled */
 $disabled: var(--neutral-09);

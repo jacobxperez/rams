@@ -1,16 +1,17 @@
 :where(a) {
     text-decoration: none;
     background-color: transparent;
-    @if $link-color != false {
-        color: $link-color;
-    }
+    color: $link-color;
     text-decoration: $link-text-decoration;
     text-underline-offset: $link-underline-offset;
     cursor: pointer;
 }
 
 :where(a:hover, a:active) {
-    text-decoration: $link-text-decoration-hover;
+    @if $link-color-active != $link-color {
+        color: $link-color-active;
+    }
+    text-decoration: $link-text-decoration-active;
 }
 
 :where(a:focus) {

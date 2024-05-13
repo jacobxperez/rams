@@ -1,5 +1,11 @@
 [data-button~="outline"] {
-    border-color: $border-color;
+    color: $button-outline-text-color;
+    border-color: $button-outline-border-color;
+
+    &:is([data-state="active"], :hover, :active)  {
+    background-color: $button-outline-background-active;
+    color: $button-outline-text-color-ative;
+}
 }
 
 [data-button~="tertiary"] {
@@ -12,7 +18,7 @@
     }
 }
 
-[data-button="tertiary outline"] {
+[data-button^="tertiary outline"] {
     border-color: $tertiary;
     color: $tertiary;
 
@@ -32,7 +38,7 @@
     }
 }
 
-[data-button="secondary outline"] {
+[data-button^="secondary outline"] {
     border-color: $secondary;
     color: $secondary;
 
@@ -52,7 +58,7 @@
     }
 }
 
-[data-button="primary outline"] {
+[data-button^="primary outline"] {
     border-color: $primary;
     color: $primary;
 
@@ -72,7 +78,7 @@
     }
 }
 
-[data-button="success outline"] {
+[data-button^="success outline"] {
     border-color: $success;
     color: $success;
 
@@ -92,7 +98,7 @@
     }
 }
 
-[data-button="warning outline"] {
+[data-button^="warning outline"] {
     border-color: $warning;
     color: $warning;
 
@@ -112,7 +118,7 @@
     }
 }
 
-[data-button="danger outline"] {
+[data-button^="danger outline"] {
     border-color: $danger;
     color: $danger;
 

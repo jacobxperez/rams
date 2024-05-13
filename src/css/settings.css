@@ -19,23 +19,23 @@
     --neutral-01: hsl(0, 0%, 10%);
     --neutral-00: hsl(0, 0%, 0%);
 
-    --primary-04: hsl(0, 0%, 50%);
-    --primary-03: hsl(0, 0%, 40%);
-    --primary-02: hsl(0, 0%, 30%);
-    --primary-01: hsl(0, 0%, 20%);
-    --primary-00: hsl(0, 0%, 0%);
+    --primary-04: var(--neutral-05);
+    --primary-03: var(--neutral-04);
+    --primary-02: var(--neutral-03);
+    --primary-01: var(--neutral-02);
+    --primary-00: var(--neutral-00);
 
-    --secondary-04: hsl(0, 0%, 60%);
-    --secondary-03: hsl(0, 0%, 50%);
-    --secondary-02: hsl(0, 0%, 40%);
-    --secondary-01: hsl(0, 0%, 30%);
-    --secondary-00: hsl(0, 0%, 20%);
+    --secondary-04: var(--neutral-06);
+    --secondary-03: var(--neutral-05);
+    --secondary-02: var(--neutral-04);
+    --secondary-01: var(--neutral-03);
+    --secondary-00: var(--neutral-02);
 
-    --tertiary-04: hsl(0, 0%, 70%);
-    --tertiary-03: hsl(0, 0%, 60%);
-    --tertiary-02: hsl(0, 0%, 50%);
-    --tertiary-01: hsl(0, 0%, 40%);
-    --tertiary-00: hsl(0, 0%, 30%);
+    --tertiary-04: var(--neutral-07);
+    --tertiary-03: var(--neutral-06);
+    --tertiary-02: var(--neutral-05);
+    --tertiary-01: var(--neutral-04);
+    --tertiary-00: var(--neutral-03);
 
     --success-04: hsl(145, 80%, 40%);
     --success-03: hsl(145, 80%, 35%);
@@ -58,17 +58,17 @@
 
 /* @media (prefers-color-scheme: dark) {
     :root {
-        --neutral-00: hsl(0, 0%, 100%);
-        --neutral-01: hsl(0, 0%, 90%);
-        --neutral-02: hsl(0, 0%, 80%);
-        --neutral-03: hsl(0, 0%, 70%);
-        --neutral-04: hsl(0, 0%, 60%);
-        --neutral-05: hsl(0, 0%, 50%);
-        --neutral-06: hsl(0, 0%, 40%);
-        --neutral-07: hsl(0, 0%, 30%);
-        --neutral-08: hsl(0, 0%, 20%);
+        --neutral-10: hsl(0, 0%, 05%);
         --neutral-09: hsl(0, 0%, 10%);
-        --neutral-10: hsl(0, 0%, 0%);
+        --neutral-08: hsl(0, 0%, 15%);
+        --neutral-07: hsl(0, 0%, 25%);
+        --neutral-06: hsl(0, 0%, 35%);
+        --neutral-05: hsl(0, 0%, 45%);
+        --neutral-04: hsl(0, 0%, 55%);
+        --neutral-03: hsl(0, 0%, 65%);
+        --neutral-02: hsl(0, 0%, 75%);
+        --neutral-01: hsl(0, 0%, 85%);
+        --neutral-00: hsl(0, 0%, 90%);
     }
 } */
 
@@ -185,13 +185,18 @@ $button-padding: $space-y $space-x;
 $button-border-width: $border-width;
 $button-border-color: transparent;
 $button-border-radius: $border-radius;
-$button-background: var(--neutral-09);
-$button-background-active: var(--neutral-08);
-$button-text-color: $body-font-color;
+$button-background: var(--neutral-00);
+$button-background-active: var(--neutral-02);
+$button-text-color: var(--neutral-10);
 $button-transition:
     color 0.2s ease,
     border-color 0.2s ease,
     background-color 0.2s ease;
+
+$button-outline-text-color: var(--neutral-00);
+$button-outline-text-color-ative: var(--neutral-10);
+$button-outline-background-active: var(--neutral-00);
+$button-outline-border-color: var(--neutral-00);
 
 /* Feedback */
 $success: var(--success-01);
@@ -276,5 +281,5 @@ $screen-medium-max-width: 61.1875em; /* 979px */
 $screen-large-min-width: 61.25em; /* 980px */
 
 /* Selection */
-$selection: hsl(40, 80%, 80%);
-$selection-text: var(--neutral-00);
+$selection: hsl(40, 100%, 75%);
+$selection-text: hsl(0, 0%, 0%);

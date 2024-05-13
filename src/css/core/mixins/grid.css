@@ -1,0 +1,19 @@
+@mixin grid($name, $columns, $prefix: false) {
+    [data-grid~="$(name)"] {
+        grid-template-columns: repeat($(columns), 1fr);
+    }
+
+    @if $prefix == false {
+        @for $i from 1 to $columns {
+            [data-column~="$(i)"] {
+                grid-column: span $(i);
+            }
+        }
+    } @else  {
+        @for $i from 1 to $columns {
+            [data-column~="$(prefix)-$(i)"] {
+                grid-column: span $(i);
+            }
+        }
+    }
+}

@@ -23,7 +23,7 @@ export function toggle(...args) {
         rams.toggleDataAttr(targetToggle, 'state', 'active');
     }
 
-    document.addEventListener('click', (e) => {
+    rams.addEvent(document, 'click', (e) => {
         const targetToggle = rams.closestDataAttr(e.target, 'toggle');
 
         if (targetToggle) {
@@ -31,7 +31,8 @@ export function toggle(...args) {
                 return;
             } else {
                 clickedSet.add(targetToggle);
-                targetToggle.addEventListener(
+                rams.addEvent(
+                    targetToggle,
                     'click',
                     (e) => {
                         toggleState(targetToggle);

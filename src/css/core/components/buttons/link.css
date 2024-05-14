@@ -8,7 +8,10 @@
 
     &:is([data-state="active"], :hover, :active) {
         background-color: transparent;
+        @if $link-color-active != $link-color {
+            color: $link-color-active;
+        }
         border-color: transparent;
-        text-decoration: $link-text-decoration-hover;
+        text-decoration: $link-text-decoration-active;
     }
 }

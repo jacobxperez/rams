@@ -272,9 +272,9 @@ $tooltip-underline-offset: $link-underline-offset;
 /* Grid */
 $grid-name: main;
 $grid-gap: 1.25rem;
-$grid-small-columns: 4;
-$grid-medium-columns: 12;
-$grid-large-columns: 12;
+$grid-columns-small: 4;
+$grid-columns-medium: 12;
+$grid-columns-large: 12;
 
 /* Container */
 $container-width: clamp(20rem, 100%, 62.5rem);

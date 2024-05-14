@@ -42,8 +42,8 @@ function matchesDataAttr(element, dataName, value) {
 
 function toggleDataAttr(element, dataName, value) {
     return rams.hasDataAttr(element, dataName)
-            ? rams.removeDataAttr(element, dataName)
-            : rams.setDataAttr(element, dataName, value);
+        ? rams.removeDataAttr(element, dataName)
+        : rams.setDataAttr(element, dataName, value);
 }
 
 export {

@@ -1,3 +1,4 @@
+import {addEvent, removeEvent} from './core/methods/events.js';
 import {
     setDataAttr,
     removeDataAttr,
@@ -12,6 +13,8 @@ import {toggle} from './core/components/toggle.js';
 class Rams {
     constructor() {
         this.toggle = toggle;
+        this.addEvent = addEvent;
+        this.removeEvent = removeEvent;
         this.setDataAttr = setDataAttr;
         this.removeDataAttr = removeDataAttr;
         this.getDataAttr = getDataAttr;
@@ -22,6 +25,8 @@ class Rams {
     }
 
     toggle;
+    addEvent;
+    removeEvent;
     setDataAttr;
     removeDataAttr;
     getDataAttr;

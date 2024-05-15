@@ -13,6 +13,19 @@
     /* leve empty */
 }
 
+/* Grid */
+@mixin _grid-small-screen() {
+    /* leve empty */
+}
+
+@mixin _grid-medium-screen() {
+    /* leve empty */
+}
+
+@mixin _grid-large-screen() {
+    /* leve empty */
+}
+
 /* Display */
 @mixin _small-display() {
     /* leve empty */

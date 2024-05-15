@@ -8,7 +8,7 @@
     transition: $anchor-transition;
 
     &:where([data-state="active"], :hover, :active) {
-        color: $anchor-active-color;
+        color: $anchor-color-active;
         text-decoration: none;
     }
 

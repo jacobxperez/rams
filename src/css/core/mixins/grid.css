@@ -17,3 +17,15 @@
         }
     }
 }
+
+@mixin _grid-small-screen() {
+    @include grid($grid-name, $grid-columns-small, small);
+}
+
+@mixin _grid-medium-screen() {
+    @include grid($grid-name, $grid-columns-medium, medium);
+}
+
+@mixin _grid-large-screen() {
+    @include grid($grid-name, $grid-columns-large, large);
+}

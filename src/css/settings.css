@@ -19,23 +19,23 @@
     --neutral-01: hsl(0, 0%, 10%);
     --neutral-00: hsl(0, 0%, 0%);
 
-    --primary-04: var(--neutral-04);
-    --primary-03: var(--neutral-03);
-    --primary-02: var(--neutral-02);
-    --primary-01: var(--neutral-01);
-    --primary-00: hsl(17, 90%, 50%);
+    --primary-04: hsl(15, 100%, 70%);
+    --primary-03: hsl(15, 100%, 65%);
+    --primary-02: hsl(15, 100%, 60%);
+    --primary-01: hsl(15, 100%, 55%);
+    --primary-00: hsl(15, 100%, 50%);
 
-    --secondary-04: var(--neutral-06);
-    --secondary-03: var(--neutral-05);
-    --secondary-02: var(--neutral-04);
-    --secondary-01: var(--neutral-03);
-    --secondary-00: hsl(229, 80%, 50%);
+    --secondary-04: hsl(220, 100%, 60%);
+    --secondary-03: hsl(220, 100%, 55%);;
+    --secondary-02: hsl(220, 100%, 50%);
+    --secondary-01: hsl(220, 100%, 45%);
+    --secondary-00: hsl(220, 100%, 40%);
 
-    --tertiary-04: var(--neutral-04);
-    --tertiary-03: var(--neutral-03);
-    --tertiary-02: var(--neutral-02);
-    --tertiary-01: var(--neutral-01);
-    --tertiary-00: var(--neutral-00);
+    --tertiary-04: color-mix(in srgb, var(--primary-04), var(--secondary-04));
+    --tertiary-03: color-mix(in srgb, var(--primary-03), var(--secondary-03));
+    --tertiary-02: color-mix(in srgb, var(--primary-02), var(--secondary-02));
+    --tertiary-01: color-mix(in srgb, var(--primary-01), var(--secondary-01));
+    --tertiary-00: color-mix(in srgb, var(--primary-00), var(--secondary-00));
 
     --success-04: hsl(145, 80%, 40%);
     --success-03: hsl(145, 80%, 35%);
@@ -43,10 +43,10 @@
     --success-01: hsl(145, 80%, 25%);
     --success-00: hsl(145, 80%, 20%);
 
-    --warning-04: hsl(40, 100%, 70%);
-    --warning-03: hsl(40, 100%, 65%);
-    --warning-02: hsl(40, 100%, 60%);
-    --warning-01: hsl(40, 100%, 55%);
+    --warning-04: hsl(40, 100%, 65%);
+    --warning-03: hsl(40, 100%, 60%);
+    --warning-02: hsl(40, 100%, 55%);
+    --warning-01: hsl(40, 100%, 50%);
     --warning-00: hsl(40, 100%, 45%);
 
     --danger-04: hsl(0, 75%, 65%);
@@ -109,7 +109,7 @@ $body-font-variant-numeric: slashed-zero;
 $leading: 1.5rem;
 
 /* link */
-$link-color: $tertiary;
+$link-color: var(--neutral-00);
 $link-color-active: $primary;
 $link-text-decoration: underline solid 0.125rem;
 $link-text-decoration-active: none;
@@ -227,12 +227,12 @@ $disabled-text: var(--neutral-05);
 $navbar-background: var(--neutral-00);
 $navbar-dropbox-background: var(--neutral-01);
 $navbar-anchor-text: var(--neutral-10);
-$navbar-anchor-text-active: $primary;
+$navbar-anchor-text-active: var(--primary-02);
 
 /* Anchor */
 $anchor-font-family: var(--font-ui);
 $anchor-padding: $space-y $space-x;
-$anchor-color: $secondary;
+$anchor-color: $body-font-color;
 $anchor-color-active: $primary;
 $anchor-transition:
     color 0.2s ease,
@@ -257,10 +257,13 @@ $dropbox-transition:
     visibility 0.3s ease;
 
 /* Dropbox Menu */
-$dropbox-menu-background-color: var(--neutral-10);
+$dropbox-menu-background: var(--neutral-10);
 $dropbox-menu-border: $border-width solid var(--neutral-00);
-$anchor-menu-background-color: var(--neutral-00);
-$anchor-menu-color: var(--neutral-10);
+/* anchor menu */
+$anchor-menu-background: $dropbox-menu-background;
+$anchor-menu-text: var(--neutral-00);
+$anchor-menu-background-active: var(--neutral-00);
+$anchor-menu-text-active: var(--neutral-10);
 
 /* Tooltip */
 $tooltip-min-width: 25ch;

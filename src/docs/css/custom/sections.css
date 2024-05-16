@@ -20,5 +20,5 @@
 }
 
 :where([data-section~="header"]) a:hover {
-    color: $primary;
+    color: var(--primary-02);
 }

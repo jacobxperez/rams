@@ -82,7 +82,7 @@ $primary-text: var(--neutral-10);
 $primary-text-active: var(--neutral-10);
 
 $secondary: var(--secondary-00);
-$secondary-active: var(--secondary-01);
+$secondary-active: var(--secondary-02);
 $secondary-text: var(--neutral-10);
 $secondary-text-active: var(--neutral-10);
 
@@ -111,7 +111,7 @@ $leading: 1.5rem;
 /* link */
 $link-color: $body-font-color;
 $link-color-active: $primary;
-$link-text-decoration: underline solid $primary 0.125rem;
+$link-text-decoration: $primary underline solid 0.125rem;
 $link-text-decoration-active: none;
 $link-underline-offset: 0.3125em;
 
@@ -242,8 +242,8 @@ $anchor-transition:
 /* Line Tab */
 $anchor-line-border-width: 0.125em;
 $anchor-line-border-color: var(--neutral-00);
-$anchor-line-text: $body-font-color;
-$anchor-line-text-active: $primary;
+$anchor-line-text: $primary;
+$anchor-line-text-active: $body-font-color;
 $anchor-line-border-active: $primary;
 
 /* Breadcrumb */

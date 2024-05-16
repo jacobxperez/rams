@@ -40,8 +40,8 @@ function closestDataAttr() {
     };
 }
 
-function matchDataAttr() {
-    Element.prototype.matchDataAttr = function (dataName, value) {
+function matchesDataAttr() {
+    Element.prototype.matchesDataAttr = function (dataName, value) {
         if (value) {
             return this.matches(`[data-${dataName}="${value}"]`);
         } else {
@@ -64,6 +64,6 @@ export {
     getDataAttr,
     hasDataAttr,
     closestDataAttr,
-    matchDataAttr,
+    matchesDataAttr,
     toggleDataAttr,
 };

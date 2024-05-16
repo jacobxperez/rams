@@ -4,12 +4,11 @@
 
     &:is([data-state="active"], :hover, :active) {
         background-color: $button-outline-background-active;
-        color: $button-outline-text-color-ative;
+        color: $button-outline-text-color-active;
     }
 }
 
 /* Tertiary */
-
 @include button(
     tertiary,
     $tertiary,
@@ -27,7 +26,6 @@
 );
 
 /* Secondary */
-
 @include button(
     secondary,
     $secondary,
@@ -45,7 +43,6 @@
 );
 
 /* Primary */
-
 @include button(
     primary,
     $primary,
@@ -63,7 +60,6 @@
 );
 
 /* Success */
-
 @include button(
     success,
     $success,
@@ -81,7 +77,6 @@
 );
 
 /* Warning */
-
 @include button(
     warning,
     $warning,
@@ -89,7 +84,6 @@
     $warning-active,
     $warning-text-active
 );
-
 @include button-outline(
     warning,
     $warning,
@@ -99,7 +93,6 @@
 );
 
 /* Danger */
-
 @include button(
     danger,
     $danger,
@@ -108,16 +101,9 @@
     $danger-text-active
 );
 
-@include button-outline(
-    danger,
-    $danger,
-    $danger,
-    $danger,
-    $danger-text-active
-);
+@include button-outline(danger, $danger, $danger, $danger, $danger-text-active);
 
 /* Outline */
-
 [data-button~="outline"] {
     background-color: transparent;
 }

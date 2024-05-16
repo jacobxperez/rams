@@ -78,18 +78,18 @@ $background-gradient: false;
 
 $primary: var(--primary-00);
 $primary-active: var(--primary-02);
-$primary-text: contrast($primary);
-$primary-text-active: contrast($primary-active);
+$primary-text: var(--neutral-10);
+$primary-text-active: var(--neutral-10);
 
 $secondary: var(--secondary-00);
 $secondary-active: var(--secondary-01);
-$secondary-text: contrast($secondary);
-$secondary-text-active: contrast($primary-active);
+$secondary-text: var(--neutral-10);
+$secondary-text-active: var(--neutral-10);
 
 $tertiary: var(--tertiary-00);
 $tertiary-active: var(--tertiary-01);
-$tertiary-text: contrast($secondary);
-$tertiary-text-active: contrast($secondary-active);
+$tertiary-text: var(--neutral-10);
+$tertiary-text-active: var(--neutral-10);
 
 /* Box Model */
 $space-y: 0.5rem;
@@ -172,7 +172,7 @@ $form-font-family: var(--font-ui);
 $form-padding: $space-y $space-x;
 $form-border-width: $border-width;
 $form-border-color: $border-color;
-$form-border-active: $body-font-color;
+$form-border-active: $primary;
 $form-border-radius: $border-radius;
 $form-background: transparent;
 $form-text: var(--neutral-05);
@@ -206,8 +206,8 @@ $button-outline-border-color: var(--neutral-00);
 /* Feedback */
 $success: var(--success-00);
 $success-active: var(--success-01);
-$success-text: contrast($success);
-$success-text-active: contrast($success-active);
+$success-text: var(--neutral-10);
+$success-text-active: var(--neutral-10);
 
 $warning: var(--warning-00);
 $warning-active: var(--warning-01);
@@ -216,8 +216,8 @@ $warning-text-active: var(--neutral-00);
 
 $danger: var(--danger-00);
 $danger-active: var(--danger-01);
-$danger-text: contrast($danger);
-$danger-text-active: contrast($danger-active);
+$danger-text: var(--neutral-10);
+$danger-text-active: var(--neutral-10);
 
 /* Disabled */
 $disabled: var(--neutral-09);

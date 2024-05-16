@@ -111,13 +111,13 @@ class Carousel extends Array {
     // Control and indicator methods
     handleControls(e) {
         const target = e.target;
-        if (target.matchDataAttr('button', 'next-slide')) {
+        if (target.matchesDataAttr('button', 'next-slide')) {
             this.changeSlide('next');
             this.resume();
-        } else if (target.matchDataAttr('button', 'prev-slide')) {
+        } else if (target.matchesDataAttr('button', 'prev-slide')) {
             this.changeSlide('prev');
             this.resume();
-        } else if (target.matchDataAttr('index')) {
+        } else if (target.matchesDataAttr('index')) {
             this.pause();
             this.currentIndex = Number(target.getDataAttr('index'));
             this.cycleSlides();

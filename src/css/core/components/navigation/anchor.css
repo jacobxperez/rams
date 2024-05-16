@@ -13,8 +13,7 @@
     }
 
     &:focus {
-        outline: thin dotted;
-        outline-offset: -0.125rem;
+        @include _link-focus;
     }
 }
 

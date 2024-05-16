@@ -1,20 +1,32 @@
-:where(a) {
+@mixin _link() {
     text-decoration: none;
     background-color: transparent;
     color: $link-color;
     text-decoration: $link-text-decoration;
     text-underline-offset: $link-underline-offset;
-    cursor: pointer;
 }
 
-:where(a:hover, a:active) {
+@mixin _link-active() {
     @if $link-color-active != $link-color {
         color: $link-color-active;
     }
     text-decoration: $link-text-decoration-active;
 }
 
-:where(a:focus) {
+@mixin _link-focus() {
     outline: thin dotted;
     outline-offset: -0.125rem;
+}
+
+:where(a) {
+    @include _link;
+    cursor: pointer;
+}
+
+:where(a:hover, a:active) {
+    @include _link-active;
+}
+
+:where(a:focus) {
+    @include _link-focus;
 }

@@ -19,17 +19,17 @@
     --neutral-01: hsl(0, 0%, 10%);
     --neutral-00: hsl(0, 0%, 0%);
 
-    --primary-04: hsl(15, 100%, 70%);
-    --primary-03: hsl(15, 100%, 65%);
-    --primary-02: hsl(15, 100%, 60%);
-    --primary-01: hsl(15, 100%, 55%);
-    --primary-00: hsl(15, 100%, 50%);
+    --primary-04: hsl(19, 100%, 70%);
+    --primary-03: hsl(19, 100%, 65%);
+    --primary-02: hsl(19, 100%, 60%);
+    --primary-01: hsl(19, 100%, 55%);
+    --primary-00: hsl(19, 100%, 50%);
 
-    --secondary-04: hsl(220, 100%, 60%);
-    --secondary-03: hsl(220, 100%, 55%);;
-    --secondary-02: hsl(220, 100%, 50%);
-    --secondary-01: hsl(220, 100%, 45%);
-    --secondary-00: hsl(220, 100%, 40%);
+    --secondary-04: hsl(216, 100%, 60%);
+    --secondary-03: hsl(216, 100%, 55%);;
+    --secondary-02: hsl(216, 100%, 50%);
+    --secondary-01: hsl(216, 100%, 45%);
+    --secondary-00: hsl(216, 100%, 40%);
 
     --tertiary-04: color-mix(in srgb, var(--primary-04), var(--secondary-04));
     --tertiary-03: color-mix(in srgb, var(--primary-03), var(--secondary-03));
@@ -58,7 +58,7 @@
 
 /* @media (prefers-color-scheme: dark) {
     :root {
-        --neutral-10: hsl(0, 0%, 00%);
+        --neutral-10: hsl(0, 0%, 0%);
         --neutral-09: hsl(0, 0%, 10%);
         --neutral-08: hsl(0, 0%, 20%);
         --neutral-07: hsl(0, 0%, 30%);
@@ -78,18 +78,18 @@ $background-gradient: false;
 
 $primary: var(--primary-00);
 $primary-active: var(--primary-02);
-$primary-text: var(--neutral-10);
-$primary-text-active: $primary-text;
+$primary-text: contrast($primary);
+$primary-text-active: contrast($primary-active);
 
 $secondary: var(--secondary-00);
 $secondary-active: var(--secondary-01);
-$secondary-text: var(--neutral-10);
-$secondary-text-active: $secondary-text;
+$secondary-text: contrast($secondary);
+$secondary-text-active: contrast($primary-active);
 
 $tertiary: var(--tertiary-00);
 $tertiary-active: var(--tertiary-01);
-$tertiary-text: var(--neutral-10);
-$tertiary-text-active: var(--neutral-10);
+$tertiary-text: contrast($secondary);
+$tertiary-text-active: contrast($secondary-active);
 
 /* Box Model */
 $space-y: 0.5rem;
@@ -101,7 +101,7 @@ $border-radius: 0.25rem;
 /* Typography */
 $root-font-size: clamp(100%, 5vw + 1rem, 105%);
 $body-font-size: 1rem;
-$body-font-color: var(--neutral-01);
+$body-font-color: var(--neutral-00);
 $body-font-family: var(--font-sans);
 $body-font-weight: 400;
 $body-line-height: 1.5;
@@ -109,9 +109,9 @@ $body-font-variant-numeric: slashed-zero;
 $leading: 1.5rem;
 
 /* link */
-$link-color: var(--neutral-00);
+$link-color: $body-font-color;
 $link-color-active: $primary;
-$link-text-decoration: underline solid 0.125rem;
+$link-text-decoration: underline solid $primary 0.125rem;
 $link-text-decoration-active: none;
 $link-underline-offset: 0.3125em;
 
@@ -206,18 +206,18 @@ $button-outline-border-color: var(--neutral-00);
 /* Feedback */
 $success: var(--success-01);
 $success-active: var(--success-00);
-$success-text: var(--neutral-10);
-$success-text-active: var(--neutral-10);
+$success-text: contrast($warning);
+$success-text-active: contrast($warning-active);
 
 $warning: var(--warning-01);
 $warning-active: var(--warning-00);
-$warning-text: var(--neutral-00);
-$warning-text-active: var(--neutral-00);
+$warning-text: contrast($warning);
+$warning-text-active: contrast($warning-active);
 
 $danger: var(--danger-01);
 $danger-active: var(--danger-00);
-$danger-text: var(--neutral-10);
-$danger-text-active: var(--neutral-10);
+$danger-text: contrast($danger);
+$danger-text-active: contrast($danger-active);
 
 /* Disabled */
 $disabled: var(--neutral-09);
@@ -227,7 +227,7 @@ $disabled-text: var(--neutral-05);
 $navbar-background: var(--neutral-00);
 $navbar-dropbox-background: var(--neutral-01);
 $navbar-anchor-text: var(--neutral-10);
-$navbar-anchor-text-active: var(--primary-02);
+$navbar-anchor-text-active: $primary;
 
 /* Anchor */
 $anchor-font-family: var(--font-ui);
@@ -242,7 +242,7 @@ $anchor-transition:
 /* Line Tab */
 $anchor-line-border-width: 0.125em;
 $anchor-line-border-color: var(--neutral-00);
-$anchor-line-text: $secondary;
+$anchor-line-text: $body-font-color;
 $anchor-line-text-active: $primary;
 $anchor-line-border-active: $primary;
 
@@ -266,7 +266,7 @@ $anchor-menu-background-active: var(--neutral-00);
 $anchor-menu-text-active: var(--neutral-10);
 
 /* Tooltip */
-$tooltip-min-width: 25ch;
+$tooltip-min-width: 24ch;
 $tooltip-background: var(--neutral-00);
 $tooltip-text: var(--neutral-10);
 $tooltip-text-decoration: underline dotted 0.125rem;

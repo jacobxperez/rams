@@ -1,39 +1,35 @@
-import {addEvent, removeEvent} from './core/methods/events.js';
 import {
     setDataAttr,
     removeDataAttr,
     getDataAttr,
     hasDataAttr,
     closestDataAttr,
-    matchesDataAttr,
+    matchDataAttr,
     toggleDataAttr,
 } from './core/methods/data.js';
 import {toggle} from './core/components/toggle.js';
+// import {carousel} from './core/components/carousel.js';
 
 class Rams {
     constructor() {
+        Rams.#init();
         this.toggle = toggle;
-        this.addEvent = addEvent;
-        this.removeEvent = removeEvent;
-        this.setDataAttr = setDataAttr;
-        this.removeDataAttr = removeDataAttr;
-        this.getDataAttr = getDataAttr;
-        this.hasDataAttr = hasDataAttr;
-        this.closestDataAttr = closestDataAttr;
-        this.matchesDataAttr = matchesDataAttr;
-        this.toggleDataAttr = toggleDataAttr;
+        // this.carousel = carousel;
     }
 
+    static #init() {
+        // Data Attributes
+        setDataAttr();
+        removeDataAttr();
+        getDataAttr();
+        hasDataAttr();
+        closestDataAttr();
+        matchDataAttr();
+        toggleDataAttr();
+    }
+    // Components
     toggle;
-    addEvent;
-    removeEvent;
-    setDataAttr;
-    removeDataAttr;
-    getDataAttr;
-    hasDataAttr;
-    closestDataAttr;
-    matchesDataAttr;
-    toggleDataAttr;
+    // carousel;
 }
 
 const rams = new Rams();

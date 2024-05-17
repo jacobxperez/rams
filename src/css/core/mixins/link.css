@@ -4,6 +4,7 @@
     color: $link-color;
     text-decoration: $link-text-decoration;
     text-decoration-thickness: $link-text-decoration-thickness;
+    -webkit-text-decoration: $link-text-decoration;
     text-underline-offset: $link-underline-offset;
 }
 

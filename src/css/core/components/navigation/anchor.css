@@ -17,6 +17,4 @@
     }
 }
 
-@if $rams-menu == true {
-    @include _anchor-menu();
-}
+@include _anchor-menu();

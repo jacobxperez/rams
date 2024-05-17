@@ -1,5 +1,3 @@
-$rams-menu: true;
-
 [data-dropbox~="menu"] {
     background-color: $dropbox-menu-background;
     border: $dropbox-menu-border;

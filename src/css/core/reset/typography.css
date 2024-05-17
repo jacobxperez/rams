@@ -7,14 +7,6 @@
     }
 }
 
-@mixin _heading($name, $font-size, $line-height) {
-    $(name),
-    [data-text~="$(name)"] {
-        font-size: $font-size;
-        line-height: $line-height;
-    }
-}
-
 @include _heading(h1, $h1-font-size, $h1-line-height);
 
 @include _heading(h2, $h2-font-size, $h2-line-height);

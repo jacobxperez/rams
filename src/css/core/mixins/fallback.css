@@ -1,4 +1,4 @@
-/* Fall-Back: prevents error when removing imports from theme stylesheets */
+/* Fall-Back: prevents error when removing imports from the main index.css stylesheets */
 
 /* Custom Modules */
 @mixin small-screen() {
@@ -24,6 +24,11 @@
 
 @mixin _grid-large-screen() {
     /* leve empty */
+}
+
+/* Anchor */
+@mixin _anchor-menu {
+/* leve empty */
 }
 
 /* Display */

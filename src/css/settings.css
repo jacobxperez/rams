@@ -111,7 +111,8 @@ $leading: 1.5rem;
 /* link */
 $link-color: $body-font-color;
 $link-color-active: $primary;
-$link-text-decoration: $primary underline solid 0.125rem;
+$link-text-decoration: underline solid $primary;
+$link-text-decoration-thickness: 0.125rem;
 $link-text-decoration-active: none;
 $link-underline-offset: 0.3125em;
 

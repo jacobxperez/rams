@@ -4,9 +4,7 @@
  * Licensed under the Apache License, Version 2.0
  * http://www.apache.org/licenses/LICENSE-2.0
 -----------------------------------------------------------------------------*/
-import {Rams} from '../../../js/rams/index.js';
-
-Rams.prototype.vannelli =  {
+templateGenerator =  {
     _appendString(string, targetSelector) {
         const targetElement = document.querySelector(targetSelector);
         targetElement.insertAdjacentHTML('beforeend', string);
@@ -87,4 +85,4 @@ Rams.prototype.vannelli =  {
     },
 };
 
-export {vannelli};
+export {templateGenerator};

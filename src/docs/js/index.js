@@ -46,8 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // parse everything together
     templateGenerator
-        .newTemplate(
-            `
+        .newTemplate(`
             <nav data-navbar="top">
             </nav>
             <header data-section="header">

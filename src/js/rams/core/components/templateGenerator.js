@@ -46,7 +46,7 @@ class TemplateGenerator {
                 ? resolve()
                 : reject((err = 'Error: Source is not a String'));
         })
-            .then(() => this._appendString(string, targetSelector))
+            .then(() => this.#appendString(string, targetSelector))
             .then(() => {
                 if (typeof callback === 'function') {
                     callback();

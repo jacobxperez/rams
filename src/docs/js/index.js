@@ -7,9 +7,11 @@
 import {Rams, rams} from '../../js/rams/index.js';
 import {sidebar} from './modules/sidebar.js';
 import {templateGenerator} from '../../js/rams/core/components/templateGenerator.js';
+import {meta} from './modules/meta.js';
 
 Rams.prototype.templateGenerator = templateGenerator;
 
+document.addEventListener('DOMContentLoaded', () => {
 if (meta.title === '') {
     meta.title = `<h1>Rams</h1>`;
 } else {
@@ -45,7 +47,8 @@ location.hostname === 'localhost' || location.hostname === '127.0.0.1'
 
 // parse everything together
 rams.templateGenerator
-    .newTemplate(`
+    .newTemplate(
+        `
             <nav data-navbar="top">
             </nav>
             <header data-section="header">
@@ -66,3 +69,4 @@ rams.templateGenerator
     .fetchTemplate('#footerTemplate', 'body > footer', templateURL);
 
 rams.toggle();
+})

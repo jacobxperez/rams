@@ -7,48 +7,49 @@
 import {Rams, rams} from '../../js/rams/index.js';
 import {sidebar} from './modules/sidebar.js';
 import {templateGenerator} from '../../js/rams/core/components/templateGenerator.js';
-import {meta} from './modules/meta.js';
+// import {meta} from './modules/meta.js';
 
 Rams.prototype.templateGenerator = templateGenerator;
 
 document.addEventListener('DOMContentLoaded', () => {
-if (meta.title === '') {
-    meta.title = `<h1>Rams</h1>`;
-} else {
-    meta.title = `<h1>${meta.title}</h1>`;
-}
+    if (meta.title === '') {
+        meta.title = `<h1>Rams</h1>`;
+    } else {
+        meta.title = `<h1>${meta.title}</h1>`;
+    }
 
-let header = `
+    let header = `
         <div id="header" data-container>
             ${meta.title}
         </div>
         `;
 
-let main = `
+    let main = `
         <div data-container data-grid="main">
             <aside id="aside" data-column="large-3 medium-3 small-4"></aside>
             <article id="content" data-column="large-9 medium-9 small-4"></article>
         </div>
         `;
 
-if (meta.type === 'fullPage') {
-    main = `
+    if (meta.type === 'fullPage') {
+        main = `
         <div id="content" data-container data-grid="main"></div>
         `;
-}
+    }
 
-// check and set template url for localhost or for public url
-// if you cannot see the nav/footer then the url is wrong
-let templateURL;
-location.hostname === 'localhost' || location.hostname === '127.0.0.1'
-    ? (templateURL = window.location.origin + '/templates/index.59811f9a.html')
-    : (templateURL =
-          window.location.origin + '/rams/templates/index.19081ad0.html');
+    // check and set template url for localhost or for public url
+    // if you cannot see the nav/footer then the url is wrong
+    let templateURL;
+    location.hostname === 'localhost' || location.hostname === '127.0.0.1'
+        ? (templateURL =
+              window.location.origin + '/templates/index.59811f9a.html')
+        : (templateURL =
+              window.location.origin + '/rams/templates/index.19081ad0.html');
 
-// parse everything together
-rams.templateGenerator
-    .newTemplate(
-        `
+    // parse everything together
+    rams.templateGenerator
+        .newTemplate(
+            `
             <nav data-navbar="top">
             </nav>
             <header data-section="header">
@@ -60,13 +61,13 @@ rams.templateGenerator
             <footer data-section="footer">
             </footer>
             `,
-        'layoutTemplate'
-    )
-    .setTemplate('#layoutTemplate', 'body')
-    .fetchTemplate('#navTemplate', 'nav', templateURL)
-    .setTemplate('#headerTemplate', '#header')
-    .setTemplate('#contentTemplate', '#content', sidebar)
-    .fetchTemplate('#footerTemplate', 'body > footer', templateURL);
+            'layoutTemplate'
+        )
+        .setTemplate('#layoutTemplate', 'body')
+        .fetchTemplate('#navTemplate', 'nav', templateURL)
+        .setTemplate('#headerTemplate', '#header')
+        .setTemplate('#contentTemplate', '#content', sidebar)
+        .fetchTemplate('#footerTemplate', 'body > footer', templateURL);
 
-rams.toggle();
-})
+    rams.toggle();
+});

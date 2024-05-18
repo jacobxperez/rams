@@ -73,6 +73,7 @@
 } */
 
 /* Colors */
+$body-font-color: var(--neutral-00);
 $background: var(--neutral-10);
 $background-gradient: false;
 
@@ -101,7 +102,6 @@ $border-radius: 0.25rem;
 /* Typography */
 $root-font-size: clamp(100%, 5vw + 1rem, 105%);
 $body-font-size: 1rem;
-$body-font-color: var(--neutral-00);
 $body-font-family: var(--font-sans);
 $body-font-weight: 400;
 $body-line-height: 1.5;

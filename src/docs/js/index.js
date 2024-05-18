@@ -4,9 +4,11 @@
  * Licensed under the Apache License, Version 2.0
  * http://www.apache.org/licenses/LICENSE-2.0
 -----------------------------------------------------------------------------*/
+import {Rams, rams} from '../../js/rams/index.js';
 import {sidebar} from './modules/sidebar.js';
-import {rams} from '../../js/rams/index.js';
-import {vannelli} from './modules/vannelli.js';
+import {templateGenerator} from '../../js/rams/core/components/templateGenerator.js';
+
+Rams.prototype.templateGenerator = templateGenerator;
 
 if (meta.title === '') {
     meta.title = `<h1>Rams</h1>`;
@@ -42,7 +44,7 @@ location.hostname === 'localhost' || location.hostname === '127.0.0.1'
           window.location.origin + '/rams/templates/index.19081ad0.html');
 
 // parse everything together
-rams.vannelli
+rams.templateGenerator
     .newTemplate(`
             <nav data-navbar="top">
             </nav>

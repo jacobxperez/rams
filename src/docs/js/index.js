@@ -4,83 +4,63 @@
  * Licensed under the Apache License, Version 2.0
  * http://www.apache.org/licenses/LICENSE-2.0
 -----------------------------------------------------------------------------*/
-const meta = {
-    type: '',
-    title: document.title,
-    subtitle: '',
-};
+import {sidebar} from './modules/sidebar.js';
+import {rams} from '../../js/rams/index.js';
+import {vannelli} from './modules/vannelli.js';
 
-const vannelli = {
-    _appendString(string, targetSelector) {
-        const targetElement = document.querySelector(targetSelector);
-        targetElement.insertAdjacentHTML('beforeend', string);
-    },
-    _appendTemplate(sourceElement, templateSelector, targetSelector) {
-        const sourceTemplate = sourceElement.querySelector(templateSelector);
-        const clonedTemplate = sourceTemplate.content.cloneNode(true);
-        const targetElement = document.querySelector(targetSelector);
-        targetElement.appendChild(clonedTemplate);
-        // sourceTemplate.remove();
-    },
-    _parseTemplate(string, templateSelector, targetSelector) {
-        const parser = new DOMParser();
-        const parsedSource = parser.parseFromString(string, 'text/html');
-        this._appendTemplate(parsedSource, templateSelector, targetSelector);
-    },
-    newTemplate(html, id) {
-        const newTemplate = document.createElement('template');
-        newTemplate.innerHTML = html.trim();
-        newTemplate.content.firstElementChild;
-        newTemplate.setAttribute('id', id);
-        document.body.appendChild(newTemplate);
-        return this;
-    },
-    setTemplate(templateSelector, targetSelector, callback = null) {
-        new Promise((resolve, reject) => {
-            templateSelector ? resolve() : reject();
-        })
-            .then(() =>
-                this._appendTemplate(document, templateSelector, targetSelector)
-            )
-            .then(() => {
-                if (typeof callback === 'function') {
-                    callback();
-                }
-            })
-            .catch((err) => console.error(err, 'Error: Template not found'));
+if (meta.title === '') {
+    meta.title = `<h1>Rams</h1>`;
+} else {
+    meta.title = `<h1>${meta.title}</h1>`;
+}
 
-        return this;
-    },
-    fromString(string, targetSelector, callback = null) {
-        new Promise((resolve, reject) => {
-            typeof string === 'string'
-                ? resolve()
-                : reject((err = 'Error: Source is not a String'));
-        })
-            .then(() => this._appendString(string, targetSelector))
-            .then(() => {
-                if (typeof callback === 'function') {
-                    callback();
-                }
-            })
-            .catch((err) => console.error(err));
+let header = `
+        <div id="header" data-container>
+            ${meta.title}
+        </div>
+        `;
 
-        return this;
-    },
-    fetchTemplate(templateSelector, targetSelector, url, callback = null) {
-        (async () => {
-            try {
-                let response = await fetch(url);
-                let fetchURL = await response.text();
-                this._parseTemplate(fetchURL, templateSelector, targetSelector);
-                if (typeof callback === 'function') {
-                    callback();
-                }
-            } catch (err) {
-                console.error(err, 'Error: Template not found');
-            }
-        })();
+let main = `
+        <div data-container data-grid="main">
+            <aside id="aside" data-column="large-3 medium-3 small-4"></aside>
+            <article id="content" data-column="large-9 medium-9 small-4"></article>
+        </div>
+        `;
 
-        return this;
-    },
-};
+if (meta.type === 'fullPage') {
+    main = `
+        <div id="content" data-container data-grid="main"></div>
+        `;
+}
+
+// check and set template url for localhost or for public url
+// if you cannot see the nav/footer then the url is wrong
+let templateURL;
+location.hostname === 'localhost' || location.hostname === '127.0.0.1'
+    ? (templateURL = window.location.origin + '/templates/index.59811f9a.html')
+    : (templateURL =
+          window.location.origin + '/rams/templates/index.19081ad0.html');
+
+// parse everything together
+rams.vannelli
+    .newTemplate(`
+            <nav data-navbar="top">
+            </nav>
+            <header data-section="header">
+                ${header}
+            </header>
+            <main data-section="main">
+            ${main}
+            </main>
+            <footer data-section="footer">
+            </footer>
+            `,
+        'layoutTemplate'
+    )
+    .setTemplate('#layoutTemplate', 'body')
+    .fetchTemplate('#navTemplate', 'nav', templateURL)
+    .setTemplate('#headerTemplate', '#header')
+    .setTemplate('#contentTemplate', '#content', sidebar)
+    .fetchTemplate('#footerTemplate', 'body > footer', templateURL);
+
+rams.toggle();

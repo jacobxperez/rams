@@ -34,4 +34,4 @@ class Rams {
 
 const rams = new Rams();
 
-export {rams};
+export {Rams, rams};

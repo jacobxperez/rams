@@ -1,4 +1,4 @@
-import {meta} from "./meta";
+// import {meta} from "./meta";
 
 export const sidebar = () => {
     const getAside = document.getElementById('aside');

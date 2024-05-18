@@ -4,12 +4,10 @@
  * Licensed under the Apache License, Version 2.0
  * http://www.apache.org/licenses/LICENSE-2.0
 -----------------------------------------------------------------------------*/
-import {Rams, rams} from '../../js/rams/index.js';
+import {rams} from '../../js/rams/index.js';
 import {sidebar} from './modules/sidebar.js';
 import {templateGenerator} from '../../js/rams/core/components/templateGenerator.js';
 // import {meta} from './modules/meta.js';
-
-Rams.prototype.templateGenerator = templateGenerator;
 
 document.addEventListener('DOMContentLoaded', () => {
     if (meta.title === '') {
@@ -47,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
               window.location.origin + '/rams/templates/index.19081ad0.html');
 
     // parse everything together
-    rams.templateGenerator
+    templateGenerator
         .newTemplate(
             `
             <nav data-navbar="top">

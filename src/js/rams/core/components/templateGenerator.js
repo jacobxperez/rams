@@ -1,20 +1,21 @@
-templateGenerator =  {
-    _appendString(string, targetSelector) {
+class TemplateGenerator {
+    constructor() {}
+    #appendString(string, targetSelector) {
         const targetElement = document.querySelector(targetSelector);
         targetElement.insertAdjacentHTML('beforeend', string);
-    },
-    _appendTemplate(sourceElement, templateSelector, targetSelector) {
+    }
+    #appendTemplate(sourceElement, templateSelector, targetSelector) {
         const sourceTemplate = sourceElement.querySelector(templateSelector);
         const clonedTemplate = sourceTemplate.content.cloneNode(true);
         const targetElement = document.querySelector(targetSelector);
         targetElement.appendChild(clonedTemplate);
         // sourceTemplate.remove();
-    },
-    _parseTemplate(string, templateSelector, targetSelector) {
+    }
+    #parseTemplate(string, templateSelector, targetSelector) {
         const parser = new DOMParser();
         const parsedSource = parser.parseFromString(string, 'text/html');
-        this._appendTemplate(parsedSource, templateSelector, targetSelector);
-    },
+        this.#appendTemplate(parsedSource, templateSelector, targetSelector);
+    }
     newTemplate(html, id) {
         const newTemplate = document.createElement('template');
         newTemplate.innerHTML = html.trim();
@@ -22,13 +23,13 @@ templateGenerator =  {
         newTemplate.setAttribute('id', id);
         document.body.appendChild(newTemplate);
         return this;
-    },
+    }
     setTemplate(templateSelector, targetSelector, callback = null) {
         new Promise((resolve, reject) => {
             templateSelector ? resolve() : reject();
         })
             .then(() =>
-                this._appendTemplate(document, templateSelector, targetSelector)
+                this.#appendTemplate(document, templateSelector, targetSelector)
             )
             .then(() => {
                 if (typeof callback === 'function') {
@@ -38,7 +39,7 @@ templateGenerator =  {
             .catch((err) => console.error(err, 'Error: Template not found'));
 
         return this;
-    },
+    }
     fromString(string, targetSelector, callback = null) {
         new Promise((resolve, reject) => {
             typeof string === 'string'
@@ -54,13 +55,13 @@ templateGenerator =  {
             .catch((err) => console.error(err));
 
         return this;
-    },
+    }
     fetchTemplate(templateSelector, targetSelector, url, callback = null) {
         (async () => {
             try {
                 let response = await fetch(url);
                 let fetchURL = await response.text();
-                this._parseTemplate(fetchURL, templateSelector, targetSelector);
+                this.#parseTemplate(fetchURL, templateSelector, targetSelector);
                 if (typeof callback === 'function') {
                     callback();
                 }
@@ -70,13 +71,15 @@ templateGenerator =  {
         })();
 
         return this;
-    },
+    }
     removeTemplates() {
         const allTemplates = document.querySelectorAll('template');
         allTemplates.forEach((template) => {
             template.remove();
         });
-    },
-};
+    }
+}
+
+const templateGenerator = new TemplateGenerator();
 
 export {templateGenerator};

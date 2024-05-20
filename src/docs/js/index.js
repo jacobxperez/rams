@@ -6,7 +6,7 @@
 -----------------------------------------------------------------------------*/
 import {rams} from '../../js/rams/index.js';
 import {sidebar} from './modules/sidebar.js';
-import {templateGenerator} from '../../js/rams/core/components/templateGenerator.js';
+import {template} from '../../js/rams/core/components/template.js';
 // import {meta} from './modules/meta.js';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -45,8 +45,9 @@ document.addEventListener('DOMContentLoaded', () => {
               window.location.origin + '/rams/templates/index.19081ad0.html');
 
     // parse everything together
-    templateGenerator
-        .appendString(`
+    template
+        .appendString(
+            `
             <nav data-navbar="top">
             </nav>
             <header data-section="header">
@@ -60,9 +61,9 @@ document.addEventListener('DOMContentLoaded', () => {
             `,
             'body'
         )
-        .fetchTemplate(templateURL, '#navTemplate', 'nav')
         .appendTemplate('#headerTemplate', '#header')
         .appendTemplate('#contentTemplate', '#content', sidebar)
+        .fetchTemplate(templateURL, '#navTemplate', 'nav')
         .fetchTemplate(templateURL, '#footerTemplate', 'body > footer');
 
     rams.toggle();

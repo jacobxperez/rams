@@ -13,13 +13,13 @@ import {toggle} from './core/components/toggle.js';
 
 class Rams {
     constructor() {
-        Rams.#init();
+        Rams.init();
         this.toggle = toggle;
         // this.carousel = carousel;
         // this.templateGenerator = templateGenerator;
     }
 
-    static #init() {
+    static init() {
         // Data Attributes
         setDataAttr();
         removeDataAttr();
@@ -29,12 +29,11 @@ class Rams {
         matchesDataAttr();
         toggleDataAttr();
     }
+
     // Components
     toggle;
     // carousel;
     // templateGenerator;
 }
 
-const rams = new Rams();
-
-export {rams};
+export const rams = new Rams();

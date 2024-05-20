@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // parse everything together
     templateGenerator
-        .newTemplate(`
+        .appendString(`
             <nav data-navbar="top">
             </nav>
             <header data-section="header">
@@ -58,13 +58,12 @@ document.addEventListener('DOMContentLoaded', () => {
             <footer data-section="footer">
             </footer>
             `,
-            'layoutTemplate'
+            'body'
         )
-        .setTemplate('#layoutTemplate', 'body')
-        .fetchTemplate('#navTemplate', 'nav', templateURL)
-        .setTemplate('#headerTemplate', '#header')
-        .setTemplate('#contentTemplate', '#content', sidebar)
-        .fetchTemplate('#footerTemplate', 'body > footer', templateURL);
+        .fetchTemplate(templateURL, '#navTemplate', 'nav')
+        .appendTemplate('#headerTemplate', '#header')
+        .appendTemplate('#contentTemplate', '#content', sidebar)
+        .fetchTemplate(templateURL, '#footerTemplate', 'body > footer');
 
     rams.toggle();
 });

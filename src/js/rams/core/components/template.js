@@ -72,7 +72,7 @@ export const template = {
 
         return this;
     },
-    removeTemplates() {
+    removeAll() {
         const allTemplates = document.querySelectorAll('template');
         allTemplates.forEach((template) => {
             template.remove();

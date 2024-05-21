@@ -46,8 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // parse everything together
     template
-        .appendString(
-            `
+        .appendString(`
             <nav data-navbar="top">
             </nav>
             <header data-section="header">

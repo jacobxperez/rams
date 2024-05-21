@@ -1,4 +1,4 @@
-export const templateGenerator = {
+export const template = {
     _appendString(string, targetSelector) {
         const stringTrim = string.trim();
         const targetElement = document.querySelector(targetSelector);
@@ -56,22 +56,23 @@ export const templateGenerator = {
         return this;
     },
     fetchTemplate(url, templateSelector, targetSelector, callback = null) {
-        (async () => {
-            try {
-                let response = await fetch(url);
-                let fetchURL = await response.text();
-                this._parseTemplate(fetchURL, templateSelector, targetSelector);
+        fetch(url)
+            .then((response) => {
+                return response.text();
+            })
+            .then((response) => {
+                this._parseTemplate(response, templateSelector, targetSelector);
+            })
+            .then(() => {
                 if (typeof callback === 'function') {
                     callback();
                 }
-            } catch (err) {
-                console.error(err, 'Error: Template not found');
-            }
-        })();
+            })
+            .catch((err) => console.error(err, 'Error: Template not found'));
 
         return this;
     },
-    removeTemplates() {
+    removeAll() {
         const allTemplates = document.querySelectorAll('template');
         allTemplates.forEach((template) => {
             template.remove();

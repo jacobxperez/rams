@@ -9,14 +9,14 @@ import {
 } from './core/methods/data.js';
 import {toggle} from './core/components/toggle.js';
 // import {carousel} from './core/components/carousel.js';
-// import {templateGenerator} from './core/components/templateGenerator.js';
+// import {template} from './core/components/template.js';
 
 class Rams {
     constructor() {
         Rams.init();
         this.toggle = toggle;
         // this.carousel = carousel;
-        // this.templateGenerator = templateGenerator;
+        // this.template = template;
     }
 
     static init() {
@@ -33,7 +33,7 @@ class Rams {
     // Components
     toggle;
     // carousel;
-    // templateGenerator;
+    // template;
 }
 
 export const rams = new Rams();

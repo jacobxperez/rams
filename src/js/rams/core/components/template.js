@@ -1,6 +1,10 @@
 import {rams} from '../../index.js';
 
 export const template = {
+    _parser(string) {
+        const parser = new DOMParser();
+        return (parsedSource = parser.parseFromString(string, 'text/html'));
+    },
     _string(string, targetSelector) {
         const stringTrim = string.trim();
         const targetElement = document.querySelector(targetSelector);
@@ -11,11 +15,6 @@ export const template = {
         const clonedTemplate = sourceTemplate.content.cloneNode(true);
         const targetElement = document.querySelector(targetSelector);
         targetElement.appendChild(clonedTemplate);
-    },
-    _parse(string, templateSelector, targetSelector) {
-        const parser = new DOMParser();
-        const parsedSource = parser.parseFromString(string, 'text/html');
-        this._append(parsedSource, templateSelector, targetSelector);
     },
     create(html, id) {
         const template = document.createElement('template');
@@ -59,7 +58,8 @@ export const template = {
                 return response.text();
             })
             .then((response) => {
-                this._parse(response, templateSelector, targetSelector);
+                const parsed = this._parser(response);
+                this._append(parsed, templateSelector, targetSelector);
             })
             .then(() => {
                 rams.callback(callback);
@@ -69,6 +69,7 @@ export const template = {
         return this;
     },
     removeAll() {
+        // removes all template elements to keep document clean
         const allTemplates = document.querySelectorAll('template');
         allTemplates.forEach((template) => {
             template.remove();

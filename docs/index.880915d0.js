@@ -170,7 +170,7 @@ const c = new l(),
             const a = t.querySelector(e).content.cloneNode(!0);
             document.querySelector(n).appendChild(a);
         },
-        _parse(t, e, n) {
+        _parser(t, e, n) {
             const a = new DOMParser().parseFromString(t, 'text/html');
             this._append(a, e, n);
         },
@@ -219,7 +219,7 @@ const c = new l(),
                 fetch(t)
                     .then((t) => t.text())
                     .then((t) => {
-                        this._parse(t, e, n);
+                        this._parser(t, e, n);
                     })
                     .then(() => {
                         c.callback(a);

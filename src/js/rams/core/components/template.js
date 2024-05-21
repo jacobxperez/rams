@@ -1,3 +1,5 @@
+import {rams} from '../../index.js';
+
 export const template = {
     _appendString(string, targetSelector) {
         const stringTrim = string.trim();
@@ -31,9 +33,7 @@ export const template = {
         })
             .then(() => this._appendString(string, targetSelector))
             .then(() => {
-                if (typeof callback === 'function') {
-                    callback();
-                }
+                rams.callback(callback);
             })
             .catch((err) => console.error(err));
 
@@ -47,9 +47,7 @@ export const template = {
                 this._appendTemplate(document, templateSelector, targetSelector)
             )
             .then(() => {
-                if (typeof callback === 'function') {
-                    callback();
-                }
+                rams.callback(callback);
             })
             .catch((err) => console.error(err, 'Error: Template not found'));
 
@@ -64,9 +62,7 @@ export const template = {
                 this._parseTemplate(response, templateSelector, targetSelector);
             })
             .then(() => {
-                if (typeof callback === 'function') {
-                    callback();
-                }
+                rams.callback(callback);
             })
             .catch((err) => console.error(err, 'Error: Template not found'));
 

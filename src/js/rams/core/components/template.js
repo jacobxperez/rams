@@ -1,10 +1,6 @@
 import {rams} from '../../index.js';
 
 export const template = {
-    _parser(string) {
-        const parser = new DOMParser();
-        return (parsedSource = parser.parseFromString(string, 'text/html'));
-    },
     _string(string, targetSelector) {
         const stringTrim = string.trim();
         const targetElement = document.querySelector(targetSelector);
@@ -15,6 +11,11 @@ export const template = {
         const clonedTemplate = sourceTemplate.content.cloneNode(true);
         const targetElement = document.querySelector(targetSelector);
         targetElement.appendChild(clonedTemplate);
+    },
+    parser(string, mimeType = 'text/html') {
+        // The string to be parsed. It must contain either an HTML, xml, XHTML, or svg document.
+        const parser = new DOMParser();
+        return (parsedSource = parser.parseFromString(string, mimeType));
     },
     create(html, id) {
         const template = document.createElement('template');
@@ -58,7 +59,7 @@ export const template = {
                 return response.text();
             })
             .then((response) => {
-                const parsed = this._parser(response);
+                const parsed = this.parser(response);
                 this._append(parsed, templateSelector, targetSelector);
             })
             .then(() => {

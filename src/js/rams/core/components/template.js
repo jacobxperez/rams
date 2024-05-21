@@ -1,21 +1,23 @@
+import {rams} from '../../index.js';
+
 export const template = {
-    _appendString(string, targetSelector) {
+    _string(string, targetSelector) {
         const stringTrim = string.trim();
         const targetElement = document.querySelector(targetSelector);
         targetElement.insertAdjacentHTML('beforeend', stringTrim);
     },
-    _appendTemplate(sourceElement, templateSelector, targetSelector) {
+    _append(sourceElement, templateSelector, targetSelector) {
         const sourceTemplate = sourceElement.querySelector(templateSelector);
         const clonedTemplate = sourceTemplate.content.cloneNode(true);
         const targetElement = document.querySelector(targetSelector);
         targetElement.appendChild(clonedTemplate);
     },
-    _parseTemplate(string, templateSelector, targetSelector) {
+    parser(string, mimeType = 'text/html') {
+        // The string to be parsed. It must contain either an HTML, xml, XHTML, or svg document.
         const parser = new DOMParser();
-        const parsedSource = parser.parseFromString(string, 'text/html');
-        this._appendTemplate(parsedSource, templateSelector, targetSelector);
+        return (parsedSource = parser.parseFromString(string, mimeType));
     },
-    createTemplate(html, id) {
+    create(html, id) {
         const template = document.createElement('template');
         template.innerHTML = html.trim();
         template.content.firstElementChild;
@@ -23,56 +25,52 @@ export const template = {
         document.body.appendChild(template);
         return this;
     },
-    appendString(string, targetSelector, callback = null) {
+    string(string, targetSelector, callback = null) {
         new Promise((resolve, reject) => {
             typeof string === 'string'
                 ? resolve()
                 : reject((err = 'Error: Source is not a String'));
         })
-            .then(() => this._appendString(string, targetSelector))
+            .then(() => this._string(string, targetSelector))
             .then(() => {
-                if (typeof callback === 'function') {
-                    callback();
-                }
+                rams.callback(callback);
             })
             .catch((err) => console.error(err));
 
         return this;
     },
-    appendTemplate(templateSelector, targetSelector, callback = null) {
+    append(templateSelector, targetSelector, callback = null) {
         new Promise((resolve, reject) => {
             templateSelector ? resolve() : reject();
         })
             .then(() =>
-                this._appendTemplate(document, templateSelector, targetSelector)
+                this._append(document, templateSelector, targetSelector)
             )
             .then(() => {
-                if (typeof callback === 'function') {
-                    callback();
-                }
+                rams.callback(callback);
             })
             .catch((err) => console.error(err, 'Error: Template not found'));
 
         return this;
     },
-    fetchTemplate(url, templateSelector, targetSelector, callback = null) {
+    fetch(url, templateSelector, targetSelector, callback = null) {
         fetch(url)
             .then((response) => {
                 return response.text();
             })
             .then((response) => {
-                this._parseTemplate(response, templateSelector, targetSelector);
+                const parsed = this.parser(response);
+                this._append(parsed, templateSelector, targetSelector);
             })
             .then(() => {
-                if (typeof callback === 'function') {
-                    callback();
-                }
+                rams.callback(callback);
             })
             .catch((err) => console.error(err, 'Error: Template not found'));
 
         return this;
     },
     removeAll() {
+        // removes all template elements to keep document clean
         const allTemplates = document.querySelectorAll('template');
         allTemplates.forEach((template) => {
             template.remove();

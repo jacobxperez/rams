@@ -46,8 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // parse everything together
     template
-        .appendString(
-            `
+        .string(`
             <nav data-navbar="top">
             </nav>
             <header data-section="header">
@@ -61,10 +60,15 @@ document.addEventListener('DOMContentLoaded', () => {
             `,
             'body'
         )
-        .appendTemplate('#headerTemplate', '#header')
-        .appendTemplate('#contentTemplate', '#content', sidebar)
-        .fetchTemplate(templateURL, '#navTemplate', 'nav')
-        .fetchTemplate(templateURL, '#footerTemplate', 'body > footer');
+        .append('#headerTemplate', '#header')
+        .append('#contentTemplate', '#content', sidebar)
+        .fetch(templateURL, '#navTemplate', 'nav')
+        .fetch(
+            templateURL,
+            '#footerTemplate',
+            'body > footer',
+            template.removeAll
+        );
 
     rams.toggle();
 });

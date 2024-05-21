@@ -3,9 +3,9 @@ function each(callback) {
         for (let i = 0; i < this.length; i++) {
             callback(this[i], i);
         }
-
-        return this;
     }
+
+    return this;
 }
 
 function eachOf(callback) {
@@ -13,9 +13,9 @@ function eachOf(callback) {
         for (const item of this) {
             callback(item);
         }
-
-        return this;
     }
+
+    return this;
 }
 
 function eachIn(callback) {
@@ -24,6 +24,8 @@ function eachIn(callback) {
             callback(property);
         }
     }
+
+    return this;
 }
 
 export {each, eachOf, eachIn};

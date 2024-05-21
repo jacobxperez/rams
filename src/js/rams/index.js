@@ -22,7 +22,6 @@ class Rams {
     }
 
     static init() {
-        // Data Attributes
         setDataAttr();
         removeDataAttr();
         getDataAttr();
@@ -32,7 +31,6 @@ class Rams {
         toggleDataAttr();
     }
 
-    // Components
     toggle;
     callback;
     // carousel;

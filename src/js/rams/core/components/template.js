@@ -15,7 +15,8 @@ export const template = {
     parser(string, mimeType = 'text/html') {
         // The string to be parsed. It must contain either an HTML, xml, XHTML, or svg document.
         const parser = new DOMParser();
-        return (parsedSource = parser.parseFromString(string, mimeType));
+        const parsedSource = parser.parseFromString(string, mimeType);
+        return parsedSource;
     },
     create(html, id) {
         const template = document.createElement('template');

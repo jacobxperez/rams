@@ -3,5 +3,3 @@ const meta = {
     title: document.title,
     subtitle: '',
 };
-
-// export {meta};

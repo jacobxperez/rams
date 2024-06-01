@@ -49,19 +49,23 @@ export const template = {
 
         return this;
     },
-    fetch(url, callback = null) {
+    fetch(url, templateSelector = null) {
         return fetch(url)
             .then((response) => {
                 return response.text();
             })
             .then((response) => {
                 const parsed = this.parser(response);
-                const templates = parsed.querySelectorAll('template');
-                templates.forEach((template) => {
+                if (typeof templateSelector === 'string') {
+                    const template = parsed.querySelector(templateSelector);
                     document.body.appendChild(template);
-                });
+                } else {
+                    const templates = parsed.querySelectorAll('template');
+                    templates.forEach((template) => {
+                        document.body.appendChild(template);
+                    });
+                }
             })
-            .then(() => rams.callback(callback))
             .catch((err) => console.error(err, 'Error: Template not found'));
     },
     removeAll() {

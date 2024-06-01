@@ -1,13 +1,21 @@
-function selector() {
-    Node.prototype.selector = function (selector) {
-        return this.querySelector(selector);
+function queryDataAttr() {
+    Node.prototype.queryDataAttr = function (dataName, value) {
+        if (value) {
+            return this.querySelector(`[data-${dataName}="${value}"]`);
+        } else {
+            return this.querySelector(`[data-${dataName}]`);
+        }
     };
 }
 
-function selectorAll() {
-    Node.prototype.selectorAll = function (selector) {
-        return this.querySelectorAll(selector);
+function queryDataAttrAll() {
+    Node.prototype.queryDataAttrAll = function (dataName, value) {
+        if (value) {
+            return this.querySelectorAll(`[data-${dataName}="${value}"]`);
+        } else {
+            return this.querySelectorAll(`[data-${dataName}]`);
+        }
     };
 }
 
-export {selector, selectorAll};
+export {queryDataAttr, queryDataAttrAll};

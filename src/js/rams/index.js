@@ -7,6 +7,7 @@ import {
     matchesDataAttr,
     toggleDataAttr,
 } from './core/methods/data.js';
+import {queryDataAttr, queryDataAttrAll} from './core/methods/selectors.js';
 import {callback} from './core/methods/callbacks.js';
 import {toggle} from './core/components/toggle.js';
 // import {carousel} from './core/components/carousel.js';
@@ -29,6 +30,8 @@ class Rams {
         closestDataAttr();
         matchesDataAttr();
         toggleDataAttr();
+        queryDataAttr();
+        queryDataAttrAll();
     }
 
     toggle;

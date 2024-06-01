@@ -15,8 +15,7 @@ export const template = {
     parser(string, mimeType = 'text/html') {
         // The string to be parsed. It must contain either an HTML, xml, XHTML, or svg document.
         const parser = new DOMParser();
-        const parsedSource = parser.parseFromString(string, mimeType);
-        return parsedSource;
+        return parser.parseFromString(string, mimeType);
     },
     create(html, id) {
         const template = document.createElement('template');
@@ -33,9 +32,7 @@ export const template = {
                 : reject((err = 'Error: Source is not a String'));
         })
             .then(() => this._string(string, targetSelector))
-            .then(() => {
-                rams.callback(callback);
-            })
+            .then(() => rams.callback(callback))
             .catch((err) => console.error(err));
 
         return this;
@@ -47,33 +44,30 @@ export const template = {
             .then(() =>
                 this._append(document, templateSelector, targetSelector)
             )
-            .then(() => {
-                rams.callback(callback);
-            })
+            .then(() => rams.callback(callback))
             .catch((err) => console.error(err, 'Error: Template not found'));
 
         return this;
     },
-    fetch(url, templateSelector, targetSelector, callback = null) {
-        fetch(url)
+    fetch(url, callback = null) {
+        return fetch(url)
             .then((response) => {
                 return response.text();
             })
             .then((response) => {
                 const parsed = this.parser(response);
-                this._append(parsed, templateSelector, targetSelector);
+                const templates = parsed.querySelectorAll('template');
+                templates.forEach((template) => {
+                    document.body.appendChild(template);
+                });
             })
-            .then(() => {
-                rams.callback(callback);
-            })
+            .then(() => rams.callback(callback))
             .catch((err) => console.error(err, 'Error: Template not found'));
-
-        return this;
     },
     removeAll() {
         // removes all template elements to keep document clean
-        const allTemplates = document.querySelectorAll('template');
-        allTemplates.forEach((template) => {
+        const templates = document.querySelectorAll('template');
+        templates.forEach((template) => {
             template.remove();
         });
 

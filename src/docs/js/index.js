@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 ${header}
             </header>
             <main data-section="main">
-            ${main}
+                ${main}
             </main>
             <footer data-section="footer">
             </footer>
@@ -62,13 +62,12 @@ document.addEventListener('DOMContentLoaded', () => {
         )
         .append('#headerTemplate', '#header')
         .append('#contentTemplate', '#content', sidebar)
-        .fetch(templateURL, '#navTemplate', 'nav')
-        .fetch(
-            templateURL,
-            '#footerTemplate',
-            'body > footer',
-            template.removeAll
-        );
+        .fetch(templateURL)
+        .then(() => {
+            template.append('#navTemplate', 'nav');
+            template.append('#footerTemplate', 'body > footer');
+        })
+        .then(() => template.removeAll());
 
     rams.toggle();
 });

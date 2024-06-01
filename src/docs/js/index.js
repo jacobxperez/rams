@@ -7,7 +7,6 @@
 import {rams} from '../../js/rams/index.js';
 import {sidebar} from './modules/sidebar.js';
 import {template} from '../../js/rams/core/components/template.js';
-// import {meta} from './modules/meta.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     if (meta.title === '') {

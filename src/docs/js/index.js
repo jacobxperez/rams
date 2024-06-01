@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
             template.append('#navTemplate', 'nav');
             template.append('#footerTemplate', 'body > footer');
         })
-        .then(() => template.removeAll());
+        .finally(() => template.removeAll());
 
     rams.toggle();
 });

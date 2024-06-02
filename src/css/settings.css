@@ -17,11 +17,11 @@
     --primary-01: hsl(19, 100%, 55%);
     --primary-00: hsl(19, 100%, 50%);
 
-    --secondary-04: color-mix(in srgb, var(--primary-04), var(--tertiary-04));
-    --secondary-03: color-mix(in srgb, var(--primary-03), var(--tertiary-03));
-    --secondary-02: color-mix(in srgb, var(--primary-02), var(--tertiary-02));
-    --secondary-01: color-mix(in srgb, var(--primary-01), var(--tertiary-01));
-    --secondary-00: color-mix(in srgb, var(--primary-00), var(--tertiary-00));
+    --secondary-04: hsl(19, 100%, 45%);
+    --secondary-03: hsl(19, 100%, 40%);
+    --secondary-02: hsl(19, 100%, 35%);
+    --secondary-01: hsl(19, 100%, 30%);
+    --secondary-00: hsl(19, 100%, 25%);
 
     --tertiary-04: var(--neutral-04);
     --tertiary-03: var(--neutral-03);

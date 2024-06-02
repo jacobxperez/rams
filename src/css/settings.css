@@ -1,12 +1,4 @@
 :root {
-    --font-sans: "Atkinson Hyperlegible Pro", "Atkinson Hyperlegible", Helvetica,
-        Arial, sans-serif;
-    --font-serif: Xcharter, Charter, Georgia, Times, "Times New Roman", serif;
-    --font-mono: "Fira Mono", "Lucida Console", "Lucida Sans Typewriter", monaco,
-        "Bitstream Vera Sans Mono", monospace;
-    --font-ui: "Atkinson Hyperlegible Pro", "Atkinson Hyperlegible", system-ui,
-        "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-
     --neutral-10: hsl(0, 0%, 100%);
     --neutral-09: hsl(0, 0%, 90%);
     --neutral-08: hsl(0, 0%, 80%);
@@ -54,6 +46,14 @@
     --danger-02: hsl(0, 75%, 55%);
     --danger-01: hsl(0, 75%, 50%);
     --danger-00: hsl(0, 75%, 45%);
+
+    --font-sans: "Atkinson Hyperlegible Pro", "Atkinson Hyperlegible", Helvetica,
+        Arial, sans-serif;
+    --font-serif: Xcharter, Charter, Georgia, Times, "Times New Roman", serif;
+    --font-mono: "Fira Mono", "Lucida Console", "Lucida Sans Typewriter", monaco,
+        "Bitstream Vera Sans Mono", monospace;
+    --font-ui: "Atkinson Hyperlegible Pro", "Atkinson Hyperlegible", system-ui,
+        "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
 /* @media (prefers-color-scheme: dark) {

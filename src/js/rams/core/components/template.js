@@ -49,24 +49,23 @@ export const template = {
 
         return this;
     },
-    fetch(url, templateSelector = null) {
-        return fetch(url)
-            .then((response) => {
-                return response.text();
-            })
-            .then((response) => {
-                const parsed = this.parser(response);
-                if (typeof templateSelector === 'string') {
-                    const template = parsed.querySelector(templateSelector);
+    async fetch(url, templateSelector = null) {
+        try {
+            const response = await fetch(url);
+            const response_1 = await response.text();
+            const parsed = this.parser(response_1);
+            if (typeof templateSelector === 'string') {
+                const template = parsed.querySelector(templateSelector);
+                document.body.appendChild(template);
+            } else {
+                const templates = parsed.querySelectorAll('template');
+                templates.forEach((template) => {
                     document.body.appendChild(template);
-                } else {
-                    const templates = parsed.querySelectorAll('template');
-                    templates.forEach((template) => {
-                        document.body.appendChild(template);
-                    });
-                }
-            })
-            .catch((err) => console.error(err, 'Error: Template not found'));
+                });
+            }
+        } catch (err) {
+            return console.error(err, 'Error: Template not found');
+        }
     },
     removeAll() {
         // removes all template elements to keep document clean

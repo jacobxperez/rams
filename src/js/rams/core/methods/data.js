@@ -1,69 +1,48 @@
-function setDataAttr() {
-    Element.prototype.setDataAttr = function (dataName, value = '') {
-        return this.setAttribute(`data-${dataName}`, value);
-    };
-}
+export const dataAttr = {
+    set(el, dataName, value = '') {
+        el.setAttribute(`data-${dataName}`, value);
+    },
 
-function removeDataAttr() {
-    Element.prototype.removeDataAttr = function (dataName) {
-        return this.removeAttribute(`data-${dataName}`);
-    };
-}
+    remove(el, dataName) {
+        el.removeAttribute(`data-${dataName}`);
+    },
 
-function getDataAttr() {
-    Element.prototype.getDataAttr = function (dataName, value) {
-        if (value) {
-            return this.getAttribute(`data-${dataName}="${value}"`);
-        } else {
-            return this.getAttribute(`data-${dataName}`);
-        }
-    };
-}
+    get(el, dataName) {
+        return el.getAttribute(`data-${dataName}`);
+    },
 
-function hasDataAttr() {
-    Element.prototype.hasDataAttr = function (dataName, value) {
-        if (value) {
-            return this.hasAttribute(`data-${dataName}="${value}"`);
-        } else {
-            return this.hasAttribute(`data-${dataName}`);
-        }
-    };
-}
+    has(el, dataName, value = null) {
+        const attrValue = el.getAttribute(`data-${dataName}`);
+        return value ? attrValue === value : attrValue !== null;
+    },
 
-function closestDataAttr() {
-    Element.prototype.closestDataAttr = function (dataName, value) {
-        if (value) {
-            return this.closest(`[data-${dataName}="${value}"]`);
-        } else {
-            return this.closest(`[data-${dataName}]`);
-        }
-    };
-}
+    closest(el, dataName, value = null) {
+        return value
+            ? el.closest(`[data-${dataName}="${value}"]`)
+            : el.closest(`[data-${dataName}]`);
+    },
 
-function matchesDataAttr() {
-    Element.prototype.matchesDataAttr = function (dataName, value) {
-        if (value) {
-            return this.matches(`[data-${dataName}="${value}"]`);
-        } else {
-            return this.matches(`[data-${dataName}]`);
-        }
-    };
-}
+    matches(el, dataName, value = null) {
+        return value
+            ? el.matches(`[data-${dataName}="${value}"]`)
+            : el.matches(`[data-${dataName}]`);
+    },
 
-function toggleDataAttr() {
-    Element.prototype.toggleDataAttr = function (dataName, value) {
-        return this.hasDataAttr(dataName)
-            ? this.removeDataAttr(dataName)
-            : this.setDataAttr(dataName, value);
-    };
-}
+    toggle(el, dataName, value = '') {
+        this.has(el, dataName)
+            ? this.remove(el, dataName)
+            : this.set(el, dataName, value);
+    },
 
-export {
-    setDataAttr,
-    removeDataAttr,
-    getDataAttr,
-    hasDataAttr,
-    closestDataAttr,
-    matchesDataAttr,
-    toggleDataAttr,
+    query(el, dataName, value = null) {
+        return el.querySelector(
+            value ? `[data-${dataName}="${value}"]` : `[data-${dataName}]`
+        );
+    },
+
+    queryAll(el, dataName, value = null) {
+        return el.querySelectorAll(
+            value ? `[data-${dataName}="${value}"]` : `[data-${dataName}]`
+        );
+    },
 };

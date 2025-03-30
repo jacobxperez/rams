@@ -8,7 +8,7 @@ export function toggle(...args) {
         clickedSet.forEach((item) => {
             if (resetSet.has(item.dataset.toggle)) {
                 rams.dataAttr.removeValue(item, 'state', 'active')
-                rams.dataAttr.set(item, 'state', 'off');
+                rams.dataAttr.set(item, 'state', 'inactive');
             }
         });
     }
@@ -21,7 +21,7 @@ export function toggle(...args) {
             reset();
         }
 
-        rams.dataAttr.toggleValue(targetToggle, 'state', 'active', 'off');
+        rams.dataAttr.toggleValue(targetToggle, 'state', 'active', 'inactive');
     }
 
     document.addEventListener('click', (e) => {

@@ -8,7 +8,7 @@ export function toggle(...args) {
         clickedSet.forEach((item) => {
             if (resetSet.has(item.dataset.toggle)) {
                 rams.dataAttr.removeValue(item, 'state', 'active')
-                rams.dataAttr.setValue(item, 'state', 'inactive');
+                rams.dataAttr.appendValue(item, 'state', 'inactive');
             }
         });
     }

@@ -46,6 +46,14 @@ export const dataAttr = {
         return !exists;
     },
 
+    toggleValue(el, dataName, value1, value2) {
+        if (!(el instanceof Element)) return false;
+        const currentValue = el.getAttribute(`data-${dataName}`);
+        const newValue = currentValue === value1 ? value2 : value1;
+        el.setAttribute(`data-${dataName}`, newValue);
+        return newValue;
+    },
+
     query(el, dataName, value = null) {
         return el instanceof Element
             ? el.querySelector(
@@ -60,5 +68,21 @@ export const dataAttr = {
                   value ? `[data-${dataName}="${value}"]` : `[data-${dataName}]`
               )
             : [];
+    },
+
+    observe(el, dataName, callback) {
+        if (!(el instanceof Element) || typeof callback !== 'function')
+            return false;
+
+        const observer = new MutationObserver((mutations) => {
+            mutations.forEach((mutation) => {
+                if (mutation.attributeName === `data-${dataName}`) {
+                    callback(el, el.getAttribute(`data-${dataName}`));
+                }
+            });
+        });
+
+        observer.observe(el, {attributes: true});
+        return observer;
     },
 };

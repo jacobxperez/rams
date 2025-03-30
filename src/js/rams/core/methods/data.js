@@ -1,12 +1,14 @@
 export const dataAttr = {
     set(el, dataName, value = '') {
-        if (!(el instanceof Element)) return;
+        if (!(el instanceof Element)) return false;
         el.setAttribute(`data-${dataName}`, value);
+        return true;
     },
 
     remove(el, dataName) {
-        if (!(el instanceof Element)) return;
+        if (!(el instanceof Element)) return false;
         el.removeAttribute(`data-${dataName}`);
+        return true;
     },
 
     get(el, dataName) {
@@ -23,23 +25,25 @@ export const dataAttr = {
 
     closest(el, dataName, value = null) {
         if (!(el instanceof Element)) return null;
-        return value
-            ? el.closest(`[data-${dataName}="${value}"]`)
-            : el.closest(`[data-${dataName}]`);
+        return el.closest(
+            value ? `[data-${dataName}="${value}"]` : `[data-${dataName}]`
+        );
     },
 
     matches(el, dataName, value = null) {
         if (!(el instanceof Element)) return false;
-        return value
-            ? el.matches(`[data-${dataName}="${value}"]`)
-            : el.matches(`[data-${dataName}]`);
+        return el.matches(
+            value ? `[data-${dataName}="${value}"]` : `[data-${dataName}]`
+        );
     },
 
     toggle(el, dataName, value = '') {
-        if (!(el instanceof Element)) return;
-        el.hasAttribute(`data-${dataName}`)
+        if (!(el instanceof Element)) return false;
+        const exists = el.hasAttribute(`data-${dataName}`);
+        exists
             ? el.removeAttribute(`data-${dataName}`)
             : el.setAttribute(`data-${dataName}`, value);
+        return !exists;
     },
 
     query(el, dataName, value = null) {

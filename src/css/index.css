@@ -1,6 +1,6 @@
 /* @license
  * Rams <https://github.com/jacobxperez/rams/>
- * Copyright (C) 2024 Jacob Perez <jacobxperez@gmx.com>
+ * Copyright (C) 2025 Jacob Perez <jacobxperez@gmx.com>
  * Licensed under the Apache License, Version 2.0
  * http://www.apache.org/licenses/LICENSE-2.0
  */
@@ -44,9 +44,6 @@
 /* -------------- */
 
 /* Fonts */
-@import "core/fonts/lexica-ultralegible.css";
-@import "core/fonts/xcharter.css";
-@import "core/fonts/fira-mono.css";
 @import "core/fonts/icons.css";
 
 /* Utilities */

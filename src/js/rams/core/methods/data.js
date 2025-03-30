@@ -1,8 +1,28 @@
 export const dataAttr = {
+    get(el, dataName) {
+        return el instanceof Element
+            ? el.getAttribute(`data-${dataName}`)
+            : null;
+    },
     set(el, dataName, value = '') {
         if (!(el instanceof Element)) return false;
         el.setAttribute(`data-${dataName}`, value);
         return true;
+    },
+
+    setValue(el, dataName, value) {
+        if (!(el instanceof Element) || typeof value !== 'string') return false;
+
+        let currentValue = el.getAttribute(`data-${dataName}`);
+        currentValue = currentValue ? currentValue.split(' ') : [];
+
+        if (!currentValue.includes(value)) {
+            currentValue.push(value);
+            el.setAttribute(`data-${dataName}`, currentValue.join(' '));
+            return true;
+        }
+
+        return false;
     },
 
     remove(el, dataName) {
@@ -23,12 +43,6 @@ export const dataAttr = {
         }
 
         return false;
-    },
-
-    get(el, dataName) {
-        return el instanceof Element
-            ? el.getAttribute(`data-${dataName}`)
-            : null;
     },
 
     has(el, dataName) {
@@ -101,5 +115,13 @@ export const dataAttr = {
 
         observer.observe(el, {attributes: true});
         return observer;
+    },
+
+    disconnectObserver(observer) {
+        if (observer instanceof MutationObserver) {
+            observer.disconnect();
+            return true;
+        }
+        return false;
     },
 };

@@ -1,13 +1,4 @@
-import {
-    setDataAttr,
-    removeDataAttr,
-    getDataAttr,
-    hasDataAttr,
-    closestDataAttr,
-    matchesDataAttr,
-    toggleDataAttr,
-} from './core/methods/data.js';
-import {queryDataAttr, queryDataAttrAll} from './core/methods/selectors.js';
+import {dataAttr} from './core/methods/data.js';
 import {callback} from './core/methods/callbacks.js';
 import {toggle} from './core/components/toggle.js';
 // import {carousel} from './core/components/carousel.js';
@@ -15,25 +6,14 @@ import {toggle} from './core/components/toggle.js';
 
 class Rams {
     constructor() {
-        Rams.init();
+        this.dataAttr = dataAttr;
         this.toggle = toggle;
         this.callback = callback;
         // this.carousel = carousel;
         // this.template = template;
     }
 
-    static init() {
-        setDataAttr();
-        removeDataAttr();
-        getDataAttr();
-        hasDataAttr();
-        closestDataAttr();
-        matchesDataAttr();
-        toggleDataAttr();
-        queryDataAttr();
-        queryDataAttrAll();
-    }
-
+    dataAttr;
     toggle;
     callback;
     // carousel;

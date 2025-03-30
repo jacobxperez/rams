@@ -1,69 +1,88 @@
-function setDataAttr() {
-    Element.prototype.setDataAttr = function (dataName, value = '') {
-        return this.setAttribute(`data-${dataName}`, value);
-    };
-}
+export const dataAttr = {
+    set(el, dataName, value = '') {
+        if (!(el instanceof Element)) return false;
+        el.setAttribute(`data-${dataName}`, value);
+        return true;
+    },
 
-function removeDataAttr() {
-    Element.prototype.removeDataAttr = function (dataName) {
-        return this.removeAttribute(`data-${dataName}`);
-    };
-}
+    remove(el, dataName) {
+        if (!(el instanceof Element)) return false;
+        el.removeAttribute(`data-${dataName}`);
+        return true;
+    },
 
-function getDataAttr() {
-    Element.prototype.getDataAttr = function (dataName, value) {
-        if (value) {
-            return this.getAttribute(`data-${dataName}="${value}"`);
-        } else {
-            return this.getAttribute(`data-${dataName}`);
-        }
-    };
-}
+    get(el, dataName) {
+        return el instanceof Element
+            ? el.getAttribute(`data-${dataName}`)
+            : null;
+    },
 
-function hasDataAttr() {
-    Element.prototype.hasDataAttr = function (dataName, value) {
-        if (value) {
-            return this.hasAttribute(`data-${dataName}="${value}"`);
-        } else {
-            return this.hasAttribute(`data-${dataName}`);
-        }
-    };
-}
+    has(el, dataName, value = null) {
+        if (!(el instanceof Element)) return false;
+        const attrValue = el.getAttribute(`data-${dataName}`);
+        return value ? attrValue === value : attrValue !== null;
+    },
 
-function closestDataAttr() {
-    Element.prototype.closestDataAttr = function (dataName, value) {
-        if (value) {
-            return this.closest(`[data-${dataName}="${value}"]`);
-        } else {
-            return this.closest(`[data-${dataName}]`);
-        }
-    };
-}
+    closest(el, dataName, value = null) {
+        if (!(el instanceof Element)) return null;
+        return el.closest(
+            value ? `[data-${dataName}="${value}"]` : `[data-${dataName}]`
+        );
+    },
 
-function matchesDataAttr() {
-    Element.prototype.matchesDataAttr = function (dataName, value) {
-        if (value) {
-            return this.matches(`[data-${dataName}="${value}"]`);
-        } else {
-            return this.matches(`[data-${dataName}]`);
-        }
-    };
-}
+    matches(el, dataName, value = null) {
+        if (!(el instanceof Element)) return false;
+        return el.matches(
+            value ? `[data-${dataName}="${value}"]` : `[data-${dataName}]`
+        );
+    },
 
-function toggleDataAttr() {
-    Element.prototype.toggleDataAttr = function (dataName, value) {
-        return this.hasDataAttr(dataName)
-            ? this.removeDataAttr(dataName)
-            : this.setDataAttr(dataName, value);
-    };
-}
+    toggle(el, dataName, value = '') {
+        if (!(el instanceof Element)) return false;
+        const exists = el.hasAttribute(`data-${dataName}`);
+        exists
+            ? el.removeAttribute(`data-${dataName}`)
+            : el.setAttribute(`data-${dataName}`, value);
+        return !exists;
+    },
 
-export {
-    setDataAttr,
-    removeDataAttr,
-    getDataAttr,
-    hasDataAttr,
-    closestDataAttr,
-    matchesDataAttr,
-    toggleDataAttr,
+    toggleValue(el, dataName, value1, value2) {
+        if (!(el instanceof Element)) return false;
+        const currentValue = el.getAttribute(`data-${dataName}`);
+        const newValue = currentValue === value1 ? value2 : value1;
+        el.setAttribute(`data-${dataName}`, newValue);
+        return newValue;
+    },
+
+    query(el, dataName, value = null) {
+        return el instanceof Element
+            ? el.querySelector(
+                  value ? `[data-${dataName}="${value}"]` : `[data-${dataName}]`
+              )
+            : null;
+    },
+
+    queryAll(el, dataName, value = null) {
+        return el instanceof Element
+            ? el.querySelectorAll(
+                  value ? `[data-${dataName}="${value}"]` : `[data-${dataName}]`
+              )
+            : [];
+    },
+
+    observe(el, dataName, callback) {
+        if (!(el instanceof Element) || typeof callback !== 'function')
+            return false;
+
+        const observer = new MutationObserver((mutations) => {
+            mutations.forEach((mutation) => {
+                if (mutation.attributeName === `data-${dataName}`) {
+                    callback(el, el.getAttribute(`data-${dataName}`));
+                }
+            });
+        });
+
+        observer.observe(el, {attributes: true});
+        return observer;
+    },
 };

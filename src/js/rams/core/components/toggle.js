@@ -1,3 +1,5 @@
+import { rams } from "../..";
+
 export function toggle(...args) {
     const clickedSet = new Set();
     const resetSet = new Set(['pop', 'tooltip', ...args]);
@@ -5,24 +7,24 @@ export function toggle(...args) {
     function reset() {
         clickedSet.forEach((item) => {
             if (resetSet.has(item.dataset.toggle)) {
-                item.removeDataAttr('state');
+                rams.dataAttr.remove(item, 'state')
             }
         });
     }
 
     function toggleState(targetToggle) {
-        const dropBox = targetToggle.closestDataAttr('dropbox');
-        const checkState = targetToggle.hasDataAttr('state');
+        const dropBox = rams.dataAttr.closest(targetToggle, 'dropbox');
+        const checkState = rams.dataAttr.has(targetToggle, 'state');
 
         if (!dropBox && !checkState) {
             reset();
         }
 
-        targetToggle.toggleDataAttr('state', 'active');
+        rams.dataAttr.toggle(targetToggle, 'state', 'active');
     }
 
     document.addEventListener('click', (e) => {
-        const targetToggle = e.target.closestDataAttr('toggle');
+        const targetToggle = rams.dataAttr.closest(e.target, 'toggle');
 
         if (targetToggle) {
             if (clickedSet.has(targetToggle)) {

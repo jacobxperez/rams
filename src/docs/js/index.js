@@ -45,23 +45,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // parse everything together
     template
-        .string(`
-            <nav data-navbar="top">
-            </nav>
-            <header data-section="header">
-                ${header}
-            </header>
-            <main data-section="main">
-                ${main}
-            </main>
-            <footer data-section="footer">
-            </footer>
-            `,
+        .string(
+            `
+        <nav data-navbar="top"></nav>
+        <header data-section="header">
+            ${header}
+        </header>
+        <main data-section="main">
+            ${main}
+        </main>
+        <footer data-section="footer"></footer>
+        `,
             'body'
         )
-        .append('#headerTemplate', '#header')
-        .append('#contentTemplate', '#content', sidebar)
-        .fetch(templateURL)
+        .then(() => template.append('#headerTemplate', '#header'))
+        .then(() => template.append('#contentTemplate', '#content', sidebar))
+        .then(() => template.fetch(templateURL))
         .then(() => {
             template.append('#navTemplate', 'nav');
             template.append('#footerTemplate', 'body > footer');

@@ -47,13 +47,12 @@
     --danger-01: hsl(0, 75%, 50%);
     --danger-00: hsl(0, 75%, 45%);
 
-    --font-sans: "Lexica Ultralegible", "Atkinson Hyperlegible", Helvetica,
-        Arial, sans-serif;
-    --font-serif: Xcharter, Charter, Georgia, Times, "Times New Roman", serif;
-    --font-mono: "Fira Mono", "Lucida Console", "Lucida Sans Typewriter", monaco,
-        "Bitstream Vera Sans Mono", monospace;
-    --font-ui: "Lexica Ultralegible", "Atkinson Hyperlegible", system-ui,
-        "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --font-sans: font-family: HelveticaNeue-Light, "Helvetica Neue Light", "Helvetica Neue",
+  Helvetica, "Nimbus Sans L", Arial, sans-serif;
+    --font-serif: font-family: TimesNewRoman,Times New Roman,Times,Baskerville,Georgia,serif; 
+    --font-mono: font-family: Lucida Sans Typewriter,Lucida Console,monaco,Bitstream Vera Sans Mono,monospace;
+    --font-ui: font-family: HelveticaNeue-Light, "Helvetica Neue Light", "Helvetica Neue",
+  Helvetica, "Nimbus Sans L", Arial, sans-serif;
 }
 
 /* @media (prefers-color-scheme: dark) {

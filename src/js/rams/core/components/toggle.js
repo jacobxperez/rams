@@ -7,20 +7,21 @@ export function toggle(...args) {
     function reset() {
         clickedSet.forEach((item) => {
             if (resetSet.has(item.dataset.toggle)) {
-                rams.dataAttr.remove(item, 'state')
+                rams.dataAttr.removeValue(item, 'state', 'active')
+                rams.dataAttr.set(item, 'state', 'off');
             }
         });
     }
 
     function toggleState(targetToggle) {
         const dropBox = rams.dataAttr.closest(targetToggle, 'dropbox');
-        const checkState = rams.dataAttr.has(targetToggle, 'state');
+        const checkState = rams.dataAttr.hasValue(targetToggle, 'state', 'active');
 
         if (!dropBox && !checkState) {
             reset();
         }
 
-        rams.dataAttr.toggle(targetToggle, 'state', 'active');
+        rams.dataAttr.toggleValue(targetToggle, 'state', 'active', 'off');
     }
 
     document.addEventListener('click', (e) => {

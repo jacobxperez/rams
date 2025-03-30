@@ -11,16 +11,33 @@ export const dataAttr = {
         return true;
     },
 
+    removeValue(el, dataName, value = null) {
+        if (!(el instanceof Element)) return false;
+        const currentValue = el.getAttribute(`data-${dataName}`);
+
+        if (currentValue === null) return false;
+
+        if (value === null || currentValue === value) {
+            el.setAttribute(`data-${dataName}`, '');
+            return true;
+        }
+
+        return false;
+    },
+
     get(el, dataName) {
         return el instanceof Element
             ? el.getAttribute(`data-${dataName}`)
             : null;
     },
 
-    has(el, dataName, value = null) {
+    has(el, dataName) {
+        return el instanceof Element && el.hasAttribute(`data-${dataName}`);
+    },
+
+    hasValue(el, dataName, value) {
         if (!(el instanceof Element)) return false;
-        const attrValue = el.getAttribute(`data-${dataName}`);
-        return value ? attrValue === value : attrValue !== null;
+        return el.getAttribute(`data-${dataName}`) === value;
     },
 
     closest(el, dataName, value = null) {

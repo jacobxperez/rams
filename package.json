@@ -2,7 +2,7 @@
     "type": "module",
     "name": "rams",
     "version": "0.0.0",
-    "description": "A Class-Less CSS Design System Framework",
+    "description": "Reactive Attribute-based Modular System",
     "targets": {
         "dev": {
             "source": "src/index.html",

@@ -87,11 +87,13 @@ export const data = {
 
     toggle(el, dataName, value = '') {
         if (!(el instanceof Element)) return false;
-        const exists = el.hasAttribute(`data-${dataName}`);
-        exists
-            ? el.removeAttribute(`data-${dataName}`)
-            : el.setAttribute(`data-${dataName}`, value);
-        return !exists;
+        const currentValue = el.getAttribute(`data-${dataName}`);
+        if (currentValue === value) {
+            el.removeAttribute(`data-${dataName}`);
+            return false;
+        }
+        el.setAttribute(`data-${dataName}`, value);
+        return true;
     },
 
     toggleValue(el, dataName, value1, value2) {

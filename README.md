@@ -1,6 +1,6 @@
 # [Rams](https://jacobxperez.github.io/rams/)
 
-Class-Less CSS Design System Framework
+Reactive Attribute-based Modular System
 
 ---
 
@@ -23,7 +23,11 @@ Class-Less CSS Design System Framework
 
 ## About
 
-Rams is a class-less css design system framework that utilizes the power of data attributes for styling components.
+RAMS is a modern web framework that eliminates the need for traditional class-based styling by
+leveraging the power of data attributes. It provides a clean, modular, and scalable approach to
+components, making it easier to manage and maintain your UI. It also includes a lightweight
+JavaScript library that simplifies handling data attributes, allowing you to create dynamic,
+interactive web experiences.
 
 ## Getting Started
 
@@ -63,7 +67,7 @@ On your terminal run these scripts to compile
 
 ## Features
 
-Rams uses data attributes instead of class to style components.
+Rams uses data-attributes instead of traditional class-based styling.
 
 ### Grid System
 

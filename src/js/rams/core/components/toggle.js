@@ -7,25 +7,25 @@ export function toggle(...args) {
     function reset() {
         clickedSet.forEach((item) => {
             if (resetSet.has(item.dataset.toggle)) {
-                rams.dataAttr.removeValue(item, 'state', 'active')
-                rams.dataAttr.appendValue(item, 'state', 'inactive');
+                rams.data.removeValue(item, 'state', 'active')
+                rams.data.appendValue(item, 'state', 'inactive');
             }
         });
     }
 
     function toggleState(targetToggle) {
-        const dropBox = rams.dataAttr.closest(targetToggle, 'dropbox');
-        const checkState = rams.dataAttr.hasValue(targetToggle, 'state', 'active');
+        const dropBox = rams.data.closest(targetToggle, 'dropbox');
+        const checkState = rams.data.hasValue(targetToggle, 'state', 'active');
 
         if (!dropBox && !checkState) {
             reset();
         }
 
-        rams.dataAttr.toggleValue(targetToggle, 'state', 'active', 'inactive');
+        rams.data.toggleValue(targetToggle, 'state', 'active', 'inactive');
     }
 
     document.addEventListener('click', (e) => {
-        const targetToggle = rams.dataAttr.closest(e.target, 'toggle');
+        const targetToggle = rams.data.closest(e.target, 'toggle');
 
         if (targetToggle) {
             if (clickedSet.has(targetToggle)) {

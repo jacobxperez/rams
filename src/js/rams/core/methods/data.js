@@ -1,4 +1,4 @@
-export const dataAttr = {
+export const data = {
     get(el, dataName) {
         return el instanceof Element
             ? el.getAttribute(`data-${dataName}`)
@@ -47,6 +47,18 @@ export const dataAttr = {
         return true;
     },
 
+    removeValueFromList(el, dataName, value) {
+        if (!(el instanceof Element)) return false;
+        let currentValue = el.getAttribute(`data-${dataName}`);
+
+        if (!currentValue) return false; // Attribute doesn't exist
+
+        let values = currentValue.split(' ').filter((v) => v !== value);
+        el.setAttribute(`data-${dataName}`, values.join(' ').trim());
+
+        return true;
+    },
+
     has(el, dataName) {
         return el instanceof Element && el.hasAttribute(`data-${dataName}`);
     },
@@ -55,6 +67,18 @@ export const dataAttr = {
         if (!(el instanceof Element)) return false;
         let currentValue = el.getAttribute(`data-${dataName}`);
         return currentValue ? currentValue.split(' ').includes(value) : false;
+    },
+
+    isEmpty(el, dataName) {
+        if (!(el instanceof Element)) return false;
+        let value = el.getAttribute(`data-${dataName}`);
+        return value === null || value.trim() === '';
+    },
+
+    isTruthy(el, dataName) {
+        if (!(el instanceof Element)) return false;
+        let value = el.getAttribute(`data-${dataName}`)?.toLowerCase();
+        return ['true', '1', 'yes', 'on'].includes(value);
     },
 
     closest(el, dataName, value = null) {
@@ -126,5 +150,37 @@ export const dataAttr = {
             return true;
         }
         return false;
+    },
+
+    removeValueFromList(el, dataName, value) {
+        if (!(el instanceof Element)) return false;
+        let currentValue = el.getAttribute(`data-${dataName}`);
+
+        if (!currentValue) return false; // Attribute doesn't exist
+
+        let values = currentValue.split(' ').filter((v) => v !== value);
+        el.setAttribute(`data-${dataName}`, values.join(' ').trim());
+
+        return true;
+    },
+
+    debouncedObserver(el, dataName, callback, delay = 300) {
+        if (!(el instanceof Element) || typeof callback !== 'function')
+            return false;
+
+        let timeout;
+        const observer = new MutationObserver((mutations) => {
+            clearTimeout(timeout);
+            timeout = setTimeout(() => {
+                mutations.forEach((mutation) => {
+                    if (mutation.attributeName === `data-${dataName}`) {
+                        callback(el, el.getAttribute(`data-${dataName}`));
+                    }
+                });
+            }, delay);
+        });
+
+        observer.observe(el, {attributes: true});
+        return observer;
     },
 };

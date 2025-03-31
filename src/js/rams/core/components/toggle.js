@@ -1,4 +1,4 @@
-import { rams } from "../..";
+import {rams} from '../..';
 
 export function toggle(...args) {
     const clickedSet = new Set();
@@ -6,9 +6,11 @@ export function toggle(...args) {
 
     function reset() {
         clickedSet.forEach((item) => {
-            if (resetSet.has(item.dataset.toggle)) {
-                rams.data.removeValue(item, 'state', 'active')
-                rams.data.appendValue(item, 'state', 'inactive');
+            if (
+                resetSet.has(item.dataset.toggle) &&
+                rams.data.hasValue(item, 'state', 'active')
+            ) {
+                rams.data.toggleValue(item, 'state', 'active', 'inactive');
             }
         });
     }

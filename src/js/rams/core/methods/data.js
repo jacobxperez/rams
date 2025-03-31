@@ -39,22 +39,12 @@ export const data = {
         if (!currentValue) return false; // Attribute doesn't exist
 
         let values = currentValue.split(' ').filter((v) => v !== value);
+
         if (values.length > 0) {
             el.setAttribute(`data-${dataName}`, values.join(' '));
         } else {
             el.removeAttribute(`data-${dataName}`); // Remove attribute if empty
         }
-        return true;
-    },
-
-    removeValueFromList(el, dataName, value) {
-        if (!(el instanceof Element)) return false;
-        let currentValue = el.getAttribute(`data-${dataName}`);
-
-        if (!currentValue) return false; // Attribute doesn't exist
-
-        let values = currentValue.split(' ').filter((v) => v !== value);
-        el.setAttribute(`data-${dataName}`, values.join(' ').trim());
 
         return true;
     },
@@ -112,17 +102,17 @@ export const data = {
         return newValue;
     },
 
-    query(el, dataName, value = null) {
-        return el instanceof Element
-            ? el.querySelector(
+    findFirstWithData(root, dataName, value = null) {
+        return root instanceof Element
+            ? root.querySelector(
                   value ? `[data-${dataName}="${value}"]` : `[data-${dataName}]`
               )
             : null;
     },
 
-    queryAll(el, dataName, value = null) {
-        return el instanceof Element
-            ? el.querySelectorAll(
+    findAllWithData(root, dataName, value = null) {
+        return root instanceof Element
+            ? root.querySelectorAll(
                   value ? `[data-${dataName}="${value}"]` : `[data-${dataName}]`
               )
             : [];
@@ -150,18 +140,6 @@ export const data = {
             return true;
         }
         return false;
-    },
-
-    removeValueFromList(el, dataName, value) {
-        if (!(el instanceof Element)) return false;
-        let currentValue = el.getAttribute(`data-${dataName}`);
-
-        if (!currentValue) return false; // Attribute doesn't exist
-
-        let values = currentValue.split(' ').filter((v) => v !== value);
-        el.setAttribute(`data-${dataName}`, values.join(' ').trim());
-
-        return true;
     },
 
     debouncedObserver(el, dataName, callback, delay = 300) {

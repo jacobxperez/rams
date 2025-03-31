@@ -1,4 +1,4 @@
-# [Rams](https://jacobxperez.github.io/rams/)
+# [RAMS](https://jacobxperez.github.io/rams/)
 
 Reactive Attribute-based Modular System
 
@@ -31,7 +31,7 @@ interactive web experiences.
 
 ## Getting Started
 
-1) Start by **[downloading](https://github.com/jacobxperez/rams/archive/master.zip)** the repository or by cloning Rams
+1) Start by **[downloading](https://github.com/jacobxperez/rams/archive/master.zip)** the repository or by cloning RAMS
 
     ```bash
     git clone https://github.com/jacobxperez/rams.git
@@ -55,7 +55,7 @@ them to [index.css](https://github.com/jacobxperez/rams/blob/master/src/css/inde
   - [index.css](https://github.com/jacobxperez/rams/blob/master/src/css/index.css) (compile to produce the final CSS)
   - [settings.css](https://github.com/jacobxperez/rams/blob/master/src/css/settings.css) (theme settings for font, colors, and more)
 
-**note**: When starting a project with Rams we recommend **not** to edit the [core](https://github.com/jacobxperez/rams/tree/master/src/css/core) files unless you are [contributing](https://github.com/jacobxperez/rams/blob/master/.github/CONTRIBUTING.md) code back to Rams. Any custom modules should go in the [custom](https://github.com/jacobxperez/rams/tree/master/src/css/custom) folder, this will help you separate your code from Rams.
+**note**: When starting a project with RAMS we recommend **not** to edit the [core](https://github.com/jacobxperez/rams/tree/master/src/css/core) files unless you are [contributing](https://github.com/jacobxperez/rams/blob/master/.github/CONTRIBUTING.md) code back to RAMS. Any custom modules should go in the [custom](https://github.com/jacobxperez/rams/tree/master/src/css/custom) folder, this will help you separate your code from RAMS.
 
 ### Compile
 
@@ -67,7 +67,7 @@ On your terminal run these scripts to compile
 
 ## Features
 
-Rams uses data-attributes instead of traditional class-based styling.
+RAMS uses data-attributes instead of traditional class-based styling.
 
 ### Grid System
 
@@ -170,14 +170,14 @@ Includes several button styles:
 
 ### Examples
 
-These examples incorporate Rams with custom modules.
+These examples incorporate RAMS with custom modules.
 
 - [Jacob Perez](https://github.com/jacobxperez/blog): I am a front-end web developer and designer.
 - [Lexica Ultralegible](https://github.com/jacobxperez/lexica-ultralegible): A font designed for low-vision readers.
 - [Company](https://github.com/jacobxperez/company): A single page website template for your business marketing
 - [Vaporwave Aesthetics](https://github.com/jacobxperez/vaporwave-aesthetic): A template with Vaporwave Aesthetics
 
-**note**: These examples may contain an older version of Rams.
+**note**: These examples may contain an older version of RAMS.
 
 ### Contributing
 

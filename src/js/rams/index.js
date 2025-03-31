@@ -4,7 +4,7 @@ import {toggle} from './core/components/toggle.js';
 // import {carousel} from './core/components/carousel.js';
 // import {template} from './core/components/template.js';
 
-class Rams {
+class RAMS {
     constructor() {
         this.data = data;
         this.toggle = toggle;
@@ -20,4 +20,4 @@ class Rams {
     // template;
 }
 
-export const rams = new Rams();
+export const rams = new RAMS();

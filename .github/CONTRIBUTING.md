@@ -1,6 +1,6 @@
 # Contributing
 
-Welcome designers and developers! Help us improve RAMS for everyone. Before you start contributing to this project, it's important to read the following sections to better understand it's vision. If you come across any [bugs](#bug-reports) or have any [feature requests](#feature-requests), please use the [issue tracker](https://github.com/jacobxperez/rams/issues). You can also submit a project [proposal](#proposals) and engage with the community by opening a [discussion](https://github.com/jacobxperez/rams/discussions). Any contribution or feedback is welcome.
+Welcome designers and developers! Help us improve RAMS for everyone. Before you start contributing to this project, it's important to read the following sections to better understand its vision. If you come across any [bugs](#bug-reports) or have any [feature requests](#feature-requests), please use the [issue tracker](https://github.com/jacobxperez/rams/issues). You can also submit a project [proposal](#proposals) and engage with the community by opening a [discussion](https://github.com/jacobxperez/rams/discussions). Any contribution or feedback is welcome.
 
 ---
 
@@ -29,8 +29,8 @@ the limitations of JavaScript and CSS. However, without the fundamental principl
 of design, their use becomes arbitrary. The developer; is trained to dominate his
 technology, while the designer; is forced to work within his limitations. By limiting
 or restricting the choices, the designer; is forced to prioritize the essentials,
-and because he has not; been trained as a developer, he uses his limitation with
-technology to discover new designs.
+and because he has not; been trained as a developer, He leverages his limitations
+with technology to discover new designs.
 
 ## Design Principles
 

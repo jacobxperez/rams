@@ -3,7 +3,7 @@
     cursor: pointer;
 }
 
-:where(a:hover, a:active) {
+:where(a:hover, a:active, [data-state="active"]) {
     @include _link-active;
 }
 

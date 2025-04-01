@@ -11,41 +11,29 @@
     --neutral-01: hsl(0, 0%, 10%);
     --neutral-00: hsl(0, 0%, 0%);
 
-    --primary-04: hsl(19, 100%, 70%);
-    --primary-03: hsl(19, 100%, 65%);
-    --primary-02: hsl(19, 100%, 60%);
-    --primary-01: hsl(19, 100%, 55%);
-    --primary-00: hsl(19, 100%, 50%);
+    --primary: hsl(22, 90%, 47%);
+    --primary-light: hsl(22, 90%, 67%);
+    --primary-dark: hsl(22, 90%, 27%);
 
-    --secondary-04: hsl(19, 100%, 45%);
-    --secondary-03: hsl(19, 100%, 40%);
-    --secondary-02: hsl(19, 100%, 35%);
-    --secondary-01: hsl(19, 100%, 30%);
-    --secondary-00: hsl(19, 100%, 25%);
+    --secondary: hsl(208, 60%, 29%);
+    --secondary-light: hsl(208, 60%, 49%);
+    --secondary-dark: hsl(208, 60%, 19%);
 
-    --tertiary-04: var(--neutral-04);
-    --tertiary-03: var(--neutral-03);
-    --tertiary-02: var(--neutral-02);
-    --tertiary-01: var(--neutral-01);
-    --tertiary-00: var(--neutral-00);
+    --tertiary: hsl(74, 20%, 32%);
+    --tertiary-light: hsl(74, 20%, 42%);
+    --tertiary-dark: hsl(74, 20%, 22%);
 
-    --success-04: hsl(145, 80%, 45%);
-    --success-03: hsl(145, 80%, 40%);
-    --success-02: hsl(145, 80%, 35%);
-    --success-01: hsl(145, 80%, 30%);
-    --success-00: hsl(145, 80%, 25%);
+    --success: hsl(124, 49%, 25%);
+    --success-light: hsl(124, 49%, 35%);
+    --success-dark: hsl(124, 49%, 15%);
 
-    --warning-04: hsl(40, 100%, 70%);
-    --warning-03: hsl(40, 100%, 65%);
-    --warning-02: hsl(40, 100%, 60%);
-    --warning-01: hsl(40, 100%, 55%);
-    --warning-00: hsl(40, 100%, 50%);
+    --warning: hsl(54, 94%, 36%);
+    --warning-light: hsl(54, 94%, 46%);
+    --warning-dark: hsl(54, 94%, 26%);
 
-    --danger-04: hsl(0, 75%, 65%);
-    --danger-03: hsl(0, 75%, 60%);
-    --danger-02: hsl(0, 75%, 55%);
-    --danger-01: hsl(0, 75%, 50%);
-    --danger-00: hsl(0, 75%, 45%);
+    --danger: hsl(358, 78%, 49%);
+    --danger-light: hsl(358, 78%, 59%);
+    --danger-dark: hsl(358, 78%, 39%);
 
     --font-sans: HelveticaNeue-Light, "Helvetica Neue Light", "Helvetica Neue",
         Helvetica, "Nimbus Sans L", Arial, sans-serif;
@@ -78,18 +66,18 @@ $body-font-color: var(--neutral-00);
 $background: var(--neutral-10);
 $background-gradient: false;
 
-$primary: var(--primary-00);
-$primary-active: var(--primary-02);
+$primary: var(--primary);
+$primary-active: var(--primary-dark);
 $primary-text: var(--neutral-10);
 $primary-text-active: var(--neutral-10);
 
-$secondary: var(--secondary-00);
-$secondary-active: var(--secondary-02);
+$secondary: var(--secondary);
+$secondary-active: var(--secondary-dark);
 $secondary-text: var(--neutral-10);
 $secondary-text-active: var(--neutral-10);
 
-$tertiary: var(--tertiary-00);
-$tertiary-active: var(--tertiary-02);
+$tertiary: var(--tertiary);
+$tertiary-active: var(--tertiary-dark);
 $tertiary-text: var(--neutral-10);
 $tertiary-text-active: var(--neutral-10);
 
@@ -152,7 +140,7 @@ $blockquote-font-style: italic;
 $pre-font-family: var(--font-mono);
 
 /* mark */
-$mark-background: var(--warning-01);
+$mark-background: var(--warning);
 $mark-text: var(--neutral-00);
 
 /* hr */
@@ -206,18 +194,18 @@ $button-outline-background-active: var(--neutral-00);
 $button-outline-border-color: var(--neutral-00);
 
 /* Feedback */
-$success: var(--success-00);
-$success-active: var(--success-01);
+$success: var(--success);
+$success-active: var(--success-dark);
 $success-text: var(--neutral-10);
 $success-text-active: var(--neutral-10);
 
-$warning: var(--warning-00);
-$warning-active: var(--warning-01);
-$warning-text: var(--neutral-00);
-$warning-text-active: var(--neutral-00);
+$warning: var(--warning);
+$warning-active: var(--warning-dark);
+$warning-text: var(--neutral-10);
+$warning-text-active: var(--neutral-10);
 
-$danger: var(--danger-00);
-$danger-active: var(--danger-01);
+$danger: var(--danger);
+$danger-active: var(--danger-dark);
 $danger-text: var(--neutral-10);
 $danger-text-active: var(--neutral-10);
 

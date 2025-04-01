@@ -1,18 +1,36 @@
 export const data = {
     get(el, dataName) {
-        return el instanceof Element
-            ? el.getAttribute(`data-${dataName}`)
-            : null;
+        if (!(el instanceof Element)) {
+            console.error(
+                'data.get: Provided element is not a valid DOM Element.'
+            );
+            return null;
+        }
+        return el.getAttribute(`data-${dataName}`);
     },
 
     set(el, dataName, value = '') {
-        if (!(el instanceof Element)) return false;
+        if (!(el instanceof Element)) {
+            console.error(
+                'data.set: Provided element is not a valid DOM Element.'
+            );
+            return false;
+        }
         el.setAttribute(`data-${dataName}`, value);
         return true;
     },
 
     appendValue(el, dataName, value) {
-        if (!(el instanceof Element) || typeof value !== 'string') return false;
+        if (!(el instanceof Element)) {
+            console.error(
+                'data.appendValue: Provided element is not a valid DOM Element.'
+            );
+            return false;
+        }
+        if (typeof value !== 'string') {
+            console.error('data.appendValue: Value must be a string.');
+            return false;
+        }
 
         let currentValue = el.getAttribute(`data-${dataName}`);
         let values = new Set(currentValue ? currentValue.split(' ') : []);
@@ -27,16 +45,31 @@ export const data = {
     },
 
     remove(el, dataName) {
-        if (!(el instanceof Element)) return false;
+        if (!(el instanceof Element)) {
+            console.error(
+                'data.remove: Provided element is not a valid DOM Element.'
+            );
+            return false;
+        }
         el.removeAttribute(`data-${dataName}`);
         return true;
     },
 
     removeValue(el, dataName, value) {
-        if (!(el instanceof Element)) return false;
+        if (!(el instanceof Element)) {
+            console.error(
+                'data.removeValue: Provided element is not a valid DOM Element.'
+            );
+            return false;
+        }
         let currentValue = el.getAttribute(`data-${dataName}`);
 
-        if (!currentValue) return false;
+        if (!currentValue) {
+            console.warn(
+                `data.removeValue: Attribute "data-${dataName}" does not exist.`
+            );
+            return false;
+        }
 
         let values = new Set(currentValue.split(' '));
         values.delete(value);
@@ -51,43 +84,79 @@ export const data = {
     },
 
     has(el, dataName) {
-        return el instanceof Element && el.hasAttribute(`data-${dataName}`);
+        if (!(el instanceof Element)) {
+            console.error(
+                'data.has: Provided element is not a valid DOM Element.'
+            );
+            return false;
+        }
+        return el.hasAttribute(`data-${dataName}`);
     },
 
     hasValue(el, dataName, value) {
-        if (!(el instanceof Element)) return false;
+        if (!(el instanceof Element)) {
+            console.error(
+                'data.hasValue: Provided element is not a valid DOM Element.'
+            );
+            return false;
+        }
         let currentValue = el.getAttribute(`data-${dataName}`);
         return currentValue ? currentValue.split(' ').includes(value) : false;
     },
 
     isEmpty(el, dataName) {
-        if (!(el instanceof Element)) return false;
+        if (!(el instanceof Element)) {
+            console.error(
+                'data.isEmpty: Provided element is not a valid DOM Element.'
+            );
+            return false;
+        }
         let value = el.getAttribute(`data-${dataName}`);
         return value === null || value.trim() === '';
     },
 
     isTruthy(el, dataName) {
-        if (!(el instanceof Element)) return false;
+        if (!(el instanceof Element)) {
+            console.error(
+                'data.isTruthy: Provided element is not a valid DOM Element.'
+            );
+            return false;
+        }
         let value = el.getAttribute(`data-${dataName}`)?.toLowerCase();
         return ['true', '1', 'yes', 'on'].includes(value);
     },
 
     closest(el, dataName, value = null) {
-        if (!(el instanceof Element)) return null;
+        if (!(el instanceof Element)) {
+            console.error(
+                'data.closest: Provided element is not a valid DOM Element.'
+            );
+            return null;
+        }
         return el.closest(
             value ? `[data-${dataName}="${value}"]` : `[data-${dataName}]`
         );
     },
 
     matches(el, dataName, value = null) {
-        if (!(el instanceof Element)) return false;
+        if (!(el instanceof Element)) {
+            console.error(
+                'data.matches: Provided element is not a valid DOM Element.'
+            );
+            return false;
+        }
         return el.matches(
             value ? `[data-${dataName}="${value}"]` : `[data-${dataName}]`
         );
     },
 
     toggle(el, dataName, value = '') {
-        if (!(el instanceof Element)) return false;
+        if (!(el instanceof Element)) {
+            console.error(
+                'data.toggle: Provided element is not a valid DOM Element.'
+            );
+            return false;
+        }
         const currentValue = el.getAttribute(`data-${dataName}`);
         if (currentValue === value || (value === '' && currentValue !== null)) {
             el.removeAttribute(`data-${dataName}`);
@@ -97,8 +166,13 @@ export const data = {
         return true;
     },
 
-    toggleValue(el, dataName, value1, value2) {
-        if (!(el instanceof Element)) return false;
+    toggleValue(el, dataName, value1 = '', value2 = '') {
+        if (!(el instanceof Element)) {
+            console.error(
+                'data.toggleValue: Provided element is not a valid DOM Element.'
+            );
+            return false;
+        }
         const currentValue = el.getAttribute(`data-${dataName}`);
         const newValue = currentValue === value1 ? value2 : value1;
         el.setAttribute(`data-${dataName}`, newValue);
@@ -106,11 +180,15 @@ export const data = {
     },
 
     findFirstWithData(root, dataName, value = null) {
-        return root instanceof Element
-            ? root.querySelector(
-                  value ? `[data-${dataName}="${value}"]` : `[data-${dataName}]`
-              )
-            : null;
+        if (!(root instanceof Element)) {
+            console.error(
+                'data.findFirstWithData: Provided root is not a valid DOM Element.'
+            );
+            return null;
+        }
+        return root.querySelector(
+            value ? `[data-${dataName}="${value}"]` : `[data-${dataName}]`
+        );
     },
 
     findAllWithData(root, dataName, value = null) {

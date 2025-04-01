@@ -67,7 +67,7 @@ On your terminal run these scripts to compile
 
 ## Features
 
-RAMS uses data-attributes instead of traditional class-based components.
+RAMS uses data attributes instead of traditional class-based systems to style components.
 
 ### Grid System
 

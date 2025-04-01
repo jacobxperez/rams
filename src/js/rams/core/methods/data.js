@@ -33,11 +33,11 @@ export const data = {
         }
 
         let currentValue = el.getAttribute(`data-${dataName}`);
-        currentValue = currentValue ? currentValue.split(' ') : [];
+        let values = new Set(currentValue ? currentValue.split(' ') : []);
 
-        if (!currentValue.includes(value)) {
-            currentValue.push(value);
-            el.setAttribute(`data-${dataName}`, currentValue.join(' '));
+        if (!values.has(value)) {
+            values.add(value);
+            el.setAttribute(`data-${dataName}`, Array.from(values).join(' '));
             return true;
         }
 
@@ -71,12 +71,13 @@ export const data = {
             return false;
         }
 
-        let values = currentValue.split(' ').filter((v) => v !== value);
+        let values = new Set(currentValue.split(' '));
+        values.delete(value);
 
-        if (values.length > 0) {
-            el.setAttribute(`data-${dataName}`, values.join(' '));
+        if (values.size > 0) {
+            el.setAttribute(`data-${dataName}`, Array.from(values).join(' '));
         } else {
-            el.removeAttribute(`data-${dataName}`); // Remove attribute if empty
+            el.removeAttribute(`data-${dataName}`);
         }
 
         return true;
@@ -157,7 +158,7 @@ export const data = {
             return false;
         }
         const currentValue = el.getAttribute(`data-${dataName}`);
-        if (currentValue === value) {
+        if (currentValue === value || (value === '' && currentValue !== null)) {
             el.removeAttribute(`data-${dataName}`);
             return false;
         }
@@ -165,7 +166,7 @@ export const data = {
         return true;
     },
 
-    toggleValue(el, dataName, value1 = null, value2 = '') {
+    toggleValue(el, dataName, value1 = '', value2 = '') {
         if (!(el instanceof Element)) {
             console.error(
                 'data.toggleValue: Provided element is not a valid DOM Element.'
@@ -197,12 +198,14 @@ export const data = {
             );
             return [];
         }
-        return root.querySelectorAll(
-            value ? `[data-${dataName}="${value}"]` : `[data-${dataName}]`
+        return Array.from(
+            root.querySelectorAll(
+                value ? `[data-${dataName}="${value}"]` : `[data-${dataName}]`
+            )
         );
     },
 
-    observe(el, dataName, callback) {
+    observe(el, dataName, callback, config = {attributes: true}) {
         if (!(el instanceof Element)) {
             console.error(
                 'data.observe: Provided element is not a valid DOM Element.'
@@ -215,14 +218,14 @@ export const data = {
         }
 
         const observer = new MutationObserver((mutations) => {
-            mutations.forEach((mutation) => {
+            for (const mutation of mutations) {
                 if (mutation.attributeName === `data-${dataName}`) {
                     callback(el, el.getAttribute(`data-${dataName}`));
                 }
-            });
+            }
         });
 
-        observer.observe(el, {attributes: true});
+        observer.observe(el, config);
         return observer;
     },
 
@@ -237,7 +240,13 @@ export const data = {
         return true;
     },
 
-    debouncedObserver(el, dataName, callback, delay = 300) {
+    debouncedObserver(
+        el,
+        dataName,
+        callback,
+        delay = 300,
+        config = {attributes: true}
+    ) {
         if (!(el instanceof Element)) {
             console.error(
                 'data.debouncedObserver: Provided element is not a valid DOM Element.'
@@ -250,20 +259,26 @@ export const data = {
             );
             return false;
         }
+        if (typeof delay !== 'number' || delay < 0) {
+            console.error(
+                'data.debouncedObserver: Delay must be a non-negative number.'
+            );
+            return false;
+        }
 
         let timeout;
         const observer = new MutationObserver((mutations) => {
             clearTimeout(timeout);
             timeout = setTimeout(() => {
-                mutations.forEach((mutation) => {
+                for (const mutation of mutations) {
                     if (mutation.attributeName === `data-${dataName}`) {
                         callback(el, el.getAttribute(`data-${dataName}`));
                     }
-                });
+                }
             }, delay);
         });
 
-        observer.observe(el, {attributes: true});
+        observer.observe(el, config);
         return observer;
     },
 };

@@ -4,6 +4,9 @@ export function toggle(...args) {
     const clickedSet = new Set();
     const resetSet = new Set(['pop', 'tooltip', ...args]);
 
+    /**
+     * Resets the state of all toggled elements in the clickedSet.
+     */
     function reset() {
         clickedSet.forEach((item) => {
             if (
@@ -15,6 +18,10 @@ export function toggle(...args) {
         });
     }
 
+    /**
+     * Toggles the state of the target element and resets others if necessary.
+     * @param {Element} targetToggle - The element to toggle.
+     */
     function toggleState(targetToggle) {
         const dropBox = rams.data.closest(targetToggle, 'dropbox');
         const checkState = rams.data.hasValue(targetToggle, 'state', 'active');
@@ -28,6 +35,10 @@ export function toggle(...args) {
 
     document.addEventListener('click', (e) => {
         const targetToggle = rams.data.closest(e.target, 'toggle');
+        if (!targetToggle) {
+            reset();
+            return;
+        }
 
         if (targetToggle) {
             if (clickedSet.has(targetToggle)) {

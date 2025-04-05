@@ -1,16 +1,16 @@
 /* @license
- * Jacob Perez <https://jacobxperez.github.io/blog/>
+ * RAMS <https://jacobxperez.github.io/rams/>
  * Copyright (C) 2025 Jacob Perez <jacobxperez@gmx.com>
  * Licensed under the Apache License, Version 2.0
  * http://www.apache.org/licenses/LICENSE-2.0
 -----------------------------------------------------------------------------*/
-import {rams} from '../../js/rams/index.js';
+import {rams} from '../../js/rams/RAMS.js';
 import {sidebar} from './modules/sidebar.js';
 import {template} from '../../js/rams/core/components/template.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     if (meta.title === '') {
-        meta.title = `<h1>Rams</h1>`;
+        meta.title = `<h1>RAMS</h1>`;
     } else {
         meta.title = `<h1>${meta.title}</h1>`;
     }

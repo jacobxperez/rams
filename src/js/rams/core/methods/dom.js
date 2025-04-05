@@ -1,5 +1,10 @@
 export const dom = {
-    // Helper function to validate the element
+    /**
+     * Validates if the provided root is a valid DOM element.
+     * @param {Element|Document|DocumentFragment} root - The root element to validate.
+     * @param {string} methodName - The name of the method calling this validation.
+     * @returns {boolean} - True if valid, false otherwise.
+     */
     validateRoot(root, methodName) {
         if (
             !(
@@ -16,7 +21,12 @@ export const dom = {
         return true;
     },
 
-    // Helper function to validate the dataName
+    /**
+     * Validates if the provided dataName is a non-empty string.
+     * @param {string} dataName - The data attribute name to validate.
+     * @param {string} methodName - The name of the method calling this validation.
+     * @returns {boolean} - True if valid, false otherwise.
+     */
     validateDataName(dataName, methodName) {
         if (typeof dataName !== 'string' || dataName.trim() === '') {
             console.error(
@@ -27,7 +37,12 @@ export const dom = {
         return true;
     },
 
-    // Helper function to validate the dataValue
+    /**
+     * Validates if the provided dataValue is a string or null.
+     * @param {string|null} dataValue - The data attribute value to validate.
+     * @param {string} methodName - The name of the method calling this validation.
+     * @returns {boolean} - True if valid, false otherwise.
+     */
     validateDataValue(dataValue, methodName) {
         if (dataValue !== null && typeof dataValue !== 'string') {
             console.error(
@@ -38,6 +53,13 @@ export const dom = {
         return true;
     },
 
+    /**
+     * Retrieves the first element with the specified data attribute.
+     * @param {Element|Document|DocumentFragment} root - The root element to search within.
+     * @param {string} dataName - The data attribute name to search for.
+     * @param {string|null} [value=null] - The optional value of the data attribute.
+     * @returns {Element|null} - The matching element or null if not found.
+     */
     getDataAttr(root, dataName, value = null) {
         if (
             !this.validateRoot(root, 'dom.getDataAttr') ||
@@ -50,6 +72,13 @@ export const dom = {
         );
     },
 
+    /**
+     * Retrieves all elements with the specified data attribute.
+     * @param {Element|Document|DocumentFragment} root - The root element to search within.
+     * @param {string} dataName - The data attribute name to search for.
+     * @param {string|null} [value=null] - The optional value of the data attribute.
+     * @returns {Element[]} - An array of matching elements.
+     */
     getAllDataAttr(root, dataName, value = null) {
         if (
             !this.validateRoot(root, 'dom.getAllDataAttr') ||
@@ -64,6 +93,13 @@ export const dom = {
         );
     },
 
+    /**
+     * Sets a data attribute on the specified element.
+     * @param {Element} root - The element to set the data attribute on.
+     * @param {string} dataName - The data attribute name to set.
+     * @param {string|null} [value=null] - The value of the data attribute.
+     * @returns {boolean} - True if successful, false otherwise.
+     */
     setDataAttr(root, dataName, value = null) {
         if (
             !this.validateRoot(root, 'dom.setDataAttr') ||
@@ -75,6 +111,13 @@ export const dom = {
         return true;
     },
 
+    /**
+     * Appends a value to a space-separated data attribute.
+     * @param {Element} root - The element to modify.
+     * @param {string} dataName - The data attribute name.
+     * @param {string} value - The value to append.
+     * @returns {boolean} - True if the value was added, false otherwise.
+     */
     appendDataAttrValue(root, dataName, value) {
         if (
             !this.validateRoot(root, 'dom.appendDataAttrValue') ||
@@ -97,6 +140,12 @@ export const dom = {
         return false;
     },
 
+    /**
+     * Removes a data attribute from the specified element.
+     * @param {Element} root - The element to modify.
+     * @param {string} dataName - The data attribute name to remove.
+     * @returns {boolean} - True if successful, false otherwise.
+     */
     removeDataAttr(root, dataName) {
         if (
             !this.validateRoot(root, 'dom.removeDataAttr') ||
@@ -107,6 +156,13 @@ export const dom = {
         return true;
     },
 
+    /**
+     * Removes a specific value from a space-separated data attribute.
+     * @param {Element} root - The element to modify.
+     * @param {string} dataName - The data attribute name.
+     * @param {string} value - The value to remove.
+     * @returns {boolean} - True if the value was removed, false otherwise.
+     */
     removeDataAttrValue(root, dataName, value) {
         if (
             !this.validateRoot(root, 'dom.removeDataAttrValue') ||
@@ -135,6 +191,14 @@ export const dom = {
         return true;
     },
 
+    /**
+     * Replaces a specific value in a space-separated data attribute.
+     * @param {Element} root - The element to modify.
+     * @param {string} dataName - The data attribute name.
+     * @param {string} oldValue - The value to replace.
+     * @param {string} newValue - The new value to set.
+     * @returns {boolean} - True if the value was replaced, false otherwise.
+     */
     replaceDataAttrValue(root, dataName, oldValue, newValue) {
         if (
             !this.validateRoot(root, 'dom.replaceDataAttrValue') ||
@@ -158,6 +222,13 @@ export const dom = {
         return true;
     },
 
+    /**
+     * Checks if a data attribute exists on the element, optionally with a specific value.
+     * @param {Element} root - The element to check.
+     * @param {string} dataName - The data attribute name.
+     * @param {string|null} [value=null] - The optional value to check for.
+     * @returns {boolean} - True if the attribute exists, false otherwise.
+     */
     hasDataAttr(root, dataName, value = null) {
         const methodName = 'dom.hasDataAttr';
         if (
@@ -178,6 +249,12 @@ export const dom = {
             : false;
     },
 
+    /**
+     * Checks if a data attribute is empty or not set.
+     * @param {Element} root - The element to check.
+     * @param {string} dataName - The data attribute name.
+     * @returns {boolean} - True if the attribute is empty or not set, false otherwise.
+     */
     isEmpty(root, dataName) {
         if (
             !this.validateRoot(root, 'dom.isEmpty') ||
@@ -188,6 +265,13 @@ export const dom = {
         return value === null || value.trim() === '';
     },
 
+    /**
+     * Finds the closest ancestor with the specified data attribute.
+     * @param {Element} root - The starting element.
+     * @param {string} dataName - The data attribute name.
+     * @param {string|null} [value=null] - The optional value of the data attribute.
+     * @returns {Element|null} - The closest matching ancestor or null if not found.
+     */
     closestDataAttr(root, dataName, value = null) {
         if (
             !this.validateRoot(root, 'dom.closestDataAttr') ||
@@ -200,6 +284,13 @@ export const dom = {
         );
     },
 
+    /**
+     * Checks if the element matches the specified data attribute.
+     * @param {Element} root - The element to check.
+     * @param {string} dataName - The data attribute name.
+     * @param {string|null} [value=null] - The optional value of the data attribute.
+     * @returns {boolean} - True if the element matches, false otherwise.
+     */
     matchesDataAttr(root, dataName, value = null) {
         if (
             !this.validateRoot(root, 'dom.matchesDataAttr') ||
@@ -212,6 +303,13 @@ export const dom = {
         );
     },
 
+    /**
+     * Toggles a data attribute on the element.
+     * @param {Element} root - The element to modify.
+     * @param {string} dataName - The data attribute name.
+     * @param {string|null} [value=null] - The value to toggle.
+     * @returns {boolean} - True if the attribute was added, false if removed.
+     */
     toggleDataAttr(root, dataName, value = null) {
         if (
             !this.validateRoot(root, 'dom.toggleDataAttr') ||
@@ -228,6 +326,14 @@ export const dom = {
         return true;
     },
 
+    /**
+     * Toggles between two values for a data attribute.
+     * @param {Element} root - The element to modify.
+     * @param {string} dataName - The data attribute name.
+     * @param {string|null} [value1=null] - The first value.
+     * @param {string|null} [value2=null] - The second value.
+     * @returns {string|null} - The new value of the attribute.
+     */
     toggleDataAttrValue(root, dataName, value1 = null, value2 = null) {
         if (
             !this.validateRoot(root, 'dom.toggleDataAttrValue') ||
@@ -242,6 +348,14 @@ export const dom = {
         return newValue;
     },
 
+    /**
+     * Observes changes to a specific data attribute on the element.
+     * @param {Element} root - The element to observe.
+     * @param {string} dataName - The data attribute name.
+     * @param {Function} callback - The callback to execute on changes.
+     * @param {Object} [config={attributes: true}] - The MutationObserver configuration.
+     * @returns {MutationObserver|boolean} - The observer instance or false if invalid.
+     */
     observe(root, dataName, callback, config = {attributes: true}) {
         if (
             !this.validateRoot(root, 'dom.observe') ||
@@ -265,6 +379,11 @@ export const dom = {
         return observer;
     },
 
+    /**
+     * Disconnects a MutationObserver.
+     * @param {MutationObserver} observer - The observer to disconnect.
+     * @returns {boolean} - True if successful, false otherwise.
+     */
     disconnectObserver(observer) {
         if (!(observer instanceof MutationObserver)) {
             console.error(
@@ -276,6 +395,15 @@ export const dom = {
         return true;
     },
 
+    /**
+     * Observes changes to a specific data attribute with a debounce delay.
+     * @param {Element} root - The element to observe.
+     * @param {string} dataName - The data attribute name.
+     * @param {Function} callback - The callback to execute on changes.
+     * @param {number} [delay=300] - The debounce delay in milliseconds.
+     * @param {Object} [config={attributes: true}] - The MutationObserver configuration.
+     * @returns {MutationObserver|boolean} - The observer instance or false if invalid.
+     */
     debouncedObserver(
         root,
         dataName,

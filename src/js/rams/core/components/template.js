@@ -1,4 +1,4 @@
-import {rams} from '../../RAMS.js';
+import {r} from '../../RAMS.js';
 
 export const template = {
     _string(string, targetSelector) {
@@ -83,7 +83,7 @@ export const template = {
             });
             this._string(string, targetSelector);
             targetSelector;
-            return rams.callback?.(callback);
+            return r.callback?.(callback);
         } catch (err) {
             return console.error(err);
         }
@@ -98,7 +98,7 @@ export const template = {
             });
             this._append(document, templateSelector, targetSelector);
             targetSelector;
-            return rams.callback?.(callback);
+            return r.callback?.(callback);
         } catch (err) {
             return console.error(err);
         }

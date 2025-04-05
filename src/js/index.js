@@ -4,7 +4,7 @@
  * Licensed under the Apache License, Version 2.0
  * http://www.apache.org/licenses/LICENSE-2.0
  */
-import {rams} from './rams/RAMS.js';
+import {r} from '../js/rams/RAMS.js';
 
 // start the toggles
-rams.toggle();
+r.toggle();

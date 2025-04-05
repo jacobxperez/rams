@@ -1,17 +1,17 @@
-import {dataAttr} from './core/methods/dataAttr.js';
+import {dom} from './core/methods/dom.js';
 import {callback} from './core/methods/callbacks.js';
 import {toggle} from './core/components/toggle.js';
 
 class RAMS {
     constructor() {
-        this.dataAttr = dataAttr;
+        this.dom = dom;
         this.toggle = toggle;
         this.callback = callback;
     }
 
-    dataAttr;
+    dom;
     toggle;
     callback;
 }
 
-export const rams = new RAMS();
+export const r = new RAMS();

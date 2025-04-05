@@ -1,4 +1,4 @@
-export const dataAttr = {
+export const dom = {
     // Helper function to validate the element
     validateRoot(root, methodName) {
         if (
@@ -38,11 +38,11 @@ export const dataAttr = {
         return true;
     },
 
-    get(root, dataName, value = null) {
+    getDataAttr(root, dataName, value = null) {
         if (
-            !this.validateRoot(root, 'dataAttr.get') ||
-            !this.validateDataName(dataName, 'dataAttr.get') ||
-            !this.validateDataValue(value, 'dataAttr.get')
+            !this.validateRoot(root, 'dom.getDataAttr') ||
+            !this.validateDataName(dataName, 'dom.getDataAttr') ||
+            !this.validateDataValue(value, 'dom.getDataAttr')
         )
             return null;
         return root.querySelector(
@@ -50,11 +50,11 @@ export const dataAttr = {
         );
     },
 
-    getAll(root, dataName, value = null) {
+    getAllDataAttr(root, dataName, value = null) {
         if (
-            !this.validateRoot(root, 'dataAttr.getAll') ||
-            !this.validateDataName(dataName, 'dataAttr.getAll') ||
-            !this.validateDataValue(value, 'dataAttr.getAll')
+            !this.validateRoot(root, 'dom.getAllDataAttr') ||
+            !this.validateDataName(dataName, 'dom.getAllDataAttr') ||
+            !this.validateDataValue(value, 'dom.getAllDataAttr')
         )
             return [];
         return Array.from(
@@ -64,22 +64,22 @@ export const dataAttr = {
         );
     },
 
-    set(root, dataName, value = null) {
+    setDataAttr(root, dataName, value = null) {
         if (
-            !this.validateRoot(root, 'dataAttr.set') ||
-            !this.validateDataName(dataName, 'dataAttr.set') ||
-            !this.validateDataValue(value, 'dataAttr.set')
+            !this.validateRoot(root, 'dom.setDataAttr') ||
+            !this.validateDataName(dataName, 'dom.setDataAttr') ||
+            !this.validateDataValue(value, 'dom.setDataAttr')
         )
             return false;
         root.setAttribute(`data-${dataName}`, value);
         return true;
     },
 
-    appendValue(root, dataName, value) {
+    appendDataAttrValue(root, dataName, value) {
         if (
-            !this.validateRoot(root, 'dataAttr.appendValue') ||
-            !this.validateDataName(dataName, 'dataAttr.appendValue') ||
-            !this.validateDataValue(value, 'dataAttr.appendValue')
+            !this.validateRoot(root, 'dom.appendDataAttrValue') ||
+            !this.validateDataName(dataName, 'dom.appendDataAttrValue') ||
+            !this.validateDataValue(value, 'dom.appendDataAttrValue')
         )
             return false;
 
@@ -97,28 +97,28 @@ export const dataAttr = {
         return false;
     },
 
-    remove(root, dataName) {
+    removeDataAttr(root, dataName) {
         if (
-            !this.validateRoot(root, 'dataAttr.remove') ||
-            !this.validateDataName(dataName, 'dataAttr.remove')
+            !this.validateRoot(root, 'dom.removeDataAttr') ||
+            !this.validateDataName(dataName, 'dom.removeDataAttr')
         )
             return false;
         root.removeAttribute(`data-${dataName}`);
         return true;
     },
 
-    removeValue(root, dataName, value) {
+    removeDataAttrValue(root, dataName, value) {
         if (
-            !this.validateRoot(root, 'dataAttr.removeValue') ||
-            !this.validateDataName(dataName, 'dataAttr.removeValue') ||
-            !this.validateDataValue(value, 'dataAttr.removeValue')
+            !this.validateRoot(root, 'dom.removeDataAttrValue') ||
+            !this.validateDataName(dataName, 'dom.removeDataAttrValue') ||
+            !this.validateDataValue(value, 'dom.removeDataAttrValue')
         )
             return false;
         let currentValue = root.getAttribute(`data-${dataName}`);
 
         if (!currentValue) {
             console.warn(
-                `[RAMS] dataAttr.removeValue: Attribute "data-${dataName}" does not exist.`
+                `[RAMS] dom.removeDataAttrValue: Attribute "data-${dataName}" does not exist.`
             );
             return false;
         }
@@ -135,12 +135,12 @@ export const dataAttr = {
         return true;
     },
 
-    replaceValue(root, dataName, oldValue, newValue) {
+    replaceDataAttrValue(root, dataName, oldValue, newValue) {
         if (
-            !this.validateRoot(root, 'dataAttr.replaceValue') ||
-            !this.validateDataName(dataName, 'dataAttr.replaceValue') ||
-            !this.validateDataValue(oldValue, 'dataAttr.replaceValue') ||
-            !this.validateDataValue(newValue, 'dataAttr.replaceValue')
+            !this.validateRoot(root, 'dom.replaceDataAttrValue') ||
+            !this.validateDataName(dataName, 'dom.replaceDataAttrValue') ||
+            !this.validateDataValue(oldValue, 'dom.replaceDataAttrValue') ||
+            !this.validateDataValue(newValue, 'dom.replaceDataAttrValue')
         )
             return false;
 
@@ -158,8 +158,8 @@ export const dataAttr = {
         return true;
     },
 
-    has(root, dataName, value = null) {
-        const methodName = 'dataAttr.has';
+    hasDataAttr(root, dataName, value = null) {
+        const methodName = 'dom.hasDataAttr';
         if (
             !this.validateRoot(root, methodName) ||
             !this.validateDataName(dataName, methodName)
@@ -180,19 +180,19 @@ export const dataAttr = {
 
     isEmpty(root, dataName) {
         if (
-            !this.validateRoot(root, 'dataAttr.isEmpty') ||
-            !this.validateDataName(dataName, 'dataAttr.isEmpty')
+            !this.validateRoot(root, 'dom.isEmpty') ||
+            !this.validateDataName(dataName, 'dom.isEmpty')
         )
             return false;
         let value = root.getAttribute(`data-${dataName}`);
         return value === null || value.trim() === '';
     },
 
-    closest(root, dataName, value = null) {
+    closestDataAttr(root, dataName, value = null) {
         if (
-            !this.validateRoot(root, 'dataAttr.closest') ||
-            !this.validateDataName(dataName, 'dataAttr.closest') ||
-            !this.validateDataValue(value, 'dataAttr.closest')
+            !this.validateRoot(root, 'dom.closestDataAttr') ||
+            !this.validateDataName(dataName, 'dom.closestDataAttr') ||
+            !this.validateDataValue(value, 'dom.closestDataAttr')
         )
             return null;
         return root.closest(
@@ -200,11 +200,11 @@ export const dataAttr = {
         );
     },
 
-    matches(root, dataName, value = null) {
+    matchesDataAttr(root, dataName, value = null) {
         if (
-            !this.validateRoot(root, 'dataAttr.matches') ||
-            !this.validateDataName(dataName, 'dataAttr.matches') ||
-            !this.validateDataValue(value, 'dataAttr.matches')
+            !this.validateRoot(root, 'dom.matchesDataAttr') ||
+            !this.validateDataName(dataName, 'dom.matchesDataAttr') ||
+            !this.validateDataValue(value, 'dom.matchesDataAttr')
         )
             return false;
         return root.matches(
@@ -212,11 +212,11 @@ export const dataAttr = {
         );
     },
 
-    toggle(root, dataName, value = null) {
+    toggleDataAttr(root, dataName, value = null) {
         if (
-            !this.validateRoot(root, 'dataAttr.toggle') ||
-            !this.validateDataName(dataName, 'dataAttr.toggle') ||
-            !this.validateDataValue(value, 'dataAttr.toggle')
+            !this.validateRoot(root, 'dom.toggleDataAttr') ||
+            !this.validateDataName(dataName, 'dom.toggleDataAttr') ||
+            !this.validateDataValue(value, 'dom.toggleDataAttr')
         )
             return false;
         const currentValue = root.getAttribute(`data-${dataName}`);
@@ -228,12 +228,12 @@ export const dataAttr = {
         return true;
     },
 
-    toggleValue(root, dataName, value1 = null, value2 = null) {
+    toggleDataAttrValue(root, dataName, value1 = null, value2 = null) {
         if (
-            !this.validateRoot(root, 'dataAttr.toggleValue') ||
-            !this.validateDataName(dataName, 'dataAttr.toggleValue') ||
-            !this.validateDataValue(value1, 'dataAttr.toggleValue') ||
-            !this.validateDataValue(value2, 'dataAttr.toggleValue')
+            !this.validateRoot(root, 'dom.toggleDataAttrValue') ||
+            !this.validateDataName(dataName, 'dom.toggleDataAttrValue') ||
+            !this.validateDataValue(value1, 'dom.toggleDataAttrValue') ||
+            !this.validateDataValue(value2, 'dom.toggleDataAttrValue')
         )
             return false;
         const currentValue = root.getAttribute(`data-${dataName}`);
@@ -244,14 +244,12 @@ export const dataAttr = {
 
     observe(root, dataName, callback, config = {attributes: true}) {
         if (
-            !this.validateRoot(root, 'dataAttr.observe') ||
-            !this.validateDataName(dataName, 'dataAttr.observe')
+            !this.validateRoot(root, 'dom.observe') ||
+            !this.validateDataName(dataName, 'dom.observe')
         )
             return false;
         if (typeof callback !== 'function') {
-            console.error(
-                '[RAMS] dataAttr.observe: Callback must be a function.'
-            );
+            console.error('[RAMS] dom.observe: Callback must be a function.');
             return false;
         }
 
@@ -270,7 +268,7 @@ export const dataAttr = {
     disconnectObserver(observer) {
         if (!(observer instanceof MutationObserver)) {
             console.error(
-                '[RAMS] dataAttr.disconnectObserver: Provided observer is not a valid MutationObserver.'
+                '[RAMS] dom.disconnectObserver: Provided observer is not a valid MutationObserver.'
             );
             return false;
         }
@@ -286,19 +284,19 @@ export const dataAttr = {
         config = {attributes: true}
     ) {
         if (
-            !this.validateRoot(root, 'dataAttr.debouncedObserver') ||
-            !this.validateDataName(dataName, 'dataAttr.debouncedObserver')
+            !this.validateRoot(root, 'dom.debouncedObserver') ||
+            !this.validateDataName(dataName, 'dom.debouncedObserver')
         )
             return false;
         if (typeof callback !== 'function') {
             console.error(
-                '[RAMS] dataAttr.debouncedObserver: Callback must be a function.'
+                '[RAMS] dom.debouncedObserver: Callback must be a function.'
             );
             return false;
         }
         if (typeof delay !== 'number' || delay < 0) {
             console.error(
-                '[RAMS] dataAttr.debouncedObserver: Delay must be a non-negative number.'
+                '[RAMS] dom.debouncedObserver: Delay must be a non-negative number.'
             );
             return false;
         }

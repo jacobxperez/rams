@@ -1,4 +1,4 @@
-import {rams} from '../../RAMS.js';
+import {r} from '../../RAMS.js';
 
 export function toggle(...args) {
     const clickedSet = new Set();
@@ -11,9 +11,9 @@ export function toggle(...args) {
         clickedSet.forEach((item) => {
             if (
                 resetSet.has(item.dataset.toggle) &&
-                rams.dataAttr.has(item, 'state', 'active')
+                r.dom.hasDataAttr(item, 'state', 'active')
             ) {
-                rams.dataAttr.toggleValue(item, 'state', 'active', 'inactive');
+                r.dom.toggleDataAttrValue(item, 'state', 'active', 'inactive');
             }
         });
     }
@@ -23,22 +23,18 @@ export function toggle(...args) {
      * @param {Element} targetToggle - The element to toggle.
      */
     function toggleState(targetToggle) {
-        const dropBox = rams.dataAttr.closest(targetToggle, 'dropbox');
-        const checkState = rams.dataAttr.has(
-            targetToggle,
-            'state',
-            'active'
-        );
+        const dropBox = r.dom.closestDataAttr(targetToggle, 'dropbox');
+        const checkState = r.dom.hasDataAttr(targetToggle, 'state', 'active');
 
         if (!dropBox && !checkState) {
             reset();
         }
 
-        rams.dataAttr.toggleValue(targetToggle, 'state', 'active', 'inactive');
+        r.dom.toggleDataAttrValue(targetToggle, 'state', 'active', 'inactive');
     }
 
     document.addEventListener('click', (e) => {
-        const targetToggle = rams.dataAttr.closest(e.target, 'toggle');
+        const targetToggle = r.dom.closestDataAttr(e.target, 'toggle');
         if (!targetToggle) {
             reset();
             return;

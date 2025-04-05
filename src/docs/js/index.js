@@ -4,7 +4,7 @@
  * Licensed under the Apache License, Version 2.0
  * http://www.apache.org/licenses/LICENSE-2.0
 -----------------------------------------------------------------------------*/
-import {rams} from '../../js/rams/RAMS.js';
+import {r} from '../../js/rams/RAMS.js';
 import {sidebar} from './modules/sidebar.js';
 import {template} from '../../js/rams/core/components/template.js';
 
@@ -67,5 +67,5 @@ document.addEventListener('DOMContentLoaded', () => {
         })
         .finally(() => template.removeAll());
 
-    rams.toggle();
+    r.toggle();
 });

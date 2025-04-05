@@ -1,4 +1,4 @@
-import {rams} from '../../index.js';
+import {rams} from '../../RAMS.js';
 
 export const template = {
     _string(string, targetSelector) {

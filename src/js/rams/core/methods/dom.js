@@ -214,7 +214,7 @@ export function observe(root, dataName, callback, config = {attributes: true}) {
     )
         return false;
     if (typeof callback !== 'function') {
-        console.error('[RAMS] dom.observe: Callback must be a function.');
+        validate.logError('dom.observe', 'Callback must be a function.');
         return false;
     }
 

@@ -77,8 +77,9 @@ export function removeDataAttrValue(root, dataName, value) {
     let currentValue = root.getAttribute(`data-${dataName}`);
 
     if (!currentValue) {
-        console.warn(
-            `[RAMS] dom.removeDataAttrValue: Attribute "data-${dataName}" does not exist.`
+        validate.logWarn(
+            'dom.removeDataAttrValue',
+            `Attribute "data-${dataName}" does not exist.`
         );
         return false;
     }

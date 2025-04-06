@@ -8,6 +8,10 @@ export const validate = {
         console.error(`[RAMS] ${methodName}: ${message}`);
     },
 
+    logWarn(methodName, message) {
+        console.warn(`[RAMS] ${methodName}: ${message}`);
+    },
+
     /**
      * Validates if the provided root is a valid DOM element.
      * @param {Element|Document|DocumentFragment} root - The root element to validate.

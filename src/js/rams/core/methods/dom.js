@@ -232,8 +232,9 @@ export function observe(root, dataName, callback, config = {attributes: true}) {
 
 export function disconnectObserver(observer) {
     if (!(observer instanceof MutationObserver)) {
-        console.error(
-            '[RAMS] dom.disconnectObserver: Provided observer is not a valid MutationObserver.'
+        validate.logError(
+            'dom.disconnectObserver',
+            'Provided observer is not a valid MutationObserver.'
         );
         return false;
     }
@@ -254,14 +255,16 @@ export function debouncedObserver(
     )
         return false;
     if (typeof callback !== 'function') {
-        console.error(
-            '[RAMS] dom.debouncedObserver: Callback must be a function.'
+        validate.logError(
+            'dom.debouncedObserver',
+            'Callback must be a function.'
         );
         return false;
     }
     if (typeof delay !== 'number' || delay < 0) {
-        console.error(
-            '[RAMS] dom.debouncedObserver: Delay must be a non-negative number.'
+        validate.logError(
+            'dom.debouncedObserver',
+            'Delay must be a non-negative number.'
         );
         return false;
     }

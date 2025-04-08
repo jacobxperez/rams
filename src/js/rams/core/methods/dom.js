@@ -2,9 +2,9 @@ import {validate} from '../utilities/validator.js';
 
 export function getFirstWithDataAttr(root, dataName, value = null) {
     if (
-        !validate.domElement(root, 'getDataAttr') ||
-        !validate.dataAttrName(dataName, 'getDataAttr') ||
-        !validate.dataAttrValue(value, 'getDataAttr')
+        !validate.domElement(root, 'getFirstWithDataAttr') ||
+        !validate.dataAttrName(dataName, 'getFirstWithDataAttr') ||
+        !validate.dataAttrValue(value, 'getFirstWithDataAttr')
     )
         return null;
     return root.querySelector(
@@ -14,9 +14,9 @@ export function getFirstWithDataAttr(root, dataName, value = null) {
 
 export function getAllWithDataAttr(root, dataName, value = null) {
     if (
-        !validate.domElement(root, 'getAllDataAttr') ||
-        !validate.dataAttrName(dataName, 'getAllDataAttr') ||
-        !validate.dataAttrValue(value, 'getAllDataAttr')
+        !validate.domElement(root, 'getAllWithDataAttr') ||
+        !validate.dataAttrName(dataName, 'getAllWithDataAttr') ||
+        !validate.dataAttrValue(value, 'getAllWithDataAttr')
     )
         return [];
     return Array.from(

@@ -45,16 +45,22 @@ export function appendDataAttrValue(root, dataName, value) {
     )
         return false;
 
-    let currentValue = root.getAttribute(`data-${dataName}`);
-    let values = new Set(currentValue ? currentValue.trim().split(/\s+/) : []);
+    const currentValue = root.getAttribute(`data-${dataName}`);
+    const values = new Set(
+        currentValue ? currentValue.trim().split(/\s+/) : []
+    );
 
-    if (!values.has(value)) {
-        values.add(value);
-        root.setAttribute(`data-${dataName}`, Array.from(values).join(' '));
-        return true;
+    if (values.has(value)) {
+        validate.logWarn(
+            'appendDataAttrValue',
+            `Value "${value}" already exists in "data-${dataName}".`
+        );
+        return false;
     }
 
-    return false;
+    values.add(value);
+    root.setAttribute(`data-${dataName}`, Array.from(values).join(' '));
+    return true;
 }
 
 export function removeDataAttr(root, dataName) {
@@ -105,16 +111,27 @@ export function replaceDataAttrValue(root, dataName, oldValue, newValue) {
     )
         return false;
 
-    let currentValue = root.getAttribute(`data-${dataName}`);
-    if (!currentValue) return false;
+    const currentValue = root.getAttribute(`data-${dataName}`);
+    if (!currentValue) {
+        validate.logWarn(
+            'replaceDataAttrValue',
+            `Attribute "data-${dataName}" does not exist.`
+        );
+        return false;
+    }
 
-    let values = currentValue.trim().split(/\s+/);
-    let index = values.indexOf(oldValue);
+    const values = currentValue.trim().split(/\s+/);
+    const index = values.indexOf(oldValue);
 
-    if (index === -1) return false;
+    if (index === -1) {
+        validate.logWarn(
+            'replaceDataAttrValue',
+            `Value "${oldValue}" not found in "data-${dataName}".`
+        );
+        return false;
+    }
 
     values[index] = newValue;
-
     root.setAttribute(`data-${dataName}`, values.join(' '));
     return true;
 }
@@ -256,10 +273,7 @@ export function debouncedObserver(
     )
         return false;
     if (typeof callback !== 'function') {
-        validate.logError(
-            'debouncedObserver',
-            'Callback must be a function.'
-        );
+        validate.logError('debouncedObserver', 'Callback must be a function.');
         return false;
     }
     if (typeof delay !== 'number' || delay < 0) {
@@ -274,11 +288,11 @@ export function debouncedObserver(
     const observer = new MutationObserver((mutations) => {
         clearTimeout(timeout);
         timeout = setTimeout(() => {
-            for (const mutation of mutations) {
+            mutations.forEach((mutation) => {
                 if (mutation.attributeName === `data-${dataName}`) {
                     callback(root, root.getAttribute(`data-${dataName}`));
                 }
-            }
+            });
         }, delay);
     });
 

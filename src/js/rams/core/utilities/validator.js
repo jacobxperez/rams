@@ -42,7 +42,7 @@ export const validate = {
      * @param {string} methodName - The name of the method calling this validation.
      * @returns {boolean} - True if valid, false otherwise.
      */
-    dataName(dataName, methodName) {
+    dataAttrName(dataName, methodName) {
         if (typeof dataName !== 'string' || dataName.trim() === '') {
             this.logError(
                 methodName,

@@ -1,10 +1,10 @@
 import {validate} from '../utilities/validator.js';
 
-export function getDataAttr(root, dataName, value = null) {
+export function getFirstWithDataAttr(root, dataName, value = null) {
     if (
-        !validate.domElement(root, 'dom.getDataAttr') ||
-        !validate.dataName(dataName, 'dom.getDataAttr') ||
-        !validate.dataAttrValue(value, 'dom.getDataAttr')
+        !validate.domElement(root, 'getDataAttr') ||
+        !validate.dataAttrName(dataName, 'getDataAttr') ||
+        !validate.dataAttrValue(value, 'getDataAttr')
     )
         return null;
     return root.querySelector(
@@ -12,11 +12,11 @@ export function getDataAttr(root, dataName, value = null) {
     );
 }
 
-export function getAllDataAttr(root, dataName, value = null) {
+export function getAllWithDataAttr(root, dataName, value = null) {
     if (
-        !validate.domElement(root, 'dom.getAllDataAttr') ||
-        !validate.dataName(dataName, 'dom.getAllDataAttr') ||
-        !validate.dataAttrValue(value, 'dom.getAllDataAttr')
+        !validate.domElement(root, 'getAllDataAttr') ||
+        !validate.dataAttrName(dataName, 'getAllDataAttr') ||
+        !validate.dataAttrValue(value, 'getAllDataAttr')
     )
         return [];
     return Array.from(
@@ -28,9 +28,9 @@ export function getAllDataAttr(root, dataName, value = null) {
 
 export function setDataAttr(root, dataName, value = null) {
     if (
-        !validate.domElement(root, 'dom.setDataAttr') ||
-        !validate.dataName(dataName, 'dom.setDataAttr') ||
-        !validate.dataAttrValue(value, 'dom.setDataAttr')
+        !validate.domElement(root, 'setDataAttr') ||
+        !validate.dataAttrName(dataName, 'setDataAttr') ||
+        !validate.dataAttrValue(value, 'setDataAttr')
     )
         return false;
     root.setAttribute(`data-${dataName}`, value);
@@ -39,28 +39,34 @@ export function setDataAttr(root, dataName, value = null) {
 
 export function appendDataAttrValue(root, dataName, value) {
     if (
-        !validate.domElement(root, 'dom.appendDataAttrValue') ||
-        !validate.dataName(dataName, 'dom.appendDataAttrValue') ||
-        !validate.dataAttrValue(value, 'dom.appendDataAttrValue')
+        !validate.domElement(root, 'appendDataAttrValue') ||
+        !validate.dataAttrName(dataName, 'appendDataAttrValue') ||
+        !validate.dataAttrValue(value, 'appendDataAttrValue')
     )
         return false;
 
-    let currentValue = root.getAttribute(`data-${dataName}`);
-    let values = new Set(currentValue ? currentValue.trim().split(/\s+/) : []);
+    const currentValue = root.getAttribute(`data-${dataName}`);
+    const values = new Set(
+        currentValue ? currentValue.trim().split(/\s+/) : []
+    );
 
-    if (!values.has(value)) {
-        values.add(value);
-        root.setAttribute(`data-${dataName}`, Array.from(values).join(' '));
-        return true;
+    if (values.has(value)) {
+        validate.logWarn(
+            'appendDataAttrValue',
+            `Value "${value}" already exists in "data-${dataName}".`
+        );
+        return false;
     }
 
-    return false;
+    values.add(value);
+    root.setAttribute(`data-${dataName}`, Array.from(values).join(' '));
+    return true;
 }
 
 export function removeDataAttr(root, dataName) {
     if (
-        !validate.domElement(root, 'dom.removeDataAttr') ||
-        !validate.dataName(dataName, 'dom.removeDataAttr')
+        !validate.domElement(root, 'removeDataAttr') ||
+        !validate.dataAttrName(dataName, 'removeDataAttr')
     )
         return false;
     root.removeAttribute(`data-${dataName}`);
@@ -69,9 +75,9 @@ export function removeDataAttr(root, dataName) {
 
 export function removeDataAttrValue(root, dataName, value) {
     if (
-        !validate.domElement(root, 'dom.removeDataAttrValue') ||
-        !validate.dataName(dataName, 'dom.removeDataAttrValue') ||
-        !validate.dataAttrValue(value, 'dom.removeDataAttrValue')
+        !validate.domElement(root, 'removeDataAttrValue') ||
+        !validate.dataAttrName(dataName, 'removeDataAttrValue') ||
+        !validate.dataAttrValue(value, 'removeDataAttrValue')
     )
         return false;
     let currentValue = root.getAttribute(`data-${dataName}`);
@@ -98,32 +104,43 @@ export function removeDataAttrValue(root, dataName, value) {
 
 export function replaceDataAttrValue(root, dataName, oldValue, newValue) {
     if (
-        !validate.domElement(root, 'dom.replaceDataAttrValue') ||
-        !validate.dataName(dataName, 'dom.replaceDataAttrValue') ||
-        !validate.dataAttrValue(oldValue, 'dom.replaceDataAttrValue') ||
-        !validate.dataAttrValue(newValue, 'dom.replaceDataAttrValue')
+        !validate.domElement(root, 'replaceDataAttrValue') ||
+        !validate.dataAttrName(dataName, 'replaceDataAttrValue') ||
+        !validate.dataAttrValue(oldValue, 'replaceDataAttrValue') ||
+        !validate.dataAttrValue(newValue, 'replaceDataAttrValue')
     )
         return false;
 
-    let currentValue = root.getAttribute(`data-${dataName}`);
-    if (!currentValue) return false;
+    const currentValue = root.getAttribute(`data-${dataName}`);
+    if (!currentValue) {
+        validate.logWarn(
+            'replaceDataAttrValue',
+            `Attribute "data-${dataName}" does not exist.`
+        );
+        return false;
+    }
 
-    let values = currentValue.trim().split(/\s+/);
-    let index = values.indexOf(oldValue);
+    const values = currentValue.trim().split(/\s+/);
+    const index = values.indexOf(oldValue);
 
-    if (index === -1) return false;
+    if (index === -1) {
+        validate.logWarn(
+            'replaceDataAttrValue',
+            `Value "${oldValue}" not found in "data-${dataName}".`
+        );
+        return false;
+    }
 
     values[index] = newValue;
-
     root.setAttribute(`data-${dataName}`, values.join(' '));
     return true;
 }
 
 export function hasDataAttr(root, dataName, value = null) {
-    const methodName = 'dom.hasDataAttr';
+    const methodName = 'hasDataAttr';
     if (
         !validate.domElement(root, methodName) ||
-        !validate.dataName(dataName, methodName)
+        !validate.dataAttrName(dataName, methodName)
     )
         return false;
 
@@ -141,8 +158,8 @@ export function hasDataAttr(root, dataName, value = null) {
 
 export function isEmpty(root, dataName) {
     if (
-        !validate.domElement(root, 'dom.isEmpty') ||
-        !validate.dataName(dataName, 'dom.isEmpty')
+        !validate.domElement(root, 'isEmpty') ||
+        !validate.dataAttrName(dataName, 'isEmpty')
     )
         return false;
     let value = root.getAttribute(`data-${dataName}`);
@@ -151,9 +168,9 @@ export function isEmpty(root, dataName) {
 
 export function closestDataAttr(root, dataName, value = null) {
     if (
-        !validate.domElement(root, 'dom.closestDataAttr') ||
-        !validate.dataName(dataName, 'dom.closestDataAttr') ||
-        !validate.dataAttrValue(value, 'dom.closestDataAttr')
+        !validate.domElement(root, 'closestDataAttr') ||
+        !validate.dataAttrName(dataName, 'closestDataAttr') ||
+        !validate.dataAttrValue(value, 'closestDataAttr')
     )
         return null;
     return root.closest(
@@ -163,9 +180,9 @@ export function closestDataAttr(root, dataName, value = null) {
 
 export function matchesDataAttr(root, dataName, value = null) {
     if (
-        !validate.domElement(root, 'dom.matchesDataAttr') ||
-        !validate.dataName(dataName, 'dom.matchesDataAttr') ||
-        !validate.dataAttrValue(value, 'dom.matchesDataAttr')
+        !validate.domElement(root, 'matchesDataAttr') ||
+        !validate.dataAttrName(dataName, 'matchesDataAttr') ||
+        !validate.dataAttrValue(value, 'matchesDataAttr')
     )
         return false;
     return root.matches(
@@ -175,9 +192,9 @@ export function matchesDataAttr(root, dataName, value = null) {
 
 export function toggleDataAttr(root, dataName, value = null) {
     if (
-        !validate.domElement(root, 'dom.toggleDataAttr') ||
-        !validate.dataName(dataName, 'dom.toggleDataAttr') ||
-        !validate.dataAttrValue(value, 'dom.toggleDataAttr')
+        !validate.domElement(root, 'domtoggleDataAttr') ||
+        !validate.dataAttrName(dataName, 'domtoggleDataAttr') ||
+        !validate.dataAttrValue(value, 'domtoggleDataAttr')
     )
         return false;
     const currentValue = root.getAttribute(`data-${dataName}`);
@@ -196,10 +213,10 @@ export function toggleDataAttrValue(
     value2 = null
 ) {
     if (
-        !validate.domElement(root, 'dom.toggleDataAttrValue') ||
-        !validate.dataName(dataName, 'dom.toggleDataAttrValue') ||
-        !validate.dataAttrValue(value1, 'dom.toggleDataAttrValue') ||
-        !validate.dataAttrValue(value2, 'dom.toggleDataAttrValue')
+        !validate.domElement(root, 'toggleDataAttrValue') ||
+        !validate.dataAttrName(dataName, 'toggleDataAttrValue') ||
+        !validate.dataAttrValue(value1, 'toggleDataAttrValue') ||
+        !validate.dataAttrValue(value2, 'toggleDataAttrValue')
     )
         return false;
     const currentValue = root.getAttribute(`data-${dataName}`);
@@ -210,12 +227,12 @@ export function toggleDataAttrValue(
 
 export function observe(root, dataName, callback, config = {attributes: true}) {
     if (
-        !validate.domElement(root, 'dom.observe') ||
-        !validate.dataName(dataName, 'dom.observe')
+        !validate.domElement(root, 'observe') ||
+        !validate.dataAttrName(dataName, 'observe')
     )
         return false;
     if (typeof callback !== 'function') {
-        validate.logError('dom.observe', 'Callback must be a function.');
+        validate.logError('observe', 'Callback must be a function.');
         return false;
     }
 
@@ -234,7 +251,7 @@ export function observe(root, dataName, callback, config = {attributes: true}) {
 export function disconnectObserver(observer) {
     if (!(observer instanceof MutationObserver)) {
         validate.logError(
-            'dom.disconnectObserver',
+            'disconnectObserver',
             'Provided observer is not a valid MutationObserver.'
         );
         return false;
@@ -251,20 +268,17 @@ export function debouncedObserver(
     config = {attributes: true}
 ) {
     if (
-        !validate.domElement(root, 'dom.debouncedObserver') ||
-        !validate.dataName(dataName, 'dom.debouncedObserver')
+        !validate.domElement(root, 'debouncedObserver') ||
+        !validate.dataAttrName(dataName, 'debouncedObserver')
     )
         return false;
     if (typeof callback !== 'function') {
-        validate.logError(
-            'dom.debouncedObserver',
-            'Callback must be a function.'
-        );
+        validate.logError('debouncedObserver', 'Callback must be a function.');
         return false;
     }
     if (typeof delay !== 'number' || delay < 0) {
         validate.logError(
-            'dom.debouncedObserver',
+            'debouncedObserver',
             'Delay must be a non-negative number.'
         );
         return false;
@@ -274,11 +288,11 @@ export function debouncedObserver(
     const observer = new MutationObserver((mutations) => {
         clearTimeout(timeout);
         timeout = setTimeout(() => {
-            for (const mutation of mutations) {
+            mutations.forEach((mutation) => {
                 if (mutation.attributeName === `data-${dataName}`) {
                     callback(root, root.getAttribute(`data-${dataName}`));
                 }
-            }
+            });
         }, delay);
     });
 

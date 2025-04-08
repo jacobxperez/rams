@@ -1,5 +1,12 @@
 export const validate = {
     /**
+     * @namespace validate
+     * @description A utility module for validating inputs.
+     * @property {string} libraryName - The name of the library.
+     */
+    libraryName: 'RAMS',
+
+    /**
      * Logs a message with a consistent format and log level.
      * @param {string} methodName - The name of the method where the log occurred.
      * @param {string} message - The message to log.
@@ -7,7 +14,7 @@ export const validate = {
      */
     logMessage(methodName, message, level) {
         const logFunction = level === 'error' ? console.error : console.warn;
-        logFunction(`[RAMS] ${methodName}: ${message}`);
+        logFunction(`[${this.libraryName}] ${methodName}: ${message}`);
     },
 
     /**

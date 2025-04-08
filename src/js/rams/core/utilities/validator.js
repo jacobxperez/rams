@@ -1,15 +1,31 @@
 export const validate = {
     /**
-     * Logs an error message with a consistent format.
+     * Logs a message with a consistent format and log level.
+     * @param {string} methodName - The name of the method where the log occurred.
+     * @param {string} message - The message to log.
+     * @param {string} level - The log level ('error' or 'warn').
+     */
+    logMessage(methodName, message, level) {
+        const logFunction = level === 'error' ? console.error : console.warn;
+        logFunction(`[RAMS] ${methodName}: ${message}`);
+    },
+
+    /**
+     * Logs an error message.
      * @param {string} methodName - The name of the method where the error occurred.
      * @param {string} message - The error message to log.
      */
     logError(methodName, message) {
-        console.error(`[RAMS] ${methodName}: ${message}`);
+        this.logMessage(methodName, message, 'error');
     },
 
+    /**
+     * Logs a warning message.
+     * @param {string} methodName - The name of the method where the warning occurred.
+     * @param {string} message - The warning message to log.
+     */
     logWarn(methodName, message) {
-        console.warn(`[RAMS] ${methodName}: ${message}`);
+        this.logMessage(methodName, message, 'warn');
     },
 
     /**
@@ -29,7 +45,7 @@ export const validate = {
         ) {
             this.logError(
                 methodName,
-                `Invalid input: Expected a DOM Element, Document, or DocumentFragment, but received ${typeof root}.`
+                `Invalid input: Expected a DOM Element, Document, or DocumentFragment, but received ${typeof root} (${root}).`
             );
             return false;
         }
@@ -46,7 +62,7 @@ export const validate = {
         if (typeof dataName !== 'string' || dataName.trim() === '') {
             this.logError(
                 methodName,
-                `Invalid input: dataName must be a non-empty string, but received ${typeof dataName}.`
+                `Invalid input: dataName must be a non-empty string, but received ${typeof dataName} (${dataName}).`
             );
             return false;
         }
@@ -63,7 +79,7 @@ export const validate = {
         if (dataValue !== null && typeof dataValue !== 'string') {
             this.logError(
                 methodName,
-                `Invalid input: dataValue must be a string or null, but received ${typeof dataValue}.`
+                `Invalid input: dataValue must be a string or null, but received ${typeof dataValue} (${dataValue}).`
             );
             return false;
         }

@@ -1,6 +1,6 @@
 import {
-    getDataAttr,
-    getAllDataAttr,
+    getFirstWithDataAttr,
+    getAllWithDataAttr,
     setDataAttr,
     appendDataAttrValue,
     removeDataAttr,
@@ -20,13 +20,15 @@ import {
 import {callback} from './core/methods/callbacks.js';
 import {toggle} from './core/components/toggle.js';
 
-class RAMS {
+class RAMS extends Array {
     constructor() {
+        super();
+        // Components
         this.toggle = toggle;
         this.callback = callback;
         // DOM Methods
-        this.getDataAttr = getDataAttr;
-        this.getAllDataAttr = getAllDataAttr;
+        this.getFirstWithDataAttr = getFirstWithDataAttr;
+        this.getAllWithDataAttr = getAllWithDataAttr;
         this.setDataAttr = setDataAttr;
         this.appendDataAttrValue = appendDataAttrValue;
         this.removeDataAttr = removeDataAttr;

@@ -1,6 +1,6 @@
 import {validate} from '../utilities/validator.js';
 
-export function getDataAttr(root, dataName, value = null) {
+export function getFirstWithDataAttr(root, dataName, value = null) {
     if (
         !validate.domElement(root, 'getDataAttr') ||
         !validate.dataAttrName(dataName, 'getDataAttr') ||
@@ -12,7 +12,7 @@ export function getDataAttr(root, dataName, value = null) {
     );
 }
 
-export function getAllDataAttr(root, dataName, value = null) {
+export function getAllWithDataAttr(root, dataName, value = null) {
     if (
         !validate.domElement(root, 'getAllDataAttr') ||
         !validate.dataAttrName(dataName, 'getAllDataAttr') ||

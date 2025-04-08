@@ -20,6 +20,7 @@ export const validate = {
      */
     domElement(root, methodName) {
         if (
+            !root ||
             !(
                 root instanceof Element ||
                 root instanceof Document ||
@@ -28,7 +29,7 @@ export const validate = {
         ) {
             this.logError(
                 methodName,
-                'Provided element is not a valid DOM Element.'
+                `Invalid input: Expected a DOM Element, Document, or DocumentFragment, but received ${typeof root}.`
             );
             return false;
         }
@@ -43,7 +44,10 @@ export const validate = {
      */
     dataName(dataName, methodName) {
         if (typeof dataName !== 'string' || dataName.trim() === '') {
-            this.logError(methodName, 'dataName must be a non-empty string.');
+            this.logError(
+                methodName,
+                `Invalid input: dataName must be a non-empty string, but received ${typeof dataName}.`
+            );
             return false;
         }
         return true;
@@ -59,7 +63,7 @@ export const validate = {
         if (dataValue !== null && typeof dataValue !== 'string') {
             this.logError(
                 methodName,
-                'dataValue must be a string if provided.'
+                `Invalid input: dataValue must be a string or null, but received ${typeof dataValue}.`
             );
             return false;
         }

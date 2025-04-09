@@ -24,7 +24,7 @@ export const validate = {
      * @param {string} message - The error message to log.
      */
     logError(methodName, message) {
-        return this.logMessage(methodName, message, 'error');
+        this.logMessage(methodName, message, 'error');
     },
 
     /**

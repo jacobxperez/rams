@@ -61,33 +61,16 @@ export const validate = {
     },
 
     /**
-     * Validates if the provided dataName is a non-empty string.
-     * @param {string} dataName - The data attribute name to validate.
+     * Validates if the provided string is a non-empty string.
+     * @param {string} string - The string to validate.
      * @param {string} methodName - The name of the method calling this validation.
      * @returns {boolean} - True if valid, false otherwise.
      */
-    dataAttrName(dataName, methodName) {
-        if (typeof dataName !== 'string' || dataName.trim() === '') {
+    isString(string, methodName) {
+        if (typeof string !== 'string' || string.trim() === '') {
             this.logError(
                 methodName,
-                `Invalid input: dataName must be a non-empty string, but received ${typeof dataName} (${dataName}).`
-            );
-            return false;
-        }
-        return true;
-    },
-
-    /**
-     * Validates if the provided dataValue is a string or null.
-     * @param {string|null} dataValue - The data attribute value to validate.
-     * @param {string} methodName - The name of the method calling this validation.
-     * @returns {boolean} - True if valid, false otherwise.
-     */
-    dataAttrValue(dataValue, methodName) {
-        if (dataValue !== null && typeof dataValue !== 'string') {
-            this.logError(
-                methodName,
-                `Invalid input: dataValue must be a string or null, but received ${typeof dataValue} (${dataValue}).`
+                `Invalid input: must be a non-empty string, but received ${typeof string} (${string}).`
             );
             return false;
         }

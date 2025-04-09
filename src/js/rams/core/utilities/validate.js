@@ -14,7 +14,8 @@ export const validate = {
      */
     logMessage(methodName, message, level) {
         const logFunction = level === 'error' ? console.error : console.warn;
-        logFunction(`[${this.libraryName}] ${methodName}: ${message}`);
+        const sanitizedMessage = message.replace(/\((.*?)\)/g, '(sanitized)');
+        logFunction(`[${this.libraryName}] ${methodName}: ${sanitizedMessage}`);
     },
 
     /**
@@ -23,7 +24,7 @@ export const validate = {
      * @param {string} message - The error message to log.
      */
     logError(methodName, message) {
-        this.logMessage(methodName, message, 'error');
+        return this.logMessage(methodName, message, 'error');
     },
 
     /**

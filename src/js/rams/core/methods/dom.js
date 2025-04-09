@@ -5,8 +5,8 @@ export function getFirstWithDataAttr(root, dataName, value = null) {
 
     if (
         !validate.domElement(root, methodName) ||
-        !validate.dataAttrName(dataName, methodName) ||
-        !validate.dataAttrValue(value, methodName)
+        !validate.isString(dataName, methodName) ||
+        !(validate.isString(value, methodName) || value === null)
     )
         return null;
     return root.querySelector(
@@ -19,8 +19,8 @@ export function getAllWithDataAttr(root, dataName, value = null) {
 
     if (
         !validate.domElement(root, methodName) ||
-        !validate.dataAttrName(dataName, methodName) ||
-        !validate.dataAttrValue(value, methodName)
+        !validate.isString(dataName, methodName) ||
+        !(validate.isString(value, methodName) || value === null)
     )
         return [];
     return Array.from(
@@ -35,8 +35,8 @@ export function setDataAttr(root, dataName, value = null) {
 
     if (
         !validate.domElement(root, methodName) ||
-        !validate.dataAttrName(dataName, methodName) ||
-        !validate.dataAttrValue(value, methodName)
+        !validate.isString(dataName, methodName) ||
+        !(validate.isString(value, methodName) || value === null)
     )
         return false;
     root.setAttribute(`data-${dataName}`, value);
@@ -48,8 +48,8 @@ export function appendDataAttrValue(root, dataName, value) {
 
     if (
         !validate.domElement(root, methodName) ||
-        !validate.dataAttrName(dataName, methodName) ||
-        !validate.dataAttrValue(value, methodName)
+        !validate.isString(dataName, methodName) ||
+        !validate.isString(value, methodName)
     )
         return false;
 
@@ -76,7 +76,7 @@ export function removeDataAttr(root, dataName) {
 
     if (
         !validate.domElement(root, methodName) ||
-        !validate.dataAttrName(dataName, methodName)
+        !validate.isString(dataName, methodName)
     )
         return false;
     root.removeAttribute(`data-${dataName}`);
@@ -87,8 +87,8 @@ export function removeDataAttrValue(root, dataName, value) {
     const methodName = 'removeDataAttrValue';
     if (
         !validate.domElement(root, methodName) ||
-        !validate.dataAttrName(dataName, methodName) ||
-        !validate.dataAttrValue(value, methodName)
+        !validate.isString(dataName, methodName) ||
+        !validate.isString(value, methodName)
     )
         return false;
     let currentValue = root.getAttribute(`data-${dataName}`);
@@ -118,9 +118,9 @@ export function replaceDataAttrValue(root, dataName, oldValue, newValue) {
 
     if (
         !validate.domElement(root, methodName) ||
-        !validate.dataAttrName(dataName, methodName) ||
-        !validate.dataAttrValue(oldValue, methodName) ||
-        !validate.dataAttrValue(newValue, methodName)
+        !validate.isString(dataName, methodName) ||
+        !validate.isString(oldValue, methodName) ||
+        !validate.isString(newValue, methodName)
     )
         return false;
 
@@ -154,7 +154,7 @@ export function hasDataAttr(root, dataName, value = null) {
 
     if (
         !validate.domElement(root, methodName) ||
-        !validate.dataAttrName(dataName, methodName)
+        !validate.isString(dataName, methodName)
     )
         return false;
 
@@ -162,7 +162,7 @@ export function hasDataAttr(root, dataName, value = null) {
 
     if (value === null) return true;
 
-    if (!validate.dataAttrValue(value, methodName)) return false;
+    if (!(validate.isString(value, methodName) || value === null)) return false;
 
     const currentValue = root.getAttribute(`data-${dataName}`);
     return currentValue
@@ -175,7 +175,7 @@ export function isEmpty(root, dataName) {
 
     if (
         !validate.domElement(root, methodName) ||
-        !validate.dataAttrName(dataName, methodName)
+        !validate.isString(dataName, methodName)
     )
         return false;
     let value = root.getAttribute(`data-${dataName}`);
@@ -187,8 +187,8 @@ export function closestDataAttr(root, dataName, value = null) {
 
     if (
         !validate.domElement(root, methodName) ||
-        !validate.dataAttrName(dataName, methodName) ||
-        !validate.dataAttrValue(value, methodName)
+        !validate.isString(dataName, methodName) ||
+        !(validate.isString(value, methodName) || value === null)
     )
         return null;
     return root.closest(
@@ -201,8 +201,8 @@ export function matchesDataAttr(root, dataName, value = null) {
 
     if (
         !validate.domElement(root, methodName) ||
-        !validate.dataAttrName(dataName, methodName) ||
-        !validate.dataAttrValue(value, methodName)
+        !validate.isString(dataName, methodName) ||
+        !(validate.isString(value, methodName) || value === null)
     )
         return false;
     return root.matches(
@@ -215,8 +215,8 @@ export function toggleDataAttr(root, dataName, value = null) {
 
     if (
         !validate.domElement(root, methodName) ||
-        !validate.dataAttrName(dataName, methodName) ||
-        !validate.dataAttrValue(value, methodName)
+        !validate.isString(dataName, methodName) ||
+        !(validate.isString(value, methodName) || value === null)
     )
         return false;
     const currentValue = root.getAttribute(`data-${dataName}`);
@@ -228,19 +228,14 @@ export function toggleDataAttr(root, dataName, value = null) {
     return true;
 }
 
-export function toggleDataAttrValue(
-    root,
-    dataName,
-    value1 = null,
-    value2 = null
-) {
+export function toggleDataAttrValue(root, dataName, value1, value2) {
     const methodName = 'toggleDataAttrValue';
 
     if (
         !validate.domElement(root, methodName) ||
-        !validate.dataAttrName(dataName, methodName) ||
-        !validate.dataAttrValue(value1, methodName) ||
-        !validate.dataAttrValue(value2, methodName)
+        !validate.isString(dataName, methodName) ||
+        !validate.isString(value1, methodName) ||
+        !validate.isString(value2, methodName)
     )
         return false;
     const currentValue = root.getAttribute(`data-${dataName}`);
@@ -254,7 +249,7 @@ export function observe(root, dataName, callback, config = {attributes: true}) {
 
     if (
         !validate.domElement(root, methodName) ||
-        !validate.dataAttrName(dataName, methodName)
+        !validate.isString(dataName, methodName)
     )
         return false;
     if (typeof callback !== 'function') {
@@ -299,7 +294,7 @@ export function debouncedObserver(
 
     if (
         !validate.domElement(root, methodName) ||
-        !validate.dataAttrName(dataName, methodName)
+        !validate.isString(dataName, methodName)
     )
         return false;
     if (typeof callback !== 'function') {

@@ -1,5 +1,9 @@
 import {validate} from '../utilities/validate.js';
 
+function optionalDataAttrValue(dataName, value) {
+    return value ? `[data-${dataName}="${value}"]` : `[data-${dataName}]`;
+}
+
 export function getFirstWithDataAttr(root, dataName, value = null) {
     const methodName = 'getFirstWithDataAttr';
 
@@ -9,9 +13,7 @@ export function getFirstWithDataAttr(root, dataName, value = null) {
         !(validate.isString(value, methodName) || value === null)
     )
         return null;
-    return root.querySelector(
-        value ? `[data-${dataName}="${value}"]` : `[data-${dataName}]`
-    );
+    return root.querySelector(optionalDataAttrValue(dataName, value));
 }
 
 export function getAllWithDataAttr(root, dataName, value = null) {
@@ -24,9 +26,7 @@ export function getAllWithDataAttr(root, dataName, value = null) {
     )
         return [];
     return Array.from(
-        root.querySelectorAll(
-            value ? `[data-${dataName}="${value}"]` : `[data-${dataName}]`
-        )
+        root.querySelectorAll(optionalDataAttrValue(dataName, value))
     );
 }
 
@@ -191,9 +191,7 @@ export function closestDataAttr(root, dataName, value = null) {
         !(validate.isString(value, methodName) || value === null)
     )
         return null;
-    return root.closest(
-        value ? `[data-${dataName}="${value}"]` : `[data-${dataName}]`
-    );
+    return root.closest(optionalDataAttrValue(dataName, value));
 }
 
 export function matchesDataAttr(root, dataName, value = null) {
@@ -205,9 +203,7 @@ export function matchesDataAttr(root, dataName, value = null) {
         !(validate.isString(value, methodName) || value === null)
     )
         return false;
-    return root.matches(
-        value ? `[data-${dataName}="${value}"]` : `[data-${dataName}]`
-    );
+    return root.matches(optionalDataAttrValue(dataName, value));
 }
 
 export function toggleDataAttr(root, dataName, value = null) {

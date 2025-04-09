@@ -1,31 +1,39 @@
-function each(callback) {
-    if (!Array.isArray(this)) {
-        throw new TypeError('each can only be called on an array');
+import {validate} from '../utilities/validator.js';
+
+function each(array, callback) {
+    if (!Array.isArray(array)) {
+        throw new TypeError(
+            `each can only be called on an array, but received ${typeof array}`
+        );
     }
-    if (callback && typeof callback == 'function') {
-        for (let i = 0; i < this.length; i++) {
-            callback(this[i], i);
+    if (validate.isFunction(callback, 'each')) {
+        for (let i = 0; i < array.length; i++) {
+            callback(array[i], i);
         }
     }
 }
 
-function eachOf(callback) {
-    if (!(this && typeof this[Symbol.iterator] === 'function')) {
-        throw new TypeError('eachOf can only be called on an iterable');
+function eachOf(iterable, callback) {
+    if (!(iterable && typeof iterable[Symbol.iterator] === 'function')) {
+        throw new TypeError(
+            `eachOf can only be called on an iterable, but received ${typeof iterable}`
+        );
     }
-    if (callback && typeof callback == 'function') {
-        for (const item of this) {
+    if (validate.isFunction(callback, 'eachOf')) {
+        for (const item of iterable) {
             callback(item);
         }
     }
 }
 
-function eachIn(callback) {
-    if (typeof this !== 'object' || this === null) {
-        throw new TypeError('eachIn can only be called on an object');
+function eachIn(object, callback) {
+    if (typeof object !== 'object' || object === null) {
+        throw new TypeError(
+            `eachIn can only be called on an object, but received ${typeof object}`
+        );
     }
-    if (callback && typeof callback == 'function') {
-        for (const property in this) {
+    if (validate.isFunction(callback, 'eachIn')) {
+        for (const property in object) {
             callback(property);
         }
     }

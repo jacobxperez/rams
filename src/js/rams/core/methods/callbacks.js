@@ -1,10 +1,7 @@
-import {validate} from '../utilities/validator';
+import {validate} from '../utilities/validate.js';
 
 export function callback(callback) {
-    if (typeof callback !== 'function') {
-        validate.logError('callback', 'Callback must be a function.');
-        return false;
+    if (validate.isFunction(callback, 'callback')) {
+        callback();
     }
-
-    callback();
 }

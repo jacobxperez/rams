@@ -12,17 +12,17 @@ import {
     matchesDataAttr,
     toggleDataAttr,
     toggleDataAttrValue,
-    // observe,
-    // disconnectObserver,
-    // debouncedObserver,
-} from './core/methods/dom.js';
-
-import {callback} from './core/methods/callbacks.js';
+} from './core/functions/data.js';
+// import {
+//     observe,
+//     disconnectObserver,
+//     debouncedObserver,
+// } from './core/functions/observers.js';
+import {callback} from './core/functions/callbacks.js';
 import {toggle} from './core/components/toggle.js';
 
-class RAMS extends Array {
+class RAMS {
     constructor() {
-        super();
         // Components
         this.toggle = toggle;
         this.callback = callback;
@@ -40,6 +40,7 @@ class RAMS extends Array {
         this.matchesDataAttr = matchesDataAttr;
         this.toggleDataAttr = toggleDataAttr;
         this.toggleDataAttrValue = toggleDataAttrValue;
+        // Observers
         // this.observe = observe;
         // this.disconnectObserver = disconnectObserver;
         // this.debouncedObserver = debouncedObserver;

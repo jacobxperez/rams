@@ -12,28 +12,10 @@ export const validate = {
      * @param {string} message - The message to log.
      * @param {string} level - The log level ('error' or 'warn').
      */
-    logMessage(methodName, message, level) {
-        const logFunction = level === 'error' ? console.error : console.warn;
-        const sanitizedMessage = message.replace(/\((.*?)\)/g, '(sanitized)');
-        logFunction(`[${this.libraryName}] ${methodName}: ${sanitizedMessage}`);
-    },
-
-    /**
-     * Logs an error message.
-     * @param {string} methodName - The name of the method where the error occurred.
-     * @param {string} message - The error message to log.
-     */
-    logError(methodName, message) {
-        this.logMessage(methodName, message, 'error');
-    },
-
-    /**
-     * Logs a warning message.
-     * @param {string} methodName - The name of the method where the warning occurred.
-     * @param {string} message - The warning message to log.
-     */
-    logWarn(methodName, message) {
-        this.logMessage(methodName, message, 'warn');
+    logMessage(methodName, message) {
+        console.error(
+            `[${this.libraryName}] Invalid input: ${methodName} ${message}`
+        );
     },
 
     /**
@@ -51,9 +33,9 @@ export const validate = {
                 root instanceof DocumentFragment
             )
         ) {
-            this.logError(
+            this.logMessage(
                 methodName,
-                `Invalid input: Expected a DOM Element, Document, or DocumentFragment, but received ${typeof root} (${root}).`
+                `Expected a DOM Element, Document, or DocumentFragment, but received ${typeof root} (${root}).`
             );
             return false;
         }
@@ -68,10 +50,11 @@ export const validate = {
      */
     isString(string, methodName) {
         if (typeof string !== 'string' || string.trim() === '') {
-            this.logError(
+            this.logMessage(
                 methodName,
-                `Invalid input: must be a non-empty string, but received ${typeof string} (${string}).`
+                `Must be a non-empty string, but received ${typeof string} (${string}).`
             );
+
             return false;
         }
         return true;
@@ -85,9 +68,9 @@ export const validate = {
      */
     isFunction(callback, methodName) {
         if (typeof callback !== 'function') {
-            this.logError(
+            this.logMessage(
                 methodName,
-                `Invalid input: callback must be a function, but received ${typeof callback} (${callback}).`
+                `Must be a function, but received ${typeof callback} (${callback}).`
             );
             return false;
         }

@@ -59,7 +59,7 @@ export function appendDataAttrValue(root, dataName, value) {
     );
 
     if (values.has(value)) {
-        validate.logWarn(
+        console.warn(
             methodName,
             `Value "${value}" already exists in "data-${dataName}".`
         );
@@ -94,7 +94,7 @@ export function removeDataAttrValue(root, dataName, value) {
     let currentValue = root.getAttribute(`data-${dataName}`);
 
     if (!currentValue) {
-        validate.logWarn(
+        console.warn(
             methodName,
             `Attribute "data-${dataName}" does not exist.`
         );
@@ -126,7 +126,7 @@ export function replaceDataAttrValue(root, dataName, oldValue, newValue) {
 
     const currentValue = root.getAttribute(`data-${dataName}`);
     if (!currentValue) {
-        validate.logWarn(
+        console.warn(
             methodName,
             `Attribute "data-${dataName}" does not exist.`
         );
@@ -137,7 +137,7 @@ export function replaceDataAttrValue(root, dataName, oldValue, newValue) {
     const index = values.indexOf(oldValue);
 
     if (index === -1) {
-        validate.logWarn(
+        console.warn(
             methodName,
             `Value "${oldValue}" not found in "data-${dataName}".`
         );
@@ -170,7 +170,7 @@ export function hasDataAttr(root, dataName, value = null) {
         : false;
 }
 
-export function isEmpty(root, dataName) {
+export function dataAttrIsEmpty(root, dataName) {
     const methodName = 'isEmpty';
 
     if (
@@ -244,80 +244,80 @@ export function toggleDataAttrValue(root, dataName, value1, value2) {
     return newValue;
 }
 
-export function observe(root, dataName, callback, config = {attributes: true}) {
-    const methodName = 'observe';
+// export function observe(root, dataName, callback, config = {attributes: true}) {
+//     const methodName = 'observe';
 
-    if (
-        !validate.domElement(root, methodName) ||
-        !validate.isString(dataName, methodName)
-    )
-        return false;
-    if (typeof callback !== 'function') {
-        validate.logError(methodName, 'Callback must be a function.');
-        return false;
-    }
+//     if (
+//         !validate.domElement(root, methodName) ||
+//         !validate.isString(dataName, methodName)
+//     )
+//         return false;
+//     if (typeof callback !== 'function') {
+//         console.error(methodName, 'Callback must be a function.');
+//         return false;
+//     }
 
-    const observer = new MutationObserver((mutations) => {
-        for (const mutation of mutations) {
-            if (mutation.attributeName === `data-${dataName}`) {
-                callback(root, root.getAttribute(`data-${dataName}`));
-            }
-        }
-    });
+//     const observer = new MutationObserver((mutations) => {
+//         for (const mutation of mutations) {
+//             if (mutation.attributeName === `data-${dataName}`) {
+//                 callback(root, root.getAttribute(`data-${dataName}`));
+//             }
+//         }
+//     });
 
-    observer.observe(root, config);
-    return observer;
-}
+//     observer.observe(root, config);
+//     return observer;
+// }
 
-export function disconnectObserver(observer) {
-    const methodName = 'disconnectObserver';
+// export function disconnectObserver(observer) {
+//     const methodName = 'disconnectObserver';
 
-    if (!(observer instanceof MutationObserver)) {
-        validate.logError(
-            methodName,
-            'Provided observer is not a valid MutationObserver.'
-        );
-        return false;
-    }
-    observer.disconnect();
-    return true;
-}
+//     if (!(observer instanceof MutationObserver)) {
+//         console.error(
+//             methodName,
+//             'Provided observer is not a valid MutationObserver.'
+//         );
+//         return false;
+//     }
+//     observer.disconnect();
+//     return true;
+// }
 
-export function debouncedObserver(
-    root,
-    dataName,
-    callback,
-    delay = 300,
-    config = {attributes: true}
-) {
-    const methodName = 'debouncedObserver';
+// export function debouncedObserver(
+//     root,
+//     dataName,
+//     callback,
+//     delay = 300,
+//     config = {attributes: true}
+// ) {
+//     const methodName = 'debouncedObserver';
 
-    if (
-        !validate.domElement(root, methodName) ||
-        !validate.isString(dataName, methodName)
-    )
-        return false;
-    if (typeof callback !== 'function') {
-        validate.logError(methodName, 'Callback must be a function.');
-        return false;
-    }
-    if (typeof delay !== 'number' || delay < 0) {
-        validate.logError(methodName, 'Delay must be a non-negative number.');
-        return false;
-    }
+//     if (
+//         !validate.domElement(root, methodName) ||
+//         !validate.isString(dataName, methodName)
+//     )
+//         return false;
+//     if (typeof callback !== 'function') {
+//         console.error(methodName, 'Callback must be a function.');
+//         return false;
+//     }
+//     if (typeof delay !== 'number' || delay < 0) {
+//         console.error(methodName, 'Delay must be a non-negative number.');
+//         return false;
+//     }
 
-    let timeout;
-    const observer = new MutationObserver((mutations) => {
-        clearTimeout(timeout);
-        timeout = setTimeout(() => {
-            mutations.forEach((mutation) => {
-                if (mutation.attributeName === `data-${dataName}`) {
-                    callback(root, root.getAttribute(`data-${dataName}`));
-                }
-            });
-        }, delay);
-    });
+//     let timeout;
+//     const observer = new MutationObserver((mutations) => {
+//         clearTimeout(timeout);
+//         timeout = setTimeout(() => {
+//             mutations.forEach((mutation) => {
+//                 if (mutation.attributeName === `data-${dataName}`) {
+//                     callback(root, root.getAttribute(`data-${dataName}`));
+//                 }
+//             });
+//         }, delay);
+//     });
 
-    observer.observe(root, config);
-    return observer;
-}
+//     observer.observe(root, config);
+//     return observer;
+// }

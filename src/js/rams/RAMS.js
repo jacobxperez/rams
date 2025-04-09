@@ -7,14 +7,14 @@ import {
     removeDataAttrValue,
     replaceDataAttrValue,
     hasDataAttr,
-    isEmpty,
+    dataAttrIsEmpty,
     closestDataAttr,
     matchesDataAttr,
     toggleDataAttr,
     toggleDataAttrValue,
-    observe,
-    disconnectObserver,
-    debouncedObserver,
+    // observe,
+    // disconnectObserver,
+    // debouncedObserver,
 } from './core/methods/dom.js';
 
 import {callback} from './core/methods/callbacks.js';
@@ -35,14 +35,14 @@ class RAMS extends Array {
         this.removeDataAttrValue = removeDataAttrValue;
         this.replaceDataAttrValue = replaceDataAttrValue;
         this.hasDataAttr = hasDataAttr;
-        this.isEmpty = isEmpty;
+        this.dataAttrIsEmpty = dataAttrIsEmpty;
         this.closestDataAttr = closestDataAttr;
         this.matchesDataAttr = matchesDataAttr;
         this.toggleDataAttr = toggleDataAttr;
         this.toggleDataAttrValue = toggleDataAttrValue;
-        this.observe = observe;
-        this.disconnectObserver = disconnectObserver;
-        this.debouncedObserver = debouncedObserver;
+        // this.observe = observe;
+        // this.disconnectObserver = disconnectObserver;
+        // this.debouncedObserver = debouncedObserver;
     }
 }
 

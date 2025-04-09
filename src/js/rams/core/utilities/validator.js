@@ -92,4 +92,21 @@ export const validate = {
         }
         return true;
     },
+
+    /**
+     * Validates if the provided callback is a function.
+     * @param {Function} callback - The callback to validate.
+     * @param {string} methodName - The name of the method calling this validation.
+     * @returns {boolean} - True if valid, false otherwise.
+     */
+    isFunction(callback, methodName) {
+        if (typeof callback !== 'function') {
+            this.logError(
+                methodName,
+                `Invalid input: callback must be a function, but received ${typeof callback} (${callback}).`
+            );
+            return false;
+        }
+        return true;
+    },
 };

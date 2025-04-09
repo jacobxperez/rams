@@ -1,4 +1,4 @@
-import {validate} from '../utilities/validator.js';
+import {validate} from '../utilities/validate.js';
 
 export function getFirstWithDataAttr(root, dataName, value = null) {
     const methodName = 'getFirstWithDataAttr';

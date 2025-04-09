@@ -1,4 +1,4 @@
-import {validate} from '../utilities/validator.js';
+import {validate} from '../utilities/validate.js';
 
 function each(array, callback) {
     if (!Array.isArray(array)) {

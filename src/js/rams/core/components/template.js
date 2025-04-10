@@ -83,7 +83,9 @@ export const template = {
             });
             this._string(string, targetSelector);
             targetSelector;
-            return r.callback?.(callback);
+            if (callback !== null) {
+                return r.callback(callback, 'template.string');
+            }
         } catch (err) {
             return console.error(err);
         }
@@ -98,7 +100,9 @@ export const template = {
             });
             this._append(document, templateSelector, targetSelector);
             targetSelector;
-            return r.callback?.(callback);
+            if (callback !== null) {
+                return r.callback(callback, 'template.string');
+            }
         } catch (err) {
             return console.error(err);
         }

@@ -32,7 +32,7 @@ export function getAllWithDataAttr(root, dataName, value = null) {
     return [];
 }
 
-export function setDataAttr(root, dataName, value = null) {
+export function setDataAttr(root, dataName, value = '') {
     const methodName = 'setDataAttr';
 
     if (

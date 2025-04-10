@@ -1,4 +1,4 @@
-import {validate} from '../utilities/validate.js';
+import {validate} from './validate.js';
 
 /**
  * Executes a callback function if it is valid.

@@ -10,11 +10,10 @@ export const validate = {
      * Logs a message with a consistent format and log level.
      * @param {string} methodName - The name of the method where the log occurred.
      * @param {string} message - The message to log.
-     * @param {string} level - The log level ('error' or 'warn').
      */
     logMessage(methodName, message) {
-        console.error(
-            `[${this.libraryName}] Invalid input: ${methodName} ${message}`
+        console.warn(
+            `[${this.libraryName}] Invalid input: ${methodName}() ${message}`
         );
     },
 

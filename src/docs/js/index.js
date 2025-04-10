@@ -8,19 +8,38 @@ import {r} from '../../js/rams/RAMS.js';
 import {sidebar} from './modules/sidebar.js';
 import {template} from '../../js/rams/core/components/template.js';
 
+/**
+ * Initializes the RAMS application.
+ *
+ * This script sets up the document structure, dynamically loads templates,
+ * and configures the sidebar navigation. It also handles toggling functionality.
+ */
 document.addEventListener('DOMContentLoaded', () => {
+    /**
+     * Sets the meta title for the page.
+     * If no title is provided, defaults to "RAMS".
+     */
     if (meta.title === '') {
         meta.title = `<h1>RAMS</h1>`;
     } else {
         meta.title = `<h1>${meta.title}</h1>`;
     }
 
+    /**
+     * HTML structure for the header section.
+     * @type {string}
+     */
     let header = `
         <div id="header" data-container>
             ${meta.title}
         </div>
         `;
 
+    /**
+     * HTML structure for the main content section.
+     * Adjusts layout based on the meta.type value.
+     * @type {string}
+     */
     let main = `
         <div data-container data-grid="main">
             <aside id="aside" data-column="large-3 medium-3 small-4"></aside>
@@ -34,8 +53,10 @@ document.addEventListener('DOMContentLoaded', () => {
         `;
     }
 
-    // check and set template url for localhost or for public url
-    // if you cannot see the nav/footer then the url is wrong
+    /**
+     * Determines the template URL based on the hostname.
+     * @type {string}
+     */
     let templateURL;
     location.hostname === 'localhost' || location.hostname === '127.0.0.1'
         ? (templateURL =
@@ -43,7 +64,9 @@ document.addEventListener('DOMContentLoaded', () => {
         : (templateURL =
               window.location.origin + '/rams/templates/index.19081ad0.html');
 
-    // parse everything together
+    /**
+     * Parses and appends the document structure, then loads templates.
+     */
     template
         .string(
             `
@@ -67,5 +90,8 @@ document.addEventListener('DOMContentLoaded', () => {
         })
         .finally(() => template.removeAll());
 
+    /**
+     * Initializes toggle functionality for interactive elements.
+     */
     r.toggle();
 });

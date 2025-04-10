@@ -1,9 +1,24 @@
 import {validate} from '../utilities/validate.js';
 
+/**
+ * Generates a CSS selector for a data attribute with an optional value.
+ *
+ * @param {string} dataName - The name of the data attribute.
+ * @param {string|null} value - The value of the data attribute (optional).
+ * @returns {string} The CSS selector string.
+ */
 function optionalDataAttrValue(dataName, value) {
     return value ? `[data-${dataName}="${value}"]` : `[data-${dataName}]`;
 }
 
+/**
+ * Retrieves the first element with a specific data attribute and optional value.
+ *
+ * @param {HTMLElement} root - The root element to search within.
+ * @param {string} dataName - The name of the data attribute.
+ * @param {string|null} [value=null] - The value of the data attribute (optional).
+ * @returns {HTMLElement|null} The first matching element, or null if not found.
+ */
 export function getFirstWithDataAttr(root, dataName, value = null) {
     const methodName = 'getFirstWithDataAttr';
 
@@ -17,6 +32,14 @@ export function getFirstWithDataAttr(root, dataName, value = null) {
     return null;
 }
 
+/**
+ * Retrieves all elements with a specific data attribute and optional value.
+ *
+ * @param {HTMLElement} root - The root element to search within.
+ * @param {string} dataName - The name of the data attribute.
+ * @param {string|null} [value=null] - The value of the data attribute (optional).
+ * @returns {HTMLElement[]} An array of matching elements.
+ */
 export function getAllWithDataAttr(root, dataName, value = null) {
     const methodName = 'getAllWithDataAttr';
 
@@ -32,6 +55,14 @@ export function getAllWithDataAttr(root, dataName, value = null) {
     return [];
 }
 
+/**
+ * Sets a data attribute on an element.
+ *
+ * @param {HTMLElement} root - The element to modify.
+ * @param {string} dataName - The name of the data attribute.
+ * @param {string} [value=''] - The value to set for the data attribute.
+ * @returns {boolean} True if the attribute was set successfully, false otherwise.
+ */
 export function setDataAttr(root, dataName, value = '') {
     const methodName = 'setDataAttr';
 
@@ -46,6 +77,14 @@ export function setDataAttr(root, dataName, value = '') {
     return false;
 }
 
+/**
+ * Appends a value to a data attribute on an element.
+ *
+ * @param {HTMLElement} root - The element to modify.
+ * @param {string} dataName - The name of the data attribute.
+ * @param {string} value - The value to append to the data attribute.
+ * @returns {boolean} True if the value was appended successfully, false otherwise.
+ */
 export function appendDataAttrValue(root, dataName, value) {
     const methodName = 'appendDataAttrValue';
 
@@ -74,6 +113,13 @@ export function appendDataAttrValue(root, dataName, value) {
     return false;
 }
 
+/**
+ * Removes a data attribute from an element.
+ *
+ * @param {HTMLElement} root - The element to modify.
+ * @param {string} dataName - The name of the data attribute.
+ * @returns {boolean} True if the attribute was removed successfully, false otherwise.
+ */
 export function removeDataAttr(root, dataName) {
     const methodName = 'removeDataAttr';
 
@@ -87,6 +133,14 @@ export function removeDataAttr(root, dataName) {
     return false;
 }
 
+/**
+ * Removes a specific value from a data attribute on an element.
+ *
+ * @param {HTMLElement} root - The element to modify.
+ * @param {string} dataName - The name of the data attribute.
+ * @param {string} value - The value to remove from the data attribute.
+ * @returns {boolean} True if the value was removed successfully, false otherwise.
+ */
 export function removeDataAttrValue(root, dataName, value) {
     const methodName = 'removeDataAttrValue';
     if (
@@ -118,6 +172,15 @@ export function removeDataAttrValue(root, dataName, value) {
     return false;
 }
 
+/**
+ * Replaces a specific value in a data attribute on an element.
+ *
+ * @param {HTMLElement} root - The element to modify.
+ * @param {string} dataName - The name of the data attribute.
+ * @param {string} oldValue - The value to be replaced.
+ * @param {string} newValue - The new value to set.
+ * @returns {boolean} True if the value was replaced successfully, false otherwise.
+ */
 export function replaceDataAttrValue(root, dataName, oldValue, newValue) {
     const methodName = 'replaceDataAttrValue';
 
@@ -154,6 +217,14 @@ export function replaceDataAttrValue(root, dataName, oldValue, newValue) {
     return false;
 }
 
+/**
+ * Checks if an element has a specific data attribute and optional value.
+ *
+ * @param {HTMLElement} root - The element to check.
+ * @param {string} dataName - The name of the data attribute.
+ * @param {string|null} [value=null] - The value of the data attribute (optional).
+ * @returns {boolean} True if the element has the data attribute and value, false otherwise.
+ */
 export function hasDataAttr(root, dataName, value = null) {
     const methodName = 'hasDataAttr';
 
@@ -176,6 +247,13 @@ export function hasDataAttr(root, dataName, value = null) {
     return false;
 }
 
+/**
+ * Checks if a data attribute on an element is empty.
+ *
+ * @param {HTMLElement} root - The element to check.
+ * @param {string} dataName - The name of the data attribute.
+ * @returns {boolean} True if the data attribute is empty, false otherwise.
+ */
 export function dataAttrIsEmpty(root, dataName) {
     const methodName = 'isEmpty';
 
@@ -189,6 +267,14 @@ export function dataAttrIsEmpty(root, dataName) {
     return false;
 }
 
+/**
+ * Finds the closest ancestor element with a specific data attribute and optional value.
+ *
+ * @param {HTMLElement} root - The element to start the search from.
+ * @param {string} dataName - The name of the data attribute.
+ * @param {string|null} [value=null] - The value of the data attribute (optional).
+ * @returns {HTMLElement|null} The closest matching ancestor element, or null if not found.
+ */
 export function closestDataAttr(root, dataName, value = null) {
     const methodName = 'closestDataAttr';
 
@@ -202,6 +288,14 @@ export function closestDataAttr(root, dataName, value = null) {
     return null;
 }
 
+/**
+ * Checks if an element matches a specific data attribute and optional value.
+ *
+ * @param {HTMLElement} root - The element to check.
+ * @param {string} dataName - The name of the data attribute.
+ * @param {string|null} [value=null] - The value of the data attribute (optional).
+ * @returns {boolean} True if the element matches the data attribute and value, false otherwise.
+ */
 export function matchesDataAttr(root, dataName, value = null) {
     const methodName = 'matchesDataAttr';
 
@@ -215,6 +309,14 @@ export function matchesDataAttr(root, dataName, value = null) {
     return false;
 }
 
+/**
+ * Toggles a data attribute on an element.
+ *
+ * @param {HTMLElement} root - The element to modify.
+ * @param {string} dataName - The name of the data attribute.
+ * @param {string|null} [value=null] - The value of the data attribute (optional).
+ * @returns {boolean} True if the attribute was added, false if it was removed.
+ */
 export function toggleDataAttr(root, dataName, value = null) {
     const methodName = 'toggleDataAttr';
 
@@ -234,6 +336,15 @@ export function toggleDataAttr(root, dataName, value = null) {
     return false;
 }
 
+/**
+ * Toggles between two values for a data attribute on an element.
+ *
+ * @param {HTMLElement} root - The element to modify.
+ * @param {string} dataName - The name of the data attribute.
+ * @param {string} value1 - The first value to toggle.
+ * @param {string} value2 - The second value to toggle.
+ * @returns {string|boolean} The new value of the data attribute, or false if the operation failed.
+ */
 export function toggleDataAttrValue(root, dataName, value1, value2) {
     const methodName = 'toggleDataAttrValue';
 

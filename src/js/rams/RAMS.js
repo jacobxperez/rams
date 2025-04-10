@@ -18,7 +18,7 @@ import {
 //     disconnectObserver,
 //     debouncedObserver,
 // } from './core/functions/observers.js';
-import {callback} from './core/functions/callbacks.js';
+import {callback} from './core/utilities/callbacks.js';
 import {toggle} from './core/components/toggle.js';
 
 class RAMS {

@@ -23,7 +23,7 @@ export const validate = {
      * @param {string} methodName - The name of the method calling this validation.
      * @returns {boolean} - True if valid, false otherwise.
      */
-    domElement(root, methodName) {
+    isDomElement(root, methodName) {
         if (
             !root ||
             !(
@@ -70,6 +70,23 @@ export const validate = {
             this.logMessage(
                 methodName,
                 `Must be a function, but received ${typeof callback} (${callback}).`
+            );
+            return false;
+        }
+        return true;
+    },
+
+    /**
+     * Validates if the provided input is an array.
+     * @param {Array} array - The array to validate.
+     * @param {string} methodName - The name of the method calling this validation.
+     * @returns {boolean} - True if valid, false otherwise.
+     */
+    isArray(array, methodName) {
+        if (!Array.isArray(array)) {
+            this.logMessage(
+                methodName,
+                `Must be an array, but received ${typeof array} (${array}).`
             );
             return false;
         }

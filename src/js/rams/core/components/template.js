@@ -1,6 +1,12 @@
 import {r} from '../../RAMS.js';
 
 export const template = {
+    /**
+     * Inserts a string of HTML into a target element.
+     *
+     * @param {string} string - The HTML string to insert.
+     * @param {string} targetSelector - The CSS selector of the target element.
+     */
     _string(string, targetSelector) {
         const stringTrim = string.trim();
         const targetElement = document.querySelector(targetSelector);
@@ -13,6 +19,13 @@ export const template = {
         targetElement.insertAdjacentHTML('beforeend', stringTrim);
     },
 
+    /**
+     * Appends a template from a source element to a target element.
+     *
+     * @param {Document|HTMLElement} sourceElement - The source element containing the template.
+     * @param {string} templateSelector - The CSS selector of the template to append.
+     * @param {string} targetSelector - The CSS selector of the target element.
+     */
     _append(sourceElement, templateSelector, targetSelector) {
         if (!sourceElement || !templateSelector || !targetSelector) {
             console.error(`Error: Invalid arguments in _append().`);
@@ -37,6 +50,13 @@ export const template = {
         targetElement.appendChild(clonedTemplate);
     },
 
+    /**
+     * Parses a string into a DOM Document.
+     *
+     * @param {string} string - The string to parse.
+     * @param {string} [mimeType='text/html'] - The MIME type to use for parsing.
+     * @returns {Document|null} The parsed document, or null if parsing failed.
+     */
     parser(string, mimeType = 'text/html') {
         try {
             const parser = new DOMParser();
@@ -50,6 +70,14 @@ export const template = {
         }
     },
 
+    /**
+     * Creates a template element and appends it to a parent element.
+     *
+     * @param {string} html - The HTML string to use as the template content.
+     * @param {string} id - The ID to assign to the template element.
+     * @param {string} [parentSelector='body'] - The CSS selector of the parent element.
+     * @returns {HTMLTemplateElement|null} The created template element, or null if creation failed.
+     */
     create(html, id, parentSelector = 'body') {
         if (typeof html !== 'string' || !id) {
             console.error('Error: Invalid HTML string or missing ID.');
@@ -72,6 +100,14 @@ export const template = {
         return template;
     },
 
+    /**
+     * Asynchronously inserts a string of HTML into a target element.
+     *
+     * @param {string} string - The HTML string to insert.
+     * @param {string} targetSelector - The CSS selector of the target element.
+     * @param {Function|null} [callback=null] - Optional callback function to execute after insertion.
+     * @returns {Promise<void>} A promise that resolves when the operation is complete.
+     */
     async string(string, targetSelector, callback = null) {
         try {
             await new Promise((resolve, reject) => {
@@ -91,6 +127,14 @@ export const template = {
         }
     },
 
+    /**
+     * Asynchronously appends a template from the document to a target element.
+     *
+     * @param {string} templateSelector - The CSS selector of the template to append.
+     * @param {string} targetSelector - The CSS selector of the target element.
+     * @param {Function|null} [callback=null] - Optional callback function to execute after appending.
+     * @returns {Promise<void>} A promise that resolves when the operation is complete.
+     */
     async append(templateSelector, targetSelector, callback = null) {
         try {
             await new Promise((resolve, reject) => {
@@ -108,6 +152,13 @@ export const template = {
         }
     },
 
+    /**
+     * Fetches an HTML document from a URL and optionally appends templates to the document body.
+     *
+     * @param {string} url - The URL to fetch the HTML document from.
+     * @param {string|null} [templateSelector=null] - Optional CSS selector of a specific template to append.
+     * @returns {Promise<void>} A promise that resolves when the operation is complete.
+     */
     async fetch(url, templateSelector = null) {
         try {
             const response = await fetch(url);
@@ -138,6 +189,9 @@ export const template = {
         }
     },
 
+    /**
+     * Removes all <template> elements from the document.
+     */
     removeAll() {
         document
             .querySelectorAll('template')

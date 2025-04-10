@@ -40,7 +40,7 @@ class RAMS {
         this.matchesDataAttr = matchesDataAttr;
         this.toggleDataAttr = toggleDataAttr;
         this.toggleDataAttrValue = toggleDataAttrValue;
-        // Observers
+        // Observers Methods
         // this.observe = observe;
         // this.disconnectObserver = disconnectObserver;
         // this.debouncedObserver = debouncedObserver;

@@ -183,8 +183,8 @@ export function dataAttrIsEmpty(root, dataName) {
         validate.domElement(root, methodName) ||
         validate.isString(dataName, methodName)
     ) {
-        let value = root.getAttribute(`data-${dataName}`);
-        return value === null || value.trim() === '';
+        let dataAttr = root.getAttribute(`data-${dataName}`);
+        return dataAttr === null || dataAttr.trim() === '';
     }
     return false;
 }

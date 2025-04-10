@@ -101,7 +101,7 @@ export const template = {
             this._append(document, templateSelector, targetSelector);
             targetSelector;
             if (callback !== null) {
-                return r.callback(callback, 'template.string');
+                return r.callback(callback, 'template.append');
             }
         } catch (err) {
             return console.error(err);

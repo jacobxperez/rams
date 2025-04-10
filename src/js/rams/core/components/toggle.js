@@ -1,5 +1,14 @@
 import {r} from '../../RAMS.js';
 
+/**
+ * Toggles the state of elements based on user interaction.
+ *
+ * This function manages the active/inactive state of elements with a `data-toggle` attribute.
+ * It ensures that only one element remains active at a time unless specified otherwise.
+ *
+ * @param {...string} args - Additional toggle types to include in the reset set.
+ * @returns {Object} The current context for chaining.
+ */
 export function toggle(...args) {
     const clickedSet = new Set();
     const resetSet = new Set(['pop', 'tooltip', ...args]);
@@ -20,6 +29,7 @@ export function toggle(...args) {
 
     /**
      * Toggles the state of the target element and resets others if necessary.
+     *
      * @param {Element} targetToggle - The element to toggle.
      */
     function toggleState(targetToggle) {
@@ -33,6 +43,9 @@ export function toggle(...args) {
         r.toggleDataAttrValue(targetToggle, 'state', 'active', 'inactive');
     }
 
+    /**
+     * Handles click events to manage toggle behavior.
+     */
     document.addEventListener('click', (e) => {
         const targetToggle = r.closestDataAttr(e.target, 'toggle');
         if (!targetToggle) {

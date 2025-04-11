@@ -27,7 +27,7 @@ function eachOf(iterable, callback) {
 }
 
 function eachIn(object, callback) {
-    if (typeof object !== 'object' || object === null) {
+    if (!validate.object(object)) {
         throw new TypeError(
             `eachIn can only be called on an object, but received ${typeof object}`
         );

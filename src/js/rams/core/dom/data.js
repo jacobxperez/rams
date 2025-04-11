@@ -126,15 +126,14 @@ export function removeDataAttr(root, dataName) {
         validate.isString(dataName, methodName)
     ) {
         if (!root.hasAttribute(`data-${dataName}`)) {
-            throw new Error(
-                `${methodName}: Attribute "data-${dataName}" does not exist.`
-            );
+            // Return false instead of throwing an error if the attribute does not exist.
+            return false;
         }
 
         root.removeAttribute(`data-${dataName}`);
         return true;
     }
-    throw new Error(`${methodName}: Invalid arguments provided.`);
+    return false; // Return false for invalid arguments instead of throwing an error.
 }
 
 /**

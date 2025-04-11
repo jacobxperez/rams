@@ -1,4 +1,4 @@
-import {r} from '../../RAMS.js';
+import {validate} from '../utilities/validate.js';
 
 export const template = {
     /**
@@ -119,8 +119,8 @@ export const template = {
             });
             this._string(string, targetSelector);
             targetSelector;
-            if (callback !== null) {
-                return r.callback(callback, 'template.string');
+            if (validate.function(callback, 'template.string')) {
+                callback();
             }
         } catch (err) {
             return console.error(err);
@@ -144,8 +144,8 @@ export const template = {
             });
             this._append(document, templateSelector, targetSelector);
             targetSelector;
-            if (callback !== null) {
-                return r.callback(callback, 'template.append');
+            if (validate.function(callback, 'template.append')) {
+                callback();
             }
         } catch (err) {
             return console.error(err);

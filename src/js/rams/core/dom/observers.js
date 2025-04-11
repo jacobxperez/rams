@@ -39,7 +39,7 @@ function createObserverCallback(dataName, callback, delay = null) {
 /**
  * Observes changes to a specified data attribute on a DOM element.
  *
- * @param {HTMLElement} root - The root element to observe.
+ * @param {Element|Document|DocumentFragment} root - The root element to observe.
  * @param {string} dataName - The data attribute name to observe.
  * @param {Function} callback - The callback function to execute when the attribute changes.
  * @param {Object} [config={attributes: true}] - The configuration object for the MutationObserver.
@@ -48,10 +48,7 @@ function createObserverCallback(dataName, callback, delay = null) {
 export function observe(root, dataName, callback, config = {attributes: true}) {
     const methodName = 'observe';
 
-    if (
-        !validate.isDomElement(root, methodName) ||
-        !validate.isString(dataName, methodName)
-    ) {
+    if (!validate.domElement(root) || !validate.string(dataName)) {
         console.error(methodName, 'Invalid root element or dataName.');
         return false;
     }
@@ -91,7 +88,7 @@ export function disconnectObserver(observer) {
 /**
  * Observes changes to a specified data attribute on a DOM element with debouncing.
  *
- * @param {HTMLElement} root - The root element to observe.
+ * @param {Element|Document|DocumentFragment} root - The root element to observe.
  * @param {string} dataName - The data attribute name to observe.
  * @param {Function} callback - The callback function to execute when the attribute changes.
  * @param {number} [delay=300] - The delay in milliseconds for debouncing the callback.
@@ -107,10 +104,7 @@ export function debouncedObserver(
 ) {
     const methodName = 'debouncedObserver';
 
-    if (
-        !validate.isDomElement(root, methodName) ||
-        !validate.isString(dataName, methodName)
-    ) {
+    if (!validate.domElement(root) || !validate.string(dataName)) {
         console.error(methodName, 'Invalid root element or dataName.');
         return false;
     }

@@ -20,12 +20,10 @@ function optionalDataAttrValue(dataName, value) {
  * @returns {HTMLElement|null} The first matching element, or null if no match is found.
  */
 export function getFirstWithDataAttr(root, dataName, value = null) {
-    const methodName = 'getFirstWithDataAttr';
-
     if (
-        validate.isDomElement(root, methodName) &&
-        validate.isString(dataName, methodName) &&
-        (validate.isString(value, methodName) || value === null)
+        validate.domElement(root) &&
+        validate.string(dataName) &&
+        (validate.string(value) || value === null)
     ) {
         return root.querySelector(optionalDataAttrValue(dataName, value));
     }
@@ -41,12 +39,10 @@ export function getFirstWithDataAttr(root, dataName, value = null) {
  * @returns {HTMLElement[]} An array of matching elements.
  */
 export function getAllWithDataAttr(root, dataName, value = null) {
-    const methodName = 'getAllWithDataAttr';
-
     if (
-        validate.isDomElement(root, methodName) &&
-        validate.isString(dataName, methodName) &&
-        (validate.isString(value, methodName) || value === null)
+        validate.domElement(root) &&
+        validate.string(dataName) &&
+        (validate.string(value) || value === null)
     ) {
         return Array.from(
             root.querySelectorAll(optionalDataAttrValue(dataName, value))
@@ -64,12 +60,10 @@ export function getAllWithDataAttr(root, dataName, value = null) {
  * @returns {boolean} True if the attribute was set successfully, false otherwise.
  */
 export function setDataAttr(root, dataName, value = '') {
-    const methodName = 'setDataAttr';
-
     if (
-        validate.isDomElement(root, methodName) &&
-        validate.isString(dataName, methodName) &&
-        (validate.isString(value, methodName) || value === null)
+        validate.domElement(root) &&
+        validate.string(dataName) &&
+        (validate.string(value) || value === null)
     ) {
         root.setAttribute(`data-${dataName}`, value);
         return true;
@@ -86,12 +80,10 @@ export function setDataAttr(root, dataName, value = '') {
  * @returns {boolean} True if the value was appended successfully, false otherwise.
  */
 export function appendDataAttrValue(root, dataName, value) {
-    const methodName = 'appendDataAttrValue';
-
     if (
-        validate.isDomElement(root, methodName) &&
-        validate.isString(dataName, methodName) &&
-        validate.isString(value, methodName)
+        validate.domElement(root) &&
+        validate.string(dataName) &&
+        validate.string(value)
     ) {
         const currentValue = root.getAttribute(`data-${dataName}`);
         const values = currentValue
@@ -119,12 +111,7 @@ export function appendDataAttrValue(root, dataName, value) {
  * @returns {boolean} True if the attribute was removed successfully, false otherwise.
  */
 export function removeDataAttr(root, dataName) {
-    const methodName = 'removeDataAttr';
-
-    if (
-        validate.isDomElement(root, methodName) &&
-        validate.isString(dataName, methodName)
-    ) {
+    if (validate.domElement(root) && validate.string(dataName)) {
         if (!root.hasAttribute(`data-${dataName}`)) {
             // Return false instead of throwing an error if the attribute does not exist.
             return false;
@@ -145,11 +132,10 @@ export function removeDataAttr(root, dataName) {
  * @returns {boolean} True if the value was removed successfully, false otherwise.
  */
 export function removeDataAttrValue(root, dataName, value) {
-    const methodName = 'removeDataAttrValue';
     if (
-        validate.isDomElement(root, methodName) &&
-        validate.isString(dataName, methodName) &&
-        validate.isString(value, methodName)
+        validate.domElement(root) &&
+        validate.string(dataName) &&
+        validate.string(value)
     ) {
         let currentValue = root.getAttribute(`data-${dataName}`);
 
@@ -183,13 +169,11 @@ export function removeDataAttrValue(root, dataName, value) {
  * @returns {boolean} True if the value was replaced successfully, false otherwise.
  */
 export function replaceDataAttrValue(root, dataName, oldValue, newValue) {
-    const methodName = 'replaceDataAttrValue';
-
     if (
-        validate.isDomElement(root, methodName) &&
-        validate.isString(dataName, methodName) &&
-        validate.isString(oldValue, methodName) &&
-        validate.isString(newValue, methodName)
+        validate.domElement(root) &&
+        validate.string(dataName) &&
+        validate.string(oldValue) &&
+        validate.string(newValue)
     ) {
         const currentValue = root.getAttribute(`data-${dataName}`);
         if (!currentValue) {
@@ -223,18 +207,12 @@ export function replaceDataAttrValue(root, dataName, oldValue, newValue) {
  * @returns {boolean} True if the element has the data attribute and value, false otherwise.
  */
 export function hasDataAttr(root, dataName, value = null) {
-    const methodName = 'hasDataAttr';
-
-    if (
-        validate.isDomElement(root, methodName) &&
-        validate.isString(dataName, methodName)
-    ) {
+    if (validate.domElement(root) && validate.string(dataName)) {
         if (!root.hasAttribute(`data-${dataName}`)) return false;
 
         if (value === null) return true;
 
-        if (!(validate.isString(value, methodName) || value === null))
-            return false;
+        if (!(validate.string(value) || value === null)) return false;
 
         const currentValue = root.getAttribute(`data-${dataName}`);
         return currentValue
@@ -252,12 +230,7 @@ export function hasDataAttr(root, dataName, value = null) {
  * @returns {boolean} True if the data attribute is empty, false otherwise.
  */
 export function dataAttrIsEmpty(root, dataName) {
-    const methodName = 'dataAttrIsEmpty';
-
-    if (
-        validate.isDomElement(root, methodName) &&
-        validate.isString(dataName, methodName)
-    ) {
+    if (validate.domElement(root) && validate.string(dataName)) {
         let dataAttr = root.getAttribute(`data-${dataName}`);
         return dataAttr === null || dataAttr.trim() === '';
     }
@@ -273,12 +246,10 @@ export function dataAttrIsEmpty(root, dataName) {
  * @returns {HTMLElement|null} The closest matching ancestor element, or null if not found.
  */
 export function closestDataAttr(root, dataName, value = null) {
-    const methodName = 'closestDataAttr';
-
     if (
-        validate.isDomElement(root, methodName) &&
-        validate.isString(dataName, methodName) &&
-        (validate.isString(value, methodName) || value === null)
+        validate.domElement(root) &&
+        validate.string(dataName) &&
+        (validate.string(value) || value === null)
     ) {
         return root.closest(optionalDataAttrValue(dataName, value));
     }
@@ -294,12 +265,10 @@ export function closestDataAttr(root, dataName, value = null) {
  * @returns {boolean} True if the element matches the data attribute and value, false otherwise.
  */
 export function matchesDataAttr(root, dataName, value = null) {
-    const methodName = 'matchesDataAttr';
-
     if (
-        validate.isDomElement(root, methodName) &&
-        validate.isString(dataName, methodName) &&
-        (validate.isString(value, methodName) || value === null)
+        validate.domElement(root) &&
+        validate.string(dataName) &&
+        (validate.string(value) || value === null)
     ) {
         return root.matches(optionalDataAttrValue(dataName, value));
     }
@@ -315,12 +284,10 @@ export function matchesDataAttr(root, dataName, value = null) {
  * @returns {boolean} True if the attribute was added, false if it was removed.
  */
 export function toggleDataAttr(root, dataName, value = null) {
-    const methodName = 'toggleDataAttr';
-
     if (
-        validate.isDomElement(root, methodName) &&
-        validate.isString(dataName, methodName) &&
-        (validate.isString(value, methodName) || value === null)
+        validate.domElement(root) &&
+        validate.string(dataName) &&
+        (validate.string(value) || value === null)
     ) {
         const currentValue = root.getAttribute(`data-${dataName}`);
         if (currentValue === value || (value === '' && currentValue !== null)) {
@@ -343,13 +310,11 @@ export function toggleDataAttr(root, dataName, value = null) {
  * @returns {string|boolean} The new value of the data attribute, or false if the operation failed.
  */
 export function toggleDataAttrValue(root, dataName, value1, value2) {
-    const methodName = 'toggleDataAttrValue';
-
     if (
-        validate.isDomElement(root, methodName) &&
-        validate.isString(dataName, methodName) &&
-        validate.isString(value1, methodName) &&
-        validate.isString(value2, methodName)
+        validate.domElement(root) &&
+        validate.string(dataName) &&
+        validate.string(value1) &&
+        validate.string(value2)
     ) {
         const currentValue = root.getAttribute(`data-${dataName}`);
         const newValue = currentValue === value1 ? value2 : value1;

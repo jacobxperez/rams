@@ -63,7 +63,7 @@ export function setDataAttr(root, dataName, value = '') {
     if (
         validate.domElement(root) &&
         validate.string(dataName) &&
-        (validate.string(value) || value === null)
+        (validate.string(value) || value === '')
     ) {
         root.setAttribute(`data-${dataName}`, value);
         return true;

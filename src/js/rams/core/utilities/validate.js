@@ -12,7 +12,7 @@ export const validate = {
      * @param {string} message - The message to log.
      */
     logMessage(methodName, message) {
-        console.warn(
+        console.error(
             `[${this.libraryName}] Invalid input: ${methodName}() ${message}`
         );
     },

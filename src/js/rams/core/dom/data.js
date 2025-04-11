@@ -85,6 +85,7 @@ export function setDataAttr(root, dataName, value = '') {
  * @returns {boolean} True if the value was appended successfully, false otherwise.
  */
 export function appendDataAttrValue(root, dataName, value) {
+    const methodName = 'appendDataAttrValue';
     if (v.isDomElement(root) && v.isString(dataName) && v.isString(value)) {
         const currentValue = root.getAttribute(`data-${dataName}`);
         const values = currentValue
@@ -133,6 +134,8 @@ export function removeDataAttr(root, dataName) {
  * @returns {boolean} True if the value was removed successfully, false otherwise.
  */
 export function removeDataAttrValue(root, dataName, value) {
+    const methodName = 'removeDataAttrValue';
+
     if (v.isDomElement(root) && v.isString(dataName) && v.isString(value)) {
         let currentValue = root.getAttribute(`data-${dataName}`);
 
@@ -166,6 +169,8 @@ export function removeDataAttrValue(root, dataName, value) {
  * @returns {boolean} True if the value was replaced successfully, false otherwise.
  */
 export function replaceDataAttrValue(root, dataName, oldValue, newValue) {
+    const methodName = 'replaceDataAttrValue';
+
     if (
         v.isDomElement(root) &&
         v.isString(dataName) &&

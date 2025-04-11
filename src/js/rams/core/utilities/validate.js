@@ -65,4 +65,13 @@ export const validate = {
         }
         return true;
     },
+
+    /**
+     * Validates if the provided input is an iterable.
+     * @param {*} input - The input to validate.
+     * @returns {boolean} - True if valid, false otherwise.
+     */
+    iterable(input) {
+        return input != null && typeof input[Symbol.iterator] === 'function';
+    },
 };

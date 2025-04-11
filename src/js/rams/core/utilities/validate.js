@@ -4,11 +4,8 @@ export const validate = {
      * @param {Function} callback - The callback to validate.
      * @returns {boolean} - True if valid, false otherwise.
      */
-    function(callback) {
-        if (typeof callback !== 'function') {
-            return false;
-        }
-        return true;
+    isFunction(callback) {
+        return typeof callback === 'function';
     },
 
     /**
@@ -16,11 +13,8 @@ export const validate = {
      * @param {Object} obj - The object to validate.
      * @returns {boolean} - True if valid, false otherwise.
      */
-    object(obj) {
-        if (typeof obj !== 'object' || obj === null || Array.isArray(obj)) {
-            return false;
-        }
-        return true;
+    isObject(obj) {
+        return typeof obj === 'object' && obj !== null && !Array.isArray(obj);
     },
 
     /**
@@ -28,11 +22,8 @@ export const validate = {
      * @param {Array} array - The array to validate.
      * @returns {boolean} - True if valid, false otherwise.
      */
-    array(array) {
-        if (!Array.isArray(array)) {
-            return false;
-        }
-        return true;
+    isArray(array) {
+        return Array.isArray(array);
     },
 
     /**
@@ -40,18 +31,13 @@ export const validate = {
      * @param {Element|Document|DocumentFragment} root - The root element to validate.
      * @returns {boolean} - True if valid, false otherwise.
      */
-    domElement(root) {
-        if (
-            !root ||
-            !(
-                root instanceof Element ||
+    isDomElement(root) {
+        return (
+            root &&
+            (root instanceof Element ||
                 root instanceof Document ||
-                root instanceof DocumentFragment
-            )
-        ) {
-            return false;
-        }
-        return true;
+                root instanceof DocumentFragment)
+        );
     },
 
     /**
@@ -59,11 +45,8 @@ export const validate = {
      * @param {string} string - The string to validate.
      * @returns {boolean} - True if valid, false otherwise.
      */
-    string(string) {
-        if (typeof string !== 'string' || string.trim() === '') {
-            return false;
-        }
-        return true;
+    isString(string) {
+        return typeof string === 'string' && string.trim() !== '';
     },
 
     /**
@@ -71,41 +54,39 @@ export const validate = {
      * @param {*} input - The input to validate.
      * @returns {boolean} - True if valid, false otherwise.
      */
-    iterable(input) {
-        if (input != null && typeof input[Symbol.iterator] === 'function') {
-            return true;
-        }
-        return false;
+    isIterable(input) {
+        return input != null && typeof input[Symbol.iterator] === 'function';
     },
 
-    number(value, {allowNaN = false} = {}) {
-        if (typeof value === 'number' && (allowNaN || !isNaN(value))) {
-            return true;
-        }
-        return false;
+    isNumber(value, {allowNaN = false} = {}) {
+        return typeof value === 'number' && (allowNaN || !isNaN(value));
     },
 
-    boolean: (val) => typeof val === 'boolean',
+    isBoolean: (val) => typeof val === 'boolean',
 
-    date(val) {
-        if (val instanceof Date && !isNaN(val.getTime())) {
-            return true;
-        }
-        return false;
+    isDate(val) {
+        return val instanceof Date && !isNaN(val.getTime());
     },
 
-    nullable: (validator) => (value) => value == null || validator(value),
+    isNullable: (validator) => (value) => value == null || validator(value),
 
-    optional: (validator) => (value) => value === undefined || validator(value),
+    isOptional: (validator) => (value) =>
+        value === undefined || validator(value),
 
-    oneOf:
+    isOneOf:
         (...options) =>
         (value) =>
             options.includes(value),
 
-    instanceOf: (constructor) => (value) => value instanceof constructor,
+    isInstanceOf: (constructor) => (value) => value instanceof constructor,
 
-    multi: (validators, value, callback) => {
+    validateMulti: (validators, value, callback) => {
+        if (
+            !Array.isArray(validators) ||
+            !validators.every((fn) => typeof fn === 'function')
+        ) {
+            throw new Error('All validators must be functions.');
+        }
         const allValid = validators.every((fn) => fn(value));
         if (allValid && typeof callback === 'function') {
             callback(value);
@@ -114,7 +95,13 @@ export const validate = {
         return false;
     },
 
-    multiAsync: async (validators, value, callback) => {
+    validateMultiAsync: async (validators, value, callback) => {
+        if (
+            !Array.isArray(validators) ||
+            !validators.every((fn) => typeof fn === 'function')
+        ) {
+            throw new Error('All validators must be functions.');
+        }
         const results = await Promise.all(validators.map((fn) => fn(value)));
         const allValid = results.every(Boolean);
         if (allValid && typeof callback === 'function') {

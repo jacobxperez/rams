@@ -1,6 +1,6 @@
 import {validate} from './validate.js';
 
-function each(array, callback) {
+export function each(array, callback) {
     if (!validate.array(array)) {
         throw new TypeError(
             `each can only be called on an array, but received ${typeof array}`
@@ -13,8 +13,8 @@ function each(array, callback) {
     }
 }
 
-function eachOf(iterable, callback) {
-    if (!(iterable && typeof iterable[Symbol.iterator] === 'function')) {
+export function eachOf(iterable, callback) {
+    if (!validate.iterable(iterable)) {
         throw new TypeError(
             `eachOf can only be called on an iterable, but received ${typeof iterable}`
         );
@@ -26,7 +26,7 @@ function eachOf(iterable, callback) {
     }
 }
 
-function eachIn(object, callback) {
+export function eachIn(object, callback) {
     if (!validate.object(object)) {
         throw new TypeError(
             `eachIn can only be called on an object, but received ${typeof object}`
@@ -38,5 +38,3 @@ function eachIn(object, callback) {
         }
     }
 }
-
-export {each, eachOf, eachIn};

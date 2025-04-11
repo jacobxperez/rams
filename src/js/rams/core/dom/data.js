@@ -3,9 +3,9 @@ import {validate} from '../utilities/validate.js';
 /**
  * Generates a CSS selector for a data attribute with an optional value.
  *
- * @param {string} dataName - The name of the data attribute.
- * @param {string|null} value - The value of the data attribute (optional).
- * @returns {string} The CSS selector string.
+ * @param {string} dataName - The name of the data attribute. Must be a valid string.
+ * @param {string|null} value - The value of the data attribute (optional). If null, matches any value.
+ * @returns {string} The CSS selector string for the specified data attribute and value.
  */
 function optionalDataAttrValue(dataName, value) {
     return value ? `[data-${dataName}="${value}"]` : `[data-${dataName}]`;
@@ -14,10 +14,10 @@ function optionalDataAttrValue(dataName, value) {
 /**
  * Retrieves the first element with a specific data attribute and optional value.
  *
- * @param {Element|Document|DocumentFragment} root - The root element to search within.
- * @param {string} dataName - The name of the data attribute.
- * @param {string|null} [value=null] - The value of the data attribute (optional).
- * @returns {HTMLElement|null} The first matching element, or null if not found.
+ * @param {Element|Document|DocumentFragment} root - The root element to search within. Must be a valid DOM element.
+ * @param {string} dataName - The name of the data attribute. Must be a valid string.
+ * @param {string|null} [value=null] - The value of the data attribute (optional). If null, matches any value.
+ * @returns {HTMLElement|null} The first matching element, or null if no match is found.
  */
 export function getFirstWithDataAttr(root, dataName, value = null) {
     const methodName = 'getFirstWithDataAttr';

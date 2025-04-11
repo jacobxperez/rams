@@ -19,6 +19,7 @@ class RAMS {
     constructor() {
         // Components
         this.toggle = toggle;
+
         // Data Attribute Methods
         this.getFirstWithDataAttr = getFirstWithDataAttr;
         this.getAllWithDataAttr = getAllWithDataAttr;

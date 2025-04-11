@@ -1,4 +1,4 @@
-import {validate} from '../utilities/validate.js';
+import {isFunction} from '../utilities/validate.js';
 
 export const template = {
     /**
@@ -119,7 +119,7 @@ export const template = {
             });
             this._string(string, targetSelector);
             targetSelector;
-            if (validate.function(callback, 'template.string')) {
+            if (isFunction(callback, 'template.string')) {
                 callback();
             }
         } catch (err) {
@@ -144,7 +144,7 @@ export const template = {
             });
             this._append(document, templateSelector, targetSelector);
             targetSelector;
-            if (validate.function(callback, 'template.append')) {
+            if (isFunction(callback, 'template.append')) {
                 callback();
             }
         } catch (err) {

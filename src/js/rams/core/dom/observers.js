@@ -1,4 +1,9 @@
-import {validate} from '../utils/validate.js';
+import {isString, isDomElement} from '../utils/validate.js';
+
+const v = {
+    isString: isString,
+    isDomElement: isDomElement,
+};
 
 /**
  * Creates a MutationObserver callback function.
@@ -48,7 +53,7 @@ function createObserverCallback(dataName, callback, delay = null) {
 export function observe(root, dataName, callback, config = {attributes: true}) {
     const methodName = 'observe';
 
-    if (!validate.domElement(root) || !validate.string(dataName)) {
+    if (!isDomElement(root) || !isString(dataName)) {
         console.error(methodName, 'Invalid root element or dataName.');
         return false;
     }
@@ -104,7 +109,7 @@ export function debouncedObserver(
 ) {
     const methodName = 'debouncedObserver';
 
-    if (!validate.domElement(root) || !validate.string(dataName)) {
+    if (!isDomElement(root) || !isString(dataName)) {
         console.error(methodName, 'Invalid root element or dataName.');
         return false;
     }

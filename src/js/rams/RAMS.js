@@ -12,12 +12,7 @@ import {
     matchesDataAttr,
     toggleDataAttr,
     toggleDataAttrValue,
-} from './core/functions/data.js';
-// import {
-//     observe,
-//     disconnectObserver,
-//     debouncedObserver,
-// } from './core/functions/observers.js';
+} from './core/dom/data.js';
 import {callback} from './core/utilities/callbacks.js';
 import {toggle} from './core/components/toggle.js';
 
@@ -26,7 +21,7 @@ class RAMS {
         // Components
         this.toggle = toggle;
         this.callback = callback;
-        // DOM Methods
+        // Data Attribute Methods
         this.getFirstWithDataAttr = getFirstWithDataAttr;
         this.getAllWithDataAttr = getAllWithDataAttr;
         this.setDataAttr = setDataAttr;
@@ -40,10 +35,6 @@ class RAMS {
         this.matchesDataAttr = matchesDataAttr;
         this.toggleDataAttr = toggleDataAttr;
         this.toggleDataAttrValue = toggleDataAttrValue;
-        // Observers Methods
-        // this.observe = observe;
-        // this.disconnectObserver = disconnectObserver;
-        // this.debouncedObserver = debouncedObserver;
     }
 }
 

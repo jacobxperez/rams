@@ -53,7 +53,7 @@ function createObserverCallback(dataName, callback, delay = null) {
 export function observe(root, dataName, callback, config = {attributes: true}) {
     const methodName = 'observe';
 
-    if (!v.isDomElement(root) || !v.isString(dataName)) {
+    if (!isDomElement(root) || !isString(dataName)) {
         console.error(methodName, 'Invalid root element or dataName.');
         return false;
     }
@@ -109,7 +109,7 @@ export function debouncedObserver(
 ) {
     const methodName = 'debouncedObserver';
 
-    if (!v.isDomElement(root) || !v.isString(dataName)) {
+    if (!isDomElement(root) || !isString(dataName)) {
         console.error(methodName, 'Invalid root element or dataName.');
         return false;
     }

@@ -1,4 +1,8 @@
-import {r} from '../../RAMS.js';
+import {
+    hasDataAttr,
+    closestDataAttr,
+    toggleDataAttrValue,
+} from '../dom/data.js';
 
 /**
  * Toggles the state of elements based on user interaction.
@@ -20,9 +24,9 @@ export function toggle(...args) {
         clickedSet.forEach((item) => {
             if (
                 resetSet.has(item.dataset.toggle) &&
-                r.hasDataAttr(item, 'state', 'active')
+                hasDataAttr(item, 'state', 'active')
             ) {
-                r.toggleDataAttrValue(item, 'state', 'active', 'inactive');
+                toggleDataAttrValue(item, 'state', 'active', 'inactive');
             }
         });
     }
@@ -33,21 +37,21 @@ export function toggle(...args) {
      * @param {Element} targetToggle - The element to toggle.
      */
     function toggleState(targetToggle) {
-        const dropBox = r.closestDataAttr(targetToggle, 'dropbox');
-        const checkState = r.hasDataAttr(targetToggle, 'state', 'active');
+        const dropBox = closestDataAttr(targetToggle, 'dropbox');
+        const checkState = hasDataAttr(targetToggle, 'state', 'active');
 
         if (!dropBox && !checkState) {
             reset();
         }
 
-        r.toggleDataAttrValue(targetToggle, 'state', 'active', 'inactive');
+        toggleDataAttrValue(targetToggle, 'state', 'active', 'inactive');
     }
 
     /**
      * Handles click events to manage toggle behavior.
      */
     document.addEventListener('click', (e) => {
-        const targetToggle = r.closestDataAttr(e.target, 'toggle');
+        const targetToggle = closestDataAttr(e.target, 'toggle');
         if (!targetToggle) {
             reset();
             return;

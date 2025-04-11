@@ -1,9 +1,5 @@
 import {isFunction} from '../utilities/validate.js';
 
-const v = {
-    isFunction: isFunction,
-};
-
 export const template = {
     /**
      * Inserts a string of HTML into a target element.
@@ -123,7 +119,7 @@ export const template = {
             });
             this._string(string, targetSelector);
             targetSelector;
-            if (v.isFunction(callback, 'template.string')) {
+            if (isFunction(callback, 'template.string')) {
                 callback();
             }
         } catch (err) {
@@ -148,7 +144,7 @@ export const template = {
             });
             this._append(document, templateSelector, targetSelector);
             targetSelector;
-            if (v.isFunction(callback, 'template.append')) {
+            if (isFunction(callback, 'template.append')) {
                 callback();
             }
         } catch (err) {

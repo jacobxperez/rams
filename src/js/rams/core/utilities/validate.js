@@ -53,4 +53,16 @@ export const validate = {
         }
         return true;
     },
+
+    /**
+     * Validates if the provided input is an object.
+     * @param {Object} obj - The object to validate.
+     * @returns {boolean} - True if valid, false otherwise.
+     */
+    object(obj) {
+        if (typeof obj !== 'object' || obj === null || Array.isArray(obj)) {
+            return false;
+        }
+        return true;
+    },
 };

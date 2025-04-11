@@ -58,28 +58,73 @@ export const validate = {
         return input != null && typeof input[Symbol.iterator] === 'function';
     },
 
+    /**
+     * Validates if the provided value is a number.
+     * @param {number} value - The value to validate.
+     * @param {Object} [options] - Optional settings.
+     * @param {boolean} [options.allowNaN=false] - Whether to allow NaN as a valid number.
+     * @returns {boolean} - True if valid, false otherwise.
+     */
     isNumber(value, {allowNaN = false} = {}) {
         return typeof value === 'number' && (allowNaN || !isNaN(value));
     },
 
+    /**
+     * Validates if the provided value is a boolean.
+     * @param {*} val - The value to validate.
+     * @returns {boolean} - True if valid, false otherwise.
+     */
     isBoolean: (val) => typeof val === 'boolean',
 
+    /**
+     * Validates if the provided value is a valid Date object.
+     * @param {*} val - The value to validate.
+     * @returns {boolean} - True if valid, false otherwise.
+     */
     isDate(val) {
         return val instanceof Date && !isNaN(val.getTime());
     },
 
+    /**
+     * Creates a validator that allows null or undefined values.
+     * @param {Function} validator - The base validator function.
+     * @returns {Function} - A new validator function.
+     */
     isNullable: (validator) => (value) => value == null || validator(value),
 
+    /**
+     * Creates a validator that allows undefined values.
+     * @param {Function} validator - The base validator function.
+     * @returns {Function} - A new validator function.
+     */
     isOptional: (validator) => (value) =>
         value === undefined || validator(value),
 
+    /**
+     * Creates a validator that checks if a value is one of the provided options.
+     * @param {...*} options - The valid options.
+     * @returns {Function} - A new validator function.
+     */
     isOneOf:
         (...options) =>
         (value) =>
             options.includes(value),
 
+    /**
+     * Creates a validator that checks if a value is an instance of a specific constructor.
+     * @param {Function} constructor - The constructor to check against.
+     * @returns {Function} - A new validator function.
+     */
     isInstanceOf: (constructor) => (value) => value instanceof constructor,
 
+    /**
+     * Validates a value against multiple validators.
+     * @param {Function[]} validators - An array of validator functions.
+     * @param {*} value - The value to validate.
+     * @param {Function} [callback] - A callback to execute if all validators pass.
+     * @returns {boolean} - True if all validators pass, false otherwise.
+     * @throws {Error} - If any validator is not a function.
+     */
     validateMulti: (validators, value, callback) => {
         if (
             !Array.isArray(validators) ||
@@ -95,6 +140,14 @@ export const validate = {
         return false;
     },
 
+    /**
+     * Asynchronously validates a value against multiple validators.
+     * @param {Function[]} validators - An array of async validator functions.
+     * @param {*} value - The value to validate.
+     * @param {Function} [callback] - A callback to execute if all validators pass.
+     * @returns {Promise<boolean>} - Resolves to true if all validators pass, false otherwise.
+     * @throws {Error} - If any validator is not a function.
+     */
     validateMultiAsync: async (validators, value, callback) => {
         if (
             !Array.isArray(validators) ||

@@ -105,10 +105,10 @@ export const template = {
      *
      * @param {string} string - The HTML string to insert.
      * @param {string} targetSelector - The CSS selector of the target element.
-     * @param {Function|null} [callback=null] - Optional callback function to execute after insertion.
+     * @param {Function|null} [callback] - Optional callback function to execute after insertion.
      * @returns {Promise<void>} A promise that resolves when the operation is complete.
      */
-    async string(string, targetSelector, callback = null) {
+    async string(string, targetSelector, callback) {
         try {
             await new Promise((resolve, reject) => {
                 if (typeof string !== 'string') {
@@ -132,10 +132,10 @@ export const template = {
      *
      * @param {string} templateSelector - The CSS selector of the template to append.
      * @param {string} targetSelector - The CSS selector of the target element.
-     * @param {Function|null} [callback=null] - Optional callback function to execute after appending.
+     * @param {Function|null} [callback] - Optional callback function to execute after appending.
      * @returns {Promise<void>} A promise that resolves when the operation is complete.
      */
-    async append(templateSelector, targetSelector, callback = null) {
+    async append(templateSelector, targetSelector, callback) {
         try {
             await new Promise((resolve, reject) => {
                 if (!templateSelector)

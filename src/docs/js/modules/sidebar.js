@@ -5,7 +5,7 @@
  * from the content section and inserting navigation links into the sidebar. It supports
  * both large/medium and small screen layouts.
  */
-export function sidebar() {
+export const sidebar = () => {
     const getAside = document.getElementById('aside');
     const getContent = document.getElementById('content');
 
@@ -68,4 +68,4 @@ export function sidebar() {
             getContentsDropdown.insertAdjacentHTML('beforeend', dropdownLinks);
         });
     }
-}
+};

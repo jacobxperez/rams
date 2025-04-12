@@ -1,6 +1,6 @@
 import {isArray, isIterable, isFunction, isObject} from './validate.js';
 
-export function each(array, callback) {
+export const each = (array, callback) => {
     if (!isArray(array)) {
         throw new TypeError(
             `each can only be called on an array, but received ${typeof array}`
@@ -11,9 +11,9 @@ export function each(array, callback) {
             callback(array[i], i);
         }
     }
-}
+};
 
-export function eachOf(iterable, callback) {
+export const eachOf = (iterable, callback) => {
     if (!isIterable(iterable)) {
         throw new TypeError(
             `eachOf can only be called on an iterable, but received ${typeof iterable}`
@@ -24,9 +24,9 @@ export function eachOf(iterable, callback) {
             callback(item);
         }
     }
-}
+};
 
-export function eachIn(object, callback) {
+export const eachIn = (object, callback) => {
     if (!isObject(object)) {
         throw new TypeError(
             `eachIn can only be called on an object, but received ${typeof object}`
@@ -37,4 +37,4 @@ export function eachIn(object, callback) {
             callback(property);
         }
     }
-}
+};

@@ -1,3 +1,11 @@
+export const isStringPattern = (pattern) => {
+    return (str) => {
+        if (typeof str !== 'string') return false;
+        const regex = new RegExp(pattern);
+        return regex.test(str);
+    };
+};
+
 /**
  * Checks if a string is a valid Base64 encoded string.
  *
@@ -94,7 +102,7 @@ export const isStrongPassword = (str) => {
  * @param {string} email - The email address to check.
  * @returns {boolean} True if the email address is valid, false otherwise.
  */
-export const isValidEmail = (email) => {
+export const isEmail = (email) => {
     if (typeof email !== 'string') return false;
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailPattern.test(email);
@@ -106,7 +114,7 @@ export const isValidEmail = (email) => {
  * @param {string} phone - The phone number to check.
  * @returns {boolean} True if the phone number is valid, false otherwise.
  */
-export const isValidPhoneNumber = (phone) => {
+export const isPhoneNumber = (phone) => {
     if (typeof phone !== 'string') return false;
     const phonePattern = /^\+?[1-9]\d{1,14}$/;
     return phonePattern.test(phone);
@@ -118,7 +126,7 @@ export const isValidPhoneNumber = (phone) => {
  * @param {string} url - The URL to check.
  * @returns {boolean} True if the URL is valid, false otherwise.
  */
-export const isValidURL = (url) => {
+export const isURL = (url) => {
     if (typeof url !== 'string') return false;
     try {
         new URL(url);
@@ -134,11 +142,7 @@ export const isValidURL = (url) => {
  * @param {string} color - The color code to check.
  * @returns {boolean} True if the color code is valid, false otherwise.
  */
-export const isValidHexColor = (color) => {
-    if (typeof color !== 'string') return false;
-    const hexPattern = /^#([0-9A-Fa-f]{3}|[0-9A-Fa-f]{6})$/;
-    return hexPattern.test(color);
-};
+export const isHexColor = isStringPattern(/^#([0-9A-Fa-f]{3}|[0-9A-Fa-f]{6})$/);
 
 /**
  * Checks if a string is a valid UUID.
@@ -146,7 +150,7 @@ export const isValidHexColor = (color) => {
  * @param {string} uuid - The UUID to check.
  * @returns {boolean} True if the UUID is valid, false otherwise.
  */
-export const isValidUUID = (uuid) => {
+export const isUUID = (uuid) => {
     if (typeof uuid !== 'string') return false;
     const uuidPattern =
         /^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;

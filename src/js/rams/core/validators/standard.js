@@ -69,29 +69,51 @@ export const isBoolean = (val) => typeof val === 'boolean';
 export const isDate = (val) => val instanceof Date && !isNaN(val.getTime());
 
 /**
+ * Checks if the provided value is empty.
+ *
+ * For strings: Returns true if the string is empty or contains only whitespace.
+ * For arrays: Returns true if the array has no elements.
+ * For objects: Returns true if the object has no own enumerable properties.
+ * For other types: Returns false.
+ *
+ * @param {any} value - The value to check.
+ * @returns {boolean} True if the value is empty, otherwise false.
+ */
+export const isEmpty = (value) => {
+    if (isString(value)) return value.trim() === '';
+    if (isArray(value)) return value.length === 0;
+    if (isObject(value)) return Object.keys(value).length === 0;
+    return false;
+};
+
+/**
  * Creates a validator that checks if a value is an instance of the provided constructor.
- * @param {Function} constructor - The constructor function.
- * @returns {Function} A new validator function.
+ *
+ * @param {Function} constructor - The constructor function to check against.
+ * @returns {Function} A validator function that returns true if the value is an instance of the constructor, otherwise false.
  */
 export const isInstanceOf = (constructor) => (value) => value instanceof constructor;
 
 /**
  * Creates a validator that checks if a value is one of the provided options.
- * @param {...any} options - The allowed options.
- * @returns {Function} A new validator function.
+ *
+ * @param {...any} options - The allowed values to check against.
+ * @returns {Function} A validator function that returns true if the value matches one of the options, otherwise false.
  */
 export const isOneOf = (...options) => (value) => options.includes(value);
 
 /**
  * Creates a validator that allows null or validates using the provided validator.
- * @param {Function} validator - The validator function.
- * @returns {Function} A new validator function.
+ *
+ * @param {Function} validator - The validator function to use if the value is not null.
+ * @returns {Function} A validator function that returns true if the value is null or passes the provided validator, otherwise false.
  */
 export const isNullable = (validator) => (value) => value == null || validator(value);
 
 /**
  * Creates a validator that allows undefined or validates using the provided validator.
- * @param {Function} validator - The validator function.
- * @returns {Function} A new validator function.
+ *
+ * @param {Function} validator - The validator function to use if the value is not undefined.
+ * @returns {Function} A validator function that returns true if the value is undefined or passes the provided validator, otherwise false.
  */
 export const isOptional = (validator) => (value) => value === undefined || validator(value);

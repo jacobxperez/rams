@@ -4,8 +4,8 @@ export const template = {
     /**
      * Inserts a string of HTML into a target element.
      *
-     * @param {string} string - The HTML string to insert.
-     * @param {string} targetSelector - The CSS selector of the target element.
+     * @param {string} string - The HTML string to insert. Must be a valid HTML string.
+     * @param {string} targetSelector - The CSS selector of the target element where the HTML will be inserted.
      */
     _string(string, targetSelector) {
         const stringTrim = string.trim();
@@ -22,9 +22,9 @@ export const template = {
     /**
      * Appends a template from a source element to a target element.
      *
-     * @param {Document|HTMLElement} sourceElement - The source element containing the template.
-     * @param {string} templateSelector - The CSS selector of the template to append.
-     * @param {string} targetSelector - The CSS selector of the target element.
+     * @param {Document|HTMLElement} sourceElement - The source element containing the template. Must be a valid DOM element.
+     * @param {string} templateSelector - The CSS selector of the template to append. Must be a valid string.
+     * @param {string} targetSelector - The CSS selector of the target element where the template will be appended. Must be a valid string.
      */
     _append(sourceElement, templateSelector, targetSelector) {
         if (!sourceElement || !templateSelector || !targetSelector) {
@@ -53,8 +53,8 @@ export const template = {
     /**
      * Parses a string into a DOM Document.
      *
-     * @param {string} string - The string to parse.
-     * @param {string} [mimeType='text/html'] - The MIME type to use for parsing.
+     * @param {string} string - The string to parse. Must be a valid string.
+     * @param {string} [mimeType='text/html'] - The MIME type to use for parsing. Defaults to 'text/html'.
      * @returns {Document|null} The parsed document, or null if parsing failed.
      */
     parser(string, mimeType = 'text/html') {
@@ -73,9 +73,9 @@ export const template = {
     /**
      * Creates a template element and appends it to a parent element.
      *
-     * @param {string} html - The HTML string to use as the template content.
-     * @param {string} id - The ID to assign to the template element.
-     * @param {string} [parentSelector='body'] - The CSS selector of the parent element.
+     * @param {string} html - The HTML string to use as the template content. Must be a valid HTML string.
+     * @param {string} id - The ID to assign to the template element. Must be a valid string.
+     * @param {string} [parentSelector='body'] - The CSS selector of the parent element where the template will be appended. Defaults to 'body'.
      * @returns {HTMLTemplateElement|null} The created template element, or null if creation failed.
      */
     create(html, id, parentSelector = 'body') {
@@ -105,10 +105,10 @@ export const template = {
      *
      * @param {string} string - The HTML string to insert.
      * @param {string} targetSelector - The CSS selector of the target element.
-     * @param {Function|null} [callback=null] - Optional callback function to execute after insertion.
+     * @param {Function|null} [callback] - Optional callback function to execute after insertion.
      * @returns {Promise<void>} A promise that resolves when the operation is complete.
      */
-    async string(string, targetSelector, callback = null) {
+    async string(string, targetSelector, callback) {
         try {
             await new Promise((resolve, reject) => {
                 if (typeof string !== 'string') {
@@ -132,10 +132,10 @@ export const template = {
      *
      * @param {string} templateSelector - The CSS selector of the template to append.
      * @param {string} targetSelector - The CSS selector of the target element.
-     * @param {Function|null} [callback=null] - Optional callback function to execute after appending.
+     * @param {Function|null} [callback] - Optional callback function to execute after appending.
      * @returns {Promise<void>} A promise that resolves when the operation is complete.
      */
-    async append(templateSelector, targetSelector, callback = null) {
+    async append(templateSelector, targetSelector, callback) {
         try {
             await new Promise((resolve, reject) => {
                 if (!templateSelector)

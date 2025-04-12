@@ -64,12 +64,6 @@ export const isNumber = (value, {allowNaN = false} = {}) =>
  */
 export const isBoolean = (val) => typeof val === 'boolean';
 
-/**
- * Checks if the provided value is a valid date.
- * @param {any} val - The value to check.
- * @returns {boolean} True if the value is a valid date, otherwise false.
- */
-export const isDate = (val) => val instanceof Date && !isNaN(val.getTime());
 
 /**
  * Checks if the provided value is empty.

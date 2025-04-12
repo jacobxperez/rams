@@ -13,7 +13,7 @@ import {
  * @param {...string} args - Additional toggle types to include in the reset set.
  * @returns {Object} The current context for chaining.
  */
-export function toggle(...args) {
+export const toggle = (...args) => {
     const clickedSet = new Set();
     const resetSet = new Set(['pop', 'tooltip', ...args]);
 
@@ -80,4 +80,4 @@ export function toggle(...args) {
     });
 
     return this;
-}
+};

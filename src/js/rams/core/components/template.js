@@ -1,4 +1,4 @@
-import {isFunction} from '../utilities/validate.js';
+import {isFunction} from '../validators/standard.js';
 
 export const template = {
     /**

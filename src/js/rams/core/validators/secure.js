@@ -132,7 +132,7 @@ export const isUUID = isStringPattern(
  * @param {string} date - The date to check.
  * @returns {boolean} True if the date is valid, false otherwise.
  */
-export const isValidDate = isStringPattern(/^\d{4}-\d{2}-\d{2}$/);
+export const isDate = isStringPattern(/^\d{4}-\d{2}-\d{2}$/);
 
 /**
  * Checks if a string is a valid time in the format HH:MM.
@@ -140,4 +140,4 @@ export const isValidDate = isStringPattern(/^\d{4}-\d{2}-\d{2}$/);
  * @param {string} time - The time to check.
  * @returns {boolean} True if the time is valid, false otherwise.
  */
-export const isValidTime = isStringPattern(/^([01]\d|2[0-3]):([0-5]\d)$/);
+export const isTime = isStringPattern(/^([01]\d|2[0-3]):([0-5]\d)$/);

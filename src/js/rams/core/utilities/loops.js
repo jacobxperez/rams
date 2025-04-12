@@ -31,15 +31,26 @@ export const eachOf = (iterable, callback) => {
     }
 };
 
-export const eachIn = (object, callback) => {
+export const eachOfIn = (object, callback) => {
     if (!isObject(object)) {
         throw new TypeError(
-            `eachIn can only be called on an object, but received ${typeof object}`
+            `eachOfIn can only be called on an object, but received ${typeof object}`
         );
     }
     if (isFunction(callback)) {
         for (const property in object) {
-            callback(property);
+            callback(object[property], property);
         }
+    }
+};
+
+export const map = (array, callback) => {
+    if (!isArray(array)) {
+        throw new TypeError(
+            `map can only be called on an array, but received ${typeof array}`
+        );
+    }
+    if (isFunction(callback)) {
+        return array.map(callback);
     }
 };

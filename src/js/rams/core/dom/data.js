@@ -194,9 +194,9 @@ export const replaceDataAttrValue = (root, dataName, oldValue, newValue) => {
 /**
  * Checks if an element has a specific data attribute and optional value.
  *
- * @param {Element|Document|DocumentFragment} root - The element to check.
- * @param {string} dataName - The name of the data attribute.
- * @param {string|null} [value=null] - The value of the data attribute (optional).
+ * @param {Element|Document|DocumentFragment} root - The element to check. Must be a valid DOM element.
+ * @param {string} dataName - The name of the data attribute. Must be a valid string.
+ * @param {string|null} [value=null] - The value of the data attribute (optional). If null, checks for the presence of the attribute regardless of its value.
  * @returns {boolean} True if the element has the data attribute and value, false otherwise.
  */
 export const hasDataAttr = (root, dataName, value = null) => {
@@ -218,9 +218,9 @@ export const hasDataAttr = (root, dataName, value = null) => {
 /**
  * Checks if a data attribute on an element is empty.
  *
- * @param {Element|Document|DocumentFragment} root - The element to check.
- * @param {string} dataName - The name of the data attribute.
- * @returns {boolean} True if the data attribute is empty, false otherwise.
+ * @param {Element|Document|DocumentFragment} root - The element to check. Must be a valid DOM element.
+ * @param {string} dataName - The name of the data attribute. Must be a valid string.
+ * @returns {boolean} True if the data attribute is empty or does not exist, false otherwise.
  */
 export const dataAttrIsEmpty = (root, dataName) => {
     if (isDomElement(root) && isString(dataName)) {

@@ -1,4 +1,4 @@
-import {isString, isDomElement} from '../utilities/validate.js';
+import {isString, isDomElement} from '../validators/standard.js';
 
 /**
  * Generates a CSS selector for a data attribute with an optional value.

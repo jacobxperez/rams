@@ -1,4 +1,9 @@
-import {isArray, isIterable, isFunction, isObject} from './validate.js';
+import {
+    isArray,
+    isIterable,
+    isFunction,
+    isObject,
+} from '../validators/standard.js';
 
 export const each = (array, callback) => {
     if (!isArray(array)) {

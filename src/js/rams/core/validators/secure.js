@@ -12,9 +12,7 @@ export const isStringPattern = (pattern) => {
  * @param {string} str - The string to check.
  * @returns {boolean} True if the string is valid Base64, false otherwise.
  */
-export const isBase64 = (str) => {
-    return typeof str === 'string' && /^[A-Za-z0-9+/]+={0,2}$/.test(str.trim());
-};
+export const isBase64 = isStringPattern(/^[A-Za-z0-9+/]+={0,2}$/);
 
 /**
  * Checks if a string is a valid JSON Web Token (JWT).
@@ -22,12 +20,9 @@ export const isBase64 = (str) => {
  * @param {string} str - The string to check.
  * @returns {boolean} True if the string is a valid JWT, false otherwise.
  */
-export const isJWT = (str) => {
-    return (
-        typeof str === 'string' &&
-        /^[A-Za-z0-9-_]+\.[A-Za-z0-9-_]+\.[A-Za-z0-9-_]+$/.test(str)
-    );
-};
+export const isJWT = isStringPattern(
+    /^[A-Za-z0-9-_]+\.[A-Za-z0-9-_]+\.[A-Za-z0-9-_]+$/
+);
 
 /**
  * Checks if a string is safe and does not contain potentially harmful characters.
@@ -35,11 +30,7 @@ export const isJWT = (str) => {
  * @param {string} str - The string to check.
  * @returns {boolean} True if the string is safe, false otherwise.
  */
-export const isSafeString = (str) => {
-    if (typeof str !== 'string') return false;
-    const unsafePattern = /[<>/"'`;(){}[\]]/;
-    return !unsafePattern.test(str);
-};
+export const isSafeString = isStringPattern(/^[^<>/"'`;(){}[\]]*$/);
 
 /**
  * Checks if a string is safe from SQL injection patterns.
@@ -47,11 +38,9 @@ export const isSafeString = (str) => {
  * @param {string} str - The string to check.
  * @returns {boolean} True if the string is safe from SQL injection, false otherwise.
  */
-export const isSafeSQL = (str) => {
-    if (typeof str !== 'string') return false;
-    const injectionPattern = /(\b(SELECT|UPDATE|DELETE|INSERT|DROP|--|;)\b)/i;
-    return !injectionPattern.test(str);
-};
+export const isSafeSQL = isStringPattern(
+    /^(?!.*\b(SELECT|UPDATE|DELETE|INSERT|DROP|--|;)\b).*$/i
+);
 
 /**
  * Checks if a filename is safe and does not contain invalid or dangerous characters.
@@ -59,10 +48,7 @@ export const isSafeSQL = (str) => {
  * @param {string} name - The filename to check.
  * @returns {boolean} True if the filename is safe, false otherwise.
  */
-export const isSafeFilename = (name) => {
-    if (typeof name !== 'string') return false;
-    return /^[a-zA-Z0-9_.-]+$/.test(name) && !name.includes('..');
-};
+export const isSafeFilename = isStringPattern(/^[a-zA-Z0-9_.-]+$/);
 
 /**
  * Checks if a string is free from script tags.
@@ -70,10 +56,7 @@ export const isSafeFilename = (name) => {
  * @param {string} str - The string to check.
  * @returns {boolean} True if the string is free from script tags, false otherwise.
  */
-export const isScriptFree = (str) => {
-    if (typeof str !== 'string') return false;
-    return !/<\s*script/gi.test(str);
-};
+export const isScriptFree = isStringPattern(/^((?!<\s*script).)*$/gi);
 
 /**
  * Checks if a string is a valid MIME type.
@@ -81,9 +64,7 @@ export const isScriptFree = (str) => {
  * @param {string} type - The string to check.
  * @returns {boolean} True if the string is a valid MIME type, false otherwise.
  */
-export const isMimeType = (type) => {
-    return typeof type === 'string' && /^[\w-]+\/[\w+.-]+$/.test(type);
-};
+export const isMimeType = isStringPattern(/^[\w-]+\/[\w+.-]+$/);
 
 /**
  * Checks if a string is a strong password.
@@ -91,10 +72,9 @@ export const isMimeType = (type) => {
  * @param {string} str - The string to check.
  * @returns {boolean} True if the string is a strong password, false otherwise.
  */
-export const isStrongPassword = (str) => {
-    if (typeof str !== 'string') return false;
-    return /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$/.test(str);
-};
+export const isStrongPassword = isStringPattern(
+    /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$/
+);
 
 /**
  * Checks if a string is a valid email address.
@@ -102,11 +82,7 @@ export const isStrongPassword = (str) => {
  * @param {string} email - The email address to check.
  * @returns {boolean} True if the email address is valid, false otherwise.
  */
-export const isEmail = (email) => {
-    if (typeof email !== 'string') return false;
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailPattern.test(email);
-};
+export const isEmail = isStringPattern(/^[^\s@]+@[^\s@]+\.[^\s@]+$/);
 
 /**
  * Checks if a string is a valid phone number.
@@ -114,11 +90,7 @@ export const isEmail = (email) => {
  * @param {string} phone - The phone number to check.
  * @returns {boolean} True if the phone number is valid, false otherwise.
  */
-export const isPhoneNumber = (phone) => {
-    if (typeof phone !== 'string') return false;
-    const phonePattern = /^\+?[1-9]\d{1,14}$/;
-    return phonePattern.test(phone);
-};
+export const isPhoneNumber = isStringPattern(/^\+?[1-9]\d{1,14}$/);
 
 /**
  * Checks if a string is a valid URL.
@@ -150,12 +122,9 @@ export const isHexColor = isStringPattern(/^#([0-9A-Fa-f]{3}|[0-9A-Fa-f]{6})$/);
  * @param {string} uuid - The UUID to check.
  * @returns {boolean} True if the UUID is valid, false otherwise.
  */
-export const isUUID = (uuid) => {
-    if (typeof uuid !== 'string') return false;
-    const uuidPattern =
-        /^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
-    return uuidPattern.test(uuid);
-};
+export const isUUID = isStringPattern(
+    /^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i
+);
 
 /**
  * Checks if a string is a valid date in the format YYYY-MM-DD.
@@ -163,11 +132,7 @@ export const isUUID = (uuid) => {
  * @param {string} date - The date to check.
  * @returns {boolean} True if the date is valid, false otherwise.
  */
-export const isValidDate = (date) => {
-    if (typeof date !== 'string') return false;
-    const datePattern = /^\d{4}-\d{2}-\d{2}$/;
-    return datePattern.test(date);
-};
+export const isValidDate = isStringPattern(/^\d{4}-\d{2}-\d{2}$/);
 
 /**
  * Checks if a string is a valid time in the format HH:MM.
@@ -175,8 +140,4 @@ export const isValidDate = (date) => {
  * @param {string} time - The time to check.
  * @returns {boolean} True if the time is valid, false otherwise.
  */
-export const isValidTime = (time) => {
-    if (typeof time !== 'string') return false;
-    const timePattern = /^([01]\d|2[0-3]):([0-5]\d)$/;
-    return timePattern.test(time);
-};
+export const isValidTime = isStringPattern(/^([01]\d|2[0-3]):([0-5]\d)$/);

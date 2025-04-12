@@ -69,6 +69,20 @@ export const isBoolean = (val) => typeof val === 'boolean';
 export const isDate = (val) => val instanceof Date && !isNaN(val.getTime());
 
 /**
+ * Creates a validator that checks if a value is an instance of the provided constructor.
+ * @param {Function} constructor - The constructor function.
+ * @returns {Function} A new validator function.
+ */
+export const isInstanceOf = (constructor) => (value) => value instanceof constructor;
+
+/**
+ * Creates a validator that checks if a value is one of the provided options.
+ * @param {...any} options - The allowed options.
+ * @returns {Function} A new validator function.
+ */
+export const isOneOf = (...options) => (value) => options.includes(value);
+
+/**
  * Creates a validator that allows null or validates using the provided validator.
  * @param {Function} validator - The validator function.
  * @returns {Function} A new validator function.
@@ -81,17 +95,3 @@ export const isNullable = (validator) => (value) => value == null || validator(v
  * @returns {Function} A new validator function.
  */
 export const isOptional = (validator) => (value) => value === undefined || validator(value);
-
-/**
- * Creates a validator that checks if a value is one of the provided options.
- * @param {...any} options - The allowed options.
- * @returns {Function} A new validator function.
- */
-export const isOneOf = (...options) => (value) => options.includes(value);
-
-/**
- * Creates a validator that checks if a value is an instance of the provided constructor.
- * @param {Function} constructor - The constructor function.
- * @returns {Function} A new validator function.
- */
-export const isInstanceOf = (constructor) => (value) => value instanceof constructor;

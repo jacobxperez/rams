@@ -10,7 +10,8 @@ export const isFunction = (callback) => typeof callback === 'function';
  * @param {any} obj - The value to check.
  * @returns {boolean} True if the value is an object, otherwise false.
  */
-export const isObject = (obj) => typeof obj === 'object' && obj !== null && !Array.isArray(obj);
+export const isObject = (obj) =>
+    typeof obj === 'object' && obj !== null && !Array.isArray(obj);
 
 /**
  * Checks if the provided value is an array.
@@ -35,14 +36,16 @@ export const isDomElement = (root) =>
  * @param {any} string - The value to check.
  * @returns {boolean} True if the value is a non-empty string, otherwise false.
  */
-export const isString = (string) => typeof string === 'string' && string.trim() !== '';
+export const isString = (string) =>
+    typeof string === 'string' && string.trim() !== '';
 
 /**
  * Checks if the provided value is iterable.
  * @param {any} input - The value to check.
  * @returns {boolean} True if the value is iterable, otherwise false.
  */
-export const isIterable = (input) => input != null && typeof input[Symbol.iterator] === 'function';
+export const isIterable = (input) =>
+    input != null && typeof input[Symbol.iterator] === 'function';
 
 /**
  * Checks if the provided value is a number.
@@ -51,7 +54,7 @@ export const isIterable = (input) => input != null && typeof input[Symbol.iterat
  * @param {boolean} [options.allowNaN=false] - Whether to allow NaN as a valid number.
  * @returns {boolean} True if the value is a number, otherwise false.
  */
-export const isNumber = (value, { allowNaN = false } = {}) =>
+export const isNumber = (value, {allowNaN = false} = {}) =>
     typeof value === 'number' && (allowNaN || !isNaN(value));
 
 /**
@@ -92,7 +95,8 @@ export const isEmpty = (value) => {
  * @param {Function} constructor - The constructor function to check against.
  * @returns {Function} A validator function that returns true if the value is an instance of the constructor, otherwise false.
  */
-export const isInstanceOf = (constructor) => (value) => value instanceof constructor;
+export const isInstanceOf = (constructor) => (value) =>
+    value instanceof constructor;
 
 /**
  * Creates a validator that checks if a value is one of the provided options.
@@ -100,7 +104,10 @@ export const isInstanceOf = (constructor) => (value) => value instanceof constru
  * @param {...any} options - The allowed values to check against.
  * @returns {Function} A validator function that returns true if the value matches one of the options, otherwise false.
  */
-export const isOneOf = (...options) => (value) => options.includes(value);
+export const isOneOf =
+    (...options) =>
+    (value) =>
+        options.includes(value);
 
 /**
  * Creates a validator that allows null or validates using the provided validator.
@@ -108,7 +115,8 @@ export const isOneOf = (...options) => (value) => options.includes(value);
  * @param {Function} validator - The validator function to use if the value is not null.
  * @returns {Function} A validator function that returns true if the value is null or passes the provided validator, otherwise false.
  */
-export const isNullable = (validator) => (value) => value == null || validator(value);
+export const isNullable = (validator) => (value) =>
+    value == null || validator(value);
 
 /**
  * Creates a validator that allows undefined or validates using the provided validator.
@@ -116,4 +124,16 @@ export const isNullable = (validator) => (value) => value == null || validator(v
  * @param {Function} validator - The validator function to use if the value is not undefined.
  * @returns {Function} A validator function that returns true if the value is undefined or passes the provided validator, otherwise false.
  */
-export const isOptional = (validator) => (value) => value === undefined || validator(value);
+export const isOptional = (validator) => (value) =>
+    value === undefined || validator(value);
+
+/**
+ * Checks if all provided validator functions pass for a given value.
+ *
+ * @param {...Function} validators - The validator functions to check.
+ * @returns {Function} A function that returns true if all validators pass, otherwise false.
+ */
+export const allPass =
+    (...validators) =>
+    (value) =>
+        validators.every((validator) => validator(value));

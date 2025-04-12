@@ -61,3 +61,28 @@ export const isValidURL = (url) => {
         return false;
     }
 };
+
+export const isValidHexColor = (color) => {
+    if (typeof color !== 'string') return false;
+    const hexPattern = /^#([0-9A-Fa-f]{3}|[0-9A-Fa-f]{6})$/;
+    return hexPattern.test(color);
+};
+
+export const isValidUUID = (uuid) => {
+    if (typeof uuid !== 'string') return false;
+    const uuidPattern =
+        /^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
+    return uuidPattern.test(uuid);
+};
+
+export const isValidDate = (date) => {
+    if (typeof date !== 'string') return false;
+    const datePattern = /^\d{4}-\d{2}-\d{2}$/;
+    return datePattern.test(date);
+};
+
+export const isValidTime = (time) => {
+    if (typeof time !== 'string') return false;
+    const timePattern = /^([01]\d|2[0-3]):([0-5]\d)$/;
+    return timePattern.test(time);
+};

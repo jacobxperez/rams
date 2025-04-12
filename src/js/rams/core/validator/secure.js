@@ -15,7 +15,7 @@ export const isSafeString = (str) => {
     return !unsafePattern.test(str);
 };
 
-export const isSQLSafe = (str) => {
+export const isSafeSQL = (str) => {
     if (typeof str !== 'string') return false;
     const injectionPattern = /(\b(SELECT|UPDATE|DELETE|INSERT|DROP|--|;)\b)/i;
     return !injectionPattern.test(str);
@@ -44,5 +44,20 @@ export const isValidEmail = (email) => {
     if (typeof email !== 'string') return false;
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailPattern.test(email);
-}
+};
 
+export const isValidPhoneNumber = (phone) => {
+    if (typeof phone !== 'string') return false;
+    const phonePattern = /^\+?[1-9]\d{1,14}$/;
+    return phonePattern.test(phone);
+};
+
+export const isValidURL = (url) => {
+    if (typeof url !== 'string') return false;
+    try {
+        new URL(url);
+        return true;
+    } catch (_) {
+        return false;
+    }
+};

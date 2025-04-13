@@ -76,9 +76,10 @@ export const isBoolean = (val) => typeof val === 'boolean';
  * @returns {boolean} True if the value is empty, otherwise false.
  */
 export const isEmpty = (value) => {
-    if (isString(value)) return value.trim() === '';
-    if (isArray(value)) return value.length === 0;
-    if (isObject(value)) return Object.keys(value).length === 0;
+    if (isString(value)) return isString(value) && value.trim() === '';
+    if (isArray(value)) return isArray(value) && value.length === 0;
+    if (isObject(value))
+        return isObject(value) && Object.keys(value).length === 0;
     return false;
 };
 
@@ -98,7 +99,7 @@ export const isInstanceOf = (constructor) => (value) =>
  * @returns {Function} A validator function that returns true if the value is null or passes the provided validator, otherwise false.
  */
 export const isNullable = (validator) => (value) =>
-    value == null || validator(value);
+    isOptional(isOptional(validator))(value);
 
 /**
  * Creates a validator that allows undefined or validates using the provided validator.
@@ -118,7 +119,7 @@ export const isOptional = (validator) => (value) =>
 export const onePass =
     (...options) =>
     (value) =>
-        options.includes(value);
+        options.some((option) => option(value));
 
 /**
  * Checks if any of the provided asynchronous validator functions pass for a given value.

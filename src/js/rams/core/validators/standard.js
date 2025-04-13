@@ -64,7 +64,6 @@ export const isNumber = (value, {allowNaN = false} = {}) =>
  */
 export const isBoolean = (val) => typeof val === 'boolean';
 
-
 /**
  * Checks if the provided value is empty.
  *
@@ -93,17 +92,6 @@ export const isInstanceOf = (constructor) => (value) =>
     value instanceof constructor;
 
 /**
- * Creates a validator that checks if a value is one of the provided options.
- *
- * @param {...any} options - The allowed values to check against.
- * @returns {Function} A validator function that returns true if the value matches one of the options, otherwise false.
- */
-export const isOneOf =
-    (...options) =>
-    (value) =>
-        options.includes(value);
-
-/**
  * Creates a validator that allows null or validates using the provided validator.
  *
  * @param {Function} validator - The validator function to use if the value is not null.
@@ -122,6 +110,17 @@ export const isOptional = (validator) => (value) =>
     value === undefined || validator(value);
 
 /**
+ * Creates a validator that checks if a value is one of the provided options.
+ *
+ * @param {...any} options - The allowed values to check against.
+ * @returns {Function} A validator function that returns true if the value matches one of the options, otherwise false.
+ */
+export const onePass =
+    (...options) =>
+    (value) =>
+        options.includes(value);
+
+/**
  * Checks if all provided validator functions pass for a given value.
  *
  * @param {...Function} validators - The validator functions to check.
@@ -131,3 +130,20 @@ export const allPass =
     (...validators) =>
     (value) =>
         validators.every((validator) => validator(value));
+
+/**
+ * Checks if all provided asynchronous validator functions pass for a given value.
+ *
+ * @param {...Function} validators - The asynchronous validator functions to check.
+ * @returns {Function} A function that returns a Promise resolving to true if all validators pass, otherwise false.
+ */
+export const allPassAsync =
+    (...validators) =>
+    async (value) => {
+        for (const validator of validators) {
+            if (!(await validator(value))) {
+                return false;
+            }
+        }
+        return true;
+    };

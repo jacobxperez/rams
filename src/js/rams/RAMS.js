@@ -1,4 +1,7 @@
+// Components
 import {toggle} from './core/components/toggle.js';
+
+// DOM Data Attribute Methods
 import {
     getFirstWithDataAttr,
     getAllWithDataAttr,
@@ -20,20 +23,20 @@ class RAMS {
         // Components
         this.toggle = toggle;
 
-        // Data Attribute Methods
-        this.getFirstWithDataAttr = getFirstWithDataAttr;
-        this.getAllWithDataAttr = getAllWithDataAttr;
-        this.setDataAttr = setDataAttr;
-        this.appendDataAttrValue = appendDataAttrValue;
-        this.removeDataAttr = removeDataAttr;
-        this.removeDataAttrValue = removeDataAttrValue;
-        this.replaceDataAttrValue = replaceDataAttrValue;
-        this.hasDataAttr = hasDataAttr;
-        this.dataAttrIsEmpty = dataAttrIsEmpty;
-        this.closestDataAttr = closestDataAttr;
-        this.matchesDataAttr = matchesDataAttr;
-        this.toggleDataAttr = toggleDataAttr;
-        this.toggleDataAttrValue = toggleDataAttrValue;
+        // DOM Data Attribute Methods
+        // this.getFirstWithDataAttr = getFirstWithDataAttr;
+        // this.getAllWithDataAttr = getAllWithDataAttr;
+        // this.setDataAttr = setDataAttr;
+        // this.appendDataAttrValue = appendDataAttrValue;
+        // this.removeDataAttr = removeDataAttr;
+        // this.removeDataAttrValue = removeDataAttrValue;
+        // this.replaceDataAttrValue = replaceDataAttrValue;
+        // this.hasDataAttr = hasDataAttr;
+        // this.dataAttrIsEmpty = dataAttrIsEmpty;
+        // this.closestDataAttr = closestDataAttr;
+        // this.matchesDataAttr = matchesDataAttr;
+        // this.toggleDataAttr = toggleDataAttr;
+        // this.toggleDataAttrValue = toggleDataAttrValue;
     }
 }
 

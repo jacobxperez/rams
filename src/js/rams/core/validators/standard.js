@@ -26,10 +26,7 @@ export const isArray = (array) => Array.isArray(array);
  * @returns {boolean} True if the value is a DOM element, otherwise false.
  */
 export const isDomElement = (root) =>
-    root &&
-    (root instanceof Element ||
-        root instanceof Document ||
-        root instanceof DocumentFragment);
+    isInstanceOf(Element, Document, DocumentFragment)(root);
 
 /**
  * Checks if the provided value is a non-empty string.
@@ -89,8 +86,10 @@ export const isEmpty = (value) => {
  * @param {Function} constructor - The constructor function to check against.
  * @returns {Function} A validator function that returns true if the value is an instance of the constructor, otherwise false.
  */
-export const isInstanceOf = (constructor) => (value) =>
-    value instanceof constructor;
+export const isInstanceOf =
+    (...constructors) =>
+    (value) =>
+        constructors.some((constructor) => value instanceof constructor);
 
 /**
  * Creates a validator that allows null or validates using the provided validator.

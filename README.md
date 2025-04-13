@@ -55,7 +55,7 @@ them to [index.css](https://github.com/jacobxperez/rams/blob/master/src/css/inde
   - [index.css](https://github.com/jacobxperez/rams/blob/master/src/css/index.css) (compile to produce the final CSS)
   - [settings.css](https://github.com/jacobxperez/rams/blob/master/src/css/settings.css) (theme settings for font, colors, and more)
 
-**note**: When starting a project with RAMS we recommend **not** to edit the [core](https://github.com/jacobxperez/rams/tree/master/src/css/core) files unless you are [contributing](https://github.com/jacobxperez/rams/blob/master/.github/CONTRIBUTING.md) code back to RAMS. Any custom modules should go in the [custom](https://github.com/jacobxperez/rams/tree/master/src/css/custom) folder, this will help you separate your code from RAMS.
+**note**: When starting a project with RAMS we recommend **not** to edit the [core](https://github.com/jacobxperez/rams/tree/master/src/css/core) files unless you are [contributing](https://github.com/jacobxperez/rams/blob/master/.github/CONTRIBUTING.md) code back to RAMS. Any custom modules should go in the [custom](https://github.com/jacobxperez/rams/tree/master/src/css/custom) folder.
 
 ### Compile
 

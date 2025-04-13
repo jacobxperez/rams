@@ -1,4 +1,26 @@
 /**
+ * Creates a validator that checks if a value is an instance of the provided constructor.
+ *
+ * @param {Function} constructor - The constructor function to check against.
+ * @returns {Function} A validator function that returns true if the value is an instance of the constructor, otherwise false.
+ */
+export const isInstanceOf =
+    (...constructors) =>
+    (value) =>
+        constructors.some((constructor) => value instanceof constructor);
+
+/**
+ * Checks if the provided value matches any of the provided types using typeof.
+ *
+ * @param {...string} types - The types to check against.
+ * @returns {Function} A validator function that returns true if the value matches any of the types, otherwise false.
+ */
+export const isTypeOf =
+    (...types) =>
+    (value) =>
+        types.includes(typeof value);
+
+/**
  * Checks if the provided callback is a function.
  * @param {any} callback - The value to check.
  * @returns {boolean} True if the value is a function, otherwise false.
@@ -81,17 +103,6 @@ export const isEmpty = (value) => {
 };
 
 /**
- * Creates a validator that checks if a value is an instance of the provided constructor.
- *
- * @param {Function} constructor - The constructor function to check against.
- * @returns {Function} A validator function that returns true if the value is an instance of the constructor, otherwise false.
- */
-export const isInstanceOf =
-    (...constructors) =>
-    (value) =>
-        constructors.some((constructor) => value instanceof constructor);
-
-/**
  * Creates a validator that allows null or validates using the provided validator.
  *
  * @param {Function} validator - The validator function to use if the value is not null.
@@ -162,14 +173,3 @@ export const allPassAsync =
         }
         return true;
     };
-
-/**
- * Checks if the provided value matches any of the provided types using typeof.
- *
- * @param {...string} types - The types to check against.
- * @returns {Function} A validator function that returns true if the value matches any of the types, otherwise false.
- */
-export const isTypeOf =
-    (...types) =>
-    (value) =>
-        types.includes(typeof value);

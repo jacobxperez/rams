@@ -1,9 +1,31 @@
 /**
+ * Creates a validator that checks if a value is an instance of the provided constructor.
+ *
+ * @param {Function} constructor - The constructor function to check against.
+ * @returns {Function} A validator function that returns true if the value is an instance of the constructor, otherwise false.
+ */
+export const isInstanceOf =
+    (...constructors) =>
+    (value) =>
+        constructors.some((constructor) => value instanceof constructor);
+
+/**
+ * Checks if the provided value matches any of the provided types using typeof.
+ *
+ * @param {...string} types - The types to check against.
+ * @returns {Function} A validator function that returns true if the value matches any of the types, otherwise false.
+ */
+export const isTypeOf =
+    (...types) =>
+    (value) =>
+        types.includes(typeof value);
+
+/**
  * Checks if the provided callback is a function.
  * @param {any} callback - The value to check.
  * @returns {boolean} True if the value is a function, otherwise false.
  */
-export const isFunction = (callback) => typeof callback === 'function';
+export const isFunction = isTypeOf('function');
 
 /**
  * Checks if the provided value is an object (excluding arrays and null).
@@ -11,14 +33,14 @@ export const isFunction = (callback) => typeof callback === 'function';
  * @returns {boolean} True if the value is an object, otherwise false.
  */
 export const isObject = (obj) =>
-    typeof obj === 'object' && obj !== null && !Array.isArray(obj);
+    isTypeOf('object')(obj) && obj !== null && !Array.isArray(obj);
 
 /**
  * Checks if the provided value is an array.
  * @param {any} array - The value to check.
  * @returns {boolean} True if the value is an array, otherwise false.
  */
-export const isArray = (array) => Array.isArray(array);
+export const isArray = Array.isArray;
 
 /**
  * Checks if the provided value is a DOM element.
@@ -26,10 +48,7 @@ export const isArray = (array) => Array.isArray(array);
  * @returns {boolean} True if the value is a DOM element, otherwise false.
  */
 export const isDomElement = (root) =>
-    root &&
-    (root instanceof Element ||
-        root instanceof Document ||
-        root instanceof DocumentFragment);
+    isInstanceOf(Element, Document, DocumentFragment)(root);
 
 /**
  * Checks if the provided value is a non-empty string.
@@ -37,7 +56,7 @@ export const isDomElement = (root) =>
  * @returns {boolean} True if the value is a non-empty string, otherwise false.
  */
 export const isString = (string) =>
-    typeof string === 'string' && string.trim() !== '';
+    isTypeOf('string')(string) && string.trim() !== '';
 
 /**
  * Checks if the provided value is iterable.
@@ -55,15 +74,14 @@ export const isIterable = (input) =>
  * @returns {boolean} True if the value is a number, otherwise false.
  */
 export const isNumber = (value, {allowNaN = false} = {}) =>
-    typeof value === 'number' && (allowNaN || !isNaN(value));
+    isTypeOf('number')(value) && (allowNaN || !isNaN(value));
 
 /**
  * Checks if the provided value is a boolean.
  * @param {any} val - The value to check.
  * @returns {boolean} True if the value is a boolean, otherwise false.
  */
-export const isBoolean = (val) => typeof val === 'boolean';
-
+export const isBoolean = isTypeOf('boolean');
 
 /**
  * Checks if the provided value is empty.
@@ -77,31 +95,12 @@ export const isBoolean = (val) => typeof val === 'boolean';
  * @returns {boolean} True if the value is empty, otherwise false.
  */
 export const isEmpty = (value) => {
-    if (isString(value)) return value.trim() === '';
-    if (isArray(value)) return value.length === 0;
-    if (isObject(value)) return Object.keys(value).length === 0;
+    if (isString(value)) return isString(value) && value.trim() === '';
+    if (isArray(value)) return isArray(value) && value.length === 0;
+    if (isObject(value))
+        return isObject(value) && Object.keys(value).length === 0;
     return false;
 };
-
-/**
- * Creates a validator that checks if a value is an instance of the provided constructor.
- *
- * @param {Function} constructor - The constructor function to check against.
- * @returns {Function} A validator function that returns true if the value is an instance of the constructor, otherwise false.
- */
-export const isInstanceOf = (constructor) => (value) =>
-    value instanceof constructor;
-
-/**
- * Creates a validator that checks if a value is one of the provided options.
- *
- * @param {...any} options - The allowed values to check against.
- * @returns {Function} A validator function that returns true if the value matches one of the options, otherwise false.
- */
-export const isOneOf =
-    (...options) =>
-    (value) =>
-        options.includes(value);
 
 /**
  * Creates a validator that allows null or validates using the provided validator.
@@ -110,7 +109,7 @@ export const isOneOf =
  * @returns {Function} A validator function that returns true if the value is null or passes the provided validator, otherwise false.
  */
 export const isNullable = (validator) => (value) =>
-    value == null || validator(value);
+    isOptional(isOptional(validator))(value);
 
 /**
  * Creates a validator that allows undefined or validates using the provided validator.
@@ -122,6 +121,32 @@ export const isOptional = (validator) => (value) =>
     value === undefined || validator(value);
 
 /**
+ * Creates a validator that checks if a value is one of the provided options.
+ *
+ * @param {...any} options - The allowed values to check against.
+ * @returns {Function} A validator function that returns true if the value matches one of the options, otherwise false.
+ */
+export const onePass =
+    (...options) =>
+    (value) =>
+        options.some((option) => option(value));
+
+/**
+ * Checks if any of the provided asynchronous validator functions pass for a given value.
+ *
+ * @param {Function[]} validators - An array of asynchronous validator functions to check.
+ * @returns {Function} A function that returns a Promise resolving to true if any validator passes, otherwise false.
+ */
+export const onePassAsync = (validators) => async (value) => {
+    for (const validator of validators) {
+        if (await validator(value)) {
+            return true;
+        }
+    }
+    return false;
+};
+
+/**
  * Checks if all provided validator functions pass for a given value.
  *
  * @param {...Function} validators - The validator functions to check.
@@ -131,3 +156,20 @@ export const allPass =
     (...validators) =>
     (value) =>
         validators.every((validator) => validator(value));
+
+/**
+ * Checks if all provided asynchronous validator functions pass for a given value.
+ *
+ * @param {...Function} validators - The asynchronous validator functions to check.
+ * @returns {Function} A function that returns a Promise resolving to true if all validators pass, otherwise false.
+ */
+export const allPassAsync =
+    (...validators) =>
+    async (value) => {
+        for (const validator of validators) {
+            if (!(await validator(value))) {
+                return false;
+            }
+        }
+        return true;
+    };

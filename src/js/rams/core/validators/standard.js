@@ -154,8 +154,8 @@ export const onePassAsync = (validators) => async (value) => {
  */
 export const allPass =
     (...validators) =>
-    (value) =>
-        validators.every((validator) => validator(value));
+    (...value) =>
+        validators.every((validator) => validator(...value));
 
 /**
  * Checks if all provided asynchronous validator functions pass for a given value.
@@ -174,12 +174,20 @@ export const allPassAsync =
         return true;
     };
 
+/**
+ * Creates a function that executes a callback if all provided validators pass for a given value.
+ *
+ * @param {...Function} validators - The validator functions to check.
+ * @returns {Function} A function that takes a callback and a value. The callback is executed with the value if all validators pass, otherwise false is returned.
+ */
 export const ifPass =
     (...validators) =>
     (callback) =>
-    (value) => {
-        if (allPass(...validators)(value)) {
-            return callback(value);
+    (...value) => {
+        if (allPass(...validators)(...value)) {
+            // Pass the array `value` as a single argument to `allPass`
+            return callback(...value);
         }
+        console.warn('Validator failed:', ...value);
         return false;
     };

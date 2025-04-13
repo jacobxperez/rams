@@ -1,4 +1,4 @@
-export const isStringPattern = (pattern) => {
+export const isRegexPattern = (pattern) => {
     return (str) => {
         if (typeof str !== 'string') return false;
         const regex = new RegExp(pattern);
@@ -12,7 +12,7 @@ export const isStringPattern = (pattern) => {
  * @param {string} str - The string to check.
  * @returns {boolean} True if the string is valid Base64, false otherwise.
  */
-export const isBase64 = isStringPattern(/^[A-Za-z0-9+/]+={0,2}$/);
+export const isBase64 = isRegexPattern(/^[A-Za-z0-9+/]+={0,2}$/);
 
 /**
  * Checks if a string is a valid JSON Web Token (JWT).
@@ -20,7 +20,7 @@ export const isBase64 = isStringPattern(/^[A-Za-z0-9+/]+={0,2}$/);
  * @param {string} str - The string to check.
  * @returns {boolean} True if the string is a valid JWT, false otherwise.
  */
-export const isJWT = isStringPattern(
+export const isJWT = isRegexPattern(
     /^[A-Za-z0-9-_]+\.[A-Za-z0-9-_]+\.[A-Za-z0-9-_]+$/
 );
 
@@ -30,7 +30,7 @@ export const isJWT = isStringPattern(
  * @param {string} str - The string to check.
  * @returns {boolean} True if the string is safe, false otherwise.
  */
-export const isSafeString = isStringPattern(/^[^<>/"'`;(){}[\]]*$/);
+export const isSafeString = isRegexPattern(/^[^<>/"'`;(){}[\]]*$/);
 
 /**
  * Checks if a string is safe from SQL injection patterns.
@@ -38,7 +38,7 @@ export const isSafeString = isStringPattern(/^[^<>/"'`;(){}[\]]*$/);
  * @param {string} str - The string to check.
  * @returns {boolean} True if the string is safe from SQL injection, false otherwise.
  */
-export const isSafeSQL = isStringPattern(
+export const isSafeSQL = isRegexPattern(
     /^(?!.*\b(SELECT|UPDATE|DELETE|INSERT|DROP|--|;)\b).*$/i
 );
 
@@ -48,7 +48,7 @@ export const isSafeSQL = isStringPattern(
  * @param {string} name - The filename to check.
  * @returns {boolean} True if the filename is safe, false otherwise.
  */
-export const isSafeFilename = isStringPattern(/^[a-zA-Z0-9_.-]+$/);
+export const isSafeFilename = isRegexPattern(/^[a-zA-Z0-9_.-]+$/);
 
 /**
  * Checks if a string is free from script tags.
@@ -56,7 +56,7 @@ export const isSafeFilename = isStringPattern(/^[a-zA-Z0-9_.-]+$/);
  * @param {string} str - The string to check.
  * @returns {boolean} True if the string is free from script tags, false otherwise.
  */
-export const isScriptFree = isStringPattern(/^((?!<\s*script).)*$/gi);
+export const isScriptFree = isRegexPattern(/^((?!<\s*script).)*$/gi);
 
 /**
  * Checks if a string is a valid MIME type.
@@ -64,7 +64,7 @@ export const isScriptFree = isStringPattern(/^((?!<\s*script).)*$/gi);
  * @param {string} type - The string to check.
  * @returns {boolean} True if the string is a valid MIME type, false otherwise.
  */
-export const isMimeType = isStringPattern(/^[\w-]+\/[\w+.-]+$/);
+export const isMimeType = isRegexPattern(/^[\w-]+\/[\w+.-]+$/);
 
 /**
  * Checks if a string is a strong password.
@@ -72,7 +72,7 @@ export const isMimeType = isStringPattern(/^[\w-]+\/[\w+.-]+$/);
  * @param {string} str - The string to check.
  * @returns {boolean} True if the string is a strong password, false otherwise.
  */
-export const isStrongPassword = isStringPattern(
+export const isStrongPassword = isRegexPattern(
     /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$/
 );
 
@@ -82,7 +82,7 @@ export const isStrongPassword = isStringPattern(
  * @param {string} email - The email address to check.
  * @returns {boolean} True if the email address is valid, false otherwise.
  */
-export const isEmail = isStringPattern(/^[^\s@]+@[^\s@]+\.[^\s@]+$/);
+export const isEmail = isRegexPattern(/^[^\s@]+@[^\s@]+\.[^\s@]+$/);
 
 /**
  * Checks if a string is a valid phone number.
@@ -90,7 +90,7 @@ export const isEmail = isStringPattern(/^[^\s@]+@[^\s@]+\.[^\s@]+$/);
  * @param {string} phone - The phone number to check.
  * @returns {boolean} True if the phone number is valid, false otherwise.
  */
-export const isPhoneNumber = isStringPattern(/^\+?[1-9]\d{1,14}$/);
+export const isPhoneNumber = isRegexPattern(/^\+?[1-9]\d{1,14}$/);
 
 /**
  * Checks if a string is a valid URL.
@@ -114,7 +114,7 @@ export const isURL = (url) => {
  * @param {string} color - The color code to check.
  * @returns {boolean} True if the color code is valid, false otherwise.
  */
-export const isHexColor = isStringPattern(/^#([0-9A-Fa-f]{3}|[0-9A-Fa-f]{6})$/);
+export const isHexColor = isRegexPattern(/^#([0-9A-Fa-f]{3}|[0-9A-Fa-f]{6})$/);
 
 /**
  * Checks if a string is a valid UUID.
@@ -122,7 +122,7 @@ export const isHexColor = isStringPattern(/^#([0-9A-Fa-f]{3}|[0-9A-Fa-f]{6})$/);
  * @param {string} uuid - The UUID to check.
  * @returns {boolean} True if the UUID is valid, false otherwise.
  */
-export const isUUID = isStringPattern(
+export const isUUID = isRegexPattern(
     /^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i
 );
 
@@ -132,7 +132,7 @@ export const isUUID = isStringPattern(
  * @param {string} date - The date to check.
  * @returns {boolean} True if the date is valid, false otherwise.
  */
-export const isDate = isStringPattern(/^\d{4}-\d{2}-\d{2}$/);
+export const isDate = isRegexPattern(/^\d{4}-\d{2}-\d{2}$/);
 
 /**
  * Checks if a string is a valid time in the format HH:MM.
@@ -140,4 +140,4 @@ export const isDate = isStringPattern(/^\d{4}-\d{2}-\d{2}$/);
  * @param {string} time - The time to check.
  * @returns {boolean} True if the time is valid, false otherwise.
  */
-export const isTime = isStringPattern(/^([01]\d|2[0-3]):([0-5]\d)$/);
+export const isTime = isRegexPattern(/^([01]\d|2[0-3]):([0-5]\d)$/);

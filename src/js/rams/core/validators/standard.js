@@ -162,3 +162,14 @@ export const allPassAsync =
         }
         return true;
     };
+
+/**
+ * Checks if the provided value matches any of the provided types using typeof.
+ *
+ * @param {...string} types - The types to check against.
+ * @returns {Function} A validator function that returns true if the value matches any of the types, otherwise false.
+ */
+export const isTypeOf =
+    (...types) =>
+    (value) =>
+        types.includes(typeof value);

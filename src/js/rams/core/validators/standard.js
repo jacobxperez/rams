@@ -3,7 +3,7 @@
  * @param {any} callback - The value to check.
  * @returns {boolean} True if the value is a function, otherwise false.
  */
-export const isFunction = (callback) => typeof callback === 'function';
+export const isFunction = isTypeOf('function');
 
 /**
  * Checks if the provided value is an object (excluding arrays and null).
@@ -11,14 +11,14 @@ export const isFunction = (callback) => typeof callback === 'function';
  * @returns {boolean} True if the value is an object, otherwise false.
  */
 export const isObject = (obj) =>
-    typeof obj === 'object' && obj !== null && !Array.isArray(obj);
+    isTypeOf('object')(obj) && obj !== null && !Array.isArray(obj);
 
 /**
  * Checks if the provided value is an array.
  * @param {any} array - The value to check.
  * @returns {boolean} True if the value is an array, otherwise false.
  */
-export const isArray = (array) => Array.isArray(array);
+export const isArray = Array.isArray;
 
 /**
  * Checks if the provided value is a DOM element.
@@ -34,7 +34,7 @@ export const isDomElement = (root) =>
  * @returns {boolean} True if the value is a non-empty string, otherwise false.
  */
 export const isString = (string) =>
-    typeof string === 'string' && string.trim() !== '';
+    isTypeOf('string')(string) && string.trim() !== '';
 
 /**
  * Checks if the provided value is iterable.
@@ -52,14 +52,14 @@ export const isIterable = (input) =>
  * @returns {boolean} True if the value is a number, otherwise false.
  */
 export const isNumber = (value, {allowNaN = false} = {}) =>
-    typeof value === 'number' && (allowNaN || !isNaN(value));
+    isTypeOf('number')(value) && (allowNaN || !isNaN(value));
 
 /**
  * Checks if the provided value is a boolean.
  * @param {any} val - The value to check.
  * @returns {boolean} True if the value is a boolean, otherwise false.
  */
-export const isBoolean = (val) => typeof val === 'boolean';
+export const isBoolean = isTypeOf('boolean');
 
 /**
  * Checks if the provided value is empty.

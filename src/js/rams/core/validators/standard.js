@@ -173,3 +173,13 @@ export const allPassAsync =
         }
         return true;
     };
+
+export const ifPass =
+    (...validators) =>
+    (callback) =>
+    (value) => {
+        if (allPass(...validators)(value)) {
+            return callback(value);
+        }
+        return false;
+    };

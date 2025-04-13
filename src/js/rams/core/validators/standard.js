@@ -121,6 +121,23 @@ export const onePass =
         options.includes(value);
 
 /**
+ * Checks if any of the provided asynchronous validator functions pass for a given value.
+ *
+ * @param {...Function} validators - The asynchronous validator functions to check.
+ * @returns {Function} A function that returns a Promise resolving to true if any validator passes, otherwise false.
+ */
+export const onePassAsync =
+    (...validators) =>
+    async (value) => {
+        for (const validator of validators) {
+            if (await validator(value)) {
+                return true;
+            }
+        }
+        return false;
+    };
+
+/**
  * Checks if all provided validator functions pass for a given value.
  *
  * @param {...Function} validators - The validator functions to check.

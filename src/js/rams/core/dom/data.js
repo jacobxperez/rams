@@ -38,10 +38,10 @@ export const getFirstWithDataAttr = (root, dataName, value) => {
 /**
  * Retrieves all elements with a specific data attribute and optional value.
  *
- * @param {Element|Document|DocumentFragment} root - The root element to search within.
- * @param {string} dataName - The name of the data attribute.
- * @param {string|null} [value=null] - The value of the data attribute (optional).
- * @returns {HTMLElement[]} An array of matching elements.
+ * @param {Element|Document|DocumentFragment} root - The root element to search within. Must be a valid DOM element.
+ * @param {string} dataName - The name of the data attribute. Must be a valid string.
+ * @param {string|null} [value=null] - The value of the data attribute (optional). If null, matches any value.
+ * @returns {HTMLElement[]} An array of matching elements, or an empty array if no matches are found.
  */
 export const getAllWithDataAttr = (root, dataName, value) => {
     if (validElementWithDataAttr(root, dataName) && validDataAttrValue(value)) {
@@ -55,9 +55,9 @@ export const getAllWithDataAttr = (root, dataName, value) => {
 /**
  * Sets a data attribute on an element.
  *
- * @param {Element|Document|DocumentFragment} root - The element to modify.
- * @param {string} dataName - The name of the data attribute.
- * @param {string} [value=''] - The value to set for the data attribute.
+ * @param {Element|Document|DocumentFragment} root - The element to modify. Must be a valid DOM element.
+ * @param {string} dataName - The name of the data attribute. Must be a valid string.
+ * @param {string} [value=''] - The value to set for the data attribute. Defaults to an empty string.
  * @returns {boolean} True if the attribute was set successfully, false otherwise.
  */
 export const setDataAttr = (root, dataName, value = '') => {
@@ -71,10 +71,11 @@ export const setDataAttr = (root, dataName, value = '') => {
 /**
  * Appends a value to a data attribute on an element.
  *
- * @param {Element|Document|DocumentFragment} root - The element to modify.
- * @param {string} dataName - The name of the data attribute.
- * @param {string} value - The value to append to the data attribute.
+ * @param {Element|Document|DocumentFragment} root - The element to modify. Must be a valid DOM element.
+ * @param {string} dataName - The name of the data attribute. Must be a valid string.
+ * @param {string} value - The value to append to the data attribute. Must be a valid string.
  * @returns {boolean} True if the value was appended successfully, false otherwise.
+ * @throws {Error} If the value already exists in the data attribute or if invalid arguments are provided.
  */
 export const appendDataAttrValue = (root, dataName, value) => {
     const methodName = 'appendDataAttrValue';
@@ -100,8 +101,8 @@ export const appendDataAttrValue = (root, dataName, value) => {
 /**
  * Removes a data attribute from an element.
  *
- * @param {Element|Document|DocumentFragment} root - The element to modify.
- * @param {string} dataName - The name of the data attribute.
+ * @param {Element|Document|DocumentFragment} root - The element to modify. Must be a valid DOM element.
+ * @param {string} dataName - The name of the data attribute. Must be a valid string.
  * @returns {boolean} True if the attribute was removed successfully, false otherwise.
  */
 export const removeDataAttr = (root, dataName) => {
@@ -120,10 +121,11 @@ export const removeDataAttr = (root, dataName) => {
 /**
  * Removes a specific value from a data attribute on an element.
  *
- * @param {Element|Document|DocumentFragment} root - The element to modify.
- * @param {string} dataName - The name of the data attribute.
- * @param {string} value - The value to remove from the data attribute.
+ * @param {Element|Document|DocumentFragment} root - The element to modify. Must be a valid DOM element.
+ * @param {string} dataName - The name of the data attribute. Must be a valid string.
+ * @param {string} value - The value to remove from the data attribute. Must be a valid string.
  * @returns {boolean} True if the value was removed successfully, false otherwise.
+ * @throws {Error} If the attribute does not exist or if invalid arguments are provided.
  */
 export const removeDataAttrValue = (root, dataName, value) => {
     const methodName = 'removeDataAttrValue';
@@ -154,11 +156,12 @@ export const removeDataAttrValue = (root, dataName, value) => {
 /**
  * Replaces a specific value in a data attribute on an element.
  *
- * @param {Element|Document|DocumentFragment} root - The element to modify.
- * @param {string} dataName - The name of the data attribute.
- * @param {string} oldValue - The value to be replaced.
- * @param {string} newValue - The new value to set.
+ * @param {Element|Document|DocumentFragment} root - The element to modify. Must be a valid DOM element.
+ * @param {string} dataName - The name of the data attribute. Must be a valid string.
+ * @param {string} oldValue - The value to be replaced. Must be a valid string.
+ * @param {string} newValue - The new value to set. Must be a valid string.
  * @returns {boolean} True if the value was replaced successfully, false otherwise.
+ * @throws {Error} If the old value is not found in the data attribute or if invalid arguments are provided.
  */
 export const replaceDataAttrValue = (root, dataName, oldValue, newValue) => {
     const methodName = 'replaceDataAttrValue';
@@ -233,12 +236,11 @@ export const dataAttrIsEmpty = (root) => (dataName) => {
 /**
  * Finds the closest ancestor element with a specific data attribute and optional value.
  *
- * @param {Element|Document|DocumentFragment} root - The element to start the search from.
- * @param {string} dataName - The name of the data attribute.
- * @param {string|null} [value=null] - The value of the data attribute (optional).
+ * @param {Element|Document|DocumentFragment} root - The element to start the search from. Must be a valid DOM element.
+ * @param {string} dataName - The name of the data attribute. Must be a valid string.
+ * @param {string|null} [value=null] - The value of the data attribute (optional). If null, matches any value.
  * @returns {HTMLElement|null} The closest matching ancestor element, or null if not found.
  */
-
 export const closestDataAttr = (root) => (dataName, value) => {
     if (validElementWithDataAttr(root, dataName) && validDataAttrValue(value)) {
         return root.closest(optionalDataAttrValue(dataName, value));

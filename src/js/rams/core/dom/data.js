@@ -28,7 +28,7 @@ function optionalDataAttrValue(dataName, value) {
  * @param {string|null} [value=null] - The value of the data attribute (optional). If null, matches any value.
  * @returns {HTMLElement|null} The first matching element, or null if no match is found.
  */
-export const getFirstWithDataAttr = (root, dataName, value) => {
+export const getFirstWithDataAttr = (root) => (dataName, value) => {
     if (validElementWithDataAttr(root, dataName) && validDataAttrValue(value)) {
         return root.querySelector(optionalDataAttrValue(dataName, value));
     }
@@ -43,7 +43,7 @@ export const getFirstWithDataAttr = (root, dataName, value) => {
  * @param {string|null} [value=null] - The value of the data attribute (optional). If null, matches any value.
  * @returns {HTMLElement[]} An array of matching elements, or an empty array if no matches are found.
  */
-export const getAllWithDataAttr = (root, dataName, value) => {
+export const getAllWithDataAttr = (root) => (dataName, value) => {
     if (validElementWithDataAttr(root, dataName) && validDataAttrValue(value)) {
         return Array.from(
             root.querySelectorAll(optionalDataAttrValue(dataName, value))
@@ -60,13 +60,15 @@ export const getAllWithDataAttr = (root, dataName, value) => {
  * @param {string} [value=''] - The value to set for the data attribute. Defaults to an empty string.
  * @returns {boolean} True if the attribute was set successfully, false otherwise.
  */
-export const setDataAttr = (root, dataName, value = '') => {
-    if (validElementWithDataAttr(root, dataName) || isEmpty(value)) {
-        root.setAttribute(`data-${dataName}`, value);
-        return true;
-    }
-    return false;
-};
+export const setDataAttr =
+    (root) =>
+    (dataName, value = '') => {
+        if (validElementWithDataAttr(root, dataName) || isEmpty(value)) {
+            root.setAttribute(`data-${dataName}`, value);
+            return true;
+        }
+        return false;
+    };
 
 /**
  * Appends a value to a data attribute on an element.
@@ -77,13 +79,11 @@ export const setDataAttr = (root, dataName, value = '') => {
  * @returns {boolean} True if the value was appended successfully, false otherwise.
  * @throws {Error} If the value already exists in the data attribute or if invalid arguments are provided.
  */
-export const appendDataAttrValue = (root, dataName, value) => {
+export const appendDataAttrValue = (root) => (dataName, value) => {
     const methodName = 'appendDataAttrValue';
     if (isDomElement(root) && isString(dataName) && isString(value)) {
-        const currentValue = root.getAttribute(`data-${dataName}`);
-        const values = currentValue
-            ? new Set(currentValue.trim().split(/\s+/))
-            : new Set();
+        const currentValue = root.getAttribute(`data-${dataName}`) || '';
+        const values = new Set(currentValue.split(/\s+/).filter(Boolean));
 
         if (values.has(value)) {
             throw new Error(
@@ -127,21 +127,20 @@ export const removeDataAttr = (root, dataName) => {
  * @returns {boolean} True if the value was removed successfully, false otherwise.
  * @throws {Error} If the attribute does not exist or if invalid arguments are provided.
  */
-export const removeDataAttrValue = (root, dataName, value) => {
+export const removeDataAttrValue = (root) => (dataName, value) => {
     const methodName = 'removeDataAttrValue';
 
     if (isDomElement(root) && isString(dataName) && isString(value)) {
-        let currentValue = root.getAttribute(`data-${dataName}`);
+        const currentValue = root.getAttribute(`data-${dataName}`) || '';
+        const values = new Set(currentValue.split(/\s+/).filter(Boolean));
 
-        if (!currentValue) {
+        if (!values.has(value)) {
             throw new Error(
-                `${methodName}: Attribute "data-${dataName}" does not exist.`
+                `${methodName}: Value "${value}" not found in "data-${dataName}".`
             );
         }
 
-        let values = new Set(currentValue.trim().split(/\s+/));
         values.delete(value);
-
         if (values.size > 0) {
             root.setAttribute(`data-${dataName}`, Array.from(values).join(' '));
         } else {
@@ -163,36 +162,37 @@ export const removeDataAttrValue = (root, dataName, value) => {
  * @returns {boolean} True if the value was replaced successfully, false otherwise.
  * @throws {Error} If the old value is not found in the data attribute or if invalid arguments are provided.
  */
-export const replaceDataAttrValue = (root, dataName, oldValue, newValue) => {
-    const methodName = 'replaceDataAttrValue';
+export const replaceDataAttrValue =
+    (root) => (dataName, oldValue) => (newValue) => {
+        const methodName = 'replaceDataAttrValue';
 
-    if (
-        validElementWithDataAttr(root, dataName) &&
-        isString(oldValue) &&
-        isString(newValue)
-    ) {
-        const currentValue = root.getAttribute(`data-${dataName}`);
-        if (!currentValue) {
-            throw new Error(
-                `${methodName}: Attribute "data-${dataName}" does not exist.`
-            );
+        if (
+            validElementWithDataAttr(root, dataName) &&
+            isString(oldValue) &&
+            isString(newValue)
+        ) {
+            const currentValue = root.getAttribute(`data-${dataName}`);
+            if (!currentValue) {
+                throw new Error(
+                    `${methodName}: Attribute "data-${dataName}" does not exist.`
+                );
+            }
+
+            const values = currentValue.trim().split(/\s+/);
+            const index = values.indexOf(oldValue);
+
+            if (index === -1) {
+                throw new Error(
+                    `${methodName}: Value "${oldValue}" not found in "data-${dataName}".`
+                );
+            }
+
+            values[index] = newValue;
+            root.setAttribute(`data-${dataName}`, values.join(' '));
+            return true;
         }
-
-        const values = currentValue.trim().split(/\s+/);
-        const index = values.indexOf(oldValue);
-
-        if (index === -1) {
-            throw new Error(
-                `${methodName}: Value "${oldValue}" not found in "data-${dataName}".`
-            );
-        }
-
-        values[index] = newValue;
-        root.setAttribute(`data-${dataName}`, values.join(' '));
-        return true;
-    }
-    throw new Error(`${methodName}: Invalid arguments provided.`);
-};
+        throw new Error(`${methodName}: Invalid arguments provided.`);
+    };
 
 /**
  * Checks if an element has a specific data attribute and optional value.

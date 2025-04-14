@@ -68,13 +68,13 @@ export const setDataAttr =
 /**
  * Appends a value to a data attribute on an element.
  *
- * @param {Element|Document|DocumentFragment} root - The element to modify. Must be a valid DOM element.
+ * @param {Element} root - The element to modify. Must be a valid DOM element.
  * @param {string} dataName - The name of the data attribute. Must be a valid string.
  * @param {string} value - The value to append to the data attribute. Must be a valid string.
  * @returns {boolean} True if the value was appended successfully, false otherwise.
  * @throws {Error} If the value already exists in the data attribute or if invalid arguments are provided.
  */
-export const appendDataAttrValue = (root) => (dataName, value) => {
+export const appendDataAttrValue = (root, dataName, value) => {
     const methodName = 'appendDataAttrValue';
     if (validElementWithDataAttr(root, dataName) && validDataAttrValue(value)) {
         const currentValue = root.getAttribute(`data-${dataName}`) || '';
@@ -116,13 +116,13 @@ export const removeDataAttr = (root, dataName) => {
 /**
  * Removes a specific value from a data attribute on an element.
  *
- * @param {Element|Document|DocumentFragment} root - The element to modify. Must be a valid DOM element.
+ * @param {Element} root - The element to modify. Must be a valid DOM element.
  * @param {string} dataName - The name of the data attribute. Must be a valid string.
  * @param {string} value - The value to remove from the data attribute. Must be a valid string.
  * @returns {boolean} True if the value was removed successfully, false otherwise.
- * @throws {Error} If the attribute does not exist or if invalid arguments are provided.
+ * @throws {Error} If the value does not exist in the data attribute or if invalid arguments are provided.
  */
-export const removeDataAttrValue = (root) => (dataName, value) => {
+export const removeDataAttrValue = (root, dataName, value) => {
     const methodName = 'removeDataAttrValue';
 
     if (validElementWithDataAttr(root, dataName) && validDataAttrValue(value)) {

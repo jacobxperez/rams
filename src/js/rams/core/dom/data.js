@@ -80,7 +80,7 @@ export const setDataAttr =
  * @returns {boolean} True if the value was appended successfully, false otherwise.
  * @throws {Error} If the value already exists in the data attribute or if invalid arguments are provided.
  */
-export const appendDataAttrValue = (root, dataName, value) => {
+export const appendDataAttrValue = (root) => (dataName, value) => {
     const methodName = 'appendDataAttrValue';
     if (
         isValidElementWithDataAttr(root, dataName) &&
@@ -109,7 +109,7 @@ export const appendDataAttrValue = (root, dataName, value) => {
  * @param {string} dataName - The name of the data attribute. Must be a valid string.
  * @returns {boolean} True if the attribute was removed successfully, false otherwise.
  */
-export const removeDataAttr = (root, dataName) => {
+export const removeDataAttr = (root) => (dataName) => {
     if (isValidElementWithDataAttr(root, dataName)) {
         if (!root.hasAttribute(`data-${dataName}`)) {
             // Return false instead of throwing an error if the attribute does not exist.
@@ -131,7 +131,7 @@ export const removeDataAttr = (root, dataName) => {
  * @returns {boolean} True if the value was removed successfully, false otherwise.
  * @throws {Error} If the value does not exist in the data attribute or if invalid arguments are provided.
  */
-export const removeDataAttrValue = (root, dataName, value) => {
+export const removeDataAttrValue = (root) => (dataName, value) => {
     const methodName = 'removeDataAttrValue';
 
     if (

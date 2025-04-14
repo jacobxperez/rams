@@ -120,60 +120,6 @@ export const isNullable = (validator) => (value) =>
 export const isOptional = (validator) => (value) =>
     value === undefined || validator(value);
 
-/**
- * Creates a validator that checks if a value is one of the provided options.
- *
- * @param {...any} options - The allowed values to check against.
- * @returns {Function} A validator function that returns true if the value matches one of the options, otherwise false.
- */
-export const a =
-    (...options) =>
-    (value) =>
-        options.some((option) => option(value));
-
-/**
- * Checks if any of the provided asynchronous validator functions pass for a given value.
- *
- * @param {Function[]} validators - An array of asynchronous validator functions to check.
- * @returns {Function} A function that returns a Promise resolving to true if any validator passes, otherwise false.
- */
-export const b = (validators) => async (value) => {
-    for (const validator of validators) {
-        if (await validator(value)) {
-            return true;
-        }
-    }
-    return false;
-};
-
-/**
- * Checks if all provided validator functions pass for a given value.
- *
- * @param {...Function} validators - The validator functions to check.
- * @returns {Function} A function that returns true if all validators pass, otherwise false.
- */
-export const c =
-    (...validators) =>
-    (value) =>
-        validators.every((validator) => validator(value));
-
-/**
- * Checks if all provided asynchronous validator functions pass for a given value.
- *
- * @param {...Function} validators - The asynchronous validator functions to check.
- * @returns {Function} A function that returns a Promise resolving to true if all validators pass, otherwise false.
- */
-export const d =
-    (...validators) =>
-    async (value) => {
-        for (const validator of validators) {
-            if (!(await validator(value))) {
-                return false;
-            }
-        }
-        return true;
-    };
-
 export const anyPass =
     (...validators) =>
     (...values) =>
@@ -222,7 +168,6 @@ export const ifPass =
     (validate) =>
     (callback) => {
         if (validate) {
-            // Pass the array `value` as a single argument to `allPass`
             return callback();
         }
         console.warn('Validator failed:');

@@ -24,9 +24,9 @@ export const toggle = (...args) => {
         clickedSet.forEach((item) => {
             if (
                 resetSet.has(item.dataset.toggle) &&
-                hasDataAttr(item, 'state', 'active')
+                hasDataAttr(item)('state', 'active')
             ) {
-                toggleDataAttrValue(item, 'state', 'active', 'inactive');
+                toggleDataAttrValue(item)('state', 'active')('inactive');
             }
         });
     }
@@ -37,21 +37,21 @@ export const toggle = (...args) => {
      * @param {Element} targetToggle - The element to toggle.
      */
     function toggleState(targetToggle) {
-        const dropBox = closestDataAttr(targetToggle, 'dropbox');
-        const checkState = hasDataAttr(targetToggle, 'state', 'active');
+        const dropBox = closestDataAttr(targetToggle)('dropbox');
+        const checkState = hasDataAttr(targetToggle)('state', 'active');
 
         if (!dropBox && !checkState) {
             reset();
         }
 
-        toggleDataAttrValue(targetToggle, 'state', 'active', 'inactive');
+        toggleDataAttrValue(targetToggle)('state', 'active')('inactive');
     }
 
     /**
      * Handles click events to manage toggle behavior.
      */
     document.addEventListener('click', (e) => {
-        const targetToggle = closestDataAttr(e.target, 'toggle');
+        const targetToggle = closestDataAttr(e.target)('toggle');
         if (!targetToggle) {
             reset();
             return;

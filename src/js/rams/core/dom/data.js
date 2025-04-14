@@ -1,12 +1,7 @@
-import {
-    isString,
-    isDomElement,
-    isOptional,
-    isEmpty,
-    allPass,
-} from '../validators/standard.js';
+import {isString, isDomElement, isOptional} from '../validators/standard.js';
 
-const validElementWithDataAttr = allPass(isDomElement, isString);
+const validElementWithDataAttr = (root, dataName) =>
+    isDomElement(root) && isString(dataName);
 const validDataAttrValue = (value) => isOptional(value) || isString(value);
 
 /**
@@ -63,7 +58,7 @@ export const getAllWithDataAttr = (root) => (dataName, value) => {
 export const setDataAttr =
     (root) =>
     (dataName, value = '') => {
-        if (validElementWithDataAttr(root, dataName) || isEmpty(value)) {
+        if (validElementWithDataAttr(root, dataName)) {
             root.setAttribute(`data-${dataName}`, value);
             return true;
         }
@@ -81,7 +76,7 @@ export const setDataAttr =
  */
 export const appendDataAttrValue = (root) => (dataName, value) => {
     const methodName = 'appendDataAttrValue';
-    if (isDomElement(root) && isString(dataName) && isString(value)) {
+    if (validElementWithDataAttr(root, dataName) && validDataAttrValue(value)) {
         const currentValue = root.getAttribute(`data-${dataName}`) || '';
         const values = new Set(currentValue.split(/\s+/).filter(Boolean));
 
@@ -106,7 +101,7 @@ export const appendDataAttrValue = (root) => (dataName, value) => {
  * @returns {boolean} True if the attribute was removed successfully, false otherwise.
  */
 export const removeDataAttr = (root, dataName) => {
-    if (isDomElement(root) && isString(dataName)) {
+    if (validElementWithDataAttr(root, dataName)) {
         if (!root.hasAttribute(`data-${dataName}`)) {
             // Return false instead of throwing an error if the attribute does not exist.
             return false;
@@ -130,7 +125,7 @@ export const removeDataAttr = (root, dataName) => {
 export const removeDataAttrValue = (root) => (dataName, value) => {
     const methodName = 'removeDataAttrValue';
 
-    if (isDomElement(root) && isString(dataName) && isString(value)) {
+    if (validElementWithDataAttr(root, dataName) && validDataAttrValue(value)) {
         const currentValue = root.getAttribute(`data-${dataName}`) || '';
         const values = new Set(currentValue.split(/\s+/).filter(Boolean));
 
@@ -295,8 +290,7 @@ export const toggleDataAttr = (root) => (dataName, value) => {
  */
 export const toggleDataAttrValue = (root) => (dataName, value1) => (value2) => {
     if (
-        isDomElement(root) &&
-        isString(dataName) &&
+        validElementWithDataAttr(root, dataName) &&
         isString(value1) &&
         isString(value2)
     ) {

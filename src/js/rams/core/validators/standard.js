@@ -103,10 +103,9 @@ export const isBoolean = isTypeOf('boolean');
  * @returns {boolean} True if the value is empty, otherwise false.
  */
 export const isEmpty = (value) => {
-    if (isString(value)) return isString(value) && value.trim() === '';
-    if (isArray(value)) return isArray(value) && value.length === 0;
-    if (isObject(value))
-        return isObject(value) && Object.keys(value).length === 0;
+    if (isString(value)) return value.trim() === '';
+    if (isArray(value)) return value.length === 0;
+    if (isObject(value)) return Object.keys(value).length === 0;
     return false;
 };
 
@@ -151,13 +150,11 @@ export const anyPassAsync =
     async (...values) => {
         if (validators.length !== values.length) return false;
 
-        for (let i = 0; i < validators.length; i++) {
-            if (await validators[i](values[i])) {
-                return true;
-            }
-        }
+        const results = await Promise.all(
+            validators.map((validator, i) => validator(values[i]))
+        );
 
-        return false;
+        return results.some(Boolean);
     };
 
 /**

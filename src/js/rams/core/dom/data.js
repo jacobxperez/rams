@@ -1,13 +1,13 @@
 import {
     isString,
     isDomElement,
-    allPass,
     isOptional,
     isEmpty,
-    ifPass,
+    allPass,
 } from '../validators/standard.js';
 
 const validElementWithDataAttr = allPass(isDomElement, isString);
+const validDataAttrValue = (value) => isOptional(value) || isString(value);
 
 /**
  * Generates a CSS selector for a data attribute with an optional value.
@@ -29,10 +29,7 @@ function optionalDataAttrValue(dataName, value) {
  * @returns {HTMLElement|null} The first matching element, or null if no match is found.
  */
 export const getFirstWithDataAttr = (root, dataName, value) => {
-    if (
-        validElementWithDataAttr(root, dataName) &&
-        (isOptional(value) || isString(value))
-    ) {
+    if (validElementWithDataAttr(root, dataName) && validDataAttrValue(value)) {
         return root.querySelector(optionalDataAttrValue(dataName, value));
     }
     return null;
@@ -47,10 +44,7 @@ export const getFirstWithDataAttr = (root, dataName, value) => {
  * @returns {HTMLElement[]} An array of matching elements.
  */
 export const getAllWithDataAttr = (root, dataName, value) => {
-    if (
-        validElementWithDataAttr(root, dataName) &&
-        (isOptional(value) || isString(value))
-    ) {
+    if (validElementWithDataAttr(root, dataName) && validDataAttrValue(value)) {
         return Array.from(
             root.querySelectorAll(optionalDataAttrValue(dataName, value))
         );
@@ -170,8 +164,7 @@ export const replaceDataAttrValue = (root, dataName, oldValue, newValue) => {
     const methodName = 'replaceDataAttrValue';
 
     if (
-        isDomElement(root) &&
-        isString(dataName) &&
+        validElementWithDataAttr(root, dataName) &&
         isString(oldValue) &&
         isString(newValue)
     ) {
@@ -206,8 +199,8 @@ export const replaceDataAttrValue = (root, dataName, oldValue, newValue) => {
  * @param {string|null} [value=null] - The value of the data attribute (optional). If null, checks for the presence of the attribute regardless of its value.
  * @returns {boolean} True if the element has the data attribute and value, false otherwise.
  */
-export const hasDataAttr = (root, dataName, value) => {
-    if (isDomElement(root) && isString(dataName)) {
+export const hasDataAttr = (root) => (dataName, value) => {
+    if (validElementWithDataAttr(root, dataName)) {
         if (!root.hasAttribute(`data-${dataName}`)) return false;
 
         if (value === null) return true;
@@ -229,8 +222,8 @@ export const hasDataAttr = (root, dataName, value) => {
  * @param {string} dataName - The name of the data attribute. Must be a valid string.
  * @returns {boolean} True if the data attribute is empty or does not exist, false otherwise.
  */
-export const dataAttrIsEmpty = (root, dataName) => {
-    if (isDomElement(root) && isString(dataName)) {
+export const dataAttrIsEmpty = (root) => (dataName) => {
+    if (validElementWithDataAttr(root, dataName)) {
         let dataAttr = root.getAttribute(`data-${dataName}`);
         return dataAttr === null || dataAttr.trim() === '';
     }
@@ -247,21 +240,11 @@ export const dataAttrIsEmpty = (root, dataName) => {
  */
 
 export const closestDataAttr = (root) => (dataName, value) => {
-    return ifPass(validElementWithDataAttr(root, dataName))(() => {
-        if (isOptional(value) || isString(value)) {
-            return root.closest(optionalDataAttrValue(dataName, value));
-        }
-    });
+    if (validElementWithDataAttr(root, dataName) && validDataAttrValue(value)) {
+        return root.closest(optionalDataAttrValue(dataName, value));
+    }
+    return null;
 };
-
-// export const closestDataAttr = (root) => (dataName, value) => {
-//     if (
-//         validElementWithDataAttr(root, dataName) &&
-//         (isOptional(value) || isString(value))
-//     ) {
-//         return root.closest(optionalDataAttrValue(dataName, value));
-//     }
-// };
 
 /**
  * Checks if an element matches a specific data attribute and optional value.
@@ -271,11 +254,8 @@ export const closestDataAttr = (root) => (dataName, value) => {
  * @param {string|null} [value=null] - The value of the data attribute (optional).
  * @returns {boolean} True if the element matches the data attribute and value, false otherwise.
  */
-export const matchesDataAttr = (root, dataName, value) => {
-    if (
-        validElementWithDataAttr(root, dataName) &&
-        (isOptional(value) || isString(value))
-    ) {
+export const matchesDataAttr = (root) => (dataName, value) => {
+    if (validElementWithDataAttr(root, dataName) && validDataAttrValue(value)) {
         return root.matches(optionalDataAttrValue(dataName, value));
     }
     return false;
@@ -289,11 +269,8 @@ export const matchesDataAttr = (root, dataName, value) => {
  * @param {string|null} [value=null] - The value of the data attribute (optional).
  * @returns {boolean} True if the attribute was added, false if it was removed.
  */
-export const toggleDataAttr = (root, dataName, value) => {
-    if (
-        validElementWithDataAttr(root, dataName) &&
-        (isOptional(value) || isString(value))
-    ) {
+export const toggleDataAttr = (root) => (dataName, value) => {
+    if (validElementWithDataAttr(root, dataName) && validDataAttrValue(value)) {
         const currentValue = root.getAttribute(`data-${dataName}`);
         if (currentValue === value || (value === '' && currentValue !== null)) {
             root.removeAttribute(`data-${dataName}`);
@@ -314,7 +291,7 @@ export const toggleDataAttr = (root, dataName, value) => {
  * @param {string} value2 - The second value to toggle.
  * @returns {string|boolean} The new value of the data attribute, or false if the operation failed.
  */
-export const toggleDataAttrValue = (root, dataName, value1, value2) => {
+export const toggleDataAttrValue = (root) => (dataName, value1) => (value2) => {
     if (
         isDomElement(root) &&
         isString(dataName) &&

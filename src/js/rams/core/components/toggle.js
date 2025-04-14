@@ -24,9 +24,9 @@ export const toggle = (...args) => {
         clickedSet.forEach((item) => {
             if (
                 resetSet.has(item.dataset.toggle) &&
-                hasDataAttr(item, 'state', 'active')
+                hasDataAttr(item)('state', 'active')
             ) {
-                toggleDataAttrValue(item, 'state', 'active', 'inactive');
+                toggleDataAttrValue(item)('state', 'active')('inactive');
             }
         });
     }
@@ -38,13 +38,13 @@ export const toggle = (...args) => {
      */
     function toggleState(targetToggle) {
         const dropBox = closestDataAttr(targetToggle)('dropbox');
-        const checkState = hasDataAttr(targetToggle, 'state', 'active');
+        const checkState = hasDataAttr(targetToggle)('state', 'active');
 
         if (!dropBox && !checkState) {
             reset();
         }
 
-        toggleDataAttrValue(targetToggle, 'state', 'active', 'inactive');
+        toggleDataAttrValue(targetToggle)('state', 'active')('inactive');
     }
 
     /**

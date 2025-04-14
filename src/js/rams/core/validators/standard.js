@@ -126,7 +126,7 @@ export const isOptional = (validator) => (value) =>
  * @param {...any} options - The allowed values to check against.
  * @returns {Function} A validator function that returns true if the value matches one of the options, otherwise false.
  */
-export const onePass =
+export const a =
     (...options) =>
     (value) =>
         options.some((option) => option(value));
@@ -137,7 +137,7 @@ export const onePass =
  * @param {Function[]} validators - An array of asynchronous validator functions to check.
  * @returns {Function} A function that returns a Promise resolving to true if any validator passes, otherwise false.
  */
-export const onePassAsync = (validators) => async (value) => {
+export const b = (validators) => async (value) => {
     for (const validator of validators) {
         if (await validator(value)) {
             return true;
@@ -152,10 +152,10 @@ export const onePassAsync = (validators) => async (value) => {
  * @param {...Function} validators - The validator functions to check.
  * @returns {Function} A function that returns true if all validators pass, otherwise false.
  */
-export const allPass =
+export const c =
     (...validators) =>
-    (...value) =>
-        validators.every((validator) => validator(...value));
+    (value) =>
+        validators.every((validator) => validator(value));
 
 /**
  * Checks if all provided asynchronous validator functions pass for a given value.
@@ -163,7 +163,7 @@ export const allPass =
  * @param {...Function} validators - The asynchronous validator functions to check.
  * @returns {Function} A function that returns a Promise resolving to true if all validators pass, otherwise false.
  */
-export const allPassAsync =
+export const d =
     (...validators) =>
     async (value) => {
         for (const validator of validators) {
@@ -174,6 +174,44 @@ export const allPassAsync =
         return true;
     };
 
+export const anyPass =
+    (...validators) =>
+    (...values) =>
+        validators.length === values.length &&
+        validators.some((validator, i) => validator(values[i]));
+
+export const anyPassAsync =
+    (...validators) =>
+    async (...values) => {
+        if (validators.length !== values.length) return false;
+
+        for (let i = 0; i < validators.length; i++) {
+            if (await validators[i](values[i])) {
+                return true;
+            }
+        }
+
+        return false;
+    };
+
+export const allPass =
+    (...validators) =>
+    (...values) =>
+        validators.length === values.length &&
+        validators.every((validator, i) => validator(values[i]));
+
+export const allPassAsync =
+    (...validators) =>
+    async (...values) => {
+        if (validators.length !== values.length) return false;
+
+        const results = await Promise.all(
+            validators.map((validator, i) => validator(values[i]))
+        );
+
+        return results.every(Boolean);
+    };
+
 /**
  * Creates a function that executes a callback if all provided validators pass for a given value.
  *
@@ -181,13 +219,12 @@ export const allPassAsync =
  * @returns {Function} A function that takes a callback and a value. The callback is executed with the value if all validators pass, otherwise false is returned.
  */
 export const ifPass =
-    (...validators) =>
-    (callback) =>
-    (...value) => {
-        if (allPass(...validators)(...value)) {
+    (validate) =>
+    (callback) => {
+        if (validate) {
             // Pass the array `value` as a single argument to `allPass`
-            return callback(...value);
+            return callback();
         }
-        console.warn('Validator failed:', ...value);
+        console.warn('Validator failed:');
         return false;
     };

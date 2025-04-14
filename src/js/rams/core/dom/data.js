@@ -80,7 +80,7 @@ export const setDataAttr =
  * @returns {boolean} True if the value was appended successfully, false otherwise.
  * @throws {Error} If the value already exists in the data attribute or if invalid arguments are provided.
  */
-export const appendDataAttrValue = (root, dataName, value) => {
+export const appendDataAttrValue = (root) => (dataName, value) => {
     const methodName = 'appendDataAttrValue';
     if (
         isValidElementWithDataAttr(root, dataName) &&
@@ -109,7 +109,7 @@ export const appendDataAttrValue = (root, dataName, value) => {
  * @param {string} dataName - The name of the data attribute. Must be a valid string.
  * @returns {boolean} True if the attribute was removed successfully, false otherwise.
  */
-export const removeDataAttr = (root, dataName) => {
+export const removeDataAttr = (root) => (dataName) => {
     if (isValidElementWithDataAttr(root, dataName)) {
         if (!root.hasAttribute(`data-${dataName}`)) {
             // Return false instead of throwing an error if the attribute does not exist.
@@ -131,7 +131,7 @@ export const removeDataAttr = (root, dataName) => {
  * @returns {boolean} True if the value was removed successfully, false otherwise.
  * @throws {Error} If the value does not exist in the data attribute or if invalid arguments are provided.
  */
-export const removeDataAttrValue = (root, dataName, value) => {
+export const removeDataAttrValue = (root) => (dataName, value) => {
     const methodName = 'removeDataAttrValue';
 
     if (
@@ -169,37 +169,36 @@ export const removeDataAttrValue = (root, dataName, value) => {
  * @returns {boolean} True if the value was replaced successfully, false otherwise.
  * @throws {Error} If the old value is not found in the data attribute or if invalid arguments are provided.
  */
-export const replaceDataAttrValue =
-    (root) => (dataName, oldValue) => (newValue) => {
-        const methodName = 'replaceDataAttrValue';
+export const replaceDataAttrValue = (root) => (dataName, oldValue) => (newValue) => {
+    const methodName = 'replaceDataAttrValue';
 
-        if (
-            isValidElementWithDataAttr(root, dataName) &&
-            isString(oldValue) &&
-            isString(newValue)
-        ) {
-            const currentValue = root.getAttribute(`data-${dataName}`);
-            if (!currentValue) {
-                throw new Error(
-                    `${methodName}: Attribute "data-${dataName}" does not exist.`
-                );
-            }
-
-            const values = currentValue.trim().split(/\s+/);
-            const index = values.indexOf(oldValue);
-
-            if (index === -1) {
-                throw new Error(
-                    `${methodName}: Value "${oldValue}" not found in "data-${dataName}".`
-                );
-            }
-
-            values[index] = newValue;
-            root.setAttribute(`data-${dataName}`, values.join(' '));
-            return true;
+    if (
+        isValidElementWithDataAttr(root, dataName) &&
+        isString(oldValue) &&
+        isString(newValue)
+    ) {
+        const currentValue = root.getAttribute(`data-${dataName}`);
+        if (!currentValue) {
+            throw new Error(
+                `${methodName}: Attribute "data-${dataName}" does not exist.`
+            );
         }
-        throw new Error(`${methodName}: Invalid arguments provided.`);
-    };
+
+        const values = currentValue.trim().split(/\s+/);
+        const index = values.indexOf(oldValue);
+
+        if (index === -1) {
+            throw new Error(
+                `${methodName}: Value "${oldValue}" not found in "data-${dataName}".`
+            );
+        }
+
+        values[index] = newValue;
+        root.setAttribute(`data-${dataName}`, values.join(' '));
+        return true;
+    }
+    throw new Error(`${methodName}: Invalid arguments provided.`);
+};
 
 /**
  * Checks if an element has a specific data attribute and optional value.

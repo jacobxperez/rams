@@ -119,7 +119,7 @@ export const isInstanceOf =
     };
 
 /**
- * Creates a validator that allows null or validates using the provided validator.
+ * Checks if the provided value is null or passes the provided validator.
  *
  * @param {Function} validator - The validator function to use if the value is not null.
  * @returns {Function} A validator function that returns true if the value is null or passes the provided validator, otherwise false.
@@ -136,19 +136,29 @@ export const isNullable = (validator) => (value) =>
 export const isOptional = (validator) => (value) =>
     value === undefined || validator(value);
 
-
+/**
+ * Checks if any of the provided validators return true.
+ *
+ * @param {...boolean} validators - The validators to check.
+ * @returns {boolean} True if any validator returns true, otherwise false.
+ */
 export const anyValid = (...validators) =>
     validators.some((validator) => validator === true);
 
-
+/**
+ * Checks if all of the provided validators return true.
+ *
+ * @param {...boolean} validators - The validators to check.
+ * @returns {boolean} True if all validators return true, otherwise false.
+ */
 export const allValid = (...validators) =>
     validators.every((validator) => validator === true);
 
 /**
- * Creates a function that executes a callback if the provided validation condition passes.
+ * Executes a callback if the provided validator function returns true.
  *
- * @param {Function} validator - The validation function to check.
- * @returns {Function} A function that takes a callback and executes it if the validation condition passes, otherwise returns false.
+ * @param {Function} validator - The validator function to check.
+ * @returns {Function} A function that takes a callback to execute if the validator passes.
  */
 export const ifValid = (validator) => (callback) => {
     if (validator()) {

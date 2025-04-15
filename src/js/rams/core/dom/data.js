@@ -315,7 +315,7 @@ export const toggleDataAttr = (root) => (dataName, value) => {
 export const toggleDataAttrValue = (root) => (dataName, value1) => (value2) => {
     if (
         isValidElementWithDataAttr(root, dataName) &&
-        isString(value1) &&
+        isValidDataAttrValue(value1) &&
         isString(value2)
     ) {
         const currentValue = root.getAttribute(`data-${dataName}`);

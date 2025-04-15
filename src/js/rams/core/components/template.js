@@ -4,6 +4,7 @@ export const template = {
      *
      * @param {string} string - The HTML string to insert. Must be a valid HTML string.
      * @param {string} targetSelector - The CSS selector of the target element where the HTML will be inserted.
+     * @throws {Error} If the target element is not found.
      */
     _string(string, targetSelector) {
         const stringTrim = string.trim();
@@ -23,6 +24,8 @@ export const template = {
      * @param {Document|HTMLElement} sourceElement - The source element containing the template. Must be a valid DOM element.
      * @param {string} templateSelector - The CSS selector of the template to append. Must be a valid string.
      * @param {string} targetSelector - The CSS selector of the target element where the template will be appended. Must be a valid string.
+     * @throws {Error} If the source element, template selector, or target selector is invalid.
+     * @throws {Error} If the template or target element is not found.
      */
     _append(sourceElement, templateSelector, targetSelector) {
         if (!sourceElement || !templateSelector || !targetSelector) {
@@ -54,6 +57,7 @@ export const template = {
      * @param {string} string - The string to parse. Must be a valid string.
      * @param {string} [mimeType='text/html'] - The MIME type to use for parsing. Defaults to 'text/html'.
      * @returns {Document|null} The parsed document, or null if parsing failed.
+     * @throws {Error} If parsing results in a null document.
      */
     parser(string, mimeType = 'text/html') {
         try {
@@ -75,6 +79,7 @@ export const template = {
      * @param {string} id - The ID to assign to the template element. Must be a valid string.
      * @param {string} [parentSelector='body'] - The CSS selector of the parent element where the template will be appended. Defaults to 'body'.
      * @returns {HTMLTemplateElement|null} The created template element, or null if creation failed.
+     * @throws {Error} If the HTML string or ID is invalid, or if the parent element is not found.
      */
     create(html, id, parentSelector = 'body') {
         if (typeof html !== 'string' || !id) {
@@ -103,8 +108,8 @@ export const template = {
      *
      * @param {string} string - The HTML string to insert.
      * @param {string} targetSelector - The CSS selector of the target element.
-     * @param {Function|null} [callback] - Optional callback function to execute after insertion.
      * @returns {Promise<void>} A promise that resolves when the operation is complete.
+     * @throws {Error} If the source is not a string.
      */
     async string(string, targetSelector) {
         try {
@@ -127,8 +132,8 @@ export const template = {
      *
      * @param {string} templateSelector - The CSS selector of the template to append.
      * @param {string} targetSelector - The CSS selector of the target element.
-     * @param {Function|null} [callback] - Optional callback function to execute after appending.
      * @returns {Promise<void>} A promise that resolves when the operation is complete.
+     * @throws {Error} If the template selector is missing.
      */
     async append(templateSelector, targetSelector) {
         try {
@@ -150,6 +155,7 @@ export const template = {
      * @param {string} url - The URL to fetch the HTML document from.
      * @param {string|null} [templateSelector=null] - Optional CSS selector of a specific template to append.
      * @returns {Promise<void>} A promise that resolves when the operation is complete.
+     * @throws {Error} If the fetch operation fails or the response is not OK.
      */
     async fetch(url, templateSelector = null) {
         try {
@@ -183,6 +189,8 @@ export const template = {
 
     /**
      * Removes all <template> elements from the document.
+     *
+     * @throws {Error} If no <template> elements are found.
      */
     removeAll() {
         document

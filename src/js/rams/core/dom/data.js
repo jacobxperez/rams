@@ -1,4 +1,4 @@
-import {isString, isDomElement, isOptional} from '../validators/standard.js';
+import {isString, isDomElement, isOptional} from '../validators/valid.js';
 
 const isValidElementWithDataAttr = (root, dataName) =>
     isDomElement(root) && isString(dataName);
@@ -64,7 +64,10 @@ export const getAllWithDataAttr = (root) => (dataName, value) => {
 export const setDataAttr =
     (root) =>
     (dataName, value = '') => {
-        if (isValidElementWithDataAttr(root, dataName)) {
+        if (
+            isValidElementWithDataAttr(root, dataName) &&
+            isValidDataAttrValue(value)
+        ) {
             root.setAttribute(`data-${dataName}`, value);
             return true;
         }
@@ -169,36 +172,37 @@ export const removeDataAttrValue = (root) => (dataName, value) => {
  * @returns {boolean} True if the value was replaced successfully, false otherwise.
  * @throws {Error} If the old value is not found in the data attribute or if invalid arguments are provided.
  */
-export const replaceDataAttrValue = (root) => (dataName, oldValue) => (newValue) => {
-    const methodName = 'replaceDataAttrValue';
+export const replaceDataAttrValue =
+    (root) => (dataName, oldValue) => (newValue) => {
+        const methodName = 'replaceDataAttrValue';
 
-    if (
-        isValidElementWithDataAttr(root, dataName) &&
-        isString(oldValue) &&
-        isString(newValue)
-    ) {
-        const currentValue = root.getAttribute(`data-${dataName}`);
-        if (!currentValue) {
-            throw new Error(
-                `${methodName}: Attribute "data-${dataName}" does not exist.`
-            );
+        if (
+            isValidElementWithDataAttr(root, dataName) &&
+            isString(oldValue) &&
+            isString(newValue)
+        ) {
+            const currentValue = root.getAttribute(`data-${dataName}`);
+            if (!currentValue) {
+                throw new Error(
+                    `${methodName}: Attribute "data-${dataName}" does not exist.`
+                );
+            }
+
+            const values = currentValue.trim().split(/\s+/);
+            const index = values.indexOf(oldValue);
+
+            if (index === -1) {
+                throw new Error(
+                    `${methodName}: Value "${oldValue}" not found in "data-${dataName}".`
+                );
+            }
+
+            values[index] = newValue;
+            root.setAttribute(`data-${dataName}`, values.join(' '));
+            return true;
         }
-
-        const values = currentValue.trim().split(/\s+/);
-        const index = values.indexOf(oldValue);
-
-        if (index === -1) {
-            throw new Error(
-                `${methodName}: Value "${oldValue}" not found in "data-${dataName}".`
-            );
-        }
-
-        values[index] = newValue;
-        root.setAttribute(`data-${dataName}`, values.join(' '));
-        return true;
-    }
-    throw new Error(`${methodName}: Invalid arguments provided.`);
-};
+        throw new Error(`${methodName}: Invalid arguments provided.`);
+    };
 
 /**
  * Checks if an element has a specific data attribute and optional value.
@@ -311,7 +315,7 @@ export const toggleDataAttr = (root) => (dataName, value) => {
 export const toggleDataAttrValue = (root) => (dataName, value1) => (value2) => {
     if (
         isValidElementWithDataAttr(root, dataName) &&
-        isString(value1) &&
+        isValidDataAttrValue(value1) &&
         isString(value2)
     ) {
         const currentValue = root.getAttribute(`data-${dataName}`);

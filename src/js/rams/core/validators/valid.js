@@ -24,6 +24,15 @@ export const isOptional = (validator) => (value) =>
     value === undefined || validator(value);
 
 /**
+ * Creates a validator that allows null or passes the provided validator.
+ *
+ * @param {Function} validator - The validator function to use if the value is not null.
+ * @returns {Function} A validator function that returns true if the value is null or passes the provided validator, otherwise false.
+ */
+export const isNullable = (validator) => (value) =>
+    value === null || isOptional(validator)(value);
+
+/**
  * Checks if the provided value matches any of the provided types using typeof.
  *
  * @param {...string} types - The types to check against.
@@ -126,15 +135,6 @@ export const isEmpty = (value) => {
     if (isObject(value)) return Object.keys(value).length === 0;
     return false; // Return false for unsupported types
 };
-
-/**
- * Checks if the provided value is null or passes the provided validator.
- *
- * @param {Function} validator - The validator function to use if the value is not null.
- * @returns {Function} A validator function that returns true if the value is null or passes the provided validator, otherwise false.
- */
-export const isNullable = (validator) => (value) =>
-    value === null || isOptional(validator)(value);
 
 /**
  * Checks if any of the provided validators return true.

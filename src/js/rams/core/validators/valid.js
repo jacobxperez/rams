@@ -136,27 +136,13 @@ export const isNullable = (validator) => (value) =>
 export const isOptional = (validator) => (value) =>
     value === undefined || validator(value);
 
-/**
- * Creates a validator that checks if any of the provided validators pass for their corresponding values.
- *
- * @param {...Function} validators - The validator functions to check.
- * @returns {Function} A function that takes a value and returns true if any validator passes for the value, otherwise false.
- */
-export const anyValid =
-    (...validators) =>
-    (value) =>
-        validators.some((validator) => validator(value));
 
-/**
- * Creates a validator that checks if all of the provided validators pass for their corresponding values.
- *
- * @param {...Function} validators - The validator functions to check.
- * @returns {Function} A function that takes a value and returns true if all validators pass for the value, otherwise false.
- */
-export const allValid =
-    (...validators) =>
-    (value) =>
-        validators.every((validator) => validator(value));
+export const anyValid = (...validators) =>
+    validators.some((validator) => validator === true);
+
+
+export const allValid = (...validators) =>
+    validators.every((validator) => validator === true);
 
 /**
  * Creates a function that executes a callback if the provided validation condition passes.

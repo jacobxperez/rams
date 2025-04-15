@@ -1,4 +1,4 @@
-import {isString, isDomElement, isOptional} from '../validators/standard.js';
+import {isString, isDomElement, isOptional} from '../validators/valid.js';
 
 const isValidElementWithDataAttr = (root, dataName) =>
     isDomElement(root) && isString(dataName);

@@ -133,7 +133,7 @@ export const isOptional = (validator) => (value) =>
  * @param {...Function} validators - The validator functions to check.
  * @returns {Function} A function that takes values and returns true if any validator passes for its corresponding value, otherwise false.
  */
-export const anyPass =
+export const anyValid =
     (...validators) =>
     (...values) =>
         validators.length === values.length &&
@@ -145,7 +145,7 @@ export const anyPass =
  * @param {...Function} validators - The validator functions to check.
  * @returns {Function} A function that takes values and returns a Promise resolving to true if any validator passes for its corresponding value, otherwise false.
  */
-export const anyPassAsync =
+export const anyValidAsync =
     (...validators) =>
     async (...values) => {
         if (validators.length !== values.length) return false;
@@ -163,7 +163,7 @@ export const anyPassAsync =
  * @param {...Function} validators - The validator functions to check.
  * @returns {Function} A function that takes values and returns true if all validators pass for their corresponding values, otherwise false.
  */
-export const allPass =
+export const allValid =
     (...validators) =>
     (...values) =>
         validators.length === values.length &&
@@ -175,7 +175,7 @@ export const allPass =
  * @param {...Function} validators - The validator functions to check.
  * @returns {Function} A function that takes values and returns a Promise resolving to true if all validators pass for their corresponding values, otherwise false.
  */
-export const allPassAsync =
+export const allValidAsync =
     (...validators) =>
     async (...values) => {
         if (validators.length !== values.length) return false;
@@ -190,11 +190,11 @@ export const allPassAsync =
 /**
  * Creates a function that executes a callback if the provided validation condition passes.
  *
- * @param {boolean} validate - The validation condition to check.
+ * @param {boolean} validator - The validation condition to check.
  * @returns {Function} A function that takes a callback and executes it if the validation condition passes, otherwise returns false.
  */
-export const ifPass = (validate) => (callback) => {
-    if (validate) {
+export const ifValid = (validator) => (callback) => {
+    if (validator) {
         return callback();
     }
     console.warn('Validator failed:');

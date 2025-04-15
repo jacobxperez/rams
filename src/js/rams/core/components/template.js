@@ -1,5 +1,3 @@
-import {isFunction} from '../validators/standard.js';
-
 export const template = {
     /**
      * Inserts a string of HTML into a target element.
@@ -108,7 +106,7 @@ export const template = {
      * @param {Function|null} [callback] - Optional callback function to execute after insertion.
      * @returns {Promise<void>} A promise that resolves when the operation is complete.
      */
-    async string(string, targetSelector, callback) {
+    async string(string, targetSelector) {
         try {
             await new Promise((resolve, reject) => {
                 if (typeof string !== 'string') {
@@ -119,9 +117,6 @@ export const template = {
             });
             this._string(string, targetSelector);
             targetSelector;
-            if (isFunction(callback, 'template.string')) {
-                callback();
-            }
         } catch (err) {
             return console.error(err);
         }
@@ -135,7 +130,7 @@ export const template = {
      * @param {Function|null} [callback] - Optional callback function to execute after appending.
      * @returns {Promise<void>} A promise that resolves when the operation is complete.
      */
-    async append(templateSelector, targetSelector, callback) {
+    async append(templateSelector, targetSelector) {
         try {
             await new Promise((resolve, reject) => {
                 if (!templateSelector)
@@ -144,9 +139,6 @@ export const template = {
             });
             this._append(document, templateSelector, targetSelector);
             targetSelector;
-            if (isFunction(callback, 'template.append')) {
-                callback();
-            }
         } catch (err) {
             return console.error(err);
         }

@@ -73,8 +73,20 @@ export const isObject = (obj) =>
  */
 export const isArray = Array.isArray;
 
+/**
+ * Checks if the provided value is a Map.
+ *
+ * @param {any} value - The value to check.
+ * @returns {boolean} True if the value is a Map, otherwise false.
+ */
 export const isMap = (value) => isInstanceOf(Map)(value);
 
+/**
+ * Checks if the provided value is a Set.
+ *
+ * @param {any} value - The value to check.
+ * @returns {boolean} True if the value is a Set, otherwise false.
+ */
 export const isSet = (value) => isInstanceOf(Set)(value);
 
 /**

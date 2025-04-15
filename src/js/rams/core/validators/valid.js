@@ -1,20 +1,4 @@
 /**
- * Creates a validator that checks if a value is an instance of any of the provided constructors.
- *
- * @param {...Function} constructors - The constructor functions to check against.
- * @returns {Function} A validator function that returns true if the value is an instance of any of the constructors, otherwise false.
- * @throws {Error} If no constructors are provided.
- */
-export const isInstanceOf =
-    (...constructors) =>
-    (value) => {
-        if (constructors.length === 0) {
-            throw new Error('No constructors provided.');
-        }
-        return constructors.some((constructor) => value instanceof constructor);
-    };
-
-/**
  * Checks if the provided value matches any of the provided types using typeof.
  *
  * @param {...string} types - The types to check against.
@@ -117,6 +101,22 @@ export const isEmpty = (value) => {
     if (isObject(value)) return Object.keys(value).length === 0;
     return false; // Return false for unsupported types
 };
+
+/**
+ * Creates a validator that checks if a value is an instance of any of the provided constructors.
+ *
+ * @param {...Function} constructors - The constructor functions to check against.
+ * @returns {Function} A validator function that returns true if the value is an instance of any of the constructors, otherwise false.
+ * @throws {Error} If no constructors are provided.
+ */
+export const isInstanceOf =
+    (...constructors) =>
+    (value) => {
+        if (constructors.length === 0) {
+            throw new Error('No constructors provided.');
+        }
+        return constructors.some((constructor) => value instanceof constructor);
+    };
 
 /**
  * Creates a validator that allows null or validates using the provided validator.

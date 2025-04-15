@@ -143,29 +143,8 @@ export const isOptional = (validator) => (value) =>
  * @param {...Function} validators - The validator functions to check.
  * @returns {Function} A function that takes values and returns true if any validator passes for its corresponding value, otherwise false.
  */
-export const anyValid =
-    (...validators) =>
-    (...values) =>
-        validators.length === values.length &&
-        validators.some((validator, i) => validator(values[i]));
-
-/**
- * Creates an asynchronous validator that checks if any of the provided validators pass for their corresponding values.
- *
- * @param {...Function} validators - The validator functions to check.
- * @returns {Function} A function that takes values and returns a Promise resolving to true if any validator passes for its corresponding value, otherwise false.
- */
-export const anyValidAsync =
-    (...validators) =>
-    async (...values) => {
-        if (validators.length !== values.length) return false;
-
-        const results = await Promise.all(
-            validators.map((validator, i) => validator(values[i]))
-        );
-
-        return results.some(Boolean);
-    };
+export const anyValid = (...validators) =>
+    validators.some((validator) => validator === true);
 
 /**
  * Creates a validator that checks if all of the provided validators pass for their corresponding values.
@@ -173,29 +152,8 @@ export const anyValidAsync =
  * @param {...Function} validators - The validator functions to check.
  * @returns {Function} A function that takes values and returns true if all validators pass for their corresponding values, otherwise false.
  */
-export const allValid =
-    (...validators) =>
-    (...values) =>
-        validators.length === values.length &&
-        validators.every((validator, i) => validator(values[i]));
-
-/**
- * Creates an asynchronous validator that checks if all of the provided validators pass for their corresponding values.
- *
- * @param {...Function} validators - The validator functions to check.
- * @returns {Function} A function that takes values and returns a Promise resolving to true if all validators pass for their corresponding values, otherwise false.
- */
-export const allValidAsync =
-    (...validators) =>
-    async (...values) => {
-        if (validators.length !== values.length) return false;
-
-        const results = await Promise.all(
-            validators.map((validator, i) => validator(values[i]))
-        );
-
-        return results.every(Boolean);
-    };
+export const allValid = (...validators) =>
+    validators.every((validator) => validator === true);
 
 /**
  * Creates a function that executes a callback if the provided validation condition passes.

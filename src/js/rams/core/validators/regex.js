@@ -1,3 +1,9 @@
+/**
+ * Creates a validator function that checks if a string matches a given regular expression pattern.
+ *
+ * @param {RegExp} pattern - The regular expression pattern to test against.
+ * @returns {Function} A function that takes a string and returns true if it matches the pattern, otherwise false.
+ */
 export const isRegexPattern = (pattern) => {
     return (str) => {
         if (typeof str !== 'string') return false;

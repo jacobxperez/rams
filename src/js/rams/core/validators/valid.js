@@ -1,20 +1,4 @@
 /**
- * Creates a validator that checks if a value is an instance of any of the provided constructors.
- *
- * @param {...Function} constructors - The constructor functions to check against.
- * @returns {Function} A validator function that returns true if the value is an instance of any of the constructors, otherwise false.
- * @throws {Error} If no constructors are provided.
- */
-export const isInstanceOf =
-    (...constructors) =>
-    (value) => {
-        if (constructors.length === 0) {
-            throw new Error('No constructors provided.');
-        }
-        return constructors.some((constructor) => value instanceof constructor);
-    };
-
-/**
  * Checks if the provided value matches any of the provided types using typeof.
  *
  * @param {...string} types - The types to check against.
@@ -110,14 +94,29 @@ export const isBoolean = isTypeOf('boolean');
  *
  * @param {any} value - The value to check.
  * @returns {boolean} True if the value is empty, otherwise false.
- * @throws {Error} If the value type is unsupported.
  */
 export const isEmpty = (value) => {
     if (isString(value)) return value.trim() === '';
     if (isArray(value)) return value.length === 0;
     if (isObject(value)) return Object.keys(value).length === 0;
-    throw new Error('Unsupported value type for isEmpty.');
+    return false; // Return false for unsupported types
 };
+
+/**
+ * Creates a validator that checks if a value is an instance of any of the provided constructors.
+ *
+ * @param {...Function} constructors - The constructor functions to check against.
+ * @returns {Function} A validator function that returns true if the value is an instance of any of the constructors, otherwise false.
+ * @throws {Error} If no constructors are provided.
+ */
+export const isInstanceOf =
+    (...constructors) =>
+    (value) => {
+        if (constructors.length === 0) {
+            throw new Error('No constructors provided.');
+        }
+        return constructors.some((constructor) => value instanceof constructor);
+    };
 
 /**
  * Creates a validator that allows null or validates using the provided validator.
@@ -126,7 +125,7 @@ export const isEmpty = (value) => {
  * @returns {Function} A validator function that returns true if the value is null or passes the provided validator, otherwise false.
  */
 export const isNullable = (validator) => (value) =>
-    isOptional(isOptional(validator))(value);
+    value === null || isOptional(validator)(value);
 
 /**
  * Creates a validator that allows undefined or validates using the provided validator.
@@ -141,70 +140,32 @@ export const isOptional = (validator) => (value) =>
  * Creates a validator that checks if any of the provided validators pass for their corresponding values.
  *
  * @param {...Function} validators - The validator functions to check.
- * @returns {Function} A function that takes values and returns true if any validator passes for its corresponding value, otherwise false.
+ * @returns {Function} A function that takes a value and returns true if any validator passes for the value, otherwise false.
  */
 export const anyValid =
     (...validators) =>
-    (...values) =>
-        validators.length === values.length &&
-        validators.some((validator, i) => validator(values[i]));
-
-/**
- * Creates an asynchronous validator that checks if any of the provided validators pass for their corresponding values.
- *
- * @param {...Function} validators - The validator functions to check.
- * @returns {Function} A function that takes values and returns a Promise resolving to true if any validator passes for its corresponding value, otherwise false.
- */
-export const anyValidAsync =
-    (...validators) =>
-    async (...values) => {
-        if (validators.length !== values.length) return false;
-
-        const results = await Promise.all(
-            validators.map((validator, i) => validator(values[i]))
-        );
-
-        return results.some(Boolean);
-    };
+    (value) =>
+        validators.some((validator) => validator(value));
 
 /**
  * Creates a validator that checks if all of the provided validators pass for their corresponding values.
  *
  * @param {...Function} validators - The validator functions to check.
- * @returns {Function} A function that takes values and returns true if all validators pass for their corresponding values, otherwise false.
+ * @returns {Function} A function that takes a value and returns true if all validators pass for the value, otherwise false.
  */
 export const allValid =
     (...validators) =>
-    (...values) =>
-        validators.length === values.length &&
-        validators.every((validator, i) => validator(values[i]));
-
-/**
- * Creates an asynchronous validator that checks if all of the provided validators pass for their corresponding values.
- *
- * @param {...Function} validators - The validator functions to check.
- * @returns {Function} A function that takes values and returns a Promise resolving to true if all validators pass for their corresponding values, otherwise false.
- */
-export const allValidAsync =
-    (...validators) =>
-    async (...values) => {
-        if (validators.length !== values.length) return false;
-
-        const results = await Promise.all(
-            validators.map((validator, i) => validator(values[i]))
-        );
-
-        return results.every(Boolean);
-    };
+    (value) =>
+        validators.every((validator) => validator(value));
 
 /**
  * Creates a function that executes a callback if the provided validation condition passes.
  *
- * @param {boolean} validator - The validation condition to check.
+ * @param {Function} validator - The validation function to check.
  * @returns {Function} A function that takes a callback and executes it if the validation condition passes, otherwise returns false.
  */
 export const ifValid = (validator) => (callback) => {
-    if (validator) {
+    if (validator()) {
         return callback();
     }
     console.warn('Validator failed:');

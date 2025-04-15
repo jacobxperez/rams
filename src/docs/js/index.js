@@ -82,7 +82,8 @@ document.addEventListener('DOMContentLoaded', () => {
             'body'
         )
         .then(() => template.append('#headerTemplate', '#header'))
-        .then(() => template.append('#contentTemplate', '#content', sidebar))
+        .then(() => template.append('#contentTemplate', '#content'))
+        .then(() => sidebar())
         .then(() => template.fetch(templateURL))
         .then(() => {
             template.append('#navTemplate', 'nav');

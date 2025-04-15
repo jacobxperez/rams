@@ -2,7 +2,7 @@ import {isString, isDomElement, isOptional} from '../validators/valid.js';
 
 const isValidElementWithDataAttr = (root, dataName) =>
     isDomElement(root) && isString(dataName);
-const isValidDataAttrValue = (value) => isOptional(value) || isString(value);
+const isValidDataAttrValue = (value) => isOptional(isString)(value);
 
 /**
  * Generates a CSS selector for a data attribute with an optional value.

@@ -1,4 +1,38 @@
 /**
+ * Creates a validator that checks if a value is an instance of any of the provided constructors.
+ *
+ * @param {...Function} constructors - The constructor functions to check against.
+ * @returns {Function} A validator function that returns true if the value is an instance of any of the constructors, otherwise false.
+ * @throws {Error} If no constructors are provided.
+ */
+export const isInstanceOf =
+    (...constructors) =>
+    (value) => {
+        if (constructors.length === 0) {
+            throw new Error('isInstanceOf: No constructors provided.');
+        }
+        return constructors.some((constructor) => value instanceof constructor);
+    };
+
+/**
+ * Creates a validator that allows undefined or validates using the provided validator.
+ *
+ * @param {Function} validator - The validator function to use if the value is not undefined.
+ * @returns {Function} A validator function that returns true if the value is undefined or passes the provided validator, otherwise false.
+ */
+export const isOptional = (validator) => (value) =>
+    value === undefined || (validator && validator(value));
+
+/**
+ * Creates a validator that allows null or passes the provided validator.
+ *
+ * @param {Function} validator - The validator function to use if the value is not null.
+ * @returns {Function} A validator function that returns true if the value is null or passes the provided validator, otherwise false.
+ */
+export const isNullable = (validator) => (value) =>
+    value === null || isOptional(validator)(value);
+
+/**
  * Checks if the provided value matches any of the provided types using typeof.
  *
  * @param {...string} types - The types to check against.
@@ -9,7 +43,7 @@ export const isTypeOf =
     (...types) =>
     (value) => {
         if (types.length === 0) {
-            throw new Error('No types provided.');
+            throw new Error('isTypeOf: No types provided.');
         }
         return types.includes(typeof value);
     };
@@ -38,6 +72,10 @@ export const isObject = (obj) =>
  * @returns {boolean} True if the value is an array, otherwise false.
  */
 export const isArray = Array.isArray;
+
+export const isMap = (value) => isInstanceOf(Map)(value);
+
+export const isSet = (value) => isInstanceOf(Set)(value);
 
 /**
  * Checks if the provided value is a DOM element.
@@ -90,6 +128,7 @@ export const isBoolean = isTypeOf('boolean');
  * For strings: Returns true if the string is empty or contains only whitespace.
  * For arrays: Returns true if the array has no elements.
  * For objects: Returns true if the object has no own enumerable properties.
+ * For Map and Set: Returns true if they have no elements.
  * For other types: Returns false.
  *
  * @param {any} value - The value to check.
@@ -98,76 +137,39 @@ export const isBoolean = isTypeOf('boolean');
 export const isEmpty = (value) => {
     if (isString(value)) return value.trim() === '';
     if (isArray(value)) return value.length === 0;
+    if (isMap(value) || isSet(value)) return value.size === 0;
     if (isObject(value)) return Object.keys(value).length === 0;
     return false; // Return false for unsupported types
 };
 
 /**
- * Creates a validator that checks if a value is an instance of any of the provided constructors.
+ * Checks if any of the provided validators return true.
  *
- * @param {...Function} constructors - The constructor functions to check against.
- * @returns {Function} A validator function that returns true if the value is an instance of any of the constructors, otherwise false.
- * @throws {Error} If no constructors are provided.
+ * @param {...boolean} validators - The validators to check.
+ * @returns {boolean} True if any validator returns true, otherwise false.
  */
-export const isInstanceOf =
-    (...constructors) =>
-    (value) => {
-        if (constructors.length === 0) {
-            throw new Error('No constructors provided.');
-        }
-        return constructors.some((constructor) => value instanceof constructor);
-    };
+export const anyValid = (...validators) =>
+    validators.some((validator) => validator === true);
 
 /**
- * Creates a validator that allows null or validates using the provided validator.
+ * Checks if all of the provided validators return true.
  *
- * @param {Function} validator - The validator function to use if the value is not null.
- * @returns {Function} A validator function that returns true if the value is null or passes the provided validator, otherwise false.
+ * @param {...boolean} validators - The validators to check.
+ * @returns {boolean} True if all validators return true, otherwise false.
  */
-export const isNullable = (validator) => (value) =>
-    value === null || isOptional(validator)(value);
+export const allValid = (...validators) =>
+    validators.every((validator) => validator === true);
 
 /**
- * Creates a validator that allows undefined or validates using the provided validator.
+ * Executes a callback if the provided validator function returns true.
  *
- * @param {Function} validator - The validator function to use if the value is not undefined.
- * @returns {Function} A validator function that returns true if the value is undefined or passes the provided validator, otherwise false.
- */
-export const isOptional = (validator) => (value) =>
-    value === undefined || validator(value);
-
-/**
- * Creates a validator that checks if any of the provided validators pass for their corresponding values.
- *
- * @param {...Function} validators - The validator functions to check.
- * @returns {Function} A function that takes a value and returns true if any validator passes for the value, otherwise false.
- */
-export const anyValid =
-    (...validators) =>
-    (value) =>
-        validators.some((validator) => validator(value));
-
-/**
- * Creates a validator that checks if all of the provided validators pass for their corresponding values.
- *
- * @param {...Function} validators - The validator functions to check.
- * @returns {Function} A function that takes a value and returns true if all validators pass for the value, otherwise false.
- */
-export const allValid =
-    (...validators) =>
-    (value) =>
-        validators.every((validator) => validator(value));
-
-/**
- * Creates a function that executes a callback if the provided validation condition passes.
- *
- * @param {Function} validator - The validation function to check.
- * @returns {Function} A function that takes a callback and executes it if the validation condition passes, otherwise returns false.
+ * @param {Function} validator - The validator function to check.
+ * @returns {Function} A function that takes a callback to execute if the validator passes.
  */
 export const ifValid = (validator) => (callback) => {
     if (validator()) {
         return callback();
     }
-    console.warn('Validator failed:');
+    console.warn('ifValid: Validator failed for', validator);
     return false;
 };

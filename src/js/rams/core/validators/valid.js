@@ -110,13 +110,12 @@ export const isBoolean = isTypeOf('boolean');
  *
  * @param {any} value - The value to check.
  * @returns {boolean} True if the value is empty, otherwise false.
- * @throws {Error} If the value type is unsupported.
  */
 export const isEmpty = (value) => {
     if (isString(value)) return value.trim() === '';
     if (isArray(value)) return value.length === 0;
     if (isObject(value)) return Object.keys(value).length === 0;
-    throw new Error('Unsupported value type for isEmpty.');
+    return false; // Return false for unsupported types
 };
 
 /**
@@ -126,7 +125,7 @@ export const isEmpty = (value) => {
  * @returns {Function} A validator function that returns true if the value is null or passes the provided validator, otherwise false.
  */
 export const isNullable = (validator) => (value) =>
-    isOptional(isOptional(validator))(value);
+    value === null || isOptional(validator)(value);
 
 /**
  * Creates a validator that allows undefined or validates using the provided validator.

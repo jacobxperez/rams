@@ -9,7 +9,7 @@ export const isInstanceOf =
     (...constructors) =>
     (value) => {
         if (constructors.length === 0) {
-            throw new Error('No constructors provided.');
+            throw new Error('isInstanceOf: No constructors provided.');
         }
         return constructors.some((constructor) => value instanceof constructor);
     };
@@ -21,7 +21,7 @@ export const isInstanceOf =
  * @returns {Function} A validator function that returns true if the value is undefined or passes the provided validator, otherwise false.
  */
 export const isOptional = (validator) => (value) =>
-    value === undefined || validator(value);
+    value === undefined || (validator && validator(value));
 
 /**
  * Creates a validator that allows null or passes the provided validator.
@@ -43,7 +43,7 @@ export const isTypeOf =
     (...types) =>
     (value) => {
         if (types.length === 0) {
-            throw new Error('No types provided.');
+            throw new Error('isTypeOf: No types provided.');
         }
         return types.includes(typeof value);
     };
@@ -72,6 +72,10 @@ export const isObject = (obj) =>
  * @returns {boolean} True if the value is an array, otherwise false.
  */
 export const isArray = Array.isArray;
+
+export const isMap = (value) => isInstanceOf(Map)(value);
+
+export const isSet = (value) => isInstanceOf(Set)(value);
 
 /**
  * Checks if the provided value is a DOM element.
@@ -124,6 +128,7 @@ export const isBoolean = isTypeOf('boolean');
  * For strings: Returns true if the string is empty or contains only whitespace.
  * For arrays: Returns true if the array has no elements.
  * For objects: Returns true if the object has no own enumerable properties.
+ * For Map and Set: Returns true if they have no elements.
  * For other types: Returns false.
  *
  * @param {any} value - The value to check.
@@ -132,6 +137,7 @@ export const isBoolean = isTypeOf('boolean');
 export const isEmpty = (value) => {
     if (isString(value)) return value.trim() === '';
     if (isArray(value)) return value.length === 0;
+    if (isMap(value) || isSet(value)) return value.size === 0;
     if (isObject(value)) return Object.keys(value).length === 0;
     return false; // Return false for unsupported types
 };
@@ -164,6 +170,6 @@ export const ifValid = (validator) => (callback) => {
     if (validator()) {
         return callback();
     }
-    console.warn('Validator failed:');
+    console.warn('ifValid: Validator failed for', validator);
     return false;
 };

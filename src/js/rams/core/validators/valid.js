@@ -3,22 +3,32 @@
  *
  * @param {...Function} constructors - The constructor functions to check against.
  * @returns {Function} A validator function that returns true if the value is an instance of any of the constructors, otherwise false.
+ * @throws {Error} If no constructors are provided.
  */
 export const isInstanceOf =
     (...constructors) =>
-    (value) =>
-        constructors.some((constructor) => value instanceof constructor);
+    (value) => {
+        if (constructors.length === 0) {
+            throw new Error('No constructors provided.');
+        }
+        return constructors.some((constructor) => value instanceof constructor);
+    };
 
 /**
  * Checks if the provided value matches any of the provided types using typeof.
  *
  * @param {...string} types - The types to check against.
  * @returns {Function} A validator function that returns true if the value matches any of the types, otherwise false.
+ * @throws {Error} If no types are provided.
  */
 export const isTypeOf =
     (...types) =>
-    (value) =>
-        types.includes(typeof value);
+    (value) => {
+        if (types.length === 0) {
+            throw new Error('No types provided.');
+        }
+        return types.includes(typeof value);
+    };
 
 /**
  * Checks if the provided value is a function.
@@ -55,13 +65,12 @@ export const isDomElement = (root) =>
     isInstanceOf(Element, Document, DocumentFragment)(root);
 
 /**
- * Checks if the provided value is a non-empty string.
+ * Checks if the provided value is a string.
  *
  * @param {any} string - The value to check.
- * @returns {boolean} True if the value is a non-empty string, otherwise false.
+ * @returns {boolean} True if the value is a string, otherwise false.
  */
-export const isString = (string) =>
-    isTypeOf('string')(string) && string.trim() !== '';
+export const isString = (string) => isTypeOf('string')(string);
 
 /**
  * Checks if the provided value is iterable.
@@ -101,12 +110,13 @@ export const isBoolean = isTypeOf('boolean');
  *
  * @param {any} value - The value to check.
  * @returns {boolean} True if the value is empty, otherwise false.
+ * @throws {Error} If the value type is unsupported.
  */
 export const isEmpty = (value) => {
     if (isString(value)) return value.trim() === '';
     if (isArray(value)) return value.length === 0;
     if (isObject(value)) return Object.keys(value).length === 0;
-    return false;
+    throw new Error('Unsupported value type for isEmpty.');
 };
 
 /**

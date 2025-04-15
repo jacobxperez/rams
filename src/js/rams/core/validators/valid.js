@@ -70,7 +70,13 @@ export const isDomElement = (root) =>
  * @param {any} string - The value to check.
  * @returns {boolean} True if the value is a string, otherwise false.
  */
-export const isString = (string) => isTypeOf('string')(string);
+export const isString = (string) => {
+    if (isTypeOf('string')(string)) {
+        string.trim();
+        return true;
+    }
+    return false;
+};
 
 /**
  * Checks if the provided value is iterable.

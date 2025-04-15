@@ -1,4 +1,29 @@
 /**
+ * Creates a validator that checks if a value is an instance of any of the provided constructors.
+ *
+ * @param {...Function} constructors - The constructor functions to check against.
+ * @returns {Function} A validator function that returns true if the value is an instance of any of the constructors, otherwise false.
+ * @throws {Error} If no constructors are provided.
+ */
+export const isInstanceOf =
+    (...constructors) =>
+    (value) => {
+        if (constructors.length === 0) {
+            throw new Error('No constructors provided.');
+        }
+        return constructors.some((constructor) => value instanceof constructor);
+    };
+
+/**
+ * Creates a validator that allows undefined or validates using the provided validator.
+ *
+ * @param {Function} validator - The validator function to use if the value is not undefined.
+ * @returns {Function} A validator function that returns true if the value is undefined or passes the provided validator, otherwise false.
+ */
+export const isOptional = (validator) => (value) =>
+    value === undefined || validator(value);
+
+/**
  * Checks if the provided value matches any of the provided types using typeof.
  *
  * @param {...string} types - The types to check against.
@@ -103,22 +128,6 @@ export const isEmpty = (value) => {
 };
 
 /**
- * Creates a validator that checks if a value is an instance of any of the provided constructors.
- *
- * @param {...Function} constructors - The constructor functions to check against.
- * @returns {Function} A validator function that returns true if the value is an instance of any of the constructors, otherwise false.
- * @throws {Error} If no constructors are provided.
- */
-export const isInstanceOf =
-    (...constructors) =>
-    (value) => {
-        if (constructors.length === 0) {
-            throw new Error('No constructors provided.');
-        }
-        return constructors.some((constructor) => value instanceof constructor);
-    };
-
-/**
  * Checks if the provided value is null or passes the provided validator.
  *
  * @param {Function} validator - The validator function to use if the value is not null.
@@ -126,15 +135,6 @@ export const isInstanceOf =
  */
 export const isNullable = (validator) => (value) =>
     value === null || isOptional(validator)(value);
-
-/**
- * Creates a validator that allows undefined or validates using the provided validator.
- *
- * @param {Function} validator - The validator function to use if the value is not undefined.
- * @returns {Function} A validator function that returns true if the value is undefined or passes the provided validator, otherwise false.
- */
-export const isOptional = (validator) => (value) =>
-    value === undefined || validator(value);
 
 /**
  * Checks if any of the provided validators return true.

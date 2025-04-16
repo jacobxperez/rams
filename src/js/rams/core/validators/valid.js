@@ -1,3 +1,9 @@
+/**
+ * Creates a validator function that validates a value based on the provided validation logic.
+ *
+ * @param {Function|string} validate - A function or a string representing the type to validate against.
+ * @returns {Function} A function that validates the value and returns the value if valid, otherwise false.
+ */
 export const validator = (validate) => (value) => {
     if (typeof validate === 'function') {
         return validate(value) ? value : false;
@@ -12,8 +18,7 @@ export const validator = (validate) => (value) => {
  * Creates a validator that checks if a value is an instance of any of the provided constructors.
  *
  * @param {...Function} constructors - The constructor functions to check against.
- * @returns {Function} A validator function that returns true if the value is an instance of any of the constructors, otherwise false.
- * @throws {Error} If no constructors are provided.
+ * @returns {Function} A validator function that returns the value if it is an instance of any of the constructors, otherwise false.
  */
 export const isInstanceOf =
     (...constructors) =>
@@ -31,26 +36,25 @@ export const isInstanceOf =
  * Creates a validator that allows undefined or validates using the provided validator.
  *
  * @param {Function} validator - The validator function to use if the value is not undefined.
- * @returns {Function} A validator function that returns true if the value is undefined or passes the provided validator, otherwise false.
+ * @returns {Function} A validator function that returns the value if it is undefined or passes the provided validator, otherwise false.
  */
 export const isOptional = (validator) => (value) =>
     value === undefined || (validator && validator(value));
 
 /**
- * Creates a validator that allows null or passes the provided validator.
+ * Creates a validator that allows null or validates using the provided validator.
  *
  * @param {Function} validator - The validator function to use if the value is not null.
- * @returns {Function} A validator function that returns true if the value is null or passes the provided validator, otherwise false.
+ * @returns {Function} A validator function that returns the value if it is null or passes the provided validator, otherwise false.
  */
 export const isNullable = (validator) => (value) =>
     value === null || isOptional(validator)(value);
 
 /**
- * Checks if the provided value matches any of the provided types using typeof.
+ * Checks if the provided value matches any of the provided types using `typeof`.
  *
  * @param {...string} types - The types to check against.
- * @returns {Function} A validator function that returns true if the value matches any of the types, otherwise false.
- * @throws {Error} If no types are provided.
+ * @returns {Function} A validator function that returns the value if it matches any of the types, otherwise false.
  */
 export const isTypeOf =
     (...types) =>
@@ -64,7 +68,7 @@ export const isTypeOf =
  * @returns {boolean} True if the value is a function, otherwise false.
  */
 export const isFunction = (callback) =>
-    isTypeOf('function')
+    isTypeOf('function')(callback)
         ? callback
         : console.error('Must be a function and received:', typeof callback);
 
@@ -86,8 +90,8 @@ export const isObject = (obj) =>
  * @returns {boolean} True if the value is an array, otherwise false.
  */
 export const isArray = (array) =>
-    Array.isArray
-        ? true
+    Array.isArray(array)
+        ? array
         : console.error('Must be an array and received:', typeof array);
 
 /**
@@ -124,7 +128,7 @@ export const isDomElement = (root) =>
         : console.error('Must be a DOM element and received:', typeof root);
 
 /**
- * Checks if the provided value is a string.
+ * Checks if the provided value is a non-empty string.
  *
  * @param {any} string - The value to check.
  * @returns {boolean} True if the value is a non-empty string, otherwise false.
@@ -146,7 +150,7 @@ export const isString = (string) =>
 export const isIterable = (input) =>
     input != null && typeof input[Symbol.iterator] === 'function'
         ? input
-        : console.error('Must be iterable', typeof input);
+        : console.error('Must be iterable and received:', typeof input);
 
 /**
  * Checks if the provided value is a number.
@@ -167,9 +171,10 @@ export const isNumber = (value, {allowNaN = false} = {}) =>
  * @param {any} val - The value to check.
  * @returns {boolean} True if the value is a boolean, otherwise false.
  */
-export const isBoolean = isTypeOf('boolean')
-    ? true
-    : console.error('Must be a boolean and received:', typeof val);
+export const isBoolean = (val) =>
+    isTypeOf('boolean')(val)
+        ? val
+        : console.error('Must be a boolean and received:', typeof val);
 
 /**
  * Checks if the provided value is empty.

@@ -63,9 +63,10 @@ export const isTypeOf =
  * @param {any} callback - The value to check.
  * @returns {boolean} True if the value is a function, otherwise false.
  */
-export const isFunction = isTypeOf('function')
-    ? true
-    : console.error('Must be a function and received:', typeof callback);
+export const isFunction = (callback) =>
+    isTypeOf('function')
+        ? callback
+        : console.error('Must be a function and received:', typeof callback);
 
 /**
  * Checks if the provided value is an object (excluding arrays and null).
@@ -75,7 +76,7 @@ export const isFunction = isTypeOf('function')
  */
 export const isObject = (obj) =>
     isTypeOf('object')(obj) && obj !== null && !Array.isArray(obj)
-        ? true
+        ? obj
         : console.error('Must be an object and received:', typeof obj);
 
 /**
@@ -97,7 +98,7 @@ export const isArray = (array) =>
  */
 export const isMap = (value) =>
     isInstanceOf(Map)(value)
-        ? true
+        ? value
         : console.error('Must be a Map and received:', typeof value);
 
 /**
@@ -108,7 +109,7 @@ export const isMap = (value) =>
  */
 export const isSet = (value) =>
     isInstanceOf(Set)(value)
-        ? true
+        ? value
         : console.error('Must be a Set and received:', typeof value);
 
 /**
@@ -119,7 +120,7 @@ export const isSet = (value) =>
  */
 export const isDomElement = (root) =>
     isInstanceOf(Element, Document, DocumentFragment)(root)
-        ? true
+        ? root
         : console.error('Must be a DOM element and received:', typeof root);
 
 /**
@@ -144,7 +145,7 @@ export const isString = (string) =>
  */
 export const isIterable = (input) =>
     input != null && typeof input[Symbol.iterator] === 'function'
-        ? true
+        ? input
         : console.error('Must be iterable', typeof input);
 
 /**
@@ -157,7 +158,7 @@ export const isIterable = (input) =>
  */
 export const isNumber = (value, {allowNaN = false} = {}) =>
     isTypeOf('number')(value) && (allowNaN || !isNaN(value))
-        ? true
+        ? value
         : console.error('Must be a number and received:', typeof value);
 
 /**

@@ -3,7 +3,7 @@ import {validator} from './valid.js';
 /**
  * A class that enforces a specific type or validation logic for a value.
  */
-export class TypedEnforcer {
+export class TypeEnforcer {
     /**
      * Creates an instance of TypedEnforcer.
      *

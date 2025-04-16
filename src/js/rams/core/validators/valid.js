@@ -36,11 +36,11 @@ export const isInstanceOf =
  * Creates a validator that allows `undefined` or validates using the provided validator.
  *
  * @param {Function} validator - The validator function to use if the value is not `undefined`.
- * @returns {Function} A validator function that returns the value if it is `undefined` or passes the provided validator, otherwise `false`.
+ * @returns {Function} A validator function that returns the true if it is `undefined` or passes the provided validator, otherwise `false`.
  */
 export const isOptional = (validator) => (value) =>
     value === undefined || (validator && validator(value))
-        ? value
+        ? true
         : console.error(
               'Must be undefined or pass the provided validator and received:',
               typeof value
@@ -50,11 +50,11 @@ export const isOptional = (validator) => (value) =>
  * Creates a validator that allows `null` or validates using the provided validator.
  *
  * @param {Function} validator - The validator function to use if the value is not `null`.
- * @returns {Function} A validator function that returns the value if it is `null` or passes the provided validator, otherwise `false`.
+ * @returns {Function} A validator function that returns the true if it is `null` or passes the provided validator, otherwise `false`.
  */
 export const isNullable = (validator) => (value) =>
     value === null || isOptional(validator)(value)
-        ? value
+        ? true
         : console.error(
               'Must be null or pass the provided validator and received:',
               typeof value
@@ -139,7 +139,7 @@ export const isSet = (value) =>
  */
 export const isDomElement = (root) =>
     isInstanceOf(Element, Document, DocumentFragment)(root)
-        ? root
+        ? true && root
         : console.error('Must be a DOM element and received:', typeof root);
 
 /**
@@ -148,8 +148,22 @@ export const isDomElement = (root) =>
  * @param {any} string - The value to check.
  * @returns {boolean} The string itself if it is valid, otherwise `false`.
  */
-export const isString = (string) =>
+export const isNonEmptyString = (string) =>
     isTypeOf('string')(string) && string.trim() !== ''
+        ? string
+        : console.error(
+              'Must be a non-empty string and received:',
+              typeof string
+          );
+
+/**
+ * Checks if the provided value is a string.
+ *
+ * @param {any} string - The value to check.
+ * @returns {boolean} The string itself if it is valid, otherwise `false`.
+ */
+export const isString = (string) =>
+    isTypeOf('string')(string)
         ? string
         : console.error(
               'Must be a non-empty string and received:',
@@ -227,8 +241,11 @@ export const anyValid = (...validators) =>
  * @param {...boolean} validators - The validators to check.
  * @returns {boolean} `true` if all validators return `true`, otherwise `false`.
  */
-export const allValid = (...validators) =>
-    validators.every((validator) => validator === true);
+export const allValid =
+    (...validators) =>
+    (...values) =>
+        validators.length === values.length &&
+        validators.every((validator, i) => validator(values[i]));
 
 /**
  * Executes a callback if the provided validator function returns `true`.

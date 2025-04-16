@@ -151,10 +151,7 @@ export const isDomElement = (root) =>
 export const isNonEmptyString = (string) =>
     isTypeOf('string')(string) && string.trim() !== ''
         ? string
-        : console.error(
-              'Must be a non-empty string. Received:',
-              typeof string
-          );
+        : console.error('Must be a non-empty string. Received:', typeof string);
 
 /**
  * Checks if the provided value is a string.
@@ -186,7 +183,7 @@ export const isIterable = (input) =>
  * @param {boolean} [options.allowNaN=false] - Whether to allow `NaN` as a valid number.
  * @returns {number|false} The number itself if it is valid, otherwise `false`.
  */
-export const isNumber = (value, { allowNaN = false } = {}) =>
+export const isNumber = (value, {allowNaN = false} = {}) =>
     isTypeOf('number')(value) && (allowNaN || !isNaN(value))
         ? value
         : console.error('Must be a number. Received:', typeof value);

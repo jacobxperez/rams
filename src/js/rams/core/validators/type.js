@@ -112,4 +112,19 @@ export class DataEnforcer {
 	isPending() {
 		return this.pending;
 	}
+		getErrorReport() {
+		if (!this.lastError) return null;
+
+		const { message, type, source, value, timestamp } = this.lastError;
+
+		return {
+			label: this.label,
+			message,
+			type,
+			source,
+			value,
+			timestamp: new Date(timestamp).toLocaleString(),
+			rawTimestamp: timestamp
+		};
+	}
 }

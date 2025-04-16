@@ -1,9 +1,12 @@
-export const validator = (validator) => (value) =>
-    typeof validator === 'function'
-        ? validator(value)
-        : typeof validator === 'string'
-          ? isTypeOf(validator)(value)
-          : console.error('Invalid validator type:', typeof validator);
+export const validator = (validate) => (value) => {
+    if (typeof validate === 'function') {
+        return validate(value) ? value : false;
+    }
+    if (isString(validate)) {
+        return isTypeOf(validate)(value) ? value : false;
+    }
+    console.error('Invalid validator type:', typeof validate);
+};
 
 /**
  * Creates a validator that checks if a value is an instance of any of the provided constructors.
@@ -14,8 +17,15 @@ export const validator = (validator) => (value) =>
  */
 export const isInstanceOf =
     (...constructors) =>
-    (value) =>
-        constructors.some((constructor) => value instanceof constructor);
+    (value) => {
+        if (constructors.some((constructor) => value instanceof constructor)) {
+            return value;
+        }
+        console.error(
+            'Must be an instance of one of the provided constructors and received:',
+            typeof value
+        );
+    };
 
 /**
  * Creates a validator that allows undefined or validates using the provided validator.
@@ -120,7 +130,7 @@ export const isDomElement = (root) =>
  */
 export const isString = (string) =>
     isTypeOf('string')(string) && string.trim() !== ''
-        ? true
+        ? string
         : console.error(
               'Must be a non-empty string and received:',
               typeof string

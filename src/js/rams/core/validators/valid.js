@@ -5,7 +5,7 @@
  * @returns {Function} A function that validates the value and returns `true` if valid, otherwise `false`.
  */
 export const validator = (validate) => (value) => {
-    if (typeof validate === 'function') {
+    if (isFunction(validate)) {
         return validate(value) ? true : false;
     }
     if (isNonEmptyString(validate)) {

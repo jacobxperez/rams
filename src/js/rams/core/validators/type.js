@@ -1,4 +1,4 @@
-import {isNonEmptyString} from './valid';
+import {isNonEmptyString, isFunction} from './valid';
 
 /**
  * A class that enforces a specific type or validation logic for a value.
@@ -22,7 +22,7 @@ export class TypeEnforcer {
     }
 
     validator = (validate) => (value) => {
-        if (typeof validate === 'function') {
+        if (isFunction(validate)) {
             return validate(value) ? value : false;
         }
         if (isNonEmptyString(validate)) {

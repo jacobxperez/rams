@@ -66,7 +66,7 @@ export const setDataAttr =
     (dataName, value = '') => {
         if (
             isValidElementWithDataAttr(root, dataName) &&
-            isValidDataAttrValue(value)
+            (value === '' || isValidDataAttrValue(value))
         ) {
             root.setAttribute(`data-${dataName}`, value);
             return true;

@@ -211,9 +211,9 @@ export const allValid =
  * @param {Function} validator - The validator function to check.
  * @returns {Function} A function that takes a callback to execute if the validator passes.
  */
-export const ifValid = (validator) => (callback) => {
+export const ifValid = (validator) => (callback) => (val) => {
     if (validator) {
-        return callback();
+        return callback(val);
     }
     console.warn('ifValid: Validator failed for', validator);
     return false;

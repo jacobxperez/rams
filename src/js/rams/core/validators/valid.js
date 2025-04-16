@@ -27,7 +27,7 @@ export const isInstanceOf =
             return value;
         }
         console.error(
-            'Must be an instance of one of the provided constructors and received:',
+            'Must be an instance of one of the provided constructors. Received:',
             typeof value
         );
     };
@@ -36,13 +36,13 @@ export const isInstanceOf =
  * Creates a validator that allows `undefined` or validates using the provided validator.
  *
  * @param {Function} validator - The validator function to use if the value is not `undefined`.
- * @returns {Function} A validator function that returns the true if it is `undefined` or passes the provided validator, otherwise `false`.
+ * @returns {Function} A validator function that returns `true` if the value is `undefined` or passes the provided validator, otherwise `false`.
  */
 export const isOptional = (validator) => (value) =>
     value === undefined || (validator && validator(value))
         ? true
         : console.error(
-              'Must be undefined or pass the provided validator and received:',
+              'Must be undefined or pass the provided validator. Received:',
               typeof value
           );
 
@@ -50,13 +50,13 @@ export const isOptional = (validator) => (value) =>
  * Creates a validator that allows `null` or validates using the provided validator.
  *
  * @param {Function} validator - The validator function to use if the value is not `null`.
- * @returns {Function} A validator function that returns the true if it is `null` or passes the provided validator, otherwise `false`.
+ * @returns {Function} A validator function that returns `true` if the value is `null` or passes the provided validator, otherwise `false`.
  */
 export const isNullable = (validator) => (value) =>
     value === null || isOptional(validator)(value)
         ? true
         : console.error(
-              'Must be null or pass the provided validator and received:',
+              'Must be null or pass the provided validator. Received:',
               typeof value
           );
 
@@ -72,7 +72,7 @@ export const isTypeOf =
         types.includes(typeof value)
             ? value
             : console.error(
-                  'Must be one of the provided types and received:',
+                  'Must be one of the provided types. Received:',
                   typeof value
               );
 
@@ -80,79 +80,79 @@ export const isTypeOf =
  * Checks if the provided value is a function.
  *
  * @param {any} callback - The value to check.
- * @returns {boolean} The function itself if it is valid, otherwise `false`.
+ * @returns {Function|false} The function itself if it is valid, otherwise `false`.
  */
 export const isFunction = (callback) =>
     isTypeOf('function')(callback)
         ? callback
-        : console.error('Must be a function and received:', typeof callback);
+        : console.error('Must be a function. Received:', typeof callback);
 
 /**
  * Checks if the provided value is an object (excluding arrays and `null`).
  *
  * @param {any} obj - The value to check.
- * @returns {boolean} The object itself if it is valid, otherwise `false`.
+ * @returns {Object|false} The object itself if it is valid, otherwise `false`.
  */
 export const isObject = (obj) =>
     isTypeOf('object')(obj) && obj !== null && !Array.isArray(obj)
         ? obj
-        : console.error('Must be an object and received:', typeof obj);
+        : console.error('Must be an object. Received:', typeof obj);
 
 /**
  * Checks if the provided value is an array.
  *
  * @param {any} array - The value to check.
- * @returns {boolean} The array itself if it is valid, otherwise `false`.
+ * @returns {Array|false} The array itself if it is valid, otherwise `false`.
  */
 export const isArray = (array) =>
     Array.isArray(array)
         ? array
-        : console.error('Must be an array and received:', typeof array);
+        : console.error('Must be an array. Received:', typeof array);
 
 /**
  * Checks if the provided value is a Map.
  *
  * @param {any} value - The value to check.
- * @returns {boolean} The Map itself if it is valid, otherwise `false`.
+ * @returns {Map|false} The Map itself if it is valid, otherwise `false`.
  */
 export const isMap = (value) =>
     isInstanceOf(Map)(value)
         ? value
-        : console.error('Must be a Map and received:', typeof value);
+        : console.error('Must be a Map. Received:', typeof value);
 
 /**
  * Checks if the provided value is a Set.
  *
  * @param {any} value - The value to check.
- * @returns {boolean} The Set itself if it is valid, otherwise `false`.
+ * @returns {Set|false} The Set itself if it is valid, otherwise `false`.
  */
 export const isSet = (value) =>
     isInstanceOf(Set)(value)
         ? value
-        : console.error('Must be a Set and received:', typeof value);
+        : console.error('Must be a Set. Received:', typeof value);
 
 /**
  * Checks if the provided value is a DOM element.
  *
  * @param {any} root - The value to check.
- * @returns {boolean} The DOM element itself if it is valid, otherwise `false`.
+ * @returns {Element|Document|DocumentFragment|false} The DOM element itself if it is valid, otherwise `false`.
  */
 export const isDomElement = (root) =>
     isInstanceOf(Element, Document, DocumentFragment)(root)
-        ? true && root
-        : console.error('Must be a DOM element and received:', typeof root);
+        ? root
+        : console.error('Must be a DOM element. Received:', typeof root);
 
 /**
  * Checks if the provided value is a non-empty string.
  *
  * @param {any} string - The value to check.
- * @returns {boolean} The string itself if it is valid, otherwise `false`.
+ * @returns {string|false} The string itself if it is valid, otherwise `false`.
  */
 export const isNonEmptyString = (string) =>
     isTypeOf('string')(string) && string.trim() !== ''
         ? string
         : console.error(
-              'Must be a non-empty string and received:',
+              'Must be a non-empty string. Received:',
               typeof string
           );
 
@@ -160,26 +160,23 @@ export const isNonEmptyString = (string) =>
  * Checks if the provided value is a string.
  *
  * @param {any} string - The value to check.
- * @returns {boolean} The string itself if it is valid, otherwise `false`.
+ * @returns {string|false} The string itself if it is valid, otherwise `false`.
  */
 export const isString = (string) =>
     isTypeOf('string')(string)
         ? string
-        : console.error(
-              'Must be a non-empty string and received:',
-              typeof string
-          );
+        : console.error('Must be a string. Received:', typeof string);
 
 /**
  * Checks if the provided value is iterable.
  *
  * @param {any} input - The value to check.
- * @returns {boolean} The iterable itself if it is valid, otherwise `false`.
+ * @returns {Iterable|false} The iterable itself if it is valid, otherwise `false`.
  */
 export const isIterable = (input) =>
     input != null && typeof input[Symbol.iterator] === 'function'
         ? input
-        : console.error('Must be iterable and received:', typeof input);
+        : console.error('Must be iterable. Received:', typeof input);
 
 /**
  * Checks if the provided value is a number.
@@ -187,23 +184,23 @@ export const isIterable = (input) =>
  * @param {any} value - The value to check.
  * @param {Object} [options] - Additional options.
  * @param {boolean} [options.allowNaN=false] - Whether to allow `NaN` as a valid number.
- * @returns {boolean} The number itself if it is valid, otherwise `false`.
+ * @returns {number|false} The number itself if it is valid, otherwise `false`.
  */
-export const isNumber = (value, {allowNaN = false} = {}) =>
+export const isNumber = (value, { allowNaN = false } = {}) =>
     isTypeOf('number')(value) && (allowNaN || !isNaN(value))
         ? value
-        : console.error('Must be a number and received:', typeof value);
+        : console.error('Must be a number. Received:', typeof value);
 
 /**
  * Checks if the provided value is a boolean.
  *
  * @param {any} val - The value to check.
- * @returns {boolean} The boolean itself if it is valid, otherwise `false`.
+ * @returns {boolean|false} The boolean itself if it is valid, otherwise `false`.
  */
 export const isBoolean = (val) =>
     isTypeOf('boolean')(val)
         ? val
-        : console.error('Must be a boolean and received:', typeof val);
+        : console.error('Must be a boolean. Received:', typeof val);
 
 /**
  * Checks if the provided value is empty.
@@ -222,7 +219,7 @@ export const isEmpty = (value) => {
     if (isArray(value)) return value.length === 0;
     if (isMap(value) || isSet(value)) return value.size === 0;
     if (isObject(value)) return Object.keys(value).length === 0;
-    console.warn('Unsupported type for isEmpty:', typeof value);
+    console.warn('Unsupported type for isEmpty. Received:', typeof value);
     return false;
 };
 
@@ -238,8 +235,8 @@ export const anyValid = (...validators) =>
 /**
  * Checks if all of the provided validators return `true`.
  *
- * @param {...boolean} validators - The validators to check.
- * @returns {boolean} `true` if all validators return `true`, otherwise `false`.
+ * @param {...Function} validators - The validators to check.
+ * @returns {Function} A function that returns `true` if all validators return `true`, otherwise `false`.
  */
 export const allValid =
     (...validators) =>

@@ -39,7 +39,12 @@ export const isInstanceOf =
  * @returns {Function} A validator function that returns the value if it is undefined or passes the provided validator, otherwise false.
  */
 export const isOptional = (validator) => (value) =>
-    value === undefined || (validator && validator(value));
+    value === undefined || (validator && validator(value))
+        ? value
+        : console.error(
+              'Must be undefined or pass the provided validator and received:',
+              typeof value
+          );
 
 /**
  * Creates a validator that allows null or validates using the provided validator.
@@ -48,7 +53,12 @@ export const isOptional = (validator) => (value) =>
  * @returns {Function} A validator function that returns the value if it is null or passes the provided validator, otherwise false.
  */
 export const isNullable = (validator) => (value) =>
-    value === null || isOptional(validator)(value);
+    value === null || isOptional(validator)(value)
+        ? value
+        : console.error(
+              'Must be null or pass the provided validator and received:',
+              typeof value
+          );
 
 /**
  * Checks if the provided value matches any of the provided types using `typeof`.
@@ -59,7 +69,12 @@ export const isNullable = (validator) => (value) =>
 export const isTypeOf =
     (...types) =>
     (value) =>
-        types.includes(typeof value);
+        types.includes(typeof value)
+            ? value
+            : console.error(
+                  'Must be one of the provided types and received:',
+                  typeof value
+              );
 
 /**
  * Checks if the provided value is a function.
@@ -193,7 +208,8 @@ export const isEmpty = (value) => {
     if (isArray(value)) return value.length === 0;
     if (isMap(value) || isSet(value)) return value.size === 0;
     if (isObject(value)) return Object.keys(value).length === 0;
-    return false; // Return false for unsupported types
+    console.warn('Unsupported type for isEmpty:', typeof value);
+    return false;
 };
 
 /**
@@ -221,7 +237,7 @@ export const allValid = (...validators) =>
  * @returns {Function} A function that takes a callback to execute if the validator passes.
  */
 export const ifValid = (validator) => (callback) => {
-    if (validator()) {
+    if (validator) {
         return callback();
     }
     console.warn('ifValid: Validator failed for', validator);

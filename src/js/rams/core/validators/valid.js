@@ -1,8 +1,8 @@
 /**
  * Creates a validator function that validates a value based on the provided validation logic.
  *
- * @param {Function|string} validate - A function or a string representing the type to validate against.
- * @returns {Function} A function that validates the value and returns the value if valid, otherwise false.
+ * @param {Function|string} validate - A function to validate the value or a string representing the type to validate against.
+ * @returns {Function} A function that validates the value and returns the value if valid, otherwise `false`.
  */
 export const validator = (validate) => (value) => {
     if (typeof validate === 'function') {
@@ -18,7 +18,7 @@ export const validator = (validate) => (value) => {
  * Creates a validator that checks if a value is an instance of any of the provided constructors.
  *
  * @param {...Function} constructors - The constructor functions to check against.
- * @returns {Function} A validator function that returns the value if it is an instance of any of the constructors, otherwise false.
+ * @returns {Function} A validator function that returns the value if it is an instance of any of the constructors, otherwise `false`.
  */
 export const isInstanceOf =
     (...constructors) =>
@@ -33,10 +33,10 @@ export const isInstanceOf =
     };
 
 /**
- * Creates a validator that allows undefined or validates using the provided validator.
+ * Creates a validator that allows `undefined` or validates using the provided validator.
  *
- * @param {Function} validator - The validator function to use if the value is not undefined.
- * @returns {Function} A validator function that returns the value if it is undefined or passes the provided validator, otherwise false.
+ * @param {Function} validator - The validator function to use if the value is not `undefined`.
+ * @returns {Function} A validator function that returns the value if it is `undefined` or passes the provided validator, otherwise `false`.
  */
 export const isOptional = (validator) => (value) =>
     value === undefined || (validator && validator(value))
@@ -47,10 +47,10 @@ export const isOptional = (validator) => (value) =>
           );
 
 /**
- * Creates a validator that allows null or validates using the provided validator.
+ * Creates a validator that allows `null` or validates using the provided validator.
  *
- * @param {Function} validator - The validator function to use if the value is not null.
- * @returns {Function} A validator function that returns the value if it is null or passes the provided validator, otherwise false.
+ * @param {Function} validator - The validator function to use if the value is not `null`.
+ * @returns {Function} A validator function that returns the value if it is `null` or passes the provided validator, otherwise `false`.
  */
 export const isNullable = (validator) => (value) =>
     value === null || isOptional(validator)(value)
@@ -63,8 +63,8 @@ export const isNullable = (validator) => (value) =>
 /**
  * Checks if the provided value matches any of the provided types using `typeof`.
  *
- * @param {...string} types - The types to check against.
- * @returns {Function} A validator function that returns the value if it matches any of the types, otherwise false.
+ * @param {...string} types - The types to check against (e.g., 'string', 'number').
+ * @returns {Function} A validator function that returns the value if it matches any of the types, otherwise `false`.
  */
 export const isTypeOf =
     (...types) =>
@@ -80,7 +80,7 @@ export const isTypeOf =
  * Checks if the provided value is a function.
  *
  * @param {any} callback - The value to check.
- * @returns {boolean} True if the value is a function, otherwise false.
+ * @returns {boolean} The function itself if it is valid, otherwise `false`.
  */
 export const isFunction = (callback) =>
     isTypeOf('function')(callback)
@@ -88,10 +88,10 @@ export const isFunction = (callback) =>
         : console.error('Must be a function and received:', typeof callback);
 
 /**
- * Checks if the provided value is an object (excluding arrays and null).
+ * Checks if the provided value is an object (excluding arrays and `null`).
  *
  * @param {any} obj - The value to check.
- * @returns {boolean} True if the value is an object, otherwise false.
+ * @returns {boolean} The object itself if it is valid, otherwise `false`.
  */
 export const isObject = (obj) =>
     isTypeOf('object')(obj) && obj !== null && !Array.isArray(obj)
@@ -102,7 +102,7 @@ export const isObject = (obj) =>
  * Checks if the provided value is an array.
  *
  * @param {any} array - The value to check.
- * @returns {boolean} True if the value is an array, otherwise false.
+ * @returns {boolean} The array itself if it is valid, otherwise `false`.
  */
 export const isArray = (array) =>
     Array.isArray(array)
@@ -113,7 +113,7 @@ export const isArray = (array) =>
  * Checks if the provided value is a Map.
  *
  * @param {any} value - The value to check.
- * @returns {boolean} True if the value is a Map, otherwise false.
+ * @returns {boolean} The Map itself if it is valid, otherwise `false`.
  */
 export const isMap = (value) =>
     isInstanceOf(Map)(value)
@@ -124,7 +124,7 @@ export const isMap = (value) =>
  * Checks if the provided value is a Set.
  *
  * @param {any} value - The value to check.
- * @returns {boolean} True if the value is a Set, otherwise false.
+ * @returns {boolean} The Set itself if it is valid, otherwise `false`.
  */
 export const isSet = (value) =>
     isInstanceOf(Set)(value)
@@ -135,7 +135,7 @@ export const isSet = (value) =>
  * Checks if the provided value is a DOM element.
  *
  * @param {any} root - The value to check.
- * @returns {boolean} True if the value is a DOM element, otherwise false.
+ * @returns {boolean} The DOM element itself if it is valid, otherwise `false`.
  */
 export const isDomElement = (root) =>
     isInstanceOf(Element, Document, DocumentFragment)(root)
@@ -146,7 +146,7 @@ export const isDomElement = (root) =>
  * Checks if the provided value is a non-empty string.
  *
  * @param {any} string - The value to check.
- * @returns {boolean} True if the value is a non-empty string, otherwise false.
+ * @returns {boolean} The string itself if it is valid, otherwise `false`.
  */
 export const isString = (string) =>
     isTypeOf('string')(string) && string.trim() !== ''
@@ -160,7 +160,7 @@ export const isString = (string) =>
  * Checks if the provided value is iterable.
  *
  * @param {any} input - The value to check.
- * @returns {boolean} True if the value is iterable, otherwise false.
+ * @returns {boolean} The iterable itself if it is valid, otherwise `false`.
  */
 export const isIterable = (input) =>
     input != null && typeof input[Symbol.iterator] === 'function'
@@ -172,8 +172,8 @@ export const isIterable = (input) =>
  *
  * @param {any} value - The value to check.
  * @param {Object} [options] - Additional options.
- * @param {boolean} [options.allowNaN=false] - Whether to allow NaN as a valid number.
- * @returns {boolean} True if the value is a number, otherwise false.
+ * @param {boolean} [options.allowNaN=false] - Whether to allow `NaN` as a valid number.
+ * @returns {boolean} The number itself if it is valid, otherwise `false`.
  */
 export const isNumber = (value, {allowNaN = false} = {}) =>
     isTypeOf('number')(value) && (allowNaN || !isNaN(value))
@@ -184,7 +184,7 @@ export const isNumber = (value, {allowNaN = false} = {}) =>
  * Checks if the provided value is a boolean.
  *
  * @param {any} val - The value to check.
- * @returns {boolean} True if the value is a boolean, otherwise false.
+ * @returns {boolean} The boolean itself if it is valid, otherwise `false`.
  */
 export const isBoolean = (val) =>
     isTypeOf('boolean')(val)
@@ -194,14 +194,14 @@ export const isBoolean = (val) =>
 /**
  * Checks if the provided value is empty.
  *
- * For strings: Returns true if the string is empty or contains only whitespace.
- * For arrays: Returns true if the array has no elements.
- * For objects: Returns true if the object has no own enumerable properties.
- * For Map and Set: Returns true if they have no elements.
- * For other types: Returns false.
+ * For strings: Returns `true` if the string is empty or contains only whitespace.
+ * For arrays: Returns `true` if the array has no elements.
+ * For objects: Returns `true` if the object has no own enumerable properties.
+ * For Map and Set: Returns `true` if they have no elements.
+ * For other types: Logs a warning and returns `false`.
  *
  * @param {any} value - The value to check.
- * @returns {boolean} True if the value is empty, otherwise false.
+ * @returns {boolean} `true` if the value is empty, otherwise `false`.
  */
 export const isEmpty = (value) => {
     if (isString(value)) return value.trim() === '';
@@ -213,25 +213,25 @@ export const isEmpty = (value) => {
 };
 
 /**
- * Checks if any of the provided validators return true.
+ * Checks if any of the provided validators return `true`.
  *
  * @param {...boolean} validators - The validators to check.
- * @returns {boolean} True if any validator returns true, otherwise false.
+ * @returns {boolean} `true` if any validator returns `true`, otherwise `false`.
  */
 export const anyValid = (...validators) =>
     validators.some((validator) => validator === true);
 
 /**
- * Checks if all of the provided validators return true.
+ * Checks if all of the provided validators return `true`.
  *
  * @param {...boolean} validators - The validators to check.
- * @returns {boolean} True if all validators return true, otherwise false.
+ * @returns {boolean} `true` if all validators return `true`, otherwise `false`.
  */
 export const allValid = (...validators) =>
     validators.every((validator) => validator === true);
 
 /**
- * Executes a callback if the provided validator function returns true.
+ * Executes a callback if the provided validator function returns `true`.
  *
  * @param {Function} validator - The validator function to check.
  * @returns {Function} A function that takes a callback to execute if the validator passes.

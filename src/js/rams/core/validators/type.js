@@ -8,6 +8,8 @@ export class DataEnforcer {
 		this.label = options.label || 'Value';
 		this.listeners = new Set();
 		this.set(initialValue);
+		this._originalValue = initialValue;
+this.errorListeners = new Set();
 	}
 
 	async validateValue(value) {
@@ -44,7 +46,8 @@ export class DataEnforcer {
 					value,
 					timestamp: Date.now()
 				};
-				throw err;
+				this.emitError(this.lastError);
+throw err;
 			}
 		}
 
@@ -112,6 +115,19 @@ export class DataEnforcer {
 	isPending() {
 		return this.pending;
 	}
+	isDirty() {
+	return this.value !== this._originalValue;
+}
+onError(fn) {
+	if (typeof fn === 'function') {
+		this.errorListeners.add(fn);
+	}
+	return () => this.errorListeners.delete(fn);
+}
+
+emitError(error) {
+	this.errorListeners.forEach((fn) => fn(error));
+}
 		getErrorReport() {
 		if (!this.lastError) return null;
 

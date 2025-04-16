@@ -1,12 +1,11 @@
-import {isNonEmptyString, isFunction} from './valid';
-
 export class DataEnforcer {
-	constructor(validate, initialValue) {
+	constructor(validate, initialValue, options = {}) {
 		this.validate = validate;
 		this.initialValue = initialValue;
 		this.value = null;
 		this.pending = false;
 		this.lastError = null;
+		this.label = options.label || 'Value';
 		this.listeners = new Set();
 		this.set(initialValue);
 	}
@@ -15,27 +14,55 @@ export class DataEnforcer {
 		const validators = Array.isArray(this.validate) ? this.validate : [this.validate];
 
 		for (const validator of validators) {
-			if (typeof validator !== 'function' && typeof validator !== 'string') {
-				throw new Error('Validator must be a function or a type string');
-			}
+			let validatorType = typeof validator === 'string' ? 'type' : 'custom';
+			let validatorSource = typeof validator === 'function' ? (validator.name || 'anonymous') : validator;
 
-			if (typeof validator === 'string') {
-				if (typeof value !== validator) {
-					throw new TypeError(`Expected type '${validator}', got '${typeof value}'`);
+			try {
+				if (validatorType === 'type') {
+					if (typeof value !== validator) {
+						throw new TypeError(`${this.label} must be of type '${validator}', got '${typeof value}'`);
+					}
 				}
-			}
 
-			if (typeof validator === 'function') {
-				const result = validator(value);
-				const resolved = result instanceof Promise ? await result : result;
+				if (validatorType === 'custom') {
+					const result = validator(value);
+					const resolved = result instanceof Promise ? await result : result;
 
-				if (resolved !== true && resolved !== undefined) {
-					throw new TypeError(resolved || 'Validation failed');
+					if (resolved !== true && resolved !== undefined) {
+						const msg = typeof resolved === 'string'
+							? `${this.label} ${resolved}`
+							: `${this.label} failed validation`;
+						throw new TypeError(msg);
+					}
 				}
+			} catch (err) {
+				// Attach structured error
+				this.lastError = {
+					message: err.message,
+					type: validatorType,
+					source: validatorSource,
+					value,
+					timestamp: Date.now()
+				};
+				throw err;
 			}
 		}
 
 		return value;
+	}
+
+	async validate() {
+		this.pending = true;
+		this.lastError = null;
+
+		try {
+			await this.validateValue(this.value);
+			this.pending = false;
+			return true;
+		} catch {
+			this.pending = false;
+			return false;
+		}
 	}
 
 	async set(newValue) {
@@ -48,11 +75,10 @@ export class DataEnforcer {
 			this.pending = false;
 			this.emit(valid);
 			return true;
-		} catch (err) {
+		} catch {
 			this.pending = false;
-			this.lastError = err.message;
-			console.error('[DataEnforcer]', err.message);
-			throw err;
+			console.error('[DataEnforcer]', this.lastError.message);
+			throw this.lastError;
 		}
 	}
 

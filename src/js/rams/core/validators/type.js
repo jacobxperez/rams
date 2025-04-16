@@ -1,4 +1,4 @@
-export class DataEnforcer {
+export class DataManager {
 	constructor(validate, initialValue, options = {}) {
 		this.validate = validate;
 		this.initialValue = initialValue;
@@ -7,9 +7,9 @@ export class DataEnforcer {
 		this.lastError = null;
 		this.label = options.label || 'Value';
 		this.listeners = new Set();
+		this.errorListeners = new Set();
+
 		this.set(initialValue);
-		this._originalValue = initialValue;
-this.errorListeners = new Set();
 	}
 
 	async validateValue(value) {
@@ -38,7 +38,6 @@ this.errorListeners = new Set();
 					}
 				}
 			} catch (err) {
-				// Attach structured error
 				this.lastError = {
 					message: err.message,
 					type: validatorType,
@@ -47,7 +46,7 @@ this.errorListeners = new Set();
 					timestamp: Date.now()
 				};
 				this.emitError(this.lastError);
-throw err;
+				throw err;
 			}
 		}
 
@@ -80,7 +79,7 @@ throw err;
 			return true;
 		} catch {
 			this.pending = false;
-			console.error('[DataEnforcer]', this.lastError.message);
+			console.error('[DataManager]', this.lastError.message);
 			throw this.lastError;
 		}
 	}
@@ -93,42 +92,7 @@ throw err;
 		return this.lastError;
 	}
 
-	isValid() {
-		return this.lastError === null;
-	}
-
-	reset() {
-		this.set(this.initialValue);
-	}
-
-	onChange(fn) {
-		if (typeof fn === 'function') {
-			this.listeners.add(fn);
-		}
-		return () => this.listeners.delete(fn);
-	}
-
-	emit(value) {
-		this.listeners.forEach((fn) => fn(value));
-	}
-
-	isPending() {
-		return this.pending;
-	}
-	isDirty() {
-	return this.value !== this._originalValue;
-}
-onError(fn) {
-	if (typeof fn === 'function') {
-		this.errorListeners.add(fn);
-	}
-	return () => this.errorListeners.delete(fn);
-}
-
-emitError(error) {
-	this.errorListeners.forEach((fn) => fn(error));
-}
-		getErrorReport() {
+	getErrorReport() {
 		if (!this.lastError) return null;
 
 		const { message, type, source, value, timestamp } = this.lastError;
@@ -142,5 +106,43 @@ emitError(error) {
 			timestamp: new Date(timestamp).toLocaleString(),
 			rawTimestamp: timestamp
 		};
+	}
+
+	isValid() {
+		return this.lastError === null;
+	}
+
+	isPending() {
+		return this.pending;
+	}
+
+	isDirty() {
+		return this.value !== this.initialValue;
+	}
+
+	reset() {
+		this.set(this.initialValue);
+	}
+
+	onChange(fn) {
+		if (typeof fn === 'function') {
+			this.listeners.add(fn);
+		}
+		return () => this.listeners.delete(fn);
+	}
+
+	onError(fn) {
+		if (typeof fn === 'function') {
+			this.errorListeners.add(fn);
+		}
+		return () => this.errorListeners.delete(fn);
+	}
+
+	emit(value) {
+		this.listeners.forEach((fn) => fn(value));
+	}
+
+	emitError(error) {
+		this.errorListeners.forEach((fn) => fn(error));
 	}
 }

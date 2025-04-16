@@ -1,7 +1,13 @@
-import {isString, isDomElement, isOptional} from '../validators/valid.js';
+import {
+    isString,
+    isNonEmptyString,
+    isDomElement,
+    isOptional,
+    allValid,
+} from '../validators/valid.js';
 
 const isValidElementWithDataAttr = (root, dataName) =>
-    isDomElement(root) && isString(dataName);
+    allValid(isDomElement, isNonEmptyString)(root, dataName);
 const isValidDataAttrValue = (value) => isOptional(isString)(value);
 
 /**
@@ -178,8 +184,8 @@ export const replaceDataAttrValue =
 
         if (
             isValidElementWithDataAttr(root, dataName) &&
-            isString(oldValue) &&
-            isString(newValue)
+            isValidDataAttrValue(oldValue) &&
+            isValidDataAttrValue(newValue)
         ) {
             const currentValue = root.getAttribute(`data-${dataName}`);
             if (!currentValue) {
@@ -316,7 +322,7 @@ export const toggleDataAttrValue = (root) => (dataName, value1) => (value2) => {
     if (
         isValidElementWithDataAttr(root, dataName) &&
         isValidDataAttrValue(value1) &&
-        isString(value2)
+        isValidDataAttrValue(value2)
     ) {
         const currentValue = root.getAttribute(`data-${dataName}`);
         const newValue = currentValue === value1 ? value2 : value1;

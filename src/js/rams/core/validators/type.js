@@ -1,4 +1,4 @@
-import {validator} from './valid.js';
+import {isNonEmptyString, isFunction} from './valid';
 
 /**
  * A class that enforces a specific type or validation logic for a value.
@@ -18,8 +18,19 @@ export class TypeEnforcer {
             );
         }
         this.validate = validate;
-        this.value = validator(validate)(initialValue);
+        this.value = this.validator(validate)(initialValue);
     }
+
+    validator = (validate) => (value) => {
+        if (isFunction(validate)) {
+            return validate(value) ? value : false;
+        }
+        if (isNonEmptyString(validate)) {
+            return isTypeOf(validate)(value) ? value : false;
+        }
+        console.error('Invalid validator type:', typeof validate);
+        return false;
+    };
 
     /**
      * Retrieves the current value.
@@ -36,6 +47,6 @@ export class TypeEnforcer {
      * @param {any} newValue - The new value to validate and set.
      */
     set(newValue) {
-        this.value = validator(this.validate)(newValue);
+        this.value = this.validator(this.validate)(newValue);
     }
 }

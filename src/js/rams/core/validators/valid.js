@@ -1,3 +1,10 @@
+export const validator = (validator) => (value) =>
+    typeof validator === 'function'
+        ? validator(value)
+        : typeof validator === 'string'
+          ? isTypeOf(validator)(value)
+          : console.error('Invalid validator type:', typeof validator);
+
 /**
  * Creates a validator that checks if a value is an instance of any of the provided constructors.
  *

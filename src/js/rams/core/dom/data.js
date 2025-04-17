@@ -1,3 +1,4 @@
+import {DataManager} from '../components/dataManager.js';
 import {
     isString,
     isNonEmptyString,
@@ -9,6 +10,10 @@ import {
 const isValidElementWithDataAttr = (root, dataName) =>
     allValid(isDomElement, isNonEmptyString)(root, dataName);
 const isValidDataAttrValue = (value) => isOptional(isString)(value);
+
+const domElement = new DataManager(isDomElement);
+const dataAttr = new DataManager(isNonEmptyString);
+const dataAttrValue = new DataManager(isOptional(isString));
 
 /**
  * Generates a CSS selector for a data attribute with an optional value.
@@ -30,13 +35,13 @@ function optionalDataAttrValue(dataName, value) {
  * @returns {HTMLElement|null} The first matching element, or null if no match is found.
  */
 export const getFirstWithDataAttr = (root) => (dataName, value) => {
-    if (
-        isValidElementWithDataAttr(root, dataName) &&
-        isValidDataAttrValue(value)
-    ) {
-        return root.querySelector(optionalDataAttrValue(dataName, value));
-    }
-    return null;
+    domElement.set(root);
+    dataAttr.set(dataName);
+    dataAttrValue.set(value);
+
+    return domElement
+        .get()
+        .querySelector(optionalDataAttrValue(dataName, value));
 };
 
 /**
@@ -48,15 +53,13 @@ export const getFirstWithDataAttr = (root) => (dataName, value) => {
  * @returns {HTMLElement[]} An array of matching elements, or an empty array if no matches are found.
  */
 export const getAllWithDataAttr = (root) => (dataName, value) => {
-    if (
-        isValidElementWithDataAttr(root, dataName) &&
-        isValidDataAttrValue(value)
-    ) {
-        return [
-            ...root.querySelectorAll(optionalDataAttrValue(dataName, value)),
-        ];
-    }
-    return [];
+    domElement.set(root);
+    dataAttr.set(dataName);
+    dataAttrValue.set(value);
+
+    return domElement
+        .get()
+        .querySelectorAll(optionalDataAttrValue(dataName, value));
 };
 
 /**
@@ -70,14 +73,11 @@ export const getAllWithDataAttr = (root) => (dataName, value) => {
 export const setDataAttr =
     (root) =>
     (dataName, value = '') => {
-        if (
-            isValidElementWithDataAttr(root, dataName) &&
-            (value === '' || isValidDataAttrValue(value))
-        ) {
-            root.setAttribute(`data-${dataName}`, value);
-            return true;
-        }
-        return false;
+        domElement.set(root);
+        dataAttr.set(dataName);
+        dataAttrValue.set(value);
+
+        return domElement.get().setAttribute(`data-${dataName}`, value);
     };
 
 /**
@@ -258,13 +258,13 @@ export const dataAttrIsEmpty = (root) => (dataName) => {
  * @returns {HTMLElement|null} The closest matching ancestor element, or null if not found.
  */
 export const closestDataAttr = (root) => (dataName, value) => {
-    if (
-        isValidElementWithDataAttr(root, dataName) &&
-        isValidDataAttrValue(value)
-    ) {
-        return root.closest(optionalDataAttrValue(dataName, value));
-    }
-    return null;
+    domElement.set(root);
+    dataAttr.set(dataName);
+    dataAttrValue.set(value);
+
+    return domElement
+        .get()
+        .closest(optionalDataAttrValue(dataAttr.get(), dataAttrValue.get()));
 };
 
 /**
@@ -276,13 +276,11 @@ export const closestDataAttr = (root) => (dataName, value) => {
  * @returns {boolean} True if the element matches the data attribute and value, false otherwise.
  */
 export const matchesDataAttr = (root) => (dataName, value) => {
-    if (
-        isValidElementWithDataAttr(root, dataName) &&
-        isValidDataAttrValue(value)
-    ) {
-        return root.matches(optionalDataAttrValue(dataName, value));
-    }
-    return false;
+    domElement.set(root);
+    dataAttr.set(dataName);
+    dataAttrValue.set(value);
+
+    return domElement.get().matches(optionalDataAttrValue(dataName, value));
 };
 
 /**

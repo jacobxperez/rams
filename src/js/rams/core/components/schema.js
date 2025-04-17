@@ -1,4 +1,4 @@
-export function createDataSchema(schema) {
+export function schema(schema) {
 	const fields = {};
 	for (const key in schema) {
 		const { validate, initial, label } = schema[key];

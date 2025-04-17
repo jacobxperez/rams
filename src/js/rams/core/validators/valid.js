@@ -1,21 +1,4 @@
 /**
- * Creates a validator function that validates a value based on the provided validation logic.
- *
- * @param {Function|string} validate - A function to validate the value or a string representing the type to validate against.
- * @returns {Function} A function that validates the value and returns `true` if valid, otherwise `false`.
- */
-export const validator = (validate) => (value) => {
-    if (isFunction(validate)) {
-        return validate(value) ? true : false;
-    }
-    if (isNonEmptyString(validate)) {
-        return isTypeOf(validate)(value) ? true : false;
-    }
-    console.error('Invalid validator type:', typeof validate);
-    return false;
-};
-
-/**
  * Creates a validator that checks if a value is an instance of any of the provided constructors.
  *
  * @param {...Function} constructors - The constructor functions to check against.

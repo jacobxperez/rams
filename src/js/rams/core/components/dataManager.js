@@ -152,6 +152,13 @@ export class DataManager {
         }
         return this.value;
     }
+    
+    freeze() {
+        if (this.value !== null && typeof this.value === "object") {
+            this.value = freezeDeep(this.value);
+        }
+        return this;
+    }
 
     getError() {
         return this.lastError;

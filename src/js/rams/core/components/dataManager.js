@@ -1,6 +1,6 @@
 export class DataManager {
     constructor(validate, initialValue, options = {}) {
-        this.validate = validate;
+        this.validate = Array.isArray(validate) ? validate : [validate];
         this.initialValue = initialValue;
         this.value = null;
         this.pending = false;
@@ -9,32 +9,27 @@ export class DataManager {
         this.listeners = new Set();
         this.errorListeners = new Set();
 
-        this.set(initialValue);
+        if (arguments.length >= 2) {
+            this.set(initialValue);
+        }
     }
 
-    async validateValue(value) {
-        const validators = Array.isArray(this.validate)
-            ? this.validate
-            : [this.validate];
-
-        for (const validator of validators) {
-            let validatorType =
-                typeof validator === 'string' ? 'type' : 'custom';
-            let validatorSource =
+    async runValidation(value) {
+        for (const validator of this.validate) {
+            const type = typeof validator === 'string' ? 'type' : 'custom';
+            const source =
                 typeof validator === 'function'
                     ? validator.name || 'anonymous'
                     : validator;
 
             try {
-                if (validatorType === 'type') {
+                if (type === 'type') {
                     if (typeof value !== validator) {
                         throw new TypeError(
                             `${this.label} must be of type '${validator}', got '${typeof value}'`
                         );
                     }
-                }
-
-                if (validatorType === 'custom') {
+                } else {
                     const result = validator(value);
                     const resolved =
                         result instanceof Promise ? await result : result;
@@ -50,8 +45,8 @@ export class DataManager {
             } catch (err) {
                 this.lastError = {
                     message: err.message,
-                    type: validatorType,
-                    source: validatorSource,
+                    type,
+                    source,
                     value,
                     timestamp: Date.now(),
                 };
@@ -63,12 +58,86 @@ export class DataManager {
         return value;
     }
 
+    set(newValue) {
+        this.lastError = null;
+        this.pending = true;
+
+        const isAsyncValidation = this.validate.some((validator) => {
+            if (typeof validator !== 'function') return false;
+            try {
+                const result = validator(newValue);
+                return result instanceof Promise;
+            } catch {
+                return false;
+            }
+        });
+
+        if (isAsyncValidation) {
+            return this._setAsync(newValue);
+        }
+
+        try {
+            for (const validator of this.validate) {
+                if (typeof validator === 'string') {
+                    if (typeof newValue !== validator) {
+                        throw new TypeError(
+                            `${this.label} must be of type '${validator}', got '${typeof newValue}'`
+                        );
+                    }
+                } else {
+                    const result = validator(newValue);
+                    if (result !== true && result !== undefined) {
+                        const msg =
+                            typeof result === 'string'
+                                ? `${this.label} ${result}`
+                                : `${this.label} failed validation`;
+                        throw new TypeError(msg);
+                    }
+                }
+            }
+
+            this.value = newValue;
+            this.pending = false;
+            this.emit(newValue);
+            return true;
+        } catch (err) {
+            this.pending = false;
+            this.lastError = {
+                message: err.message,
+                type: typeof validator === 'string' ? 'type' : 'custom',
+                source: validator,
+                value: newValue,
+                timestamp: Date.now(),
+            };
+            this.emitError(this.lastError);
+            throw err;
+        }
+    }
+
+    async _setAsync(newValue) {
+        this.pending = true;
+        this.lastError = null;
+
+        return this.runValidation(newValue)
+            .then((valid) => {
+                this.value = valid;
+                this.pending = false;
+                this.emit(valid);
+                return true;
+            })
+            .catch((err) => {
+                this.pending = false;
+                console.error('[DataManager]', err.message);
+                throw err;
+            });
+    }
+
     async validate() {
         this.pending = true;
         this.lastError = null;
 
         try {
-            await this.validateValue(this.value);
+            await this.runValidation(this.value);
             this.pending = false;
             return true;
         } catch {
@@ -77,24 +146,10 @@ export class DataManager {
         }
     }
 
-    async set(newValue) {
-        this.pending = true;
-        this.lastError = null;
-
-        try {
-            const valid = await this.validateValue(newValue);
-            this.value = valid;
-            this.pending = false;
-            this.emit(valid);
-            return true;
-        } catch {
-            this.pending = false;
-            console.error('[DataManager]', this.lastError.message);
-            throw this.lastError;
-        }
-    }
-
     get() {
+        if (typeof globalThis.currentEffect === 'object') {
+            globalThis.currentEffect.deps.add(this);
+        }
         return this.value;
     }
 
@@ -106,7 +161,6 @@ export class DataManager {
         if (!this.lastError) return null;
 
         const {message, type, source, value, timestamp} = this.lastError;
-
         return {
             label: this.label,
             message,
@@ -135,21 +189,20 @@ export class DataManager {
     }
 
     onChange(fn) {
-        if (typeof fn === 'function') {
-            this.listeners.add(fn);
-        }
+        if (typeof fn === 'function') this.listeners.add(fn);
         return () => this.listeners.delete(fn);
     }
 
     onError(fn) {
-        if (typeof fn === 'function') {
-            this.errorListeners.add(fn);
-        }
+        if (typeof fn === 'function') this.errorListeners.add(fn);
         return () => this.errorListeners.delete(fn);
     }
 
     emit(value) {
         this.listeners.forEach((fn) => fn(value));
+        if (this._effectListeners) {
+            for (const fn of this._effectListeners) fn();
+        }
     }
 
     emitError(error) {
@@ -157,4 +210,8 @@ export class DataManager {
     }
 }
 
-export const dataManager = new DataManager();
+export function dataManager(validator) {
+    return function (initialValue) {
+        return new DataManager(validator, initialValue);
+    };
+}

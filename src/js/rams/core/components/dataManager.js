@@ -152,10 +152,17 @@ export class DataManager {
         }
         return this.value;
     }
-    
+
     freeze() {
-        if (this.value !== null && typeof this.value === "object") {
+        if (this.value !== null && typeof this.value === 'object') {
             this.value = freezeDeep(this.value);
+        }
+        return this;
+    }
+
+    unfreeze() {
+        if (this.value !== null && typeof this.value === 'object') {
+            this.value = unfreezeDeep(this.value);
         }
         return this;
     }

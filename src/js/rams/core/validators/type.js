@@ -1,52 +1,148 @@
-import {isNonEmptyString, isFunction} from './valid';
+export class DataManager {
+	constructor(validate, initialValue, options = {}) {
+		this.validate = validate;
+		this.initialValue = initialValue;
+		this.value = null;
+		this.pending = false;
+		this.lastError = null;
+		this.label = options.label || 'Value';
+		this.listeners = new Set();
+		this.errorListeners = new Set();
 
-/**
- * A class that enforces a specific type or validation logic for a value.
- */
-export class TypeEnforcer {
-    /**
-     * Creates an instance of TypedEnforcer.
-     *
-     * @param {Function|string} validate - A function or string representing the validation logic or type.
-     * @param {any} initialValue - The initial value to validate and set.
-     * @throws {Error} Throws an error if the `validate` parameter is not a function or string.
-     */
-    constructor(validate, initialValue) {
-        if (typeof validate !== 'function' && typeof validate !== 'string') {
-            throw new Error(
-                'Invalid validate parameter. Must be a function or string.'
-            );
-        }
-        this.validate = validate;
-        this.value = this.validator(validate)(initialValue);
-    }
+		this.set(initialValue);
+	}
 
-    validator = (validate) => (value) => {
-        if (isFunction(validate)) {
-            return validate(value) ? value : false;
-        }
-        if (isNonEmptyString(validate)) {
-            return isTypeOf(validate)(value) ? value : false;
-        }
-        console.error('Invalid validator type:', typeof validate);
-        return false;
-    };
+	async validateValue(value) {
+		const validators = Array.isArray(this.validate) ? this.validate : [this.validate];
 
-    /**
-     * Retrieves the current value.
-     *
-     * @returns {any} The current value.
-     */
-    get() {
-        return this.value;
-    }
+		for (const validator of validators) {
+			let validatorType = typeof validator === 'string' ? 'type' : 'custom';
+			let validatorSource = typeof validator === 'function' ? (validator.name || 'anonymous') : validator;
 
-    /**
-     * Sets a new value after validating it.
-     *
-     * @param {any} newValue - The new value to validate and set.
-     */
-    set(newValue) {
-        this.value = this.validator(this.validate)(newValue);
-    }
+			try {
+				if (validatorType === 'type') {
+					if (typeof value !== validator) {
+						throw new TypeError(`${this.label} must be of type '${validator}', got '${typeof value}'`);
+					}
+				}
+
+				if (validatorType === 'custom') {
+					const result = validator(value);
+					const resolved = result instanceof Promise ? await result : result;
+
+					if (resolved !== true && resolved !== undefined) {
+						const msg = typeof resolved === 'string'
+							? `${this.label} ${resolved}`
+							: `${this.label} failed validation`;
+						throw new TypeError(msg);
+					}
+				}
+			} catch (err) {
+				this.lastError = {
+					message: err.message,
+					type: validatorType,
+					source: validatorSource,
+					value,
+					timestamp: Date.now()
+				};
+				this.emitError(this.lastError);
+				throw err;
+			}
+		}
+
+		return value;
+	}
+
+	async validate() {
+		this.pending = true;
+		this.lastError = null;
+
+		try {
+			await this.validateValue(this.value);
+			this.pending = false;
+			return true;
+		} catch {
+			this.pending = false;
+			return false;
+		}
+	}
+
+	async set(newValue) {
+		this.pending = true;
+		this.lastError = null;
+
+		try {
+			const valid = await this.validateValue(newValue);
+			this.value = valid;
+			this.pending = false;
+			this.emit(valid);
+			return true;
+		} catch {
+			this.pending = false;
+			console.error('[DataManager]', this.lastError.message);
+			throw this.lastError;
+		}
+	}
+
+	get() {
+		return this.value;
+	}
+
+	getError() {
+		return this.lastError;
+	}
+
+	getErrorReport() {
+		if (!this.lastError) return null;
+
+		const { message, type, source, value, timestamp } = this.lastError;
+
+		return {
+			label: this.label,
+			message,
+			type,
+			source,
+			value,
+			timestamp: new Date(timestamp).toLocaleString(),
+			rawTimestamp: timestamp
+		};
+	}
+
+	isValid() {
+		return this.lastError === null;
+	}
+
+	isPending() {
+		return this.pending;
+	}
+
+	isDirty() {
+		return this.value !== this.initialValue;
+	}
+
+	reset() {
+		this.set(this.initialValue);
+	}
+
+	onChange(fn) {
+		if (typeof fn === 'function') {
+			this.listeners.add(fn);
+		}
+		return () => this.listeners.delete(fn);
+	}
+
+	onError(fn) {
+		if (typeof fn === 'function') {
+			this.errorListeners.add(fn);
+		}
+		return () => this.errorListeners.delete(fn);
+	}
+
+	emit(value) {
+		this.listeners.forEach((fn) => fn(value));
+	}
+
+	emitError(error) {
+		this.errorListeners.forEach((fn) => fn(error));
+	}
 }

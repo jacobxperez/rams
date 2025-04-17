@@ -6,16 +6,8 @@
  */
 export const isInstanceOf =
     (...constructors) =>
-    (value) => {
-        if (constructors.some((constructor) => value instanceof constructor)) {
-            return true;
-        }
-        console.error(
-            'Must be an instance of one of the provided constructors. Received:',
-            typeof value
-        );
-        return false;
-    };
+    (value) =>
+        constructors.some((constructor) => value instanceof constructor) ? true : false;
 
 /**
  * Creates a validator that allows `undefined` or validates using the provided validator.
@@ -96,8 +88,15 @@ export const isSet = (value) => (isInstanceOf(Set)(value) ? true : false);
  * @param {any} root - The value to check.
  * @returns {boolean} `true` if the value is a DOM element, otherwise `false`.
  */
-export const isDomElement = (root) =>
-    isInstanceOf(Element, Document, DocumentFragment)(root) ? true : false;
+export const isDomElement = (root) => {
+    if (isInstanceOf(Element, Document, DocumentFragment)(root)) {
+        return true;
+    }
+    console.error(
+        'Must be a instance of Element, Document, DocumentFragment but received', typeof root
+    );
+    return false;
+}
 
 /**
  * Checks if the provided value is a non-empty string.

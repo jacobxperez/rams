@@ -1,21 +1,4 @@
 /**
- * Creates a validator function that validates a value based on the provided validation logic.
- *
- * @param {Function|string} validate - A function to validate the value or a string representing the type to validate against.
- * @returns {Function} A function that validates the value and returns `true` if valid, otherwise `false`.
- */
-export const validator = (validate) => (value) => {
-    if (isFunction(validate)) {
-        return validate(value) ? true : false;
-    }
-    if (isNonEmptyString(validate)) {
-        return isTypeOf(validate)(value) ? true : false;
-    }
-    console.error('Invalid validator type:', typeof validate);
-    return false;
-};
-
-/**
  * Creates a validator that checks if a value is an instance of any of the provided constructors.
  *
  * @param {...Function} constructors - The constructor functions to check against.
@@ -23,16 +6,8 @@ export const validator = (validate) => (value) => {
  */
 export const isInstanceOf =
     (...constructors) =>
-    (value) => {
-        if (constructors.some((constructor) => value instanceof constructor)) {
-            return true;
-        }
-        console.error(
-            'Must be an instance of one of the provided constructors. Received:',
-            typeof value
-        );
-        return false;
-    };
+    (value) =>
+        constructors.some((constructor) => value instanceof constructor) ? true : false;
 
 /**
  * Creates a validator that allows `undefined` or validates using the provided validator.
@@ -113,8 +88,15 @@ export const isSet = (value) => (isInstanceOf(Set)(value) ? true : false);
  * @param {any} root - The value to check.
  * @returns {boolean} `true` if the value is a DOM element, otherwise `false`.
  */
-export const isDomElement = (root) =>
-    isInstanceOf(Element, Document, DocumentFragment)(root) ? true : false;
+export const isDomElement = (root) => {
+    if (isInstanceOf(Element, Document, DocumentFragment)(root)) {
+        return true;
+    }
+    console.error(
+        'Must be a instance of Element, Document, DocumentFragment but received', typeof root
+    );
+    return false;
+}
 
 /**
  * Checks if the provided value is a non-empty string.
@@ -164,27 +146,6 @@ export const isNumber = (value, {allowNaN = false} = {}) =>
 export const isBoolean = (val) => (isTypeOf('boolean')(val) ? true : false);
 
 /**
- * Checks if the provided value is empty.
- *
- * For strings: Returns `true` if the string is empty or contains only whitespace.
- * For arrays: Returns `true` if the array has no elements.
- * For objects: Returns `true` if the object has no own enumerable properties.
- * For Map and Set: Returns `true` if they have no elements.
- * For other types: Logs a warning and returns `false`.
- *
- * @param {any} value - The value to check.
- * @returns {boolean} `true` if the value is empty, otherwise `false`.
- */
-export const isEmpty = (value) => {
-    if (isString(value)) return value.trim() === '';
-    if (isArray(value)) return value.length === 0;
-    if (isMap(value) || isSet(value)) return value.size === 0;
-    if (isObject(value)) return Object.keys(value).length === 0;
-    console.warn('Unsupported type for isEmpty. Received:', typeof value);
-    return false;
-};
-
-/**
  * Checks if any of the provided validators return `true`.
  *
  * @param {...boolean} validators - The validators to check.
@@ -211,9 +172,9 @@ export const allValid =
  * @param {Function} validator - The validator function to check.
  * @returns {Function} A function that takes a callback to execute if the validator passes.
  */
-export const ifValid = (validator) => (callback) => {
+export const ifValid = (validator) => (callback) => (val) => {
     if (validator) {
-        return callback();
+        return callback(val);
     }
     console.warn('ifValid: Validator failed for', validator);
     return false;

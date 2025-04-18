@@ -18,7 +18,6 @@ import {
 
 import {DataManager} from './core/components/dataManager.js';
 import {createSchema} from './core/components/createSchema.js';
-import {ErrorManager} from './core/components/errorManager.js';
 
 export class RAMS {
     #initialized = false;
@@ -28,7 +27,7 @@ export class RAMS {
         this.createEffect = this.createEffect.bind(this);
         this.data = this.data.bind(this);
         this.schema = this.schema.bind(this);
-        this.errors = new ErrorManager();
+        this.state = {}; 
         this.toggle = toggle;
         this.#init();
     }
@@ -100,6 +99,7 @@ export class RAMS {
     clear() {
         this.#currentEffect = null;
         this.#initialized = false;
+        this.state = {}; // Clear state as well
     }
 }
 

@@ -14,6 +14,7 @@ const isValidDataAttrValue = (value) => isOptional(isString)(value);
 const domElement = new DataManager(isDomElement);
 const dataAttr = new DataManager(isNonEmptyString);
 const dataAttrValue = new DataManager(isOptional(isString));
+const dataAttrValue2 = new DataManager(isOptional(isString));
 
 /**
  * Generates a CSS selector for a data attribute with an optional value.
@@ -292,16 +293,17 @@ export const matchesDataAttr = (root) => (dataName, value) => {
  * @returns {boolean} True if the attribute was added, false if it was removed.
  */
 export const toggleDataAttr = (root) => (dataName, value) => {
-    if (
-        isValidElementWithDataAttr(root, dataName) &&
-        isValidDataAttrValue(value)
-    ) {
+    domElement.set(root);
+    dataAttr.set(dataName);
+    dataAttrValue.set(value);
+
+    if (domElement.isValid() && dataAttr.isValid()) {
         const currentValue = root.getAttribute(`data-${dataName}`);
         if (currentValue === value || (value === '' && currentValue !== null)) {
-            root.removeAttribute(`data-${dataName}`);
+            domElement.get().removeAttribute(`data-${dataName}`);
             return false;
         }
-        root.setAttribute(`data-${dataName}`, value);
+        domElement.get().setAttribute(`data-${dataName}`, value);
         return true;
     }
     return false;
@@ -317,14 +319,20 @@ export const toggleDataAttr = (root) => (dataName, value) => {
  * @returns {string|boolean} The new value of the data attribute, or false if the operation failed.
  */
 export const toggleDataAttrValue = (root) => (dataName, value1) => (value2) => {
+    domElement.set(root);
+    dataAttr.set(dataName);
+    dataAttrValue.set(value1);
+    dataAttrValue2.set(value2);
+
     if (
-        isValidElementWithDataAttr(root, dataName) &&
-        isValidDataAttrValue(value1) &&
-        isValidDataAttrValue(value2)
+        domElement.isValid() &&
+        dataAttr.isValid() &&
+        dataAttrValue.set(value1) &&
+        dataAttrValue2.set(value2)
     ) {
-        const currentValue = root.getAttribute(`data-${dataName}`);
+        const currentValue = domElement.get().getAttribute(`data-${dataAttr.get()}`);
         const newValue = currentValue === value1 ? value2 : value1;
-        root.setAttribute(`data-${dataName}`, newValue);
+        domElement.get().setAttribute(`data-${dataAttr.get()}`, newValue);
         return newValue;
     }
     return false;

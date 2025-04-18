@@ -1,4 +1,6 @@
 export class DataManager {
+    static _autoId = 0;
+
     constructor(validate, initialValue, options = {}) {
         this.validate = Array.isArray(validate) ? validate : [validate];
         this.initialValue = initialValue;
@@ -7,9 +9,12 @@ export class DataManager {
         this.lastError = null;
         this.label = options.label || 'Value';
 
+        this.errorManager = options.errorManager || null;
+        this.key = options.key || `field_${DataManager._autoId++}`;
+
         this.listeners = new Set();
         this.errorListeners = new Set();
-        this._currentEffectContext = null; // for RAMS reactivity
+        this._currentEffectContext = null;
 
         if (arguments.length >= 2) {
             this.set(initialValue);
@@ -56,23 +61,35 @@ export class DataManager {
                     }
                 }
             } catch (err) {
-                this.lastError = {
+                this.setError({
                     message: err.message,
                     type,
                     source,
                     value,
                     timestamp: Date.now(),
-                };
-                this.emitError(this.lastError);
+                });
                 throw err;
             }
         }
-
         return value;
     }
 
-    set(newValue) {
+    setError(err) {
+        this.lastError = err;
+        this.emitError(err);
+        if (this.errorManager && this.key)
+            this.errorManager.setError(this.key, err);
+    }
+
+    clearError() {
         this.lastError = null;
+        this.emitError(null);
+        if (this.errorManager && this.key)
+            this.errorManager.setError(this.key, null);
+    }
+
+    set(newValue) {
+        this.clearError();
         this.pending = true;
 
         const isAsyncValidation = this.validate.some((validator) => {
@@ -109,28 +126,26 @@ export class DataManager {
                     }
                 }
             }
-
             this.value = newValue;
             this.pending = false;
             this.emit(newValue);
             return true;
         } catch (err) {
             this.pending = false;
-            this.lastError = {
+            this.setError({
                 message: err.message,
                 type: typeof validator === 'string' ? 'type' : 'custom',
                 source: validator,
                 value: newValue,
                 timestamp: Date.now(),
-            };
-            this.emitError(this.lastError);
+            });
             throw err;
         }
     }
 
     async _setAsync(newValue) {
         this.pending = true;
-        this.lastError = null;
+        this.clearError();
 
         return this.runValidation(newValue)
             .then((valid) => {
@@ -148,7 +163,7 @@ export class DataManager {
 
     async validate() {
         this.pending = true;
-        this.lastError = null;
+        this.clearError();
 
         try {
             await this.runValidation(this.value);
@@ -180,7 +195,6 @@ export class DataManager {
 
     getErrorReport() {
         if (!this.lastError) return null;
-
         const {message, type, source, value, timestamp} = this.lastError;
         return {
             label: this.label,

@@ -17,7 +17,7 @@ import {
 } from './core/dom/data.js';
 
 import {DataManager} from './core/components/dataManager.js';
-import { createSchema } from './core/components/schema.js';
+import {createSchema} from './core/components/createSchema.js';
 
 export class RAMS {
     #initialized = false;
@@ -101,4 +101,4 @@ export class RAMS {
     }
 }
 
-export const r = new RAMS();
+export const rams = new RAMS();

@@ -25,14 +25,13 @@ class RAMS {
 
     constructor() {
         this.createEffect = this.createEffect.bind(this);
-        this.data = new DataManager();
         this.toggle = toggle;
         this.#init();
     }
 
     #init() {
         if (!this.#initialized) {
-            this.#currentEffect = {deps: new Set()};
+            this.#currentEffect = { deps: new Set() };
             this.#initialized = true;
         }
     }
@@ -56,7 +55,7 @@ class RAMS {
             for (const dep of deps) dep._effectListeners?.delete(rerun);
             deps.clear();
 
-            this.#currentEffect = {deps};
+            this.#currentEffect = { deps };
             const cleanup = fn();
             this.#currentEffect = null;
 

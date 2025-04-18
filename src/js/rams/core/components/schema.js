@@ -1,4 +1,7 @@
-export function schema(schema) {
+// createSchema.js
+import { DataManager } from './DataManager.js';
+
+export function createSchema(schema) {
 	const fields = {};
 	for (const key in schema) {
 		const { validate, initial, label } = schema[key];
@@ -7,21 +10,17 @@ export function schema(schema) {
 
 	return {
 		fields,
-
 		async validateAll() {
 			let isValid = true;
 			for (const key in fields) {
-				const field = fields[key];
-				const valid = await field.validate();
+				const valid = await fields[key].validate();
 				if (!valid) isValid = false;
 			}
 			return isValid;
 		},
-
 		isValid() {
-			return Object.values(fields).every((field) => field.isValid());
+			return Object.values(fields).every(f => f.isValid());
 		},
-
 		getErrorReport() {
 			const report = {};
 			for (const key in fields) {
@@ -30,13 +29,11 @@ export function schema(schema) {
 			}
 			return Object.keys(report).length > 0 ? report : null;
 		},
-
 		resetAll() {
 			for (const field of Object.values(fields)) {
 				field.reset();
 			}
 		},
-
 		getValues() {
 			const values = {};
 			for (const key in fields) {
@@ -44,13 +41,11 @@ export function schema(schema) {
 			}
 			return values;
 		},
-
 		setValues(newValues = {}) {
 			for (const key in newValues) {
 				if (fields[key]) fields[key].set(newValues[key]);
 			}
 		},
-
 		getMeta() {
 			const meta = {};
 			for (const key in fields) {

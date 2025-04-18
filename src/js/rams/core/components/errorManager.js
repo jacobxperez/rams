@@ -1,46 +1,71 @@
 export class ErrorManager {
     constructor() {
-        this.errors = new Map(); // key -> error object
+        this.errors = new Map(); // key -> lastError
         this.listeners = new Set();
     }
 
-    // Add or update an error
-    setError(key, error) {
-        if (!error) {
-            this.errors.delete(key);
-        } else {
-            this.errors.set(key, error);
+    add(manager) {
+        const key = manager.label || manager.key || `field-${this.errors.size}`;
+
+        // Listen for changes to the manager's error state
+        const unsubscribe = manager.onError((error) => {
+            if (error) {
+                this.errors.set(key, error);
+            } else {
+                this.errors.delete(key);
+            }
+            this.emit();
+        });
+
+        // Store unsubscribe if you want remove(key) later
+        manager._errorUnsubscribe = unsubscribe;
+
+        // Set current state if already errored
+        if (manager.getError()) {
+            this.errors.set(key, manager.getError());
         }
+
         this.emit();
     }
 
-    // Get error for a specific key
-    getError(key) {
-        return this.errors.get(key) || null;
+    getErrors() {
+        return Object.fromEntries(this.errors);
     }
 
-    // Get full error report
-    getAllErrors() {
-        const report = {};
-        for (const [key, error] of this.errors.entries()) {
-            report[key] = error;
-        }
-        return Object.keys(report).length ? report : null;
+    getErrorList() {
+        return Array.from(this.errors.values());
     }
 
-    // Reset all errors
-    clearAll() {
+    onChange(listener) {
+        this.listeners.add(listener);
+        return () => this.listeners.delete(listener);
+    }
+
+    emit() {
+        for (const listener of this.listeners) listener(this.getErrors());
+    }
+
+    clear() {
         this.errors.clear();
         this.emit();
     }
 
-    // Subscribe to changes
-    onChange(fn) {
-        if (typeof fn === 'function') this.listeners.add(fn);
-        return () => this.listeners.delete(fn);
+    remove(key) {
+        if (this.errors.has(key)) {
+            const manager = this.errors.get(key);
+            if (manager && manager._errorUnsubscribe) {
+                manager._errorUnsubscribe();
+            }
+            this.errors.delete(key);
+            this.emit();
+        }
     }
 
-    emit() {
-        for (const fn of this.listeners) fn(this.getAllErrors());
+    hasErrors() {
+        return this.errors.size > 0;
+    }
+
+    count() {
+        return this.errors.size;
     }
 }

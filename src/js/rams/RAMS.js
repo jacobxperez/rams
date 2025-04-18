@@ -19,13 +19,14 @@ import {
     toggleDataAttrValue,
 } from './core/dom/data.js';
 
-class RAMS {
+export class RAMS {
     #initialized = false;
     #currentEffect = null;
 
     constructor() {
         this.createEffect = this.createEffect.bind(this);
-        this.toggle = toggle;
+        this.data = this.data.bind(this);
+        this.schema = this.schema.bind(this);
         this.#init();
     }
 
@@ -45,6 +46,20 @@ class RAMS {
             return manager.value;
         };
         return manager;
+    }
+
+    schema(config) {
+        const schema = createSchema(config);
+        for (const field of Object.values(schema.fields)) {
+            const originalGet = field.get.bind(field);
+            field.get = () => {
+                if (this.#currentEffect) {
+                    this.#currentEffect.deps.add(field);
+                }
+                return originalGet();
+            };
+        }
+        return schema;
     }
 
     createEffect(fn, options = {}) {

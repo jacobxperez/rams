@@ -146,27 +146,6 @@ export const isNumber = (value, {allowNaN = false} = {}) =>
 export const isBoolean = (val) => (isTypeOf('boolean')(val) ? true : false);
 
 /**
- * Checks if the provided value is empty.
- *
- * For strings: Returns `true` if the string is empty or contains only whitespace.
- * For arrays: Returns `true` if the array has no elements.
- * For objects: Returns `true` if the object has no own enumerable properties.
- * For Map and Set: Returns `true` if they have no elements.
- * For other types: Logs a warning and returns `false`.
- *
- * @param {any} value - The value to check.
- * @returns {boolean} `true` if the value is empty, otherwise `false`.
- */
-export const isEmpty = (value) => {
-    if (isString(value)) return value.trim() === '';
-    if (isArray(value)) return value.length === 0;
-    if (isMap(value) || isSet(value)) return value.size === 0;
-    if (isObject(value)) return Object.keys(value).length === 0;
-    console.warn('Unsupported type for isEmpty. Received:', typeof value);
-    return false;
-};
-
-/**
  * Checks if any of the provided validators return `true`.
  *
  * @param {...boolean} validators - The validators to check.

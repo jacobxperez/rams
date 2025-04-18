@@ -1,4 +1,4 @@
-class ErrorHandler {
+export class ErrorManager {
     #handlers = [];
     #groupHandlers = new Map();
     #logs = [];
@@ -56,10 +56,4 @@ class ErrorHandler {
     }
 }
 
-const errorHandler = new ErrorHandler();
-
-errorHandler.onError((err) => {
-    console.error(`[ERROR]: ${err.message}`, err.context);
-});
-
-export {ErrorHandler, errorHandler};
+export const errorManager = new ErrorManager();

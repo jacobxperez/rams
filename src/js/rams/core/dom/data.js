@@ -243,11 +243,11 @@ export const hasDataAttr = (root) => (dataName, value) => {
  * @returns {boolean} True if the data attribute is empty or does not exist, false otherwise.
  */
 export const dataAttrIsEmpty = (root) => (dataName) => {
-    if (isValidElementWithDataAttr(root, dataName)) {
-        let dataAttr = root.getAttribute(`data-${dataName}`);
-        return dataAttr === null || dataAttr.trim() === '';
-    }
-    return false;
+    domElement.set(root);
+    dataAttr.set(dataName);
+
+    let dataAttr = root.getAttribute(`data-${dataName}`);
+    return dataAttr === null || dataAttr.trim() === '';
 };
 
 /**
@@ -303,7 +303,7 @@ export const toggleDataAttr = (root) => (dataName, value) => {
             domElement.get().removeAttribute(`data-${dataName}`);
             return false;
         }
-        domElement.get().setAttribute(`data-${dataName}`, value);
+        root.setAttribute(`data-${dataName}`, value);
         return true;
     }
     return false;
@@ -330,9 +330,9 @@ export const toggleDataAttrValue = (root) => (dataName, value1) => (value2) => {
         dataAttrValue.set(value1) &&
         dataAttrValue2.set(value2)
     ) {
-        const currentValue = domElement.get().getAttribute(`data-${dataAttr.get()}`);
+        const currentValue = root.getAttribute(`data-${dataName}`);
         const newValue = currentValue === value1 ? value2 : value1;
-        domElement.get().setAttribute(`data-${dataAttr.get()}`, newValue);
+        root.setAttribute(`data-${dataName}`, newValue);
         return newValue;
     }
     return false;

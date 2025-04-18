@@ -1,5 +1,5 @@
 // createSchema.js
-import { DataManager } from './DataManager.js';
+import { DataManager } from './dataManager.js'
 
 export function createSchema(schema) {
 	const fields = {};

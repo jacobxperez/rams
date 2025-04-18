@@ -6,12 +6,25 @@ export class DataManager {
         this.pending = false;
         this.lastError = null;
         this.label = options.label || 'Value';
+
         this.listeners = new Set();
         this.errorListeners = new Set();
+        this._currentEffectContext = null; // for RAMS reactivity
 
         if (arguments.length >= 2) {
             this.set(initialValue);
         }
+    }
+
+    setEffectContext(context) {
+        this._currentEffectContext = context;
+    }
+
+    get() {
+        if (this._currentEffectContext) {
+            this._currentEffectContext.deps.add(this);
+        }
+        return this.value;
     }
 
     async runValidation(value) {
@@ -78,7 +91,8 @@ export class DataManager {
 
         try {
             for (const validator of this.validate) {
-                if (typeof validator === 'string') {
+                const type = typeof validator === 'string' ? 'type' : 'custom';
+                if (type === 'type') {
                     if (typeof newValue !== validator) {
                         throw new TypeError(
                             `${this.label} must be of type '${validator}', got '${typeof newValue}'`
@@ -144,13 +158,6 @@ export class DataManager {
             this.pending = false;
             return false;
         }
-    }
-
-    get() {
-        if (typeof globalThis.currentEffect === 'object') {
-            globalThis.currentEffect.deps.add(this);
-        }
-        return this.value;
     }
 
     freeze() {
@@ -222,10 +229,4 @@ export class DataManager {
     emitError(error) {
         this.errorListeners.forEach((fn) => fn(error));
     }
-}
-
-export function dataManager(validator) {
-    return function (initialValue) {
-        return new DataManager(validator, initialValue);
-    };
 }

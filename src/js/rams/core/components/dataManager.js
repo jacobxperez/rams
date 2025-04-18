@@ -85,23 +85,12 @@ export class DataManager {
     set(newValue) {
         this.clearError();
         this.pending = true;
-
-        const isAsyncValidation = this.validate.some((validator) => {
-            if (typeof validator !== 'function') return false;
-            try {
-                const result = validator(newValue);
-                return result instanceof Promise;
-            } catch {
-                return false;
-            }
-        });
-
-        if (isAsyncValidation) {
-            return this._setAsync(newValue);
-        }
+        let lastValidator = null; // Track last validator in the validation context
 
         try {
             for (const validator of this.validate) {
+                lastValidator = validator; // Update with the current validator
+
                 const type = typeof validator === 'string' ? 'type' : 'custom';
                 if (type === 'type') {
                     if (typeof newValue !== validator) {
@@ -120,19 +109,23 @@ export class DataManager {
                     }
                 }
             }
+
             this.value = newValue;
             this.pending = false;
             this.emit(newValue);
             return true;
         } catch (err) {
             this.pending = false;
+
+            // Handle the error with the most recent validator
             this.setError({
                 message: err.message,
-                type: typeof validator === 'string' ? 'type' : 'custom',
-                source: validator,
+                type: typeof lastValidator === 'string' ? 'type' : 'custom',
+                source: lastValidator,
                 value: newValue,
                 timestamp: Date.now(),
             });
+
             throw err;
         }
     }

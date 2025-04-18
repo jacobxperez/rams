@@ -1,8 +1,5 @@
-// Components
-import { DataManager } from './core/components/dataManager.js';
-import {toggle} from './core/components/toggle.js';
-
 // DOM Data Attribute Methods
+import {toggle} from './core/components/toggle.js';
 import {
     getFirstWithDataAttr,
     getAllWithDataAttr,
@@ -19,6 +16,9 @@ import {
     toggleDataAttrValue,
 } from './core/dom/data.js';
 
+import {DataManager} from './core/components/dataManager.js';
+import { createSchema } from './core/components/schema.js';
+
 export class RAMS {
     #initialized = false;
     #currentEffect = null;
@@ -27,12 +27,13 @@ export class RAMS {
         this.createEffect = this.createEffect.bind(this);
         this.data = this.data.bind(this);
         this.schema = this.schema.bind(this);
+        this.toggle = toggle;
         this.#init();
     }
 
     #init() {
         if (!this.#initialized) {
-            this.#currentEffect = { deps: new Set() };
+            this.#currentEffect = {deps: new Set()};
             this.#initialized = true;
         }
     }
@@ -70,7 +71,7 @@ export class RAMS {
             for (const dep of deps) dep._effectListeners?.delete(rerun);
             deps.clear();
 
-            this.#currentEffect = { deps };
+            this.#currentEffect = {deps};
             const cleanup = fn();
             this.#currentEffect = null;
 

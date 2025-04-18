@@ -8,8 +8,6 @@ export class DataManager {
         this.pending = false;
         this.lastError = null;
         this.label = options.label || 'Value';
-
-        this.errorManager = options.errorManager || null;
         this.key = options.key || `field_${DataManager._autoId++}`;
 
         this.listeners = new Set();
@@ -77,15 +75,11 @@ export class DataManager {
     setError(err) {
         this.lastError = err;
         this.emitError(err);
-        if (this.errorManager && this.key)
-            this.errorManager.setError(this.key, err);
     }
 
     clearError() {
         this.lastError = null;
         this.emitError(null);
-        if (this.errorManager && this.key)
-            this.errorManager.setError(this.key, null);
     }
 
     set(newValue) {
